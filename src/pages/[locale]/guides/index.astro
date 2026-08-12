@@ -5,6 +5,7 @@ import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 import { getGuides, getGuidesHub } from '@/data/guides'
 import { localePath } from '@/lib/site'
+import { truncateText } from '@/lib/format'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -41,7 +42,7 @@ const items = getGuides(locale)
             <li>
               <article>
                 <h2 class="type-card-title">{item.shortTitle}</h2>
-                <p>{item.intro.slice(0, 180)}…</p>
+                <p>{truncateText(item.intro, 180, messages.common.truncatedEllipsis)}</p>
                 <a href={localePath(locale, `/guides/${item.slug}`)}>
                   {item.h1} — {hub.cardCta}
                 </a>
@@ -51,7 +52,7 @@ const items = getGuides(locale)
         }
       </ul>
       <p class="solutions-link">
-        <a href={localePath(locale, '/solutions')}>{messages.nav.solutions} →</a>
+        <a href={localePath(locale, '/solutions')}>{messages.nav.solutions}{messages.common.linkArrow}</a>
       </p>
     </div>
   </section>

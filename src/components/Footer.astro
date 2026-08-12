@@ -1,7 +1,8 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { localePath, SITE } from '@/lib/site'
+import { localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
+import { formatPhone } from '@/lib/format'
 import { getSolutions } from '@/data/solutions'
 import { getGuides } from '@/data/guides'
 import BrandMark from '@/components/BrandMark.astro'
@@ -22,6 +23,9 @@ const footerGuides = getGuides(locale).map((item) => ({
   slug: item.slug,
   label: item.shortTitle,
 }))
+
+const phoneDisplay = formatPhone(SITE.contactPhone)
+const waHref = whatsappUrl(messages.contact.whatsappPrefill)
 ---
 
 <footer class="footer">
@@ -32,7 +36,13 @@ const footerGuides = getGuides(locale).map((item) => ({
         <span class="type-brand">Heselo</span>
       </a>
       <p class="type-meta">{messages.footer.tagline}</p>
-      <a class="mail" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+      <a class="mail" href={`mailto:${SITE.contactEmail}`}>
+        {messages.contact.emailWrite} · {SITE.contactEmail}
+      </a>
+      <a class="mail" href={waHref} target="_blank" rel="noopener noreferrer">
+        {messages.contact.whatsapp} · {phoneDisplay}
+      </a>
+      <a class="mail tel" href={telUrl()}>{phoneDisplay}</a>
     </div>
     <div>
       <h3 class="type-eyebrow">{messages.footer.product}</h3>
@@ -88,8 +98,13 @@ const footerGuides = getGuides(locale).map((item) => ({
     gap: 0.7rem;
   }
   .mail {
+    display: block;
     color: var(--accent);
     font-weight: 600;
+    margin-top: 0.35rem;
+  }
+  .mail:first-of-type {
+    margin-top: 0;
   }
   h3.type-eyebrow {
     margin: 0 0 0.85rem;

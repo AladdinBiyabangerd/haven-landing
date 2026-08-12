@@ -1,6 +1,10 @@
 import type { Messages } from '../types'
 
 export const en: Messages = {
+  common: {
+    linkArrow: ' →',
+    truncatedEllipsis: '…',
+  },
   site: {
     tagline: 'Tables, rooms, floor, and cash — in one place.',
     description:
@@ -262,8 +266,24 @@ export const en: Messages = {
       'Short, useful explanations for questions like “what is a restaurant management system?” and “how do reservations work?” — each links to the matching Heselo solution.',
     cta: 'All guides',
   },
+  guidesPage: {
+    updatedLabel: 'Last updated:',
+  },
   productShot: {
     chromeLabel: 'Heselo · Panel',
+    alts: {
+      'live-floor': 'Heselo live floor — active room sessions and payment',
+      schedule: 'Heselo schedule — room and table booking timeline',
+      sessions: 'Heselo sessions list — active and closed sessions',
+      cash: 'Heselo cash desk — daily transactions and balance',
+      inventory: 'Heselo inventory — stock levels and counts',
+      products: 'Heselo product catalog — sale prices',
+      'room-analytics': 'Heselo room analytics — revenue and peak hours',
+      audit: 'Heselo audit log — operation history',
+    },
+  },
+  pwa: {
+    description: 'Venue management — reservations, live floor, cash, and inventory',
   },
   productGallery: {
     eyebrow: 'Product screens',
@@ -441,6 +461,11 @@ export const en: Messages = {
     success: 'Got it. We will get in touch with you soon.',
     error: 'Could not send. Please email us directly.',
     alt: 'Or write to us at:',
+    emailWrite: 'Email us',
+    emailAria: 'Email Heselo',
+    whatsapp: 'Message on WhatsApp',
+    whatsappAria: 'Contact Heselo on WhatsApp',
+    whatsappPrefill: "Hello, I'd like to learn more about Heselo.",
   },
   privacy: {
     title: 'Privacy policy',
@@ -457,6 +482,16 @@ export const en: Messages = {
   },
   seo: {
     ogImageAlt: 'Heselo — venue management: reservations, live floor, and cash',
+    geoPlacename: 'Azerbaijan',
+    countryName: 'Azerbaijan',
+    softwareOperatingSystem: 'Web browser',
+    knowsAbout: [
+      'venue management software',
+      'restaurant management system',
+      'reservation system',
+      'point of sale',
+      'anti-café management',
+    ],
     softwareFeatures: [
       'Live tracking',
       'Schedule and reservations',

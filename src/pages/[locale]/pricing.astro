@@ -93,9 +93,9 @@ const plans = SUBSCRIPTION_PLANS.map((plan) => {
       </div>
       <p class="note type-meta">{page.note}</p>
       <nav class="crosslinks" aria-label={messages.nav.primaryNav}>
-        <a href={localePath(locale, '/features')}>{page.crosslinks.features} →</a>
-        <a href={localePath(locale, '/solutions')}>{page.crosslinks.solutions} →</a>
-        <a href={localePath(locale, '/contact')}>{page.crosslinks.contact} →</a>
+        <a href={localePath(locale, '/features')}>{page.crosslinks.features}{messages.common.linkArrow}</a>
+        <a href={localePath(locale, '/solutions')}>{page.crosslinks.solutions}{messages.common.linkArrow}</a>
+        <a href={localePath(locale, '/contact')}>{page.crosslinks.contact}{messages.common.linkArrow}</a>
       </nav>
     </div>
   </section>

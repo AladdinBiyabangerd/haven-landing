@@ -1,6 +1,10 @@
 import type { Messages } from '../types'
 
 export const ru: Messages = {
+  common: {
+    linkArrow: ' →',
+    truncatedEllipsis: '…',
+  },
   site: {
     tagline: 'Столы, комнаты, зал и касса — в одном месте.',
     description:
@@ -196,7 +200,7 @@ export const ru: Messages = {
     title: 'Страницы решений',
     titleAccent: 'по типу бизнеса.',
     intro:
-      'Эти страницы не копируют один и тот же текст — каждая написана под search intent и рабочий поток конкретного бизнеса.',
+      'Эти страницы не копируют один и тот же текст — каждая написана под поисковый запрос и рабочий поток конкретного бизнеса.',
     items: [
       {
         slug: 'restaurant',
@@ -262,8 +266,24 @@ export const ru: Messages = {
       'Короткие полезные объяснения: «что такое система управления рестораном?», «как вести бронь?» — каждый гайд ведёт на соответствующее решение Heselo.',
     cta: 'Все гайды',
   },
+  guidesPage: {
+    updatedLabel: 'Последнее обновление:',
+  },
   productShot: {
     chromeLabel: 'Heselo · Панель',
+    alts: {
+      'live-floor': 'Heselo живой зал — активные сессии комнат и оплата',
+      schedule: 'Heselo расписание — бронь комнат и столов',
+      sessions: 'Heselo список сессий — активные и закрытые',
+      cash: 'Heselo касса — операции дня и баланс',
+      inventory: 'Heselo склад — остатки и подсчёт',
+      products: 'Heselo каталог товаров — цены продажи',
+      'room-analytics': 'Heselo аналитика комнат — выручка и часы пик',
+      audit: 'Heselo журнал аудита — история операций',
+    },
+  },
+  pwa: {
+    description: 'Управление площадкой — бронь, живой зал, касса и склад',
   },
   productGallery: {
     eyebrow: 'Экраны продукта',
@@ -441,6 +461,11 @@ export const ru: Messages = {
     success: 'Сообщение получено. Мы скоро свяжемся с вами.',
     error: 'Не отправилось. Напишите нам на почту напрямую.',
     alt: 'Или пишите сразу сюда:',
+    emailWrite: 'Написать на почту',
+    emailAria: 'Написать Heselo на почту',
+    whatsapp: 'Написать в WhatsApp',
+    whatsappAria: 'Связаться с Heselo в WhatsApp',
+    whatsappPrefill: 'Здравствуйте, хочу узнать больше о Heselo.',
   },
   privacy: {
     title: 'Политика конфиденциальности',
@@ -457,6 +482,16 @@ export const ru: Messages = {
   },
   seo: {
     ogImageAlt: 'Heselo — управление площадкой: бронь, живой зал и касса',
+    geoPlacename: 'Азербайджан',
+    countryName: 'Азербайджан',
+    softwareOperatingSystem: 'Веб-браузер',
+    knowsAbout: [
+      'программа управления площадкой',
+      'система управления рестораном',
+      'система бронирования',
+      'кассовое ПО',
+      'управление антикафе',
+    ],
     softwareFeatures: [
       'Живое отслеживание',
       'Расписание и бронирования',

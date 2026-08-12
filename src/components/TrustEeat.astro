@@ -28,7 +28,7 @@ const e = messages.eeat
             <article>
               <h3 class="type-card-title">{item.title}</h3>
               <p>{item.desc}</p>
-              <a href={localePath(locale, item.href)}>{item.linkLabel} →</a>
+              <a href={localePath(locale, item.href)}>{item.linkLabel}{messages.common.linkArrow}</a>
             </article>
           </li>
         ))

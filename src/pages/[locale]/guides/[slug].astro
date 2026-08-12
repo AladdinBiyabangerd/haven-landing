@@ -5,6 +5,7 @@ import { resolveLocale, LOCALES } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 import { getGuide, GUIDE_SLUGS } from '@/data/guides'
 import { getSolution } from '@/data/solutions'
+import { formatDate } from '@/lib/format'
 import { localePath } from '@/lib/site'
 
 export function getStaticPaths() {
@@ -65,7 +66,8 @@ const faqMessages = {
         <h1 class="type-page-title">{guide.h1}</h1>
         <p class="lead">{guide.intro}</p>
         <p class="meta type-meta">
-          <time datetime={guide.dateModified}>{guide.dateModified}</time>
+          {messages.guidesPage.updatedLabel}{' '}
+          <time datetime={guide.dateModified}>{formatDate(guide.dateModified, locale)}</time>
         </p>
       </header>
 
@@ -107,7 +109,7 @@ const faqMessages = {
       }
 
       <p class="hub-back">
-        <a href={localePath(locale, '/guides')}>{messages.nav.guides} →</a>
+        <a href={localePath(locale, '/guides')}>{messages.nav.guides}{messages.common.linkArrow}</a>
       </p>
     </div>
   </article>

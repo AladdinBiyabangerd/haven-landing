@@ -25,7 +25,7 @@ const page = messages.featuresPage
         <h1 class="type-page-title">{page.title}</h1>
         <p class="lead">{page.intro}</p>
         <p class="crosslink">
-          <a href={localePath(locale, '/solutions')}>{messages.nav.solutions} →</a>
+          <a href={localePath(locale, '/solutions')}>{messages.nav.solutions}{messages.common.linkArrow}</a>
         </p>
       </div>
       <div class="modules">
@@ -42,7 +42,7 @@ const page = messages.featuresPage
               {
                 mod.solutionSlug ? (
                   <a class="module-link" href={localePath(locale, `/solutions/${mod.solutionSlug}`)}>
-                    {getSolution(locale, mod.solutionSlug)?.h1 ?? page.solutionLinkLabel} →
+                    {getSolution(locale, mod.solutionSlug)?.h1 ?? page.solutionLinkLabel}{messages.common.linkArrow}
                   </a>
                 ) : null
               }

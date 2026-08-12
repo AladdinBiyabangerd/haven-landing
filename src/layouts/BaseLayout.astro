@@ -8,6 +8,7 @@ import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import Analytics from '@/components/Analytics.astro'
+import WhatsAppFab from '@/components/WhatsAppFab.astro'
 
 interface Props {
   locale: Locale
@@ -67,7 +68,7 @@ const breadcrumbs =
     <meta name="application-name" content={SITE.name} />
     <meta name="apple-mobile-web-app-title" content={SITE.name} />
     <meta name="geo.region" content="AZ" />
-    <meta name="geo.placename" content="Azerbaijan" />
+    <meta name="geo.placename" content={messages.seo.geoPlacename} />
     <link rel="canonical" href={seo.canonical} />
 
     {
@@ -104,7 +105,7 @@ const breadcrumbs =
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href={localePath(locale, '/site.webmanifest')} />
 
     <Analytics />
 
@@ -122,6 +123,7 @@ const breadcrumbs =
       <slot />
     </main>
     <Footer locale={locale} messages={messages} />
+    <WhatsAppFab messages={messages} />
   </body>
 </html>
 

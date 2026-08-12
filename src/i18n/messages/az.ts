@@ -1,6 +1,10 @@
 import type { Messages } from '../types'
 
 export const az: Messages = {
+  common: {
+    linkArrow: ' →',
+    truncatedEllipsis: '…',
+  },
   site: {
     tagline: 'Masa, otaq, zal və kassa — hamısı bir yerdə.',
     description:
@@ -262,8 +266,24 @@ export const az: Messages = {
       '“Restoran idarəetmə sistemi nədir?”, “rezervasiya necə idarə olunur?” kimi suallara qısa, faydalı izahlar — hər biri müvafiq Heselo həll səhifəsinə bağlanır.',
     cta: 'Bütün bələdçilər',
   },
+  guidesPage: {
+    updatedLabel: 'Son yeniləmə:',
+  },
   productShot: {
     chromeLabel: 'Heselo · Panel',
+    alts: {
+      'live-floor': 'Heselo canlı izləmə ekranı — aktiv otaq sessiyaları və ödəniş',
+      schedule: 'Heselo cədvəl ekranı — otaq və masa rezervasiyası timeline',
+      sessions: 'Heselo sessiyalar siyahısı — günün aktiv və bağlanmış sessiyaları',
+      cash: 'Heselo kassa ekranı — günün əməliyyatları və balans',
+      inventory: 'Heselo anbar ekranı — məhsul qalıqları və sayım',
+      products: 'Heselo məhsul kataloqu — satış qiymətləri',
+      'room-analytics': 'Heselo otaq analitikası — gəlir və populyar saatlar',
+      audit: 'Heselo audit jurnalı — əməliyyat tarixçəsi',
+    },
+  },
+  pwa: {
+    description: 'Məkan idarəetmə sistemi — rezervasiya, canlı zal, kassa və anbar',
   },
   productGallery: {
     eyebrow: 'Panel görüntüləri',
@@ -441,6 +461,11 @@ export const az: Messages = {
     success: 'Mesajınız çatdı. Tezliklə sizinlə əlaqə saxlayacağıq.',
     error: 'Göndərmək alınmadı. Birbaşa e-poçta yazın.',
     alt: 'Və ya birbaşa bizə yazın:',
+    emailWrite: 'E-poçt ilə yazın',
+    emailAria: 'E-poçt ilə Heselo-ya yazın',
+    whatsapp: 'WhatsApp ilə yazın',
+    whatsappAria: 'WhatsApp-da Heselo ilə əlaqə saxlayın',
+    whatsappPrefill: 'Salam, Heselo haqqında məlumat almaq istəyirəm.',
   },
   privacy: {
     title: 'Məxfilik siyasəti',
@@ -457,6 +482,16 @@ export const az: Messages = {
   },
   seo: {
     ogImageAlt: 'Heselo — məkan idarəetmə sistemi: rezervasiya, canlı zal və kassa',
+    geoPlacename: 'Azərbaycan',
+    countryName: 'Azərbaycan',
+    softwareOperatingSystem: 'Veb brauzer',
+    knowsAbout: [
+      'məkan idarəetmə proqramı',
+      'restoran idarəetmə sistemi',
+      'rezervasiya sistemi',
+      'kassa proqramı',
+      'antikafe idarəetmə sistemi',
+    ],
     softwareFeatures: [
       'Canlı izləmə',
       'Cədvəl və rezervasiyalar',

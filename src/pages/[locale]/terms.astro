@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import LegalDocument from '@/components/LegalDocument.astro'
-import { resolveLocale, type Locale } from '@/i18n/config'
+import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 import { termsOfUseBlocks } from '@/content/termsOfUse'
+import { formatDate as formatDateForLocale } from '@/lib/format'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -14,18 +15,8 @@ const messages = getMessages(locale)
 const page = messages.terms
 const blocks = termsOfUseBlocks[locale]
 
-const intlLocale: Record<Locale, string> = { az: 'az-AZ', en: 'en-GB', ru: 'ru-RU' }
-
 function formatDate(isoDate: string) {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDate.trim())
-  const date = match
-    ? new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]))
-    : new Date(isoDate)
-  return new Intl.DateTimeFormat(intlLocale[locale], {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }).format(date)
+  return formatDateForLocale(isoDate, locale)
 }
 ---
 

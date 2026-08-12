@@ -2,7 +2,7 @@ import type { Locale } from '@/i18n/config'
 import { HTML_LANG, LOCALES, OG_LOCALES } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { SUBSCRIPTION_PLANS, type SubscriptionPlanId } from '@/lib/subscriptionPlans'
-import { absoluteUrl, localePath, localeUrl, SITE, siteSameAs, siteUrl } from '@/lib/site'
+import { absoluteUrl, localePath, localeUrl, phoneE164, SITE, siteSameAs, siteUrl } from '@/lib/site'
 
 export type BreadcrumbItem = { label: string; href: string; current?: boolean }
 
@@ -134,7 +134,7 @@ export function buildJsonLdGraph(
     '@id': `${siteUrl()}/#software`,
     name: SITE.name,
     applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web browser',
+    operatingSystem: messages.seo.softwareOperatingSystem,
     description: messages.site.description,
     featureList: messages.seo.softwareFeatures.join(', '),
     inLanguage: LOCALES.map((l) => HTML_LANG[l]),
@@ -169,20 +169,15 @@ export function buildJsonLdGraph(
       email: SITE.contactEmail,
       description: messages.site.description,
       ...(siteSameAs().length > 0 ? { sameAs: siteSameAs() } : {}),
-      knowsAbout: [
-        'venue management software',
-        'restaurant management system',
-        'reservation system',
-        'point of sale',
-        'anti-café management',
-      ],
+      knowsAbout: messages.seo.knowsAbout,
       areaServed: {
         '@type': 'Country',
-        name: 'Azerbaijan',
+        name: messages.seo.countryName,
       },
       contactPoint: {
         '@type': 'ContactPoint',
         email: SITE.contactEmail,
+        telephone: phoneE164(),
         contactType: 'sales',
         availableLanguage: ['az', 'en', 'ru'],
       },
@@ -313,7 +308,7 @@ export function buildJsonLdGraph(
           availability: 'https://schema.org/InStock',
           url: pageUrl,
           offeredBy: { '@id': `${siteUrl()}/#organization` },
-          eligibleRegion: { '@type': 'Country', name: 'Azerbaijan' },
+          eligibleRegion: { '@type': 'Country', name: messages.seo.countryName },
         }
       }),
     )

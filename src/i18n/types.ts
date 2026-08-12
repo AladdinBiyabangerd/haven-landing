@@ -1,4 +1,18 @@
+export type ProductShotAltKey =
+  | 'live-floor'
+  | 'schedule'
+  | 'sessions'
+  | 'cash'
+  | 'inventory'
+  | 'products'
+  | 'room-analytics'
+  | 'audit'
+
 export type Messages = {
+  common: {
+    linkArrow: string
+    truncatedEllipsis: string
+  }
   site: {
     tagline: string
     description: string
@@ -109,6 +123,9 @@ export type Messages = {
     intro: string
     cta: string
   }
+  guidesPage: {
+    updatedLabel: string
+  }
   eeat: {
     eyebrow: string
     title: string
@@ -124,6 +141,10 @@ export type Messages = {
   }
   productShot: {
     chromeLabel: string
+    alts: Record<ProductShotAltKey, string>
+  }
+  pwa: {
+    description: string
   }
   productGallery: {
     eyebrow: string
@@ -185,6 +206,11 @@ export type Messages = {
     success: string
     error: string
     alt: string
+    emailWrite: string
+    emailAria: string
+    whatsapp: string
+    whatsappAria: string
+    whatsappPrefill: string
   }
   privacy: {
     title: string
@@ -201,6 +227,10 @@ export type Messages = {
   }
   seo: {
     ogImageAlt: string
+    geoPlacename: string
+    countryName: string
+    softwareOperatingSystem: string
+    knowsAbout: string[]
     softwareFeatures: string[]
     pages: Record<
       | 'home'

@@ -1,4 +1,4 @@
-import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
 
 export type ProductShotId =
   | 'live-floor'
@@ -85,37 +85,6 @@ export const FEATURE_GALLERY_SHOTS: ProductShotId[] = [
   'audit',
 ]
 
-export function productShotAlt(locale: Locale, id: ProductShotId): string {
-  const az: Record<ProductShotId, string> = {
-    'live-floor': 'Heselo canlı izləmə ekranı — aktiv otaq sessiyaları və ödəniş',
-    schedule: 'Heselo cədvəl ekranı — otaq və masa rezervasiyası timeline',
-    sessions: 'Heselo sessiyalar siyahısı — günün aktiv və bağlanmış sessiyaları',
-    cash: 'Heselo kassa ekranı — günün əməliyyatları və balans',
-    inventory: 'Heselo anbar ekranı — məhsul qalıqları və sayım',
-    products: 'Heselo məhsul kataloqu — satış qiymətləri',
-    'room-analytics': 'Heselo otaq analitikası — gəlir və populyar saatlar',
-    audit: 'Heselo audit jurnalı — əməliyyat tarixçəsi',
-  }
-  const en: Record<ProductShotId, string> = {
-    'live-floor': 'Heselo live floor — active room sessions and payment',
-    schedule: 'Heselo schedule — room and table booking timeline',
-    sessions: 'Heselo sessions list — active and closed sessions',
-    cash: 'Heselo cash desk — daily transactions and balance',
-    inventory: 'Heselo inventory — stock levels and counts',
-    products: 'Heselo product catalog — sale prices',
-    'room-analytics': 'Heselo room analytics — revenue and peak hours',
-    audit: 'Heselo audit log — operation history',
-  }
-  const ru: Record<ProductShotId, string> = {
-    'live-floor': 'Heselo живой зал — активные сессии комнат и оплата',
-    schedule: 'Heselo расписание — бронь комнат и столов',
-    sessions: 'Heselo список сессий — активные и закрытые',
-    cash: 'Heselo касса — операции дня и баланс',
-    inventory: 'Heselo склад — остатки и подсчёт',
-    products: 'Heselo каталог товаров — цены продажи',
-    'room-analytics': 'Heselo аналитика комнат — выручка и часы пик',
-    audit: 'Heselo журнал аудита — история операций',
-  }
-  const map = locale === 'en' ? en : locale === 'ru' ? ru : az
-  return map[id]
+export function productShotAlt(messages: Messages, id: ProductShotId): string {
+  return messages.productShot.alts[id]
 }

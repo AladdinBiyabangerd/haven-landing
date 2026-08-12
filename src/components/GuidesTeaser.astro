@@ -3,6 +3,7 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { getGuides } from '@/data/guides'
 import { localePath } from '@/lib/site'
+import { truncateText } from '@/lib/format'
 
 interface Props {
   locale: Locale
@@ -28,7 +29,7 @@ const guides = getGuides(locale)
           <li>
             <article>
               <h3 class="type-card-title">{item.shortTitle}</h3>
-              <p>{item.intro.slice(0, 140)}…</p>
+              <p>{truncateText(item.intro, 140, messages.common.truncatedEllipsis)}</p>
               <a href={localePath(locale, `/guides/${item.slug}`)}>{item.h1}</a>
             </article>
           </li>
@@ -36,7 +37,7 @@ const guides = getGuides(locale)
       }
     </ul>
     <p class="all">
-      <a href={localePath(locale, '/guides')}>{g.cta} →</a>
+      <a href={localePath(locale, '/guides')}>{g.cta}{messages.common.linkArrow}</a>
     </p>
   </div>
 </section>

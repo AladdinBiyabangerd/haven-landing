@@ -271,7 +271,7 @@ export const solutionsAz: SolutionCopy[] = [
   },
   {
     slug: 'gaming',
-    shortTitle: 'Gaming club',
+    shortTitle: 'Oyun klubu',
     h1: 'Gaming club idarəetmə sistemi',
     seoTitle: 'Gaming club idarəetmə sistemi və klub proqramı | Heselo',
     seoDescription:
