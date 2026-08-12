@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "prebuild": "node scripts/write-indexnow-key.mjs",
     "build": "astro build",
+    "start": "node ./dist/server/entry.mjs",
     "process-shots": "node scripts/process-product-shots.mjs",
     "preview": "astro preview",
     "check": "astro check"

@@ -10,6 +10,9 @@ export default defineConfig({
   trailingSlash: 'always',
   output: 'static',
   adapter: node({ mode: 'standalone' }),
+  server: {
+    host: true,
+  },
   build: {
     format: 'directory',
     inlineStylesheets: 'auto',
