@@ -1,0 +1,255 @@
+---
+import type { Locale } from '@/i18n/config'
+import { LOCALES, LOCALE_LABELS, HTML_LANG } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import { localePath } from '@/lib/site'
+import BrandMark from '@/components/BrandMark.astro'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+}
+
+const { locale, messages } = Astro.props
+const m = messages.nav
+const pathAfterLocale = Astro.url.pathname.replace(new RegExp(`^/${locale}`), '') || '/'
+const currentSlug = pathAfterLocale === '/' ? '/' : pathAfterLocale.replace(/\/$/, '') || '/'
+const isSolutions =
+  currentSlug === '/solutions' || currentSlug.startsWith('/solutions/')
+const isGuides = currentSlug === '/guides' || currentSlug.startsWith('/guides/')
+
+const links = [
+  { href: localePath(locale, '/'), label: m.home, match: '/' },
+  { href: localePath(locale, '/features'), label: m.features, match: '/features' },
+  { href: localePath(locale, '/solutions'), label: m.solutions, match: '/solutions' },
+  { href: localePath(locale, '/guides'), label: m.guides, match: '/guides' },
+  { href: localePath(locale, '/pricing'), label: m.pricing, match: '/pricing' },
+  { href: localePath(locale, '/contact'), label: m.contact, match: '/contact' },
+]
+---
+
+<header class="header" data-header>
+  <div class="container header__inner">
+    <a class="brand" href={localePath(locale, '/')} aria-label="Heselo">
+      <BrandMark size={44} />
+      <span class="brand__name type-brand">Heselo</span>
+    </a>
+
+    <nav class="nav" data-nav aria-label={m.primaryNav}>
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'nav__link',
+              {
+                'is-active':
+                  link.match === '/solutions'
+                    ? isSolutions
+                    : link.match === '/guides'
+                      ? isGuides
+                      : currentSlug === link.match,
+              },
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="header__actions">
+      <div class="locales" role="navigation" aria-label={m.languageNav}>
+        {
+          LOCALES.map((loc) => (
+            <a
+              class:list={['locale', { 'is-active': loc === locale }]}
+              href={localePath(loc, currentSlug === '/' ? '/' : currentSlug)}
+              hreflang={HTML_LANG[loc]}
+              lang={HTML_LANG[loc]}
+              aria-current={loc === locale ? 'true' : undefined}
+            >
+              {loc.toUpperCase()}
+              <span class="sr-only">{LOCALE_LABELS[loc]}</span>
+            </a>
+          ))
+        }
+      </div>
+      <a class="btn btn-primary header__cta" href={localePath(locale, '/contact')}>{m.demo}</a>
+      <button
+        class="menu-btn"
+        type="button"
+        data-menu-btn
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label={m.toggleMenu}
+      >
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile" id="mobile-nav" data-mobile hidden>
+    <div class="container mobile__inner">
+      {
+        links.map((link) => (
+          <a href={link.href} class="mobile__link">
+            {link.label}
+          </a>
+        ))
+      }
+      <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')}>{m.demo}</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(16px);
+    background: rgba(247, 250, 252, 0.78);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
+  }
+  .header.is-scrolled {
+    border-bottom-color: var(--line);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 4.75rem;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .brand__name {
+    color: var(--ink);
+  }
+  .nav {
+    display: none;
+    margin-left: auto;
+    gap: 0.25rem;
+  }
+  .nav__link {
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    color: var(--ink-muted);
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: 600;
+  }
+  .nav__link:hover,
+  .nav__link.is-active {
+    color: var(--ink);
+    background: var(--accent-soft);
+  }
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-left: auto;
+  }
+  .locales {
+    display: flex;
+    gap: 0.15rem;
+    padding: 0.2rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+  .locale {
+    min-width: 2.2rem;
+    text-align: center;
+    padding: 0.3rem 0.4rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--ink-subtle);
+  }
+  .locale.is-active {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .header__cta {
+    display: none;
+  }
+  .menu-btn {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .menu-btn span {
+    display: block;
+    width: 1rem;
+    height: 2px;
+    background: var(--ink);
+    transition: transform 0.25s var(--ease);
+  }
+  .menu-btn[aria-expanded='true'] span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+  .menu-btn[aria-expanded='true'] span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+  .mobile {
+    border-top: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.98);
+    padding: 1rem 0 1.4rem;
+  }
+  .mobile__inner {
+    display: grid;
+    gap: 0.35rem;
+  }
+  .mobile__link {
+    padding: 0.85rem 0.2rem;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: 600;
+  }
+  @media (min-width: 900px) {
+    .nav {
+      display: flex;
+    }
+    .header__cta {
+      display: inline-flex;
+    }
+    .menu-btn,
+    .mobile {
+      display: none !important;
+    }
+    .header__actions {
+      margin-left: 0;
+    }
+  }
+</style>
+
+<script>
+  const header = document.querySelector('[data-header]')
+  const btn = document.querySelector('[data-menu-btn]')
+  const mobile = document.querySelector('[data-mobile]')
+
+  const onScroll = () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 8)
+  }
+  onScroll()
+  window.addEventListener('scroll', onScroll, { passive: true })
+
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true'
+    btn.setAttribute('aria-expanded', String(!open))
+    if (mobile instanceof HTMLElement) mobile.hidden = open
+  })
+</script>

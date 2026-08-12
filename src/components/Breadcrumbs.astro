@@ -1,0 +1,63 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { BreadcrumbItem } from '@/lib/seo'
+
+interface Props {
+  locale: Locale
+  items: BreadcrumbItem[]
+  ariaLabel: string
+}
+const { items, ariaLabel } = Astro.props
+if (items.length < 2) return null
+---
+
+<nav class="breadcrumbs container" aria-label={ariaLabel}>
+  <ol>
+    {
+      items.map((item, i) => (
+        <li>
+          {item.current || i === items.length - 1 ? (
+            <span aria-current="page">{item.label}</span>
+          ) : (
+            <a href={item.href}>{item.label}</a>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs {
+    padding: 0.85rem 0 0;
+  }
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.5rem;
+    align-items: center;
+    font-size: var(--text-sm);
+    color: var(--ink-subtle);
+  }
+  li:not(:last-child)::after {
+    content: '/';
+    margin-left: 0.5rem;
+    color: var(--ink-subtle);
+    opacity: 0.7;
+  }
+  a {
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  span[aria-current='page'] {
+    color: var(--ink);
+    font-weight: 600;
+  }
+</style>

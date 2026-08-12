@@ -1,0 +1,190 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Cta from '@/components/Cta.astro'
+import Faq from '@/components/Faq.astro'
+import { resolveLocale } from '@/i18n/config'
+import { getMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
+import {
+  FEATURE_REQUESTS_PER_MONTH,
+  SUBSCRIPTION_PLANS,
+  type SubscriptionPlanId,
+} from '@/lib/subscriptionPlans'
+import { fillTemplate, formatMoney } from '@/lib/format'
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const messages = getMessages(locale)
+const page = messages.pricing
+const faqMessages = {
+  ...messages,
+  faq: {
+    eyebrow: messages.faq.eyebrow,
+    title: messages.faq.title,
+    items: page.faq,
+  },
+}
+
+const plans = SUBSCRIPTION_PLANS.map((plan) => {
+  const copy = page.plans[plan.id as SubscriptionPlanId]
+  return {
+    id: plan.id,
+    name: copy.name,
+    desc: copy.desc,
+    price: formatMoney(plan.monthlyFee, locale),
+    period: page.period,
+    featured: plan.id === 'pro',
+    features: [
+      fillTemplate(page.featureVenues, { count: plan.includedVenues }),
+      fillTemplate(page.featureIncluded, { count: plan.includedReservations }),
+      fillTemplate(page.featureOverage, {
+        amount: formatMoney(plan.overagePerReservation, locale),
+      }),
+      fillTemplate(page.featureRequests, { count: FEATURE_REQUESTS_PER_MONTH }),
+    ],
+  }
+})
+---
+
+<BaseLayout
+  locale={locale}
+  messages={messages}
+  page="pricing"
+  seo={{
+    title: messages.seo.pages.pricing.title,
+    description: messages.seo.pages.pricing.description,
+    keywords: messages.seo.pages.pricing.keywords,
+    slug: '/pricing',
+    breadcrumbName: messages.nav.pricing,
+    faq: page.faq,
+  }}
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">{page.eyebrow}</p>
+        <h1 class="type-page-title">{page.title}</h1>
+        <p class="lead">{page.intro}</p>
+      </div>
+      <div class="plans">
+        {
+          plans.map((plan) => (
+            <article class:list={[{ featured: plan.featured }]}>
+              <h2 class="type-card-title">{plan.name}</h2>
+              <p class="price">
+                {plan.price}
+                <span>{plan.period}</span>
+              </p>
+              <p class="desc">{plan.desc}</p>
+              <ul>
+                {plan.features.map((f) => (
+                  <li>{f}</li>
+                ))}
+              </ul>
+              <a class:list={['btn', plan.featured ? 'btn-primary' : 'btn-ghost']} href={localePath(locale, '/contact')}>
+                {page.cta}
+              </a>
+            </article>
+          ))
+        }
+      </div>
+      <p class="note type-meta">{page.note}</p>
+      <nav class="crosslinks" aria-label={messages.nav.primaryNav}>
+        <a href={localePath(locale, '/features')}>{page.crosslinks.features} →</a>
+        <a href={localePath(locale, '/solutions')}>{page.crosslinks.solutions} →</a>
+        <a href={localePath(locale, '/contact')}>{page.crosslinks.contact} →</a>
+      </nav>
+    </div>
+  </section>
+  <Faq messages={faqMessages} />
+  <Cta locale={locale} messages={messages} />
+</BaseLayout>
+
+<style>
+  .plans {
+    display: grid;
+    gap: 1rem;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.5rem 1.35rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(23, 40, 66, 0.04);
+  }
+  article.featured {
+    border-color: rgba(15, 118, 110, 0.35);
+    background:
+      linear-gradient(160deg, rgba(20, 184, 166, 0.12), transparent 50%),
+      var(--surface);
+  }
+  .price {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    letter-spacing: var(--tracking-display);
+    line-height: var(--lh-tight);
+  }
+  .price span {
+    margin-left: 0.35rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink-subtle);
+  }
+  .desc {
+    margin: 0;
+    color: var(--ink-muted);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+    flex: 1;
+  }
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+    color: var(--ink-muted);
+  }
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  .note {
+    margin: 1.5rem 0 0;
+    color: var(--ink-subtle);
+  }
+  .crosslinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  .crosslinks a {
+    font-weight: 600;
+    color: var(--accent);
+  }
+  @media (min-width: 900px) {
+    .plans {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+    }
+  }
+</style>

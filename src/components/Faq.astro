@@ -1,0 +1,68 @@
+---
+import type { Messages } from '@/i18n/types'
+interface Props {
+  messages: Messages
+}
+const { messages } = Astro.props
+const f = messages.faq
+---
+
+<section class="section" id="faq">
+  <div class="container narrow">
+    <div class="section-head">
+      <p class="eyebrow">{f.eyebrow}</p>
+      <h2 class="type-section">{f.title}</h2>
+    </div>
+    <div class="list">
+      {
+        f.items.map((item, i) => (
+          <details open={i === 0}>
+            <summary class="type-card-title">{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .narrow {
+    max-width: 760px;
+  }
+  .list {
+    display: grid;
+    gap: 0.65rem;
+  }
+  details {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 0.2rem 1rem 0.2rem;
+  }
+  details[open] {
+    border-color: rgba(15, 118, 110, 0.28);
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem 0;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::after {
+    content: '+';
+    float: right;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+  details[open] summary::after {
+    content: '–';
+  }
+  p {
+    margin: 0 0 1rem;
+    color: var(--ink-muted);
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+import type { Messages } from '@/i18n/types'
+interface Props {
+  messages: Messages
+}
+const { messages } = Astro.props
+const h = messages.how
+---
+
+<section class="section how">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{h.eyebrow}</p>
+      <h2 class="type-section">{h.title} <span class="accent">{h.titleAccent}</span></h2>
+    </div>
+    <ol>
+      {
+        h.steps.map((step, i) => (
+          <li>
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <div>
+              <h3 class="type-card-title">{step.title}</h3>
+              <p>{step.desc}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .how {
+    background: linear-gradient(180deg, transparent, rgba(45, 212, 191, 0.04), transparent);
+  }
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.25rem 1.2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(23, 40, 66, 0.04);
+  }
+  .num {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: var(--tracking-display);
+    line-height: var(--lh-tight);
+  }
+  p {
+    margin: 0.35rem 0 0;
+    color: var(--ink-muted);
+  }
+  @media (min-width: 900px) {
+    ol {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

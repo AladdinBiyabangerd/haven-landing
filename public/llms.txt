@@ -1,0 +1,34 @@
+# Heselo — https://heselo.online
+
+> Məkan idarəetmə sistemi (venue management): rezervasiya, canlı zal, kassa və anbar.
+> Languages: az (default), en, ru.
+
+## Product
+
+- Heselo is SaaS for restaurants, cafés, anti-cafés, gaming clubs, billiards, karaoke, and similar venues in Azerbaijan.
+- Core modules: table/room booking, live floor sessions, POS/cash shift, inventory, customers, statistics.
+- Payment balances are calculated on the server (not client-side estimates).
+
+## Key pages (az locale)
+
+- Home: https://heselo.online/az/
+- Features: https://heselo.online/az/features/
+- Pricing: https://heselo.online/az/pricing/
+- Contact / demo: https://heselo.online/az/contact/
+- Solutions hub: https://heselo.online/az/solutions/
+- Anti-café solution: https://heselo.online/az/solutions/antikafe/
+- Restaurant solution: https://heselo.online/az/solutions/restaurant/
+- Guides hub: https://heselo.online/az/guides/
+- Anti-café guide: https://heselo.online/az/guides/antikafe-management-system/
+- Sitemap: https://heselo.online/sitemap.xml
+
+## Contact
+
+- Email: heselo.online@gmail.com
+- Demo: contact form on https://heselo.online/az/contact/
+
+## Crawling
+
+- Allow indexing of public marketing pages.
+- Do not index /api/ routes.
+- robots.txt: https://heselo.online/robots.txt

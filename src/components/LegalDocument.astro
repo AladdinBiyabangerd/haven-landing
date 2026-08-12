@@ -1,0 +1,203 @@
+---
+import type { DocumentBlock } from '@/content/documentTypes'
+import styles from './LegalDocument.module.css'
+
+interface Props {
+  blocks: readonly DocumentBlock[]
+  formatDate?: (isoDate: string) => string
+}
+
+const { blocks, formatDate } = Astro.props
+
+type RichPart =
+  | { kind: 'text'; value: string }
+  | { kind: 'strong'; value: string }
+  | { kind: 'del'; value: string }
+
+function richParts(text: string): RichPart[] {
+  return text.split(/(\*\*[^*]+\*\*|~~[^~]+~~)/g).map((part) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return { kind: 'strong', value: part.slice(2, -2) }
+    }
+    if (part.startsWith('~~') && part.endsWith('~~')) {
+      return { kind: 'del', value: part.slice(2, -2) }
+    }
+    return { kind: 'text', value: part }
+  })
+}
+---
+
+<article class={styles.article}>
+  {
+    blocks.map((block) => {
+      switch (block.type) {
+        case 'lead':
+          return (
+            <p class={styles.lead}>
+              {richParts(block.text).map((part) =>
+                part.kind === 'strong' ? (
+                  <strong>{part.value}</strong>
+                ) : part.kind === 'del' ? (
+                  <del class={styles.strike}>{part.value}</del>
+                ) : (
+                  part.value
+                ),
+              )}
+            </p>
+          )
+        case 'h2':
+          return <h2 class={styles.h2}>{block.text}</h2>
+        case 'h3':
+          return <h3 class={styles.h3}>{block.text}</h3>
+        case 'p':
+          return (
+            <p class={styles.p}>
+              {richParts(block.text).map((part) =>
+                part.kind === 'strong' ? (
+                  <strong>{part.value}</strong>
+                ) : part.kind === 'del' ? (
+                  <del class={styles.strike}>{part.value}</del>
+                ) : (
+                  part.value
+                ),
+              )}
+            </p>
+          )
+        case 'quote':
+          return (
+            <blockquote class={styles.quote}>
+              {richParts(block.text).map((part) =>
+                part.kind === 'strong' ? (
+                  <strong>{part.value}</strong>
+                ) : part.kind === 'del' ? (
+                  <del class={styles.strike}>{part.value}</del>
+                ) : (
+                  part.value
+                ),
+              )}
+            </blockquote>
+          )
+        case 'ul':
+          return (
+            <ul class={styles.list}>
+              {block.items.map((item) => (
+                <li>
+                  {richParts(item).map((part) =>
+                    part.kind === 'strong' ? (
+                      <strong>{part.value}</strong>
+                    ) : part.kind === 'del' ? (
+                      <del class={styles.strike}>{part.value}</del>
+                    ) : (
+                      part.value
+                    ),
+                  )}
+                </li>
+              ))}
+            </ul>
+          )
+        case 'ol':
+          return (
+            <ol class={styles.list}>
+              {block.items.map((item) => (
+                <li>
+                  {richParts(item).map((part) =>
+                    part.kind === 'strong' ? (
+                      <strong>{part.value}</strong>
+                    ) : part.kind === 'del' ? (
+                      <del class={styles.strike}>{part.value}</del>
+                    ) : (
+                      part.value
+                    ),
+                  )}
+                </li>
+              ))}
+            </ol>
+          )
+        case 'steps':
+          return (
+            <ol class={styles.steps}>
+              {block.items.map((item) => (
+                <li>
+                  {richParts(item).map((part) =>
+                    part.kind === 'strong' ? (
+                      <strong>{part.value}</strong>
+                    ) : part.kind === 'del' ? (
+                      <del class={styles.strike}>{part.value}</del>
+                    ) : (
+                      part.value
+                    ),
+                  )}
+                </li>
+              ))}
+            </ol>
+          )
+        case 'table':
+          return (
+            <div class={styles.tableWrap}>
+              <table class={styles.table}>
+                <thead>
+                  <tr>
+                    {block.headers.map((header) => (
+                      <th>{header}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row) => (
+                    <tr>
+                      {row.map((cell) => (
+                        <td>
+                          {richParts(cell).map((part) =>
+                            part.kind === 'strong' ? (
+                              <strong>{part.value}</strong>
+                            ) : part.kind === 'del' ? (
+                              <del class={styles.strike}>{part.value}</del>
+                            ) : (
+                              part.value
+                            ),
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )
+        case 'update':
+          return (
+            <aside class={styles.update}>
+              <span class={styles.updateDate}>{formatDate ? formatDate(block.date) : block.date}</span>
+              <p class={styles.updateText}>
+                {richParts(block.text).map((part) =>
+                  part.kind === 'strong' ? (
+                    <strong>{part.value}</strong>
+                  ) : part.kind === 'del' ? (
+                    <del class={styles.strike}>{part.value}</del>
+                  ) : (
+                    part.value
+                  ),
+                )}
+              </p>
+            </aside>
+          )
+        case 'callout':
+          return (
+            <aside class={styles.callout}>
+              {richParts(block.text).map((part) =>
+                part.kind === 'strong' ? (
+                  <strong>{part.value}</strong>
+                ) : part.kind === 'del' ? (
+                  <del class={styles.strike}>{part.value}</del>
+                ) : (
+                  part.value
+                ),
+              )}
+            </aside>
+          )
+        default:
+          return null
+      }
+    })
+  }
+</article>

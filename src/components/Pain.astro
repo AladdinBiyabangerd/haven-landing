@@ -1,0 +1,87 @@
+---
+import type { Messages } from '@/i18n/types'
+interface Props {
+  messages: Messages
+}
+const { messages } = Astro.props
+const p = messages.pain
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{p.eyebrow}</p>
+      <h2 class="type-section">{p.title} <span class="accent">{p.titleAccent}</span></h2>
+      <p class="lead">{p.intro}</p>
+    </div>
+    <div class="compare">
+      <article>
+        <h3 class="type-card-title">{p.withoutLabel}</h3>
+        <ul>
+          {p.before.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+      <article class="good">
+        <h3 class="type-card-title">{p.withLabel}</h3>
+        <ul>
+          {p.after.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .compare {
+    display: grid;
+    gap: 1rem;
+  }
+  article {
+    padding: 1.4rem 1.35rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(23, 40, 66, 0.04);
+  }
+  article.good {
+    border-color: rgba(15, 118, 110, 0.28);
+    background:
+      linear-gradient(160deg, rgba(20, 184, 166, 0.1), transparent 55%),
+      var(--surface);
+  }
+  h3 {
+    margin-bottom: 1rem;
+    color: var(--ink-muted);
+  }
+  article.good h3 {
+    color: var(--accent);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+  }
+  li {
+    position: relative;
+    padding-left: 1.15rem;
+    color: var(--ink-muted);
+  }
+  li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--ink-subtle);
+  }
+  .good li::before {
+    content: '+';
+    color: var(--accent);
+  }
+  @media (min-width: 800px) {
+    .compare {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+  }
+</style>

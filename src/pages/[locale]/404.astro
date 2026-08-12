@@ -1,0 +1,40 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { resolveLocale } from '@/i18n/config'
+import { getMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const messages = getMessages(locale)
+const page = messages.notFound
+---
+
+<BaseLayout locale={locale} messages={messages} page="notFound">
+  <section class="section">
+    <div class="container narrow">
+      <p class="code type-hero-code">404</p>
+      <h1 class="type-page-title">{page.title}</h1>
+      <p class="lead">{page.body}</p>
+      <a class="btn btn-primary" href={localePath(locale, '/')}>{page.back}</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .narrow {
+    max-width: 560px;
+    text-align: center;
+  }
+  .code {
+    margin: 0;
+    color: var(--accent);
+  }
+  .lead {
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+  }
+</style>

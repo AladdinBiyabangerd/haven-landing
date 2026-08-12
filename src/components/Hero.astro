@@ -1,0 +1,115 @@
+---
+import type { Messages } from '@/i18n/types'
+import type { Locale } from '@/i18n/config'
+import { localePath } from '@/lib/site'
+import ProductShot from '@/components/ProductShot.astro'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+}
+const { locale, messages } = Astro.props
+const h = messages.hero
+---
+
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="brand-line reveal">{h.brandHint} · <strong>Heselo</strong></p>
+      <h1 class="type-hero reveal reveal-delay-1">{h.title}</h1>
+      <p class="lead reveal reveal-delay-2">{h.subtitle}</p>
+      <div class="hero__cta reveal reveal-delay-3">
+        <a class="btn btn-primary" href={localePath(locale, '/contact')}>{h.ctaPrimary}</a>
+        <a class="btn btn-ghost" href={localePath(locale, '/features')}>{h.ctaSecondary}</a>
+      </div>
+      <ul class="trust reveal reveal-delay-3">
+        {messages.trust.items.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div class="hero__visual reveal reveal-delay-2" aria-label={h.visualAlt}>
+      <ProductShot locale={locale} messages={messages} id="live-floor" priority chrome={false} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: min(92vh, 920px);
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 0 4rem;
+    overflow: hidden;
+  }
+  .hero__glow {
+    position: absolute;
+    inset: auto -20% 10% 40%;
+    height: 50%;
+    background: radial-gradient(closest-side, rgba(20, 184, 166, 0.18), transparent 70%);
+    filter: blur(10px);
+    pointer-events: none;
+    animation: drift 8s ease-in-out infinite;
+  }
+  .hero__grid {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .brand-line {
+    margin: 0 0 1rem;
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    color: var(--ink-muted);
+  }
+  .brand-line strong {
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: var(--tracking-display);
+  }
+  .hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+  }
+  .trust {
+    list-style: none;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+  .trust li {
+    position: relative;
+    padding-left: 1.2rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .trust li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  .hero__visual {
+    position: relative;
+  }
+  @media (min-width: 960px) {
+    .hero__grid {
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3rem;
+    }
+    .trust {
+      grid-template-columns: 1fr 1fr;
+      max-width: 34rem;
+    }
+  }
+</style>

@@ -1,0 +1,55 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import { localePath } from '@/lib/site'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+}
+const { locale, messages } = Astro.props
+const c = messages.cta
+---
+
+<section class="section">
+  <div class="container">
+    <div class="banner">
+      <div>
+        <h2 class="type-section">{c.title}</h2>
+        <p class="type-lead">{c.subtitle}</p>
+      </div>
+      <a class="btn btn-primary" href={localePath(locale, '/contact')}>{c.button}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .banner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    border-radius: calc(var(--radius-lg) + 4px);
+    border: 1px solid rgba(15, 118, 110, 0.22);
+    background:
+      radial-gradient(600px 200px at 10% 0%, rgba(20, 184, 166, 0.18), transparent 55%),
+      linear-gradient(135deg, #ffffff, #e8f7f4);
+    box-shadow: var(--shadow);
+  }
+  h2 {
+    max-width: 18ch;
+  }
+  p {
+    margin: 0.65rem 0 0;
+    color: var(--ink-muted);
+    max-width: 36rem;
+  }
+  @media (min-width: 800px) {
+    .banner {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+</style>

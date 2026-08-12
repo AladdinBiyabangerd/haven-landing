@@ -1,0 +1,40 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Hero from '@/components/Hero.astro'
+import SeoOverview from '@/components/SeoOverview.astro'
+import Pain from '@/components/Pain.astro'
+import Pillars from '@/components/Pillars.astro'
+import Audiences from '@/components/Audiences.astro'
+import GuidesTeaser from '@/components/GuidesTeaser.astro'
+import How from '@/components/How.astro'
+import Faq from '@/components/Faq.astro'
+import TrustEeat from '@/components/TrustEeat.astro'
+import Cta from '@/components/Cta.astro'
+import { resolveLocale } from '@/i18n/config'
+import { getMessages } from '@/i18n'
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const messages = getMessages(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  messages={messages}
+  page="home"
+  preloadImages={[{ href: '/images/product/live-floor.webp', type: 'image/webp' }]}
+>
+  <Hero locale={locale} messages={messages} />
+  <SeoOverview messages={messages} />
+  <Pain messages={messages} />
+  <Pillars messages={messages} />
+  <Audiences locale={locale} messages={messages} />
+  <GuidesTeaser locale={locale} messages={messages} />
+  <How messages={messages} />
+  <Faq messages={messages} />
+  <TrustEeat locale={locale} messages={messages} />
+  <Cta locale={locale} messages={messages} />
+</BaseLayout>

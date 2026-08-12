@@ -1,0 +1,52 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import ProductShot from '@/components/ProductShot.astro'
+import type { ProductShotId } from '@/lib/productShots'
+import { FEATURE_GALLERY_SHOTS } from '@/lib/productShots'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+  /** Subset to show; defaults to full feature set */
+  shots?: ProductShotId[]
+}
+const { locale, messages, shots = FEATURE_GALLERY_SHOTS } = Astro.props
+const g = messages.productGallery
+---
+
+<section class="section" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{g.eyebrow}</p>
+      <h2 id="gallery-title" class="type-section">
+        {g.title} <span class="accent">{g.titleAccent}</span>
+      </h2>
+      <p class="lead">{g.intro}</p>
+    </div>
+    <ul class="grid">
+      {
+        shots.map((id) => (
+          <li>
+            <ProductShot locale={locale} messages={messages} id={id} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+  }
+  @media (min-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

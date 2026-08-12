@@ -1,0 +1,121 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import { localePath, SITE } from '@/lib/site'
+import { getSolutions } from '@/data/solutions'
+import { getGuides } from '@/data/guides'
+import BrandMark from '@/components/BrandMark.astro'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+}
+const { locale, messages } = Astro.props
+const year = new Date().getFullYear()
+
+const footerSolutions = getSolutions(locale).map((item) => ({
+  slug: item.slug,
+  label: item.shortTitle,
+}))
+
+const footerGuides = getGuides(locale).map((item) => ({
+  slug: item.slug,
+  label: item.shortTitle,
+}))
+---
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand" href={localePath(locale, '/')}>
+        <BrandMark size={40} />
+        <span class="type-brand">Heselo</span>
+      </a>
+      <p class="type-meta">{messages.footer.tagline}</p>
+      <a class="mail" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+    </div>
+    <div>
+      <h3 class="type-eyebrow">{messages.footer.product}</h3>
+      <a href={localePath(locale, '/features')}>{messages.nav.features}</a>
+      <a href={localePath(locale, '/pricing')}>{messages.nav.pricing}</a>
+      <a href={localePath(locale, '/contact')}>{messages.nav.demo}</a>
+    </div>
+    <div>
+      <h3 class="type-eyebrow">{messages.footer.solutions}</h3>
+      <a href={localePath(locale, '/solutions')}>{messages.nav.solutions}</a>
+      {
+        footerSolutions.map((item) => (
+          <a href={localePath(locale, `/solutions/${item.slug}`)}>{item.label}</a>
+        ))
+      }
+    </div>
+    <div>
+      <h3 class="type-eyebrow">{messages.footer.learn}</h3>
+      <a href={localePath(locale, '/guides')}>{messages.nav.guides}</a>
+      {
+        footerGuides.map((item) => (
+          <a href={localePath(locale, `/guides/${item.slug}`)}>{item.label}</a>
+        ))
+      }
+      <h3 class="type-eyebrow legal-head">{messages.footer.legal}</h3>
+      <a href={localePath(locale, '/privacy')}>{messages.footer.privacy}</a>
+      <a href={localePath(locale, '/terms')}>{messages.footer.terms}</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span class="type-meta">© {year} Heselo. {messages.footer.rights}</span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--line);
+    padding: 3.5rem 0 2rem;
+    background: rgba(255, 255, 255, 0.55);
+  }
+  .footer__grid {
+    display: grid;
+    gap: 2rem;
+  }
+  .footer__brand p {
+    margin: 0.85rem 0;
+    color: var(--ink-muted);
+    max-width: 18rem;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .mail {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  h3.type-eyebrow {
+    margin: 0 0 0.85rem;
+    color: var(--ink-subtle);
+  }
+  .legal-head {
+    margin-top: 1.35rem;
+  }
+  .footer__grid a {
+    display: block;
+    padding: 0.28rem 0;
+    font-size: var(--text-md);
+    color: var(--ink-muted);
+  }
+  .footer__grid a:hover {
+    color: var(--ink);
+  }
+  .footer__bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-subtle);
+  }
+  @media (min-width: 900px) {
+    .footer__grid {
+      grid-template-columns: 1.35fr 1fr 1fr 1fr;
+    }
+  }
+</style>

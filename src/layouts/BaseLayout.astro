@@ -1,0 +1,143 @@
+---
+import '@/styles/global.css'
+import { LOCALES, HTML_LANG, type Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import { seoMeta, seoFromMessages, buildBreadcrumbItems, type PageKey, type SeoPageInput } from '@/lib/seo'
+import { SITE, localePath, absoluteUrl } from '@/lib/site'
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Analytics from '@/components/Analytics.astro'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+  page: PageKey
+  /** Required for solution/guide pages; optional override for others */
+  seo?: SeoPageInput
+  /** Preload critical images (e.g. hero LCP) */
+  preloadImages?: Array<{ href: string; type?: string }>
+}
+
+const { locale, messages, page, seo: seoInput, preloadImages = [] } = Astro.props
+
+const input: SeoPageInput =
+  seoInput ||
+  (page === 'solutions'
+    ? {
+        title: messages.seo.pages.solutions.title,
+        description: messages.seo.pages.solutions.description,
+        keywords: messages.seo.pages.solutions.keywords,
+        slug: '/solutions',
+        breadcrumbName: messages.nav.solutions,
+      }
+    : page === 'guides'
+      ? {
+          title: messages.seo.pages.guides.title,
+          description: messages.seo.pages.guides.description,
+          keywords: messages.seo.pages.guides.keywords,
+          slug: '/guides',
+          breadcrumbName: messages.nav.guides,
+        }
+      : seoFromMessages(
+          page as Exclude<PageKey, 'solution' | 'solutions' | 'guide' | 'guides'>,
+          locale,
+          messages,
+        ))
+
+const seo = seoMeta(locale, messages, input, { noindex: page === 'notFound' })
+const slugForHreflang = input.slug
+const breadcrumbs =
+  page !== 'home' && page !== 'notFound' ? buildBreadcrumbItems(locale, messages, input) : []
+---
+
+<!doctype html>
+<html lang={HTML_LANG[locale]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description} />
+    {seo.keywords ? <meta name="keywords" content={seo.keywords} /> : null}
+    <meta name="author" content={SITE.name} />
+    <meta name="robots" content={seo.robots} />
+    <meta name="googlebot" content={seo.robots} />
+    <meta name="theme-color" content={SITE.themeColor} />
+    <meta name="application-name" content={SITE.name} />
+    <meta name="apple-mobile-web-app-title" content={SITE.name} />
+    <meta name="geo.region" content="AZ" />
+    <meta name="geo.placename" content="Azerbaijan" />
+    <link rel="canonical" href={seo.canonical} />
+
+    {
+      preloadImages.map((img) => (
+        <link rel="preload" as="image" href={img.href} type={img.type} fetchpriority="high" />
+      ))
+    }
+
+    {
+      LOCALES.map((loc) => (
+        <link rel="alternate" hreflang={HTML_LANG[loc]} href={absoluteUrl(localePath(loc, slugForHreflang))} />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={absoluteUrl(localePath('az', slugForHreflang))} />
+
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:type" content={seo.ogType} />
+    <meta property="og:locale" content={seo.ogLocale} />
+    {seo.alternateLocales.map((loc) => <meta property="og:locale:alternate" content={loc} />)}
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:url" content={seo.canonical} />
+    <meta property="og:image" content={seo.image} />
+    <meta property="og:image:alt" content={seo.imageAlt} />
+    <meta property="og:image:type" content={seo.imageType} />
+    <meta property="og:image:width" content={String(SITE.ogImage.width)} />
+    <meta property="og:image:height" content={String(SITE.ogImage.height)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={SITE.twitterHandle} />
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.description} />
+    <meta name="twitter:image" content={seo.image} />
+    <meta name="twitter:image:alt" content={seo.imageAlt} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <Analytics />
+
+    <script is:inline type="application/ld+json" set:html={seo.jsonLd} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{messages.nav.skipToContent}</a>
+    <Header locale={locale} messages={messages} />
+    <main id="main">
+      {
+        breadcrumbs.length > 0 ? (
+          <Breadcrumbs locale={locale} items={breadcrumbs} ariaLabel={messages.nav.breadcrumbs} />
+        ) : null
+      }
+      <slot />
+    </main>
+    <Footer locale={locale} messages={messages} />
+  </body>
+</html>
+
+<style is:global>
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0.75rem;
+    z-index: 100;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 700;
+  }
+  .skip-link:focus {
+    left: 0.75rem;
+  }
+</style>

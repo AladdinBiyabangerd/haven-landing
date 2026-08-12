@@ -1,0 +1,120 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import {
+  PRODUCT_SHOT_PATHS,
+  productShotAlt,
+  type ProductShotId,
+} from '@/lib/productShots'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+  id: ProductShotId
+  /** Show macOS-style window chrome (default true) */
+  chrome?: boolean
+  priority?: boolean
+  class?: string
+}
+const {
+  locale,
+  messages,
+  id,
+  chrome = true,
+  priority = false,
+  class: className = '',
+} = Astro.props
+
+const base = PRODUCT_SHOT_PATHS[id]
+const alt = productShotAlt(locale, id)
+const label = messages.productShot.chromeLabel
+---
+
+<figure class:list={['shot', className]}>
+  {
+    chrome ? (
+      <div class="shot__frame">
+        <div class="shot__chrome" aria-hidden="true">
+          <span class="dot dot--red" />
+          <span class="dot dot--amber" />
+          <span class="dot dot--green" />
+          <strong>{label}</strong>
+        </div>
+        <picture>
+          <source srcset={`${base}@2x.webp 2x, ${base}.webp 1x`} type="image/webp" />
+          <img
+            src={`${base}.png`}
+            srcset={`${base}@2x.png 2x, ${base}.png 1x`}
+            alt={alt}
+            width="1256"
+            height="788"
+            loading={priority ? 'eager' : 'lazy'}
+            decoding="async"
+            fetchpriority={priority ? 'high' : 'auto'}
+          />
+        </picture>
+      </div>
+    ) : (
+      <picture>
+        <source srcset={`${base}@2x.webp 2x, ${base}.webp 1x`} type="image/webp" />
+        <img
+          src={`${base}.png`}
+          srcset={`${base}@2x.png 2x, ${base}.png 1x`}
+          alt={alt}
+          width="1256"
+          height="788"
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      </picture>
+    )
+  }
+</figure>
+
+<style>
+  .shot {
+    margin: 0;
+  }
+  .shot__frame {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-strong);
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .shot__chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #ffffff, #f6fafc);
+    font-size: var(--text-sm);
+  }
+  .shot__chrome strong {
+    margin-left: 0.35rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: var(--tracking-display);
+  }
+  .dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+  }
+  .dot--red {
+    background: #fb7185;
+  }
+  .dot--amber {
+    background: #fbbf24;
+  }
+  .dot--green {
+    background: #34d399;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+</style>

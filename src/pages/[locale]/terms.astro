@@ -1,0 +1,50 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import LegalDocument from '@/components/LegalDocument.astro'
+import { resolveLocale, type Locale } from '@/i18n/config'
+import { getMessages } from '@/i18n'
+import { termsOfUseBlocks } from '@/content/termsOfUse'
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const messages = getMessages(locale)
+const page = messages.terms
+const blocks = termsOfUseBlocks[locale]
+
+const intlLocale: Record<Locale, string> = { az: 'az-AZ', en: 'en-GB', ru: 'ru-RU' }
+
+function formatDate(isoDate: string) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDate.trim())
+  const date = match
+    ? new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]))
+    : new Date(isoDate)
+  return new Intl.DateTimeFormat(intlLocale[locale], {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(date)
+}
+---
+
+<BaseLayout locale={locale} messages={messages} page="terms">
+  <section class="section">
+    <div class="container legal">
+      <h1 class="type-page-title">{page.title}</h1>
+      <p class="updated type-meta">{page.updated}</p>
+      <LegalDocument blocks={blocks} formatDate={formatDate} />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal {
+    max-width: 760px;
+  }
+  .updated {
+    margin: 0 0 1.5rem;
+    color: var(--ink-subtle);
+  }
+</style>

@@ -1,0 +1,158 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import { SITE } from '@/lib/site'
+
+interface Props {
+  messages: Messages
+  locale: Locale
+}
+const { messages, locale } = Astro.props
+const c = messages.contact
+const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || '/api/contact/'
+---
+
+<form class="form" data-contact-form data-endpoint={endpoint} data-locale={locale} novalidate>
+  <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  <div class="row">
+    <label>
+      <span>{c.name}</span>
+      <input name="name" type="text" autocomplete="name" required maxlength="120" />
+    </label>
+    <label>
+      <span>{c.email}</span>
+      <input name="email" type="email" autocomplete="email" required maxlength="200" />
+    </label>
+  </div>
+  <label>
+    <span>{c.venue}</span>
+    <input name="venue" type="text" autocomplete="organization" maxlength="200" />
+  </label>
+  <label>
+    <span>{c.message}</span>
+    <textarea name="message" rows="5" required maxlength="5000"></textarea>
+  </label>
+  <button class="btn btn-primary" type="submit" data-submit>{c.submit}</button>
+  <p class="status" data-status hidden></p>
+  <p class="alt">
+    {c.alt}
+    <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+  </p>
+</form>
+
+<script define:vars={{ successMsg: c.success, errorMsg: c.error, sendingMsg: c.sending }}>
+  const form = document.querySelector('[data-contact-form]')
+  if (form instanceof HTMLFormElement) {
+    const status = form.querySelector('[data-status]')
+    const submit = form.querySelector('[data-submit]')
+    let endpoint = form.dataset.endpoint || '/api/contact/'
+    if (endpoint && !endpoint.endsWith('/')) endpoint = `${endpoint}/`
+    const locale = form.dataset.locale || 'az'
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault()
+      if (!(status instanceof HTMLElement) || !(submit instanceof HTMLButtonElement)) return
+
+      const data = new FormData(form)
+      const payload = {
+        name: String(data.get('name') || ''),
+        email: String(data.get('email') || ''),
+        venue: String(data.get('venue') || ''),
+        message: String(data.get('message') || ''),
+        company: String(data.get('company') || ''),
+        locale,
+      }
+
+      status.hidden = false
+      status.textContent = sendingMsg
+      status.dataset.state = 'pending'
+      submit.disabled = true
+
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+        if (!res.ok) throw new Error('fail')
+        const body = await res.json().catch(() => null)
+        if (!body || body.ok !== true) throw new Error('fail')
+        status.textContent = successMsg
+        status.dataset.state = 'ok'
+        form.reset()
+      } catch {
+        status.textContent = errorMsg
+        status.dataset.state = 'err'
+      } finally {
+        submit.disabled = false
+      }
+    })
+  }
+</script>
+
+<style>
+  .form {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .row {
+    display: grid;
+    gap: 0.9rem;
+  }
+  label {
+    display: grid;
+    gap: 0.4rem;
+  }
+  label span {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--ink);
+    padding: 0.85rem 0.95rem;
+  }
+  input:focus,
+  textarea:focus {
+    outline: 2px solid rgba(45, 212, 191, 0.45);
+    outline-offset: 1px;
+  }
+  .status {
+    margin: 0;
+    font-weight: 600;
+  }
+  .status[data-state='ok'] {
+    color: var(--accent);
+  }
+  .status[data-state='err'] {
+    color: var(--danger);
+  }
+  .alt {
+    margin: 0.25rem 0 0;
+    color: var(--ink-subtle);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+  }
+  .alt a {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  @media (min-width: 720px) {
+    .row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

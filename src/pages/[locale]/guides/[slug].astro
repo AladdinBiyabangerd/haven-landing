@@ -1,0 +1,219 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Faq from '@/components/Faq.astro'
+import { resolveLocale, LOCALES } from '@/i18n/config'
+import { getMessages } from '@/i18n'
+import { getGuide, GUIDE_SLUGS } from '@/data/guides'
+import { getSolution } from '@/data/solutions'
+import { localePath } from '@/lib/site'
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((locale) =>
+    GUIDE_SLUGS.map((slug) => ({
+      params: { locale, slug },
+    })),
+  )
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const slug = String(Astro.params.slug || '')
+const messages = getMessages(locale)
+const guide = getGuide(locale, slug)
+
+if (!guide) {
+  return Astro.redirect(localePath(locale, '/guides'))
+}
+
+const related = guide.relatedSolutions
+  .map((s) => getSolution(locale, s))
+  .filter(Boolean)
+
+const faqMessages = {
+  ...messages,
+  faq: {
+    eyebrow: messages.faq.eyebrow,
+    title: messages.faq.title,
+    items: guide.faq,
+  },
+}
+---
+
+<BaseLayout
+  locale={locale}
+  messages={messages}
+  page="guide"
+  seo={{
+    title: guide.seoTitle,
+    description: guide.seoDescription,
+    keywords: guide.keywords,
+    slug: `/guides/${guide.slug}`,
+    breadcrumbName: guide.shortTitle,
+    faq: guide.faq,
+    ogType: 'article',
+    article: {
+      headline: guide.h1,
+      description: guide.seoDescription,
+      datePublished: guide.datePublished,
+      dateModified: guide.dateModified,
+    },
+  }}
+>
+  <article class="section">
+    <div class="container narrow">
+      <header class="section-head">
+        <p class="eyebrow">{messages.nav.guides}</p>
+        <h1 class="type-page-title">{guide.h1}</h1>
+        <p class="lead">{guide.intro}</p>
+        <p class="meta type-meta">
+          <time datetime={guide.dateModified}>{guide.dateModified}</time>
+        </p>
+      </header>
+
+      {
+        guide.sections.map((section) => (
+          <section aria-labelledby={section.id}>
+            <h2 id={section.id} class="type-section">
+              {section.title}
+            </h2>
+            {section.paragraphs.map((p) => (
+              <p class="body">{p}</p>
+            ))}
+            {section.bullets ? (
+              <ul class="bullets">
+                {section.bullets.map((b) => (
+                  <li>{b}</li>
+                ))}
+              </ul>
+            ) : null}
+          </section>
+        ))
+      }
+
+      {
+        related.length > 0 ? (
+          <nav class="related" aria-label={messages.nav.solutions}>
+            <h2 class="type-section">{messages.nav.solutions}</h2>
+            <ul>
+              {related.map((item) =>
+                item ? (
+                  <li>
+                    <a href={localePath(locale, `/solutions/${item.slug}`)}>{item.h1}</a>
+                  </li>
+                ) : null,
+              )}
+            </ul>
+          </nav>
+        ) : null
+      }
+
+      <p class="hub-back">
+        <a href={localePath(locale, '/guides')}>{messages.nav.guides} →</a>
+      </p>
+    </div>
+  </article>
+
+  <Faq messages={faqMessages} />
+
+  <section class="section">
+    <div class="container">
+      <div class="banner">
+        <div>
+          <h2 class="type-section">{guide.ctaTitle}</h2>
+          <p class="type-lead">{guide.ctaBody}</p>
+        </div>
+        <a class="btn btn-primary" href={localePath(locale, '/contact')}>{messages.cta.button}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .narrow {
+    max-width: 760px;
+  }
+  .meta {
+    margin: 0.5rem 0 0;
+    color: var(--ink-subtle);
+  }
+  section + section {
+    margin-top: 2rem;
+  }
+  .body {
+    margin: 0.75rem 0 0;
+    color: var(--ink-muted);
+  }
+  .bullets {
+    margin: 0.85rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+  }
+  .bullets li {
+    position: relative;
+    padding-left: 1.15rem;
+    color: var(--ink-muted);
+  }
+  .bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  .related {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .related ul {
+    margin: 0.85rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .related a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+  .hub-back {
+    margin: 2rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  .hub-back a {
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    border-radius: calc(var(--radius-lg) + 4px);
+    border: 1px solid rgba(15, 118, 110, 0.22);
+    background:
+      radial-gradient(600px 200px at 10% 0%, rgba(20, 184, 166, 0.18), transparent 55%),
+      linear-gradient(135deg, #ffffff, #e8f7f4);
+    box-shadow: var(--shadow);
+  }
+  .banner p {
+    margin: 0.65rem 0 0;
+    color: var(--ink-muted);
+    max-width: 36rem;
+  }
+  @media (min-width: 800px) {
+    .banner {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+</style>
