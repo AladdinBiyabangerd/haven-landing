@@ -11,29 +11,25 @@ export type NextThoughtDoor = {
 interface Props {
   doors: NextThoughtDoor[]
   label: string
-  arrow: string
+  embedded?: boolean
 }
 
-const { doors, label, arrow } = Astro.props
+const { doors, label, embedded = false } = Astro.props
 ---
 
 {
   doors.length > 0 ? (
-    <nav class="next-thought" aria-label={label}>
-      <div class="container">
-        <ul>
-          {doors.map((door) => (
-            <li>
-              <a href={door.href} data-journey-link={door.bind}>
-                <span class="prompt">{door.prompt}</span>
-                <span class="go">
-                  {door.label}
-                  {arrow}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
+    <nav class:list={['next-thought', { embedded }]} aria-label={label}>
+      <div class={embedded ? undefined : 'container'}>
+        {doors.map((door) => (
+          <p>
+            {door.prompt}{' '}
+            <a href={door.href} data-journey-link={door.bind}>
+              {door.label}
+            </a>
+            .
+          </p>
+        ))}
       </div>
     </nav>
   ) : null
@@ -41,51 +37,29 @@ const { doors, label, arrow } = Astro.props
 
 <style>
   .next-thought {
-    padding: 0.25rem 0 1.75rem;
+    padding: 0.15rem 0 1.6rem;
   }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 0.55rem;
+  .embedded {
+    padding: 1.1rem 0 0;
+  }
+  p {
+    margin: 0.45rem 0 0;
+    max-width: 40rem;
+    color: var(--ink-muted);
+    font-size: var(--text-md);
+    line-height: var(--lh-body);
+  }
+  p:first-child {
+    margin-top: 0;
   }
   a {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 0.35rem 1rem;
-    padding: 0.85rem 0;
-    border-top: 1px solid var(--line);
-    color: inherit;
-    text-decoration: none;
-  }
-  li:last-child a {
-    border-bottom: 1px solid var(--line);
-  }
-  .prompt {
-    color: var(--ink-muted);
-    font-size: var(--text-sm);
-  }
-  .go {
-    font-weight: 600;
     color: var(--accent);
-    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
   }
-  a:hover .go {
+  a:hover {
     color: var(--accent-deep);
-  }
-  @media (min-width: 720px) {
-    ul {
-      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-      gap: 0 1.5rem;
-    }
-    li:last-child a {
-      border-bottom: 0;
-    }
-    li:nth-child(-n + 2) a {
-      border-bottom: 1px solid var(--line);
-    }
   }
 </style>

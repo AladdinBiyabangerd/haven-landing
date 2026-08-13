@@ -190,7 +190,8 @@ export type Messages = {
     pickTypeButton: string
     typedTitle: string
     typedSubtitle: string
-    pricingButton: string
+    nextForm: string
+    nextWhatsapp: string
   }
   featuresPage: {
     eyebrow: string

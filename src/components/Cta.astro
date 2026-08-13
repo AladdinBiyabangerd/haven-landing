@@ -15,59 +15,89 @@ interface Props {
 
 const { locale, messages, venueType = '', intent = 'demo' } = Astro.props
 const c = messages.cta
+const j = messages.journey
 const known = venueType
 const contactHref = contactPath(locale, known || undefined)
 const pricingHref = pricingPath(locale, known || undefined)
 const solutionsHref = localePath(locale, '/solutions')
 const waHref = whatsappHrefFor(messages, known || undefined)
 
-const nextTitle = known ? c.typedTitle : c.pickTypeTitle
-const nextSubtitle = known ? c.typedSubtitle : c.pickTypeSubtitle
-const title = intent === 'next' ? nextTitle : known ? c.typedTitle : c.title
-const subtitle = intent === 'next' ? nextSubtitle : known ? c.typedSubtitle : c.subtitle
+const title = known ? c.typedTitle : c.title
+const subtitle =
+  intent === 'next'
+    ? known
+      ? j.priceForType.prompt
+      : c.pickTypeSubtitle
+    : known
+      ? c.typedSubtitle
+      : c.subtitle
 
 const primaryHref = intent === 'next' ? (known ? pricingHref : solutionsHref) : waHref
-const primaryLabel = intent === 'next' ? (known ? c.pricingButton : c.pickTypeButton) : c.whatsapp
+const primaryLabel =
+  intent === 'next' ? (known ? j.priceForType.label : c.pickTypeButton) : c.whatsapp
 const secondaryHref = intent === 'next' ? (known ? contactHref : waHref) : contactHref
-const secondaryLabel = intent === 'next' ? (known ? c.button : c.whatsapp) : c.button
+const secondaryLabel = intent === 'next' ? (known ? c.nextForm : c.nextWhatsapp) : c.button
 const primaryExternal = intent === 'demo'
 const secondaryExternal = intent === 'next' && !known
 ---
 
 <section
-  class="section"
+  class:list={['section', { 'cta-next': intent === 'next' }]}
   data-cta
   data-cta-intent={intent}
   data-cta-type={known}
   data-storage-key={VENUE_STORAGE_KEY}
 >
   <div class="container">
-    <div class="banner">
-      <div>
-        <h2 class="type-section" data-cta-title>{title}</h2>
-        <p class="type-lead" data-cta-sub>{subtitle}</p>
-      </div>
-      <div class="actions">
-        <a
-          class="btn btn-primary"
-          data-cta-primary
-          href={primaryHref}
-          target={primaryExternal ? '_blank' : undefined}
-          rel={primaryExternal ? 'noopener noreferrer' : undefined}
-        >
-          {primaryLabel}
-        </a>
-        <a
-          class="btn btn-ghost"
-          data-cta-secondary
-          href={secondaryHref}
-          target={secondaryExternal ? '_blank' : undefined}
-          rel={secondaryExternal ? 'noopener noreferrer' : undefined}
-        >
-          {secondaryLabel}
-        </a>
-      </div>
-    </div>
+    {
+      intent === 'next' ? (
+        <div class="prose">
+          <p>
+            <span data-cta-sub>{subtitle}</span>{' '}
+            <a data-cta-primary href={primaryHref}>
+              {primaryLabel}
+            </a>
+            .
+          </p>
+          <p>
+            <a
+              data-cta-secondary
+              href={secondaryHref}
+              target={secondaryExternal ? '_blank' : undefined}
+              rel={secondaryExternal ? 'noopener noreferrer' : undefined}
+            >
+              {secondaryLabel}
+            </a>
+            .
+          </p>
+        </div>
+      ) : (
+        <div class="banner">
+          <div>
+            <h2 class="type-section" data-cta-title>
+              {title}
+            </h2>
+            <p class="type-lead" data-cta-sub>
+              {subtitle}
+            </p>
+          </div>
+          <div class="actions">
+            <a
+              class="btn btn-primary"
+              data-cta-primary
+              href={primaryHref}
+              target={primaryExternal ? '_blank' : undefined}
+              rel={primaryExternal ? 'noopener noreferrer' : undefined}
+            >
+              {primaryLabel}
+            </a>
+            <a class="btn btn-ghost" data-cta-secondary href={secondaryHref}>
+              {secondaryLabel}
+            </a>
+          </div>
+        </div>
+      )
+    }
   </div>
 </section>
 
@@ -80,12 +110,14 @@ const secondaryExternal = intent === 'next' && !known
       subtitle: c.subtitle,
       button: c.button,
       whatsapp: c.whatsapp,
-      pickTypeTitle: c.pickTypeTitle,
       pickTypeSubtitle: c.pickTypeSubtitle,
       pickTypeButton: c.pickTypeButton,
       typedTitle: c.typedTitle,
       typedSubtitle: c.typedSubtitle,
-      pricingButton: c.pricingButton,
+      pricePrompt: j.priceForType.prompt,
+      priceLabel: j.priceForType.label,
+      nextForm: c.nextForm,
+      nextWhatsapp: c.nextWhatsapp,
     },
     paths: {
       contact: localePath(locale, '/contact'),
@@ -132,17 +164,15 @@ const secondaryExternal = intent === 'next' && !known
       const secondary = root.querySelector('[data-cta-secondary]')
       if (intent === 'next') {
         if (type) {
-          if (titleEl) titleEl.textContent = copy.typedTitle
-          if (subEl) subEl.textContent = copy.typedSubtitle
-          if (primary) primary.textContent = copy.pricingButton
-          if (secondary) secondary.textContent = copy.button
+          if (subEl) subEl.textContent = copy.pricePrompt
+          if (primary) primary.textContent = copy.priceLabel
+          if (secondary) secondary.textContent = copy.nextForm
           setLink(primary, paths.pricing + '#' + type, false)
           setLink(secondary, paths.contact + '?type=' + encodeURIComponent(type), false)
         } else {
-          if (titleEl) titleEl.textContent = copy.pickTypeTitle
           if (subEl) subEl.textContent = copy.pickTypeSubtitle
           if (primary) primary.textContent = copy.pickTypeButton
-          if (secondary) secondary.textContent = copy.whatsapp
+          if (secondary) secondary.textContent = copy.nextWhatsapp
           setLink(primary, paths.solutions, false)
           setLink(secondary, waHref(''), true)
         }
@@ -158,6 +188,26 @@ const secondaryExternal = intent === 'next' && !known
 </script>
 
 <style>
+  .prose p {
+    margin: 0.45rem 0 0;
+    max-width: 40rem;
+    color: var(--ink-muted);
+    font-size: var(--text-md);
+    line-height: var(--lh-body);
+  }
+  .prose p:first-child {
+    margin-top: 0;
+  }
+  .prose a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+  }
+  .prose a:hover {
+    color: var(--accent-deep);
+  }
   .banner {
     display: flex;
     flex-direction: column;
@@ -175,7 +225,7 @@ const secondaryExternal = intent === 'next' && !known
   h2 {
     max-width: 18ch;
   }
-  p {
+  .banner p {
     margin: 0.65rem 0 0;
     color: var(--ink-muted);
     max-width: 36rem;
