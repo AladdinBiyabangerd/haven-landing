@@ -40,6 +40,7 @@ const links = [
         links.map((link) => (
           <a
             href={link.href}
+            data-journey-link={link.match === '/contact' ? 'contact' : undefined}
             class:list={[
               'nav__link',
               {
@@ -75,7 +76,7 @@ const links = [
           ))
         }
       </div>
-      <a class="btn btn-primary header__cta" href={localePath(locale, '/contact')}>{m.demo}</a>
+      <a class="btn btn-primary header__cta" href={localePath(locale, '/contact')} data-journey-link="contact">{m.demo}</a>
       <button
         class="menu-btn"
         type="button"
@@ -93,12 +94,12 @@ const links = [
     <div class="container mobile__inner">
       {
         links.map((link) => (
-          <a href={link.href} class="mobile__link">
+          <a href={link.href} class="mobile__link" data-journey-link={link.match === '/contact' ? 'contact' : undefined}>
             {link.label}
           </a>
         ))
       }
-      <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')}>{m.demo}</a>
+      <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')} data-journey-link="contact">{m.demo}</a>
     </div>
   </div>
 </header>

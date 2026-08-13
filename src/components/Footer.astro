@@ -41,7 +41,7 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       <a class="mail" href={`mailto:${SITE.contactEmail}`}>
         {messages.contact.emailWrite} · {SITE.contactEmail}
       </a>
-      <a class="mail" href={waHref} target="_blank" rel="noopener noreferrer">
+      <a class="mail" href={waHref} target="_blank" rel="noopener noreferrer" data-wa-typed>
         {messages.contact.whatsapp}
       </a>
       <a class="mail tel" href={telUrl()}>{phoneDisplay}</a>

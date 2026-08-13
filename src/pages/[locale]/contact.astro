@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import ContactForm from '@/components/ContactForm.astro'
+import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -36,6 +38,24 @@ const page = messages.contact
         </p>
       </div>
       <ContactForm locale={locale} messages={messages} />
+      <NextThought
+        label={messages.journey.navLabel}
+        arrow={messages.common.linkArrow}
+        doors={[
+          {
+            prompt: messages.journey.seePricing.prompt,
+            label: messages.journey.seePricing.label,
+            href: localePath(locale, '/pricing'),
+            bind: 'pricing',
+          },
+          {
+            prompt: messages.journey.whichVenue.prompt,
+            label: messages.journey.whichVenue.label,
+            href: localePath(locale, '/solutions'),
+            bind: 'solution',
+          },
+        ]}
+      />
     </div>
   </section>
 </BaseLayout>

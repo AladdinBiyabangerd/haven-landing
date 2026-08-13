@@ -181,18 +181,26 @@ export const en: Messages = {
       {
         q: 'Which businesses is Heselo for?',
         a: 'Gaming clubs (PlayStation and console), karaoke rooms, billiards, anti-cafés, and room lounges — venues that need room, station, or table booking, live tracking, and cash.',
+        href: '/solutions',
+        linkLabel: 'Venue types',
       },
       {
         q: 'Can I manage reservations with Heselo?',
         a: 'Yes. Schedule and reservations cover table and room booking, moves, cancels, and history. When guests arrive, the same booking becomes a live session.',
+        href: '/solutions/reservations',
+        linkLabel: 'Reservations solution',
       },
       {
         q: 'Does Heselo include a cash / POS flow?',
         a: 'Yes. Open/close shift, transactions, cash report, and cash count are in the same panel — no separate till app required.',
+        href: '/solutions/pos',
+        linkLabel: 'Cash solution',
       },
       {
         q: 'Is inventory management included?',
         a: 'Yes. Product catalog, stock levels, and count journals; quick sale works on the same list without a booking.',
+        href: '/solutions/inventory',
+        linkLabel: 'Inventory solution',
       },
       {
         q: 'Can I use it on mobile?',
@@ -201,6 +209,8 @@ export const en: Messages = {
       {
         q: 'How do I get a demo?',
         a: 'Message us on WhatsApp or fill in the form — phone or email is enough. We walk through a 15-minute screen share and usually reply within two hours during working hours.',
+        href: '/contact',
+        linkLabel: 'Write via the form',
       },
     ],
   },
@@ -312,11 +322,44 @@ export const en: Messages = {
       },
     ],
   },
+  journey: {
+    navLabel: 'Next step',
+    insidePanel: {
+      prompt: 'What’s inside?',
+      label: 'Panel modules',
+    },
+    priceForType: {
+      prompt: 'What does this type cost?',
+      label: 'See plans',
+    },
+    stillLearning: {
+      prompt: 'I still want to read',
+      label: 'Short guide',
+    },
+    howItLooks: {
+      prompt: 'How does it look in Heselo?',
+      label: 'Solution page',
+    },
+    whichVenue: {
+      prompt: 'Which venue type is this for?',
+      label: 'Pick a type',
+    },
+    seePricing: {
+      prompt: 'How much is it?',
+      label: 'Pricing',
+    },
+  },
   cta: {
     title: 'Start the next shift with Heselo.',
     subtitle: 'A 15-minute screen share — we usually reply within two hours during working hours.',
     button: 'Write via the form',
     whatsapp: 'WhatsApp — 15 min',
+    pickTypeTitle: 'Pick your venue type first.',
+    pickTypeSubtitle: 'Pricing and the demo open around how your floor actually runs.',
+    pickTypeButton: 'Choose a venue type',
+    typedTitle: 'Next step for this venue type.',
+    typedSubtitle: 'See the plan first — the demo opens with the same type.',
+    pricingButton: 'Price for this type',
   },
   featuresPage: {
     eyebrow: 'Features',
@@ -417,6 +460,8 @@ export const en: Messages = {
       {
         q: 'Is there a free trial?',
         a: 'Message us on WhatsApp or use the form for a free demo — 15-minute screen share, no card. We usually reply within two hours during working hours.',
+        href: '/contact',
+        linkLabel: 'Request a demo',
       },
     ],
     crosslinks: {
@@ -676,6 +721,14 @@ export const en: Messages = {
     whatsapp: 'Message on WhatsApp',
     whatsappAria: 'Contact Heselo on WhatsApp',
     whatsappPrefill: "Hello, I'd like to learn more about Heselo for a PlayStation club / karaoke / billiards venue.",
+    whatsappPrefills: {
+      gaming: "Hello, I'd like a Heselo demo for a gaming / PlayStation club.",
+      karaoke: "Hello, I'd like a Heselo demo for a karaoke venue.",
+      billiards: "Hello, I'd like a Heselo demo for a billiards club.",
+      antikafe: "Hello, I'd like a Heselo demo for an anti-café.",
+      lounge: "Hello, I'd like a Heselo demo for a room lounge.",
+    },
+    planConfirm: '{plan} · {type}',
   },
   privacy: {
     title: 'Privacy policy',

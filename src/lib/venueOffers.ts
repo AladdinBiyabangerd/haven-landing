@@ -76,6 +76,18 @@ export const VENUE_OFFERS: readonly VenueOffer[] = [
 
 export const VENUE_STORAGE_KEY = 'heselo.venueType'
 
+export const VENUE_PLAN_IDS = ['starter', 'plus', 'pro'] as const
+
+export type ContactPlanId = VenuePlanId | 'custom'
+
+export function isVenuePlanId(value: string): value is VenuePlanId {
+  return (VENUE_PLAN_IDS as readonly string[]).includes(value)
+}
+
+export function isContactPlanId(value: string): value is ContactPlanId {
+  return value === 'custom' || isVenuePlanId(value)
+}
+
 export function isVenueOfferSlug(value: string): value is PrimarySolutionSlug {
   return (PRIMARY_SOLUTION_SLUGS as readonly string[]).includes(value)
 }

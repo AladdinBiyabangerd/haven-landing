@@ -17,7 +17,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
 ---
 
 <p class="wa-lead">
-  <a href={waHref} target="_blank" rel="noopener noreferrer">{c.waLead}</a>
+  <a href={waHref} target="_blank" rel="noopener noreferrer" data-wa-typed>{c.waLead}</a>
 </p>
 
 <form
@@ -32,11 +32,15 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   data-submit-custom={c.customSubmit}
   data-phone-or-email={c.phoneOrEmailHint}
   data-venue-storage={VENUE_STORAGE_KEY}
+  data-plan-confirm-tpl={c.planConfirm}
+  data-plan-names={JSON.stringify({ ...messages.pricing.planNames, custom: messages.pricing.custom.name })}
   novalidate
 >
   <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
   <input type="hidden" name="intent" value="demo" data-intent />
+  <input type="hidden" name="plan" value="" data-plan />
   <p class="custom-notice" data-custom-notice hidden>{c.customNotice}</p>
+  <p class="plan-chip" data-plan-confirm hidden></p>
   <div class="row">
     <label>
       <span>{c.name}</span>
@@ -95,7 +99,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   </p>
   <ul class="channels">
     <li>
-      <a href={waHref} target="_blank" rel="noopener noreferrer">{c.whatsapp}</a>
+      <a href={waHref} target="_blank" rel="noopener noreferrer" data-wa-typed>{c.whatsapp}</a>
     </li>
     <li>
       <a href={telUrl()}>{phoneDisplay}</a>
@@ -122,8 +126,21 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     const sendingMsg = form.dataset.sending || ''
     const phoneOrEmailMsg = form.dataset.phoneOrEmail || ''
     const params = new URLSearchParams(window.location.search)
-    const isCustom = params.get('plan') === 'custom'
+    const planParam = params.get('plan') || ''
+    const isCustom = planParam === 'custom'
     const typeSelect = form.querySelector('[data-venue-type]')
+    const planInput = form.querySelector('[data-plan]')
+    const planChip = form.querySelector('[data-plan-confirm]')
+    let planNames: Record<string, string> = {}
+    try {
+      planNames = JSON.parse(form.dataset.planNames || '{}') as Record<string, string>
+    } catch {
+      planNames = {}
+    }
+    const planTpl = form.dataset.planConfirmTpl || '{plan} · {type}'
+    if (planInput instanceof HTMLInputElement && (planParam === 'custom' || ['starter', 'plus', 'pro'].includes(planParam))) {
+      planInput.value = planParam
+    }
     let rememberedType = params.get('type') || ''
     if (!rememberedType) {
       try {
@@ -135,6 +152,26 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     if (typeSelect instanceof HTMLSelectElement && rememberedType) {
       const allowed = [...typeSelect.options].some((option) => option.value === rememberedType)
       if (allowed) typeSelect.value = rememberedType
+    }
+
+    function updatePlanChip() {
+      if (!(planChip instanceof HTMLElement)) return
+      const planLabel = planNames[planParam] || ''
+      const typeLabel =
+        typeSelect instanceof HTMLSelectElement
+          ? typeSelect.options[typeSelect.selectedIndex]?.text || ''
+          : ''
+      const typeValue = typeSelect instanceof HTMLSelectElement ? typeSelect.value : ''
+      if (!planLabel || !typeValue || !typeLabel) {
+        planChip.hidden = true
+        return
+      }
+      planChip.hidden = false
+      planChip.textContent = planTpl.replace('{plan}', planLabel).replace('{type}', typeLabel)
+    }
+    updatePlanChip()
+    if (typeSelect instanceof HTMLSelectElement) {
+      typeSelect.addEventListener('change', updatePlanChip)
     }
     const intentInput = form.querySelector('[data-intent]')
     const customNotice = form.querySelector('[data-custom-notice]')
@@ -206,6 +243,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
         message: String(data.get('message') || ''),
         company: String(data.get('company') || ''),
         intent: isCustom ? 'custom' : 'demo',
+        plan: planParam === 'custom' || ['starter', 'plus', 'pro'].includes(planParam) ? planParam : '',
         venuesCount: String(data.get('venuesCount') || ''),
         staffCount: String(data.get('staffCount') || ''),
         reservationsPerMonth: String(data.get('reservationsPerMonth') || ''),
@@ -276,6 +314,17 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     color: var(--ink);
     font-size: var(--text-sm);
     font-weight: 600;
+  }
+  .plan-chip {
+    margin: 0;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(15, 118, 110, 0.28);
+    background: rgba(20, 184, 166, 0.1);
+    color: var(--ink);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    justify-self: start;
   }
   .hint {
     margin: -0.25rem 0 0;

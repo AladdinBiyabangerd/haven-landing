@@ -1,3 +1,16 @@
+export type FaqItem = {
+  q: string
+  a: string
+  /** Locale-relative slug, e.g. `/solutions/pos` */
+  href?: string
+  linkLabel?: string
+}
+
+export type JourneyDoorCopy = {
+  prompt: string
+  label: string
+}
+
 export type ProductShotAltKey =
   | 'live-floor'
   | 'schedule'
@@ -102,7 +115,16 @@ export type Messages = {
   faq: {
     eyebrow: string
     title: string
-    items: Array<{ q: string; a: string }>
+    items: FaqItem[]
+  }
+  journey: {
+    navLabel: string
+    insidePanel: JourneyDoorCopy
+    priceForType: JourneyDoorCopy
+    stillLearning: JourneyDoorCopy
+    howItLooks: JourneyDoorCopy
+    whichVenue: JourneyDoorCopy
+    seePricing: JourneyDoorCopy
   }
   seoOverview: {
     eyebrow: string
@@ -163,6 +185,12 @@ export type Messages = {
     subtitle: string
     button: string
     whatsapp: string
+    pickTypeTitle: string
+    pickTypeSubtitle: string
+    pickTypeButton: string
+    typedTitle: string
+    typedSubtitle: string
+    pricingButton: string
   }
   featuresPage: {
     eyebrow: string
@@ -202,7 +230,7 @@ export type Messages = {
       plus: string
       pro: string
     }
-    faq: Array<{ q: string; a: string }>
+    faq: FaqItem[]
     crosslinks: {
       features: string
       solutions: string
@@ -295,6 +323,8 @@ export type Messages = {
     whatsapp: string
     whatsappAria: string
     whatsappPrefill: string
+    whatsappPrefills: Record<'gaming' | 'karaoke' | 'billiards' | 'antikafe' | 'lounge', string>
+    planConfirm: string
   }
   privacy: {
     title: string

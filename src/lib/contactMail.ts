@@ -1,6 +1,10 @@
 import type { Locale } from '@/i18n/config'
 import { SITE, phoneDigitsE164, phoneE164 } from '@/lib/site'
 
+import {
+  type ContactPlanId,
+} from '@/lib/venueOffers'
+
 export type ContactIntent = 'demo' | 'custom'
 
 export const CONTACT_VENUE_TYPES = [
@@ -23,6 +27,13 @@ const VENUE_TYPE_LABEL_AZ: Record<ContactVenueType, string> = {
   other: 'Digər',
 }
 
+const PLAN_LABEL_AZ: Record<ContactPlanId, string> = {
+  starter: 'Kiçik',
+  plus: 'Orta',
+  pro: 'Böyük',
+  custom: 'Fərdi',
+}
+
 export function isContactVenueType(value: string): value is ContactVenueType {
   return (CONTACT_VENUE_TYPES as readonly string[]).includes(value)
 }
@@ -36,6 +47,7 @@ export type ContactPayload = {
   message: string
   locale: Locale
   intent: ContactIntent
+  plan?: ContactPlanId
   venuesCount?: number
   staffCount?: number
   reservationsPerMonth?: number
@@ -337,6 +349,16 @@ function buildOwnerHtml(payload: ContactPayload): string {
                     <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(venueTypeLabel)}</div>
                   </td>
                 </tr>
+                ${
+                  payload.plan
+                    ? `<tr>
+                  <td style="padding:0 20px 18px;">
+                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">TARİF</div>
+                    <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(PLAN_LABEL_AZ[payload.plan])}</div>
+                  </td>
+                </tr>`
+                    : ''
+                }
                 <tr>
                   <td style="padding:0 20px 18px;">
                     <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">DİL</div>
@@ -395,6 +417,7 @@ export function buildOwnerEmail(payload: ContactPayload) {
     `E-poçt: ${payload.email || '—'}`,
     `Məkan: ${venue}`,
     `Tip: ${payload.venueType ? VENUE_TYPE_LABEL_AZ[payload.venueType] : '—'}`,
+    ...(payload.plan ? [`Tarif: ${PLAN_LABEL_AZ[payload.plan]}`] : []),
     `Dil: ${payload.locale}`,
     ...counts,
     '',

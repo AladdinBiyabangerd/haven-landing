@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import ProductGallery from '@/components/ProductGallery.astro'
 import Cta from '@/components/Cta.astro'
 import Audiences from '@/components/Audiences.astro'
+import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 import { getSolution } from '@/data/solutions'
@@ -52,9 +53,21 @@ const page = messages.featuresPage
       </div>
     </div>
   </section>
+  <NextThought
+    label={messages.journey.navLabel}
+    arrow={messages.common.linkArrow}
+    doors={[
+      {
+        prompt: messages.journey.seePricing.prompt,
+        label: messages.journey.seePricing.label,
+        href: localePath(locale, '/pricing'),
+        bind: 'pricing',
+      },
+    ]}
+  />
   <ProductGallery locale={locale} messages={messages} />
   <Audiences locale={locale} messages={messages} />
-  <Cta locale={locale} messages={messages} />
+  <Cta locale={locale} messages={messages} intent="next" />
 </BaseLayout>
 
 <style>

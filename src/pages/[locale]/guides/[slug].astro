@@ -1,12 +1,15 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import Faq from '@/components/Faq.astro'
+import NextThought from '@/components/NextThought.astro'
 import { resolveLocale, LOCALES } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 import { getGuide, GUIDE_SLUGS } from '@/data/guides'
 import { getSolution } from '@/data/solutions'
 import { formatDate } from '@/lib/format'
 import { localePath } from '@/lib/site'
+import { contactPath, pricingPath } from '@/lib/journey'
+import { isVenueOfferSlug, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
 export function getStaticPaths() {
   return LOCALES.flatMap((locale) =>
@@ -28,6 +31,7 @@ if (!guide) {
 const related = guide.relatedSolutions
   .map((s) => getSolution(locale, s))
   .filter(Boolean)
+const persistVenueType = guide.relatedSolutions.find(isVenueOfferSlug) || ''
 
 const faqMessages = {
   ...messages,
@@ -114,7 +118,24 @@ const faqMessages = {
     </div>
   </article>
 
-  <Faq messages={faqMessages} />
+  {
+    persistVenueType ? (
+      <NextThought
+        label={messages.journey.navLabel}
+        arrow={messages.common.linkArrow}
+        doors={[
+          {
+            prompt: messages.journey.priceForType.prompt,
+            label: messages.journey.priceForType.label,
+            href: pricingPath(locale, persistVenueType),
+            bind: 'pricing',
+          },
+        ]}
+      />
+    ) : null
+  }
+
+  <Faq locale={locale} messages={faqMessages} />
 
   <section class="section">
     <div class="container">
@@ -123,10 +144,21 @@ const faqMessages = {
           <h2 class="type-section">{guide.ctaTitle}</h2>
           <p class="type-lead">{guide.ctaBody}</p>
         </div>
-        <a class="btn btn-primary" href={localePath(locale, '/contact')}>{messages.cta.button}</a>
+        <a class="btn btn-primary" href={contactPath(locale, persistVenueType || undefined)}>{messages.cta.button}</a>
       </div>
     </div>
   </section>
+  {
+    persistVenueType ? (
+      <script is:inline define:vars={{ persistVenueType, storageKey: VENUE_STORAGE_KEY }}>
+        try {
+          sessionStorage.setItem(storageKey, persistVenueType)
+        } catch {
+          /* ignore */
+        }
+      </script>
+    ) : null
+  }
 </BaseLayout>
 
 <style>

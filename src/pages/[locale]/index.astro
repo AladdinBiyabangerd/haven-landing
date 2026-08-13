@@ -5,6 +5,7 @@ import DemoPromise from '@/components/DemoPromise.astro'
 import SeoOverview from '@/components/SeoOverview.astro'
 import Pain from '@/components/Pain.astro'
 import Pillars from '@/components/Pillars.astro'
+import NextThought from '@/components/NextThought.astro'
 import Audiences from '@/components/Audiences.astro'
 import GuidesTeaser from '@/components/GuidesTeaser.astro'
 import How from '@/components/How.astro'
@@ -13,6 +14,7 @@ import TrustEeat from '@/components/TrustEeat.astro'
 import Cta from '@/components/Cta.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -39,10 +41,21 @@ const messages = getMessages(locale)
   <SeoOverview messages={messages} />
   <Pain messages={messages} />
   <Pillars messages={messages} />
+  <NextThought
+    label={messages.journey.navLabel}
+    arrow={messages.common.linkArrow}
+    doors={[
+      {
+        prompt: messages.journey.insidePanel.prompt,
+        label: messages.journey.insidePanel.label,
+        href: localePath(locale, '/features'),
+      },
+    ]}
+  />
   <Audiences locale={locale} messages={messages} />
   <GuidesTeaser locale={locale} messages={messages} />
   <How messages={messages} />
-  <Faq messages={messages} />
+  <Faq locale={locale} messages={messages} />
   <TrustEeat locale={locale} messages={messages} />
-  <Cta locale={locale} messages={messages} />
+  <Cta locale={locale} messages={messages} intent="next" />
 </BaseLayout>

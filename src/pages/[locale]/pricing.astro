@@ -49,12 +49,12 @@ const faqMessages = {
       <nav class="crosslinks" aria-label={messages.nav.primaryNav}>
         <a href={localePath(locale, '/features')}>{page.crosslinks.features}{messages.common.linkArrow}</a>
         <a href={localePath(locale, '/solutions')}>{page.crosslinks.solutions}{messages.common.linkArrow}</a>
-        <a href={localePath(locale, '/contact')}>{page.crosslinks.contact}{messages.common.linkArrow}</a>
+        <a href={localePath(locale, '/contact')} data-journey-link="contact">{page.crosslinks.contact}{messages.common.linkArrow}</a>
       </nav>
     </div>
   </section>
-  <Faq messages={faqMessages} />
-  <Cta locale={locale} messages={messages} />
+  <Faq locale={locale} messages={faqMessages} />
+  <Cta locale={locale} messages={messages} intent="demo" />
 </BaseLayout>
 
 <style>

@@ -1,33 +1,161 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { localePath, whatsappUrl } from '@/lib/site'
+import { localePath } from '@/lib/site'
+import { contactPath, pricingPath, whatsappHrefFor } from '@/lib/journey'
+import { VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
   messages: Messages
+  venueType?: string
+  /** demo: WhatsApp + contact. next: type first, then price / demo. */
+  intent?: 'demo' | 'next'
 }
-const { locale, messages } = Astro.props
+
+const { locale, messages, venueType = '', intent = 'demo' } = Astro.props
 const c = messages.cta
-const waHref = whatsappUrl(messages.contact.whatsappPrefill)
+const known = venueType
+const contactHref = contactPath(locale, known || undefined)
+const pricingHref = pricingPath(locale, known || undefined)
+const solutionsHref = localePath(locale, '/solutions')
+const waHref = whatsappHrefFor(messages, known || undefined)
+
+const nextTitle = known ? c.typedTitle : c.pickTypeTitle
+const nextSubtitle = known ? c.typedSubtitle : c.pickTypeSubtitle
+const title = intent === 'next' ? nextTitle : known ? c.typedTitle : c.title
+const subtitle = intent === 'next' ? nextSubtitle : known ? c.typedSubtitle : c.subtitle
+
+const primaryHref = intent === 'next' ? (known ? pricingHref : solutionsHref) : waHref
+const primaryLabel = intent === 'next' ? (known ? c.pricingButton : c.pickTypeButton) : c.whatsapp
+const secondaryHref = intent === 'next' ? (known ? contactHref : waHref) : contactHref
+const secondaryLabel = intent === 'next' ? (known ? c.button : c.whatsapp) : c.button
+const primaryExternal = intent === 'demo'
+const secondaryExternal = intent === 'next' && !known
 ---
 
-<section class="section">
+<section
+  class="section"
+  data-cta
+  data-cta-intent={intent}
+  data-cta-type={known}
+  data-storage-key={VENUE_STORAGE_KEY}
+>
   <div class="container">
     <div class="banner">
       <div>
-        <h2 class="type-section">{c.title}</h2>
-        <p class="type-lead">{c.subtitle}</p>
+        <h2 class="type-section" data-cta-title>{title}</h2>
+        <p class="type-lead" data-cta-sub>{subtitle}</p>
       </div>
       <div class="actions">
-        <a class="btn btn-primary" href={waHref} target="_blank" rel="noopener noreferrer">
-          {c.whatsapp}
+        <a
+          class="btn btn-primary"
+          data-cta-primary
+          href={primaryHref}
+          target={primaryExternal ? '_blank' : undefined}
+          rel={primaryExternal ? 'noopener noreferrer' : undefined}
+        >
+          {primaryLabel}
         </a>
-        <a class="btn btn-ghost" href={localePath(locale, '/contact')}>{c.button}</a>
+        <a
+          class="btn btn-ghost"
+          data-cta-secondary
+          href={secondaryHref}
+          target={secondaryExternal ? '_blank' : undefined}
+          rel={secondaryExternal ? 'noopener noreferrer' : undefined}
+        >
+          {secondaryLabel}
+        </a>
       </div>
     </div>
   </div>
 </section>
+
+<script is:inline define:vars={{
+    storageKey: VENUE_STORAGE_KEY,
+    intent,
+    known,
+    copy: {
+      title: c.title,
+      subtitle: c.subtitle,
+      button: c.button,
+      whatsapp: c.whatsapp,
+      pickTypeTitle: c.pickTypeTitle,
+      pickTypeSubtitle: c.pickTypeSubtitle,
+      pickTypeButton: c.pickTypeButton,
+      typedTitle: c.typedTitle,
+      typedSubtitle: c.typedSubtitle,
+      pricingButton: c.pricingButton,
+    },
+    paths: {
+      contact: localePath(locale, '/contact'),
+      pricing: localePath(locale, '/pricing'),
+      solutions: localePath(locale, '/solutions'),
+    },
+    prefills: {
+      default: messages.contact.whatsappPrefill,
+      ...messages.contact.whatsappPrefills,
+    },
+    waBase: whatsappHrefFor(messages).split('?')[0],
+  }}>
+  ;(function () {
+    const root = document.querySelector('[data-cta]')
+    if (!(root instanceof HTMLElement) || known) return
+    const valid = new Set(['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'])
+    function readType() {
+      try {
+        const stored = sessionStorage.getItem(storageKey) || ''
+        return valid.has(stored) ? stored : ''
+      } catch {
+        return ''
+      }
+    }
+    function waHref(type) {
+      const text = (type && prefills[type]) || prefills.default || ''
+      return text ? waBase + '?text=' + encodeURIComponent(text) : waBase
+    }
+    function setLink(el, href, external) {
+      if (!(el instanceof HTMLAnchorElement)) return
+      el.href = href
+      if (external) {
+        el.target = '_blank'
+        el.rel = 'noopener noreferrer'
+      } else {
+        el.removeAttribute('target')
+        el.removeAttribute('rel')
+      }
+    }
+    function apply(type) {
+      const titleEl = root.querySelector('[data-cta-title]')
+      const subEl = root.querySelector('[data-cta-sub]')
+      const primary = root.querySelector('[data-cta-primary]')
+      const secondary = root.querySelector('[data-cta-secondary]')
+      if (intent === 'next') {
+        if (type) {
+          if (titleEl) titleEl.textContent = copy.typedTitle
+          if (subEl) subEl.textContent = copy.typedSubtitle
+          if (primary) primary.textContent = copy.pricingButton
+          if (secondary) secondary.textContent = copy.button
+          setLink(primary, paths.pricing + '#' + type, false)
+          setLink(secondary, paths.contact + '?type=' + encodeURIComponent(type), false)
+        } else {
+          if (titleEl) titleEl.textContent = copy.pickTypeTitle
+          if (subEl) subEl.textContent = copy.pickTypeSubtitle
+          if (primary) primary.textContent = copy.pickTypeButton
+          if (secondary) secondary.textContent = copy.whatsapp
+          setLink(primary, paths.solutions, false)
+          setLink(secondary, waHref(''), true)
+        }
+      } else if (type) {
+        if (titleEl) titleEl.textContent = copy.typedTitle
+        if (subEl) subEl.textContent = copy.typedSubtitle
+        setLink(primary, waHref(type), true)
+        setLink(secondary, paths.contact + '?type=' + encodeURIComponent(type), false)
+      }
+    }
+    apply(readType())
+  })()
+</script>
 
 <style>
   .banner {

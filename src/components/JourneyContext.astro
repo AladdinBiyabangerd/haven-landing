@@ -1,0 +1,71 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import { phoneDigitsE164 } from '@/lib/site'
+import { journeyPaths, typedWhatsappPrefills } from '@/lib/journey'
+import { VENUE_STORAGE_KEY } from '@/lib/venueOffers'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+}
+
+const { locale, messages } = Astro.props
+const paths = journeyPaths(locale)
+const prefills = typedWhatsappPrefills(messages)
+const waBase = `https://wa.me/${phoneDigitsE164()}`
+---
+
+<script is:inline define:vars={{ storageKey: VENUE_STORAGE_KEY, paths, prefills, waBase }}>
+  ;(function () {
+    const valid = new Set(['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'])
+    function readType() {
+      try {
+        const stored = sessionStorage.getItem(storageKey) || ''
+        return valid.has(stored) ? stored : ''
+      } catch {
+        return ''
+      }
+    }
+    function pricingHref(type) {
+      return type ? paths.pricing + '#' + type : paths.pricing
+    }
+    function contactHref(type) {
+      if (!type) return paths.contact
+      return paths.contact + (paths.contact.includes('?') ? '&' : '?') + 'type=' + encodeURIComponent(type)
+    }
+    function solutionHref(type) {
+      if (!type) return paths.solution
+      const base = paths.solution.endsWith('/') ? paths.solution : paths.solution + '/'
+      return base + type + '/'
+    }
+    function waHref(type) {
+      const text = (type && prefills[type]) || prefills.default || ''
+      return text ? waBase + '?text=' + encodeURIComponent(text) : waBase
+    }
+    function apply(type) {
+      document.querySelectorAll('[data-journey-link]').forEach((node) => {
+        if (!(node instanceof HTMLAnchorElement)) return
+        const kind = node.getAttribute('data-journey-link')
+        if (kind === 'pricing') node.href = pricingHref(type)
+        else if (kind === 'contact') node.href = contactHref(type)
+        else if (kind === 'solution') node.href = solutionHref(type)
+      })
+      document.querySelectorAll('[data-wa-typed]').forEach((node) => {
+        if (node instanceof HTMLAnchorElement) node.href = waHref(type)
+      })
+    }
+    apply(readType())
+    window.addEventListener('hashchange', () => {
+      const hash = location.hash.replace(/^#/, '')
+      if (valid.has(hash)) {
+        try {
+          sessionStorage.setItem(storageKey, hash)
+        } catch {
+          /* ignore */
+        }
+        apply(hash)
+      }
+    })
+  })()
+</script>

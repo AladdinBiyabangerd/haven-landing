@@ -181,18 +181,26 @@ export const az: Messages = {
       {
         q: 'Heselo hansı bizneslər üçün uyğundur?',
         a: 'Oyun klubu (PS və konsol), karaoke otaqları, bilyard, antikafe və otaqlı launj üçün — otaq, masa və ya PS yeri rezervasiyası, canlı izləmə və kassa lazım olan məkanlar.',
+        href: '/solutions',
+        linkLabel: 'Məkan tipləri',
       },
       {
         q: 'Heselo ilə rezervasiyaları idarə etmək mümkündür?',
         a: 'Bəli. Cədvəl və rezervasiyalar modulunda masa və otaq bronu, köçürmə, ləğv və tarixçə var. Qonaq gələndə eyni rezerv canlı sessiyaya keçir.',
+        href: '/solutions/reservations',
+        linkLabel: 'Rezervasiya həlli',
       },
       {
         q: 'Heselo kassa sistemi təqdim edir?',
         a: 'Bəli. Növbə aç/bağla, əməliyyatlar, kassa hesabatı və kassa sayımı eyni paneldədir — ayrı kassa proqramı tələb olunmur.',
+        href: '/solutions/pos',
+        linkLabel: 'Kassa həlli',
       },
       {
         q: 'Anbar idarəetməsi mümkündür?',
         a: 'Bəli. Məhsul kataloqu, anbar qalıqları və sayım jurnalları var; sürətli satış bron olmadan eyni siyahı üzərində işləyir.',
+        href: '/solutions/inventory',
+        linkLabel: 'Anbar həlli',
       },
       {
         q: 'Mobil cihazlardan istifadə etmək mümkündür?',
@@ -201,6 +209,8 @@ export const az: Messages = {
       {
         q: 'Demo necə əldə edilir?',
         a: 'WhatsApp-dan yazın və ya formu doldurun — telefon və ya e-poçt kifayətdir. 15 dəqiqəlik ekran göstəririk; iş saatlarında adətən 2 saat ərzində cavab veririk.',
+        href: '/contact',
+        linkLabel: 'Forma ilə yazın',
       },
     ],
   },
@@ -313,11 +323,44 @@ export const az: Messages = {
       },
     ],
   },
+  journey: {
+    navLabel: 'Növbəti addım',
+    insidePanel: {
+      prompt: 'İçində nə var?',
+      label: 'Panel modulları',
+    },
+    priceForType: {
+      prompt: 'Qiymət bu tip üçün nə qədərdir?',
+      label: 'Tariflərə bax',
+    },
+    stillLearning: {
+      prompt: 'Hələ oxumaq istəyirəm',
+      label: 'Qısa izah',
+    },
+    howItLooks: {
+      prompt: 'Heselo-da necə görünür?',
+      label: 'Həll səhifəsi',
+    },
+    whichVenue: {
+      prompt: 'Hansı məkan tipinə aiddir?',
+      label: 'Tipi seçin',
+    },
+    seePricing: {
+      prompt: 'Nə qədərdir?',
+      label: 'Qiymətlər',
+    },
+  },
   cta: {
     title: 'Növbəti növbənizi Heselo ilə idarə edin.',
     subtitle: '15 dəqiqəlik ekran — iş saatlarında adətən 2 saat ərzində cavab.',
     button: 'Forma ilə yazın',
     whatsapp: 'WhatsApp-da 15 dəq',
+    pickTypeTitle: 'Əvvəl məkan tipini seçin.',
+    pickTypeSubtitle: 'Qiymət və demo sizin zalın axınına görə açılır.',
+    pickTypeButton: 'Məkan tipini seçin',
+    typedTitle: 'Bu tip üçün növbəti addım.',
+    typedSubtitle: 'Əvvəl tarifi görün — demo eyni məkan tipi ilə açılır.',
+    pricingButton: 'Bu tipin qiyməti',
   },
   featuresPage: {
     eyebrow: 'Funksiyalar',
@@ -418,6 +461,8 @@ export const az: Messages = {
       {
         q: 'Pulsuz sınaq var?',
         a: 'Pulsuz demo üçün WhatsApp-dan yazın və ya formu doldurun — 15 dəqiqəlik ekran, kart lazım deyil. İş saatlarında adətən 2 saat ərzində cavab veririk.',
+        href: '/contact',
+        linkLabel: 'Demo istəyin',
       },
     ],
     crosslinks: {
@@ -677,6 +722,14 @@ export const az: Messages = {
     whatsapp: 'WhatsApp ilə yazın',
     whatsappAria: 'WhatsApp-da Heselo ilə əlaqə saxlayın',
     whatsappPrefill: 'Salam, PS klub / karaoke / bilyard üçün Heselo haqqında məlumat almaq istəyirəm.',
+    whatsappPrefills: {
+      gaming: 'Salam, oyun klubu / PS üçün Heselo demo istəyirəm.',
+      karaoke: 'Salam, karaoke məkanı üçün Heselo demo istəyirəm.',
+      billiards: 'Salam, bilyard klubu üçün Heselo demo istəyirəm.',
+      antikafe: 'Salam, antikafe üçün Heselo demo istəyirəm.',
+      lounge: 'Salam, otaqlı launj üçün Heselo demo istəyirəm.',
+    },
+    planConfirm: '{plan} · {type}',
   },
   privacy: {
     title: 'Məxfilik siyasəti',

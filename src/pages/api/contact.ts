@@ -15,6 +15,7 @@ import {
   type ContactPayload,
   type ContactVenueType,
 } from '@/lib/contactMail'
+import { isContactPlanId, type ContactPlanId } from '@/lib/venueOffers'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -62,6 +63,8 @@ function parseBody(raw: unknown): ContactPayload | null {
   const locale: Locale = isLocale(localeRaw) ? localeRaw : 'az'
   const intentRaw = String(data.intent ?? 'demo').trim()
   const intent: ContactIntent = intentRaw === 'custom' ? 'custom' : 'demo'
+  const planRaw = String(data.plan ?? '').trim()
+  const plan: ContactPlanId | undefined = isContactPlanId(planRaw) ? planRaw : undefined
   const venuesCount = parseCount(data.venuesCount)
   const staffCount = parseCount(data.staffCount)
   const reservationsPerMonth = parseCount(data.reservationsPerMonth)
@@ -90,6 +93,7 @@ function parseBody(raw: unknown): ContactPayload | null {
     message,
     locale,
     intent,
+    plan,
     venuesCount,
     staffCount,
     reservationsPerMonth,

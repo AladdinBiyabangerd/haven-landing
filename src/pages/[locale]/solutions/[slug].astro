@@ -7,7 +7,9 @@ import { getSolution, getSolutions, SOLUTION_SLUGS } from '@/data/solutions'
 import { getGuideForSolution } from '@/data/guides'
 import { SOLUTION_SHOT_MAP, SOLUTION_EXTRA_SHOT_MAP } from '@/lib/productShots'
 import ProductShot from '@/components/ProductShot.astro'
+import NextThought from '@/components/NextThought.astro'
 import { localePath } from '@/lib/site'
+import { pricingPath } from '@/lib/journey'
 import { VENUE_STORAGE_KEY, isVenueOfferSlug, venuePriceRange } from '@/lib/venueOffers'
 import { formatMoney } from '@/lib/format'
 
@@ -137,21 +139,42 @@ const faqMessages = {
         <h2 id="differ-title" class="type-section">{solution.differTitle}</h2>
         <p class="body">{solution.differBody}</p>
       </section>
-
-      <nav class="links" aria-label={messages.nav.solutions}>
-        {
-          relatedGuide ? (
-            <a href={localePath(locale, `/guides/${relatedGuide.slug}`)}>{relatedGuide.h1}</a>
-          ) : null
-        }
-        <a href={localePath(locale, '/features')}>{messages.nav.features}</a>
-        <a href={localePath(locale, '/pricing')}>{messages.nav.pricing}</a>
-        <a href={localePath(locale, '/contact')}>{messages.nav.demo}</a>
-      </nav>
     </div>
   </article>
 
-  <Faq messages={faqMessages} />
+  <NextThought
+    label={messages.journey.navLabel}
+    arrow={messages.common.linkArrow}
+    doors={
+      persistVenueType
+        ? [
+            {
+              prompt: messages.journey.priceForType.prompt,
+              label: messages.journey.priceForType.label,
+              href: pricingPath(locale, persistVenueType),
+              bind: 'pricing',
+            },
+            ...(relatedGuide
+              ? [
+                  {
+                    prompt: messages.journey.stillLearning.prompt,
+                    label: messages.journey.stillLearning.label,
+                    href: localePath(locale, `/guides/${relatedGuide.slug}`),
+                  },
+                ]
+              : []),
+          ]
+        : [
+            {
+              prompt: messages.journey.whichVenue.prompt,
+              label: messages.journey.whichVenue.label,
+              href: localePath(locale, '/solutions'),
+            },
+          ]
+    }
+  />
+
+  <Faq locale={locale} messages={faqMessages} />
 
   {
     related.length > 0 ? (
@@ -276,18 +299,6 @@ const faqMessages = {
   .features p {
     margin: 0.4rem 0 0;
     color: var(--ink-muted);
-  }
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--line);
-  }
-  .links a {
-    font-weight: 600;
-    color: var(--accent);
   }
   .related ul {
     margin: 1rem 0 0;
