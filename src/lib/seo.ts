@@ -1,7 +1,7 @@
 import type { Locale } from '@/i18n/config'
 import { HTML_LANG, LOCALES, OG_LOCALES } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { SUBSCRIPTION_PLANS, type SubscriptionPlanId } from '@/lib/subscriptionPlans'
+import { allVenuePlans, monthlyFeeRange } from '@/lib/venueOffers'
 import { absoluteUrl, localePath, localeUrl, phoneE164, SITE, siteSameAs, siteUrl } from '@/lib/site'
 
 export type BreadcrumbItem = { label: string; href: string; current?: boolean }
@@ -85,7 +85,7 @@ export type SeoPageInput = {
   title: string
   description: string
   keywords?: string[]
-  /** Path after locale, e.g. `/solutions/restaurant` */
+  /** Path after locale, e.g. `/solutions/gaming` */
   slug: string
   breadcrumbName?: string
   /** Visible FAQ on this page — only then FAQPage JSON-LD is emitted */
@@ -105,8 +105,7 @@ export function pageSlug(key: Exclude<PageKey, 'solution' | 'guide'>): string {
 }
 
 function pricesAz(): { low: number; high: number } {
-  const fees = SUBSCRIPTION_PLANS.map((p) => p.monthlyFee)
-  return { low: Math.min(...fees), high: Math.max(...fees) }
+  return monthlyFeeRange()
 }
 
 function isCommercialSurface(slug: string): boolean {
@@ -148,7 +147,7 @@ export function buildJsonLdGraph(
       priceCurrency: 'AZN',
       lowPrice: String(low),
       highPrice: String(high),
-      offerCount: String(SUBSCRIPTION_PLANS.length),
+      offerCount: String(allVenuePlans().length),
       availability: 'https://schema.org/InStock',
       url: localeUrl(locale, '/pricing'),
     }
@@ -296,19 +295,22 @@ export function buildJsonLdGraph(
 
   if (input.slug === '/pricing' || input.slug === '/pricing/') {
     graph.push(
-      ...SUBSCRIPTION_PLANS.map((plan) => {
-        const copy = messages.pricing.plans[plan.id as SubscriptionPlanId]
+      ...allVenuePlans().map(({ offer, plan }) => {
+        const copy = messages.pricing.offers[offer.slug]
         return {
           '@type': 'Offer',
-          '@id': `${pageUrl}#offer-${plan.id}`,
-          name: copy.name,
-          description: copy.desc,
-          price: String(plan.monthlyFee),
+          '@id': `${pageUrl}#offer-${offer.slug}-${plan.id}`,
+          name: `${copy.name} — ${messages.pricing.planNames[plan.id]}`,
+          description: copy.intro,
+          price: String(plan.amount),
           priceCurrency: 'AZN',
           availability: 'https://schema.org/InStock',
-          url: pageUrl,
+          url: `${pageUrl}#${offer.slug}`,
           offeredBy: { '@id': `${siteUrl()}/#organization` },
           eligibleRegion: { '@type': 'Country', name: messages.seo.countryName },
+          ...(offer.model === 'monthly'
+            ? { priceSpecification: { '@type': 'UnitPriceSpecification', price: String(plan.amount), priceCurrency: 'AZN', unitText: 'MONTH' } }
+            : {}),
         }
       }),
     )

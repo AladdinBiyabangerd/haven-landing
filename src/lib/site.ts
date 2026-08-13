@@ -73,7 +73,7 @@ export function localeUrl(locale: string, slug = '/'): string {
 }
 
 /** E.164 for tel: / schema.org (e.g. +994777381803). */
-export function phoneE164(local = SITE.contactPhone): string {
+export function phoneE164(local: string = SITE.contactPhone): string {
   const digits = local.replace(/\D/g, '')
   if (digits.startsWith('994')) return `+${digits}`
   if (digits.startsWith('0')) return `+994${digits.slice(1)}`
@@ -81,15 +81,15 @@ export function phoneE164(local = SITE.contactPhone): string {
 }
 
 /** Digits only, no plus — for wa.me links. */
-export function phoneDigitsE164(local = SITE.contactPhone): string {
+export function phoneDigitsE164(local: string = SITE.contactPhone): string {
   return phoneE164(local).replace(/\D/g, '')
 }
 
-export function telUrl(local = SITE.contactPhone): string {
+export function telUrl(local: string = SITE.contactPhone): string {
   return `tel:${phoneE164(local)}`
 }
 
-export function whatsappUrl(text?: string, local = SITE.contactPhone): string {
+export function whatsappUrl(text?: string, local: string = SITE.contactPhone): string {
   const base = `https://wa.me/${phoneDigitsE164(local)}`
   if (!text?.trim()) return base
   return `${base}?text=${encodeURIComponent(text.trim())}`

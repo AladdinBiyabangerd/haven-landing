@@ -1,7 +1,7 @@
 ---
 import type { Messages } from '@/i18n/types'
 import type { Locale } from '@/i18n/config'
-import { localePath } from '@/lib/site'
+import { localePath, whatsappUrl } from '@/lib/site'
 import ProductShot from '@/components/ProductShot.astro'
 
 interface Props {
@@ -10,6 +10,7 @@ interface Props {
 }
 const { locale, messages } = Astro.props
 const h = messages.hero
+const waHref = whatsappUrl(messages.contact.whatsappPrefill)
 ---
 
 <section class="hero">
@@ -20,8 +21,10 @@ const h = messages.hero
       <h1 class="type-hero reveal reveal-delay-1">{h.title}</h1>
       <p class="lead reveal reveal-delay-2">{h.subtitle}</p>
       <div class="hero__cta reveal reveal-delay-3">
-        <a class="btn btn-primary" href={localePath(locale, '/contact')}>{h.ctaPrimary}</a>
-        <a class="btn btn-ghost" href={localePath(locale, '/features')}>{h.ctaSecondary}</a>
+        <a class="btn btn-primary" href={waHref} target="_blank" rel="noopener noreferrer">
+          {h.ctaPrimary}
+        </a>
+        <a class="btn btn-ghost" href={localePath(locale, '/contact')}>{h.ctaSecondary}</a>
       </div>
       <ul class="trust reveal reveal-delay-3">
         {messages.trust.items.map((item) => <li>{item}</li>)}

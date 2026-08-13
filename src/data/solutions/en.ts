@@ -2,150 +2,25 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 
 export const solutionsHubEn: SolutionsHubCopy = {
   eyebrow: 'Business solutions',
-  h1: 'Which businesses is Heselo built for?',
+  h1: 'Which venues is Heselo built for?',
   intro:
-    'Heselo is a venue management system: reservations, live floor, cash, and inventory in one panel. The pages below explain how that fits each business type — without copy-paste fluff.',
-  seoTitle: 'Business solutions — restaurant, cafe, clubs & booking | Heselo',
+    'Heselo connects room, station, and table booking with live sessions and cash in one panel. The pages below are written for gaming clubs, karaoke, billiards, anti-cafés, and room lounges.',
+  seoTitle: 'Business solutions — gaming club, karaoke, billiards | Heselo',
   seoDescription:
-    'Venue management for restaurants, cafes, billiards, karaoke, gaming clubs, and anti-cafés: table booking, cash, and inventory. Request a free demo.',
+    'Venue management for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges: booking, cash, and inventory. Request a free demo.',
   keywords: [
     'venue management system',
-    'business management software',
-    'restaurant management system',
-    'cafe software',
-    'reservation system',
+    'gaming club software',
+    'playstation club software',
+    'karaoke room booking',
+    'billiards club software',
   ],
   cardCta: 'Read more',
+  primaryTitle: 'Core venue types',
+  featuresTitle: 'Features',
 }
 
 export const solutionsEn: SolutionCopy[] = [
-  {
-    slug: 'restaurant',
-    shortTitle: 'Restaurant',
-    h1: 'Restaurant management system',
-    seoTitle: 'Restaurant management system & restaurant software | Heselo',
-    seoDescription:
-      'Restaurant software for table booking, live floor, cash, and inventory in one panel. Built for venues in Azerbaijan — request a demo.',
-    keywords: [
-      'restaurant management system',
-      'restaurant software',
-      'restaurant POS',
-      'restaurant inventory',
-    ],
-    intro:
-      'When bookings live in chat, the floor lives on paper, and cash closes in another sheet, the day ends in confusion. Heselo brings restaurant operations into one flow: table and room reservations, live sessions, payments, and stock.',
-    whoTitle: 'Who is it for?',
-    whoBody:
-      'Restaurants and lounge-style venues that take table or room bookings and want cash and inventory in the same panel as the floor.',
-    problemsTitle: 'Common restaurant problems',
-    problems: [
-      'Phone and messenger bookings never land on one schedule',
-      'Live floor and reservation list do not match',
-      'Cash, card, and POS blur when a shift closes',
-      'Stock counts happen outside the workday',
-    ],
-    howTitle: 'How Heselo works in a restaurant',
-    howBody:
-      'Reception books a table or room on the schedule. When guests arrive, a live session opens; products and payments stay in that flow. Cash handles shifts, reports, and reconciliation. Inventory stays on the same catalog — no separate spreadsheet required.',
-    featuresTitle: 'Core restaurant capabilities',
-    features: [
-      {
-        title: 'Table and room booking',
-        desc: 'Day and week schedule, list view, move, cancel, and history.',
-      },
-      {
-        title: 'Live floor',
-        desc: 'Active sessions, add products, pause, receipt, and payment.',
-      },
-      {
-        title: 'Restaurant cash / POS flow',
-        desc: 'Open/close shift, transactions, cash report, and count.',
-      },
-      {
-        title: 'Restaurant inventory',
-        desc: 'Catalog, stock levels, count journals, and quick sale without a booking.',
-      },
-    ],
-    differTitle: 'How it differs',
-    differBody:
-      'Heselo is not only a booking widget or only a till. Reservations, live sessions, cash, and inventory share the same venue rules. Balances are calculated on the server — the screen shows results, not guesses. The panel works in Azerbaijani, English, and Russian. If you want the informational answer to “what is a restaurant management system?”, see our guide.',
-    faq: [
-      {
-        q: 'What does Heselo cover as restaurant software?',
-        a: 'Table/room booking, live tracking, cash (shift, report, count), products, inventory, customers, and statistics.',
-      },
-      {
-        q: 'Is POS sold separately?',
-        a: 'No. Cash modules are part of the Heselo panel and subscription.',
-      },
-      {
-        q: 'How do I get a demo?',
-        a: 'Use the contact form or email us with your venue type and table/room count.',
-      },
-    ],
-    related: ['reservations', 'pos', 'inventory', 'cafe'],
-    ctaTitle: 'Request a restaurant demo',
-    ctaBody: 'We walk through your flow — from booking to cash close.',
-  },
-  {
-    slug: 'cafe',
-    shortTitle: 'Cafe',
-    h1: 'Cafe management system',
-    seoTitle: 'Cafe management system & cafe software | Heselo',
-    seoDescription:
-      'Cafe software for table booking, live sessions, cash, and inventory. Built for small and mid-size cafes — free demo.',
-    keywords: ['cafe management system', 'cafe software', 'cafe booking', 'cafe POS'],
-    intro:
-      'Cafe traffic moves fast: short stays, walk-ins, and frequent product adds. A cafe management system should keep booking, live tables, and cash on one screen — that is what Heselo is built for.',
-    whoTitle: 'Which cafes?',
-    whoBody:
-      'Cafes and coffee shops that take table bookings (sometimes rooms) and want product sales and cash in one place.',
-    problemsTitle: 'Typical cafe friction',
-    problems: [
-      'Walk-ins collide with reserved tables',
-      'Short sessions slow down when payment is elsewhere',
-      'Cash and stock disagree at day end',
-      'Shift changes hide who sold what',
-    ],
-    howTitle: 'How the cafe software works',
-    howBody:
-      'Book on the schedule; open a live session when guests arrive. Products and payments stay in flow. Use quick sale for walk-ins without a booking. Close the day with cash shift and count.',
-    featuresTitle: 'What matters for cafes',
-    features: [
-      {
-        title: 'Fast table flow',
-        desc: 'Status, products, and payment without long forms.',
-      },
-      {
-        title: 'Booking and walk-in',
-        desc: 'Same catalog and cash rules either way.',
-      },
-      {
-        title: 'Cash and count',
-        desc: 'Cash, card, and POS by shift — clear day close.',
-      },
-      {
-        title: 'Products and stock',
-        desc: 'Prices and levels without a separate stock file.',
-      },
-    ],
-    differTitle: 'Why people search for cafe software',
-    differBody:
-      'Cafe pacing is shorter than a full restaurant, but the needs are the same: tables, payment, products. Heselo is not a heavy ERP — it is built for daily floor work while still covering cash and inventory.',
-    faq: [
-      {
-        q: 'Is Heselo too heavy for a small cafe?',
-        a: 'No. Starter plans fit smaller venues; you can focus on the modules you need.',
-      },
-      {
-        q: 'Is booking a separate product?',
-        a: 'No. Schedule and reservation list are part of the same panel.',
-      },
-    ],
-    related: ['restaurant', 'reservations', 'pos'],
-    ctaTitle: 'Cafe demo',
-    ctaBody: 'Tell us your table count and typical flow — we tailor the walkthrough.',
-  },
   {
     slug: 'billiards',
     shortTitle: 'Billiards',
@@ -217,7 +92,7 @@ export const solutionsEn: SolutionCopy[] = [
       'In karaoke, the room is the unit: booking, session length, extras, and payment. A karaoke management system should connect room schedule to live session and cash.',
     whoTitle: 'Who is it for?',
     whoBody:
-      'Room-based karaoke clubs, restaurant + karaoke venues, and places running several rooms in one flow.',
+      'Room-based karaoke clubs, lounge + karaoke venues, and places running several rooms in one flow.',
     problemsTitle: 'Typical karaoke friction',
     problems: [
       'Room bookings get lost in phone notes',
@@ -260,7 +135,7 @@ export const solutionsEn: SolutionCopy[] = [
         a: 'Reservation forms include labels and pre-order fields — same logic as the panel.',
       },
     ],
-    related: ['reservations', 'billiards', 'restaurant', 'pos'],
+    related: ['reservations', 'lounge', 'gaming', 'pos'],
     ctaTitle: 'Karaoke venue demo',
     ctaBody: 'Tell us your room count — we show booking and live flow.',
   },
@@ -393,6 +268,70 @@ export const solutionsEn: SolutionCopy[] = [
     ctaBody: 'Tell us your table and room count — we walk through booking to cash close.',
   },
   {
+    slug: 'lounge',
+    shortTitle: 'Room lounge',
+    h1: 'Room lounge management system',
+    seoTitle: 'Room lounge software & private room booking | Heselo',
+    seoDescription:
+      'Room lounge software: VIP room booking, live sessions, cash, and extras. Built for room-based lounges — free demo.',
+    keywords: [
+      'room lounge software',
+      'lounge room booking',
+      'lounge management system',
+      'VIP room reservation',
+    ],
+    intro:
+      'In a room lounge the unit is the room: booking, session length, drinks and snacks, and payment. Lounge software should connect the room schedule to live sessions and cash — phone notes and a whiteboard are not enough.',
+    whoTitle: 'Who is it for?',
+    whoBody:
+      'VIP room lounges, club-lounges that rent rooms, and mixed karaoke/billiards venues with private rooms. Places that run rooms, not an open floor.',
+    problemsTitle: 'Typical lounge friction',
+    problems: [
+      'Room bookings get lost in messenger threads',
+      'Extensions and extras are written elsewhere',
+      'Several VIP rooms collide at peak time',
+      'Cash and room occupancy disagree at close',
+    ],
+    howTitle: 'How Heselo works in a room lounge',
+    howBody:
+      'Book rooms on the schedule. Open a live session on arrival; add products and take payment there. Several rooms appear on one board. Cash closes with shift and report.',
+    featuresTitle: 'Lounge essentials',
+    features: [
+      {
+        title: 'Room booking',
+        desc: 'Schedule, list, move, and cancel.',
+      },
+      {
+        title: 'Live room session',
+        desc: 'Status, products, receipt, and payment.',
+      },
+      {
+        title: 'Customer history',
+        desc: 'Cards and visits for returning guests.',
+      },
+      {
+        title: 'Cash and stats',
+        desc: 'Shift close and payment cuts.',
+      },
+    ],
+    differTitle: 'Not an open-floor cafe tool',
+    differBody:
+      'Open-table flow does not run a closed room session. Heselo treats the room as a resource — same rules as karaoke and anti-cafés, fitted to a lounge.',
+    faq: [
+      {
+        q: 'Are lounge rooms set up like karaoke rooms?',
+        a: 'Yes. Each room is a resource; schedule and live tracking show room status.',
+      },
+      {
+        q: 'Can an open hall and rooms share one system?',
+        a: 'Yes. Tables, rooms, and stations share schedule and cash flow.',
+      },
+    ],
+    related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
+    ctaTitle: 'Room lounge demo',
+    ctaBody: 'Tell us your room count — we show booking and live flow.',
+  },
+  {
     slug: 'reservations',
     shortTitle: 'Reservations',
     h1: 'Table and room reservation system',
@@ -409,7 +348,7 @@ export const solutionsEn: SolutionCopy[] = [
       'A reservation system is more than picking a free slot. A booking for a table or room must connect to the live session, payment, and history. Heselo keeps schedule and reservation list on the same data.',
     whoTitle: 'Who is it for?',
     whoBody:
-      'Restaurants, cafes, karaoke, billiards, and other venues that want professional table or room booking.',
+      'Gaming clubs, karaoke, billiards, anti-cafés, and room lounges that want professional table, room, or station booking.',
     problemsTitle: 'Limits of standalone booking tools',
     problems: [
       'Schedule and live floor do not see each other',
@@ -452,7 +391,7 @@ export const solutionsEn: SolutionCopy[] = [
         a: 'Yes. Changes to past days follow venue protection rules.',
       },
     ],
-    related: ['restaurant', 'cafe', 'karaoke', 'pos'],
+    related: ['karaoke', 'lounge', 'gaming', 'pos'],
     ctaTitle: 'Reservation demo',
     ctaBody: 'We show schedule and booking flow for your venue type.',
   },
@@ -460,15 +399,15 @@ export const solutionsEn: SolutionCopy[] = [
     slug: 'pos',
     shortTitle: 'Cash / POS',
     h1: 'Cash management system',
-    seoTitle: 'Cash software & restaurant POS flow | Heselo',
+    seoTitle: 'Cash software & club POS flow | Heselo',
     seoDescription:
-      'Cash software: shifts, transactions, cash report, and count. Restaurant POS flow in the same panel as booking and live floor.',
-    keywords: ['cash software', 'restaurant POS', 'cash management', 'cash reconciliation'],
+      'Cash software: shifts, transactions, cash report, and count. Club POS in the same panel as booking and live floor.',
+    keywords: ['cash software', 'club POS', 'cash management', 'cash reconciliation'],
     intro:
       'Cash software is more than a pay button. Shift open, transactions, report, and count should answer the owner at day end. In Heselo, cash is tied to the same workday as reservations and live sessions.',
     whoTitle: 'Who is it for?',
     whoBody:
-      'Restaurants, cafes, and clubs that track cash/card/POS by shift, close the day, and reconcile counts.',
+      'Gaming clubs, karaoke, billiards, anti-cafés, and room lounges that track cash/card/POS by shift, close the day, and reconcile counts.',
     problemsTitle: 'When cash tracking is weak',
     problems: [
       'Totals disagree at shift close',
@@ -500,7 +439,7 @@ export const solutionsEn: SolutionCopy[] = [
     ],
     differTitle: 'Not a separate till + separate booking',
     differBody:
-      'Many venues book in one tool and cash in another. Heselo puts restaurant cash flow in the same panel — so “where did this total come from?” gets rarer at close.',
+      'Many venues book in one tool and cash in another. Heselo puts cash flow in the same panel — so “where did this total come from?” gets rarer at close.',
     faq: [
       {
         q: 'Where are payment amounts calculated?',
@@ -511,7 +450,7 @@ export const solutionsEn: SolutionCopy[] = [
         a: 'Yes. Cash count is part of shift/day close.',
       },
     ],
-    related: ['restaurant', 'inventory', 'reservations'],
+    related: ['gaming', 'inventory', 'reservations'],
     ctaTitle: 'Cash flow demo',
     ctaBody: 'We walk through shift and count with a realistic scenario.',
   },
@@ -519,12 +458,12 @@ export const solutionsEn: SolutionCopy[] = [
     slug: 'inventory',
     shortTitle: 'Inventory',
     h1: 'Inventory management system',
-    seoTitle: 'Inventory management & restaurant stock software | Heselo',
+    seoTitle: 'Inventory management & club stock software | Heselo',
     seoDescription:
-      'Inventory management: product catalog, stock levels, and counts. Restaurant stock software in the same panel as cash and live sales.',
+      'Inventory management: product catalog, stock levels, and counts. Club stock software in the same panel as cash and live sales.',
     keywords: [
       'inventory management system',
-      'restaurant inventory software',
+      'club inventory software',
       'stock count',
       'product catalog',
     ],
@@ -532,7 +471,7 @@ export const solutionsEn: SolutionCopy[] = [
       'When inventory sits apart from sales, levels look fine on paper and wrong on the shelf. In Heselo, products, inventory, and quick sale share one catalog — linked to live sessions and cash.',
     whoTitle: 'Who is it for?',
     whoBody:
-      'Restaurants, cafes, and clubs that track product stock, run counts, and sell without a booking.',
+      'Gaming clubs, karaoke, billiards, anti-cafés, and room lounges that track snack and drink stock, run counts, and sell without a booking.',
     problemsTitle: 'When stock tracking is weak',
     problems: [
       'Sales happen but levels do not update',
@@ -564,7 +503,7 @@ export const solutionsEn: SolutionCopy[] = [
     ],
     differTitle: 'Unlike a separate stock spreadsheet',
     differBody:
-      'Spreadsheets get filled at night; Heselo uses the same data at sale time. It works as restaurant inventory software without splitting from booking and cash.',
+      'Spreadsheets get filled at night; Heselo uses the same data at sale time. Inventory stays tied to booking and cash.',
     faq: [
       {
         q: 'Is inventory a separate module?',
@@ -575,7 +514,7 @@ export const solutionsEn: SolutionCopy[] = [
         a: 'Yes. Inventory statistics cover summaries and cuts.',
       },
     ],
-    related: ['pos', 'restaurant', 'cafe'],
+    related: ['pos', 'gaming', 'antikafe'],
     ctaTitle: 'Inventory and catalog demo',
     ctaBody: 'We show product and count flow for your venue.',
   },

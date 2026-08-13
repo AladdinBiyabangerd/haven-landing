@@ -1,12 +1,44 @@
 import type { Locale } from '@/i18n/config'
-import { SITE } from '@/lib/site'
+import { SITE, phoneDigitsE164, phoneE164 } from '@/lib/site'
+
+export type ContactIntent = 'demo' | 'custom'
+
+export const CONTACT_VENUE_TYPES = [
+  'gaming',
+  'karaoke',
+  'billiards',
+  'antikafe',
+  'lounge',
+  'other',
+] as const
+
+export type ContactVenueType = (typeof CONTACT_VENUE_TYPES)[number]
+
+const VENUE_TYPE_LABEL_AZ: Record<ContactVenueType, string> = {
+  gaming: 'Oyun klubu / PS',
+  karaoke: 'Karaoke',
+  billiards: 'Bilyard',
+  antikafe: 'Antikafe',
+  lounge: 'Otaqlı launj',
+  other: 'Digər',
+}
+
+export function isContactVenueType(value: string): value is ContactVenueType {
+  return (CONTACT_VENUE_TYPES as readonly string[]).includes(value)
+}
 
 export type ContactPayload = {
   name: string
   email: string
+  phone: string
   venue: string
+  venueType?: ContactVenueType
   message: string
   locale: Locale
+  intent: ContactIntent
+  venuesCount?: number
+  staffCount?: number
+  reservationsPerMonth?: number
 }
 
 export const EMAIL_LOGO_CID = 'heselo-logo'
@@ -36,7 +68,7 @@ const customerCopy: Record<Locale, CustomerCopy> = {
     body: 'Məlumatlarınızı uğurla qəbul etdik. Heselo komandası ən qısa zamanda sizinlə əlaqə saxlayaraq ətraflı məlumat təqdim edəcək.',
     nextTitle: 'Nə baş verəcək?',
     nextBody:
-      'Heselo komandası müraciətinizi nəzərdən keçirəcək və sizinlə email vasitəsilə əlaqə saxlayacaq.',
+      'Heselo komandası müraciətinizi nəzərdən keçirəcək və iş saatlarında adətən 2 saat ərzində WhatsApp və ya telefonla cavab verəcək.',
     productTitle: 'Heselo ilə məkanınızı daha rahat idarə edin',
     productBody:
       'Canlı izləmə, cədvəl, rezervasiyalar, kassa, məhsullar, anbar və statistika — hamısı bir sistemdə.',
@@ -62,7 +94,7 @@ const customerCopy: Record<Locale, CustomerCopy> = {
     greeting: (name) => `Hello, <strong style="color:#111827;">${escapeHtml(name)}</strong>.`,
     body: 'We received your details successfully. The Heselo team will contact you shortly with more information.',
     nextTitle: 'What happens next?',
-    nextBody: 'Our team will review your request and get in touch by email.',
+    nextBody: 'Our team will review your request and usually reply within two hours during working hours — by WhatsApp or phone.',
     productTitle: 'Run your venue more easily with Heselo',
     productBody:
       'Live tracking, schedule, reservations, cash, products, inventory, and statistics — all in one system.',
@@ -83,12 +115,12 @@ const customerCopy: Record<Locale, CustomerCopy> = {
     lang: 'ru',
     subject: 'Heselo — заявка принята',
     title: 'Ваша заявка принята',
-    tagline: 'Система бронирования и управления площадкой',
+    tagline: 'Система бронирования и управления заведением',
     greeting: (name) => `Здравствуйте, <strong style="color:#111827;">${escapeHtml(name)}</strong>.`,
     body: 'Мы успешно получили ваши данные. Команда Heselo свяжется с вами в ближайшее время и предоставит подробную информацию.',
     nextTitle: 'Что дальше?',
-    nextBody: 'Команда Heselo рассмотрит заявку и свяжется с вами по email.',
-    productTitle: 'Управляйте площадкой проще с Heselo',
+    nextBody: 'Команда Heselo рассмотрит заявку и в рабочие часы обычно ответит в течение двух часов — в WhatsApp или по телефону.',
+    productTitle: 'Управляйте заведением проще с Heselo',
     productBody:
       'Живое отслеживание, расписание, бронирования, касса, товары, склад и статистика — всё в одной системе.',
     footerNote: 'Это письмо отправлено автоматически в ответ на вашу заявку на сайте Heselo.',
@@ -188,13 +220,73 @@ function buildCustomerHtml(payload: ContactPayload, copy: CustomerCopy): string 
 </html>`
 }
 
+function countRow(label: string, value: number | undefined): string {
+  if (value === undefined) return ''
+  return `
+                <tr>
+                  <td style="padding:0 20px 18px;">
+                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">${label}</div>
+                    <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(String(value))}</div>
+                  </td>
+                </tr>`
+}
+
 function buildOwnerHtml(payload: ContactPayload): string {
   const name = payload.name.trim() || '—'
   const email = payload.email.trim()
+  const phone = payload.phone.trim()
   const venue = payload.venue.trim() || '—'
+  const venueTypeLabel = payload.venueType ? VENUE_TYPE_LABEL_AZ[payload.venueType] : '—'
   const message = payload.message.trim() || '—'
   const localeLabel = payload.locale.toUpperCase()
-  const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(`Heselo — ${name}`)}`
+  const isCustom = payload.intent === 'custom'
+  const badge = isCustom ? 'FƏRDİ QİYMƏT SORĞUSU' : 'YENİ MÜRACİƏT'
+  const heading = isCustom
+    ? 'Yeni fərdi qiymət sorğusu'
+    : 'Yeni müştəri sizinlə əlaqə saxlamaq istəyir'
+  const lead = isCustom
+    ? 'Müştəri standart planlardan kənar qiymət istəyir. Aşağıdakı həcm rəqəmlərinə əsasən təklif hazırlayın.'
+    : 'Heselo vasitəsilə yeni əlaqə müraciəti daxil olub. Müştəri ilə əlaqə saxlayaraq ehtiyaclarını öyrənə bilərsiniz.'
+  const mailto = email
+    ? `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(
+        isCustom ? `Heselo — fərdi qiymət: ${name}` : `Heselo — ${name}`,
+      )}`
+    : ''
+  const telHref = phone ? `tel:${phoneE164(phone)}` : ''
+  const waHref = phone ? `https://wa.me/${phoneDigitsE164(phone)}` : ''
+  const emailRow = email
+    ? `
+                <tr>
+                  <td style="padding:0 20px 18px;">
+                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">E-POÇT</div>
+                    <div style="font-size:16px;font-weight:600;color:#111827;">
+                      <a href="mailto:${escapeHtml(email)}" style="color:#0f766e;text-decoration:none;">${escapeHtml(email)}</a>
+                    </div>
+                  </td>
+                </tr>`
+    : ''
+  const phoneRow = phone
+    ? `
+                <tr>
+                  <td style="padding:0 20px 18px;">
+                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">TELEFON</div>
+                    <div style="font-size:16px;font-weight:600;color:#111827;">
+                      <a href="${escapeHtml(telHref)}" style="color:#0f766e;text-decoration:none;">${escapeHtml(phone)}</a>
+                    </div>
+                  </td>
+                </tr>`
+    : ''
+  const actionButtons = [
+    mailto
+      ? `<a href="${mailto}" style="display:inline-block;padding:13px 22px;background:#0f766e;color:#ffffff;text-decoration:none;border-radius:8px;font-size:14px;font-weight:600;margin:0 8px 8px 0;">Müştəriyə email yaz</a>`
+      : '',
+    waHref
+      ? `<a href="${escapeHtml(waHref)}" style="display:inline-block;padding:13px 22px;background:#25d366;color:#ffffff;text-decoration:none;border-radius:8px;font-size:14px;font-weight:600;margin:0 8px 8px 0;">WhatsApp</a>`
+      : '',
+    telHref && !waHref
+      ? `<a href="${escapeHtml(telHref)}" style="display:inline-block;padding:13px 22px;background:#0f766e;color:#ffffff;text-decoration:none;border-radius:8px;font-size:14px;font-weight:600;margin:0 8px 8px 0;">Zəng et</a>`
+      : '',
+  ].join('')
 
   return `<!DOCTYPE html>
 <html lang="az">
@@ -216,13 +308,13 @@ function buildOwnerHtml(payload: ContactPayload): string {
           <tr>
             <td style="padding:32px;">
               <div style="display:inline-block;padding:7px 12px;background:#ecfdf3;color:#15803d;border-radius:20px;font-size:12px;font-weight:600;">
-                YENİ MÜRACİƏT
+                ${escapeHtml(badge)}
               </div>
               <h1 style="margin:20px 0 10px;font-size:25px;line-height:1.3;color:#111827;">
-                Yeni müştəri sizinlə əlaqə saxlamaq istəyir
+                ${escapeHtml(heading)}
               </h1>
               <p style="margin:0 0 25px;font-size:15px;line-height:1.7;color:#6b7280;">
-                Heselo vasitəsilə yeni əlaqə müraciəti daxil olub. Müştəri ilə əlaqə saxlayaraq ehtiyaclarını öyrənə bilərsiniz.
+                ${escapeHtml(lead)}
               </p>
               <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f8fafc;border-radius:10px;">
                 <tr>
@@ -231,18 +323,18 @@ function buildOwnerHtml(payload: ContactPayload): string {
                     <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(name)}</div>
                   </td>
                 </tr>
+                ${phoneRow}
+                ${emailRow}
                 <tr>
                   <td style="padding:0 20px 18px;">
-                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">E-POÇT</div>
-                    <div style="font-size:16px;font-weight:600;color:#111827;">
-                      <a href="mailto:${escapeHtml(email)}" style="color:#0f766e;text-decoration:none;">${escapeHtml(email)}</a>
-                    </div>
+                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">MƏKANIN ADI</div>
+                    <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(venue)}</div>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:0 20px 18px;">
-                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">MƏKAN / BİZNES</div>
-                    <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(venue)}</div>
+                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">MƏKAN TİPİ</div>
+                    <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(venueTypeLabel)}</div>
                   </td>
                 </tr>
                 <tr>
@@ -251,6 +343,9 @@ function buildOwnerHtml(payload: ContactPayload): string {
                     <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(localeLabel)}</div>
                   </td>
                 </tr>
+                ${countRow('MƏKAN SAYI', payload.venuesCount)}
+                ${countRow('İŞÇİ SAYI', payload.staffCount)}
+                ${countRow('AYLIQ REZERVASİYA', payload.reservationsPerMonth)}
                 <tr>
                   <td style="padding:0 20px 20px;">
                     <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">QEYD</div>
@@ -259,9 +354,7 @@ function buildOwnerHtml(payload: ContactPayload): string {
                 </tr>
               </table>
               <div style="margin-top:28px;">
-                <a href="${mailto}" style="display:inline-block;padding:13px 22px;background:#0f766e;color:#ffffff;text-decoration:none;border-radius:8px;font-size:14px;font-weight:600;">
-                  Müştəriyə email yaz
-                </a>
+                ${actionButtons}
               </div>
             </td>
           </tr>
@@ -283,14 +376,27 @@ function buildOwnerHtml(payload: ContactPayload): string {
 
 export function buildOwnerEmail(payload: ContactPayload) {
   const venue = payload.venue.trim() || '—'
-  const subject = `Heselo — yeni müraciət: ${payload.venue.trim() || payload.name}`
+  const isCustom = payload.intent === 'custom'
+  const subject = isCustom
+    ? `Heselo — fərdi qiymət: ${payload.venue.trim() || payload.name}`
+    : `Heselo — yeni müraciət: ${payload.venue.trim() || payload.name}`
+  const counts: string[] = []
+  if (payload.venuesCount !== undefined) counts.push(`Məkan sayı: ${payload.venuesCount}`)
+  if (payload.staffCount !== undefined) counts.push(`İşçi sayı: ${payload.staffCount}`)
+  if (payload.reservationsPerMonth !== undefined) {
+    counts.push(`Aylıq rezervasiya: ${payload.reservationsPerMonth}`)
+  }
+
   const text = [
-    'Yeni əlaqə müraciəti',
+    isCustom ? 'Fərdi qiymət sorğusu' : 'Yeni əlaqə müraciəti',
     '',
     `Ad: ${payload.name}`,
-    `E-poçt: ${payload.email}`,
+    `Telefon: ${payload.phone || '—'}`,
+    `E-poçt: ${payload.email || '—'}`,
     `Məkan: ${venue}`,
+    `Tip: ${payload.venueType ? VENUE_TYPE_LABEL_AZ[payload.venueType] : '—'}`,
     `Dil: ${payload.locale}`,
+    ...counts,
     '',
     'Qeyd:',
     payload.message,

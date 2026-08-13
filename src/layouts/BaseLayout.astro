@@ -17,7 +17,7 @@ interface Props {
   /** Required for solution/guide pages; optional override for others */
   seo?: SeoPageInput
   /** Preload critical images (e.g. hero LCP) */
-  preloadImages?: Array<{ href: string; type?: string }>
+  preloadImages?: Array<{ href: string; type?: string; imagesrcset?: string }>
 }
 
 const { locale, messages, page, seo: seoInput, preloadImages = [] } = Astro.props
@@ -73,7 +73,14 @@ const breadcrumbs =
 
     {
       preloadImages.map((img) => (
-        <link rel="preload" as="image" href={img.href} type={img.type} fetchpriority="high" />
+        <link
+          rel="preload"
+          as="image"
+          href={img.href}
+          imagesrcset={img.imagesrcset}
+          type={img.type}
+          fetchpriority="high"
+        />
       ))
     }
 

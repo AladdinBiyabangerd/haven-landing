@@ -4,8 +4,17 @@ import type { APIRoute } from 'astro'
 import nodemailer from 'nodemailer'
 import { isLocale, type Locale } from '@/i18n/config'
 import { SITE } from '@/lib/site'
+import { parseContactPhone } from '@/lib/format'
 import path from 'node:path'
-import { buildCustomerAutoReply, buildOwnerEmail, EMAIL_LOGO_CID, type ContactPayload } from '@/lib/contactMail'
+import {
+  buildCustomerAutoReply,
+  buildOwnerEmail,
+  EMAIL_LOGO_CID,
+  isContactVenueType,
+  type ContactIntent,
+  type ContactPayload,
+  type ContactVenueType,
+} from '@/lib/contactMail'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -27,23 +36,64 @@ function readEnv(name: string): string {
   return String(fromMeta ?? fromProcess ?? '').trim()
 }
 
+function parseCount(raw: unknown): number | undefined | 'invalid' {
+  const value = String(raw ?? '').trim()
+  if (!value) return undefined
+  if (!/^\d+$/.test(value)) return 'invalid'
+  const n = Number(value)
+  if (n < 1 || n > 99999) return 'invalid'
+  return n
+}
+
 function parseBody(raw: unknown): ContactPayload | null {
   if (!raw || typeof raw !== 'object') return null
   const data = raw as Record<string, unknown>
   const name = String(data.name ?? '').trim()
-  const email = String(data.email ?? '').trim().toLowerCase()
+  const emailRaw = String(data.email ?? '').trim().toLowerCase()
+  const phone = parseContactPhone(data.phone)
   const venue = String(data.venue ?? '').trim()
+  const venueTypeRaw = String(data.venueType ?? '').trim()
+  if (venueTypeRaw && !isContactVenueType(venueTypeRaw)) return null
+  const venueType: ContactVenueType | undefined = isContactVenueType(venueTypeRaw)
+    ? venueTypeRaw
+    : undefined
   const message = String(data.message ?? '').trim()
   const localeRaw = String(data.locale ?? 'az').trim()
   const locale: Locale = isLocale(localeRaw) ? localeRaw : 'az'
+  const intentRaw = String(data.intent ?? 'demo').trim()
+  const intent: ContactIntent = intentRaw === 'custom' ? 'custom' : 'demo'
+  const venuesCount = parseCount(data.venuesCount)
+  const staffCount = parseCount(data.staffCount)
+  const reservationsPerMonth = parseCount(data.reservationsPerMonth)
 
   if (!name || name.length > 120) return null
-  if (!email || email.length > 200 || !EMAIL_RE.test(email)) return null
+  if (emailRaw && (emailRaw.length > 200 || !EMAIL_RE.test(emailRaw))) return null
+  if (phone === 'invalid') return null
+  const email = emailRaw
+  if (!email && !phone) return null
   if (venue.length > 200) return null
   if (!message || message.length > 5000) return null
   if (String(data.company ?? '').trim()) return null
+  if (venuesCount === 'invalid' || staffCount === 'invalid' || reservationsPerMonth === 'invalid') {
+    return null
+  }
+  if (intent === 'custom' && (venuesCount === undefined || staffCount === undefined || reservationsPerMonth === undefined)) {
+    return null
+  }
 
-  return { name, email, venue, message, locale }
+  return {
+    name,
+    email,
+    phone: phone ?? '',
+    venue,
+    venueType,
+    message,
+    locale,
+    intent,
+    venuesCount,
+    staffCount,
+    reservationsPerMonth,
+  }
 }
 
 
@@ -114,15 +164,17 @@ async function handlePost(request: Request): Promise<Response> {
       attachments,
     })
 
-    await transporter.sendMail({
-      from,
-      to: payload.email,
-      replyTo,
-      subject: autoReply.subject,
-      text: autoReply.text,
-      html: autoReply.html,
-      attachments,
-    })
+    if (payload.email) {
+      await transporter.sendMail({
+        from,
+        to: payload.email,
+        replyTo,
+        subject: autoReply.subject,
+        text: autoReply.text,
+        html: autoReply.html,
+        attachments,
+      })
+    }
   } catch (error) {
     console.error('[contact] send failed', error)
     return json(502, { ok: false, error: 'send_failed' })
@@ -154,7 +206,8 @@ export const ALL: APIRoute = async ({ request }) => {
     return json(200, {
       ok: true,
       endpoint: '/api/contact/',
-      usage: 'Send POST with JSON: { name, email, venue, message, locale }',
+      usage:
+        'Send POST with JSON: { name, phone?, email?, venue, venueType?, message, locale, intent?, venuesCount?, staffCount?, reservationsPerMonth? } — phone or email required',
     })
   }
 

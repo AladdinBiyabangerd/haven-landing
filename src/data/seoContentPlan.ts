@@ -8,12 +8,11 @@ export const SEO_CONTENT_PLAN = {
     { id: 'how-heselo-works', status: 'covered-on-home', note: 'How section + features page' },
   ],
   business: [
-    { id: 'restaurant', path: '/solutions/restaurant/', status: 'live' },
-    { id: 'cafe', path: '/solutions/cafe/', status: 'live' },
-    { id: 'billiards', path: '/solutions/billiards/', status: 'live' },
-    { id: 'karaoke', path: '/solutions/karaoke/', status: 'live' },
     { id: 'gaming', path: '/solutions/gaming/', status: 'live' },
+    { id: 'karaoke', path: '/solutions/karaoke/', status: 'live' },
+    { id: 'billiards', path: '/solutions/billiards/', status: 'live' },
     { id: 'antikafe', path: '/solutions/antikafe/', status: 'live' },
+    { id: 'lounge', path: '/solutions/lounge/', status: 'live' },
   ],
   feature: [
     { id: 'reservations', path: '/solutions/reservations/', status: 'live' },
@@ -23,33 +22,28 @@ export const SEO_CONTENT_PLAN = {
   ],
   educational: [
     {
-      id: 'what-is-restaurant-management-system',
-      path: '/guides/restaurant-management-system/',
+      id: 'what-is-gaming-club-management',
+      path: '/guides/gaming-club-management/',
       status: 'live',
     },
     {
-      id: 'how-restaurants-manage-reservations',
-      path: '/guides/manage-restaurant-reservations/',
+      id: 'how-karaoke-rooms-are-booked',
+      path: '/guides/karaoke-room-booking/',
       status: 'live',
     },
     {
-      id: 'how-restaurant-pos-works',
-      path: '/guides/restaurant-pos-system/',
+      id: 'how-billiards-clubs-run',
+      path: '/guides/billiards-club-management/',
       status: 'live',
     },
     {
-      id: 'restaurant-inventory-basics',
-      path: '/guides/restaurant-inventory-basics/',
+      id: 'what-is-room-lounge-management',
+      path: '/guides/room-lounge-management/',
       status: 'live',
     },
     {
       id: 'what-is-antikafe-management-system',
       path: '/guides/antikafe-management-system/',
-      status: 'live',
-    },
-    {
-      id: 'what-is-cafe-management-system',
-      path: '/guides/cafe-management-system/',
       status: 'live',
     },
   ],

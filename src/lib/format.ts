@@ -40,6 +40,14 @@ export function formatPhone(local: string): string {
   return local
 }
 
+/** Digits only. Empty → undefined. Wrong length → 'invalid'. */
+export function parseContactPhone(raw: unknown): string | undefined | 'invalid' {
+  const digits = String(raw ?? '').replace(/\D/g, '')
+  if (!digits) return undefined
+  if (digits.length < 9 || digits.length > 15) return 'invalid'
+  return digits
+}
+
 export function truncateText(text: string, maxLength: number, ellipsis: string): string {
   if (text.length <= maxLength) return text
   return `${text.slice(0, maxLength)}${ellipsis}`

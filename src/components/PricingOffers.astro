@@ -1,0 +1,307 @@
+---
+import type { Locale } from '@/i18n/config'
+import type { Messages } from '@/i18n/types'
+import { localePath } from '@/lib/site'
+import { fillTemplate, formatMoney } from '@/lib/format'
+import { VENUE_OFFERS, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
+
+interface Props {
+  locale: Locale
+  messages: Messages
+}
+
+const { locale, messages } = Astro.props
+const page = messages.pricing
+const slugs = VENUE_OFFERS.map((offer) => offer.slug)
+
+function planFeatures(features: string[], upTo: number): string[] {
+  return features.map((item) => fillTemplate(item, { n: upTo }))
+}
+---
+
+<div class="pricing-offers" data-pricing-offers data-storage-key={VENUE_STORAGE_KEY}>
+  <div class="chooser">
+    <p class="chooser-label" id="venue-type-label">{page.chooseType}</p>
+    <div class="types" role="tablist" aria-labelledby="venue-type-label">
+      {
+        VENUE_OFFERS.map((offer) => (
+          <a
+            href={`#${offer.slug}`}
+            role="tab"
+            data-type={offer.slug}
+            aria-controls={offer.slug}
+          >
+            {page.offers[offer.slug].name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  {
+    VENUE_OFFERS.map((offer) => {
+      const copy = page.offers[offer.slug]
+      const period = offer.model === 'monthly' ? page.periodMonthly : page.periodOneTime
+      return (
+        <section class="panel" id={offer.slug} data-panel={offer.slug} hidden>
+          <div class="plans">
+            {offer.plans.map((plan) => {
+              const planCopy = copy.plans[plan.id]
+              return (
+                <article class:list={[{ featured: plan.id === 'plus' }]}>
+                  {plan.id === 'plus' ? <p class="badge">{page.popular}</p> : null}
+                  <h2 class="type-card-title">{page.planNames[plan.id]}</h2>
+                  <p class="price">
+                    {formatMoney(plan.amount, locale)}
+                    <span>{period}</span>
+                  </p>
+                  <p class="for-whom">
+                    <span>{page.bestFor}</span>
+                    {planCopy.forWhom}
+                  </p>
+                  <p class="desc">{planCopy.desc}</p>
+                  <ul>
+                    {planFeatures(planCopy.features, plan.upTo).map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                  <a
+                    class:list={['btn', plan.id === 'plus' ? 'btn-primary' : 'btn-ghost']}
+                    href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}`}
+                  >
+                    {page.cta}
+                  </a>
+                </article>
+              )
+            })}
+            <article class="custom">
+              <h2 class="type-card-title">{page.custom.name}</h2>
+              <p class="price">{page.custom.price}</p>
+              <p class="desc">{page.custom.desc}</p>
+              <ul>
+                {page.custom.features.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <a
+                class="btn btn-primary"
+                href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=custom`}
+              >
+                {page.custom.cta}
+              </a>
+            </article>
+          </div>
+        </section>
+      )
+    })
+  }
+</div>
+
+<script is:inline define:vars={{ slugs, storageKey: VENUE_STORAGE_KEY }}>
+  const root = document.querySelector('[data-pricing-offers]')
+  if (root instanceof HTMLElement) {
+    const tabs = [...root.querySelectorAll('[data-type]')]
+    const panels = [...root.querySelectorAll('[data-panel]')]
+    const valid = new Set(slugs)
+
+    function selectType(slug, pushHash) {
+      if (!valid.has(slug)) return
+      panels.forEach((panel) => {
+        if (!(panel instanceof HTMLElement)) return
+        const on = panel.dataset.panel === slug
+        panel.hidden = !on
+        panel.classList.toggle('is-open', on)
+      })
+      tabs.forEach((tab) => {
+        const on = tab.getAttribute('data-type') === slug
+        tab.setAttribute('aria-selected', on ? 'true' : 'false')
+        if (on) tab.setAttribute('aria-current', 'true')
+        else tab.removeAttribute('aria-current')
+      })
+      try {
+        sessionStorage.setItem(storageKey, slug)
+      } catch {
+        /* ignore */
+      }
+      if (pushHash && location.hash !== `#${slug}`) {
+        history.replaceState(null, '', `#${slug}`)
+      }
+    }
+
+    function readInitial() {
+      const hash = location.hash.replace(/^#/, '')
+      if (valid.has(hash)) return hash
+      const query = new URLSearchParams(location.search).get('type')
+      if (query && valid.has(query)) return query
+      try {
+        const stored = sessionStorage.getItem(storageKey)
+        if (stored && valid.has(stored)) return stored
+      } catch {
+        /* ignore */
+      }
+      return ''
+    }
+
+    const initial = readInitial()
+    if (initial) selectType(initial, true)
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', (event) => {
+        const slug = tab.getAttribute('data-type') || ''
+        if (!valid.has(slug)) return
+        event.preventDefault()
+        selectType(slug, true)
+      })
+    })
+
+    window.addEventListener('hashchange', () => {
+      const slug = location.hash.replace(/^#/, '')
+      if (valid.has(slug)) selectType(slug, false)
+    })
+  }
+</script>
+
+<style>
+  .chooser {
+    display: grid;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+  }
+  .chooser-label {
+    margin: 0;
+    font-weight: 700;
+  }
+  .types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .types a {
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+  }
+  .types a[aria-current='true'] {
+    border-color: rgba(15, 118, 110, 0.45);
+    background: rgba(20, 184, 166, 0.14);
+    color: var(--ink);
+  }
+  .panel {
+    display: none;
+    gap: 1rem;
+  }
+  .panel.is-open {
+    display: grid;
+  }
+  .panel[hidden] {
+    display: none;
+  }
+  .plans {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 0.15rem;
+    padding-bottom: 0.65rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 0 0 min(19.5rem, 82vw);
+    padding: 1.5rem 1.35rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(23, 40, 66, 0.04);
+    position: relative;
+    scroll-snap-align: start;
+  }
+  .badge {
+    margin: 0;
+    align-self: flex-start;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(15, 118, 110, 0.16);
+    color: var(--ink);
+    font-size: var(--text-xs, 0.75rem);
+    font-weight: 700;
+  }
+  .for-whom {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+  .for-whom span {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-subtle);
+  }
+  article.featured {
+    border-color: rgba(15, 118, 110, 0.35);
+    background:
+      linear-gradient(160deg, rgba(20, 184, 166, 0.12), transparent 50%),
+      var(--surface);
+  }
+  article.custom {
+    border-color: rgba(23, 40, 66, 0.18);
+    background:
+      linear-gradient(160deg, rgba(23, 40, 66, 0.06), transparent 52%),
+      var(--surface);
+  }
+  .price {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    letter-spacing: var(--tracking-display);
+    line-height: var(--lh-tight);
+  }
+  .price span {
+    margin-left: 0.35rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink-subtle);
+  }
+  .desc {
+    margin: 0;
+    color: var(--ink-muted);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+    flex: 1;
+  }
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+    color: var(--ink-muted);
+  }
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+</style>

@@ -1,12 +1,19 @@
 import type { SolutionSlug } from '@/data/solutions/types'
 
 export const GUIDE_SLUGS = [
-  'restaurant-management-system',
-  'manage-restaurant-reservations',
-  'restaurant-pos-system',
-  'restaurant-inventory-basics',
-  'cafe-management-system',
+  'gaming-club-management',
+  'karaoke-room-booking',
+  'billiards-club-management',
   'antikafe-management-system',
+  'room-lounge-management',
+] as const
+
+export const TEASER_GUIDE_SLUGS = [
+  'gaming-club-management',
+  'karaoke-room-booking',
+  'billiards-club-management',
+  'antikafe-management-system',
+  'room-lounge-management',
 ] as const
 
 export type GuideSlug = (typeof GUIDE_SLUGS)[number]

@@ -44,7 +44,7 @@ const items = getGuides(locale)
                 <h2 class="type-card-title">{item.shortTitle}</h2>
                 <p>{truncateText(item.intro, 180, messages.common.truncatedEllipsis)}</p>
                 <a href={localePath(locale, `/guides/${item.slug}`)}>
-                  {item.h1} — {hub.cardCta}
+                  {item.h1}
                 </a>
               </article>
             </li>

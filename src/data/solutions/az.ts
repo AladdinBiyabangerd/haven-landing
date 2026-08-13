@@ -2,151 +2,25 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 
 export const solutionsHubAz: SolutionsHubCopy = {
   eyebrow: 'Biznes həlləri',
-  h1: 'Hansı biznes üçün Heselo uyğundur?',
+  h1: 'Hansı məkanlar üçün Heselo uyğundur?',
   intro:
-    'Heselo ümumi “məkan idarəetmə sistemi”dir: rezervasiya, canlı zal, kassa və anbar eyni paneldədir. Aşağıdakı səhifələr hər biznes tipinin real ehtiyacına görə izah olunur.',
-  seoTitle: 'Biznes həlləri — restoran, kafe, klub və rezervasiya | Heselo',
+    'Heselo otaq, stansiya və masa rezervasiyasını, canlı sessiyanı və kassanı bir paneldə birləşdirir. Aşağıdakı səhifələr oyun klubu, karaoke, bilyard, antikafe və otaqlı launj axınına görə yazılıb.',
+  seoTitle: 'Biznes həlləri — oyun klubu, karaoke, bilyard | Heselo',
   seoDescription:
-    'Restoran, kafe, bilyard, karaoke, gaming club və antikafe üçün məkan idarəetməsi: masa rezervasiyası, kassa və anbar. Pulsuz demo.',
+    'Oyun klubu (PS), karaoke otaqları, bilyard, antikafe və otaqlı launj üçün məkan idarəetməsi: rezervasiya, kassa və anbar. Pulsuz demo.',
   keywords: [
     'məkan idarəetmə sistemi',
-    'biznes idarəetmə proqramı',
-    'restoran idarəetmə sistemi',
-    'kafe proqramı',
-    'rezervasiya sistemi',
+    'oyun klubu proqramı',
+    'ps klub proqramı',
+    'karaoke otaq rezervasiya',
+    'bilyard klubu proqramı',
   ],
   cardCta: 'Ətraflı oxu',
+  primaryTitle: 'Əsas məkan tipləri',
+  featuresTitle: 'Funksiyalar',
 }
 
 export const solutionsAz: SolutionCopy[] = [
-  {
-    slug: 'restaurant',
-    shortTitle: 'Restoran',
-    h1: 'Restoran idarəetmə sistemi',
-    seoTitle: 'Restoran idarəetmə sistemi və restoran proqramı | Heselo',
-    seoDescription:
-      'Restoran üçün proqram: masa rezervasiyası, canlı zal, kassa və anbar bir paneldə. Azərbaycan bazarında restoran idarəetməsi üçün demo istəyin.',
-    keywords: [
-      'restoran idarəetmə sistemi',
-      'restoran proqramı',
-      'restoran üçün proqram',
-      'restoran kassa proqramı',
-      'restoran anbar proqramı',
-    ],
-    intro:
-      'Restoranda rezerv bir yerdə, ofisiantın qeydi başqa yerdə, kassa isə ayrı cədvəldə qalanda günün sonunda hesab-kitab uzanır. Heselo restoran idarəetmə sistemini bir iş axınına gətirir: masa və otaq rezervasiyası, canlı sessiya, ödəniş və anbar eyni paneldədir.',
-    whoTitle: 'Kimlər üçündür?',
-    whoBody:
-      'Masa və otaq rezervasiyası qəbul edən restoranlar, lounge tipli məkanlar və eyni paneldə kassa ilə anbarı idarə etmək istəyən sahiblər üçün. Çoxsaylı zal və ya otaq varsa, cədvəl eyni yerdə görünür.',
-    problemsTitle: 'Restoranlarda tez rast gəlinən problemlər',
-    problems: [
-      'Telefonla və messencerlə gələn rezervlər cədvəldə itir',
-      'Canlı zal ilə rezervasiya siyahısı bir-birini görmür',
-      'Növbə bağlananda nağd, bank və POS qarışır',
-      'Məhsul və anbar sayımı iş günündən ayrı aparılır',
-    ],
-    howTitle: 'Heselo restoranda necə işləyir?',
-    howBody:
-      'Resepsiya cədvəldə masa və ya otağı rezerv edir. Qonaq gələndə sessiya canlı izləmədə açılır; məhsul əlavəsi və ödəniş eyni axındadır. Kassa növbə, hesabat və sayım ilə günü bağlayır. Anbar isə kataloq üzərində qalır — ayrıca Excel tələb olunmur.',
-    featuresTitle: 'Restoran üçün əsas funksiyalar',
-    features: [
-      {
-        title: 'Masa və otaq rezervasiyası',
-        desc: 'Gün və həftə cədvəli, rezerv siyahısı, köçürmə, ləğv və tarixçə.',
-      },
-      {
-        title: 'Canlı zal',
-        desc: 'Aktiv sessiyalar, məhsul əlavəsi, pauza, qəbz və ödəniş — zalın real vəziyyəti.',
-      },
-      {
-        title: 'Restoran kassa proqramı',
-        desc: 'Növbə aç/bağla, əməliyyatlar, kassa hesabatı və sayım.',
-      },
-      {
-        title: 'Restoran anbar proqramı',
-        desc: 'Məhsul kataloqu, qalıq və sayım jurnalları; sürətli satış bron olmadan.',
-      },
-    ],
-    differTitle: 'Digər həllərdən fərqi',
-    differBody:
-      'Heselo yalnız “restoran rezervasiya saytı” və ya yalnız kassa deyil. Rezervasiya, canlı sessiya, kassa və anbar eyni məkan qaydaları ilə işləyir. Ödəniş qalıqları serverdə hesablanır — ekranda təxmini rəqəm yoxdur. Panel Azərbaycan, İngilis və Rus dillərindədir. Əvvəlcə “restoran idarəetmə sistemi nədir?” sualına cavab istəyirsinizsə, bələdçi yazımıza baxın.',
-    faq: [
-      {
-        q: 'Heselo restoran idarəetmə sistemi kimi nəyi əhatə edir?',
-        a: 'Masa/otaq rezervasiyası, canlı izləmə, kassa (növbə, hesabat, sayım), məhsullar, anbar, müştərilər və statistika.',
-      },
-      {
-        q: 'Restoran kassa proqramı ayrıca alınır?',
-        a: 'Xeyr. Kassa Heselo panelinin bir moduludur — abunə planına daxildir.',
-      },
-      {
-        q: 'Demo necə əldə edilir?',
-        a: 'Əlaqə formasını doldurun və ya e-poçta yazın. Məkan tipinizi və masa/otaq sayını qeyd edin.',
-      },
-    ],
-    related: ['reservations', 'pos', 'inventory', 'cafe'],
-    ctaTitle: 'Restoranınız üçün demo istəyin',
-    ctaBody: 'İş axınınıza uyğun qısa demo göstəririk — rezervasiyadan kassa bağlanışına qədər.',
-  },
-  {
-    slug: 'cafe',
-    shortTitle: 'Kafe',
-    h1: 'Kafe idarəetmə sistemi',
-    seoTitle: 'Kafe idarəetmə sistemi və kafe proqramı | Heselo',
-    seoDescription:
-      'Kafe proqramı: masa rezervasiyası, canlı sessiya, kassa və anbar. Kiçik və orta kafelər üçün məkan idarəetməsi — pulsuz demo.',
-    keywords: ['kafe idarəetmə sistemi', 'kafe proqramı', 'kafe rezervasiya', 'kafe kassa'],
-    intro:
-      'Kafelərdə axın tez dəyişir: qısa oturumlar, rezervsiz qonaqlar və tez-tez dəyişən məhsul sifarişləri. Kafe idarəetmə sistemi rezerv, canlı masa və kassanı eyni ekranda saxlamalıdır — Heselo buna görə qurulub.',
-    whoTitle: 'Hansı kafelər üçün?',
-    whoBody:
-      'Masa rezervasiyası qəbul edən, bəzən otaq və ya xüsusi masa saxlayan, kassa və məhsul satışını bir yerdə görmək istəyən kafe və coffee shop-lar üçün.',
-    problemsTitle: 'Kafelərdə tipik çətinliklər',
-    problems: [
-      'Rezervsiz qonaq və rezerv eyni masada toqquşur',
-      'Qısa sessiyalarda ödəniş və məhsul əlavəsi gecikir',
-      'Günün sonunda kassa ilə anbar uyğun gəlmir',
-      'Növbə dəyişəndə kim nə satıb — aydın olmur',
-    ],
-    howTitle: 'Kafe proqramı kimi necə işləyir?',
-    howBody:
-      'Cədvəldə rezerv qəbul edirsiniz; gələn qonaq üçün canlı sessiya açılır. Məhsul əlavəsi və ödəniş eyni axındadır. Rezervsiz satış üçün sürətli satış modulundan istifadə olunur. Kassa növbə və sayım ilə günü bağlayır.',
-    featuresTitle: 'Kafe üçün vacib funksiyalar',
-    features: [
-      {
-        title: 'Sürətli masa axını',
-        desc: 'Canlı izləmədə status, məhsul və ödəniş — uzun formalara ehtiyac yoxdur.',
-      },
-      {
-        title: 'Rezervasiya və rezervsiz qonaq',
-        desc: 'Bron və bron olmadan satış eyni kataloq və kassa qaydaları ilə.',
-      },
-      {
-        title: 'Kassa və sayım',
-        desc: 'Nağd, bank və POS növbə üzrə; gün bağlanışı aydındır.',
-      },
-      {
-        title: 'Məhsul və anbar',
-        desc: 'Kataloq qiymətləri və qalıq — kafe anbarını ayrıca aparmağa ehtiyac qalmır.',
-      },
-    ],
-    differTitle: 'Niyə ayrıca “kafe proqramı” axtarılır?',
-    differBody:
-      'Çünki kafe axını restorandan qısadır, amma eyni ehtiyaclar qalır: masa, ödəniş, məhsul. Heselo ağır ERP kimi deyil — gündəlik zal işi üçün yüngül, amma kassa və anbarı da əhatə edir.',
-    faq: [
-      {
-        q: 'Kiçik kafe üçün Heselo ağırdırmı?',
-        a: 'Xeyr. Başlanğıc planı kiçik məkanlar üçündür; yalnız lazım olan modullarla işləyə bilərsiniz.',
-      },
-      {
-        q: 'Kafe rezervasiya sistemi ayrıcadırmı?',
-        a: 'Rezervasiya Heselo-nun bir hissəsidir — masa cədvəli və rezerv siyahısı eyni paneldədir.',
-      },
-    ],
-    related: ['restaurant', 'reservations', 'pos'],
-    ctaTitle: 'Kafe üçün demo',
-    ctaBody: 'Masa sayınızı və tipik axınınızı bizə yazın — uyğun demo hazırlayırıq.',
-  },
   {
     slug: 'billiards',
     shortTitle: 'Bilyard',
@@ -222,7 +96,7 @@ export const solutionsAz: SolutionCopy[] = [
       'Karaoke məkanında əsas vahid otaqdır: rezervasiya, sessiya müddəti, əlavə içki/yemək və ödəniş. Karaoke idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'Otaq əsaslı karaoke klubları, qarışıq restoran + karaoke və bir neçə otağı eyni axında idarə edən məkanlar üçün.',
+      'Otaq əsaslı karaoke klubları, launj + karaoke və bir neçə otağı eyni axında idarə edən məkanlar üçün.',
     problemsTitle: 'Karaoke məkanlarında tipik problemlər',
     problems: [
       'Otaq rezervləri telefon qeydlərində itir',
@@ -265,7 +139,7 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'Rezervasiya formasında etiket və əvvəlcədən sifariş sahələri var — panel ilə eyni məntiq.',
       },
     ],
-    related: ['reservations', 'billiards', 'restaurant', 'pos'],
+    related: ['reservations', 'lounge', 'gaming', 'pos'],
     ctaTitle: 'Karaoke məkanı üçün demo',
     ctaBody: 'Otaq sayınızı bizə yazın — rezervasiya və canlı axını göstəririk.',
   },
@@ -402,6 +276,70 @@ export const solutionsAz: SolutionCopy[] = [
     ctaBody: 'Masa və otaq sayınızı bizə yazın — rezervasiyadan kassa bağlanışına qədər göstəririk.',
   },
   {
+    slug: 'lounge',
+    shortTitle: 'Otaqlı launj',
+    h1: 'Otaqlı launj idarəetmə sistemi',
+    seoTitle: 'Otaqlı launj proqramı və otaq rezervasiyası | Heselo',
+    seoDescription:
+      'Otaqlı launj üçün proqram: VIP otaq rezervasiyası, canlı sessiya, kassa və əlavə satış. Otaq əsaslı launj — pulsuz demo.',
+    keywords: [
+      'otaqlı launj proqramı',
+      'launj otaq rezervasiya',
+      'launj idarəetmə sistemi',
+      'vip otaq rezervasiya',
+    ],
+    intro:
+      'Otaqlı launjda əsas vahid otaqdır: rezervasiya, sessiya müddəti, içki/qəlyanaltı və ödəniş. Launj idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir — telefon qeydləri və lövhə kifayət etmir.',
+    whoTitle: 'Kimlər üçündür?',
+    whoBody:
+      'VIP otaqlı launjlar, otaq kirayəsi olan klub-launjlar və karaoke/bilyard ilə qarışıq otaq məkanları üçün. Açıq zal yox, otaq axını olan yerlər.',
+    problemsTitle: 'Otaqlı launjlarda tipik problemlər',
+    problems: [
+      'Otaq rezervləri mesajlarda itir',
+      'Sessiya uzandıqda əlavə vaxt və məhsul ayrı yazılır',
+      'Bir neçə VIP otağın eyni vaxtda statusu qarışır',
+      'Günün sonunda kassa ilə otaq doluluğu uyğun gəlmir',
+    ],
+    howTitle: 'Heselo otaqlı launjda necə işləyir?',
+    howBody:
+      'Otaqları cədvəldə rezerv edirsiniz. Qonaq gələndə sessiya canlı izləmədə açılır; məhsul və ödəniş eyni axındadır. Bir neçə otaq eyni lövhədə görünür. Kassa növbə və hesabat ilə günü bağlayır.',
+    featuresTitle: 'Otaqlı launj üçün əsas funksiyalar',
+    features: [
+      {
+        title: 'Otaq rezervasiyası',
+        desc: 'Cədvəl, rezerv siyahısı, köçürmə və ləğv.',
+      },
+      {
+        title: 'Canlı otaq sessiyası',
+        desc: 'Status, məhsul əlavəsi, qəbz və ödəniş.',
+      },
+      {
+        title: 'Müştəri tarixçəsi',
+        desc: 'Təkrar gələn qonaqlar üçün kart və ziyarət tarixçəsi.',
+      },
+      {
+        title: 'Kassa və statistika',
+        desc: 'Növbə bağlanışı və ödəniş kəsmləri.',
+      },
+    ],
+    differTitle: 'Açıq zal proqramından fərqi',
+    differBody:
+      'Açıq masa axını otağın qapalı sessiya məntiqini vermir. Heselo otağı resurs kimi saxlayır — karaoke və antikafe ilə eyni qaydalar, launj atmosferinə uyğun.',
+    faq: [
+      {
+        q: 'Launj otaqları karaoke otağı kimi qurulur?',
+        a: 'Bəli. Hər otaq ayrı resursdur; cədvəl və canlı izləmə otaq statusunu göstərir.',
+      },
+      {
+        q: 'Açıq zal və otaq eyni sistemdə ola bilər?',
+        a: 'Bəli. Masa, otaq və stansiya eyni cədvəl və kassa axınında idarə olunur.',
+      },
+    ],
+    related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
+    ctaTitle: 'Otaqlı launj üçün demo',
+    ctaBody: 'Otaq sayınızı bizə yazın — rezervasiya və canlı axını göstəririk.',
+  },
+  {
     slug: 'reservations',
     shortTitle: 'Rezervasiya',
     h1: 'Masa və otaq rezervasiya sistemi',
@@ -418,7 +356,7 @@ export const solutionsAz: SolutionCopy[] = [
       'Rezervasiya sistemi yalnız “boş vaxt seçmək” deyil. Masaya və ya otağa yazılan rezerv canlı sessiya, ödəniş və tarixçə ilə bağlı olmalıdır. Heselo cədvəl və rezervasiya siyahısını eyni məlumat üzərində saxlayır.',
     whoTitle: 'Kimlər üçün?',
     whoBody:
-      'Restoran, kafe, karaoke, bilyard və digər məkanlarda masa və ya otaq rezervasiyasını peşəkar şəkildə aparmaq istəyənlər üçün.',
+      'Oyun klubu, karaoke, bilyard, antikafe və otaqlı launjda masa, otaq və stansiya rezervasiyasını peşəkar şəkildə aparmaq istəyənlər üçün.',
     problemsTitle: 'Ayrı rezervasiya alətlərinin çatışmazlığı',
     problems: [
       'Cədvəl ilə canlı zal bir-birini görmür',
@@ -461,7 +399,7 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'Bəli. Keçmiş günə aid dəyişikliklər məkan qaydalarına görə qorunur.',
       },
     ],
-    related: ['restaurant', 'cafe', 'karaoke', 'pos'],
+    related: ['karaoke', 'lounge', 'gaming', 'pos'],
     ctaTitle: 'Rezervasiya demo-su',
     ctaBody: 'Cədvəl və rezerv axınını məkanınıza uyğun göstəririk.',
   },
@@ -469,12 +407,12 @@ export const solutionsAz: SolutionCopy[] = [
     slug: 'pos',
     shortTitle: 'Kassa',
     h1: 'Kassa idarəetmə sistemi',
-    seoTitle: 'Kassa proqramı və restoran kassa proqramı | Heselo',
+    seoTitle: 'Kassa proqramı və klub kassa sistemi | Heselo',
     seoDescription:
-      'Kassa proqramı: növbə, əməliyyatlar, kassa hesabatı və sayım. Restoran kassa proqramı rezervasiya və canlı zal ilə eyni paneldə.',
+      'Kassa proqramı: növbə, əməliyyatlar, kassa hesabatı və sayım. Klub kassa sistemi rezervasiya və canlı zal ilə eyni paneldə.',
     keywords: [
       'kassa proqramı',
-      'restoran kassa proqramı',
+      'klub kassa proqramı',
       'kassa idarəetmə sistemi',
       'kassa sayımı',
     ],
@@ -482,7 +420,7 @@ export const solutionsAz: SolutionCopy[] = [
       'Kassa proqramı yalnız “ödəniş düyməsi” deyil. Növbə açılışı, əməliyyatlar, hesabat və sayım günün sonunda sahibə aydın cavab verməlidir. Heselo-da kassa rezervasiya və canlı sessiya ilə eyni iş gününə bağlıdır.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'Restoran, kafe və klublarda növbə üzrə nağd/bank/POS izləmək, günü bağlamaq və sayım aparmaq istəyənlər üçün.',
+      'Oyun klubu, karaoke, bilyard, antikafe və otaqlı launjda növbə üzrə nağd/bank/POS izləmək, günü bağlamaq və sayım aparmaq istəyənlər üçün.',
     problemsTitle: 'Zəif kassa uçotunun nəticəsi',
     problems: [
       'Növbə bağlananda məbləğlər uyğun gəlmir',
@@ -514,7 +452,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     differTitle: 'Ayrı kassa + ayrı rezervasiya yoxdur',
     differBody:
-      'Bir çox məkan bir alətdə bron, digərində kassa aparır. Heselo restoran kassa proqramını eyni panelə gətirir — ona görə günün sonunda “haradan gəldi bu məbləğ?” sualı azalır.',
+      'Bir çox məkan bir alətdə bron, digərində kassa aparır. Heselo kassanı eyni panelə gətirir — ona görə günün sonunda “haradan gəldi bu məbləğ?” sualı azalır.',
     faq: [
       {
         q: 'Ödəniş məbləğləri harada hesablanır?',
@@ -525,7 +463,7 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'Bəli. Kassa sayımı növbə/gün bağlanışı üçün nəzərdə tutulub.',
       },
     ],
-    related: ['restaurant', 'inventory', 'reservations'],
+    related: ['gaming', 'inventory', 'reservations'],
     ctaTitle: 'Kassa axını üçün demo',
     ctaBody: 'Növbə və sayım prosesini real ssenari ilə göstəririk.',
   },
@@ -533,12 +471,12 @@ export const solutionsAz: SolutionCopy[] = [
     slug: 'inventory',
     shortTitle: 'Anbar',
     h1: 'Anbar idarəetmə sistemi',
-    seoTitle: 'Anbar idarəetmə sistemi və restoran anbar proqramı | Heselo',
+    seoTitle: 'Anbar idarəetmə sistemi və klub anbar proqramı | Heselo',
     seoDescription:
-      'Anbar idarəetmə sistemi: məhsul kataloqu, qalıq və sayım. Restoran anbar proqramı kassa və canlı satış ilə eyni paneldə.',
+      'Anbar idarəetmə sistemi: məhsul kataloqu, qalıq və sayım. Klub anbar proqramı kassa və canlı satış ilə eyni paneldə.',
     keywords: [
       'anbar idarəetmə sistemi',
-      'restoran anbar proqramı',
+      'klub anbar proqramı',
       'anbar sayımı',
       'məhsul kataloqu',
     ],
@@ -546,7 +484,7 @@ export const solutionsAz: SolutionCopy[] = [
       'Anbar idarəetmə sistemi satışdan ayrı qalanda qalıqlar “kağızda düz, rəfdə səhv” olur. Heselo-da məhsullar, anbar və sürətli satış eyni kataloq üzərindədir — canlı sessiya və kassa ilə bağlı.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'Restoran, kafe və klublarda məhsul qalığını izləmək, sayım aparmaq və bron olmadan satış etmək istəyənlər üçün.',
+      'Oyun klubu, karaoke, bilyard, antikafe və otaqlı launjda qəlyanaltı/içki qalığını izləmək, sayım aparmaq və bron olmadan satış etmək istəyənlər üçün.',
     problemsTitle: 'Anbar uçotu zəif olanda',
     problems: [
       'Satış var, qalıq yenilənmir',
@@ -578,7 +516,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     differTitle: 'Ayrı anbar Excel-indən fərqi',
     differBody:
-      'Excel günün axşamı doldurulur; Heselo satış anında eyni məlumatı istifadə edir. Restoran anbar proqramı kimi işləyir, amma rezervasiya və kassadan ayrılmır.',
+      'Excel günün axşamı doldurulur; Heselo satış anında eyni məlumatı istifadə edir. Anbar rezervasiya və kassadan ayrılmır.',
     faq: [
       {
         q: 'Anbar ayrıca moduldu?',
@@ -589,7 +527,7 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'Bəli. Anbar statistikası icmal və kəsmlər üçün mövcuddur.',
       },
     ],
-    related: ['pos', 'restaurant', 'cafe'],
+    related: ['pos', 'gaming', 'antikafe'],
     ctaTitle: 'Anbar və kataloq demo-su',
     ctaBody: 'Məhsul və sayım axınını məkanınıza uyğun göstəririk.',
   },

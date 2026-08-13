@@ -9,7 +9,7 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
    - Sayt: **https://heselo.online**
    - E-poçt: **heselo.online@gmail.com**
 2. Təsvir hər yerdə eyni olmasın — hər platformanın formatına uyğun **unikal 2–3 cümlə** yazın (doorway spam yox).
-3. Kateqoriya: *proqram təminatı*, *biznes proqramları*, *restoran / məkan idarəetməsi*, *SaaS*.
+3. Kateqoriya: *proqram təminatı*, *biznes proqramları*, *məkan / klub idarəetməsi*, *SaaS*.
 4. Dil: AZ profillərdə azərbaycan dili; beynəlxalq kataloqlarda EN + sayt linki.
 5. Sosial profil açsanız, `.env`-də `PUBLIC_SOCIAL_*` doldurun — Organization `sameAs` schema avtomatik dolacaq.
 
@@ -26,7 +26,7 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | **Boss.az** | https://boss.az | İş elanları deyil — şirkət/profil varsa SaaS təqdimatı |
 | **Linq.az** | https://linq.az | Startup / biznes kataloqu (aktivdirsə qeydiyyat) |
 | **Product Hunt** | https://www.producthunt.com | EN launch — beynəlxalq backlink + brend |
-| **AlternativeTo** | https://alternativeto.net | “Venue management”, “Restaurant management” kateqoriyalarında siyahı |
+| **AlternativeTo** | https://alternativeto.net | “Venue management”, “Booking system” kateqoriyalarında siyahı |
 | **Capterra / GetApp** | https://www.capterra.com | SaaS kataloqu (uzunmüddətli; rəy yalnız real istifadəçidən) |
 
 ---
@@ -46,7 +46,7 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 ## Prioritet 3 — məzmun əsaslı backlink (uzunmüddət)
 
 - **Qonaq bloq yazıları yox** — əvvəlcə öz guide-larınız: `/az/guides/`
-- AZ biznes media / IT bloqlarına **faydalı** qonaq məqalə (restoran / antikafe rəqəmsallaşması)
+- AZ biznes media / IT bloqlarına **faydalı** qonaq məqalə (oyun klubu / karaoke / antikafe rəqəmsallaşması)
 - Universitet / inkubator **tələbə layihəsi** mention (real əməkdaşlıq varsa)
 - **YouTube** demo video — təsvirdə sayt linki
 
@@ -57,12 +57,14 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 **Başlıq:** Heselo — məkan idarəetmə sistemi
 
 **Qısa təsvir (≈400 simvol):**
-> Heselo restoran, kafe, antikafe, gaming club və oxşar məkanlar üçün veb paneldir: masa və otaq rezervasiyası, canlı zal, kassa və anbar bir yerdə. Azərbaycan, İngilis və Rus dillərində. Pulsuz demo: heselo.online
+> Heselo oyun klubu (PS), karaoke otaqları, bilyard, antikafe və otaqlı launj üçün veb paneldir: otaq və PS rezervasiyası, canlı zal, kassa və anbar bir yerdə. Azərbaycan, İngilis və Rus dillərində. Pulsuz demo: heselo.online
 
-**Açar sözlər:** restoran idarəetmə sistemi, antikafe proqramı, rezervasiya sistemi, kassa proqramı
+**Açar sözlər:** oyun klubu proqramı, ps klub proqramı, karaoke otaq rezervasiya, bilyard klubu proqramı, antikafe proqramı
 
 **URL-lər (copy-paste):**
 - Ana: https://heselo.online/az/
+- Oyun klubu: https://heselo.online/az/solutions/gaming/
+- Karaoke: https://heselo.online/az/solutions/karaoke/
 - Antikafe: https://heselo.online/az/solutions/antikafe/
 - Əlaqə: https://heselo.online/az/contact/
 

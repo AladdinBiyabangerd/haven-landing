@@ -18,8 +18,22 @@ const page = messages.contact
     <div class="container contact">
       <div class="section-head">
         <p class="eyebrow">{page.eyebrow}</p>
-        <h1 class="type-page-title">{page.title}</h1>
-        <p class="lead">{page.intro}</p>
+        <h1
+          class="type-page-title"
+          data-contact-title
+          data-default={page.title}
+          data-custom={page.customTitle}
+        >
+          {page.title}
+        </h1>
+        <p
+          class="lead"
+          data-contact-intro
+          data-default={page.intro}
+          data-custom={page.customIntro}
+        >
+          {page.intro}
+        </p>
       </div>
       <ContactForm locale={locale} messages={messages} />
     </div>

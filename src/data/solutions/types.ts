@@ -1,16 +1,31 @@
 export const SOLUTION_SLUGS = [
-  'restaurant',
-  'cafe',
-  'billiards',
-  'karaoke',
   'gaming',
+  'karaoke',
+  'billiards',
   'antikafe',
+  'lounge',
   'reservations',
   'pos',
   'inventory',
 ] as const
 
+export const PRIMARY_SOLUTION_SLUGS = [
+  'gaming',
+  'karaoke',
+  'billiards',
+  'antikafe',
+  'lounge',
+] as const
+
+export const FEATURE_SOLUTION_SLUGS = ['reservations', 'pos', 'inventory'] as const
+
+export const FOOTER_SOLUTION_SLUGS = [
+  ...PRIMARY_SOLUTION_SLUGS,
+  ...FEATURE_SOLUTION_SLUGS,
+] as const
+
 export type SolutionSlug = (typeof SOLUTION_SLUGS)[number]
+export type PrimarySolutionSlug = (typeof PRIMARY_SOLUTION_SLUGS)[number]
 
 export type SolutionCopy = {
   slug: SolutionSlug
@@ -46,4 +61,6 @@ export type SolutionsHubCopy = {
   seoDescription: string
   keywords: string[]
   cardCta: string
+  primaryTitle: string
+  featuresTitle: string
 }

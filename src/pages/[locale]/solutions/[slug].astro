@@ -8,6 +8,8 @@ import { getGuideForSolution } from '@/data/guides'
 import { SOLUTION_SHOT_MAP, SOLUTION_EXTRA_SHOT_MAP } from '@/lib/productShots'
 import ProductShot from '@/components/ProductShot.astro'
 import { localePath } from '@/lib/site'
+import { VENUE_STORAGE_KEY, isVenueOfferSlug, venuePriceRange } from '@/lib/venueOffers'
+import { formatMoney } from '@/lib/format'
 
 export function getStaticPaths() {
   return LOCALES.flatMap((locale) =>
@@ -30,6 +32,17 @@ const related = getSolutions(locale).filter((item) => solution.related.includes(
 const relatedGuide = getGuideForSolution(locale, solution.slug)
 const productShotId = SOLUTION_SHOT_MAP[solution.slug]
 const extraShotId = SOLUTION_EXTRA_SHOT_MAP[solution.slug]
+const range = venuePriceRange(solution.slug)
+const offerPrice = range
+  ? {
+      amount: `${formatMoney(range.low, locale)}–${formatMoney(range.high, locale)}`,
+      period:
+        range.model === 'monthly'
+          ? messages.pricing.periodMonthly
+          : messages.pricing.periodOneTime,
+    }
+  : null
+const persistVenueType = isVenueOfferSlug(solution.slug) ? solution.slug : ''
 
 const faqMessages = {
   ...messages,
@@ -60,6 +73,16 @@ const faqMessages = {
       <header class="section-head">
         <p class="eyebrow">{messages.nav.solutions}</p>
         <h1 class="type-page-title">{solution.h1}</h1>
+        {
+          offerPrice ? (
+            <p class="price-chip">
+              <a href={localePath(locale, `/pricing#${solution.slug}`)} data-pricing-type={solution.slug}>
+                {offerPrice.amount}
+                <span>{offerPrice.period}</span>
+              </a>
+            </p>
+          ) : null
+        }
         <p class="lead">{solution.intro}</p>
       </header>
 
@@ -154,15 +177,57 @@ const faqMessages = {
           <h2 class="type-section">{solution.ctaTitle}</h2>
           <p class="type-lead">{solution.ctaBody}</p>
         </div>
-        <a class="btn btn-primary" href={localePath(locale, '/contact')}>{messages.cta.button}</a>
+        <a
+          class="btn btn-primary"
+          href={
+            persistVenueType
+              ? `${localePath(locale, '/contact')}?type=${persistVenueType}`
+              : localePath(locale, '/contact')
+          }
+        >
+          {messages.cta.button}
+        </a>
       </div>
     </div>
   </section>
+  {
+    persistVenueType ? (
+      <script is:inline define:vars={{ persistVenueType, storageKey: VENUE_STORAGE_KEY }}>
+        try {
+          sessionStorage.setItem(storageKey, persistVenueType)
+        } catch {
+          /* ignore */
+        }
+      </script>
+    ) : null
+  }
 </BaseLayout>
 
 <style>
   .narrow {
     max-width: 760px;
+  }
+  .price-chip {
+    margin: 0.85rem 0 0;
+  }
+  .price-chip a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(15, 118, 110, 0.28);
+    background: rgba(20, 184, 166, 0.1);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--text-lg);
+    text-decoration: none;
+  }
+  .price-chip span {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink-subtle);
   }
   .shot-wrap {
     margin: 0 0 2rem;

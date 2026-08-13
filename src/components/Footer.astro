@@ -3,8 +3,8 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
 import { formatPhone } from '@/lib/format'
-import { getSolutions } from '@/data/solutions'
-import { getGuides } from '@/data/guides'
+import { FOOTER_SOLUTION_SLUGS, getSolutionsBySlugs } from '@/data/solutions'
+import { TEASER_GUIDE_SLUGS, getGuides } from '@/data/guides'
 import BrandMark from '@/components/BrandMark.astro'
 
 interface Props {
@@ -14,15 +14,17 @@ interface Props {
 const { locale, messages } = Astro.props
 const year = new Date().getFullYear()
 
-const footerSolutions = getSolutions(locale).map((item) => ({
+const footerSolutions = getSolutionsBySlugs(locale, FOOTER_SOLUTION_SLUGS).map((item) => ({
   slug: item.slug,
   label: item.shortTitle,
 }))
 
-const footerGuides = getGuides(locale).map((item) => ({
-  slug: item.slug,
-  label: item.shortTitle,
-}))
+const footerGuides = getGuides(locale)
+  .filter((item) => (TEASER_GUIDE_SLUGS as readonly string[]).includes(item.slug))
+  .map((item) => ({
+    slug: item.slug,
+    label: item.shortTitle,
+  }))
 
 const phoneDisplay = formatPhone(SITE.contactPhone)
 const waHref = whatsappUrl(messages.contact.whatsappPrefill)
@@ -40,7 +42,7 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
         {messages.contact.emailWrite} · {SITE.contactEmail}
       </a>
       <a class="mail" href={waHref} target="_blank" rel="noopener noreferrer">
-        {messages.contact.whatsapp} · {phoneDisplay}
+        {messages.contact.whatsapp}
       </a>
       <a class="mail tel" href={telUrl()}>{phoneDisplay}</a>
     </div>

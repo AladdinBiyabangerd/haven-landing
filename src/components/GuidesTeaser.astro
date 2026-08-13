@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { getGuides } from '@/data/guides'
+import { TEASER_GUIDE_SLUGS, getGuides } from '@/data/guides'
 import { localePath } from '@/lib/site'
 import { truncateText } from '@/lib/format'
 
@@ -11,7 +11,9 @@ interface Props {
 }
 const { locale, messages } = Astro.props
 const g = messages.guidesTeaser
-const guides = getGuides(locale)
+const guides = getGuides(locale).filter((item) =>
+  (TEASER_GUIDE_SLUGS as readonly string[]).includes(item.slug),
+)
 ---
 
 <section class="section" id="guides" aria-labelledby="guides-title">

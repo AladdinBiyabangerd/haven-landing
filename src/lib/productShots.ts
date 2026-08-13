@@ -1,3 +1,4 @@
+import type { SolutionSlug } from '@/data/solutions/types'
 import type { Messages } from '@/i18n/types'
 
 export type ProductShotId =
@@ -22,52 +23,24 @@ export const PRODUCT_SHOT_PATHS: Record<ProductShotId, string> = {
 }
 
 /** Solution slug → primary product screenshot */
-export const SOLUTION_SHOT_MAP: Partial<
-  Record<
-    | 'restaurant'
-    | 'cafe'
-    | 'billiards'
-    | 'karaoke'
-    | 'gaming'
-    | 'antikafe'
-    | 'reservations'
-    | 'pos'
-    | 'inventory',
-    ProductShotId
-  >
-> = {
-  restaurant: 'schedule',
-  cafe: 'live-floor',
+export const SOLUTION_SHOT_MAP: Partial<Record<SolutionSlug, ProductShotId>> = {
   billiards: 'live-floor',
   karaoke: 'schedule',
   gaming: 'live-floor',
   antikafe: 'live-floor',
+  lounge: 'schedule',
   reservations: 'schedule',
   pos: 'cash',
   inventory: 'inventory',
 }
 
 /** Optional second screenshot on solution pages (below features). */
-export const SOLUTION_EXTRA_SHOT_MAP: Partial<
-  Record<
-    | 'restaurant'
-    | 'cafe'
-    | 'billiards'
-    | 'karaoke'
-    | 'gaming'
-    | 'antikafe'
-    | 'reservations'
-    | 'pos'
-    | 'inventory',
-    ProductShotId
-  >
-> = {
-  restaurant: 'products',
-  cafe: 'products',
+export const SOLUTION_EXTRA_SHOT_MAP: Partial<Record<SolutionSlug, ProductShotId>> = {
   billiards: 'room-analytics',
   karaoke: 'room-analytics',
   gaming: 'sessions',
   antikafe: 'room-analytics',
+  lounge: 'room-analytics',
   reservations: 'sessions',
   pos: 'sessions',
   inventory: 'products',

@@ -5,8 +5,8 @@
 
 ## Product
 
-- Heselo is SaaS for restaurants, cafés, anti-cafés, gaming clubs, billiards, karaoke, and similar venues in Azerbaijan.
-- Core modules: table/room booking, live floor sessions, POS/cash shift, inventory, customers, statistics.
+- Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan.
+- Core modules: room/station/table booking, live floor sessions, POS/cash shift, inventory, customers, statistics.
 - Payment balances are calculated on the server (not client-side estimates).
 
 ## Key pages (az locale)
@@ -16,10 +16,12 @@
 - Pricing: https://heselo.online/az/pricing/
 - Contact / demo: https://heselo.online/az/contact/
 - Solutions hub: https://heselo.online/az/solutions/
-- Anti-café solution: https://heselo.online/az/solutions/antikafe/
-- Restaurant solution: https://heselo.online/az/solutions/restaurant/
+- Gaming club (PS): https://heselo.online/az/solutions/gaming/
+- Karaoke: https://heselo.online/az/solutions/karaoke/
+- Billiards: https://heselo.online/az/solutions/billiards/
+- Anti-café: https://heselo.online/az/solutions/antikafe/
+- Room lounge: https://heselo.online/az/solutions/lounge/
 - Guides hub: https://heselo.online/az/guides/
-- Anti-café guide: https://heselo.online/az/guides/antikafe-management-system/
 - Sitemap: https://heselo.online/sitemap.xml
 
 ## Contact

@@ -55,6 +55,12 @@ export type Messages = {
   trust: {
     items: string[]
   }
+  demoPromise: {
+    eyebrow: string
+    title: string
+    titleAccent: string
+    items: Array<{ title: string; desc: string }>
+  }
   pain: {
     eyebrow: string
     title: string
@@ -156,6 +162,7 @@ export type Messages = {
     title: string
     subtitle: string
     button: string
+    whatsapp: string
   }
   featuresPage: {
     eyebrow: string
@@ -174,32 +181,109 @@ export type Messages = {
     eyebrow: string
     title: string
     intro: string
+    chooseType: string
     note: string
     cta: string
-    period: string
-    featureVenues: string
-    featureIncluded: string
-    featureOverage: string
-    featureRequests: string
+    periodMonthly: string
+    periodOneTime: string
+    includedModules: string
+    oneVenue: string
+    noCard: string
+    bestFor: string
+    popular: string
+    capacity: {
+      stations: string
+      tables: string
+      rooms: string
+      zones: string
+    }
+    planNames: {
+      starter: string
+      plus: string
+      pro: string
+    }
     faq: Array<{ q: string; a: string }>
     crosslinks: {
       features: string
       solutions: string
       contact: string
     }
-    plans: {
-      starter: { name: string; desc: string }
-      pro: { name: string; desc: string }
-      business: { name: string; desc: string }
+    offers: {
+      gaming: {
+        name: string
+        intro: string
+        plans: {
+          starter: { forWhom: string; desc: string; features: string[] }
+          plus: { forWhom: string; desc: string; features: string[] }
+          pro: { forWhom: string; desc: string; features: string[] }
+        }
+      }
+      billiards: {
+        name: string
+        intro: string
+        plans: {
+          starter: { forWhom: string; desc: string; features: string[] }
+          plus: { forWhom: string; desc: string; features: string[] }
+          pro: { forWhom: string; desc: string; features: string[] }
+        }
+      }
+      karaoke: {
+        name: string
+        intro: string
+        plans: {
+          starter: { forWhom: string; desc: string; features: string[] }
+          plus: { forWhom: string; desc: string; features: string[] }
+          pro: { forWhom: string; desc: string; features: string[] }
+        }
+      }
+      lounge: {
+        name: string
+        intro: string
+        plans: {
+          starter: { forWhom: string; desc: string; features: string[] }
+          plus: { forWhom: string; desc: string; features: string[] }
+          pro: { forWhom: string; desc: string; features: string[] }
+        }
+      }
+      antikafe: {
+        name: string
+        intro: string
+        plans: {
+          starter: { forWhom: string; desc: string; features: string[] }
+          plus: { forWhom: string; desc: string; features: string[] }
+          pro: { forWhom: string; desc: string; features: string[] }
+        }
+      }
+    }
+    custom: {
+      name: string
+      desc: string
+      price: string
+      cta: string
+      features: string[]
     }
   }
   contact: {
     eyebrow: string
     title: string
     intro: string
+    customTitle: string
+    customIntro: string
+    customNotice: string
+    customSubmit: string
     name: string
+    phone: string
     email: string
+    phoneOrEmailHint: string
+    waLead: string
     venue: string
+    venueType: string
+    venueTypePlaceholder: string
+    venueTypes: Array<{ value: string; label: string }>
+    venuesCount: string
+    staffCount: string
+    reservationsPerMonth: string
+    criteriaHint: string
     message: string
     submit: string
     sending: string

@@ -3,6 +3,7 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { formatPhone } from '@/lib/format'
 import { SITE, telUrl, whatsappUrl } from '@/lib/site'
+import { VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
 interface Props {
   messages: Messages
@@ -15,30 +16,9 @@ const waHref = whatsappUrl(c.whatsappPrefill)
 const phoneDisplay = formatPhone(SITE.contactPhone)
 ---
 
-<div class="contact-wrap">
-  <div class="quick-channels">
-    <a class="quick quick--mail" href={`mailto:${SITE.contactEmail}`}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-        <path d="m3 7 9 6 9-6"></path>
-      </svg>
-      <span class="quick__text">
-        <span class="quick__label">{c.emailWrite}</span>
-        <span class="quick__detail">{SITE.contactEmail}</span>
-      </span>
-    </a>
-    <a class="quick quick--wa" href={waHref} target="_blank" rel="noopener noreferrer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-        ></path>
-      </svg>
-      <span class="quick__text">
-        <span class="quick__label">{c.whatsapp}</span>
-        <span class="quick__detail">{phoneDisplay}</span>
-      </span>
-    </a>
-  </div>
+<p class="wa-lead">
+  <a href={waHref} target="_blank" rel="noopener noreferrer">{c.waLead}</a>
+</p>
 
 <form
   class="form"
@@ -48,23 +28,62 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   data-success={c.success}
   data-error={c.error}
   data-sending={c.sending}
+  data-submit-default={c.submit}
+  data-submit-custom={c.customSubmit}
+  data-phone-or-email={c.phoneOrEmailHint}
+  data-venue-storage={VENUE_STORAGE_KEY}
   novalidate
 >
   <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  <input type="hidden" name="intent" value="demo" data-intent />
+  <p class="custom-notice" data-custom-notice hidden>{c.customNotice}</p>
   <div class="row">
     <label>
       <span>{c.name}</span>
       <input name="name" type="text" autocomplete="name" required maxlength="120" />
     </label>
     <label>
-      <span>{c.email}</span>
-      <input name="email" type="email" autocomplete="email" required maxlength="200" />
+      <span>{c.phone}</span>
+      <input name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="24" data-phone />
     </label>
   </div>
+  <div class="row">
+    <label>
+      <span>{c.email}</span>
+      <input name="email" type="email" autocomplete="email" maxlength="200" data-email />
+    </label>
+    <label>
+      <span>{c.venueType}</span>
+      <select name="venueType" data-venue-type>
+        <option value="">{c.venueTypePlaceholder}</option>
+        {c.venueTypes.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))}
+      </select>
+    </label>
+  </div>
+  <p class="hint" data-contact-hint>{c.phoneOrEmailHint}</p>
   <label>
     <span>{c.venue}</span>
     <input name="venue" type="text" autocomplete="organization" maxlength="200" />
   </label>
+  <fieldset class="criteria">
+    <legend class="criteria__hint">{c.criteriaHint}</legend>
+    <div class="row row--3">
+      <label>
+        <span>{c.venuesCount}</span>
+        <input name="venuesCount" type="number" inputmode="numeric" min="1" max="99999" step="1" data-custom-required />
+      </label>
+      <label>
+        <span>{c.staffCount}</span>
+        <input name="staffCount" type="number" inputmode="numeric" min="1" max="99999" step="1" data-custom-required />
+      </label>
+      <label>
+        <span>{c.reservationsPerMonth}</span>
+        <input name="reservationsPerMonth" type="number" inputmode="numeric" min="1" max="99999" step="1" data-custom-required />
+      </label>
+    </div>
+  </fieldset>
   <label>
     <span>{c.message}</span>
     <textarea name="message" rows="5" required maxlength="5000"></textarea>
@@ -76,41 +95,120 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   </p>
   <ul class="channels">
     <li>
-      <a href={`mailto:${SITE.contactEmail}`}>{c.emailWrite} · {SITE.contactEmail}</a>
-    </li>
-    <li>
-      <a href={waHref} target="_blank" rel="noopener noreferrer">{c.whatsapp} · {phoneDisplay}</a>
+      <a href={waHref} target="_blank" rel="noopener noreferrer">{c.whatsapp}</a>
     </li>
     <li>
       <a href={telUrl()}>{phoneDisplay}</a>
     </li>
+    <li>
+      <a href={`mailto:${SITE.contactEmail}`}>{c.emailWrite} · {SITE.contactEmail}</a>
+    </li>
   </ul>
 </form>
-</div>
 
 <script>
   const form = document.querySelector('[data-contact-form]')
   if (form instanceof HTMLFormElement) {
     const status = form.querySelector('[data-status]')
     const submit = form.querySelector('[data-submit]')
+    const hint = form.querySelector('[data-contact-hint]')
+    const phoneInput = form.querySelector('[data-phone]')
+    const emailInput = form.querySelector('[data-email]')
     let endpoint = form.dataset.endpoint || '/api/contact/'
     if (endpoint && !endpoint.endsWith('/')) endpoint = `${endpoint}/`
     const locale = form.dataset.locale || 'az'
     const successMsg = form.dataset.success || ''
     const errorMsg = form.dataset.error || ''
     const sendingMsg = form.dataset.sending || ''
+    const phoneOrEmailMsg = form.dataset.phoneOrEmail || ''
+    const params = new URLSearchParams(window.location.search)
+    const isCustom = params.get('plan') === 'custom'
+    const typeSelect = form.querySelector('[data-venue-type]')
+    let rememberedType = params.get('type') || ''
+    if (!rememberedType) {
+      try {
+        rememberedType = sessionStorage.getItem(form.dataset.venueStorage || 'heselo.venueType') || ''
+      } catch {
+        rememberedType = ''
+      }
+    }
+    if (typeSelect instanceof HTMLSelectElement && rememberedType) {
+      const allowed = [...typeSelect.options].some((option) => option.value === rememberedType)
+      if (allowed) typeSelect.value = rememberedType
+    }
+    const intentInput = form.querySelector('[data-intent]')
+    const customNotice = form.querySelector('[data-custom-notice]')
+    const customFields = form.querySelectorAll('[data-custom-required]')
+    const titleEl = document.querySelector('[data-contact-title]')
+    const introEl = document.querySelector('[data-contact-intro]')
+
+    if (isCustom) {
+      if (intentInput instanceof HTMLInputElement) intentInput.value = 'custom'
+      if (customNotice instanceof HTMLElement) customNotice.hidden = false
+      customFields.forEach((field) => {
+        if (field instanceof HTMLInputElement) field.required = true
+      })
+      if (submit instanceof HTMLButtonElement) {
+        submit.textContent = form.dataset.submitCustom || submit.textContent
+      }
+      if (titleEl instanceof HTMLElement && titleEl.dataset.custom) {
+        titleEl.textContent = titleEl.dataset.custom
+      }
+      if (introEl instanceof HTMLElement && introEl.dataset.custom) {
+        introEl.textContent = introEl.dataset.custom
+      }
+    }
+
+    function phoneDigits(value: string): string {
+      return value.replace(/\D/g, '')
+    }
+
+    function phoneStatus(): 'empty' | 'ok' | 'invalid' {
+      const phone = phoneInput instanceof HTMLInputElement ? phoneDigits(phoneInput.value) : ''
+      if (!phone) return 'empty'
+      if (phone.length < 9 || phone.length > 15) return 'invalid'
+      return 'ok'
+    }
+
+    function hasContactChannel(): boolean {
+      if (phoneStatus() === 'invalid') return false
+      const email = emailInput instanceof HTMLInputElement ? emailInput.value.trim() : ''
+      const emailOk =
+        email.length > 0 && emailInput instanceof HTMLInputElement && emailInput.checkValidity()
+      return phoneStatus() === 'ok' || emailOk
+    }
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault()
       if (!(status instanceof HTMLElement) || !(submit instanceof HTMLButtonElement)) return
+      if (isCustom && !form.reportValidity()) return
+      if (!form.checkValidity()) {
+        form.reportValidity()
+        return
+      }
+      if (!hasContactChannel()) {
+        status.hidden = false
+        status.textContent = phoneOrEmailMsg
+        status.dataset.state = 'err'
+        if (hint instanceof HTMLElement) hint.dataset.state = 'err'
+        if (phoneInput instanceof HTMLInputElement) phoneInput.focus()
+        return
+      }
+      if (hint instanceof HTMLElement) delete hint.dataset.state
 
       const data = new FormData(form)
       const payload = {
         name: String(data.get('name') || ''),
         email: String(data.get('email') || ''),
+        phone: String(data.get('phone') || ''),
         venue: String(data.get('venue') || ''),
+        venueType: String(data.get('venueType') || ''),
         message: String(data.get('message') || ''),
         company: String(data.get('company') || ''),
+        intent: isCustom ? 'custom' : 'demo',
+        venuesCount: String(data.get('venuesCount') || ''),
+        staffCount: String(data.get('staffCount') || ''),
+        reservationsPerMonth: String(data.get('reservationsPerMonth') || ''),
         locale,
       }
 
@@ -142,74 +240,21 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
 </script>
 
 <style>
-  .contact-wrap {
-    display: grid;
-    gap: 1.25rem;
+  .wa-lead {
+    margin: 0 0 1.15rem;
   }
-  .quick-channels {
-    display: grid;
-    gap: 0.75rem;
-  }
-  .quick {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    width: fit-content;
-    max-width: 100%;
-    min-height: 3rem;
-    padding: 0.75rem 1.15rem;
-    border-radius: 14px;
-    border: 1px solid var(--line-strong);
-    background: var(--surface);
-    font-family: var(--font-body);
-    line-height: 1.2;
-    transition:
-      transform 0.25s var(--ease),
-      background 0.25s var(--ease),
-      border-color 0.25s var(--ease);
-  }
-  .quick:hover {
-    transform: translateY(-1px);
-  }
-  .quick:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-  }
-  .quick svg {
-    width: 1.35rem;
-    height: 1.35rem;
-    flex-shrink: 0;
-  }
-  .quick__text {
-    display: grid;
-    gap: 0.15rem;
-    min-width: 0;
-  }
-  .quick__label {
-    font-size: var(--text-md);
-    font-weight: 700;
-  }
-  .quick__detail {
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--ink-muted);
-    word-break: break-all;
-  }
-  .quick--wa {
-    border-color: rgba(37, 211, 102, 0.35);
-    background: rgba(37, 211, 102, 0.08);
-    color: #128c7e;
-  }
-  .quick--wa:hover {
-    background: rgba(37, 211, 102, 0.14);
-    border-color: rgba(37, 211, 102, 0.5);
-  }
-  .quick--mail {
+  .wa-lead a {
+    display: inline-block;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(37, 211, 102, 0.35);
+    background: rgba(37, 211, 102, 0.1);
     color: var(--ink);
+    font-weight: 700;
+    font-size: var(--text-sm);
   }
-  .quick--mail:hover {
-    border-color: var(--accent);
-    background: rgba(45, 212, 191, 0.06);
+  .wa-lead a:hover {
+    background: rgba(37, 211, 102, 0.16);
   }
   .form {
     display: grid;
@@ -221,6 +266,39 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     width: 1px;
     height: 1px;
     opacity: 0;
+  }
+  .custom-notice {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 118, 110, 0.28);
+    background: rgba(20, 184, 166, 0.1);
+    color: var(--ink);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+  .hint {
+    margin: -0.25rem 0 0;
+    font-size: var(--text-sm);
+    color: var(--ink-subtle);
+  }
+  .hint[data-state='err'] {
+    color: var(--danger);
+    font-weight: 600;
+  }
+  .criteria {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+  .criteria__hint {
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink-subtle);
   }
   .row {
     display: grid;
@@ -237,6 +315,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     color: var(--ink-muted);
   }
   input,
+  select,
   textarea {
     width: 100%;
     border-radius: 12px;
@@ -245,7 +324,11 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     color: var(--ink);
     padding: 0.85rem 0.95rem;
   }
+  select {
+    appearance: auto;
+  }
   input:focus,
+  select:focus,
   textarea:focus {
     outline: 2px solid rgba(45, 212, 191, 0.45);
     outline-offset: 1px;
@@ -283,6 +366,9 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   @media (min-width: 720px) {
     .row {
       grid-template-columns: 1fr 1fr;
+    }
+    .row--3 {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 </style>

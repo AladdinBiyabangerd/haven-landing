@@ -65,6 +65,7 @@ const label = messages.productShot.chromeLabel
           height="788"
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
+          fetchpriority={priority ? 'high' : 'auto'}
         />
       </picture>
     )

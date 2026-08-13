@@ -3,15 +3,20 @@ import type { Locale } from '@/i18n/config'
 import { guidesAz, guidesHubAz } from './az'
 import { guidesEn, guidesHubEn } from './en'
 import { guidesRu, guidesHubRu } from './ru'
-import { GUIDE_SLUGS, type GuideCopy, type GuideSlug, type GuidesHubCopy } from './types'
+import {
+  GUIDE_SLUGS,
+  TEASER_GUIDE_SLUGS,
+  type GuideCopy,
+  type GuideSlug,
+  type GuidesHubCopy,
+} from './types'
 
 /** Commercial solution page → informational guide (avoids cannibalization). */
 export const SOLUTION_GUIDE_MAP: Partial<Record<SolutionSlug, GuideSlug>> = {
-  restaurant: 'restaurant-management-system',
-  cafe: 'cafe-management-system',
-  reservations: 'manage-restaurant-reservations',
-  pos: 'restaurant-pos-system',
-  inventory: 'restaurant-inventory-basics',
+  gaming: 'gaming-club-management',
+  karaoke: 'karaoke-room-booking',
+  billiards: 'billiards-club-management',
+  lounge: 'room-lounge-management',
   antikafe: 'antikafe-management-system',
 }
 
@@ -21,14 +26,17 @@ const byLocale: Record<Locale, { hub: GuidesHubCopy; items: GuideCopy[] }> = {
   ru: { hub: guidesHubRu, items: guidesRu },
 }
 
-export { GUIDE_SLUGS, type GuideSlug, type GuideCopy, type GuidesHubCopy }
+export { GUIDE_SLUGS, TEASER_GUIDE_SLUGS, type GuideSlug, type GuideCopy, type GuidesHubCopy }
+
+export function getGuides(locale: Locale): GuideCopy[] {
+  const items = byLocale[locale].items
+  return GUIDE_SLUGS.map((slug) => items.find((item) => item.slug === slug)).filter(
+    (item): item is GuideCopy => Boolean(item),
+  )
+}
 
 export function getGuidesHub(locale: Locale): GuidesHubCopy {
   return byLocale[locale].hub
-}
-
-export function getGuides(locale: Locale): GuideCopy[] {
-  return byLocale[locale].items
 }
 
 export function getGuide(locale: Locale, slug: string): GuideCopy | undefined {

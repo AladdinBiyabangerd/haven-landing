@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { localePath } from '@/lib/site'
+import { localePath, whatsappUrl } from '@/lib/site'
 
 interface Props {
   locale: Locale
@@ -9,6 +9,7 @@ interface Props {
 }
 const { locale, messages } = Astro.props
 const c = messages.cta
+const waHref = whatsappUrl(messages.contact.whatsappPrefill)
 ---
 
 <section class="section">
@@ -18,7 +19,12 @@ const c = messages.cta
         <h2 class="type-section">{c.title}</h2>
         <p class="type-lead">{c.subtitle}</p>
       </div>
-      <a class="btn btn-primary" href={localePath(locale, '/contact')}>{c.button}</a>
+      <div class="actions">
+        <a class="btn btn-primary" href={waHref} target="_blank" rel="noopener noreferrer">
+          {c.whatsapp}
+        </a>
+        <a class="btn btn-ghost" href={localePath(locale, '/contact')}>{c.button}</a>
+      </div>
     </div>
   </div>
 </section>
@@ -45,6 +51,12 @@ const c = messages.cta
     margin: 0.65rem 0 0;
     color: var(--ink-muted);
     max-width: 36rem;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    flex-shrink: 0;
   }
   @media (min-width: 800px) {
     .banner {

@@ -60,9 +60,9 @@ Output: `dist/` (client static + server handler for contact API)
 | `/pricing/` | Plans |
 | `/contact/` | Demo request |
 | `/solutions/` | Business solutions hub |
-| `/solutions/{slug}/` | Restaurant, cafe, POS, reservations, etc. |
+| `/solutions/{slug}/` | Gaming club (PS), karaoke, billiards, anti-café, room lounge, plus POS/reservations |
 | `/guides/` | Educational guides hub |
-| `/guides/{slug}/` | SEO articles (e.g. restaurant management system) |
+| `/guides/{slug}/` | SEO articles (e.g. gaming club / karaoke room booking) |
 | `/privacy/`, `/terms/` | Legal |
 
 ## Post-deploy checklist

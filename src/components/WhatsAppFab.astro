@@ -1,6 +1,6 @@
 ---
 import type { Messages } from '@/i18n/types'
-import { SITE, whatsappUrl } from '@/lib/site'
+import { whatsappUrl } from '@/lib/site'
 
 interface Props {
   messages: Messages
@@ -12,15 +12,8 @@ const waHref = whatsappUrl(c.whatsappPrefill)
 ---
 
 <div class="contact-fab">
-  <a class="contact-fab__btn contact-fab__btn--mail" href={`mailto:${SITE.contactEmail}`} aria-label={c.emailAria}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-      <path d="m3 7 9 6 9-6"></path>
-    </svg>
-    <span class="contact-fab__label">{c.emailWrite}</span>
-  </a>
   <a
-    class="contact-fab__btn contact-fab__btn--wa"
+    class="contact-fab__btn"
     href={waHref}
     target="_blank"
     rel="noopener noreferrer"
@@ -41,10 +34,6 @@ const waHref = whatsappUrl(c.whatsappPrefill)
     right: max(1rem, env(safe-area-inset-right, 0px));
     bottom: max(1rem, env(safe-area-inset-bottom, 0px));
     z-index: 40;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.55rem;
   }
   .contact-fab__btn {
     display: inline-flex;
@@ -57,12 +46,16 @@ const waHref = whatsappUrl(c.whatsappPrefill)
     font-size: var(--text-sm);
     font-weight: 700;
     line-height: 1;
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35);
     transition:
       transform 0.25s var(--ease),
       box-shadow 0.25s var(--ease);
   }
   .contact-fab__btn:hover {
     transform: translateY(-1px);
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.42);
   }
   .contact-fab__btn:focus-visible {
     outline: 2px solid #fff;
@@ -78,22 +71,6 @@ const waHref = whatsappUrl(c.whatsappPrefill)
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  .contact-fab__btn--mail {
-    background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 45%, #0f766e 100%);
-    color: var(--on-accent);
-    box-shadow: 0 10px 28px rgba(15, 118, 110, 0.22);
-  }
-  .contact-fab__btn--mail:hover {
-    box-shadow: 0 14px 32px rgba(15, 118, 110, 0.28);
-  }
-  .contact-fab__btn--wa {
-    background: #25d366;
-    color: #fff;
-    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35);
-  }
-  .contact-fab__btn--wa:hover {
-    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.42);
   }
   @media (max-width: 480px) {
     .contact-fab__btn {

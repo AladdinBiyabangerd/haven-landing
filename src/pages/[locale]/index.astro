@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import Hero from '@/components/Hero.astro'
+import DemoPromise from '@/components/DemoPromise.astro'
 import SeoOverview from '@/components/SeoOverview.astro'
 import Pain from '@/components/Pain.astro'
 import Pillars from '@/components/Pillars.astro'
@@ -25,9 +26,16 @@ const messages = getMessages(locale)
   locale={locale}
   messages={messages}
   page="home"
-  preloadImages={[{ href: '/images/product/live-floor.webp', type: 'image/webp' }]}
+  preloadImages={[
+    {
+      href: '/images/product/live-floor.webp',
+      type: 'image/webp',
+      imagesrcset: '/images/product/live-floor.webp 1x, /images/product/live-floor@2x.webp 2x',
+    },
+  ]}
 >
   <Hero locale={locale} messages={messages} />
+  <DemoPromise messages={messages} />
   <SeoOverview messages={messages} />
   <Pain messages={messages} />
   <Pillars messages={messages} />

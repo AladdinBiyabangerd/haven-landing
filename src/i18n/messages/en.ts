@@ -8,7 +8,7 @@ export const en: Messages = {
   site: {
     tagline: 'Tables, rooms, floor, and cash — in one place.',
     description:
-      'Heselo brings table and room bookings, the live floor, cash, inventory, and customers into one admin panel for restaurants, lounges, coworking spaces, and similar venues.',
+      'Heselo brings room, station, and table bookings, the live floor, cash, inventory, and customers into one admin panel for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges.',
   },
   nav: {
     home: 'Home',
@@ -39,19 +39,38 @@ export const en: Messages = {
   },
   hero: {
     brandHint: 'Venue management system',
-    title: 'Run reservations, the live floor, and cash in one panel.',
+    title: 'A booking lost in WhatsApp wrecks the shift.',
     subtitle:
-      'Heselo connects table and room bookings, live sessions, cash, and inventory for restaurants, cafes, and similar venues. Reception and the floor follow the same day rules.',
-    ctaPrimary: 'Free demo',
-    ctaSecondary: 'See what you get',
+      'Heselo keeps the room and PlayStation schedule, live session, and cash on one screen.',
+    ctaPrimary: 'WhatsApp — 15 min',
+    ctaSecondary: 'Write via the form',
     visualAlt: 'Heselo board showing table and room status, sessions, and payment',
   },
   trust: {
     items: [
-      'Live tracking, schedule, and reservations',
-      'Cash drawer, report, and reconciliation',
-      'Products, inventory, and quick sale',
-      'Permissions and a venue protection code',
+      '15-minute demo, no card',
+      'PlayStation, karaoke, billiards, anti-café',
+      'PS from 9 AZN/month · rooms from 15 AZN/month',
+      'AZ / RU / EN panel',
+    ],
+  },
+  demoPromise: {
+    eyebrow: 'Demo',
+    title: 'What we show',
+    titleAccent: 'in 15 minutes.',
+    items: [
+      {
+        title: 'Your tables and rooms',
+        desc: 'PlayStation stations, karaoke rooms, or billiard tables — we open the schedule around your layout.',
+      },
+      {
+        title: 'Live session and cash',
+        desc: 'From walk-in to payment on one screen: time, extras, balance due.',
+      },
+      {
+        title: 'Closing the shift',
+        desc: 'Cash count and report at the end of the day — who changed what is visible.',
+      },
     ],
   },
   pain: {
@@ -59,7 +78,7 @@ export const en: Messages = {
     title: 'Spreadsheets and chat apps',
     titleAccent: 'cannot run a floor.',
     intro:
-      'When bookings live in one place, money in another, and stock on paper, closing the shift turns messy. Heselo ties it all to the same venue day.',
+      'When bookings live in one place, money in another, and stock on paper, closing the shift turns messy.',
     withoutLabel: 'Before',
     withLabel: 'With Heselo',
     before: [
@@ -149,10 +168,10 @@ export const en: Messages = {
     dueLabel: 'Due',
     shiftLabel: 'Shift open',
     tables: [
-      { name: 'Table 3', status: 'Active', meta: '1h 24m · ₼ 38' },
-      { name: 'Room 2', status: 'Paying', meta: 'Due ₼ 45' },
-      { name: 'Table 7', status: 'Booked', meta: '19:30 · 4 guests' },
-      { name: 'VIP Room', status: 'Free', meta: 'Ready' },
+      { name: 'PS-1', status: 'Active', meta: '1h 24m · ₼ 38' },
+      { name: 'Karaoke 2', status: 'Paying', meta: 'Due ₼ 45' },
+      { name: 'Billiards 3', status: 'Booked', meta: '19:30 · 4 guests' },
+      { name: 'VIP room', status: 'Free', meta: 'Ready' },
     ],
   },
   faq: {
@@ -161,7 +180,7 @@ export const en: Messages = {
     items: [
       {
         q: 'Which businesses is Heselo for?',
-        a: 'Restaurants, cafes, lounges, billiards, karaoke, gaming clubs, anti-cafés, and other venues that need table or room booking, live tracking, and cash.',
+        a: 'Gaming clubs (PlayStation and console), karaoke rooms, billiards, anti-cafés, and room lounges — venues that need room, station, or table booking, live tracking, and cash.',
       },
       {
         q: 'Can I manage reservations with Heselo?',
@@ -181,7 +200,7 @@ export const en: Messages = {
       },
       {
         q: 'How do I get a demo?',
-        a: 'Use the contact form or email heselo.online@gmail.com. Share your venue type and table/room count — we reply within one business day.',
+        a: 'Message us on WhatsApp or fill in the form — phone or email is enough. We walk through a 15-minute screen share and usually reply within two hours during working hours.',
       },
     ],
   },
@@ -191,70 +210,43 @@ export const en: Messages = {
     titleAccent: 'for daily venue work.',
     paragraphs: [
       'Heselo is a venue management system: reservations, live floor, cash, and inventory in one panel. The goal is to replace scattered spreadsheets, chats, and tools with one workday.',
-      'If you are looking for restaurant software, tables, rooms, cash, and inventory stay in one flow. The same idea applies to cafes, billiards, karaoke, gaming clubs, and anti-cafés — resource schedule and live session stay connected.',
-      'To start, set up the venue (tables, rooms, products, team), run the day with schedule and live tracking, and close with cash count and reports.',
     ],
   },
   audiences: {
     eyebrow: 'Who it is for',
     title: 'Solution pages',
     titleAccent: 'by business type.',
-    intro:
-      'These pages do not copy-paste the same text — each matches that business’s search intent and daily flow.',
+    intro: 'Each page matches that business’s search intent and daily flow.',
     items: [
       {
-        slug: 'restaurant',
-        title: 'Restaurant management system',
-        desc: 'Tables, live floor, restaurant cash, and inventory.',
-        anchor: 'Learn more about restaurant management with Heselo',
-      },
-      {
-        slug: 'cafe',
-        title: 'Cafe management system',
-        desc: 'Fast flow, walk-ins, and cafe software needs.',
-        anchor: 'Read about cafe management with Heselo',
-      },
-      {
-        slug: 'reservations',
-        title: 'Table reservation system',
-        desc: 'Schedule, booking list, and handoff to live session.',
-        anchor: 'Learn more about the reservation system',
-      },
-      {
-        slug: 'pos',
-        title: 'Cash software',
-        desc: 'Shifts, reports, and cash count.',
-        anchor: 'Learn more about cash management',
-      },
-      {
-        slug: 'inventory',
-        title: 'Inventory management',
-        desc: 'Catalog, stock levels, and restaurant inventory.',
-        anchor: 'Learn more about inventory management',
-      },
-      {
-        slug: 'billiards',
-        title: 'Billiards club software',
-        desc: 'Tables/rooms, time, and live play sessions.',
-        anchor: 'Learn more about billiards club management',
+        slug: 'gaming',
+        title: 'Gaming club management',
+        desc: 'PlayStation and console stations, live sessions, and sales.',
+        anchor: 'Gaming club solution',
       },
       {
         slug: 'karaoke',
         title: 'Karaoke management system',
         desc: 'Room booking, sessions, and cash flow.',
-        anchor: 'Learn more about karaoke management',
+        anchor: 'Karaoke solution',
       },
       {
-        slug: 'gaming',
-        title: 'Gaming club management',
-        desc: 'Stations/tables, live sessions, and sales.',
-        anchor: 'Learn more about gaming club management',
+        slug: 'billiards',
+        title: 'Billiards club software',
+        desc: 'Tables/rooms, time, and live play sessions.',
+        anchor: 'Billiards solution',
       },
       {
         slug: 'antikafe',
         title: 'Anti-café management',
         desc: 'Hourly payment, table/room booking, and cash.',
-        anchor: 'Learn more about anti-café software',
+        anchor: 'Anti-café solution',
+      },
+      {
+        slug: 'lounge',
+        title: 'Room lounge management',
+        desc: 'VIP room booking, sessions, and cash.',
+        anchor: 'Room lounge solution',
       },
     ],
   },
@@ -263,7 +255,7 @@ export const en: Messages = {
     title: 'Practical answers to',
     titleAccent: 'common searches.',
     intro:
-      'Short, useful explanations for questions like “what is a restaurant management system?” and “how do reservations work?” — each links to the matching Heselo solution.',
+      'Short explanations for common search questions — each links to the matching solution page.',
     cta: 'All guides',
   },
   guidesPage: {
@@ -289,15 +281,14 @@ export const en: Messages = {
     eyebrow: 'Product screens',
     title: 'Real interface —',
     titleAccent: 'not a mockup.',
-    intro:
-      'Screenshots from the Heselo admin panel: live floor, schedule, sessions, cash, inventory, products, analytics, and audit.',
+    intro: 'Screenshots from the Heselo admin panel.',
   },
   eeat: {
     eyebrow: 'Trust & transparency',
     title: 'No fake reviews —',
     titleAccent: 'verifiable facts.',
     intro:
-      'Heselo is a young product; we do not show invented testimonials or star ratings. Instead we keep pricing, contact, and how the product works easy to check.',
+      'Heselo is a young product; we do not show invented testimonials or star ratings. Pricing, payment logic, and legal pages are easy to check.',
     auditIntro:
       'The audit log records who performed each booking, session, and product action — for accountability at day close.',
     items: [
@@ -314,41 +305,24 @@ export const en: Messages = {
         linkLabel: 'Features',
       },
       {
-        title: 'AZ / EN / RU panel',
-        desc: 'Team languages supported for daily operations.',
-        href: '/features',
-        linkLabel: 'Modules',
-      },
-      {
-        title: 'Direct contact',
-        desc: 'Email and contact form for demos — reply within one business day.',
-        href: '/contact',
-        linkLabel: 'Request demo',
-      },
-      {
         title: 'Privacy & terms',
         desc: 'Public legal pages aligned with the admin product.',
         href: '/privacy',
         linkLabel: 'Privacy',
       },
-      {
-        title: 'Venue-type solution pages',
-        desc: 'Separate pages per business type — restaurant, anti-café, gaming club, and more.',
-        href: '/solutions',
-        linkLabel: 'Business solutions',
-      },
     ],
   },
   cta: {
     title: 'Start the next shift with Heselo.',
-    subtitle: 'A 15-minute walkthrough shaped around how your floor actually works.',
-    button: 'Request a demo',
+    subtitle: 'A 15-minute screen share — we usually reply within two hours during working hours.',
+    button: 'Write via the form',
+    whatsapp: 'WhatsApp — 15 min',
   },
   featuresPage: {
     eyebrow: 'Features',
     title: 'Reservations, cash, and inventory — one panel',
     intro:
-      'This list matches the Heselo admin navigation. Reservation system, cash software, and inventory management for restaurants and similar venues are the same modules as in the product — not invented for marketing.',
+      'This list matches the Heselo admin navigation — the same modules as in the product, not invented for marketing.',
     solutionLinkLabel: 'View solution page',
     modules: [
       {
@@ -403,25 +377,46 @@ export const en: Messages = {
   },
   pricing: {
     eyebrow: 'Pricing',
-    title: 'Monthly subscription plans',
+    title: 'Pick your venue type first',
     intro:
-      'These prices match Monthly cost in the Heselo panel. Count: reservations that started a live session this month (walk-ins without a booking are not included).',
-    note:
-      'Each reservation above the plan limit is billed at that plan’s overage rate. Write to us for a demo and setup.',
+      'Everything is monthly. PlayStation and billiards from 9 AZN, anti-cafés from 15, karaoke and lounges from 19. Pick a type first — plans then open by station, table, or room count.',
+    chooseType: 'Venue type',
+    note: 'Price is for one venue. Larger capacity or several branches — custom quote.',
     cta: 'Request a demo',
-    period: '/ month',
+    periodMonthly: '/ month',
+    periodOneTime: 'one-time',
+    includedModules: 'All panel modules',
+    oneVenue: '1 venue',
+    noCard: 'No card required',
+    bestFor: 'Best for',
+    popular: 'Most chosen',
+    capacity: {
+      stations: 'Up to {n} stations',
+      tables: 'Up to {n} tables',
+      rooms: 'Up to {n} rooms',
+      zones: 'Up to {n} zones',
+    },
+    planNames: {
+      starter: 'Small',
+      plus: 'Medium',
+      pro: 'Large',
+    },
     faq: [
       {
-        q: 'What is included in a Heselo subscription?',
-        a: 'Live tracking, schedule, reservations, cash desk, products, inventory, customers, statistics, and permissions — the same modules on every plan. Plans differ by venue count and monthly included reservations.',
+        q: 'Why aren’t all prices shown at once?',
+        a: 'A PlayStation club and a karaoke room do not buy the same way. Pick the type first — then Small, Medium, and Large open by station or room count.',
       },
       {
-        q: 'How is overage billed?',
-        a: 'Each plan includes a monthly reservation allowance. Every started reservation above that limit is billed at the overage rate shown on the plan.',
+        q: 'Why is karaoke more than PlayStation?',
+        a: 'PlayStation and billiards start at 9 AZN — station and table flow is simple. Karaoke and lounges run room schedules, extensions, and cash, so they start at 19 AZN.',
+      },
+      {
+        q: 'Can I change plan later?',
+        a: 'Yes. When station or room count grows we move Small → Medium → Large. Several branches get a custom quote.',
       },
       {
         q: 'Is there a free trial?',
-        a: 'Request a free demo and setup walkthrough via the contact form — we reply within one business day.',
+        a: 'Message us on WhatsApp or use the form for a free demo — 15-minute screen share, no card. We usually reply within two hours during working hours.',
       },
     ],
     crosslinks: {
@@ -429,43 +424,258 @@ export const en: Messages = {
       solutions: 'Business solutions',
       contact: 'Request a demo',
     },
-    featureVenues: '{count} venues',
-    featureIncluded: '{count} free reservations / month',
-    featureOverage: '{amount} per reservation after the limit',
-    featureRequests: '1 request for {count} new features per month',
-    plans: {
-      starter: {
-        name: 'Starter',
-        desc: '2 venues and 300 started reservations per month.',
+    offers: {
+      gaming: {
+        name: 'Gaming club / PlayStation',
+        intro: 'Monthly. 9 / 15 / 25 AZN by station count. A timer only counts time — here booking, session, and cash sit in one panel.',
+        plans: {
+          starter: {
+            forWhom: 'Small PS club: one floor, one shift',
+            desc: 'Replace phone notes and a whiteboard with a schedule and live session. Cash closes the day.',
+            features: [
+              'Up to {n} PS/PC stations',
+              'Booking: schedule, move, cancel',
+              'Live session: time, extend, pay',
+              'Cash shift and day close',
+              'Snacks and drinks',
+            ],
+          },
+          plus: {
+            forWhom: 'A club that fills up in the evening',
+            desc: 'Several sessions at once, stock levels, and customer history — the shift stays clear.',
+            features: [
+              'Up to {n} stations',
+              'Several live sessions at once',
+              'Cash + inventory levels',
+              'Customer cards and visit history',
+              'Shift count',
+            ],
+          },
+          pro: {
+            forWhom: 'Large or mixed PS+PC club',
+            desc: 'Statistics, staff permissions, and past-day protection — the night shift closes the same way.',
+            features: [
+              'Up to {n} stations',
+              'PS and PC on one schedule',
+              'Stock counts and statistics',
+              'Staff permissions',
+              'Past-day protection',
+            ],
+          },
+        },
       },
-      pro: {
-        name: 'Pro',
-        desc: '2 venues with higher reservation volume.',
+      billiards: {
+        name: 'Billiards',
+        intro: 'Monthly. 9 / 15 / 25 AZN by table count. Not a table timer — booking, session, and cash in one panel.',
+        plans: {
+          starter: {
+            forWhom: 'Small billiards hall: a few tables',
+            desc: 'Bookings leave the whiteboard; if a session extends, payment stays on the same record.',
+            features: [
+              'Up to {n} tables',
+              'Table booking and move',
+              'Live session and extend',
+              'Cash shift',
+              'Snacks and drinks',
+            ],
+          },
+          plus: {
+            forWhom: 'Billiards club that also has VIP rooms',
+            desc: 'Tables and rooms on one schedule; inventory and customer history open.',
+            features: [
+              'Up to {n} tables',
+              'Tables and VIP rooms on one schedule',
+              'Several sessions at once',
+              'Cash + inventory',
+              'Customer history',
+            ],
+          },
+          pro: {
+            forWhom: 'Large hall or mixed tables + rooms',
+            desc: 'Statistics and staff permissions — you see which table earned what.',
+            features: [
+              'Up to {n} tables',
+              'Hall and rooms on one till',
+              'Stock counts and statistics',
+              'Staff permissions',
+              'Past-day protection',
+            ],
+          },
+        },
       },
-      business: {
-        name: 'Business',
-        desc: '3 venues for larger operations.',
+      karaoke: {
+        name: 'Karaoke',
+        intro: 'Monthly. 19 / 29 / 39 AZN by room count. One lost room booking costs more than a month — that is why rooms have their own plans.',
+        plans: {
+          starter: {
+            forWhom: 'Small karaoke: a few rooms',
+            desc: 'Room bookings stop disappearing in chats. On arrival a session opens; extra time and drinks stay on the same bill.',
+            features: [
+              'Up to {n} karaoke rooms',
+              'Room schedule: book, move, cancel',
+              'Live room session',
+              'Extra time and products on one receipt',
+              'Cash shift',
+            ],
+          },
+          plus: {
+            forWhom: 'Karaoke that fills on weekends',
+            desc: 'Several room statuses on one board; inventory and customer history included.',
+            features: [
+              'Up to {n} rooms',
+              'Several room sessions at once',
+              'Cash + inventory levels',
+              'Customer cards and repeats',
+              'Shift count',
+            ],
+          },
+          pro: {
+            forWhom: 'Large karaoke or karaoke + lounge mix',
+            desc: 'Statistics show which rooms stayed full; staff permissions split the night shift.',
+            features: [
+              'Up to {n} rooms',
+              'Room occupancy statistics',
+              'Stock counts',
+              'Staff permissions',
+              'Past-day protection',
+            ],
+          },
+        },
       },
+      lounge: {
+        name: 'Room lounge',
+        intro: 'Monthly. 19 / 29 / 39 AZN by VIP room count. An open-floor tool does not run a closed room session.',
+        plans: {
+          starter: {
+            forWhom: 'Small lounge: a few VIP rooms',
+            desc: 'Room booking and session in one place. Drinks and snacks attach to the room record; cash closes the day.',
+            features: [
+              'Up to {n} VIP rooms',
+              'Room booking and move',
+              'Live room session',
+              'Products added to the same record',
+              'Cash shift',
+            ],
+          },
+          plus: {
+            forWhom: 'Lounge running several VIP rooms at once',
+            desc: 'Statuses do not collide; inventory and customer history open.',
+            features: [
+              'Up to {n} rooms',
+              'Several room statuses at once',
+              'Cash + inventory',
+              'Customer history',
+              'Shift count',
+            ],
+          },
+          pro: {
+            forWhom: 'Large lounge or lounge + karaoke mix',
+            desc: 'Statistics and permissions — you see which room earned what.',
+            features: [
+              'Up to {n} rooms',
+              'Room + cash statistics',
+              'Stock counts',
+              'Staff permissions',
+              'Past-day protection',
+            ],
+          },
+        },
+      },
+      antikafe: {
+        name: 'Anti-café',
+        intro: 'Monthly. 15 / 25 / 35 AZN by hourly zone count. A timer alone does not close booking and cash.',
+        plans: {
+          starter: {
+            forWhom: 'Small anti-café: a few tables or zones',
+            desc: 'Hourly pay ties to the booking; tea and snacks sell on the same session.',
+            features: [
+              'Up to {n} hourly zones',
+              'Table/zone booking',
+              'Hourly live session',
+              'Tea and snack sales',
+              'Cash shift',
+            ],
+          },
+          plus: {
+            forWhom: 'Anti-café that also has rooms',
+            desc: 'Tables and rooms on one schedule; stock levels are tracked.',
+            features: [
+              'Up to {n} zones',
+              'Tables and rooms on one schedule',
+              'Several sessions at once',
+              'Cash + inventory',
+              'Customer history',
+            ],
+          },
+          pro: {
+            forWhom: 'Large anti-café or mixed zones',
+            desc: 'Statistics show which hours stayed full.',
+            features: [
+              'Up to {n} zones',
+              'Hourly occupancy statistics',
+              'Stock counts',
+              'Staff permissions',
+              'Past-day protection',
+            ],
+          },
+        },
+      },
+    },
+    custom: {
+      name: 'Custom',
+      desc: 'Several branches or volume that does not fit the standard offers.',
+      price: 'On request',
+      cta: 'Request a quote',
+      features: [
+        'All panel modules',
+        'Price matched to venue count',
+        'Terms set together',
+        'Setup discussed with you',
+      ],
     },
   },
   contact: {
     eyebrow: 'Contact',
     title: 'Ask for a demo or send a question',
-    intro: 'Tell us your venue type and roughly how many tables and rooms you have — we reply within one business day.',
+    intro:
+      'Tell us your venue type and roughly how many rooms or stations you have — we usually reply within two hours during working hours.',
+    customTitle: 'Write to us for a custom price',
+    customIntro:
+      'Tell us how many venues, staff, and reservations you run each month — we quote from those numbers.',
+    customNotice:
+      'The fields below are required — the quote is based on these figures.',
+    customSubmit: 'Send quote request',
     name: 'Full name',
+    phone: 'Phone',
     email: 'Email',
-    venue: 'Venue / business',
+    phoneOrEmailHint: 'Enter a phone number or an email — at least one is required.',
+    waLead: 'Faster: message us on WhatsApp — 15-minute screen share, no card.',
+    venue: 'Venue name',
+    venueType: 'Venue type',
+    venueTypePlaceholder: 'Select a type',
+    venueTypes: [
+      { value: 'gaming', label: 'Gaming club / PlayStation' },
+      { value: 'karaoke', label: 'Karaoke' },
+      { value: 'billiards', label: 'Billiards' },
+      { value: 'antikafe', label: 'Anti-café' },
+      { value: 'lounge', label: 'Room lounge' },
+      { value: 'other', label: 'Other' },
+    ],
+    venuesCount: 'Number of venues',
+    staffCount: 'Number of staff',
+    reservationsPerMonth: 'Reservations per month (approx.)',
+    criteriaHint: 'Numbers only. An estimate is fine.',
     message: 'Message',
     submit: 'Send',
     sending: 'Sending…',
     success: 'Got it. We will get in touch with you soon.',
-    error: 'Could not send. Please email us directly.',
+    error: 'Could not send. Message us on WhatsApp or email instead.',
     alt: 'Or write to us at:',
     emailWrite: 'Email us',
     emailAria: 'Email Heselo',
     whatsapp: 'Message on WhatsApp',
     whatsappAria: 'Contact Heselo on WhatsApp',
-    whatsappPrefill: "Hello, I'd like to learn more about Heselo.",
+    whatsappPrefill: "Hello, I'd like to learn more about Heselo for a PlayStation club / karaoke / billiards venue.",
   },
   privacy: {
     title: 'Privacy policy',
@@ -487,10 +697,11 @@ export const en: Messages = {
     softwareOperatingSystem: 'Web browser',
     knowsAbout: [
       'venue management software',
-      'restaurant management system',
-      'reservation system',
-      'point of sale',
+      'gaming club management',
+      'karaoke room booking',
+      'billiards club software',
       'anti-café management',
+      'room lounge software',
     ],
     softwareFeatures: [
       'Live tracking',
@@ -506,12 +717,12 @@ export const en: Messages = {
       home: {
         title: 'Venue management system — booking, cash & inventory | Heselo',
         description:
-          'Heselo venue management: table reservations, live floor, cash, and inventory in one panel. For restaurants, cafes, and clubs — free demo.',
+          'Heselo venue management: room and station booking, live floor, cash, and inventory in one panel. For gaming clubs (PlayStation), karaoke, billiards, anti-cafés, and room lounges — free demo.',
         keywords: [
           'venue management system',
-          'business management software',
-          'table reservation system',
-          'restaurant booking',
+          'gaming club software',
+          'playstation club software',
+          'karaoke room booking',
           'Heselo',
         ],
       },
@@ -528,15 +739,15 @@ export const en: Messages = {
         ],
       },
       pricing: {
-        title: 'Pricing — Heselo subscription plans',
+        title: 'Pricing — Heselo plans',
         description:
-          'Starter 29.99 AZN, Pro 49.99 AZN, Business 69.99 AZN. Same venue and reservation limits as in the app. Write for a demo.',
+          'Choose a venue type: PlayStation and billiards from 9 AZN/month, anti-cafés from 15, karaoke and lounges from 19. Small, Medium, Large by size. Free demo.',
         keywords: ['Heselo pricing', 'subscription plans', 'venue management pricing'],
       },
       contact: {
         title: 'Demo & contact — Heselo',
         description:
-          'Request a venue management demo. Share your venue type and table/room count — reply within one business day.',
+          'Request a venue management demo. WhatsApp or the form — we usually reply within two hours during working hours.',
         keywords: ['Heselo demo', 'venue software contact', 'reservation demo'],
       },
       privacy: {
@@ -552,25 +763,25 @@ export const en: Messages = {
         keywords: ['terms', 'Heselo terms', 'terms of use'],
       },
       solutions: {
-        title: 'Business solutions — restaurant, cafe, clubs | Heselo',
+        title: 'Business solutions — gaming club, karaoke, billiards | Heselo',
         description:
-          'Venue management for restaurants, cafes, billiards, karaoke, gaming clubs, and anti-cafés. Booking, cash, and inventory explained per business type.',
+          'Venue management for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges. Booking, cash, and inventory explained per venue type.',
         keywords: [
-          'restaurant management system',
-          'cafe software',
-          'anti-cafe software',
+          'gaming club software',
+          'playstation club software',
+          'karaoke room booking',
           'billiards club software',
-          'venue management',
+          'anti-cafe software',
         ],
       },
       guides: {
-        title: 'Guides — restaurant & venue management | Heselo',
+        title: 'Guides — club and room venue management | Heselo',
         description:
-          'What a restaurant management system is and how booking, cash, and inventory connect — practical guides.',
+          'How gaming clubs, karaoke rooms, billiards, and anti-cafés run hourly booking, sessions, and cash — practical guides.',
         keywords: [
-          'what is restaurant management system',
-          'venue management guide',
-          'restaurant software explained',
+          'what is a gaming club management system',
+          'karaoke room booking',
+          'anti-cafe software explained',
         ],
       },
     },
