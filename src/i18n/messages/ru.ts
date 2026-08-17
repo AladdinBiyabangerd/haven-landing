@@ -49,8 +49,7 @@ export const ru: Messages = {
   trust: {
     items: [
       '15 минут демо, без карты',
-      'PlayStation, караоке, бильярд, антикафе',
-      'PS от 9 AZN/мес. · комнаты от 15 AZN/мес.',
+      'От 9 AZN в месяц',
       'Панель AZ / RU / EN',
     ],
   },

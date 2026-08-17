@@ -49,8 +49,7 @@ export const en: Messages = {
   trust: {
     items: [
       '15-minute demo, no card',
-      'PlayStation, karaoke, billiards, anti-café',
-      'PS from 9 AZN/month · rooms from 15 AZN/month',
+      'From 9 AZN a month',
       'AZ / RU / EN panel',
     ],
   },

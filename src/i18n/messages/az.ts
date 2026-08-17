@@ -49,8 +49,7 @@ export const az: Messages = {
   trust: {
     items: [
       '15 dəq demo, kart lazım deyil',
-      'PS, karaoke, bilyard, antikafe',
-      'PS 9 AZN-dən/ay · otaqlar 15 AZN-dən/ay',
+      'Ayda 9 AZN-dən',
       'AZ / RU / EN panel',
     ],
   },
