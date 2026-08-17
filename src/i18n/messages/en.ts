@@ -191,7 +191,7 @@ export const en: Messages = {
     title: 'Business management software',
     titleAccent: 'for daily venue work.',
     paragraphs: [
-      'Heselo is a venue management system: reservations, live floor, cash, and inventory in one panel. The goal is to replace scattered spreadsheets, chats, and tools with one workday.',
+      'Heselo is a venue management system for gaming clubs, karaoke rooms, billiards halls, anti-cafés, and room lounges — the places that sell time on a table, a room, or a station.',
     ],
   },
   audiences: {

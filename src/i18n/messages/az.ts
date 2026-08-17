@@ -191,7 +191,7 @@ export const az: Messages = {
     title: 'Biznes idarəetmə proqramı',
     titleAccent: 'məkanın gündəlik işi üçün.',
     paragraphs: [
-      'Heselo məkan idarəetmə sistemidir: rezervasiya, canlı zal, kassa və anbar bir paneldə birləşir. Məqsəd Excel, mesajlaşma və ayrı alətləri eyni iş gününə bağlamaqdır.',
+      'Heselo oyun klubları, karaoke otaqları, bilyard salonları, anti-kafelər və otaq lounge-ları üçün məkan idarəetmə sistemidir — masa, otaq və ya stansiya vaxtını satan yerlər üçün.',
     ],
   },
   audiences: {
