@@ -18,20 +18,22 @@ const isSolutions =
   currentSlug === '/solutions' || currentSlug.startsWith('/solutions/')
 const isGuides = currentSlug === '/guides' || currentSlug.startsWith('/guides/')
 
+/**
+ * Home lives on the brand mark and Contact lives on the demo button, so
+ * neither gets a second entry here.
+ */
 const links = [
-  { href: localePath(locale, '/'), label: m.home, match: '/' },
   { href: localePath(locale, '/features'), label: m.features, match: '/features' },
   { href: localePath(locale, '/solutions'), label: m.solutions, match: '/solutions' },
   { href: localePath(locale, '/guides'), label: m.guides, match: '/guides' },
   { href: localePath(locale, '/pricing'), label: m.pricing, match: '/pricing' },
-  { href: localePath(locale, '/contact'), label: m.contact, match: '/contact' },
 ]
 ---
 
 <header class="header" data-header>
   <div class="container header__inner">
     <a class="brand" href={localePath(locale, '/')} aria-label="Heselo">
-      <BrandMark size={44} />
+      <BrandMark size={38} />
       <span class="brand__name type-brand">Heselo</span>
     </a>
 
@@ -40,7 +42,6 @@ const links = [
         links.map((link) => (
           <a
             href={link.href}
-            data-journey-link={link.match === '/contact' ? 'contact' : undefined}
             class:list={[
               'nav__link',
               {
@@ -92,13 +93,7 @@ const links = [
 
   <div class="mobile" id="mobile-nav" data-mobile hidden>
     <div class="container mobile__inner">
-      {
-        links.map((link) => (
-          <a href={link.href} class="mobile__link" data-journey-link={link.match === '/contact' ? 'contact' : undefined}>
-            {link.label}
-          </a>
-        ))
-      }
+      {links.map((link) => <a href={link.href} class="mobile__link">{link.label}</a>)}
       <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')} data-journey-link="contact">{m.demo}</a>
     </div>
   </div>
@@ -122,7 +117,7 @@ const links = [
     display: flex;
     align-items: center;
     gap: 1rem;
-    min-height: 4.75rem;
+    min-height: 4.25rem;
   }
   .brand {
     display: inline-flex;
@@ -179,6 +174,9 @@ const links = [
   }
   .header__cta {
     display: none;
+    min-height: 2.6rem;
+    padding: 0.55rem 1.1rem;
+    font-size: var(--text-sm);
   }
   .menu-btn {
     width: 2.6rem;
@@ -211,16 +209,18 @@ const links = [
   }
   .mobile__inner {
     display: grid;
-    gap: 0.35rem;
+    gap: 0.15rem;
   }
   .mobile__link {
-    padding: 0.85rem 0.2rem;
-    border-bottom: 1px solid var(--line);
+    padding: 0.8rem 0.2rem;
     font-family: var(--font-body);
     font-size: var(--text-md);
     font-weight: 600;
   }
-  @media (min-width: 900px) {
+  .mobile__inner .btn {
+    margin-top: 0.75rem;
+  }
+  @media (min-width: 960px) {
     .nav {
       display: flex;
     }
