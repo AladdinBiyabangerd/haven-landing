@@ -80,16 +80,30 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
     align-items: center;
     gap: 0.9rem;
   }
-  .trust li:not(:last-child)::after {
-    content: '';
-    width: 3px;
-    height: 3px;
-    border-radius: 999px;
-    background: currentColor;
-    opacity: 0.5;
-  }
   .hero__visual {
     position: relative;
+  }
+  /* One item per line on a phone — separators would dangle at every line end. */
+  @media (min-width: 560px) {
+    .trust li:not(:last-child)::after {
+      content: '';
+      width: 3px;
+      height: 3px;
+      border-radius: 999px;
+      background: currentColor;
+      opacity: 0.5;
+    }
+  }
+  @media (max-width: 559px) {
+    .hero__cta .btn {
+      flex: 1 1 100%;
+    }
+    .trust {
+      gap: 0.45rem;
+    }
+    .trust li {
+      flex-basis: 100%;
+    }
   }
   @media (min-width: 960px) {
     .hero__grid {
