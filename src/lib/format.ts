@@ -65,7 +65,16 @@ export function parseContactPhone(raw: unknown): string | undefined | 'invalid' 
   return digits
 }
 
+/** Cuts on a word boundary — "produc…" reads as a bug, "products…" reads as a summary. */
 export function truncateText(text: string, maxLength: number, ellipsis: string): string {
   if (text.length <= maxLength) return text
-  return `${text.slice(0, maxLength)}${ellipsis}`
+  const clipped = text.slice(0, maxLength)
+  const lastSpace = clipped.lastIndexOf(' ')
+  const head = lastSpace > maxLength * 0.6 ? clipped.slice(0, lastSpace) : clipped
+  // Trim trailing punctuation, then any orphaned one- or two-letter word ("… panel. A…").
+  const tidy = head
+    .replace(/[\s,;:.—–-]+$/, '')
+    .replace(/\s+\S{1,2}$/, '')
+    .replace(/[\s,;:.—–-]+$/, '')
+  return `${tidy}${ellipsis}`
 }

@@ -196,9 +196,9 @@ export const en: Messages = {
   },
   audiences: {
     eyebrow: 'Who it is for',
-    title: 'Solution pages',
-    titleAccent: 'by business type.',
-    intro: 'Each page matches that business’s search intent and daily flow.',
+    title: 'Built for your',
+    titleAccent: 'kind of venue.',
+    intro: 'Pick the closest match to see how Heselo runs that floor.',
     items: [
       {
         slug: 'gaming',
@@ -230,9 +230,8 @@ export const en: Messages = {
   guidesTeaser: {
     eyebrow: 'Guides',
     title: 'Practical answers to',
-    titleAccent: 'common searches.',
-    intro:
-      'Short explanations for common search questions — each links to the matching solution page.',
+    titleAccent: 'the usual questions.',
+    intro: 'Short, specific explanations — no sign-up needed.',
     cta: 'All guides',
   },
   guidesPage: {

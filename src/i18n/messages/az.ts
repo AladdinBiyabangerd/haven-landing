@@ -196,10 +196,9 @@ export const az: Messages = {
   },
   audiences: {
     eyebrow: 'Kimlər üçündür',
-    title: 'Biznes tipinizə uyğun',
-    titleAccent: 'həll səhifələri.',
-    intro:
-      'Hər səhifə həmin biznesin axtarış niyyətinə və gündəlik axınına uyğun yazılıb.',
+    title: 'Məkanınızın tipinə',
+    titleAccent: 'uyğun qurulub.',
+    intro: 'Ən yaxın variantı seçin — Heselo həmin zalı necə idarə etdiyini görün.',
     items: [
       {
         slug: 'gaming',
@@ -230,10 +229,9 @@ export const az: Messages = {
   },
   guidesTeaser: {
     eyebrow: 'Bələdçilər',
-    title: 'Axtarış suallarına',
+    title: 'Adi suallara',
     titleAccent: 'praktiki cavablar.',
-    intro:
-      'Axtarışda tez rast gəlinən suallara qısa izahlar — hər biri müvafiq həll səhifəsinə bağlanır.',
+    intro: 'Qısa və konkret izahlar — qeydiyyat tələb olunmur.',
     cta: 'Bütün bələdçilər',
   },
   guidesPage: {
