@@ -263,7 +263,7 @@ export const en: Messages = {
     title: 'No fake reviews —',
     titleAccent: 'verifiable facts.',
     intro:
-      'Heselo is a young product; we do not show invented testimonials or star ratings. Pricing, payment logic, and legal pages are easy to check.',
+      'Heselo is a young product, so you will not find invented testimonials or star ratings here. What we do show — prices, how money is counted, and our legal pages — you can check yourself.',
     items: [
       {
         title: 'Open pricing',
@@ -271,13 +271,13 @@ export const en: Messages = {
         href: '/pricing',
       },
       {
-        title: 'Server-side payment math',
-        desc: 'Balances and payments are calculated on the server — not guessed in the UI.',
+        title: 'Totals that always match',
+        desc: 'Balances and payments are worked out by the system, not typed in over the top.',
         href: '/features',
       },
       {
         title: 'Privacy & terms',
-        desc: 'Public legal pages aligned with the admin product.',
+        desc: 'Public documents that match what the product actually does.',
         href: '/privacy',
       },
     ],

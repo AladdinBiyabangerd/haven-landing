@@ -263,7 +263,7 @@ export const az: Messages = {
     title: 'Saxta rəy yox —',
     titleAccent: 'yoxlanıla bilən faktlar.',
     intro:
-      'Heselo yeni məhsuldur; uydurma müştəri rəyi və ya ulduz reytinqi göstərmirik. Qiymət, ödəniş məntiqi və hüquqi sənədlər açıqdır.',
+      'Heselo yeni məhsuldur, ona görə burada uydurma rəy və ya ulduz reytinqi tapmayacaqsınız. Göstərdiklərimizi — qiymətləri, pulun necə sayıldığını və hüquqi sənədləri — özünüz yoxlaya bilərsiniz.',
     items: [
       {
         title: 'Açıq qiymət',
@@ -271,13 +271,13 @@ export const az: Messages = {
         href: '/pricing',
       },
       {
-        title: 'Serverdə hesablanan ödənişlər',
-        desc: 'Qalıq və ödəniş məntiqi paneldə təxmini deyil — server tərəfində aparılır.',
+        title: 'Həmişə uyğun gələn məbləğlər',
+        desc: 'Qalıq və ödənişləri sistem özü hesablayır, əl ilə üstündən yazılmır.',
         href: '/features',
       },
       {
         title: 'Məxfilik və şərtlər',
-        desc: 'Məxfilik siyasəti və istifadə şərtləri admin paneli ilə uyğun, ictimai sənədlər.',
+        desc: 'Məhsulun real işinə uyğun, hamıya açıq sənədlər.',
         href: '/privacy',
       },
     ],
