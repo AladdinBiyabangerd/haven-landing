@@ -70,7 +70,105 @@ Başlanğıc adlar (telefonu 2GIS-dən özünüz götürün — burada uydurma n
 
 ---
 
-## WhatsApp şablonları
+## Dərhal cavab (kiminsə yazdığı anda)
+
+İki hal var. Qarışdırmayın.
+
+| Hal | Kim başlayıb | Nə işləyir |
+|-----|----------------|------------|
+| A | Onlar sizin nömrəyə yazıb (sayt düyməsi) | WhatsApp Business **salamlama** avtomatik gedir |
+| B | Siz yazmısınız, onlar cavab verib | Avtomatik **işləmir**. 2–5 dəqiqə ərzində özünüz yazın |
+
+Gecə/məşğul olanda **away** mesajı kifayətdir. Canlı söhbətdə bot kimi uzun mətn göndərməyin.
+
+### Harada saxlayırsınız
+
+WhatsApp Business → **Alətlər / Tools**:
+
+1. **Salamlama mesajı** — yalnız Hal A (aşağıdakı mətn)
+2. **Away mesajı** — 5 dəq ərzində cavab verməyəndə
+3. **Sürətli cavablar** — qısa yollar: `/hi` `/qiymet` `/demo` `/yox`
+
+Telefonda mesajı yazıb uzun basıb **Pin / Favorit** də olar.
+
+---
+
+### A) Avtomatik salamlama (saytdan yazan)
+
+```
+Salam, Heselo.
+
+PS, karaoke, bilyard və oxşar məkanlar üçün: otaq/masa bronu, canlı sessiya və kassa bir paneldədir.
+
+Qısa yazın:
+1) məkan tipi (PS / karaoke / bilyard / antikafe)
+2) neçə otaq və ya masa
+
+15 dəq pulsuz demo təyin edək.
+```
+
+### Away (cavab gecikəndə)
+
+```
+Mesajınız çatdı. 1–2 saat ərzində cavab verirəm (iş saatı 11:00–20:00).
+
+Təcili olsa: məkan tipi + otaq/masa sayını yazın.
+```
+
+Away-i gecə 23:00–10:00 və ya “5 dəqiqə cavab yoxdursa” qoyun. Söhbət gedəndə hər mesaja away düşməsin.
+
+---
+
+### B) Onlar sizin outreach-ə cavab verdi — 2 dəqiqə ərzində
+
+Əvvəl **nə yazıblarına** baxın, eyni mətni hamıya yapışdırmayın. 4 sürətli cavab kifayətdir.
+
+**`/hi` — “salam” / “bəli” / “dinləyirəm” / emoji**
+
+```
+Salam. Qısa deyim: otaq və ya PS yeri, vaxt sessiyası və kassa eyni ekrandadır. Kart lazım deyil.
+
+Məkanda neçə otaq/masa var? 15 dəq demo bu həftə çərşənbə və ya cümə uyğundur?
+```
+
+**`/qiymet` — “nə qədər?” / “tarif” / “qiymət”**
+
+```
+30 / 50 / 70 AZN ay — otaq və rezerv sayına görə.
+
+Demo-da hansının sizə düşdüyünü 2 dəqiqəyə deyirəm. Ekranı indi paylaşım, yoxsa məkana gəlim?
+```
+
+**`/demo` — “ok” / “göstər” / “nə vaxt”**
+
+```
+Yaxşı. 15 dəq kifayətdir.
+
+Bu gün 18:00 və ya sabah 12:00 — hansı rahatdır?
+Google Meet və ya WhatsApp video — siz seçin.
+```
+
+**`/yox` — “lazım deyil” / “var sistem” / “sonra”**
+
+```
+Başa düşürəm. İndi dəyişməyə ehtiyac yoxdursa, rahat olun.
+
+Əgər növbə bağlananda hesab qarışsa — buradan yazın. 2–3 həftə sonra qısa yoxlama yazaram.
+```
+
+---
+
+### Qaydalar
+
+1. İlk cavab **4–6 sətir.** Katalog, plan cədvəli, PDF yox.
+2. Hər cavabın sonunda **1 sual** (otaq sayı və ya saat). Sualsız mesaj söhbəti öldürür.
+3. “Salam”a 20 dəqiqə sonra “salam?” yazmayın. Onlar yazıbsa, **2–5 dəqiqə** ərzində `/hi`.
+4. Qiyməti soruşub gizlətməyin — dərhal 30/50/70.
+5. Resepsiya yazıbsa: “Sahibə və ya menecerə ötürə bilərsiniz? 15 dəq ekran göstərim.”
+
+---
+
+## WhatsApp şablonları (sizin ilk mesajınız)
 
 `{ad}` = sahibin adı (yoxdursa çıxarın). `{məkan}` = klubun adı. Göndərmədən əvvəl oxuyun — maşın tərcüməsi kimi səslənməsin.
 

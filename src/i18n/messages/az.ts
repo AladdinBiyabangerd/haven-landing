@@ -103,37 +103,31 @@ export const az: Messages = {
     items: [
       {
         title: 'Canlı izləmə',
-        subtitle: 'Zal',
         desc: 'Aktiv sessiyalar, məhsul əlavəsi, pauza/dayandırma, qəbz və ödəniş — zalın real vəziyyəti.',
         points: ['Məhsul əlavə et', 'Ödəniş / bağlama', 'Silmə üçün kod'],
       },
       {
         title: 'Cədvəl və rezervasiyalar',
-        subtitle: 'Bron',
         desc: 'Masa və otaq eyni cədvəldə. Rezervasiya siyahısı, köçürmə, ləğv və tarixçə.',
         points: ['Cədvəl', 'Rezervasiyalar', 'Keçmiş gün qorunur'],
       },
       {
         title: 'Kassa',
-        subtitle: 'Pul',
         desc: 'Növbə aç/bağla, əməliyyatlar, kassa hesabatı və kassa sayımı — gün və növbə ayrı qalır.',
         points: ['Növbə aç/bağla', 'Kassa hesabatı', 'Kassa sayımı'],
       },
       {
         title: 'Məhsullar, anbar, satış',
-        subtitle: 'Kataloq',
         desc: 'Məhsul kataloqu, anbar sayımı və bron olmadan sürətli satış — eyni siyahı üzərində.',
         points: ['Məhsullar', 'Anbar', 'Sürətli satış'],
       },
       {
         title: 'Müştərilər',
-        subtitle: 'CRM',
         desc: 'Müştəri kartları, tarixçə və idxal — rezervasiya və canlı sessiya ilə bağlı.',
         points: ['Kartlar', 'İdxal', 'Ziyarət tarixçəsi'],
       },
       {
         title: 'Statistika və ayarlar',
-        subtitle: 'İdarə',
         desc: 'Ödəniş, müştəri və anbar statistikası; işçilər, icazələr, qoruma kodu və qiymət hesablama.',
         points: ['Statistika', 'İcazələr', 'Qoruma kodu'],
       },
@@ -233,31 +227,26 @@ export const az: Messages = {
         slug: 'gaming',
         title: 'Oyun klubu idarəetmə sistemi',
         desc: 'PS və konsol, canlı sessiya və satış.',
-        anchor: 'Oyun klubu həlli',
       },
       {
         slug: 'karaoke',
         title: 'Karaoke idarəetmə sistemi',
         desc: 'Otaq rezervasiyası, sessiya və kassa axını.',
-        anchor: 'Karaoke həlli',
       },
       {
         slug: 'billiards',
         title: 'Bilyard klubu proqramı',
         desc: 'Masa/otaq, vaxt və canlı oyun sessiyası.',
-        anchor: 'Bilyard həlli',
       },
       {
         slug: 'antikafe',
         title: 'Antikafe idarəetmə sistemi',
         desc: 'Saatla ödəniş, masa/otaq rezervasiyası və kassa.',
-        anchor: 'Antikafe həlli',
       },
       {
         slug: 'lounge',
         title: 'Otaqlı launj idarəetmə sistemi',
         desc: 'VIP otaq rezervasiyası, sessiya və kassa.',
-        anchor: 'Launj həlli',
       },
     ],
   },
@@ -300,26 +289,21 @@ export const az: Messages = {
     titleAccent: 'yoxlanıla bilən faktlar.',
     intro:
       'Heselo yeni məhsuldur; uydurma müştəri rəyi və ya ulduz reytinqi göstərmirik. Qiymət, ödəniş məntiqi və hüquqi sənədlər açıqdır.',
-    auditIntro:
-      'Audit jurnalı hər rezervasiya, sessiya və məhsul əməliyyatını kim və nə vaxt etdiyini saxlayır — gün bağlanışında izləmə üçün.',
     items: [
       {
         title: 'Açıq qiymət',
         desc: 'Abunə planları və limitlər qiymətlər səhifəsindədir — gizli komissiya yoxdur.',
         href: '/pricing',
-        linkLabel: 'Qiymətlərə bax',
       },
       {
         title: 'Serverdə hesablanan ödənişlər',
         desc: 'Qalıq və ödəniş məntiqi paneldə təxmini deyil — server tərəfində aparılır.',
         href: '/features',
-        linkLabel: 'Funksiyalar',
       },
       {
         title: 'Məxfilik və şərtlər',
         desc: 'Məxfilik siyasəti və istifadə şərtləri admin paneli ilə uyğun, ictimai sənədlər.',
         href: '/privacy',
-        linkLabel: 'Məxfilik',
       },
     ],
   },

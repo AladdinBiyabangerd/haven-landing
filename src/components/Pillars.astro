@@ -14,14 +14,13 @@ const p = messages.pillars
       <h2 class="type-section">{p.title} <span class="accent">{p.titleAccent}</span></h2>
       <p class="lead">{p.intro}</p>
     </div>
-    <div class="grid">
+    <div class="card-grid">
       {
         p.items.map((item) => (
-          <article>
-            <span class="sub type-eyebrow">{item.subtitle}</span>
+          <article class="card">
             <h3 class="type-card-title">{item.title}</h3>
             <p>{item.desc}</p>
-            <ul>
+            <ul class="tag-list">
               {item.points.map((point) => (
                 <li>{point}</li>
               ))}
@@ -34,54 +33,9 @@ const p = messages.pillars
 </section>
 
 <style>
-  .grid {
-    display: grid;
-    gap: 1rem;
-  }
-  article {
-    padding: 1.45rem 1.35rem 1.35rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    background: var(--surface);
-    box-shadow: 0 8px 24px rgba(23, 40, 66, 0.04);
-    transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
-  }
-  article:hover {
-    border-color: rgba(15, 118, 110, 0.35);
-    transform: translateY(-2px);
-  }
-  .sub {
-    display: inline-block;
-    margin-bottom: 0.55rem;
-    color: var(--accent);
-  }
   p {
-    margin: 0.65rem 0 1rem;
+    margin: 0.4rem 0 0.85rem;
     color: var(--ink-muted);
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  li {
-    padding: 0.28rem 0.65rem;
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    font-size: var(--text-xs);
-    color: var(--ink-muted);
-  }
-  @media (min-width: 720px) {
-    .grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media (min-width: 1040px) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    font-size: var(--text-sm);
   }
 </style>

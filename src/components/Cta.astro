@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
+import CtaBanner from '@/components/CtaBanner.astro'
 import { localePath } from '@/lib/site'
 import { contactPath, pricingPath, whatsappHrefFor } from '@/lib/journey'
 import { VENUE_STORAGE_KEY } from '@/lib/venueOffers'
@@ -54,48 +55,32 @@ const secondaryExternal = intent === 'next' && !known
         <div class="prose">
           <p>
             <span data-cta-sub>{subtitle}</span>{' '}
-            <a data-cta-primary href={primaryHref}>
-              {primaryLabel}
-            </a>
-            .
+            <a class="link-inline" data-cta-primary href={primaryHref}>{primaryLabel}</a>.
           </p>
           <p>
             <a
+              class="link-inline"
               data-cta-secondary
               href={secondaryHref}
               target={secondaryExternal ? '_blank' : undefined}
               rel={secondaryExternal ? 'noopener noreferrer' : undefined}
-            >
-              {secondaryLabel}
-            </a>
-            .
+            >{secondaryLabel}</a>.
           </p>
         </div>
       ) : (
-        <div class="banner">
-          <div>
-            <h2 class="type-section" data-cta-title>
-              {title}
-            </h2>
-            <p class="type-lead" data-cta-sub>
-              {subtitle}
-            </p>
-          </div>
-          <div class="actions">
-            <a
-              class="btn btn-primary"
-              data-cta-primary
-              href={primaryHref}
-              target={primaryExternal ? '_blank' : undefined}
-              rel={primaryExternal ? 'noopener noreferrer' : undefined}
-            >
-              {primaryLabel}
-            </a>
-            <a class="btn btn-ghost" data-cta-secondary href={secondaryHref}>
-              {secondaryLabel}
-            </a>
-          </div>
-        </div>
+        <CtaBanner
+          title={title}
+          body={subtitle}
+          href={primaryHref}
+          label={primaryLabel}
+          external={primaryExternal}
+          secondaryHref={secondaryHref}
+          secondaryLabel={secondaryLabel}
+          titleAttrs={{ 'data-cta-title': '' }}
+          bodyAttrs={{ 'data-cta-sub': '' }}
+          primaryAttrs={{ 'data-cta-primary': '' }}
+          secondaryAttrs={{ 'data-cta-secondary': '' }}
+        />
       )
     }
   </div>
@@ -197,49 +182,5 @@ const secondaryExternal = intent === 'next' && !known
   }
   .prose p:first-child {
     margin-top: 0;
-  }
-  .prose a {
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 0.18em;
-    text-decoration-thickness: 1px;
-  }
-  .prose a:hover {
-    color: var(--accent-deep);
-  }
-  .banner {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: clamp(1.6rem, 4vw, 2.4rem);
-    border-radius: calc(var(--radius-lg) + 4px);
-    border: 1px solid rgba(15, 118, 110, 0.22);
-    background:
-      radial-gradient(600px 200px at 10% 0%, rgba(20, 184, 166, 0.18), transparent 55%),
-      linear-gradient(135deg, #ffffff, #e8f7f4);
-    box-shadow: var(--shadow);
-  }
-  h2 {
-    max-width: 18ch;
-  }
-  .banner p {
-    margin: 0.65rem 0 0;
-    color: var(--ink-muted);
-    max-width: 36rem;
-  }
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    flex-shrink: 0;
-  }
-  @media (min-width: 800px) {
-    .banner {
-      flex-direction: row;
-      align-items: center;
-    }
   }
 </style>

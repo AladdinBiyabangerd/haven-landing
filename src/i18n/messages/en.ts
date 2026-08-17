@@ -103,37 +103,31 @@ export const en: Messages = {
     items: [
       {
         title: 'Live tracking',
-        subtitle: 'Floor',
         desc: 'Active sessions, add products, pause/stop, receipts, and payment — the real floor state.',
         points: ['Add products', 'Pay / close', 'Delete behind a code'],
       },
       {
         title: 'Schedule & reservations',
-        subtitle: 'Bookings',
         desc: 'Tables and rooms on one schedule. Reservation list, transfer, cancel, and history.',
         points: ['Schedule', 'Reservations', 'Past days protected'],
       },
       {
         title: 'Cash',
-        subtitle: 'Money',
         desc: 'Open/close shift, transactions, cash report, and cash count — day and shift stay separate.',
         points: ['Cash drawer', 'Cash report', 'Cash reconciliation'],
       },
       {
         title: 'Products, stock, sale',
-        subtitle: 'Catalog',
         desc: 'Product catalog, inventory counts, and walk-in quick sale on the same list.',
         points: ['Products', 'Inventory', 'Quick sale'],
       },
       {
         title: 'Customers',
-        subtitle: 'CRM',
         desc: 'Customer cards, history, and import — tied to reservations and live sessions.',
         points: ['Customers', 'Import', 'Visit history'],
       },
       {
         title: 'Stats & settings',
-        subtitle: 'Control',
         desc: 'Payment, customer, and inventory statistics; staff, permissions, protection code, and price calculator.',
         points: ['Statistics', 'Permissions', 'Protection code'],
       },
@@ -232,31 +226,26 @@ export const en: Messages = {
         slug: 'gaming',
         title: 'Gaming club management',
         desc: 'PlayStation and console stations, live sessions, and sales.',
-        anchor: 'Gaming club solution',
       },
       {
         slug: 'karaoke',
         title: 'Karaoke management system',
         desc: 'Room booking, sessions, and cash flow.',
-        anchor: 'Karaoke solution',
       },
       {
         slug: 'billiards',
         title: 'Billiards club software',
         desc: 'Tables/rooms, time, and live play sessions.',
-        anchor: 'Billiards solution',
       },
       {
         slug: 'antikafe',
         title: 'Anti-café management',
         desc: 'Hourly payment, table/room booking, and cash.',
-        anchor: 'Anti-café solution',
       },
       {
         slug: 'lounge',
         title: 'Room lounge management',
         desc: 'VIP room booking, sessions, and cash.',
-        anchor: 'Room lounge solution',
       },
     ],
   },
@@ -299,26 +288,21 @@ export const en: Messages = {
     titleAccent: 'verifiable facts.',
     intro:
       'Heselo is a young product; we do not show invented testimonials or star ratings. Pricing, payment logic, and legal pages are easy to check.',
-    auditIntro:
-      'The audit log records who performed each booking, session, and product action — for accountability at day close.',
     items: [
       {
         title: 'Open pricing',
         desc: 'Plans and limits are on the pricing page — no hidden fees.',
         href: '/pricing',
-        linkLabel: 'See pricing',
       },
       {
         title: 'Server-side payment math',
         desc: 'Balances and payments are calculated on the server — not guessed in the UI.',
         href: '/features',
-        linkLabel: 'Features',
       },
       {
         title: 'Privacy & terms',
         desc: 'Public legal pages aligned with the admin product.',
         href: '/privacy',
-        linkLabel: 'Privacy',
       },
     ],
   },

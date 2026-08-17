@@ -91,7 +91,6 @@ export type Messages = {
     intro: string
     items: Array<{
       title: string
-      subtitle: string
       desc: string
       points: string[]
     }>
@@ -141,7 +140,6 @@ export type Messages = {
       slug: string
       title: string
       desc: string
-      anchor: string
     }>
   }
   guidesTeaser: {
@@ -159,12 +157,10 @@ export type Messages = {
     title: string
     titleAccent: string
     intro: string
-    auditIntro: string
     items: Array<{
       title: string
       desc: string
       href: string
-      linkLabel: string
     }>
   }
   productShot: {

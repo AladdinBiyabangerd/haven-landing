@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
+import LinkCard from '@/components/LinkCard.astro'
 import { TEASER_GUIDE_SLUGS, getGuides } from '@/data/guides'
 import { localePath } from '@/lib/site'
 import { truncateText } from '@/lib/format'
@@ -25,70 +26,29 @@ const guides = getGuides(locale).filter((item) =>
       </h2>
       <p class="lead">{g.intro}</p>
     </div>
-    <ul class="grid">
+    <ul class="card-grid">
       {
         guides.map((item) => (
           <li>
-            <article>
-              <h3 class="type-card-title">{item.shortTitle}</h3>
-              <p>{truncateText(item.intro, 140, messages.common.truncatedEllipsis)}</p>
-              <a href={localePath(locale, `/guides/${item.slug}`)}>{item.h1}</a>
-            </article>
+            <LinkCard
+              href={localePath(locale, `/guides/${item.slug}`)}
+              title={item.h1}
+              desc={truncateText(item.intro, 120, messages.common.truncatedEllipsis)}
+            />
           </li>
         ))
       }
     </ul>
     <p class="all">
-      <a href={localePath(locale, '/guides')}>{g.cta}{messages.common.linkArrow}</a>
+      <a class="link-inline" href={localePath(locale, '/guides')}>
+        {g.cta}{messages.common.linkArrow}
+      </a>
     </p>
   </div>
 </section>
 
 <style>
-  .grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-  }
-  article {
-    height: 100%;
-    padding: 1.2rem 1.15rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    background: var(--surface);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  p {
-    margin: 0;
-    color: var(--ink-muted);
-    flex: 1;
-    font-size: var(--text-sm);
-  }
-  a {
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-    font-size: var(--text-sm);
-  }
   .all {
-    margin: 1.5rem 0 0;
-  }
-  .all a {
-    font-size: var(--text-md);
-  }
-  @media (min-width: 720px) {
-    .grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media (min-width: 1000px) {
-    .grid {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+    margin: 1.25rem 0 0;
   }
 </style>

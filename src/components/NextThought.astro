@@ -24,10 +24,7 @@ const { doors, label, embedded = false } = Astro.props
         {doors.map((door) => (
           <p>
             {door.prompt}{' '}
-            <a href={door.href} data-journey-link={door.bind}>
-              {door.label}
-            </a>
-            .
+            <a class="link-inline" href={door.href} data-journey-link={door.bind}>{door.label}</a>.
           </p>
         ))}
       </div>
@@ -51,15 +48,5 @@ const { doors, label, embedded = false } = Astro.props
   }
   p:first-child {
     margin-top: 0;
-  }
-  a {
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 0.18em;
-    text-decoration-thickness: 1px;
-  }
-  a:hover {
-    color: var(--accent-deep);
   }
 </style>

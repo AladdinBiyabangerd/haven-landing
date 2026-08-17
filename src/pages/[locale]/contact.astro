@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import ContactForm from '@/components/ContactForm.astro'
+import DemoPromise from '@/components/DemoPromise.astro'
 import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
@@ -37,6 +38,7 @@ const page = messages.contact
           {page.intro}
         </p>
       </div>
+      <DemoPromise messages={messages} />
       <ContactForm locale={locale} messages={messages} />
       <NextThought
         label={messages.journey.navLabel}

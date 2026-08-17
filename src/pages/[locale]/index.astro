@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import Hero from '@/components/Hero.astro'
-import DemoPromise from '@/components/DemoPromise.astro'
 import SeoOverview from '@/components/SeoOverview.astro'
 import Pain from '@/components/Pain.astro'
 import Pillars from '@/components/Pillars.astro'
@@ -37,7 +36,6 @@ const messages = getMessages(locale)
   ]}
 >
   <Hero locale={locale} messages={messages} />
-  <DemoPromise messages={messages} />
   <SeoOverview messages={messages} />
   <Pain messages={messages} />
   <Pillars messages={messages} />

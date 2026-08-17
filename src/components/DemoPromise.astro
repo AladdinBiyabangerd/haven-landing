@@ -8,62 +8,47 @@ const { messages } = Astro.props
 const d = messages.demoPromise
 ---
 
-<section class="section demo-promise" aria-labelledby="demo-promise-title">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">{d.eyebrow}</p>
-      <h2 id="demo-promise-title" class="type-section">
-        {d.title} <span class="accent">{d.titleAccent}</span>
-      </h2>
-    </div>
-    <ol class="steps">
-      {
-        d.items.map((item, index) => (
-          <li>
-            <span class="num" aria-hidden="true">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-            <h3 class="type-card-title">{item.title}</h3>
-            <p>{item.desc}</p>
-          </li>
-        ))
-      }
-    </ol>
-  </div>
+<section class="promise" aria-labelledby="demo-promise-title">
+  <h2 id="demo-promise-title" class="type-card-title">
+    {d.title} <span class="accent">{d.titleAccent}</span>
+  </h2>
+  <ol>
+    {
+      d.items.map((item) => (
+        <li>
+          <strong>{item.title}</strong> — {item.desc}
+        </li>
+      ))
+    }
+  </ol>
 </section>
 
 <style>
-  .steps {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-  }
-  li {
-    padding: 1.25rem 1.2rem;
+  /* Sits beside the contact form, so it stays a short list rather than cards. */
+  .promise {
+    margin: 0 0 1.75rem;
+    padding: var(--space-card);
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
     background: var(--surface);
+  }
+  .promise h2 {
+    font-size: var(--text-lg);
+  }
+  ol {
+    margin: 0.85rem 0 0;
+    padding: 0 0 0 1.1rem;
     display: grid;
-    gap: 0.45rem;
-  }
-  .num {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: var(--text-sm);
-    letter-spacing: 0.06em;
-    color: var(--accent);
-  }
-  p {
-    margin: 0;
+    gap: 0.5rem;
     color: var(--ink-muted);
     font-size: var(--text-sm);
   }
-  @media (min-width: 800px) {
-    .steps {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.15rem;
-    }
+  li::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  strong {
+    color: var(--ink);
+    font-weight: 700;
   }
 </style>

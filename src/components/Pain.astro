@@ -15,13 +15,13 @@ const p = messages.pain
       <p class="lead">{p.intro}</p>
     </div>
     <div class="compare">
-      <article>
+      <article class="card">
         <h3 class="type-card-title">{p.withoutLabel}</h3>
         <ul>
           {p.before.map((item) => <li>{item}</li>)}
         </ul>
       </article>
-      <article class="good">
+      <article class="card good">
         <h3 class="type-card-title">{p.withLabel}</h3>
         <ul>
           {p.after.map((item) => <li>{item}</li>)}
@@ -34,24 +34,15 @@ const p = messages.pain
 <style>
   .compare {
     display: grid;
-    gap: 1rem;
-  }
-  article {
-    padding: 1.4rem 1.35rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    background: var(--surface);
-    box-shadow: 0 8px 24px rgba(23, 40, 66, 0.04);
+    gap: var(--gap);
   }
   article.good {
     border-color: rgba(15, 118, 110, 0.28);
-    background:
-      linear-gradient(160deg, rgba(20, 184, 166, 0.1), transparent 55%),
-      var(--surface);
   }
   h3 {
-    margin-bottom: 1rem;
-    color: var(--ink-muted);
+    margin-bottom: 0.85rem;
+    font-size: var(--text-lg);
+    color: var(--ink-subtle);
   }
   article.good h3 {
     color: var(--accent);
@@ -61,12 +52,13 @@ const p = messages.pain
     padding: 0;
     list-style: none;
     display: grid;
-    gap: 0.75rem;
+    gap: 0.6rem;
   }
   li {
     position: relative;
     padding-left: 1.15rem;
     color: var(--ink-muted);
+    font-size: var(--text-sm);
   }
   li::before {
     content: '–';
@@ -81,7 +73,6 @@ const p = messages.pain
   @media (min-width: 800px) {
     .compare {
       grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
     }
   }
 </style>
