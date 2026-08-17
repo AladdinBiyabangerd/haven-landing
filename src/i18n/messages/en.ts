@@ -96,40 +96,34 @@ export const en: Messages = {
   },
   pillars: {
     eyebrow: 'What you get',
-    title: 'The same modules',
-    titleAccent: 'as the Heselo panel.',
+    title: 'Everything a shift needs,',
+    titleAccent: 'in one panel.',
     intro:
-      'What you see in the admin nav is what we describe here: live floor, schedule, cash, catalog, customers, and stats.',
+      'Bookings, live sessions, cash, stock, and customers — all working in the product today.',
     items: [
       {
         title: 'Live tracking',
         desc: 'Active sessions, add products, pause/stop, receipts, and payment — the real floor state.',
-        points: ['Add products', 'Pay / close', 'Delete behind a code'],
       },
       {
         title: 'Schedule & reservations',
         desc: 'Tables and rooms on one schedule. Reservation list, transfer, cancel, and history.',
-        points: ['Schedule', 'Reservations', 'Past days protected'],
       },
       {
         title: 'Cash',
         desc: 'Open/close shift, transactions, cash report, and cash count — day and shift stay separate.',
-        points: ['Cash drawer', 'Cash report', 'Cash reconciliation'],
       },
       {
         title: 'Products, stock, sale',
         desc: 'Product catalog, inventory counts, and walk-in quick sale on the same list.',
-        points: ['Products', 'Inventory', 'Quick sale'],
       },
       {
         title: 'Customers',
         desc: 'Customer cards, history, and import — tied to reservations and live sessions.',
-        points: ['Customers', 'Import', 'Visit history'],
       },
       {
         title: 'Stats & settings',
         desc: 'Payment, customer, and inventory statistics; staff, permissions, protection code, and price calculator.',
-        points: ['Statistics', 'Permissions', 'Protection code'],
       },
     ],
   },
@@ -292,8 +286,8 @@ export const en: Messages = {
   journey: {
     navLabel: 'Next step',
     insidePanel: {
-      prompt: 'The same modules',
-      label: 'are on the features page',
+      prompt: 'Every screen in detail',
+      label: 'is on the features page',
     },
     priceForType: {
       prompt: 'The plan for this type',
@@ -332,57 +326,47 @@ export const en: Messages = {
   featuresPage: {
     eyebrow: 'Features',
     title: 'Reservations, cash, and inventory — one panel',
-    intro:
-      'This list matches the Heselo admin navigation — the same modules as in the product, not invented for marketing.',
+    intro: 'Everything below is working in the product today — not a roadmap.',
     solutionLinkLabel: 'View solution page',
     modules: [
       {
         title: 'Live tracking',
         desc: 'Active floor sessions: add products or amounts, pause, stop, receipts, payment, and delete (behind a code).',
-        bullets: ['Session status', 'Products / amounts', 'Receipt print'],
       },
       {
         title: 'Schedule',
         desc: 'Day and week views for tables, rooms, and other resources — the same data as reservations.',
-        bullets: ['Tables', 'Rooms', 'Resource pick'],
       },
       {
         title: 'Reservations',
         desc: 'List and form: customer, time, labels, pre-order, collect payment, transfer, cancel, and history.',
-        bullets: ['New booking', 'Payment', 'History'],
         solutionSlug: 'reservations',
       },
       {
         title: 'Cash, report, reconciliation',
         desc: 'Open/close shift, transactions, closed-day history, cash report, and cash count.',
-        bullets: ['Shift', 'Cash / bank / POS', 'Period close'],
         solutionSlug: 'pos',
       },
       {
         title: 'Products, inventory, quick sale',
         desc: 'Catalog prices, stock balances and count logs; walk-in sale without a booking.',
-        bullets: ['Catalog', 'Counts', 'Quick sale'],
         solutionSlug: 'inventory',
       },
       {
         title: 'Customers',
         desc: 'Customer cards, source/profile, and import — one database with reservations and sessions.',
-        bullets: ['Cards', 'Import', 'History'],
       },
       {
         title: 'Statistics',
         desc: 'Payment, customer, and inventory statistics — overview, slices, and compare.',
-        bullets: ['Payments', 'Customers', 'Inventory'],
       },
       {
         title: 'Price calculator',
         desc: 'Estimates from resource and tariff rules — the same rules as bookings and live sessions.',
-        bullets: ['Tariffs', 'Resource', 'Duration'],
       },
       {
         title: 'Settings & security',
         desc: 'Staff invites, page-and-button permissions, venue protection code, receipts, and other venue settings.',
-        bullets: ['Permissions', 'Protection code', 'Staff'],
       },
     ],
   },

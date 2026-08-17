@@ -20,11 +20,6 @@ const p = messages.pillars
           <article class="card">
             <h3 class="type-card-title">{item.title}</h3>
             <p>{item.desc}</p>
-            <ul class="tag-list">
-              {item.points.map((point) => (
-                <li>{point}</li>
-              ))}
-            </ul>
           </article>
         ))
       }
@@ -34,7 +29,7 @@ const p = messages.pillars
 
 <style>
   p {
-    margin: 0.4rem 0 0.85rem;
+    margin: 0.4rem 0 0;
     color: var(--ink-muted);
     font-size: var(--text-sm);
   }

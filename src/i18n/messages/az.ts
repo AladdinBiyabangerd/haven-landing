@@ -96,40 +96,34 @@ export const az: Messages = {
   },
   pillars: {
     eyebrow: 'Nə daxildir',
-    title: 'Heselo panelindəki',
-    titleAccent: 'eyni modullar.',
+    title: 'Bir növbə üçün lazım olan hər şey',
+    titleAccent: 'bir paneldə.',
     intro:
-      'Ana menyudakı modullar burada da eynidir: canlı izləmə, cədvəl, kassa, kataloq, müştərilər və statistika.',
+      'Rezervasiya, canlı sessiya, kassa, anbar və müştərilər — hamısı bu gün məhsulda işləyir.',
     items: [
       {
         title: 'Canlı izləmə',
         desc: 'Aktiv sessiyalar, məhsul əlavəsi, pauza/dayandırma, qəbz və ödəniş — zalın real vəziyyəti.',
-        points: ['Məhsul əlavə et', 'Ödəniş / bağlama', 'Silmə üçün kod'],
       },
       {
         title: 'Cədvəl və rezervasiyalar',
         desc: 'Masa və otaq eyni cədvəldə. Rezervasiya siyahısı, köçürmə, ləğv və tarixçə.',
-        points: ['Cədvəl', 'Rezervasiyalar', 'Keçmiş gün qorunur'],
       },
       {
         title: 'Kassa',
         desc: 'Növbə aç/bağla, əməliyyatlar, kassa hesabatı və kassa sayımı — gün və növbə ayrı qalır.',
-        points: ['Növbə aç/bağla', 'Kassa hesabatı', 'Kassa sayımı'],
       },
       {
         title: 'Məhsullar, anbar, satış',
         desc: 'Məhsul kataloqu, anbar sayımı və bron olmadan sürətli satış — eyni siyahı üzərində.',
-        points: ['Məhsullar', 'Anbar', 'Sürətli satış'],
       },
       {
         title: 'Müştərilər',
         desc: 'Müştəri kartları, tarixçə və idxal — rezervasiya və canlı sessiya ilə bağlı.',
-        points: ['Kartlar', 'İdxal', 'Ziyarət tarixçəsi'],
       },
       {
         title: 'Statistika və ayarlar',
         desc: 'Ödəniş, müştəri və anbar statistikası; işçilər, icazələr, qoruma kodu və qiymət hesablama.',
-        points: ['Statistika', 'İcazələr', 'Qoruma kodu'],
       },
     ],
   },
@@ -293,7 +287,7 @@ export const az: Messages = {
   journey: {
     navLabel: 'Növbəti addım',
     insidePanel: {
-      prompt: 'Panelin içindəki eyni modullar',
+      prompt: 'Hər ekran ətraflı şəkildə',
       label: 'funksiyalar səhifəsindədir',
     },
     priceForType: {
@@ -333,57 +327,47 @@ export const az: Messages = {
   featuresPage: {
     eyebrow: 'Funksiyalar',
     title: 'Rezervasiya, kassa və anbar — eyni paneldə',
-    intro:
-      'Aşağıdakı siyahı Heselo admin panelinin naviqasiyasına uyğundur — marketinq üçün uydurulmayıb.',
+    intro: 'Aşağıdakıların hamısı bu gün məhsulda işləyir — gələcək planlar deyil.',
     solutionLinkLabel: 'Həll səhifəsinə bax',
     modules: [
       {
         title: 'Canlı izləmə',
         desc: 'Zaldakı aktiv sessiyalar: məhsul və məbləğ əlavəsi, pauza, dayandırma, qəbz, ödəniş və silmə (kodla).',
-        bullets: ['Sessiya statusu', 'Məhsul / məbləğ', 'Qəbz çapı'],
       },
       {
         title: 'Cədvəl',
         desc: 'Gün və həftə üzrə masa, otaq və digər resursların cədvəli — rezervasiya ilə eyni məlumat.',
-        bullets: ['Masa', 'Otaq', 'Resurs seçimi'],
       },
       {
         title: 'Rezervasiyalar',
         desc: 'Siyahı və forma: müştəri, vaxt, etiket, əvvəlcədən sifariş, ödəniş toplama, köçürmə, ləğv və tarixçə.',
-        bullets: ['Yeni rezerv', 'Ödəniş', 'Tarixçə'],
         solutionSlug: 'reservations',
       },
       {
         title: 'Kassa, hesabat, sayım',
         desc: 'Növbə aç/bağla, əməliyyatlar, bağlanmış gün tarixçəsi, kassa hesabatı və kassa sayımı.',
-        bullets: ['Növbə', 'Nağd / bank / POS', 'Dövr bağlanışı'],
         solutionSlug: 'pos',
       },
       {
         title: 'Məhsullar, anbar, sürətli satış',
         desc: 'Kataloq qiymətləri, anbar qalıqları və sayım jurnalları; rezervsiz satış bron olmadan.',
-        bullets: ['Kataloq', 'Sayım', 'Sürətli satış'],
         solutionSlug: 'inventory',
       },
       {
         title: 'Müştərilər',
         desc: 'Müştəri kartları, mənbə/profil və idxal — rezervasiya və sessiya ilə eyni məlumat bazası.',
-        bullets: ['Kartlar', 'İdxal', 'Tarixçə'],
       },
       {
         title: 'Statistika',
         desc: 'Ödəniş statistikası, müştəri statistikası və anbar statistikası — icmal, kəsim və müqayisə.',
-        bullets: ['Ödəniş', 'Müştəri', 'Anbar'],
       },
       {
         title: 'Qiymət hesablama',
         desc: 'Resurs və tarif qaydalarına görə qiymət təxmini — rezervasiya və canlı sessiya ilə eyni qaydalar.',
-        bullets: ['Tariflər', 'Resurs', 'Müddət'],
       },
       {
         title: 'Ayarlar və təhlükəsizlik',
         desc: 'İşçi dəvəti, səhifə-düymə icazələri, məkan qoruma kodu, qəbz və digər məkan ayarları.',
-        bullets: ['İcazələr', 'Qoruma kodu', 'İşçilər'],
       },
     ],
   },

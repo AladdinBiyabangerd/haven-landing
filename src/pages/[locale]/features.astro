@@ -32,11 +32,6 @@ const page = messages.featuresPage
             <article class="card">
               <h2 class="type-card-title">{mod.title}</h2>
               <p>{mod.desc}</p>
-              <ul class="tag-list">
-                {mod.bullets.map((b) => (
-                  <li>{b}</li>
-                ))}
-              </ul>
               {
                 mod.solutionSlug ? (
                   <a class="link-inline module-link" href={localePath(locale, `/solutions/${mod.solutionSlug}`)}>
@@ -73,7 +68,7 @@ const page = messages.featuresPage
     align-items: flex-start;
   }
   p {
-    margin: 0.4rem 0 0.85rem;
+    margin: 0.4rem 0 0;
     color: var(--ink-muted);
     font-size: var(--text-sm);
     flex: 1;

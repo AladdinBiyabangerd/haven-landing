@@ -92,7 +92,6 @@ export type Messages = {
     items: Array<{
       title: string
       desc: string
-      points: string[]
     }>
   }
   how: {
@@ -186,7 +185,6 @@ export type Messages = {
     modules: Array<{
       title: string
       desc: string
-      bullets: string[]
       /** Link to a feature-focused solution page */
       solutionSlug?: 'reservations' | 'pos' | 'inventory'
     }>
