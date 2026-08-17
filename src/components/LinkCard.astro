@@ -1,0 +1,21 @@
+---
+/**
+ * One card = one destination. The heading is the link, so the card never
+ * repeats the same title twice (title + "read more about <title>").
+ */
+interface Props {
+  href: string
+  title: string
+  desc?: string
+  /** Heading level for correct document outline (default h3) */
+  as?: 'h2' | 'h3'
+}
+
+const { href, title, desc, as = 'h3' } = Astro.props
+const Heading = as
+---
+
+<a class="card card-link" href={href}>
+  <Heading class="type-card-title card-link__title">{title}</Heading>
+  {desc ? <p>{desc}</p> : null}
+</a>

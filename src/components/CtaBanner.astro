@@ -1,0 +1,95 @@
+---
+/**
+ * Single closing call-to-action block, shared by the solution, guide and
+ * generic CTA sections so every page ends the same way.
+ */
+interface Props {
+  title: string
+  body: string
+  href: string
+  label: string
+  secondaryHref?: string
+  secondaryLabel?: string
+  external?: boolean
+  titleAttrs?: Record<string, string | undefined>
+  bodyAttrs?: Record<string, string | undefined>
+  primaryAttrs?: Record<string, string | undefined>
+  secondaryAttrs?: Record<string, string | undefined>
+}
+
+const {
+  title,
+  body,
+  href,
+  label,
+  secondaryHref,
+  secondaryLabel,
+  external = false,
+  titleAttrs = {},
+  bodyAttrs = {},
+  primaryAttrs = {},
+  secondaryAttrs = {},
+} = Astro.props
+---
+
+<div class="banner">
+  <div class="banner__copy">
+    <h2 class="type-section" {...titleAttrs}>{title}</h2>
+    <p {...bodyAttrs}>{body}</p>
+  </div>
+  <div class="banner__actions">
+    <a
+      class="btn btn-primary"
+      href={href}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+      {...primaryAttrs}
+    >
+      {label}
+    </a>
+    {
+      secondaryHref && secondaryLabel ? (
+        <a class="btn btn-ghost" href={secondaryHref} {...secondaryAttrs}>
+          {secondaryLabel}
+        </a>
+      ) : null
+    }
+  </div>
+</div>
+
+<style>
+  .banner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: clamp(1.5rem, 3.5vw, 2.25rem);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(15, 118, 110, 0.2);
+    background: linear-gradient(135deg, #ffffff, #e8f7f4);
+  }
+  .banner__copy {
+    max-width: 34rem;
+  }
+  .banner h2 {
+    max-width: 20ch;
+  }
+  .banner p {
+    margin: 0.5rem 0 0;
+    color: var(--ink-muted);
+  }
+  .banner__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    flex-shrink: 0;
+  }
+  @media (min-width: 800px) {
+    .banner {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+</style>
