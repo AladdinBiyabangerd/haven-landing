@@ -69,13 +69,14 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
           <a href={localePath(locale, `/guides/${item.slug}`)}>{item.label}</a>
         ))
       }
-      <h3 class="type-eyebrow legal-head">{messages.footer.legal}</h3>
-      <a href={localePath(locale, '/privacy')}>{messages.footer.privacy}</a>
-      <a href={localePath(locale, '/terms')}>{messages.footer.terms}</a>
     </div>
   </div>
   <div class="container footer__bottom">
     <span class="type-meta">© {year} Heselo. {messages.footer.rights}</span>
+    <nav class="footer__legal" aria-label={messages.footer.legal}>
+      <a href={localePath(locale, '/privacy')}>{messages.footer.privacy}</a>
+      <a href={localePath(locale, '/terms')}>{messages.footer.terms}</a>
+    </nav>
   </div>
 </footer>
 
@@ -112,23 +113,36 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
     margin: 0 0 0.85rem;
     color: var(--ink-subtle);
   }
-  .legal-head {
-    margin-top: 1.35rem;
-  }
   .footer__grid a {
     display: block;
-    padding: 0.28rem 0;
-    font-size: var(--text-md);
+    padding: 0.25rem 0;
+    font-size: var(--text-sm);
     color: var(--ink-muted);
   }
   .footer__grid a:hover {
     color: var(--ink);
   }
   .footer__bottom {
-    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    margin-top: 2.25rem;
     padding-top: 1.25rem;
     border-top: 1px solid var(--line);
     color: var(--ink-subtle);
+  }
+  .footer__legal {
+    display: flex;
+    gap: 1.25rem;
+  }
+  .footer__legal a {
+    font-size: var(--text-sm);
+    color: var(--ink-subtle);
+  }
+  .footer__legal a:hover {
+    color: var(--ink);
   }
   @media (min-width: 900px) {
     .footer__grid {

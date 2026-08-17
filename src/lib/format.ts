@@ -17,6 +17,19 @@ export function formatMoney(amount: number, locale: Locale): string {
   }).format(amount)
 }
 
+/** "19–39 ₼" rather than "19 ₼–39 ₼". */
+export function formatMoneyRange(low: number, high: number, locale: Locale): string {
+  const whole = Number.isInteger(low) && Number.isInteger(high)
+  const nf = new Intl.NumberFormat(intlLocale[locale], {
+    style: 'currency',
+    currency: 'AZN',
+    minimumFractionDigits: whole ? 0 : 2,
+    maximumFractionDigits: 2,
+  })
+  if (typeof nf.formatRange === 'function') return nf.formatRange(low, high)
+  return `${low}–${nf.format(high)}`
+}
+
 export function fillTemplate(template: string, vars: Record<string, string | number>): string {
   return template.replace(/\{(\w+)\}/g, (_, key: string) =>
     Object.prototype.hasOwnProperty.call(vars, key) ? String(vars[key]) : `{${key}}`,

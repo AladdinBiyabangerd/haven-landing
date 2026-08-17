@@ -9,6 +9,7 @@ import {
   getSolutionsBySlugs,
   getSolutionsHub,
 } from '@/data/solutions'
+import LinkCard from '@/components/LinkCard.astro'
 import { localePath } from '@/lib/site'
 import { truncateText } from '@/lib/format'
 
@@ -43,39 +44,37 @@ const features = getSolutionsBySlugs(locale, FEATURE_SOLUTION_SLUGS)
         <p class="lead">{hub.intro}</p>
       </header>
       <h2 class="group-title">{hub.primaryTitle}</h2>
-      <ul class="cards">
+      <ul class="card-grid">
         {
           primary.map((item) => (
             <li>
-              <article>
-                <h3 class="type-card-title">{item.shortTitle}</h3>
-                <p>{truncateText(item.intro, 160, messages.common.truncatedEllipsis)}</p>
-                <a href={localePath(locale, `/solutions/${item.slug}`)}>
-                  {item.h1}
-                </a>
-              </article>
+              <LinkCard
+                href={localePath(locale, `/solutions/${item.slug}`)}
+                title={item.h1}
+                desc={truncateText(item.intro, 140, messages.common.truncatedEllipsis)}
+              />
             </li>
           ))
         }
       </ul>
       <h2 class="group-title">{hub.featuresTitle}</h2>
-      <ul class="cards">
+      <ul class="card-grid">
         {
           features.map((item) => (
             <li>
-              <article>
-                <h3 class="type-card-title">{item.shortTitle}</h3>
-                <p>{truncateText(item.intro, 160, messages.common.truncatedEllipsis)}</p>
-                <a href={localePath(locale, `/solutions/${item.slug}`)}>
-                  {item.h1}
-                </a>
-              </article>
+              <LinkCard
+                href={localePath(locale, `/solutions/${item.slug}`)}
+                title={item.h1}
+                desc={truncateText(item.intro, 140, messages.common.truncatedEllipsis)}
+              />
             </li>
           ))
         }
       </ul>
       <p class="guides-link">
-        <a href={localePath(locale, '/guides')}>{messages.nav.guides}{messages.common.linkArrow}</a>
+        <a class="link-inline" href={localePath(locale, '/guides')}>
+          {messages.nav.guides}{messages.common.linkArrow}
+        </a>
       </p>
     </div>
   </section>
@@ -85,45 +84,9 @@ const features = getSolutionsBySlugs(locale, FEATURE_SOLUTION_SLUGS)
 <style>
   .group-title {
     margin: 2rem 0 1rem;
-    font-size: var(--text-lg);
-  }
-  .cards {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-  }
-  article {
-    padding: 1.35rem 1.25rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    background: var(--surface);
-    display: grid;
-    gap: 0.65rem;
-    height: 100%;
-  }
-  p {
-    margin: 0;
-    color: var(--ink-muted);
-  }
-  a {
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
+    font-size: var(--text-xl);
   }
   .guides-link {
-    margin: 1.5rem 0 0;
-  }
-  @media (min-width: 800px) {
-    .cards {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media (min-width: 1100px) {
-    .cards {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+    margin: 1.25rem 0 0;
   }
 </style>

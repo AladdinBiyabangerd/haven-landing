@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import Faq from '@/components/Faq.astro'
 import NextThought from '@/components/NextThought.astro'
+import CtaBanner from '@/components/CtaBanner.astro'
 import { resolveLocale, LOCALES } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 import { getGuide, GUIDE_SLUGS } from '@/data/guides'
@@ -64,7 +65,8 @@ const faqMessages = {
   }}
 >
   <article class="section">
-    <div class="container narrow">
+    <div class="container">
+      <div class="narrow">
       <header class="section-head">
         <p class="eyebrow">{messages.nav.guides}</p>
         <h1 class="type-page-title">{guide.h1}</h1>
@@ -78,7 +80,7 @@ const faqMessages = {
       {
         guide.sections.map((section) => (
           <section aria-labelledby={section.id}>
-            <h2 id={section.id} class="type-section">
+            <h2 id={section.id} class="sub">
               {section.title}
             </h2>
             {section.paragraphs.map((p) => (
@@ -98,12 +100,12 @@ const faqMessages = {
       {
         related.length > 0 ? (
           <nav class="related" aria-label={messages.nav.solutions}>
-            <h2 class="type-section">{messages.nav.solutions}</h2>
+            <h2 class="sub">{messages.nav.solutions}</h2>
             <ul>
               {related.map((item) =>
                 item ? (
                   <li>
-                    <a href={localePath(locale, `/solutions/${item.slug}`)}>{item.h1}</a>
+                    <a class="link-inline" href={localePath(locale, `/solutions/${item.slug}`)}>{item.h1}</a>
                   </li>
                 ) : null,
               )}
@@ -113,8 +115,11 @@ const faqMessages = {
       }
 
       <p class="hub-back">
-        <a href={localePath(locale, '/guides')}>{messages.nav.guides}{messages.common.linkArrow}</a>
+        <a class="link-inline" href={localePath(locale, '/guides')}>
+          {messages.nav.guides}{messages.common.linkArrow}
+        </a>
       </p>
+      </div>
     </div>
   </article>
 
@@ -136,15 +141,14 @@ const faqMessages = {
 
   <Faq locale={locale} messages={faqMessages} />
 
-  <section class="section">
+  <section class="section section-tight">
     <div class="container">
-      <div class="banner">
-        <div>
-          <h2 class="type-section">{guide.ctaTitle}</h2>
-          <p class="type-lead">{guide.ctaBody}</p>
-        </div>
-        <a class="btn btn-primary" href={contactPath(locale, persistVenueType || undefined)}>{messages.cta.button}</a>
-      </div>
+      <CtaBanner
+        title={guide.ctaTitle}
+        body={guide.ctaBody}
+        href={contactPath(locale, persistVenueType || undefined)}
+        label={messages.cta.button}
+      />
     </div>
   </section>
   {
@@ -161,26 +165,27 @@ const faqMessages = {
 </BaseLayout>
 
 <style>
-  .narrow {
-    max-width: 760px;
-  }
   .meta {
     margin: 0.5rem 0 0;
     color: var(--ink-subtle);
+  }
+  /* Sub-headings stay below the H1 so the page reads as one article. */
+  .sub {
+    font-size: var(--text-2xl);
   }
   section + section {
     margin-top: 2rem;
   }
   .body {
-    margin: 0.75rem 0 0;
+    margin: 0.6rem 0 0;
     color: var(--ink-muted);
   }
   .bullets {
-    margin: 0.85rem 0 0;
+    margin: 0.75rem 0 0;
     padding: 0;
     list-style: none;
     display: grid;
-    gap: 0.55rem;
+    gap: 0.5rem;
   }
   .bullets li {
     position: relative;
@@ -192,8 +197,8 @@ const faqMessages = {
     position: absolute;
     left: 0;
     top: 0.55rem;
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.35rem;
+    height: 0.35rem;
     border-radius: 999px;
     background: var(--accent);
   }
@@ -209,44 +214,7 @@ const faqMessages = {
     display: grid;
     gap: 0.5rem;
   }
-  .related a {
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-  }
   .hub-back {
-    margin: 2rem 0 0;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--line);
-  }
-  .hub-back a {
-    font-weight: 600;
-    color: var(--accent);
-  }
-  .banner {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: clamp(1.6rem, 4vw, 2.4rem);
-    border-radius: calc(var(--radius-lg) + 4px);
-    border: 1px solid rgba(15, 118, 110, 0.22);
-    background:
-      radial-gradient(600px 200px at 10% 0%, rgba(20, 184, 166, 0.18), transparent 55%),
-      linear-gradient(135deg, #ffffff, #e8f7f4);
-    box-shadow: var(--shadow);
-  }
-  .banner p {
-    margin: 0.65rem 0 0;
-    color: var(--ink-muted);
-    max-width: 36rem;
-  }
-  @media (min-width: 800px) {
-    .banner {
-      flex-direction: row;
-      align-items: center;
-    }
+    margin: 1.5rem 0 0;
   }
 </style>
