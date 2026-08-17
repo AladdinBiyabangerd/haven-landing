@@ -71,7 +71,8 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     <span>{c.venue}</span>
     <input name="venue" type="text" autocomplete="organization" maxlength="200" />
   </label>
-  <fieldset class="criteria">
+  <!-- Only a custom quote needs these numbers — hidden until the visitor asks for one. -->
+  <fieldset class="criteria" data-criteria hidden>
     <legend class="criteria__hint">{c.criteriaHint}</legend>
     <div class="row row--3">
       <label>
@@ -97,15 +98,13 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   <p class="alt">
     {c.alt}
   </p>
+  <!-- WhatsApp already leads this page and sits in the floating button. -->
   <ul class="channels">
-    <li>
-      <a href={waHref} target="_blank" rel="noopener noreferrer" data-wa-typed>{c.whatsapp}</a>
-    </li>
     <li>
       <a href={telUrl()}>{phoneDisplay}</a>
     </li>
     <li>
-      <a href={`mailto:${SITE.contactEmail}`}>{c.emailWrite} · {SITE.contactEmail}</a>
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
     </li>
   </ul>
 </form>
@@ -182,6 +181,8 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     if (isCustom) {
       if (intentInput instanceof HTMLInputElement) intentInput.value = 'custom'
       if (customNotice instanceof HTMLElement) customNotice.hidden = false
+      const criteria = form.querySelector('[data-criteria]')
+      if (criteria instanceof HTMLElement) criteria.hidden = false
       customFields.forEach((field) => {
         if (field instanceof HTMLInputElement) field.required = true
       })
@@ -341,6 +342,9 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     border: 0;
     display: grid;
     gap: 0.55rem;
+  }
+  .criteria[hidden] {
+    display: none;
   }
   .criteria__hint {
     padding: 0;

@@ -83,7 +83,8 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
 <style>
   .footer {
     border-top: 1px solid var(--line);
-    padding: 3.5rem 0 2rem;
+    /* Extra bottom room so the floating button never sits on the last line. */
+    padding: 3rem 0 4.5rem;
     background: rgba(255, 255, 255, 0.55);
   }
   .footer__grid {
@@ -122,11 +123,11 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
   .footer__grid a:hover {
     color: var(--ink);
   }
+  /* Left-aligned: the floating WhatsApp button covers the bottom-right corner. */
   .footer__bottom {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     gap: 0.5rem 1.5rem;
     margin-top: 2.25rem;
     padding-top: 1.25rem;

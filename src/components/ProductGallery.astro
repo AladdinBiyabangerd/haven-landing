@@ -1,17 +1,15 @@
 ---
-import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import ProductShot from '@/components/ProductShot.astro'
 import type { ProductShotId } from '@/lib/productShots'
 import { FEATURE_GALLERY_SHOTS } from '@/lib/productShots'
 
 interface Props {
-  locale: Locale
   messages: Messages
   /** Subset to show; defaults to full feature set */
   shots?: ProductShotId[]
 }
-const { locale, messages, shots = FEATURE_GALLERY_SHOTS } = Astro.props
+const { messages, shots = FEATURE_GALLERY_SHOTS } = Astro.props
 const g = messages.productGallery
 ---
 
