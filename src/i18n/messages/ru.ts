@@ -28,9 +28,7 @@ export const ru: Messages = {
   },
   footer: {
     product: 'Продукт',
-    company: 'Компания',
     solutions: 'Решения',
-    learn: 'Узнать',
     legal: 'Правовая информация',
     privacy: 'Конфиденциальность',
     terms: 'Условия',

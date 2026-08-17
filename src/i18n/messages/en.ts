@@ -28,9 +28,7 @@ export const en: Messages = {
   },
   footer: {
     product: 'Product',
-    company: 'Company',
     solutions: 'Solutions',
-    learn: 'Learn',
     legal: 'Legal',
     privacy: 'Privacy',
     terms: 'Terms',

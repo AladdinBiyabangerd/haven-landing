@@ -4,7 +4,6 @@ import type { Messages } from '@/i18n/types'
 import { localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
 import { formatPhone } from '@/lib/format'
 import { FOOTER_SOLUTION_SLUGS, getSolutionsBySlugs } from '@/data/solutions'
-import { TEASER_GUIDE_SLUGS, getGuides } from '@/data/guides'
 import BrandMark from '@/components/BrandMark.astro'
 
 interface Props {
@@ -18,13 +17,6 @@ const footerSolutions = getSolutionsBySlugs(locale, FOOTER_SOLUTION_SLUGS).map((
   slug: item.slug,
   label: item.shortTitle,
 }))
-
-const footerGuides = getGuides(locale)
-  .filter((item) => (TEASER_GUIDE_SLUGS as readonly string[]).includes(item.slug))
-  .map((item) => ({
-    slug: item.slug,
-    label: item.shortTitle,
-  }))
 
 const phoneDisplay = formatPhone(SITE.contactPhone)
 const waHref = whatsappUrl(messages.contact.whatsappPrefill)
@@ -50,25 +42,20 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       <h3 class="type-eyebrow">{messages.footer.product}</h3>
       <a href={localePath(locale, '/features')}>{messages.nav.features}</a>
       <a href={localePath(locale, '/pricing')}>{messages.nav.pricing}</a>
+      <a href={localePath(locale, '/guides')}>{messages.nav.guides}</a>
       <a href={localePath(locale, '/contact')}>{messages.nav.demo}</a>
     </div>
-    <div>
-      <h3 class="type-eyebrow">{messages.footer.solutions}</h3>
-      <a href={localePath(locale, '/solutions')}>{messages.nav.solutions}</a>
-      {
-        footerSolutions.map((item) => (
-          <a href={localePath(locale, `/solutions/${item.slug}`)}>{item.label}</a>
-        ))
-      }
-    </div>
-    <div>
-      <h3 class="type-eyebrow">{messages.footer.learn}</h3>
-      <a href={localePath(locale, '/guides')}>{messages.nav.guides}</a>
-      {
-        footerGuides.map((item) => (
-          <a href={localePath(locale, `/guides/${item.slug}`)}>{item.label}</a>
-        ))
-      }
+    <div class="footer__solutions">
+      <h3 class="type-eyebrow">
+        <a class="footer__hub" href={localePath(locale, '/solutions')}>{messages.footer.solutions}</a>
+      </h3>
+      <div class="footer__links">
+        {
+          footerSolutions.map((item) => (
+            <a href={localePath(locale, `/solutions/${item.slug}`)}>{item.label}</a>
+          ))
+        }
+      </div>
     </div>
   </div>
   <div class="container footer__bottom">
@@ -114,6 +101,17 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
     margin: 0 0 0.85rem;
     color: var(--ink-subtle);
   }
+  /* The group heading is the hub link, so "Solutions" is not listed twice. */
+  .footer__grid .footer__hub {
+    display: inline;
+    padding: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+  }
+  .footer__grid .footer__hub:hover {
+    color: var(--accent);
+  }
   .footer__grid a {
     display: block;
     padding: 0.25rem 0;
@@ -145,9 +143,14 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
   .footer__legal a:hover {
     color: var(--ink);
   }
+  /* Eight short destinations pair up at every width rather than running as one long stack. */
+  .footer__links {
+    columns: 2;
+    column-gap: 1.5rem;
+  }
   @media (min-width: 900px) {
     .footer__grid {
-      grid-template-columns: 1.35fr 1fr 1fr 1fr;
+      grid-template-columns: 1.35fr 1fr 1.6fr;
     }
   }
 </style>

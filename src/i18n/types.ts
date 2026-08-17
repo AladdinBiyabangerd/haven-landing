@@ -48,9 +48,7 @@ export type Messages = {
   }
   footer: {
     product: string
-    company: string
     solutions: string
-    learn: string
     legal: string
     privacy: string
     terms: string

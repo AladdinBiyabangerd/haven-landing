@@ -28,9 +28,7 @@ export const az: Messages = {
   },
   footer: {
     product: 'Məhsul',
-    company: 'Şirkət',
     solutions: 'Həllər',
-    learn: 'Öyrən',
     legal: 'Hüquqi',
     privacy: 'Məxfilik',
     terms: 'Şərtlər',
