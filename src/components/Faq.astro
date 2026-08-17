@@ -12,85 +12,84 @@ const f = messages.faq
 ---
 
 <section class="section" id="faq">
-  <div class="container narrow">
-    <div class="section-head">
-      <p class="eyebrow">{f.eyebrow}</p>
-      <h2 class="type-section">{f.title}</h2>
-    </div>
-    <div class="list">
-      {
-        f.items.map((item, i) => (
-          <details open={i === 0}>
-            <summary class="type-card-title">{item.q}</summary>
-            <p>
-              {item.a}
-              {item.href && item.linkLabel ? (
-                <>
-                  {' '}
-                  <a
-                    href={localePath(locale, item.href)}
-                    data-journey-link={item.href === '/contact' ? 'contact' : undefined}
-                  >
-                    {item.linkLabel}
-                  </a>
-                  .
-                </>
-              ) : null}
-            </p>
-          </details>
-        ))
-      }
+  <div class="container">
+    <div class="narrow">
+      <div class="section-head">
+        <p class="eyebrow">{f.eyebrow}</p>
+        <h2 class="type-section">{f.title}</h2>
+      </div>
+      <div class="list">
+        {
+          f.items.map((item, i) => (
+            <details open={i === 0}>
+              <summary>{item.q}</summary>
+              <p>
+                {item.a}
+                {item.href && item.linkLabel ? (
+                  <>
+                    {' '}
+                    <a
+                      class="link-inline"
+                      href={localePath(locale, item.href)}
+                      data-journey-link={item.href === '/contact' ? 'contact' : undefined}
+                    >{item.linkLabel}</a>.
+                  </>
+                ) : null}
+              </p>
+            </details>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .narrow {
-    max-width: 760px;
-  }
+  /* Rules, not boxes — a stack of bordered cards competes with the answers. */
   .list {
-    display: grid;
-    gap: 0.65rem;
+    border-top: 1px solid var(--line);
   }
   details {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--surface);
-    padding: 0.2rem 1rem 0.2rem;
-  }
-  details[open] {
-    border-color: rgba(15, 118, 110, 0.28);
+    border-bottom: 1px solid var(--line);
   }
   summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     cursor: pointer;
     list-style: none;
-    padding: 1rem 0;
+    padding: 0.95rem 0;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: var(--tracking-display);
+    line-height: var(--lh-snug);
   }
   summary::-webkit-details-marker {
     display: none;
   }
   summary::after {
-    content: '+';
-    float: right;
-    color: var(--accent);
-    font-family: var(--font-display);
-    font-weight: 700;
+    content: '';
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.25rem;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg) translate(-25%, -25%);
+    transition: transform 0.2s var(--ease);
   }
   details[open] summary::after {
-    content: '–';
+    transform: rotate(-135deg) translate(-25%, -25%);
+  }
+  summary:hover {
+    color: var(--accent-deep);
   }
   p {
-    margin: 0 0 1rem;
+    margin: 0 0 1.1rem;
+    max-width: 42rem;
     color: var(--ink-muted);
-  }
-  a {
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 0.18em;
-    text-decoration-thickness: 1px;
-  }
-  a:hover {
-    color: var(--accent-deep);
+    font-size: var(--text-sm);
   }
 </style>

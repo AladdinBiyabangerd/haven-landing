@@ -7,9 +7,13 @@ const intlLocale: Record<Locale, string> = {
 }
 
 export function formatMoney(amount: number, locale: Locale): string {
+  // Plans are whole manats — "9 ₼" reads as a price, "9,00 ₼" reads as a receipt.
+  const whole = Number.isInteger(amount)
   return new Intl.NumberFormat(intlLocale[locale], {
     style: 'currency',
     currency: 'AZN',
+    minimumFractionDigits: whole ? 0 : 2,
+    maximumFractionDigits: 2,
   }).format(amount)
 }
 
