@@ -152,22 +152,6 @@ export const ru: Messages = {
       },
     ],
   },
-  showcase: {
-    eyebrow: 'В продукте',
-    title: 'Столы и комнаты',
-    titleAccent: 'на одном табло.',
-    intro:
-      'Статус и остаток — на языке зала, в согласии с учётом владельца.',
-    liveLabel: 'В зале',
-    dueLabel: 'К оплате',
-    shiftLabel: 'Смена открыта',
-    tables: [
-      { name: 'PS-1', status: 'Активен', meta: '1ч 24м · ₼ 38' },
-      { name: 'Караоке 2', status: 'Оплата', meta: 'Остаток ₼ 45' },
-      { name: 'Бильярд 3', status: 'Бронь', meta: '19:30 · 4 гостя' },
-      { name: 'VIP-комната', status: 'Свободна', meta: 'Готова' },
-    ],
-  },
   faq: {
     eyebrow: 'Вопросы',
     title: 'Частые вопросы',
@@ -261,7 +245,6 @@ export const ru: Messages = {
     updatedLabel: 'Последнее обновление:',
   },
   productShot: {
-    chromeLabel: 'Heselo · Панель',
     alts: {
       'live-floor': 'Heselo живой зал — активные сессии комнат и оплата',
       schedule: 'Heselo расписание — бронь комнат и столов',

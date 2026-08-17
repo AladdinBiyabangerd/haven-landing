@@ -152,22 +152,6 @@ export const en: Messages = {
       },
     ],
   },
-  showcase: {
-    eyebrow: 'In the product',
-    title: 'Tables and rooms',
-    titleAccent: 'on one board.',
-    intro:
-      'Status and balances in floor language, aligned with how owners keep the books.',
-    liveLabel: 'Live',
-    dueLabel: 'Due',
-    shiftLabel: 'Shift open',
-    tables: [
-      { name: 'PS-1', status: 'Active', meta: '1h 24m · ₼ 38' },
-      { name: 'Karaoke 2', status: 'Paying', meta: 'Due ₼ 45' },
-      { name: 'Billiards 3', status: 'Booked', meta: '19:30 · 4 guests' },
-      { name: 'VIP room', status: 'Free', meta: 'Ready' },
-    ],
-  },
   faq: {
     eyebrow: 'Questions',
     title: 'People ask us this often',
@@ -261,7 +245,6 @@ export const en: Messages = {
     updatedLabel: 'Last updated:',
   },
   productShot: {
-    chromeLabel: 'Heselo · Panel',
     alts: {
       'live-floor': 'Heselo live floor — active room sessions and payment',
       schedule: 'Heselo schedule — room and table booking timeline',

@@ -101,16 +101,6 @@ export type Messages = {
     titleAccent: string
     steps: Array<{ title: string; desc: string }>
   }
-  showcase: {
-    eyebrow: string
-    title: string
-    titleAccent: string
-    intro: string
-    liveLabel: string
-    dueLabel: string
-    shiftLabel: string
-    tables: Array<{ name: string; status: string; meta: string }>
-  }
   faq: {
     eyebrow: string
     title: string
@@ -164,7 +154,6 @@ export type Messages = {
     }>
   }
   productShot: {
-    chromeLabel: string
     alts: Record<ProductShotAltKey, string>
   }
   pwa: {

@@ -91,7 +91,7 @@ const faqMessages = {
       {
         productShotId ? (
           <div class="shot-wrap">
-            <ProductShot locale={locale} messages={messages} id={productShotId} />
+            <ProductShot messages={messages} id={productShotId} />
           </div>
         ) : null
       }
@@ -130,7 +130,7 @@ const faqMessages = {
       {
         extraShotId && extraShotId !== productShotId ? (
           <div class="shot-wrap">
-            <ProductShot locale={locale} messages={messages} id={extraShotId} />
+            <ProductShot messages={messages} id={extraShotId} />
           </div>
         ) : null
       }

@@ -25,24 +25,21 @@ const page = messages.featuresPage
         <p class="eyebrow">{page.eyebrow}</p>
         <h1 class="type-page-title">{page.title}</h1>
         <p class="lead">{page.intro}</p>
-        <p class="crosslink">
-          <a href={localePath(locale, '/solutions')}>{messages.nav.solutions}{messages.common.linkArrow}</a>
-        </p>
       </div>
-      <div class="modules">
+      <div class="card-grid">
         {
           page.modules.map((mod) => (
-            <article>
+            <article class="card">
               <h2 class="type-card-title">{mod.title}</h2>
               <p>{mod.desc}</p>
-              <ul>
+              <ul class="tag-list">
                 {mod.bullets.map((b) => (
                   <li>{b}</li>
                 ))}
               </ul>
               {
                 mod.solutionSlug ? (
-                  <a class="module-link" href={localePath(locale, `/solutions/${mod.solutionSlug}`)}>
+                  <a class="link-inline module-link" href={localePath(locale, `/solutions/${mod.solutionSlug}`)}>
                     {getSolution(locale, mod.solutionSlug)?.h1 ?? page.solutionLinkLabel}{messages.common.linkArrow}
                   </a>
                 ) : null
@@ -70,62 +67,19 @@ const page = messages.featuresPage
 </BaseLayout>
 
 <style>
-  .crosslink {
-    margin: 0.75rem 0 0;
-  }
-  .crosslink a {
-    font-weight: 600;
-    color: var(--accent);
-  }
-  .modules {
-    display: grid;
-    gap: 1rem;
-  }
   article {
-    padding: 1.4rem 1.3rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    background: var(--surface);
-    box-shadow: 0 8px 24px rgba(23, 40, 66, 0.04);
-  }
-  .type-card-title {
-    margin-bottom: 0.55rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   p {
-    margin: 0 0 0.9rem;
+    margin: 0.4rem 0 0.85rem;
     color: var(--ink-muted);
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  li {
-    padding: 0.28rem 0.65rem;
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    font-size: var(--text-xs);
-    color: var(--ink-muted);
+    font-size: var(--text-sm);
+    flex: 1;
   }
   .module-link {
-    margin-top: 0.35rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
+    margin-top: 0.85rem;
     font-size: var(--text-sm);
-  }
-  @media (min-width: 800px) {
-    .modules {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media (min-width: 1100px) {
-    .modules {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
   }
 </style>

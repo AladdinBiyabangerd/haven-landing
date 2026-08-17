@@ -152,22 +152,6 @@ export const az: Messages = {
       },
     ],
   },
-  showcase: {
-    eyebrow: 'Görünüş',
-    title: 'Masa və otaq',
-    titleAccent: 'eyni lövhədə.',
-    intro:
-      'Status və qalıq zalın dilindədir; sahibin hesab-kitab qaydaları ilə uyğun gəlir.',
-    liveLabel: 'Canlı',
-    dueLabel: 'Qalıq',
-    shiftLabel: 'Növbə açıqdır',
-    tables: [
-      { name: 'PS-1', status: 'Aktiv', meta: '1s 24d · ₼ 38' },
-      { name: 'Karaoke 2', status: 'Ödəniş', meta: 'Qalıq ₼ 45' },
-      { name: 'Bilyard 3', status: 'Rezerv', meta: '19:30 · 4 nəfər' },
-      { name: 'VIP otaq', status: 'Boş', meta: 'Hazırdır' },
-    ],
-  },
   faq: {
     eyebrow: 'Suallar',
     title: 'Tez-tez soruşulanlar',
@@ -262,7 +246,6 @@ export const az: Messages = {
     updatedLabel: 'Son yeniləmə:',
   },
   productShot: {
-    chromeLabel: 'Heselo · Panel',
     alts: {
       'live-floor': 'Heselo canlı izləmə ekranı — aktiv otaq sessiyaları və ödəniş',
       schedule: 'Heselo cədvəl ekranı — otaq və masa rezervasiyası timeline',
