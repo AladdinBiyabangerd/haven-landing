@@ -370,9 +370,8 @@ export const az: Messages = {
     eyebrow: 'Qiymətlər',
     title: 'Əvvəl məkan tipini seçin',
     intro:
-      'Hamısı aylıqdır. PS və bilyard 9 AZN-dən, antikafe 15-dən, karaoke və launj 19-dan. Əvvəl tipi seçin — tariflər stansiya, masa və ya otaq sayına görə açılır.',
+      'Hər tarif aylıqdır və bir məkanı əhatə edir. Qiymət stansiya, masa və ya otaq sayına görə dəyişir.',
     chooseType: 'Məkan tipi',
-    note: 'Qiymət 1 məkan üçündür. Daha böyük həcm və ya bir neçə filial — fərdi təklif.',
     cta: 'Demo istəyin',
     periodMonthly: '/ ay',
     periodOneTime: 'birdəfəlik',
@@ -420,7 +419,7 @@ export const az: Messages = {
     offers: {
       gaming: {
         name: 'Oyun klubu / PS',
-        intro: 'Aylıq. Stansiya sayına görə 9 / 15 / 25 AZN. Club Timer yalnız vaxt sayır — burada rezerv, sessiya və kassa bir yerdədir.',
+        intro: 'Club Timer yalnız vaxt sayır — burada rezerv, sessiya və kassa bir yerdədir.',
         plans: {
           starter: {
             forWhom: 'Kiçik PS klubu: bir zal, bir növbə',
@@ -459,7 +458,7 @@ export const az: Messages = {
       },
       billiards: {
         name: 'Bilyard',
-        intro: 'Aylıq. Masa sayına görə 9 / 15 / 25 AZN. Masa taymeri yox — rezerv, sessiya və kassa eyni paneldə.',
+        intro: 'Masa taymeri yox — rezerv, sessiya və kassa eyni paneldə.',
         plans: {
           starter: {
             forWhom: 'Kiçik bilyard zalı: bir neçə masa',
@@ -498,7 +497,7 @@ export const az: Messages = {
       },
       karaoke: {
         name: 'Karaoke',
-        intro: 'Aylıq. Otaq sayına görə 19 / 29 / 39 AZN. Otaq bronu itəndə bir axşamın gəliri gedir — ona görə otaq axını ayrıca tarifdir.',
+        intro: 'Otaq bronu itəndə bir axşamın gəliri gedir — ona görə otaq axını ayrıca tarifdir.',
         plans: {
           starter: {
             forWhom: 'Kiçik karaoke: bir neçə otaq',
@@ -537,7 +536,7 @@ export const az: Messages = {
       },
       lounge: {
         name: 'Otaqlı launj',
-        intro: 'Aylıq. VIP otaq sayına görə 19 / 29 / 39 AZN. Açıq zal proqramı otağın qapalı sessiyasını vermir.',
+        intro: 'Açıq zal proqramı otağın qapalı sessiyasını vermir.',
         plans: {
           starter: {
             forWhom: 'Kiçik launj: bir neçə VIP otaq',
@@ -576,7 +575,7 @@ export const az: Messages = {
       },
       antikafe: {
         name: 'Antikafe',
-        intro: 'Aylıq. Saatla zona sayına görə 15 / 25 / 35 AZN. Timer təkbaşına rezerv və kassanı bağlamır.',
+        intro: 'Timer təkbaşına rezerv və kassanı bağlamır.',
         plans: {
           starter: {
             forWhom: 'Kiçik antikafe: bir neçə masa/zona',

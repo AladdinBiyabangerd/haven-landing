@@ -192,7 +192,6 @@ export type Messages = {
     title: string
     intro: string
     chooseType: string
-    note: string
     cta: string
     periodMonthly: string
     periodOneTime: string

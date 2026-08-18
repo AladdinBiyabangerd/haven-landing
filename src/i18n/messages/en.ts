@@ -370,9 +370,8 @@ export const en: Messages = {
     eyebrow: 'Pricing',
     title: 'Pick your venue type first',
     intro:
-      'Everything is monthly. PlayStation and billiards from 9 AZN, anti-cafés from 15, karaoke and lounges from 19. Pick a type first — plans then open by station, table, or room count.',
+      'Every plan is monthly and covers one venue. The price follows how many stations, tables, or rooms you run.',
     chooseType: 'Venue type',
-    note: 'Price is for one venue. Larger capacity or several branches — custom quote.',
     cta: 'Request a demo',
     periodMonthly: '/ month',
     periodOneTime: 'one-time',
@@ -420,7 +419,7 @@ export const en: Messages = {
     offers: {
       gaming: {
         name: 'Gaming club / PlayStation',
-        intro: 'Monthly. 9 / 15 / 25 AZN by station count. A timer only counts time — here booking, session, and cash sit in one panel.',
+        intro: 'A timer only counts time — here booking, session, and cash sit in one panel.',
         plans: {
           starter: {
             forWhom: 'Small PS club: one floor, one shift',
@@ -459,7 +458,7 @@ export const en: Messages = {
       },
       billiards: {
         name: 'Billiards',
-        intro: 'Monthly. 9 / 15 / 25 AZN by table count. Not a table timer — booking, session, and cash in one panel.',
+        intro: 'Not a table timer — booking, session, and cash in one panel.',
         plans: {
           starter: {
             forWhom: 'Small billiards hall: a few tables',
@@ -498,7 +497,7 @@ export const en: Messages = {
       },
       karaoke: {
         name: 'Karaoke',
-        intro: 'Monthly. 19 / 29 / 39 AZN by room count. One lost room booking costs more than a month — that is why rooms have their own plans.',
+        intro: 'One lost room booking costs more than a month — that is why rooms have their own plans.',
         plans: {
           starter: {
             forWhom: 'Small karaoke: a few rooms',
@@ -537,7 +536,7 @@ export const en: Messages = {
       },
       lounge: {
         name: 'Room lounge',
-        intro: 'Monthly. 19 / 29 / 39 AZN by VIP room count. An open-floor tool does not run a closed room session.',
+        intro: 'An open-floor tool does not run a closed room session.',
         plans: {
           starter: {
             forWhom: 'Small lounge: a few VIP rooms',
@@ -576,7 +575,7 @@ export const en: Messages = {
       },
       antikafe: {
         name: 'Anti-café',
-        intro: 'Monthly. 15 / 25 / 35 AZN by hourly zone count. A timer alone does not close booking and cash.',
+        intro: 'A timer alone does not close booking and cash.',
         plans: {
           starter: {
             forWhom: 'Small anti-café: a few tables or zones',

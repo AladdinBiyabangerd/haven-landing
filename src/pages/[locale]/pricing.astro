@@ -44,16 +44,8 @@ const faqMessages = {
         <p class="lead">{page.intro}</p>
       </div>
       <PricingOffers locale={locale} messages={messages} />
-      <p class="note type-meta">{page.note}</p>
     </div>
   </section>
   <Faq locale={locale} messages={faqMessages} />
   <Cta locale={locale} messages={messages} intent="demo" />
 </BaseLayout>
-
-<style>
-  .note {
-    margin: 1.25rem 0 0;
-    color: var(--ink-subtle);
-  }
-</style>
