@@ -64,6 +64,12 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       <a href={localePath(locale, '/privacy')}>{messages.footer.privacy}</a>
       <a href={localePath(locale, '/terms')}>{messages.footer.terms}</a>
     </nav>
+    <p class="footer__credit type-meta">
+      Designed &amp; built by{' '}
+      <a href="https://aladdinalizade.site" target="_blank" rel="noopener noreferrer">
+        Aladdin<span aria-hidden="true"> ↗</span>
+      </a>
+    </p>
   </div>
 </footer>
 
@@ -141,6 +147,20 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
     color: var(--ink-subtle);
   }
   .footer__legal a:hover {
+    color: var(--ink);
+  }
+  .footer__credit {
+    margin: 0;
+  }
+  .footer__credit a {
+    color: var(--ink-muted);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+    white-space: nowrap;
+  }
+  .footer__credit a:hover {
     color: var(--ink);
   }
   /* Eight short destinations pair up at every width rather than running as one long stack. */
