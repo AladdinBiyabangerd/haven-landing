@@ -8,7 +8,7 @@ const { messages } = Astro.props
 const d = messages.demoPromise
 ---
 
-<section class="promise" aria-labelledby="demo-promise-title">
+<section class="card promise" aria-labelledby="demo-promise-title">
   <h2 id="demo-promise-title" class="type-card-title">
     {d.title} <span class="accent">{d.titleAccent}</span>
   </h2>
@@ -24,13 +24,9 @@ const d = messages.demoPromise
 </section>
 
 <style>
-  /* Sits beside the contact form, so it stays a short list rather than cards. */
+  /* Sits above the contact form, so it stays a short list rather than cards. */
   .promise {
     margin: 0 0 1.75rem;
-    padding: var(--space-card);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    background: var(--surface);
   }
   .promise h2 {
     font-size: var(--text-lg);
