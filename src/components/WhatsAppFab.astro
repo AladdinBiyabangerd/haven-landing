@@ -67,13 +67,11 @@ const waHref = whatsappUrl(c.whatsappPrefill)
     height: 1.35rem;
     flex-shrink: 0;
   }
+  /* No clamp: every locale's label is a short phrase and reads worse cut off. */
   .contact-fab__label {
-    max-width: 9rem;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 899px) {
     .contact-fab__btn {
       min-height: 3.25rem;
       min-width: 3.25rem;
