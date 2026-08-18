@@ -251,9 +251,9 @@ export const az: Messages = {
   },
   productGallery: {
     eyebrow: 'Panel görüntüləri',
-    title: 'Real interfeys —',
-    titleAccent: 'mock deyil.',
-    intro: 'Ekran görüntüləri Heselo admin panelindən götürülüb.',
+    title: 'Komandanızın',
+    titleAccent: 'işlədəcəyi ekranlar.',
+    intro: 'Canlı zal, cədvəl, kassa, anbar və hesabatlar.',
   },
   eeat: {
     eyebrow: 'Etibar və şəffaflıq',

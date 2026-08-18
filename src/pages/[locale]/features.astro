@@ -2,7 +2,6 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import ProductGallery from '@/components/ProductGallery.astro'
 import Cta from '@/components/Cta.astro'
-import Audiences from '@/components/Audiences.astro'
 import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
@@ -57,7 +56,6 @@ const page = messages.featuresPage
     ]}
   />
   <ProductGallery messages={messages} />
-  <Audiences locale={locale} messages={messages} />
   <Cta locale={locale} messages={messages} intent="next" />
 </BaseLayout>
 

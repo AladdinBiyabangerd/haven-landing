@@ -251,9 +251,9 @@ export const en: Messages = {
   },
   productGallery: {
     eyebrow: 'Product screens',
-    title: 'Real interface —',
-    titleAccent: 'not a mockup.',
-    intro: 'Screenshots from the Heselo admin panel.',
+    title: 'The screens',
+    titleAccent: 'your team will use.',
+    intro: 'Live floor, schedule, cash, stock, and reports.',
   },
   eeat: {
     eyebrow: 'Trust & transparency',

@@ -251,9 +251,9 @@ export const ru: Messages = {
   },
   productGallery: {
     eyebrow: 'Экраны продукта',
-    title: 'Реальный интерфейс —',
-    titleAccent: 'не макет.',
-    intro: 'Скриншоты из панели Heselo.',
+    title: 'Экраны, с которыми',
+    titleAccent: 'работает команда.',
+    intro: 'Живой зал, расписание, касса, склад и отчёты.',
   },
   eeat: {
     eyebrow: 'Доверие и прозрачность',
