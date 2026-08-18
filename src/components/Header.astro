@@ -22,6 +22,14 @@ const isGuides = currentSlug === '/guides' || currentSlug.startsWith('/guides/')
  * Home lives on the brand mark and Contact lives on the demo button, so
  * neither gets a second entry here.
  */
+const localeItems = LOCALES.map((loc) => ({
+  code: loc.toUpperCase(),
+  name: LOCALE_LABELS[loc],
+  lang: HTML_LANG[loc],
+  href: localePath(loc, currentSlug === '/' ? '/' : currentSlug),
+  active: loc === locale,
+}))
+
 const links = [
   { href: localePath(locale, '/features'), label: m.features, match: '/features' },
   { href: localePath(locale, '/solutions'), label: m.solutions, match: '/solutions' },
@@ -61,18 +69,18 @@ const links = [
     </nav>
 
     <div class="header__actions">
-      <div class="locales" role="navigation" aria-label={m.languageNav}>
+      <div class="locales locales--bar" role="navigation" aria-label={m.languageNav}>
         {
-          LOCALES.map((loc) => (
+          localeItems.map((item) => (
             <a
-              class:list={['locale', { 'is-active': loc === locale }]}
-              href={localePath(loc, currentSlug === '/' ? '/' : currentSlug)}
-              hreflang={HTML_LANG[loc]}
-              lang={HTML_LANG[loc]}
-              aria-current={loc === locale ? 'true' : undefined}
+              class:list={['locale', { 'is-active': item.active }]}
+              href={item.href}
+              hreflang={item.lang}
+              lang={item.lang}
+              aria-current={item.active ? 'true' : undefined}
             >
-              {loc.toUpperCase()}
-              <span class="sr-only">{LOCALE_LABELS[loc]}</span>
+              {item.code}
+              <span class="sr-only">{item.name}</span>
             </a>
           ))
         }
@@ -95,6 +103,22 @@ const links = [
     <div class="container mobile__inner">
       {links.map((link) => <a href={link.href} class="mobile__link">{link.label}</a>)}
       <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')} data-journey-link="contact">{m.demo}</a>
+      <div class="locales locales--menu" role="navigation" aria-label={m.languageNav}>
+        {
+          localeItems.map((item) => (
+            <a
+              class:list={['locale', { 'is-active': item.active }]}
+              href={item.href}
+              hreflang={item.lang}
+              lang={item.lang}
+              aria-current={item.active ? 'true' : undefined}
+            >
+              {item.code}
+              <span class="sr-only">{item.name}</span>
+            </a>
+          ))
+        }
+      </div>
     </div>
   </div>
 </header>
@@ -157,6 +181,18 @@ const links = [
     padding: 0.2rem;
     border: 1px solid var(--line);
     border-radius: 999px;
+  }
+  /*
+   * Language is a set-once choice; the menu button is used on every visit.
+   * On a phone the switcher lives inside the menu so the bar holds the brand
+   * and one control instead of three competing ones.
+   */
+  .locales--bar {
+    display: none;
+  }
+  .locales--menu {
+    margin-top: 1rem;
+    justify-self: start;
   }
   .locale {
     min-width: 2.2rem;
@@ -222,6 +258,9 @@ const links = [
   }
   @media (min-width: 960px) {
     .nav {
+      display: flex;
+    }
+    .locales--bar {
       display: flex;
     }
     .header__cta {
