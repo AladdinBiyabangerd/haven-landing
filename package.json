@@ -10,6 +10,8 @@
     "dev": "astro dev",
     "prebuild": "node scripts/write-indexnow-key.mjs",
     "build": "astro build",
+    "build:railway": "DEPLOY_TARGET=node astro build",
+    "build:vercel": "DEPLOY_TARGET=vercel astro build",
     "start": "node ./dist/server/entry.mjs",
     "process-shots": "node scripts/process-product-shots.mjs",
     "preview": "astro preview",
@@ -17,6 +19,7 @@
   },
   "dependencies": {
     "@astrojs/node": "^9.5.5",
+    "@astrojs/vercel": "^9.0.5",
     "@fontsource-variable/manrope": "^5.3.0",
     "astro": "^5.13.0",
     "nodemailer": "^9.0.5"

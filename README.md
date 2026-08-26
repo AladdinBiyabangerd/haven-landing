@@ -8,7 +8,8 @@ StayBoard landing ilə eyni məqsəd (lokalizə, prerender, meta/JSON-LD/sitemap
 
 ## Stack
 
-- Astro 5 (SSG + Node adapter for `/api/contact`)
+- Astro 5 (SSG + on-demand `/api/contact`)
+- Adapters: `@astrojs/node` (Railway) / `@astrojs/vercel` (Vercel) — auto via `VERCEL` or `DEPLOY_TARGET`
 - TypeScript
 - az / en / ru (`/$locale/…`)
 - CSS (self-hosted Manrope), zero UI-kit bloat
@@ -37,11 +38,21 @@ Open http://localhost:4321/az/
 ## Build
 
 ```bash
-PUBLIC_SITE_URL=https://heselo.online npm run build
+PUBLIC_SITE_URL=https://heselo.online npm run build          # Railway / local Node
+PUBLIC_SITE_URL=https://heselo.online npm run build:vercel   # Vercel output
 npm run preview
 ```
 
-Output: `dist/` (client static + server handler for contact API)
+Output depends on target:
+- **Railway / Node:** `dist/` (static + `dist/server/entry.mjs`)
+- **Vercel:** `.vercel/output/` (set automatically when `VERCEL=1` on Vercel)
+
+### Deploy
+
+| Host | Notes |
+|------|--------|
+| **Railway** | Uses `railway.json` + Node adapter (`npm start`) |
+| **Vercel** | Import GitHub repo; Framework = Astro. Sets `VERCEL=1` so the Vercel adapter is used. Add SMTP env vars for contact form. |
 
 ## Environment
 
