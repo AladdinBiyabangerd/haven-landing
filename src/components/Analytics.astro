@@ -1,7 +1,12 @@
 ---
-const provider = String(import.meta.env.PUBLIC_ANALYTICS || '').toLowerCase()
-const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN as string | undefined
-const ga4Id = import.meta.env.PUBLIC_GA4_ID as string | undefined
+const provider = String(
+  import.meta.env.PUBLIC_HESELO_ANALYTICS || import.meta.env.PUBLIC_ANALYTICS || '',
+).toLowerCase()
+const plausibleDomain = (import.meta.env.PUBLIC_HESELO_PLAUSIBLE_DOMAIN ||
+  import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN) as string | undefined
+const ga4Id = (import.meta.env.PUBLIC_HESELO_GA4_ID || import.meta.env.PUBLIC_GA4_ID) as
+  | string
+  | undefined
 ---
 
 {

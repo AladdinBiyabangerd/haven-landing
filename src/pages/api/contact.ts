@@ -30,11 +30,15 @@ function json(status: number, body: Record<string, unknown>) {
   })
 }
 
-function readEnv(name: string): string {
+function readEnv(...names: string[]): string {
   const meta = import.meta.env as Record<string, string | undefined>
-  const fromMeta = meta[name]
-  const fromProcess = typeof process !== 'undefined' ? process.env[name] : undefined
-  return String(fromMeta ?? fromProcess ?? '').trim()
+  for (const name of names) {
+    const fromMeta = meta[name]
+    const fromProcess = typeof process !== 'undefined' ? process.env[name] : undefined
+    const value = String(fromMeta ?? fromProcess ?? '').trim()
+    if (value) return value
+  }
+  return ''
 }
 
 function parseCount(raw: unknown): number | undefined | 'invalid' {
@@ -129,20 +133,20 @@ async function handlePost(request: Request): Promise<Response> {
     return json(400, { ok: false, error: 'invalid_payload' })
   }
 
-  const smtpUser = readEnv('SMTP_USER') || SITE.contactEmail
-  const smtpPass = readEnv('SMTP_PASS').replaceAll(' ', '')
-  const notifyTo = readEnv('CONTACT_NOTIFY_EMAIL') || SITE.notifyEmail
-  const fromAddress = readEnv('CONTACT_FROM_EMAIL') || SITE.contactEmail
+  const smtpUser = readEnv('HESELO_SMTP_USER', 'SMTP_USER') || SITE.contactEmail
+  const smtpPass = readEnv('HESELO_SMTP_PASS', 'SMTP_PASS').replaceAll(' ', '')
+  const notifyTo = readEnv('HESELO_CONTACT_NOTIFY_EMAIL', 'CONTACT_NOTIFY_EMAIL') || SITE.notifyEmail
+  const fromAddress = readEnv('HESELO_CONTACT_FROM_EMAIL', 'CONTACT_FROM_EMAIL') || SITE.contactEmail
 
   if (!smtpPass) {
-    console.error('[contact] SMTP_PASS is missing')
+    console.error('[contact] HESELO_SMTP_PASS is missing')
     return json(500, { ok: false, error: 'mail_not_configured' })
   }
 
   const transporter = nodemailer.createTransport({
-    host: readEnv('SMTP_HOST') || 'smtp.gmail.com',
-    port: Number(readEnv('SMTP_PORT') || 465),
-    secure: (readEnv('SMTP_SECURE') || 'true') === 'true',
+    host: readEnv('HESELO_SMTP_HOST', 'SMTP_HOST') || 'smtp.gmail.com',
+    port: Number(readEnv('HESELO_SMTP_PORT', 'SMTP_PORT') || 465),
+    secure: (readEnv('HESELO_SMTP_SECURE', 'SMTP_SECURE') || 'true') === 'true',
     auth: {
       user: smtpUser,
       pass: smtpPass,

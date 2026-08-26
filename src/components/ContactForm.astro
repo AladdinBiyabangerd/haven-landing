@@ -11,7 +11,10 @@ interface Props {
 }
 const { messages, locale } = Astro.props
 const c = messages.contact
-const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || '/api/contact/'
+const endpoint =
+  import.meta.env.PUBLIC_HESELO_CONTACT_ENDPOINT ||
+  import.meta.env.PUBLIC_CONTACT_ENDPOINT ||
+  '/api/contact/'
 const waHref = whatsappUrl(c.whatsappPrefill)
 const phoneDisplay = formatPhone(SITE.contactPhone)
 ---

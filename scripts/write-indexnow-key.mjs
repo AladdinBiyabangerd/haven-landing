@@ -7,13 +7,13 @@ import { writeFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const key = process.env.INDEXNOW_KEY?.trim()
+const key = (process.env.HESELO_INDEXNOW_KEY || process.env.INDEXNOW_KEY)?.trim()
 if (!key) {
   process.exit(0)
 }
 
 if (!/^[a-f0-9-]{8,128}$/i.test(key)) {
-  console.warn('[indexnow] INDEXNOW_KEY must be 8–128 hex/hyphen characters — skipped.')
+  console.warn('[indexnow] HESELO_INDEXNOW_KEY must be 8–128 hex/hyphen characters — skipped.')
   process.exit(0)
 }
 

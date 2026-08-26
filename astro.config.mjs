@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config'
 import node from '@astrojs/node'
 import vercel from '@astrojs/vercel'
 
-const envSite = process.env.PUBLIC_SITE_URL || ''
+const envSite = process.env.PUBLIC_HESELO_SITE_URL || process.env.PUBLIC_SITE_URL || ''
 const isLocal = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?\/?$/i.test(envSite)
 const site = !envSite || isLocal ? 'https://heselo.online' : envSite.replace(/\/$/, '')
 

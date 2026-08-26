@@ -15,14 +15,14 @@ export const SITE = {
   logoPath: '/icon-512.png',
 } as const
 
-/** Optional social profile URLs for Organization sameAs (set via PUBLIC_SOCIAL_* env). */
+/** Optional social profile URLs for Organization sameAs (PUBLIC_HESELO_SOCIAL_*). */
 export function siteSameAs(): string[] {
   const env = typeof import.meta !== 'undefined' ? import.meta.env : undefined
   const candidates = [
-    env?.PUBLIC_SOCIAL_INSTAGRAM,
-    env?.PUBLIC_SOCIAL_FACEBOOK,
-    env?.PUBLIC_SOCIAL_LINKEDIN,
-    env?.PUBLIC_SOCIAL_X,
+    env?.PUBLIC_HESELO_SOCIAL_INSTAGRAM ?? env?.PUBLIC_SOCIAL_INSTAGRAM,
+    env?.PUBLIC_HESELO_SOCIAL_FACEBOOK ?? env?.PUBLIC_SOCIAL_FACEBOOK,
+    env?.PUBLIC_HESELO_SOCIAL_LINKEDIN ?? env?.PUBLIC_SOCIAL_LINKEDIN,
+    env?.PUBLIC_HESELO_SOCIAL_X ?? env?.PUBLIC_SOCIAL_X,
   ]
   return candidates
     .filter(Boolean)
@@ -35,12 +35,12 @@ const PRODUCTION_ORIGIN = 'https://heselo.online'
 
 /**
  * Canonical site origin for SEO (sitemap, canonical, JSON-LD, OG).
- * Prefers Astro `site`, then PUBLIC_SITE_URL. Localhost is ignored outside DEV
- * so accidental local .env values never ship in production builds.
+ * Prefers Astro `site`, then PUBLIC_HESELO_SITE_URL (legacy PUBLIC_SITE_URL).
+ * Localhost is ignored outside DEV so accidental local .env values never ship.
  */
 export function siteUrl(): string {
   const env = typeof import.meta !== 'undefined' ? import.meta.env : undefined
-  const candidates = [env?.SITE, env?.PUBLIC_SITE_URL]
+  const candidates = [env?.SITE, env?.PUBLIC_HESELO_SITE_URL, env?.PUBLIC_SITE_URL]
 
   for (const raw of candidates) {
     if (!raw) continue

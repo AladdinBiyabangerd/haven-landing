@@ -39,7 +39,7 @@ Open http://localhost:4321/az/
 
 ```bash
 PUBLIC_SITE_URL=https://heselo.online npm run build          # Railway / local Node
-PUBLIC_SITE_URL=https://heselo.online npm run build:vercel   # Vercel output
+PUBLIC_HESELO_SITE_URL=https://heselo.online npm run build:vercel   # Vercel output
 npm run preview
 ```
 
@@ -58,9 +58,11 @@ Output depends on target:
 
 | Variable | Purpose |
 |----------|---------|
-| `PUBLIC_SITE_URL` | Canonical origin (default production: `https://heselo.online`) |
-| `SMTP_*` | Contact form email delivery via `/api/contact` |
-| `PUBLIC_CONTACT_ENDPOINT` | Optional external form endpoint instead of mailto |
+| `PUBLIC_HESELO_SITE_URL` | Canonical origin (default: `https://heselo.online`) |
+| `HESELO_SMTP_*` / `HESELO_CONTACT_*` | Contact form email via `/api/contact` |
+| `PUBLIC_HESELO_CONTACT_ENDPOINT` | Optional form endpoint override |
+
+Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
 
 ## Pages
 
