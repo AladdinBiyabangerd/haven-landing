@@ -61,6 +61,8 @@ Output depends on target:
 | `PUBLIC_HESELO_SITE_URL` | Canonical origin (default: `https://heselo.online`) |
 | `HESELO_SMTP_*` / `HESELO_CONTACT_*` | Contact form email via `/api/contact` |
 | `PUBLIC_HESELO_CONTACT_ENDPOINT` | Optional form endpoint override |
+| `PUBLIC_HESELO_ANALYTICS` | `ga4` (default) or `plausible` |
+| `PUBLIC_HESELO_GA4_ID` | GA4 Measurement ID (default: `G-HKT0YR5W38`) |
 
 Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
 
