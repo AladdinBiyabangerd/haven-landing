@@ -10,9 +10,9 @@ export const guidesHubAz: GuidesHubCopy = {
     'Satış səhifəsi deyil: oyun klubu, karaoke, bilyard və antikafe axını necə qurulur — saatla ödəniş, rezerv və kassa izahı.',
   keywords: [
     'oyun klubu idarəetmə sistemi nədir',
-    'karaoke otaqları necə rezerv edilir',
-    'bilyard klubu necə idarə olunur',
-    'antikafe idarəetmə sistemi nədir',
+    'playstation klub proqramı',
+    'bilyard masa rezervasiya',
+    'karaoke rezervasiya sistemi',
   ],
   cardCta: 'Oxu',
 }
@@ -372,5 +372,307 @@ export const guidesAz: GuideCopy[] = [
     relatedSolutions: ['antikafe', 'gaming', 'reservations', 'pos'],
     ctaTitle: 'Antikafe axını üçün demo',
     ctaBody: 'Rezervasiyadan kassa bağlanışına qədər göstəririk.',
+  },
+  {
+    slug: 'playstation-club-software',
+    shortTitle: 'PS klub proqramı',
+    h1: 'PlayStation klub proqramı seçərkən nəyə baxmaq lazımdır?',
+    seoTitle: 'PlayStation klub proqramı — nə olmalıdır? | Heselo bələdçisi',
+    seoDescription:
+      'PS və konsol klub proqramı: stansiya rezervasiyası, canlı sessiya, kassa. PlayStation klub software seçimi — praktiki checklist.',
+    keywords: [
+      'playstation klub proqramı',
+      'ps klub proqramı',
+      'konsol klub idarəetmə',
+      'playstation club software',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'PlayStation klub proqramı yalnız taymer deyil. Telefon rezervi, “hansı PS boşdur?”, oyun bitəndə uzatma, qəlyanaltı və gecə kassası eyni axında olmalıdır. Bu yazı satış səhifəsi deyil — seçim meyarlarıdır.',
+    sections: [
+      {
+        id: 'why',
+        title: 'PS klubda proqram niyə lazımdır?',
+        paragraphs: [
+          'Konsol klubunda axın saatladır. Lövhə gecikir, WhatsApp rezervi canlı statusu görmür, uzatma ayrı vərəqdə yazılır. Növbə bağlananda “kim nə oynayıb?” sualı Excel-ə qayıdır.',
+          'Yaxşı proqram stansiyanı resurs kimi saxlayır: rezerv → canlı sessiya → ödəniş eyni qeyddə.',
+        ],
+      },
+      {
+        id: 'must-have',
+        title: 'Minimum nə olmalıdır?',
+        paragraphs: ['Praktik checklist:'],
+        bullets: [
+          'PS / konsol / PC stansiyalarını ayrı resurs kimi qurmaq',
+          'Cədvəldə rezerv, köçürmə və ləğv',
+          'Canlı sessiya: vaxt, uzatma, ödəniş',
+          'Sürətli satış (snack/içki) eyni kataloqdan',
+          'Kassa növbəsi və sayım',
+          'İşçi icazələri (resepsiya vs sahib)',
+        ],
+      },
+      {
+        id: 'console',
+        title: 'Konsol klub (console club) fərqi varmı?',
+        paragraphs: [
+          'Axtarışda “console club” və “PS klub” çox vaxt eyni ehtiyacı göstərir. Fərq brenddə deyil — stansiya tipindədir. Sistem PS5, digər konsol və PC-ni eyni cədvəldə idarə edə bilməlidir.',
+          'Ümumi “oyun klubu idarəetmə sistemi nədir?” izahı ayrıca bələdçidədir; burada fokus proqram seçiminədir.',
+        ],
+      },
+      {
+        id: 'timer',
+        title: 'Yalnız taymer kifayət edirmi?',
+        paragraphs: [
+          'Kiçik zalda bəlkə. Amma rezerv tarixçəsi, müştəri kartı, anbar və kassa sayımı lazımdırsa, taymer gecə növbəsini həll etmir.',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'Heselo bu checklist-ə necə oturur?',
+        paragraphs: [
+          'Heselo stansiyanı cədvəl və canlı izləmədə eyni resurs kimi saxlayır. PS, konsol və PC bir paneldə ola bilər. Kommersiya səhifəsi: oyun/PS klub həlli.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Yalnız PlayStation, yoxsa digər konsol da?',
+        a: 'Hər ikisi. Stansiya tipi fərqli ola bilər; cədvəl və kassa eynidir.',
+      },
+      {
+        q: 'PC stansiyaları eyni proqramda ola bilər?',
+        a: 'Bəli. Fərqli resurslar eyni növbəyə düşür.',
+      },
+      {
+        q: 'Demo necə alınır?',
+        a: 'Əlaqə formasında oyun klubu / PS seçin və stansiya sayını yazın.',
+      },
+    ],
+    relatedSolutions: ['gaming', 'reservations', 'pos', 'inventory'],
+    ctaTitle: 'PS klub axını üçün demo',
+    ctaBody: 'Stansiya və konsol sayınızı yazın — rezerv və canlı sessiyanı göstəririk.',
+  },
+  {
+    slug: 'billiards-table-booking',
+    shortTitle: 'Bilyard masa bronu',
+    h1: 'Bilyard masa rezervasiyası və cədvəl necə işləməlidir?',
+    seoTitle: 'Bilyard masa rezervasiyası və cədvəl sistemi | Heselo bələdçisi',
+    seoDescription:
+      'Bilyard booking və scheduling: masa bronu, cədvəl, canlı oyun və kassa. Bilyard masa rezervasiyası praktiki izah.',
+    keywords: [
+      'bilyard masa rezervasiya',
+      'bilyard cədvəl sistemi',
+      'billiards booking system',
+      'billiards scheduling',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'Bilyard booking sistemi yalnız “masa yazıldı” demək deyil. Cədvəl (scheduling), canlı oyun və ödəniş ayrılıbsa, lövhə ilə telefon toqquşur. Bu yazı bron + cədvəl axınını izah edir — ümumi “klub necə idarə olunur” bələdçisindən daradır.',
+    sections: [
+      {
+        id: 'booking',
+        title: 'Masa rezervasiyası nəyi əhatə etməlidir?',
+        paragraphs: [
+          'Rezerv: tarix/saat, masa və ya VIP otaq, müddət, müştəri əlaqəsi. Köçürmə və ləğv tarixçədə qalmalıdır — əks halda gecə növbəsi “kim yazıb?” sualında ilişir.',
+        ],
+      },
+      {
+        id: 'schedule',
+        title: 'Cədvəl (scheduling) niyə ayrı alət olmamalıdır?',
+        paragraphs: [
+          'Bir cədvəl bütün masaları göstərməlidir. VIP otaq ayrıca Excel-dədirsə, eyni vaxta iki bron düşür. Scheduling və booking eyni paneldə olduqda boş masa real vaxtda görünür.',
+        ],
+      },
+      {
+        id: 'live',
+        title: 'Bron canlı oyuna necə keçir?',
+        paragraphs: [
+          'Qonaq gələndə sessiya açılır. Pauza, uzatma və əlavə içki eyni qeyddədir. Qiymət masa tipi və müddətə görə hesablanır; kassa növbəni bağlayır.',
+        ],
+      },
+      {
+        id: 'mistakes',
+        title: 'Tez rast gəlinən səhvlər',
+        paragraphs: ['Bunlardan qaçın:'],
+        bullets: [
+          'Telefon qeydi + lövhə (iki mənbə)',
+          'Yalnız taymer, rezerv yox',
+          'VIP otaq ayrı “sistem”',
+          'Ödəniş və oyun vaxtı ayrı vərəq',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'Heselo-da masa bronu necə görünür?',
+        paragraphs: [
+          'Hər masa və otaq resursdur. Cədvəl, canlı oyun və kassa eyni gün qaydalarındadır. Kommersiya səhifəsi: bilyard klubu həlli.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Booking ilə scheduling eyni şeydir?',
+        a: 'Booking konkret rezervdir; scheduling cədvəlin ümumi görünüşüdür. İkisi bir paneldə olmalıdır.',
+      },
+      {
+        q: 'Otaq və masa birlikdə ola bilər?',
+        a: 'Bəli. Hər ikisi eyni cədvəl və kassadadır.',
+      },
+      {
+        q: 'Demo necə alınır?',
+        a: 'Əlaqə formasında bilyard seçin və masa sayını yazın.',
+      },
+    ],
+    relatedSolutions: ['billiards', 'reservations', 'gaming', 'pos'],
+    ctaTitle: 'Bilyard bron axını üçün demo',
+    ctaBody: 'Masa sayınızı yazın — cədvəl və canlı oyunu göstəririk.',
+  },
+  {
+    slug: 'karaoke-booking-system',
+    shortTitle: 'Karaoke bron sistemi',
+    h1: 'Karaoke rezervasiya sistemi seçərkən nəyə baxmaq lazımdır?',
+    seoTitle: 'Karaoke rezervasiya sistemi — seçim meyarları | Heselo bələdçisi',
+    seoDescription:
+      'Karaoke booking system: otaq bronu, sessiya, əlavə satış və kassa. Karaoke rezervasiya sistemi checklist — satış səhifəsi deyil.',
+    keywords: [
+      'karaoke rezervasiya sistemi',
+      'karaoke booking system',
+      'karaoke otaq bron proqramı',
+      'karaoke idarəetmə seçimi',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'Karaoke rezervasiya sistemi yalnız onlayn forma deyil. Otaq dolanda sessiya, içki sifarişi və ödəniş eyni axında qalmalıdır. “Otaqlar necə rezerv edilir?” bələdçisi axını izah edir; burada fokus — sistemi seçərkən nə yoxlamaqdır.',
+    sections: [
+      {
+        id: 'form-vs-system',
+        title: 'Bron forması ilə idarəetmə sistemi fərqi',
+        paragraphs: [
+          'Veb forma rezerv toplaya bilər, amma ofisiant otağın içindəki axını görmür. İdarəetmə sistemi rezerv → canlı otaq sessiyası → kassa zəncirini saxlayır.',
+        ],
+      },
+      {
+        id: 'checklist',
+        title: 'Seçim checklist',
+        paragraphs: ['Soruşun:'],
+        bullets: [
+          'Bir neçə otaq eyni cədvəldə görünürmü?',
+          'Sessiya uzadılsa ödəniş eyni qeydə düşürmü?',
+          'Əvvəlcədən sifariş / etiket varmı?',
+          'Kassa növbə bağlanışı varmı?',
+          'Launj və ya bilyard otaqları eyni paneldə ola bilərmi?',
+        ],
+      },
+      {
+        id: 'peak',
+        title: 'Pik saatlarda nə sınanmalıdır?',
+        paragraphs: [
+          'Cümə-şənbə axşamı bir neçə otaq eyni anda dəyişir. Demo-da pik ssenarini göstərin: köçürmə, ləğv, gecikən qonaq, əlavə saat.',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'Heselo karaoke üçün nə verir?',
+        paragraphs: [
+          'Otaq resurs kimi cədvəl və canlı izləmədədir. Məhsul və ödəniş eyni sessiyadadır. Kommersiya səhifəsi: karaoke həlli.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Yalnız bron saytı kifayət edirmi?',
+        a: 'Rezerv toplamaq üçün bəlkə; otaq sessiyası və kassa lazımdırsa, tam panel lazımdır.',
+      },
+      {
+        q: 'VIP və adi otaq fərqlənə bilərmi?',
+        a: 'Bəli. Hər otaq ayrı resurs və tarifi ola bilər.',
+      },
+      {
+        q: 'Demo necə alınır?',
+        a: 'Əlaqə formasında karaoke seçin və otaq sayını yazın.',
+      },
+    ],
+    relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
+    ctaTitle: 'Karaoke rezervasiya demo',
+    ctaBody: 'Otaq sayınızı yazın — bron və canlı otaq axını göstəririk.',
+  },
+  {
+    slug: 'club-pos-vs-excel',
+    shortTitle: 'Excel əvəzinə panel',
+    h1: 'Klubda Excel və WhatsApp niyə kifayət etmir?',
+    seoTitle: 'Klub idarəetməsi: Excel və WhatsApp əvəzinə panel | Heselo',
+    seoDescription:
+      'Oyun klubu, karaoke və bilyardda Excel/WhatsApp rezervi niyə qarışır — kassa və canlı zal üçün panel nə verir.',
+    keywords: [
+      'klub excel idarəetmə',
+      'whatsapp rezervasiya problemi',
+      'klub kassa proqramı',
+      'məkan idarəetmə paneli',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'Bir çox klub günü Excel cədvəli və WhatsApp qrupu ilə başlayır. Kiçik miqyasda işləyir; masa/otaq sayı və növbə sayı artanda rezerv itir, kassa uzanır. Bu yazı ağrı nöqtələrini və panelin nəyi dəyişdiyini izah edir.',
+    sections: [
+      {
+        id: 'pain',
+        title: 'Excel və mesajlaşma harada sınır?',
+        paragraphs: [
+          'Rezerv mesajda qalır, lövhə gecikir, ödəniş vərəqi ayrıdır. Eyni masa iki dəfə yazılır. Gecə növbəsi “kim nə satıb?” sualında 30–40 dəqiqə itirir.',
+        ],
+      },
+      {
+        id: 'signals',
+        title: 'Panelə keçmək üçün siqnallar',
+        paragraphs: ['Bunlardan ikisi varsa, vərəq kifayət etmir:'],
+        bullets: [
+          'Gündə 10+ rezerv və ya eyni anda 5+ aktiv yer',
+          'İki növbə / iki işçi eyni resurslara toxunur',
+          'Snack/içki satışı kassa ilə uyğun gəlmir',
+          'Sahib ertəsi gün hesabatı Excel-dən yığır',
+        ],
+      },
+      {
+        id: 'panel',
+        title: 'Panel nəyi birləşdirir?',
+        paragraphs: [
+          'Cədvəl, canlı sessiya, sürətli satış və kassa eyni gün qaydalarındadır. Ödəniş qalıqları serverdə hesablanır — “özünüz cəmləyin” yoxdur.',
+        ],
+      },
+      {
+        id: 'not-erp',
+        title: 'Bu, ağır ERP demək deyil',
+        paragraphs: [
+          'Klub paneli restoran şəbəkəsi ERP-si deyil. Məqsəd sadədir: bron itməsin, masa/otaq statusu doğru olsun, növbə bağlansın.',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'Heselo bu boşluğu necə doldurur?',
+        paragraphs: [
+          'Heselo məkan paneli kimi qurulub: rezervasiya, canlı zal, kassa və anbar. Qiymət və kassa həll səhifələrinə keçid aşağıdadır.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Excel-i tam atmaq lazımdır?',
+        a: 'Gündəlik rezerv və kassa üçün bəli. Aylıq maliyyə Excel-də qala bilər.',
+      },
+      {
+        q: 'Kiçik klub üçün erkəndir?',
+        a: 'Bir masa/iki otaqda bəlkə; böyümə planı varsa, erkən keçid daha ucuz başa gəlir.',
+      },
+      {
+        q: 'Demo necə alınır?',
+        a: 'Məkan tipini yazın — sizin axına uyğun ekranı göstəririk.',
+      },
+    ],
+    relatedSolutions: ['pos', 'reservations', 'gaming', 'inventory'],
+    ctaTitle: 'Excel-siz axın üçün demo',
+    ctaBody: 'Məkan tipi və masa/otaq sayını yazın — paneli 15 dəqiqədə göstəririk.',
   },
 ]

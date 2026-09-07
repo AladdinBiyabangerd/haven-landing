@@ -6,14 +6,18 @@ export const GUIDE_SLUGS = [
   'billiards-club-management',
   'antikafe-management-system',
   'room-lounge-management',
+  'playstation-club-software',
+  'billiards-table-booking',
+  'karaoke-booking-system',
+  'club-pos-vs-excel',
 ] as const
 
 export const TEASER_GUIDE_SLUGS = [
   'gaming-club-management',
   'karaoke-room-booking',
   'billiards-club-management',
-  'antikafe-management-system',
-  'room-lounge-management',
+  'playstation-club-software',
+  'club-pos-vs-excel',
 ] as const
 
 export type GuideSlug = (typeof GUIDE_SLUGS)[number]

@@ -46,5 +46,29 @@ export const SEO_CONTENT_PLAN = {
       path: '/guides/antikafe-management-system/',
       status: 'live',
     },
+    {
+      id: 'playstation-club-software',
+      path: '/guides/playstation-club-software/',
+      status: 'live',
+      note: 'Phase C1 — PS/console software choice',
+    },
+    {
+      id: 'billiards-table-booking',
+      path: '/guides/billiards-table-booking/',
+      status: 'live',
+      note: 'Phase C1 — booking + scheduling',
+    },
+    {
+      id: 'karaoke-booking-system',
+      path: '/guides/karaoke-booking-system/',
+      status: 'live',
+      note: 'Phase C1 — choosing a booking system',
+    },
+    {
+      id: 'club-pos-vs-excel',
+      path: '/guides/club-pos-vs-excel/',
+      status: 'live',
+      note: 'Phase C1 — Excel/WhatsApp pain',
+    },
   ],
 } as const

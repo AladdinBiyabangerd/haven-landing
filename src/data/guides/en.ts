@@ -10,9 +10,9 @@ export const guidesHubEn: GuidesHubCopy = {
     'Not a sales pitch: how gaming clubs, karaoke, billiards, and anti-cafés run hourly booking, live sessions, and cash.',
   keywords: [
     'what is a gaming club management system',
-    'how karaoke room booking works',
-    'what is a billiards club management system',
-    'what is an anti-cafe management system',
+    'playstation club software',
+    'billiards booking system',
+    'karaoke booking system',
   ],
   cardCta: 'Read',
 }
@@ -372,5 +372,307 @@ export const guidesEn: GuideCopy[] = [
     relatedSolutions: ['antikafe', 'gaming', 'reservations', 'pos'],
     ctaTitle: 'Anti-café flow demo',
     ctaBody: 'We walk through booking to cash close.',
+  },
+  {
+    slug: 'playstation-club-software',
+    shortTitle: 'PS club software',
+    h1: 'What to look for in PlayStation club software',
+    seoTitle: 'PlayStation club software — what it must cover | Heselo guide',
+    seoDescription:
+      'PlayStation and console club software: station booking, live sessions, cash. A practical checklist — not a sales page.',
+    keywords: [
+      'playstation club software',
+      'PS club software',
+      'console club management',
+      'console club software',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'PlayStation club software is more than a timer. Phone bookings, “which PS is free?”, extensions, snacks, and the night cash close should live in one flow. This guide is a selection checklist — not a product pitch.',
+    sections: [
+      {
+        id: 'why',
+        title: 'Why a PS club needs real software',
+        paragraphs: [
+          'Console clubs run by the hour. Boards lag, WhatsApp bookings miss live status, extensions land on another sheet. At close, “who played what?” goes back to Excel.',
+          'Good software treats the station as a resource: booking → live session → payment on one record.',
+        ],
+      },
+      {
+        id: 'must-have',
+        title: 'Minimum checklist',
+        paragraphs: ['In practice you need:'],
+        bullets: [
+          'PS / console / PC stations as separate resources',
+          'Schedule booking, move, and cancel',
+          'Live session: time, extend, pay',
+          'Quick sale (snacks/drinks) from the same catalog',
+          'Cash shift and count',
+          'Staff permissions (front desk vs owner)',
+        ],
+      },
+      {
+        id: 'console',
+        title: 'Is a “console club” different?',
+        paragraphs: [
+          'Searches for “console club” and “PS club” usually mean the same ops problem. The difference is station type, not brand. The system should run PS5, other consoles, and PC on one schedule.',
+          'For a broader “what is a gaming club management system?” explainer, see the sibling guide; this page is about choosing software.',
+        ],
+      },
+      {
+        id: 'timer',
+        title: 'Is a timer enough?',
+        paragraphs: [
+          'Maybe in a tiny hall. If you need booking history, customer cards, inventory, and cash count, a timer will not close the night cleanly.',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'How Heselo fits the checklist',
+        paragraphs: [
+          'Heselo keeps the station as one resource on the schedule and live floor. PS, console, and PC can share a panel. Commercial page: gaming / PS club solution.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'PlayStation only, or other consoles too?',
+        a: 'Both. Station types can differ; schedule and cash stay shared.',
+      },
+      {
+        q: 'Can PC stations share the same software?',
+        a: 'Yes. Different resources hit the same shift.',
+      },
+      {
+        q: 'How do I get a demo?',
+        a: 'Pick gaming club / PS on the contact form and share station count.',
+      },
+    ],
+    relatedSolutions: ['gaming', 'reservations', 'pos', 'inventory'],
+    ctaTitle: 'PS club flow demo',
+    ctaBody: 'Tell us station and console count — we show booking and live sessions.',
+  },
+  {
+    slug: 'billiards-table-booking',
+    shortTitle: 'Billiards table booking',
+    h1: 'How billiards table booking and scheduling should work',
+    seoTitle: 'Billiards table booking & scheduling explained | Heselo guide',
+    seoDescription:
+      'Billiards booking and scheduling: table reservations, calendar, live play, and cash — a focused ops guide.',
+    keywords: [
+      'billiards booking system',
+      'billiards scheduling system',
+      'billiards table booking',
+      'pool hall scheduling',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'A billiards booking system is not just “table noted.” If scheduling, live play, and payment sit apart, the board and the phone collide. This page zooms in on booking + scheduling — narrower than the general “how billiards clubs run” guide.',
+    sections: [
+      {
+        id: 'booking',
+        title: 'What table booking must include',
+        paragraphs: [
+          'A booking needs date/time, table or VIP room, duration, and a guest contact. Moves and cancels should leave history — otherwise the night shift stalls on “who wrote that?”',
+        ],
+      },
+      {
+        id: 'schedule',
+        title: 'Why scheduling should not be a separate tool',
+        paragraphs: [
+          'One calendar should show every table. If VIP rooms live in another spreadsheet, two bookings hit the same slot. When scheduling and booking share a panel, free tables are visible in real time.',
+        ],
+      },
+      {
+        id: 'live',
+        title: 'From booking to live play',
+        paragraphs: [
+          'On arrival, open a session. Pause, extension, and extras stay on the same record. Price follows table type and duration; cash closes the shift.',
+        ],
+      },
+      {
+        id: 'mistakes',
+        title: 'Common mistakes',
+        paragraphs: ['Avoid:'],
+        bullets: [
+          'Phone notes + whiteboard (two sources of truth)',
+          'Timer only, no bookings',
+          'VIP rooms in a “side system”',
+          'Play time and payment on separate sheets',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'How table booking looks in Heselo',
+        paragraphs: [
+          'Each table and room is a resource. Schedule, live play, and cash share the same day rules. Commercial page: billiards club solution.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Are booking and scheduling the same?',
+        a: 'Booking is a specific reservation; scheduling is the calendar view. Both belong in one panel.',
+      },
+      {
+        q: 'Can rooms and tables coexist?',
+        a: 'Yes. Both share schedule and cash.',
+      },
+      {
+        q: 'How do I get a demo?',
+        a: 'Pick billiards on the contact form and share table count.',
+      },
+    ],
+    relatedSolutions: ['billiards', 'reservations', 'gaming', 'pos'],
+    ctaTitle: 'Billiards booking demo',
+    ctaBody: 'Tell us your table count — we show calendar and live play.',
+  },
+  {
+    slug: 'karaoke-booking-system',
+    shortTitle: 'Karaoke booking system',
+    h1: 'What to check when choosing a karaoke booking system',
+    seoTitle: 'Karaoke booking system — selection checklist | Heselo guide',
+    seoDescription:
+      'Karaoke booking system checklist: room booking, sessions, extras, and cash. How to choose — not a sales pitch.',
+    keywords: [
+      'karaoke booking system',
+      'karaoke reservation software',
+      'karaoke room booking system',
+      'choose karaoke software',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'A karaoke booking system is more than an online form. When rooms fill, session time, drink orders, and payment must stay in one flow. The sibling guide covers how rooms get booked; this page is about what to verify before you buy.',
+    sections: [
+      {
+        id: 'form-vs-system',
+        title: 'Booking form vs management system',
+        paragraphs: [
+          'A web form can collect reservations, but staff still cannot run the room once guests arrive. A management system keeps booking → live room session → cash in one chain.',
+        ],
+      },
+      {
+        id: 'checklist',
+        title: 'Selection checklist',
+        paragraphs: ['Ask:'],
+        bullets: [
+          'Do several rooms appear on one schedule?',
+          'If a session extends, does payment stay on the same record?',
+          'Are labels / pre-orders supported?',
+          'Is there a cash shift close?',
+          'Can lounge or billiards rooms share the panel?',
+        ],
+      },
+      {
+        id: 'peak',
+        title: 'What to test at peak hours',
+        paragraphs: [
+          'Friday–Saturday nights move several rooms at once. In a demo, run peak scenarios: move, cancel, late guests, extra hour.',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'What Heselo gives karaoke venues',
+        paragraphs: [
+          'Rooms are resources on the schedule and live floor. Products and payment stay on the session. Commercial page: karaoke solution.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Is a booking website enough?',
+        a: 'For collecting requests, maybe; for room sessions and cash, you need a full panel.',
+      },
+      {
+        q: 'Can VIP and standard rooms differ?',
+        a: 'Yes. Each room can be its own resource and tariff.',
+      },
+      {
+        q: 'How do I get a demo?',
+        a: 'Pick karaoke on the contact form and share room count.',
+      },
+    ],
+    relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
+    ctaTitle: 'Karaoke booking demo',
+    ctaBody: 'Tell us your room count — we show booking and live room flow.',
+  },
+  {
+    slug: 'club-pos-vs-excel',
+    shortTitle: 'Excel vs panel',
+    h1: 'Why Excel and WhatsApp stop working for clubs',
+    seoTitle: 'Club ops: Excel & WhatsApp vs a venue panel | Heselo guide',
+    seoDescription:
+      'Why Excel and WhatsApp bookings break in gaming, karaoke, and billiards clubs — and what a cash + live-floor panel changes.',
+    keywords: [
+      'club excel management',
+      'whatsapp booking problems',
+      'club cash software',
+      'venue management panel',
+    ],
+    datePublished: '2026-09-07',
+    dateModified: '2026-09-07',
+    intro:
+      'Many clubs start the day with a spreadsheet and a WhatsApp group. It works at tiny scale; when tables/rooms and shifts grow, bookings vanish and cash close stretches. This guide names the pain points and what a panel changes.',
+    sections: [
+      {
+        id: 'pain',
+        title: 'Where spreadsheets and chat fail',
+        paragraphs: [
+          'Bookings live in messages, the board lags, payment sheets are separate. The same table gets written twice. Night shifts lose 30–40 minutes on “who sold what?”',
+        ],
+      },
+      {
+        id: 'signals',
+        title: 'Signals it is time for a panel',
+        paragraphs: ['If two of these are true, sheets are not enough:'],
+        bullets: [
+          '10+ bookings a day or 5+ active places at once',
+          'Two shifts / two staff touch the same resources',
+          'Snacks and drinks do not match cash',
+          'The owner rebuilds yesterday’s report from Excel',
+        ],
+      },
+      {
+        id: 'panel',
+        title: 'What a panel unifies',
+        paragraphs: [
+          'Schedule, live session, quick sale, and cash share one day of rules. Payment balances are calculated on the server — no “add it up yourself.”',
+        ],
+      },
+      {
+        id: 'not-erp',
+        title: 'This is not a heavy ERP',
+        paragraphs: [
+          'A club panel is not a restaurant-chain ERP. The job is simple: bookings do not get lost, table/room status is true, the shift closes.',
+        ],
+      },
+      {
+        id: 'heselo',
+        title: 'How Heselo fills the gap',
+        paragraphs: [
+          'Heselo is built as a venue panel: reservations, live floor, cash, and inventory. See pricing and cash solution pages below.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Do we have to drop Excel entirely?',
+        a: 'For daily booking and cash, yes. Monthly finance can stay in a spreadsheet.',
+      },
+      {
+        q: 'Is it early for a small club?',
+        a: 'One table / two rooms — maybe; if you plan to grow, switching early is cheaper.',
+      },
+      {
+        q: 'How do I get a demo?',
+        a: 'Share your venue type — we show the screens for your flow.',
+      },
+    ],
+    relatedSolutions: ['pos', 'reservations', 'gaming', 'inventory'],
+    ctaTitle: 'Demo without the spreadsheet',
+    ctaBody: 'Tell us venue type and table/room count — 15 minutes on the panel.',
   },
 ]

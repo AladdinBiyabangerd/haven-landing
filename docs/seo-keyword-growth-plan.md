@@ -271,6 +271,7 @@ Satış hələ də outreach-dən gəlir; SEO demo dəstəyidir.
 | 0 | İstifadəçi | Index URL siyahısı verilib |
 | A | Done (2026-09-07) | AZ/EN/RU meta + gaming/billiards intent; guide↔solution ayrılığı |
 | B | Done (qismən) | Footer/hub linklər artıq var; gaming `related` → karaoke əlavə |
-| C+ | Gözləyir | Deploy + 7–14 gün GSC-dən sonra |
+| C1 | Done (2026-09-07) | 4 guide: playstation-club-software, billiards-table-booking, karaoke-booking-system, club-pos-vs-excel |
+| C2+ | Gözləyir | GSC impressiya > 0 olan klasterlər |
 
 Son yeniləmə: 2026-09-07
