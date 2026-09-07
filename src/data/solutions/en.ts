@@ -2,18 +2,18 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 
 export const solutionsHubEn: SolutionsHubCopy = {
   eyebrow: 'Business solutions',
-  h1: 'Which venues is Heselo built for?',
+  h1: 'Which venue type matches your floor?',
   intro:
-    'Heselo connects room, station, and table booking with live sessions and cash in one panel. The pages below are written for gaming clubs, karaoke, billiards, anti-cafés, and room lounges.',
-  seoTitle: 'Business solutions — gaming club, karaoke, billiards | Heselo',
+    'Heselo connects room, station, and table booking with live sessions and cash in one panel. The pages below are written for gaming / PlayStation clubs, karaoke, billiards, anti-cafés, and room lounges — pick your flow.',
+  seoTitle: 'Solutions by venue — gaming club, karaoke, billiards | Heselo',
   seoDescription:
-    'Venue management for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges: booking, cash, and inventory. Request a free demo.',
+    'One page per venue: gaming club software (PlayStation / console), karaoke, billiards booking, anti-cafés, and room lounges. Free demo.',
   keywords: [
-    'venue management system',
     'gaming club software',
     'playstation club software',
     'karaoke room booking',
     'billiards club software',
+    'anti-cafe software',
   ],
   cardCta: 'Read more',
   primaryTitle: 'Core venue types',
@@ -25,12 +25,17 @@ export const solutionsEn: SolutionCopy[] = [
     slug: 'billiards',
     shortTitle: 'Billiards',
     h1: 'Billiards club management system',
-    seoTitle: 'Billiards club software & management system | Heselo',
+    seoTitle: 'Billiards booking & scheduling software | Heselo',
     seoDescription:
-      'Billiards management: table/room booking, live sessions, time-based play, and cash. Request a demo for your club.',
-    keywords: ['billiards club software', 'billiards management system', 'pool hall booking'],
+      'Billiards booking system with table scheduling, live play sessions, time-based pricing, and cash. Demo for pool halls and billiards clubs.',
+    keywords: [
+      'billiards booking system',
+      'billiards scheduling system',
+      'billiards club software',
+      'pool hall booking',
+    ],
     intro:
-      'In a billiards club, tables run on time: booking, live play, pause, and payment are linked. A billiards management system should not split the schedule from the live session — Heselo treats tables as resources in one panel.',
+      'In a billiards club, tables run on time: booking, scheduling, live play, pause, and payment are linked. A billiards management system should not split the schedule from the live session — Heselo treats tables as resources in one panel.',
     whoTitle: 'Who is it for?',
     whoBody:
       'Billiards halls, lounge + billiards venues, and clubs that book tables or rooms with time-based payment.',
@@ -143,15 +148,21 @@ export const solutionsEn: SolutionCopy[] = [
     slug: 'gaming',
     shortTitle: 'Gaming club',
     h1: 'Gaming club management system',
-    seoTitle: 'Gaming club management system & club software | Heselo',
+    seoTitle: 'Gaming club software for PS & console clubs | Heselo',
     seoDescription:
-      'Gaming club management: station/table booking, live sessions, cash, and inventory. Demo for PC and console clubs.',
-    keywords: ['gaming club management', 'PC club software', 'gaming lounge booking'],
+      'Gaming club software for PlayStation, console, and PC clubs: station booking, live sessions, cash, and inventory. Gaming management in one panel — free demo.',
+    keywords: [
+      'gaming club software',
+      'gaming management',
+      'console club software',
+      'playstation club software',
+      'PC club software',
+    ],
     intro:
-      'Gaming clubs fill stations by the hour; booking, live play, and cash run together. A gaming club management system should join the resource schedule to live sessions.',
+      'Gaming and console clubs fill stations by the hour; booking, live play, and cash run together. Gaming club software should join the resource schedule to live sessions — a timer alone is not enough.',
     whoTitle: 'Who is it for?',
     whoBody:
-      'PC clubs, console lounges, and mixed gaming venues that need station/table booking, live sessions, and cash.',
+      'PlayStation clubs, console lounges, PC clubs, and mixed gaming venues that need station/table booking, live sessions, and cash.',
     problemsTitle: 'Typical club problems',
     problems: [
       'It is unclear which station is free',
@@ -194,9 +205,9 @@ export const solutionsEn: SolutionCopy[] = [
         a: 'Staff get page- and action-level permissions; sensitive actions can require a protection code.',
       },
     ],
-    related: ['billiards', 'reservations', 'pos', 'inventory'],
+    related: ['billiards', 'karaoke', 'reservations', 'pos'],
     ctaTitle: 'Gaming club demo',
-    ctaBody: 'Share station count — we show booking and live flow.',
+    ctaBody: 'Share station and console count — we show booking and live flow.',
   },
   {
     slug: 'antikafe',

@@ -2,18 +2,17 @@ import type { GuideCopy, GuidesHubCopy } from './types'
 
 export const guidesHubEn: GuidesHubCopy = {
   eyebrow: 'Guides',
-  h1: 'Practical notes on club and room operations',
+  h1: 'How club and room operations actually work',
   intro:
-    'These articles answer common search questions — not a sales pitch. Each piece ends with links to the matching Heselo solution pages.',
-  seoTitle: 'Guides — club and room management | Heselo',
+    'These articles answer common search questions — not a sales pitch. Each piece ends with a link to the matching Heselo solution page.',
+  seoTitle: 'Guides — how club operations work | Heselo',
   seoDescription:
-    'How gaming clubs, karaoke rooms, billiards, and anti-cafés actually run: hourly booking, live sessions, and cash.',
+    'Not a sales pitch: how gaming clubs, karaoke, billiards, and anti-cafés run hourly booking, live sessions, and cash.',
   keywords: [
-    'gaming club management system',
-    'karaoke room booking',
-    'billiards club software',
-    'anti-café software',
-    'room lounge management',
+    'what is a gaming club management system',
+    'how karaoke room booking works',
+    'what is a billiards club management system',
+    'what is an anti-cafe management system',
   ],
   cardCta: 'Read',
 }
@@ -25,15 +24,15 @@ export const guidesEn: GuideCopy[] = [
     h1: 'What is a gaming club management system?',
     seoTitle: 'What is a gaming club management system? | Heselo guide',
     seoDescription:
-      'How PlayStation and gaming clubs run station booking, live sessions, cash, and snacks. PS club software explained.',
+      'How PlayStation, console, and gaming clubs run station booking, live sessions, cash, and snacks. PS club software explained — not a product pitch.',
     keywords: [
-      'gaming club management system',
-      'playstation club software',
+      'what is a gaming club management system',
+      'playstation club software explained',
+      'console club management',
       'PS club booking',
-      'gaming lounge reservation',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-08-13',
+    dateModified: '2026-09-07',
     intro:
       'A gaming club management system keeps PlayStation, console, or PC station bookings, live play, and cash in one panel. A timer can show whether a station is free; it does not give booking history, extensions, snack sales, or a shift close.',
     sections: [
@@ -162,17 +161,17 @@ export const guidesEn: GuideCopy[] = [
     h1: 'How do billiards clubs run the floor?',
     seoTitle: 'What is a billiards club management system? | Heselo guide',
     seoDescription:
-      'How billiards table and room booking, live play, time, and cash connect — billiards club software explained.',
+      'How billiards table booking and scheduling connect to live play, time, and cash — explained. For product pages, see the billiards solution.',
     keywords: [
-      'billiards club software',
-      'billiards management system',
-      'pool hall booking',
-      'billiards timer',
+      'what is a billiards club management system',
+      'billiards table booking explained',
+      'billiards scheduling explained',
+      'pool hall operations',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-08-13',
+    dateModified: '2026-09-07',
     intro:
-      'In a billiards club, tables run on time. Which table is free, when play started, whether extras were added — when those sit apart, the night cash close stretches.',
+      'In a billiards club, tables run on a schedule. Which table is free, when play started, whether extras were added — when booking and live status sit apart, the night cash close stretches.',
     sections: [
       {
         id: 'why',

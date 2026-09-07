@@ -718,7 +718,7 @@ export const az: Messages = {
       home: {
         title: 'Məkan idarəetmə sistemi — rezervasiya, kassa və anbar | Heselo',
         description:
-          'Heselo məkan idarəetmə sistemi: otaq və PS rezervasiyası, canlı zal, kassa və anbar bir paneldə. Oyun klubu (PS), karaoke, bilyard, antikafe və otaqlı launj üçün — pulsuz demo.',
+          'Heselo Azərbaycanda klub və otaq məkanları üçün paneldir: PS/oyun klubu, karaoke, bilyard, antikafe və launj — rezervasiya, canlı zal, kassa və anbar bir yerdə. Pulsuz demo.',
         keywords: [
           'məkan idarəetmə sistemi',
           'oyun klubu proqramı',
@@ -728,9 +728,9 @@ export const az: Messages = {
         ],
       },
       features: {
-        title: 'Rezervasiya, kassa və anbar funksiyaları | Heselo',
+        title: 'Panel funksiyaları — canlı zal, kassa, anbar | Heselo',
         description:
-          'Canlı izləmə, cədvəl, rezervasiyalar, kassa proqramı, anbar idarəetməsi, sürətli satış və statistika — Heselo panelindəki eyni modullar.',
+          'Heselo panelindəki modullar: canlı izləmə, cədvəl, rezervasiya, kassa, anbar, sürətli satış və statistika. Məkan tipindən asılı olmayaraq eyni axın.',
         keywords: [
           'rezervasiya sistemi',
           'kassa proqramı',
@@ -740,15 +740,15 @@ export const az: Messages = {
         ],
       },
       pricing: {
-        title: 'Qiymətlər — Heselo tarifləri',
+        title: 'Qiymətlər — Heselo abunə tarifləri',
         description:
-          'Məkan tipini seçin: PS və bilyard 9 AZN-dən/ay, antikafe 15-dən, karaoke və launj 19-dan. Həcmə görə Kiçik, Orta, Böyük. Demo pulsuz.',
+          'Məkan tipinə görə tarif: PS və bilyard 9 AZN-dən/ay, antikafe 15-dən, karaoke və launj 19-dan. Kiçik, Orta, Böyük. Kart tələb olunmur — demo pulsuz.',
         keywords: ['Heselo qiymət', 'abunə planı', 'məkan idarəetmə proqramı qiymət'],
       },
       contact: {
-        title: 'Demo və əlaqə — Heselo',
+        title: 'Pulsuz demo və əlaqə — Heselo',
         description:
-          'Məkan idarəetmə sistemi üçün demo istəyin. WhatsApp və ya forma — iş saatlarında adətən 2 saat ərzində cavab.',
+          '15 dəqiqəlik demo üçün yazın. WhatsApp və ya forma — iş saatlarında adətən 2 saat ərzində cavab. Məkan tipi və otaq/masa sayı kifayətdir.',
         keywords: ['Heselo demo', 'məkan proqramı əlaqə', 'rezervasiya demo'],
       },
       privacy: {
@@ -764,9 +764,9 @@ export const az: Messages = {
         keywords: ['şərtlər', 'Heselo şərtlər', 'istifadə şərtləri'],
       },
       solutions: {
-        title: 'Biznes həlləri — oyun klubu, karaoke, bilyard | Heselo',
+        title: 'Məkan tiplərinə görə həllər — PS, karaoke, bilyard | Heselo',
         description:
-          'Oyun klubu (PS), karaoke otaqları, bilyard, antikafe və otaqlı launj üçün məkan idarəetməsi. Rezervasiya, kassa və anbar — hər tipə uyğun izah.',
+          'Hər məkan tipinə ayrı səhifə: oyun/PS klubu, karaoke, bilyard, antikafe, otaqlı launj — plus rezervasiya, kassa və anbar. Uyğun axını seçin, demo istəyin.',
         keywords: [
           'oyun klubu proqramı',
           'ps klub proqramı',
@@ -776,13 +776,13 @@ export const az: Messages = {
         ],
       },
       guides: {
-        title: 'Bələdçilər — klub və otaq idarəetməsi | Heselo',
+        title: 'Bələdçilər — klub idarəetməsi necə işləyir | Heselo',
         description:
-          'Oyun klubu, karaoke otağı, bilyard və antikafe necə idarə olunur — saatla ödəniş, rezervasiya və kassa izahları.',
+          'Satış səhifəsi deyil: oyun klubu, karaoke, bilyard və antikafe axını necə qurulur — saatla ödəniş, rezerv və kassa izahı.',
         keywords: [
           'oyun klubu idarəetmə sistemi nədir',
-          'karaoke otaq rezervasiya',
-          'antikafe proqramı izah',
+          'karaoke otaqları necə rezerv edilir',
+          'antikafe idarəetmə sistemi nədir',
         ],
       },
     },

@@ -2,18 +2,17 @@ import type { GuideCopy, GuidesHubCopy } from './types'
 
 export const guidesHubAz: GuidesHubCopy = {
   eyebrow: 'Bələdçilər',
-  h1: 'Klub və otaq idarəetməsi haqqında faydalı izahlar',
+  h1: 'Klub və otaq axını necə işləyir?',
   intro:
-    'Bu bölmə məhsul reklamı deyil — axtarışda tez rast gəlinən suallara aydın cavab verir. Hər yazının sonunda Heselo-nun müvafiq həll səhifələrinə keçid var.',
-  seoTitle: 'Bələdçilər — klub və otaq idarəetməsi | Heselo',
+    'Bu bölmə məhsul reklamı deyil — axtarışda tez rast gəlinən suallara aydın cavab verir. Hər yazının sonunda uyğun Heselo həll səhifəsinə keçid var.',
+  seoTitle: 'Bələdçilər — klub idarəetməsi necə işləyir | Heselo',
   seoDescription:
-    'Oyun klubu, karaoke otağı, bilyard və antikafe necə idarə olunur — saatla ödəniş, rezervasiya və kassa izahları.',
+    'Satış səhifəsi deyil: oyun klubu, karaoke, bilyard və antikafe axını necə qurulur — saatla ödəniş, rezerv və kassa izahı.',
   keywords: [
     'oyun klubu idarəetmə sistemi nədir',
-    'karaoke otaq rezervasiya',
-    'bilyard klubu proqramı',
-    'antikafe proqramı',
-    'otaqlı launj idarəetmə',
+    'karaoke otaqları necə rezerv edilir',
+    'bilyard klubu necə idarə olunur',
+    'antikafe idarəetmə sistemi nədir',
   ],
   cardCta: 'Oxu',
 }
@@ -25,15 +24,15 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Oyun klubu idarəetmə sistemi nədir?',
     seoTitle: 'Oyun klubu idarəetmə sistemi nədir? | Heselo bələdçisi',
     seoDescription:
-      'PS və oyun klubu necə idarə olunur: stansiya rezervasiyası, canlı sessiya, kassa və anbar. PlayStation klub proqramı izahı.',
+      'PS, konsol və oyun klubu necə idarə olunur: stansiya rezervasiyası, canlı sessiya, kassa və anbar. PlayStation klub proqramı izahı — satış səhifəsi deyil.',
     keywords: [
       'oyun klubu idarəetmə sistemi nədir',
       'ps klub proqramı',
       'playstation klub idarəetmə',
-      'oyun klubu rezervasiya',
+      'konsol klub necə idarə olunur',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-08-13',
+    dateModified: '2026-09-07',
     intro:
       'Oyun klubu idarəetmə sistemi PS, konsol və ya PC stansiyalarının rezervini, canlı oyunu və kassanı bir paneldə aparmaq üçündür. Sadə taymer stansiyanın boş olub-olmadığını göstərə bilər, amma rezerv tarixçəsi, uzatma, qəlyanaltı satışı və növbə bağlanışını vermir.',
     sections: [
@@ -162,15 +161,15 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Bilyard klubu necə idarə olunur?',
     seoTitle: 'Bilyard klubu idarəetmə sistemi nədir? | Heselo bələdçisi',
     seoDescription:
-      'Bilyard masası və otaq rezervasiyası, canlı oyun, vaxt və kassa necə birləşir — bilyard klubu proqramı izahı.',
+      'Bilyard masa rezervasiyası və cədvəl, canlı oyun, vaxt və kassa necə birləşir — izah. Satış səhifəsi üçün həll bölməsinə keçin.',
     keywords: [
-      'bilyard klubu proqramı',
-      'bilyard idarəetmə sistemi',
-      'bilyard masa rezervasiya',
+      'bilyard klubu idarəetmə sistemi nədir',
+      'bilyard masa rezervasiya necə',
+      'bilyard cədvəl',
       'bilyard vaxt sayğacı',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-08-13',
+    dateModified: '2026-09-07',
     intro:
       'Bilyard klubunda masa saatla işləyir. Hansı masa boşdur, oyun nə vaxt başlayıb, əlavə içki yazılıb, yoxsa yox — bunlar ayrı qalanda gecə kassası uzanır.',
     sections: [

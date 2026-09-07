@@ -718,7 +718,7 @@ export const en: Messages = {
       home: {
         title: 'Venue management system — booking, cash & inventory | Heselo',
         description:
-          'Heselo venue management: room and station booking, live floor, cash, and inventory in one panel. For gaming clubs (PlayStation), karaoke, billiards, anti-cafés, and room lounges — free demo.',
+          'Heselo is venue software for gaming clubs (PlayStation / console), karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory in one panel. Free demo.',
         keywords: [
           'venue management system',
           'gaming club software',
@@ -728,9 +728,9 @@ export const en: Messages = {
         ],
       },
       features: {
-        title: 'Reservation, cash & inventory features | Heselo',
+        title: 'Panel features — live floor, cash, inventory | Heselo',
         description:
-          'Live tracking, schedule, reservations, cash software, inventory, quick sale, and statistics — the same modules as the Heselo panel.',
+          'The same Heselo modules your team uses: live tracking, schedule, reservations, cash, inventory, quick sale, and stats — one flow for every venue type.',
         keywords: [
           'reservation system',
           'cash software',
@@ -740,15 +740,15 @@ export const en: Messages = {
         ],
       },
       pricing: {
-        title: 'Pricing — Heselo plans',
+        title: 'Pricing — Heselo subscription plans',
         description:
-          'Choose a venue type: PlayStation and billiards from 9 AZN/month, anti-cafés from 15, karaoke and lounges from 19. Small, Medium, Large by size. Free demo.',
+          'Pick a venue type: PlayStation and billiards from 9 AZN/month, anti-cafés from 15, karaoke and lounges from 19. Small, Medium, Large by size. Card not required — free demo.',
         keywords: ['Heselo pricing', 'subscription plans', 'venue management pricing'],
       },
       contact: {
-        title: 'Demo & contact — Heselo',
+        title: 'Free demo & contact — Heselo',
         description:
-          'Request a venue management demo. WhatsApp or the form — we usually reply within two hours during working hours.',
+          'Book a 15-minute demo. WhatsApp or the form — we usually reply within two hours during working hours. Venue type and table/room count is enough.',
         keywords: ['Heselo demo', 'venue software contact', 'reservation demo'],
       },
       privacy: {
@@ -764,9 +764,9 @@ export const en: Messages = {
         keywords: ['terms', 'Heselo terms', 'terms of use'],
       },
       solutions: {
-        title: 'Business solutions — gaming club, karaoke, billiards | Heselo',
+        title: 'Solutions by venue — gaming club, karaoke, billiards | Heselo',
         description:
-          'Venue management for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges. Booking, cash, and inventory explained per venue type.',
+          'One page per venue type: gaming / PlayStation clubs, karaoke, billiards, anti-cafés, room lounges — plus reservation, cash, and inventory. Pick your flow, request a demo.',
         keywords: [
           'gaming club software',
           'playstation club software',
@@ -776,13 +776,13 @@ export const en: Messages = {
         ],
       },
       guides: {
-        title: 'Guides — club and room venue management | Heselo',
+        title: 'Guides — how club operations work | Heselo',
         description:
-          'How gaming clubs, karaoke rooms, billiards, and anti-cafés run hourly booking, sessions, and cash — practical guides.',
+          'Not a sales pitch: how gaming clubs, karaoke, billiards, and anti-cafés run hourly booking, live sessions, and cash.',
         keywords: [
           'what is a gaming club management system',
-          'karaoke room booking',
-          'anti-cafe software explained',
+          'how karaoke room booking works',
+          'what is an anti-cafe management system',
         ],
       },
     },

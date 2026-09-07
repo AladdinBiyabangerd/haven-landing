@@ -2,18 +2,18 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 
 export const solutionsHubAz: SolutionsHubCopy = {
   eyebrow: 'Biznes həlləri',
-  h1: 'Hansı məkanlar üçün Heselo uyğundur?',
+  h1: 'Hansı məkan tipinə uyğunsunuz?',
   intro:
-    'Heselo otaq, stansiya və masa rezervasiyasını, canlı sessiyanı və kassanı bir paneldə birləşdirir. Aşağıdakı səhifələr oyun klubu, karaoke, bilyard, antikafe və otaqlı launj axınına görə yazılıb.',
-  seoTitle: 'Biznes həlləri — oyun klubu, karaoke, bilyard | Heselo',
+    'Heselo otaq, stansiya və masa rezervasiyasını, canlı sessiyanı və kassanı bir paneldə birləşdirir. Aşağıdakı səhifələr oyun/PS klubu, karaoke, bilyard, antikafe və otaqlı launj axınına görə yazılıb — tipinizi seçin.',
+  seoTitle: 'Məkan tiplərinə görə həllər — PS, karaoke, bilyard | Heselo',
   seoDescription:
-    'Oyun klubu (PS), karaoke otaqları, bilyard, antikafe və otaqlı launj üçün məkan idarəetməsi: rezervasiya, kassa və anbar. Pulsuz demo.',
+    'Hər tipə ayrı səhifə: oyun/PS klubu, karaoke, bilyard, antikafe, otaqlı launj — rezervasiya, kassa və anbar. Pulsuz demo.',
   keywords: [
-    'məkan idarəetmə sistemi',
     'oyun klubu proqramı',
     'ps klub proqramı',
     'karaoke otaq rezervasiya',
     'bilyard klubu proqramı',
+    'antikafe proqramı',
   ],
   cardCta: 'Ətraflı oxu',
   primaryTitle: 'Əsas məkan tipləri',
@@ -25,16 +25,17 @@ export const solutionsAz: SolutionCopy[] = [
     slug: 'billiards',
     shortTitle: 'Bilyard',
     h1: 'Bilyard klubu idarəetmə sistemi',
-    seoTitle: 'Bilyard klubu proqramı və idarəetmə sistemi | Heselo',
+    seoTitle: 'Bilyard klubu proqramı — masa rezervasiyası və cədvəl | Heselo',
     seoDescription:
-      'Bilyard idarəetmə sistemi: masa/otaq rezervasiyası, canlı sessiya, vaxt və ödəniş, kassa. Bilyard klubu proqramı — demo istəyin.',
+      'Bilyard masa və otaq rezervasiyası, cədvəl, canlı oyun sessiyası və kassa bir paneldə. Bilyard klubu proqramı — demo istəyin.',
     keywords: [
       'bilyard klubu proqramı',
-      'bilyard idarəetmə sistemi',
       'bilyard masa rezervasiya',
+      'bilyard cədvəl sistemi',
+      'bilyard idarəetmə sistemi',
     ],
     intro:
-      'Bilyard klubunda masa saatla işləyir: rezerv, canlı oyun, pauza və ödəniş bir-birinə bağlıdır. Bilyard idarəetmə sistemi cədvəli və canlı sessiyanı ayırmamalıdır — Heselo masaları resurs kimi eyni paneldə idarə edir.',
+      'Bilyard klubunda masa saatla işləyir: rezerv, cədvəl, canlı oyun, pauza və ödəniş bir-birinə bağlıdır. Bilyard idarəetmə sistemi cədvəli və canlı sessiyanı ayırmamalıdır — Heselo masaları resurs kimi eyni paneldə idarə edir.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
       'Bilyard salonları, qarışıq lounge + bilyard məkanları və masa/otaq rezervasiyası ilə vaxt üzrə ödəniş aparan klublar üçün.',
@@ -88,10 +89,10 @@ export const solutionsAz: SolutionCopy[] = [
     slug: 'karaoke',
     shortTitle: 'Karaoke',
     h1: 'Karaoke idarəetmə sistemi',
-    seoTitle: 'Karaoke idarəetmə sistemi və otaq rezervasiyası | Heselo',
+    seoTitle: 'Karaoke otaq rezervasiyası və idarəetmə sistemi | Heselo',
     seoDescription:
-      'Karaoke idarəetmə sistemi: otaq rezervasiyası, canlı sessiya, kassa və məhsul satışları. Karaoke məkanı üçün demo.',
-    keywords: ['karaoke idarəetmə sistemi', 'karaoke otaq rezervasiya', 'karaoke proqramı'],
+      'Karaoke otaq rezervasiyası, canlı sessiya, kassa və əlavə satış bir axında. Karaoke məkanı üçün proqram — pulsuz demo.',
+    keywords: ['karaoke otaq rezervasiya', 'karaoke idarəetmə sistemi', 'karaoke proqramı'],
     intro:
       'Karaoke məkanında əsas vahid otaqdır: rezervasiya, sessiya müddəti, əlavə içki/yemək və ödəniş. Karaoke idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir.',
     whoTitle: 'Kimlər üçündür?',
@@ -146,20 +147,21 @@ export const solutionsAz: SolutionCopy[] = [
   {
     slug: 'gaming',
     shortTitle: 'Oyun klubu',
-    h1: 'Gaming club idarəetmə sistemi',
-    seoTitle: 'Gaming club idarəetmə sistemi və klub proqramı | Heselo',
+    h1: 'Oyun klubu (PS) idarəetmə sistemi',
+    seoTitle: 'Oyun klubu proqramı və PS klub idarəetmə sistemi | Heselo',
     seoDescription:
-      'Gaming club idarəetmə sistemi: stansiya/masa rezervasiyası, canlı sessiya, kassa və anbar. Oyun klubu proqramı — demo.',
+      'PS, konsol və PC stansiya rezervasiyası, canlı sessiya, kassa və anbar — oyun klubu proqramı bir paneldə. Pulsuz demo.',
     keywords: [
-      'gaming club idarəetmə sistemi',
       'oyun klubu proqramı',
-      'pc club rezervasiya',
+      'ps klub proqramı',
+      'playstation klub idarəetmə',
+      'konsol klub proqramı',
     ],
     intro:
-      'Gaming club-larda stansiya və ya masa saatla dolur; rezerv, canlı oyun və kassa eyni vaxtda işləyir. Gaming club idarəetmə sistemi resurs cədvəlini canlı sessiya ilə birləşdirməlidir.',
+      'Oyun və PS klublarında stansiya və ya masa saatla dolur; rezerv, canlı oyun və kassa eyni vaxtda işləyir. Oyun klubu idarəetmə sistemi resurs cədvəlini canlı sessiya ilə birləşdirməlidir — lövhə və taymer kifayət etmir.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'PC club, console lounge və qarışıq oyun məkanları — stansiya/masa rezervasiyası, canlı sessiya və kassa lazım olan klublar üçün.',
+      'PlayStation klubları, konsol lounge-lar, PC club və qarışıq oyun məkanları — stansiya/masa rezervasiyası, canlı sessiya və kassa lazım olan yerlər üçün.',
     problemsTitle: 'Oyun klublarında tipik problemlər',
     problems: [
       'Hansı stansiya boşdur — lövhə gecikir',
@@ -167,10 +169,10 @@ export const solutionsAz: SolutionCopy[] = [
       'Snack və içki satışı kassa ilə uyğun gəlmir',
       'Gecə növbəsində hesab-kitab uzanır',
     ],
-    howTitle: 'Heselo gaming club-da necə işləyir?',
+    howTitle: 'Heselo oyun klubunda necə işləyir?',
     howBody:
       'Stansiya və ya masaları resurs kimi qurursunuz. Rezerv cədvəldədir; oyun başlayanda canlı sessiya açılır. Məhsul satışı və ödəniş eyni axındadır. Kassa növbəni bağlayır; anbar snack/içki qalıqlarını saxlayır.',
-    featuresTitle: 'Gaming club üçün funksiyalar',
+    featuresTitle: 'Oyun klubu üçün funksiyalar',
     features: [
       {
         title: 'Resurs cədvəli',
@@ -194,7 +196,7 @@ export const solutionsAz: SolutionCopy[] = [
       'Sadə timer rezervasiya tarixçəsi, müştəri kartı, anbar və kassa sayımını vermir. Heselo klubun gününü bir məkan paneli kimi aparır.',
     faq: [
       {
-        q: 'PC və console eyni sistemdə ola bilər?',
+        q: 'PC və konsol eyni sistemdə ola bilər?',
         a: 'Bəli. Fərqli resurslar eyni cədvəl və kassa axınında idarə olunur.',
       },
       {
@@ -202,9 +204,9 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'İşçilərə səhifə və düymə səviyyəsində icazə verilir; vacib əməliyyatlarda qoruma kodu ola bilər.',
       },
     ],
-    related: ['billiards', 'reservations', 'pos', 'inventory'],
-    ctaTitle: 'Gaming club üçün demo',
-    ctaBody: 'Stansiya sayınızı bizə yazın — rezervasiya və canlı axını göstəririk.',
+    related: ['billiards', 'karaoke', 'reservations', 'pos'],
+    ctaTitle: 'Oyun klubu üçün demo',
+    ctaBody: 'Stansiya və PS sayınızı bizə yazın — rezervasiya və canlı axını göstəririk.',
   },
   {
     slug: 'antikafe',
