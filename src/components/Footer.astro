@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
+import { BUILDER, builderPortfolioUrl, localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
 import { formatPhone } from '@/lib/format'
 import { FOOTER_SOLUTION_SLUGS, getSolutionsBySlugs } from '@/data/solutions'
 import BrandMark from '@/components/BrandMark.astro'
@@ -65,9 +65,9 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       <a href={localePath(locale, '/terms')}>{messages.footer.terms}</a>
     </nav>
     <p class="footer__credit type-meta">
-      Designed &amp; built by{' '}
-      <a href="https://aladdinalizade.site" target="_blank" rel="noopener noreferrer">
-        Aladdin<span aria-hidden="true"> ↗</span>
+      {messages.footer.credit}{' '}
+      <a href={builderPortfolioUrl(locale)} target="_blank" rel="noopener noreferrer">
+        {BUILDER.name}<span aria-hidden="true"> ↗</span>
       </a>
     </p>
   </div>

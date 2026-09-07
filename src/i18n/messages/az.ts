@@ -34,6 +34,7 @@ export const az: Messages = {
     terms: 'Şərtlər',
     rights: 'Bütün hüquqlar qorunur.',
     tagline: 'Masa · Otaq · Canlı zal · Kassa',
+    credit: 'Dizayn edib hazırlayan',
   },
   hero: {
     brandHint: 'Məkan idarəetmə sistemi',

@@ -54,6 +54,8 @@ export type Messages = {
     terms: string
     rights: string
     tagline: string
+    /** Prefixed to the builder name in the footer credit line. */
+    credit: string
   }
   hero: {
     brandHint: string

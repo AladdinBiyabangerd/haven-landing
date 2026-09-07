@@ -15,6 +15,23 @@ export const SITE = {
   logoPath: '/icon-512.png',
 } as const
 
+/** Builder credit in the site footer — portfolio hub for SEO and attribution. */
+export const BUILDER = {
+  name: 'Aladdin Biyabangerd',
+  portfolioOrigin: 'https://aladdinbiyabangerd.site',
+} as const
+
+/** Locale-matched portfolio URL with UTM for the Heselo footer credit. */
+export function builderPortfolioUrl(locale: string): string {
+  const pathLocale = locale === 'ka' ? 'en' : locale
+  const url = new URL(`/${pathLocale}`, BUILDER.portfolioOrigin)
+  url.searchParams.set('utm_source', 'heselo')
+  url.searchParams.set('utm_medium', 'organic_social')
+  url.searchParams.set('utm_campaign', 'portfolio')
+  url.searchParams.set('utm_content', 'footer_credit')
+  return url.toString()
+}
+
 /** Optional social profile URLs for Organization sameAs (PUBLIC_HESELO_SOCIAL_*). */
 export function siteSameAs(): string[] {
   const env = typeof import.meta !== 'undefined' ? import.meta.env : undefined

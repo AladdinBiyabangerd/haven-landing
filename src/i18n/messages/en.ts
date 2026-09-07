@@ -34,6 +34,7 @@ export const en: Messages = {
     terms: 'Terms',
     rights: 'All rights reserved.',
     tagline: 'Tables · Rooms · Live floor · Cash',
+    credit: 'Designed & built by',
   },
   hero: {
     brandHint: 'Venue management system',
