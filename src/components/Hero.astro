@@ -21,10 +21,18 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       <h1 class="type-hero reveal reveal-delay-1">{h.title}</h1>
       <p class="lead reveal reveal-delay-2">{h.subtitle}</p>
       <div class="hero__cta reveal reveal-delay-3">
-        <a class="btn btn-primary" href={waHref} target="_blank" rel="noopener noreferrer">
+        <a
+          class="btn btn-primary"
+          href={waHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-placement="hero"
+        >
           {h.ctaPrimary}
         </a>
-        <a class="btn btn-ghost" href={localePath(locale, '/contact')}>{h.ctaSecondary}</a>
+        <a class="btn btn-ghost" href={localePath(locale, '/contact')} data-track-placement="hero">
+          {h.ctaSecondary}
+        </a>
       </div>
       <ul class="trust reveal reveal-delay-3">
         {messages.trust.items.map((item) => <li>{item}</li>)}

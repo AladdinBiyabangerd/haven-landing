@@ -4,7 +4,8 @@ import vercel from '@astrojs/vercel'
 
 const envSite = process.env.PUBLIC_HESELO_SITE_URL || process.env.PUBLIC_SITE_URL || ''
 const isLocal = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?\/?$/i.test(envSite)
-const site = !envSite || isLocal ? 'https://heselo.online' : envSite.replace(/\/$/, '')
+const rawSite = !envSite || isLocal ? 'https://heselo.online' : envSite.replace(/\/$/, '')
+const site = rawSite.replace(/^(https?:\/\/)www\./i, '$1')
 
 /** Vercel sets VERCEL=1. Override with DEPLOY_TARGET=node|vercel when needed. */
 const deployTarget =

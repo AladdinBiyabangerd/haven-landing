@@ -37,7 +37,7 @@ export const az: Messages = {
     credit: 'Dizayn edib hazırlayan',
   },
   hero: {
-    brandHint: 'Məkan idarəetmə sistemi',
+    brandHint: 'Heselo · məkan idarəetmə',
     title: 'WhatsApp-da itən bron növbəni qarışdırır.',
     subtitle:
       'Heselo otaq və PS cədvəlini, canlı sessiyanı və kassanı eyni ekranda saxlayır.',
@@ -716,15 +716,15 @@ export const az: Messages = {
     ],
     pages: {
       home: {
-        title: 'Məkan idarəetmə sistemi — rezervasiya, kassa və anbar | Heselo',
+        title: 'Heselo — məkan idarəetmə sistemi | rezervasiya, kassa',
         description:
           'Heselo Azərbaycanda klub və otaq məkanları üçün paneldir: PS/oyun klubu, karaoke, bilyard, antikafe və launj — rezervasiya, canlı zal, kassa və anbar bir yerdə. Pulsuz demo.',
         keywords: [
+          'Heselo',
           'məkan idarəetmə sistemi',
           'oyun klubu proqramı',
           'ps klub proqramı',
           'karaoke otaq rezervasiya',
-          'Heselo',
         ],
       },
       features: {

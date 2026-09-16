@@ -43,6 +43,12 @@ interface ImportMeta {
   readonly env: ImportMetaEnv
 }
 
+interface Window {
+  dataLayer?: unknown[]
+  gtag?: (...args: unknown[]) => void
+  heseloTrack?: (name: string, params?: Record<string, string | undefined>) => void
+}
+
 declare namespace App {
   // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   interface Locals {}

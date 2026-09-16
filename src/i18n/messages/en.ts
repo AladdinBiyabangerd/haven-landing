@@ -37,7 +37,7 @@ export const en: Messages = {
     credit: 'Designed & built by',
   },
   hero: {
-    brandHint: 'Venue management system',
+    brandHint: 'Heselo · venue management',
     title: 'A booking lost in WhatsApp wrecks the shift.',
     subtitle:
       'Heselo keeps the room and PlayStation schedule, live session, and cash on one screen.',
@@ -716,15 +716,15 @@ export const en: Messages = {
     ],
     pages: {
       home: {
-        title: 'Venue management system — booking, cash & inventory | Heselo',
+        title: 'Heselo — venue management software | booking & cash',
         description:
           'Heselo is venue software for gaming clubs (PlayStation / console), karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory in one panel. Free demo.',
         keywords: [
+          'Heselo',
           'venue management system',
           'gaming club software',
           'playstation club software',
           'karaoke room booking',
-          'Heselo',
         ],
       },
       features: {

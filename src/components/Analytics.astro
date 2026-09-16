@@ -2,6 +2,8 @@
 /**
  * GA4 Measurement ID is public (visible in page source). Default enables tracking
  * on production builds without requiring env; override via PUBLIC_HESELO_GA4_ID.
+ *
+ * Lead CTAs emit `generate_lead` (mark as a key event in GA4 Admin → Events).
  */
 const DEFAULT_GA4_ID = 'G-HKT0YR5W38'
 
@@ -29,8 +31,45 @@ const ga4Id = (import.meta.env.PUBLIC_HESELO_GA4_ID ||
         function gtag() {
           dataLayer.push(arguments)
         }
+        window.gtag = gtag
         gtag('js', new Date())
         gtag('config', ga4Id)
+
+        /** Shared helper for contact form + other modules. */
+        window.heseloTrack = function heseloTrack(name, params) {
+          if (typeof gtag === 'function') gtag('event', name, params || {})
+        }
+
+        function leadPlacement(el) {
+          if (!(el instanceof Element)) return 'other'
+          const marked = el.closest('[data-track-placement]')
+          if (marked instanceof HTMLElement && marked.dataset.trackPlacement) {
+            return marked.dataset.trackPlacement
+          }
+          if (el.closest('.hero')) return 'hero'
+          if (el.closest('.contact-fab')) return 'fab'
+          if (el.closest('[data-cta]')) return 'cta'
+          if (el.closest('[data-contact-form]') || el.closest('.wa-lead')) return 'contact'
+          return 'other'
+        }
+
+        document.addEventListener(
+          'click',
+          function (event) {
+            const target = event.target
+            if (!(target instanceof Element)) return
+            const a = target.closest('a')
+            if (!(a instanceof HTMLAnchorElement)) return
+            const href = a.href || ''
+            if (/wa\.me\/|whatsapp\.com\//i.test(href)) {
+              window.heseloTrack('generate_lead', {
+                method: 'whatsapp',
+                placement: leadPlacement(a),
+              })
+            }
+          },
+          true,
+        )
       </script>
     </>
   ) : null

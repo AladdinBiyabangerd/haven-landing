@@ -270,6 +270,13 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
         if (!body || body.ok !== true) throw new Error('fail')
         status.textContent = successMsg
         status.dataset.state = 'ok'
+        if (typeof window.heseloTrack === 'function') {
+          window.heseloTrack('generate_lead', {
+            method: 'form',
+            placement: 'contact',
+            intent: payload.intent,
+          })
+        }
         form.reset()
       } catch {
         status.textContent = errorMsg

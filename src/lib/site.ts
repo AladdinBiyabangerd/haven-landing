@@ -50,10 +50,24 @@ export function siteSameAs(): string[] {
 const LOCALHOST = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?\/?$/i
 const PRODUCTION_ORIGIN = 'https://heselo.online'
 
+/** Apex host only — GSC showed both www and non-www; canonicals must not split. */
+function apexOrigin(url: string): string {
+  try {
+    const parsed = new URL(url.includes('://') ? url : `https://${url}`)
+    if (parsed.hostname.startsWith('www.')) {
+      parsed.hostname = parsed.hostname.slice(4)
+    }
+    return parsed.origin
+  } catch {
+    return url.replace(/\/$/, '').replace(/^(https?:\/\/)www\./i, '$1')
+  }
+}
+
 /**
  * Canonical site origin for SEO (sitemap, canonical, JSON-LD, OG).
  * Prefers Astro `site`, then PUBLIC_HESELO_SITE_URL (legacy PUBLIC_SITE_URL).
  * Localhost is ignored outside DEV so accidental local .env values never ship.
+ * Production always normalizes away `www.` so Search Console does not split equity.
  */
 export function siteUrl(): string {
   const env = typeof import.meta !== 'undefined' ? import.meta.env : undefined
@@ -67,7 +81,7 @@ export function siteUrl(): string {
       if (env?.DEV) return url
       continue
     }
-    return url
+    return apexOrigin(url)
   }
 
   return PRODUCTION_ORIGIN
