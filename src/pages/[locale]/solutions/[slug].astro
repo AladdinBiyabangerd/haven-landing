@@ -4,7 +4,7 @@ import Faq from '@/components/Faq.astro'
 import { resolveLocale, LOCALES } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 import { getSolution, getSolutions, SOLUTION_SLUGS } from '@/data/solutions'
-import { getGuideForSolution } from '@/data/guides'
+import { getAltGuidesForSolution, getGuideForSolution } from '@/data/guides'
 import { SOLUTION_SHOT_MAP, SOLUTION_EXTRA_SHOT_MAP } from '@/lib/productShots'
 import ProductShot from '@/components/ProductShot.astro'
 import CtaBanner from '@/components/CtaBanner.astro'
@@ -33,6 +33,7 @@ if (!solution) {
 
 const related = getSolutions(locale).filter((item) => solution.related.includes(item.slug))
 const relatedGuide = getGuideForSolution(locale, solution.slug)
+const altGuides = getAltGuidesForSolution(locale, solution.slug)
 const productShotId = SOLUTION_SHOT_MAP[solution.slug]
 const extraShotId = SOLUTION_EXTRA_SHOT_MAP[solution.slug]
 const range = venuePriceRange(solution.slug)
@@ -141,6 +142,26 @@ const faqMessages = {
         <h2 id="differ-title" class="sub">{solution.differTitle}</h2>
         <p class="body">{solution.differBody}</p>
       </section>
+
+      {
+        altGuides.length > 0 ? (
+          <section class="alt-block" aria-labelledby="alt-title">
+            <h2 id="alt-title" class="sub">
+              {messages.guidesPage.altSeekingTitle}
+            </h2>
+            <p class="body">{messages.guidesPage.altSeekingBody}</p>
+            <ul class="alt-links">
+              {altGuides.map((item) => (
+                <li>
+                  <a class="link-inline" href={localePath(locale, `/guides/${item.slug}`)}>
+                    {item.shortTitle}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null
+      }
 
       {
         related.length > 0 ? (
@@ -293,6 +314,18 @@ const faqMessages = {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--line);
+  }
+  .alt-block {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .alt-links {
+    margin: 0.85rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
   }
   .related ul {
     margin: 0.85rem 0 0;

@@ -18,6 +18,60 @@ export const SOLUTION_GUIDE_MAP: Partial<Record<SolutionSlug, GuideSlug>> = {
   billiards: 'billiards-club-management',
   lounge: 'room-lounge-management',
   antikafe: 'antikafe-management-system',
+  pos: 'club-pos-vs-excel',
+  reservations: 'club-pos-vs-excel',
+}
+
+/**
+ * Soft “looking for an alternative?” links on solution pages.
+ * Keep 1–3 comparison guides per solution; educational guide stays in SOLUTION_GUIDE_MAP.
+ */
+export const SOLUTION_ALT_GUIDES: Partial<Record<SolutionSlug, GuideSlug[]>> = {
+  gaming: [
+    'iiko-alternative-clubs',
+    'playstation-cafe-software-alternative',
+    'club-pos-vs-excel',
+  ],
+  karaoke: ['restaurant-pos-vs-karaoke-system', 'dine-alternative', 'clopos-alternative'],
+  billiards: ['affordable-club-pos', 'club-pos-vs-excel', 'dine-alternative'],
+  lounge: ['kaktus-alternative', 'affordable-club-pos', 'iiko-alternative-clubs'],
+  antikafe: ['affordable-club-pos', 'dine-alternative', 'club-pos-vs-excel'],
+  pos: ['club-pos-vs-excel', 'affordable-club-pos', 'dine-alternative', 'minupos-alternative'],
+  reservations: ['club-pos-vs-excel', 'kaktus-alternative', 'dine-alternative'],
+  inventory: ['club-pos-vs-excel', 'affordable-club-pos'],
+}
+
+/** Named / category comparison guides (Phase C competitor track). */
+export const COMPARISON_GUIDE_SLUGS = [
+  'club-pos-vs-excel',
+  'iiko-alternative-clubs',
+  'clopos-alternative',
+  'dine-alternative',
+  'restomas-alternative',
+  'minupos-alternative',
+  'robotpos-alternative',
+  'affordable-club-pos',
+  'restaurant-pos-vs-karaoke-system',
+  'playstation-cafe-software-alternative',
+  'izi-alternative',
+  'kaktus-alternative',
+  'resto-az-alternative',
+] as const satisfies readonly GuideSlug[]
+
+const RELATED_COMPARISON: Partial<Record<GuideSlug, GuideSlug[]>> = {
+  'club-pos-vs-excel': ['affordable-club-pos', 'iiko-alternative-clubs'],
+  'iiko-alternative-clubs': ['clopos-alternative', 'dine-alternative'],
+  'clopos-alternative': ['dine-alternative', 'restomas-alternative'],
+  'dine-alternative': ['minupos-alternative', 'clopos-alternative'],
+  'restomas-alternative': ['dine-alternative', 'clopos-alternative'],
+  'minupos-alternative': ['affordable-club-pos', 'dine-alternative'],
+  'robotpos-alternative': ['affordable-club-pos', 'iiko-alternative-clubs'],
+  'affordable-club-pos': ['minupos-alternative', 'club-pos-vs-excel'],
+  'restaurant-pos-vs-karaoke-system': ['dine-alternative', 'iiko-alternative-clubs'],
+  'playstation-cafe-software-alternative': ['izi-alternative', 'iiko-alternative-clubs'],
+  'izi-alternative': ['playstation-cafe-software-alternative', 'affordable-club-pos'],
+  'kaktus-alternative': ['club-pos-vs-excel', 'affordable-club-pos'],
+  'resto-az-alternative': ['clopos-alternative', 'affordable-club-pos'],
 }
 
 const byLocale: Record<Locale, { hub: GuidesHubCopy; items: GuideCopy[] }> = {
@@ -35,6 +89,17 @@ export function getGuides(locale: Locale): GuideCopy[] {
   )
 }
 
+export function getComparisonGuides(locale: Locale): GuideCopy[] {
+  return COMPARISON_GUIDE_SLUGS.map((slug) => getGuide(locale, slug)).filter(
+    (item): item is GuideCopy => Boolean(item),
+  )
+}
+
+export function getEducationalGuides(locale: Locale): GuideCopy[] {
+  const comparison = new Set<string>(COMPARISON_GUIDE_SLUGS)
+  return getGuides(locale).filter((item) => !comparison.has(item.slug))
+}
+
 export function getGuidesHub(locale: Locale): GuidesHubCopy {
   return byLocale[locale].hub
 }
@@ -48,6 +113,20 @@ export function getGuideForSolution(locale: Locale, solutionSlug: string): Guide
   return guideSlug ? getGuide(locale, guideSlug) : undefined
 }
 
+export function getAltGuidesForSolution(locale: Locale, solutionSlug: string): GuideCopy[] {
+  const slugs = SOLUTION_ALT_GUIDES[solutionSlug as SolutionSlug] ?? []
+  return slugs.map((slug) => getGuide(locale, slug)).filter((item): item is GuideCopy => Boolean(item))
+}
+
+export function getRelatedComparisonGuides(locale: Locale, slug: GuideSlug): GuideCopy[] {
+  const related = RELATED_COMPARISON[slug] ?? []
+  return related.map((s) => getGuide(locale, s)).filter((item): item is GuideCopy => Boolean(item))
+}
+
 export function isGuideSlug(value: string): value is GuideSlug {
   return (GUIDE_SLUGS as readonly string[]).includes(value)
+}
+
+export function isComparisonGuideSlug(value: string): boolean {
+  return (COMPARISON_GUIDE_SLUGS as readonly string[]).includes(value)
 }

@@ -140,6 +140,11 @@ export type Messages = {
   }
   guidesPage: {
     updatedLabel: string
+    pricingCta: string
+    demoCta: string
+    relatedComparisonsTitle: string
+    altSeekingTitle: string
+    altSeekingBody: string
   }
   eeat: {
     eyebrow: string

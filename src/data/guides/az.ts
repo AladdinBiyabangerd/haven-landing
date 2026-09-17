@@ -1,20 +1,26 @@
 import type { GuideCopy, GuidesHubCopy } from './types'
+import { comparisonGuides } from './comparisonGuides'
 
 export const guidesHubAz: GuidesHubCopy = {
   eyebrow: 'Bələdçilər',
   h1: 'Klub və otaq axını necə işləyir?',
   intro:
     'Bu bölmə məhsul reklamı deyil — axtarışda tez rast gəlinən suallara aydın cavab verir. Hər yazının sonunda uyğun Heselo həll səhifəsinə keçid var.',
-  seoTitle: 'Bələdçilər — klub idarəetməsi necə işləyir | Heselo',
+  seoTitle: 'Bələdçilər — klub idarəetməsi və POS alternativləri | Heselo',
   seoDescription:
-    'Satış səhifəsi deyil: oyun klubu, karaoke, bilyard və antikafe axını necə qurulur — saatla ödəniş, rezerv və kassa izahı.',
+    'Oyun klubu, karaoke, bilyard və antikafe axını; iiko, Clopos, Dine və Excel alternativləri — dürüst müqayisə və seçim bələdçiləri.',
   keywords: [
     'oyun klubu idarəetmə sistemi nədir',
     'playstation klub proqramı',
-    'bilyard masa rezervasiya',
+    'iiko alternativ',
+    'clopos alternativ',
+    'dine alternativ',
     'karaoke rezervasiya sistemi',
   ],
   cardCta: 'Oxu',
+  comparisonTitle: 'Alternativlər və müqayisələr',
+  comparisonIntro:
+    'iiko, Clopos, Dine, MinuPOS və digər sistemləri axtarırsınızsa — klub/otaq-vaxt üçün dürüst müqayisə yazıları.',
 }
 
 export const guidesAz: GuideCopy[] = [
@@ -603,25 +609,30 @@ export const guidesAz: GuideCopy[] = [
     slug: 'club-pos-vs-excel',
     shortTitle: 'Excel əvəzinə panel',
     h1: 'Klubda Excel və WhatsApp niyə kifayət etmir?',
-    seoTitle: 'Klub idarəetməsi: Excel və WhatsApp əvəzinə panel | Heselo',
+    seoTitle: 'Excel və WhatsApp əvəzinə klub paneli | Heselo',
     seoDescription:
-      'Oyun klubu, karaoke və bilyardda Excel/WhatsApp rezervi niyə qarışır — kassa və canlı zal üçün panel nə verir.',
+      'WhatsApp bron, Excel kassa və dəftər niyə qarışır — ucuz klub paneli nə verir. Excel əvəzinə idarəetmə bələdçisi.',
     keywords: [
       'klub excel idarəetmə',
       'whatsapp rezervasiya problemi',
+      'whatsapp bron əvəzinə',
+      'excel kassa əvəzinə',
+      'dəftər əvəzinə proqram',
+      'ucuz klub paneli',
       'klub kassa proqramı',
       'məkan idarəetmə paneli',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-17',
     intro:
-      'Bir çox klub günü Excel cədvəli və WhatsApp qrupu ilə başlayır. Kiçik miqyasda işləyir; masa/otaq sayı və növbə sayı artanda rezerv itir, kassa uzanır. Bu yazı ağrı nöqtələrini və panelin nəyi dəyişdiyini izah edir.',
+      'Bir çox klub günü Excel cədvəli, WhatsApp qrupu və dəftərlə başlayır. Kiçik miqyasda işləyir; masa/otaq sayı və növbə sayı artanda rezerv itir, kassa uzanır. Bu yazı ağrı nöqtələrini, “ucuz alternativ” axtarışını və panelin nəyi dəyişdiyini izah edir.',
     sections: [
       {
         id: 'pain',
-        title: 'Excel və mesajlaşma harada sınır?',
+        title: 'Excel, WhatsApp və dəftər harada sınır?',
         paragraphs: [
           'Rezerv mesajda qalır, lövhə gecikir, ödəniş vərəqi ayrıdır. Eyni masa iki dəfə yazılır. Gecə növbəsi “kim nə satıb?” sualında 30–40 dəqiqə itirir.',
+          'WhatsApp bron “ucuz” görünür, amma axtarış, təsdiq və no-show izləmə yoxdur — növbə sonunda hesabat yenə Excel-ə qayıdır.',
         ],
       },
       {
@@ -644,16 +655,16 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         id: 'not-erp',
-        title: 'Bu, ağır ERP demək deyil',
+        title: 'Bu, ağır ERP və ya restoran POS demək deyil',
         paragraphs: [
-          'Klub paneli restoran şəbəkəsi ERP-si deyil. Məqsəd sadədir: bron itməsin, masa/otaq statusu doğru olsun, növbə bağlansın.',
+          'Klub paneli iiko/Clopos tipli restoran şəbəkəsi ERP-si deyil. Məqsəd sadədir: bron itməsin, masa/otaq statusu doğru olsun, növbə bağlansın. Mətbəx/KDS lazımdırsa, restoran POS seçin.',
         ],
       },
       {
         id: 'heselo',
         title: 'Heselo bu boşluğu necə doldurur?',
         paragraphs: [
-          'Heselo məkan paneli kimi qurulub: rezervasiya, canlı zal, kassa və anbar. Qiymət və kassa həll səhifələrinə keçid aşağıdadır.',
+          'Heselo məkan paneli kimi qurulub: rezervasiya, canlı zal, kassa və anbar. 25 AZN/aydan başlayan klub tarifləri Excel/WhatsApp-dan bahadır, amma itən rezerv və gecə hesabatından ucuz başa gəlir. Qiymət və digər alternativ bələdçilərinə keçid aşağıdadır.',
         ],
       },
     ],
@@ -661,6 +672,10 @@ export const guidesAz: GuideCopy[] = [
       {
         q: 'Excel-i tam atmaq lazımdır?',
         a: 'Gündəlik rezerv və kassa üçün bəli. Aylıq maliyyə Excel-də qala bilər.',
+      },
+      {
+        q: 'WhatsApp bron ucuz deyilmi?',
+        a: 'Mesaj pulsuzdur; itən bron, qarışıq ödəniş və 40 dəqiqəlik növbə hesabatı isə bahadır. Panel bunu bağlayır.',
       },
       {
         q: 'Kiçik klub üçün erkəndir?',
@@ -675,4 +690,5 @@ export const guidesAz: GuideCopy[] = [
     ctaTitle: 'Excel-siz axın üçün demo',
     ctaBody: 'Məkan tipi və masa/otaq sayını yazın — paneli 15 dəqiqədə göstəririk.',
   },
+  ...comparisonGuides('az'),
 ]

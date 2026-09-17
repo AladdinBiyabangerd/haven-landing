@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import Cta from '@/components/Cta.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
-import { getGuides, getGuidesHub } from '@/data/guides'
+import { getComparisonGuides, getEducationalGuides, getGuidesHub } from '@/data/guides'
 import LinkCard from '@/components/LinkCard.astro'
 import { localePath } from '@/lib/site'
 import { truncateText } from '@/lib/format'
@@ -15,7 +15,8 @@ export function getStaticPaths() {
 const locale = resolveLocale(Astro.params.locale)
 const messages = getMessages(locale)
 const hub = getGuidesHub(locale)
-const items = getGuides(locale)
+const educational = getEducationalGuides(locale)
+const comparisons = getComparisonGuides(locale)
 ---
 
 <BaseLayout
@@ -39,7 +40,7 @@ const items = getGuides(locale)
       </header>
       <ul class="card-grid">
         {
-          items.map((item) => (
+          educational.map((item) => (
             <li>
               <LinkCard
                 as="h2"
@@ -51,6 +52,32 @@ const items = getGuides(locale)
           ))
         }
       </ul>
+
+      {
+        hub.comparisonTitle && comparisons.length > 0 ? (
+          <header class="section-head comparison-head">
+            <h2 class="type-section">{hub.comparisonTitle}</h2>
+            {hub.comparisonIntro ? <p class="lead">{hub.comparisonIntro}</p> : null}
+          </header>
+        ) : null
+      }
+      {
+        comparisons.length > 0 ? (
+          <ul class="card-grid">
+            {comparisons.map((item) => (
+              <li>
+                <LinkCard
+                  as="h3"
+                  href={localePath(locale, `/guides/${item.slug}`)}
+                  title={item.shortTitle}
+                  desc={truncateText(item.intro, 140, messages.common.truncatedEllipsis)}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : null
+      }
+
       <p class="solutions-link">
         <a class="link-inline" href={localePath(locale, '/solutions')}>
           {messages.nav.solutions}{messages.common.linkArrow}
@@ -64,5 +91,8 @@ const items = getGuides(locale)
 <style>
   .solutions-link {
     margin: 1.25rem 0 0;
+  }
+  .comparison-head {
+    margin-top: 2.75rem;
   }
 </style>

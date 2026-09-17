@@ -26,7 +26,7 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | **Boss.az** | https://boss.az | İş elanları deyil — şirkət/profil varsa SaaS təqdimatı |
 | **Linq.az** | https://linq.az | Startup / biznes kataloqu (aktivdirsə qeydiyyat) |
 | **Product Hunt** | https://www.producthunt.com | EN launch — beynəlxalq backlink + brend |
-| **AlternativeTo** | https://alternativeto.net | “Venue management”, “Booking system” kateqoriyalarında siyahı |
+| **AlternativeTo** | https://alternativeto.net | “Venue management”, “Booking system” kateqoriyalarında siyahı; **alternative to** iiko / Clopos / Dine / Restomas / MinuPOS / robotPOS siyahılarına əlavə (dürüst: klub/otaq-vaxt, mətbəx POS yox) |
 | **Capterra / GetApp** | https://www.capterra.com | SaaS kataloqu (uzunmüddətli; rəy yalnız real istifadəçidən) |
 
 ---
@@ -114,4 +114,24 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | Referral trafik | Plausible / GA4 |
 | Brend axtarış “Heselo” | GSC → Search results |
 
-Son yeniləmə: 2026-08-12
+Son yeniləmə: 2026-09-17
+
+---
+
+## AlternativeTo icra checklist (Phase C0 / E)
+
+Hədəf: brend + “alternative to X” siyahıları. Təsvirdə restoran mətbəxi POS iddiası **yox** — otaq/masa sessiya + kassa.
+
+- [ ] Heselo profili yaradılıb (Venue / Booking software)
+- [ ] Sayt: `https://heselo.online/az/` + EN mirror link
+- [ ] “Similar to / Alternative to” siyahılarına əlavə:
+  - [ ] iiko → daxili link `…/guides/iiko-alternative-clubs/`
+  - [ ] Clopos → `…/guides/clopos-alternative/`
+  - [ ] Dine / dine.az → `…/guides/dine-alternative/`
+  - [ ] Restomas → `…/guides/restomas-alternative/`
+  - [ ] MinuPOS → `…/guides/minupos-alternative/`
+  - [ ] robotPOS → `…/guides/robotpos-alternative/`
+- [ ] Qısa EN təsvir (unik): room-time clubs, karaoke, billiards, live sessions, cash shifts; from 25 AZN/mo in Azerbaijan
+- [ ] Screenshot: live floor və ya schedule (mətbəx/KDS ekranı yox)
+- [ ] UTM: `?utm_source=alternativeto&utm_medium=referral&utm_campaign=seo-c0`
+

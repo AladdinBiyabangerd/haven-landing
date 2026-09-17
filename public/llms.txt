@@ -2,12 +2,14 @@
 
 > Məkan idarəetmə sistemi (venue management): rezervasiya, canlı zal, kassa və anbar.
 > Languages: az (default), en, ru.
+> Not a restaurant kitchen POS — room/table timed sessions for clubs.
 
 ## Product
 
 - Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan.
 - Core modules: room/station/table booking, live floor sessions, POS/cash shift, inventory, customers, statistics.
 - Payment balances are calculated on the server (not client-side estimates).
+- Honest alternatives: lighter club panel vs restaurant POS (iiko, Clopos, Dine, Restomas, MinuPOS) when the product is room-time, not kitchen/KDS.
 
 ## Key pages (az locale)
 
@@ -23,6 +25,24 @@
 - Room lounge: https://heselo.online/az/solutions/lounge/
 - Guides hub: https://heselo.online/az/guides/
 - Sitemap: https://heselo.online/sitemap.xml
+
+## Comparison / alternative guides (az)
+
+- Excel / WhatsApp: https://heselo.online/az/guides/club-pos-vs-excel/
+- iiko alternative: https://heselo.online/az/guides/iiko-alternative-clubs/
+- Clopos alternative: https://heselo.online/az/guides/clopos-alternative/
+- Dine alternative: https://heselo.online/az/guides/dine-alternative/
+- Restomas alternative: https://heselo.online/az/guides/restomas-alternative/
+- MinuPOS alternative: https://heselo.online/az/guides/minupos-alternative/
+- robotPOS alternative: https://heselo.online/az/guides/robotpos-alternative/
+- Affordable club POS: https://heselo.online/az/guides/affordable-club-pos/
+- Restaurant POS vs karaoke: https://heselo.online/az/guides/restaurant-pos-vs-karaoke-system/
+- PlayStation cafe software: https://heselo.online/az/guides/playstation-cafe-software-alternative/
+- IZI alternative: https://heselo.online/az/guides/izi-alternative/
+- Kaktus alternative: https://heselo.online/az/guides/kaktus-alternative/
+- resto.az alternative: https://heselo.online/az/guides/resto-az-alternative/
+
+Mirror the same paths under `/en/guides/…` and `/ru/guides/…`.
 
 ## Contact
 

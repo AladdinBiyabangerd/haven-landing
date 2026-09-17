@@ -14,7 +14,7 @@
 |-----|--------|
 | Hub-lar | home, features, solutions, guides, pricing, contact |
 | Həll səhifələri | gaming, karaoke, billiards, antikafe, lounge, reservations, pos, inventory |
-| Bələdçilər | 5 guide (hər əsas venue tipi) |
+| Bələdçilər | 9 educational + 13 comparison (Phase C0) |
 | Texniki SEO | sitemap, hreflang, JSON-LD, `llms.txt`, 3 dil |
 | Off-site checklist | `docs/off-site-seo-az.md` (icra gözləyir) |
 
@@ -148,39 +148,56 @@ Fayllar: `src/data/solutions/en.ts`, `src/data/guides/en.ts`, lazım olsa `messa
 
 Şəxsi saytdakı `/writing` artımı = burada `/guides`. Hər məqalə **bir sorğu klasteri**, unik body (doorway yox), AZ+EN+RU eyni PR.
 
-### C1 — İlk dalğa (4–6 məqalə, 2–3 həftə)
+**Arxitektura:** müqayisə = Guide (`/az|en|ru/guides/{slug}/`). Ayrı `/compare/` route **yoxdur**.
 
-GSC + məhsul boşluqlarından:
+### C0 — Rəqib / “alternativ · ucuz · vs” xəritəsi (2026-09)
 
-| Slug (təklif) | Primar intent | Daxili link |
-|---------------|---------------|-------------|
+Heselo restoran mətbəxi POS-u deyil — otaq/masa + sessiya + kassa. Müqayisələrdə bu fərq dürüst yazılır.
+
+| Prioritet | Primary keywords (AZ nümunə) | Qalib URL slug | Status |
+|-----------|------------------------------|----------------|--------|
+| P0 | iiko alternativ, iiko əvəzinə klub | `iiko-alternative-clubs` | live |
+| P0 | clopos alternativ | `clopos-alternative` | live |
+| P0 | dine alternativ, dine.az əvəzinə | `dine-alternative` | live |
+| P0 | whatsapp bron / excel kassa əvəzinə | `club-pos-vs-excel` | live (cila) |
+| P1 | restomas alternativ | `restomas-alternative` | live |
+| P1 | minupos alternativ, ucuz | `minupos-alternative` | live |
+| P1 | robotpos alternativ | `robotpos-alternative` | live |
+| P1 | ucuz klub pos / sərfəli | `affordable-club-pos` | live |
+| P1 | restoran POS vs karaoke | `restaurant-pos-vs-karaoke-system` | live |
+| P2 | playstation kafe proqramı | `playstation-cafe-software-alternative` | live |
+| P2 | izi alternativ | `izi-alternative` | live |
+| P2 | kaktus booking alternativ | `kaktus-alternative` | live |
+| P2 | resto.az alternativ | `resto-az-alternative` | live |
+
+Secondary (yeni URL yox): pricing (“25 AZN”, “Dine/MinuPOS-dan fərq”), home (“iiko/Clopos əvəzinə”), solutions alt CTA → guide.
+
+Ölçmə: deploy + 14 gün GSC — ünvanlanan klasterlərin ≥80%-i ən azı 1 impression.
+
+### C1 — İlk dalğa (venue / pain guides)
+
+| Slug | Primar intent | Daxili link |
+|------|---------------|-------------|
 | `playstation-club-software` | PS / PlayStation klub proqramı | → gaming |
-| `console-club-management` | console club / konsol klub | → gaming |
 | `billiards-table-booking` | billiards booking / masa bronu | → billiards |
-| `billiards-scheduling-system` | scheduling (EN GSC) — və ya C1-də billiards guide genişləndirmə | → billiards |
-| `karaoke-booking-system` | karaoke booking system (satışdan fərqli “necə seçilir”) | → karaoke |
-| `club-pos-vs-excel` | Excel/WhatsApp vs panel (pain intent) | → home / pos |
+| `karaoke-booking-system` | karaoke booking system | → karaoke |
+| `club-pos-vs-excel` | Excel/WhatsApp vs panel | → pos |
 
-Qayda: **solution “proqram al”**, guide “necə işləyir / nə seçmək”**. Eyni H1 yox.
+Qayda: **solution “proqram al”**, guide “necə işləyir / nə seçmək / alternativ”**. Eyni H1 yox.
 
-### C2 — İkinci dalğa (sorğu datasına görə)
+### C2 — Kateqoriya long-tail (artıq C0 cədvəlində)
 
-Yalnız Phase A–C1-dən sonra GSC-də çıxan impressiya > 0 olan klasterlər:
-
-- antikafe saatla ödəniş
-- otaq launj bron
-- növbə bağlanışı / kassa sayımı
-- “rezervasiya sistemi Bakı” (lokal)
+Affordable club POS, restaurant-POS-vs-karaoke, niche (PS cafe, IZI, Kaktus, resto.az).
 
 ### Ship checklist (hər guide)
 
-1. `src/data/guides/{az,en,ru}.ts` + `GUIDE_SLUGS`
+1. `src/data/guides/{az,en,ru}.ts` (+ `comparisonGuides.ts`) + `GUIDE_SLUGS`
 2. `datePublished` real; sitemap `lastmod`
-3. FAQ 3–5 (uyğunsa FAQ schema artıq pattern)
-4. Related solution link
-5. Doorway test: səhifəni oxuyanda digər guide-ın klonu deyil
+3. FAQ ≥4 (FAQ schema)
+4. relatedSolutions + pricing/contact + 2 related comparison guide
+5. Trademark: “alternativ / müqayisə”; böhtan yox
 
-**Uğur (30–45 gün C1-dən):** unique queries **50+**; guide URL-ləri GSC Pages-də; ilk qeyri-brend kliklər.
+**Uğur (14–28 gün):** yeni guide URL-ləri Indexed; comparison klasterlərində unique query ↑.
 
 ---
 

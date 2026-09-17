@@ -190,6 +190,7 @@ export const en: Messages = {
     titleAccent: 'for daily venue work.',
     paragraphs: [
       'Heselo is a venue management system for gaming clubs, karaoke rooms, billiards halls, anti-cafés, and room lounges — the places that sell time on a table, a room, or a station.',
+      'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is the lighter club panel.',
     ],
   },
   audiences: {
@@ -234,6 +235,12 @@ export const en: Messages = {
   },
   guidesPage: {
     updatedLabel: 'Last updated:',
+    pricingCta: 'Club plans — from 25 AZN/month',
+    demoCta: 'Request a 15-minute demo',
+    relatedComparisonsTitle: 'More comparisons',
+    altSeekingTitle: 'Looking at iiko, Clopos or Excel?',
+    altSeekingBody:
+      'If you need a room-time panel instead of a restaurant POS or spreadsheets, read the honest comparison guides. Keep a restaurant stack when kitchen/KDS is the core.',
   },
   productShot: {
     alts: {
@@ -423,6 +430,14 @@ export const en: Messages = {
       {
         q: 'Why is karaoke more than PlayStation?',
         a: 'PlayStation and billiards start at 25 AZN because station and table workflows are simpler. Karaoke and lounges start at 35 AZN for room schedules, extensions, and cash workflows.',
+      },
+      {
+        q: 'Cheaper than Dine or MinuPOS?',
+        a: 'Those tools are mainly restaurant table/QR POS. Heselo is for room-time, live sessions and club cash — from 25 AZN/month. Need kitchen/KDS? Keep a restaurant POS. For club/karaoke rooms, Heselo is usually the simpler fit.',
+      },
+      {
+        q: 'What do I get with annual billing?',
+        a: 'Annual plans include two months free — twelve months of the same plan for the price of ten.',
       },
       {
         q: 'Can I change plan later?',
@@ -739,13 +754,15 @@ export const en: Messages = {
     ],
     pages: {
       home: {
-        title: 'Heselo — venue management software | booking & cash',
+        title: 'Heselo — club & room panel | alternative to iiko/Clopos',
         description:
-          'Heselo is venue software for gaming clubs (PlayStation / console), karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory in one panel. Free demo.',
+          'Heselo is a room-time panel for PlayStation/gaming, karaoke, billiards, anti-cafés and lounges: booking, live sessions, cash. Club ops instead of restaurant POS (iiko, Clopos) — from 25 AZN/month. Free demo.',
         keywords: [
           'Heselo',
           'venue management system',
           'gaming club software',
+          'iiko alternative',
+          'clopos alternative',
           'playstation club software',
           'karaoke room booking',
         ],
@@ -763,10 +780,17 @@ export const en: Messages = {
         ],
       },
       pricing: {
-        title: 'Pricing — Heselo subscription plans',
+        title: 'Pricing — club panel from 25 AZN | Heselo',
         description:
-          'Hybrid pricing by venue type: PlayStation and billiards from 25 AZN/month, anti-cafés from 29, karaoke and lounges from 35. Monthly or annual billing, reservation allowances, and overage pricing.',
-        keywords: ['Heselo pricing', 'subscription plans', 'venue management pricing'],
+          'Affordable club plans: PlayStation and billiards from 25 AZN, karaoke/lounges from 35. Two months free on annual billing. Unlike MinuPOS/Dine-style restaurant POS — built for room-time and cash shifts.',
+        keywords: [
+          'Heselo pricing',
+          'affordable club panel',
+          'venue software from 25 AZN',
+          'cheaper than minupos',
+          'dine alternative pricing',
+          'subscription plans',
+        ],
       },
       contact: {
         title: 'Free demo & contact — Heselo',
@@ -799,13 +823,15 @@ export const en: Messages = {
         ],
       },
       guides: {
-        title: 'Guides — how club operations work | Heselo',
+        title: 'Guides — club panel and POS alternatives | Heselo',
         description:
-          'Not a sales pitch: how gaming clubs, karaoke, billiards, and anti-cafés run hourly booking, live sessions, and cash.',
+          'Gaming, karaoke and billiards flows; honest alternatives to iiko, Clopos, Dine, MinuPOS and Excel.',
         keywords: [
           'what is a gaming club management system',
+          'iiko alternative',
+          'clopos alternative',
+          'dine alternative',
           'how karaoke room booking works',
-          'what is an anti-cafe management system',
         ],
       },
     },

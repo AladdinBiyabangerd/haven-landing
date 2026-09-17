@@ -92,9 +92,15 @@ export const solutionsAz: SolutionCopy[] = [
     seoTitle: 'Karaoke otaq rezervasiyası və idarəetmə sistemi | Heselo',
     seoDescription:
       'Karaoke otaq rezervasiyası, canlı sessiya, kassa və əlavə satış bir axında. Karaoke məkanı üçün proqram — pulsuz demo.',
-    keywords: ['karaoke otaq rezervasiya', 'karaoke idarəetmə sistemi', 'karaoke proqramı'],
+    keywords: [
+      'karaoke otaq rezervasiya',
+      'karaoke idarəetmə sistemi',
+      'karaoke proqramı',
+      'restoran pos karaoke',
+      'dine alternativ karaoke',
+    ],
     intro:
-      'Karaoke məkanında əsas vahid otaqdır: rezervasiya, sessiya müddəti, əlavə içki/yemək və ödəniş. Karaoke idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir.',
+      'Karaoke məkanında əsas vahid otaqdır: rezervasiya, sessiya müddəti, əlavə içki/yemək və ödəniş. Karaoke idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir. Restoran POS (Dine, Clopos) masa/QR üçündür — otaq-vaxt üçün bu axın daha uyğundur.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
       'Otaq əsaslı karaoke klubları, launj + karaoke və bir neçə otağı eyni axında idarə edən məkanlar üçün.',
@@ -156,9 +162,11 @@ export const solutionsAz: SolutionCopy[] = [
       'ps klub proqramı',
       'playstation klub idarəetmə',
       'konsol klub proqramı',
+      'iiko alternativ klub',
+      'playstation kafe proqramı',
     ],
     intro:
-      'Oyun və PS klublarında stansiya və ya masa saatla dolur; rezerv, canlı oyun və kassa eyni vaxtda işləyir. Oyun klubu idarəetmə sistemi resurs cədvəlini canlı sessiya ilə birləşdirməlidir — lövhə və taymer kifayət etmir.',
+      'Oyun və PS klublarında stansiya və ya masa saatla dolur; rezerv, canlı oyun və kassa eyni vaxtda işləyir. Oyun klubu idarəetmə sistemi resurs cədvəlini canlı sessiya ilə birləşdirməlidir — lövhə və taymer kifayət etmir. iiko və ya sadə PS taymer axtaranlar üçün də otaq-vaxt axını burada birləşir.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
       'PlayStation klubları, konsol lounge-lar, PC club və qarışıq oyun məkanları — stansiya/masa rezervasiyası, canlı sessiya və kassa lazım olan yerlər üçün.',
@@ -417,9 +425,11 @@ export const solutionsAz: SolutionCopy[] = [
       'klub kassa proqramı',
       'kassa idarəetmə sistemi',
       'kassa sayımı',
+      'excel kassa əvəzinə',
+      'ucuz klub paneli',
     ],
     intro:
-      'Kassa proqramı yalnız “ödəniş düyməsi” deyil. Növbə açılışı, əməliyyatlar, hesabat və sayım günün sonunda sahibə aydın cavab verməlidir. Heselo-da kassa rezervasiya və canlı sessiya ilə eyni iş gününə bağlıdır.',
+      'Kassa proqramı yalnız “ödəniş düyməsi” deyil. Növbə açılışı, əməliyyatlar, hesabat və sayım günün sonunda sahibə aydın cavab verməlidir. Heselo-da kassa rezervasiya və canlı sessiya ilə eyni iş gününə bağlıdır — Excel və WhatsApp əvəzinə.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
       'Oyun klubu, karaoke, bilyard, antikafe və otaqlı launjda növbə üzrə nağd/bank/POS izləmək, günü bağlamaq və sayım aparmaq istəyənlər üçün.',

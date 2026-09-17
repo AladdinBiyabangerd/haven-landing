@@ -1,20 +1,26 @@
 import type { GuideCopy, GuidesHubCopy } from './types'
+import { comparisonGuides } from './comparisonGuides'
 
 export const guidesHubEn: GuidesHubCopy = {
   eyebrow: 'Guides',
   h1: 'How club and room operations actually work',
   intro:
     'These articles answer common search questions — not a sales pitch. Each piece ends with a link to the matching Heselo solution page.',
-  seoTitle: 'Guides — how club operations work | Heselo',
+  seoTitle: 'Guides — club ops and POS alternatives | Heselo',
   seoDescription:
-    'Not a sales pitch: how gaming clubs, karaoke, billiards, and anti-cafés run hourly booking, live sessions, and cash.',
+    'Gaming, karaoke, billiards and anti-café flows; honest alternatives to iiko, Clopos, Dine and Excel for room-time venues.',
   keywords: [
     'what is a gaming club management system',
     'playstation club software',
-    'billiards booking system',
+    'iiko alternative for clubs',
+    'clopos alternative',
+    'dine.az alternative',
     'karaoke booking system',
   ],
   cardCta: 'Read',
+  comparisonTitle: 'Alternatives and comparisons',
+  comparisonIntro:
+    'Looking at iiko, Clopos, Dine, MinuPOS or similar systems? Honest comparisons for club and room-time operations.',
 }
 
 export const guidesEn: GuideCopy[] = [
@@ -603,25 +609,30 @@ export const guidesEn: GuideCopy[] = [
     slug: 'club-pos-vs-excel',
     shortTitle: 'Excel vs panel',
     h1: 'Why Excel and WhatsApp stop working for clubs',
-    seoTitle: 'Club ops: Excel & WhatsApp vs a venue panel | Heselo guide',
+    seoTitle: 'Excel & WhatsApp vs a club panel | Heselo',
     seoDescription:
-      'Why Excel and WhatsApp bookings break in gaming, karaoke, and billiards clubs — and what a cash + live-floor panel changes.',
+      'Why WhatsApp booking, Excel cash and paper notebooks break — what an affordable club panel changes. Guide to replacing spreadsheets.',
     keywords: [
       'club excel management',
       'whatsapp booking problems',
+      'instead of whatsapp booking',
+      'instead of excel cash',
+      'notebook instead of software',
+      'affordable club panel',
       'club cash software',
       'venue management panel',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-17',
     intro:
-      'Many clubs start the day with a spreadsheet and a WhatsApp group. It works at tiny scale; when tables/rooms and shifts grow, bookings vanish and cash close stretches. This guide names the pain points and what a panel changes.',
+      'Many clubs start the day with a spreadsheet, a WhatsApp group and a notebook. It works at tiny scale; when tables/rooms and shifts grow, bookings vanish and cash close stretches. This guide covers the pain, “cheap alternative” searches, and what a panel changes.',
     sections: [
       {
         id: 'pain',
-        title: 'Where spreadsheets and chat fail',
+        title: 'Where Excel, WhatsApp and notebooks hit the wall',
         paragraphs: [
           'Bookings live in messages, the board lags, payment sheets are separate. The same table gets written twice. Night shifts lose 30–40 minutes on “who sold what?”',
+          'WhatsApp booking looks free, but there is no search, confirmation trail or no-show tracking — the night still ends in Excel.',
         ],
       },
       {
@@ -644,16 +655,16 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         id: 'not-erp',
-        title: 'This is not a heavy ERP',
+        title: 'This is not a heavy ERP or restaurant POS',
         paragraphs: [
-          'A club panel is not a restaurant-chain ERP. The job is simple: bookings do not get lost, table/room status is true, the shift closes.',
+          'A club panel is not an iiko/Clopos-style restaurant-chain ERP. The job is simple: bookings do not get lost, table/room status is true, the shift closes. Need kitchen/KDS? Choose a restaurant POS.',
         ],
       },
       {
         id: 'heselo',
         title: 'How Heselo fills the gap',
         paragraphs: [
-          'Heselo is built as a venue panel: reservations, live floor, cash, and inventory. See pricing and cash solution pages below.',
+          'Heselo is built as a venue panel: reservations, live floor, cash, and inventory. Plans from 25 AZN/month cost more than Excel/WhatsApp, but less than lost bookings and late-night reconciliations. See pricing and other alternative guides below.',
         ],
       },
     ],
@@ -661,6 +672,10 @@ export const guidesEn: GuideCopy[] = [
       {
         q: 'Do we have to drop Excel entirely?',
         a: 'For daily booking and cash, yes. Monthly finance can stay in a spreadsheet.',
+      },
+      {
+        q: 'Isn’t WhatsApp booking cheaper?',
+        a: 'Messages are free; lost bookings, messy payments and a 40-minute shift close are not. A panel closes that gap.',
       },
       {
         q: 'Is it early for a small club?',
@@ -675,4 +690,5 @@ export const guidesEn: GuideCopy[] = [
     ctaTitle: 'Demo without the spreadsheet',
     ctaBody: 'Tell us venue type and table/room count — 15 minutes on the panel.',
   },
+  ...comparisonGuides('en'),
 ]

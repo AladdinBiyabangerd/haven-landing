@@ -5,7 +5,12 @@ import NextThought from '@/components/NextThought.astro'
 import CtaBanner from '@/components/CtaBanner.astro'
 import { resolveLocale, LOCALES } from '@/i18n/config'
 import { getMessages } from '@/i18n'
-import { getGuide, GUIDE_SLUGS } from '@/data/guides'
+import {
+  getGuide,
+  getRelatedComparisonGuides,
+  GUIDE_SLUGS,
+  type GuideSlug,
+} from '@/data/guides'
 import { getSolution } from '@/data/solutions'
 import { formatDate } from '@/lib/format'
 import { localePath } from '@/lib/site'
@@ -32,6 +37,7 @@ if (!guide) {
 const related = guide.relatedSolutions
   .map((s) => getSolution(locale, s))
   .filter(Boolean)
+const relatedComparisons = getRelatedComparisonGuides(locale, guide.slug as GuideSlug)
 const persistVenueType = guide.relatedSolutions.find(isVenueOfferSlug) || ''
 
 const faqMessages = {
@@ -109,6 +115,43 @@ const faqMessages = {
                   </li>
                 ) : null,
               )}
+            </ul>
+          </nav>
+        ) : null
+      }
+
+      <nav class="related" aria-label={messages.nav.pricing}>
+        <h2 class="sub">{messages.nav.pricing}</h2>
+        <ul>
+          <li>
+            <a
+              class="link-inline"
+              href={pricingPath(locale, persistVenueType || undefined)}
+              data-pricing-type={persistVenueType || undefined}
+            >
+              {messages.guidesPage.pricingCta}
+            </a>
+          </li>
+          <li>
+            <a class="link-inline" href={contactPath(locale, persistVenueType || undefined)}>
+              {messages.guidesPage.demoCta}
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {
+        relatedComparisons.length > 0 ? (
+          <nav class="related" aria-label={messages.guidesPage.relatedComparisonsTitle}>
+            <h2 class="sub">{messages.guidesPage.relatedComparisonsTitle}</h2>
+            <ul>
+              {relatedComparisons.map((item) => (
+                <li>
+                  <a class="link-inline" href={localePath(locale, `/guides/${item.slug}`)}>
+                    {item.shortTitle}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         ) : null

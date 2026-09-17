@@ -92,9 +92,15 @@ export const solutionsEn: SolutionCopy[] = [
     seoTitle: 'Karaoke management system & room booking | Heselo',
     seoDescription:
       'Karaoke management: room booking, live sessions, cash, and product sales. Demo for karaoke venues.',
-    keywords: ['karaoke management system', 'karaoke room booking', 'karaoke software'],
+    keywords: [
+      'karaoke management system',
+      'karaoke room booking',
+      'karaoke software',
+      'restaurant pos for karaoke',
+      'dine alternative karaoke',
+    ],
     intro:
-      'In karaoke, the room is the unit: booking, session length, extras, and payment. A karaoke management system should connect room schedule to live session and cash.',
+      'In karaoke, the room is the unit: booking, session length, extras, and payment. A karaoke management system should connect room schedule to live session and cash. Restaurant POS (Dine, Clopos) targets tables/QR — room-time fits this flow better.',
     whoTitle: 'Who is it for?',
     whoBody:
       'Room-based karaoke clubs, lounge + karaoke venues, and places running several rooms in one flow.',
@@ -157,9 +163,11 @@ export const solutionsEn: SolutionCopy[] = [
       'console club software',
       'playstation club software',
       'PC club software',
+      'iiko alternative clubs',
+      'playstation cafe software',
     ],
     intro:
-      'Gaming and console clubs fill stations by the hour; booking, live play, and cash run together. Gaming club software should join the resource schedule to live sessions — a timer alone is not enough.',
+      'Gaming and console clubs fill stations by the hour; booking, live play, and cash run together. Gaming club software should join the resource schedule to live sessions — a timer alone is not enough. If you compared iiko or a simple PS timer, room-time ops land here.',
     whoTitle: 'Who is it for?',
     whoBody:
       'PlayStation clubs, console lounges, PC clubs, and mixed gaming venues that need station/table booking, live sessions, and cash.',
@@ -413,9 +421,16 @@ export const solutionsEn: SolutionCopy[] = [
     seoTitle: 'Cash software & club POS flow | Heselo',
     seoDescription:
       'Cash software: shifts, transactions, cash report, and count. Club POS in the same panel as booking and live floor.',
-    keywords: ['cash software', 'club POS', 'cash management', 'cash reconciliation'],
+    keywords: [
+      'cash software',
+      'club POS',
+      'cash management',
+      'cash reconciliation',
+      'instead of excel cash',
+      'affordable club panel',
+    ],
     intro:
-      'Cash software is more than a pay button. Shift open, transactions, report, and count should answer the owner at day end. In Heselo, cash is tied to the same workday as reservations and live sessions.',
+      'Cash software is more than a pay button. Shift open, transactions, report, and count should answer the owner at day end. In Heselo, cash is tied to the same workday as reservations and live sessions — instead of Excel and WhatsApp.',
     whoTitle: 'Who is it for?',
     whoBody:
       'Gaming clubs, karaoke, billiards, anti-cafés, and room lounges that track cash/card/POS by shift, close the day, and reconcile counts.',

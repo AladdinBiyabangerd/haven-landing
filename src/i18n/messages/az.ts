@@ -190,6 +190,7 @@ export const az: Messages = {
     titleAccent: 'məkanın gündəlik işi üçün.',
     paragraphs: [
       'Heselo oyun klubları, karaoke otaqları, bilyard salonları, anti-kafelər və otaq lounge-ları üçün məkan idarəetmə sistemidir — masa, otaq və ya stansiya vaxtını satan yerlər üçün.',
+      'iiko və ya Clopos kimi restoran POS axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, bron və kassa növbəsi üçün Heselo daha yüngül klub paneli təklif edir.',
     ],
   },
   audiences: {
@@ -234,6 +235,12 @@ export const az: Messages = {
   },
   guidesPage: {
     updatedLabel: 'Son yeniləmə:',
+    pricingCta: 'Klub tarifləri — 25 AZN/aydan',
+    demoCta: '15 dəqiqəlik demo istəyin',
+    relatedComparisonsTitle: 'Digər müqayisələr',
+    altSeekingTitle: 'iiko, Clopos və ya Excel axtarırsınız?',
+    altSeekingBody:
+      'Restoran POS və ya vərəq əvəzinə otaq-vaxt paneli lazımdırsa — dürüst müqayisə bələdçilərinə baxın. Mətbəx/KDS əsasdırsa, restoran həlli qalsın.',
   },
   productShot: {
     alts: {
@@ -423,6 +430,14 @@ export const az: Messages = {
       {
         q: 'Niyə karaoke PS-dən bahadır?',
         a: 'PS və bilyard 25 AZN-dən başlayır — stansiya və masa axını daha sadədir. Karaoke və launj otaq cədvəli, uzatma və kassa axınına görə 35 AZN-dən başlayır.',
+      },
+      {
+        q: 'Dine və ya MinuPOS-dan sərfəlidirmi?',
+        a: 'Onlar əsasən restoran masa/QR POS-udur. Heselo otaq-vaxt, canlı sessiya və klub kassası üçündür — 25 AZN/aydan. Mətbəx/KDS lazımdırsa restoran POS seçin; klub/karaoke otağı üçün Heselo adətən daha uyğun və sadədir.',
+      },
+      {
+        q: 'İllik ödənişdə nə qazanıram?',
+        a: 'İllik planda 2 ay hədiyyə — eyni tarifi 10 ay qiymətinə 12 ay istifadə edirsiniz.',
       },
       {
         q: 'Tarifi sonra dəyişmək olar?',
@@ -739,13 +754,15 @@ export const az: Messages = {
     ],
     pages: {
       home: {
-        title: 'Heselo — məkan idarəetmə sistemi | rezervasiya, kassa',
+        title: 'Heselo — klub və otaq paneli | iiko/Clopos əvəzinə',
         description:
-          'Heselo Azərbaycanda klub və otaq məkanları üçün paneldir: PS/oyun klubu, karaoke, bilyard, antikafe və launj — rezervasiya, canlı zal, kassa və anbar bir yerdə. Pulsuz demo.',
+          'Heselo Azərbaycanda PS/oyun, karaoke, bilyard, antikafe və launj üçün otaq-vaxt paneli: rezervasiya, canlı sessiya, kassa. Restoran POS (iiko, Clopos) əvəzinə klub axını — 25 AZN/aydan. Pulsuz demo.',
         keywords: [
           'Heselo',
           'məkan idarəetmə sistemi',
           'oyun klubu proqramı',
+          'iiko alternativ',
+          'clopos alternativ',
           'ps klub proqramı',
           'karaoke otaq rezervasiya',
         ],
@@ -763,10 +780,17 @@ export const az: Messages = {
         ],
       },
       pricing: {
-        title: 'Qiymətlər — Heselo abunə tarifləri',
+        title: 'Qiymətlər — 25 AZN-dən klub paneli | Heselo',
         description:
-          'Məkan tipinə görə hibrid tarif: PS və bilyard ayda 25 AZN-dən, antikafe 29 AZN-dən, karaoke və launj 35 AZN-dən. Aylıq və illik ödəniş, rezervasiya limiti və artıq istifadə haqqı.',
-        keywords: ['Heselo qiymət', 'abunə planı', 'məkan idarəetmə proqramı qiymət'],
+          'Klub üçün sərfəli tarifi: PS və bilyard 25 AZN-dən, karaoke/launj 35 AZN-dən. İllik ödənişdə 2 ay hədiyyə. MinuPOS/Dine tipli restoran POS-dan fərqli — otaq-vaxt və kassa üçün.',
+        keywords: [
+          'Heselo qiymət',
+          'ucuz klub paneli',
+          '25 AZN məkan proqramı',
+          'minupos-dan sərfəli',
+          'dine-dən sərfəli klub',
+          'abunə planı',
+        ],
       },
       contact: {
         title: 'Pulsuz demo və əlaqə — Heselo',
@@ -799,13 +823,15 @@ export const az: Messages = {
         ],
       },
       guides: {
-        title: 'Bələdçilər — klub idarəetməsi necə işləyir | Heselo',
+        title: 'Bələdçilər — klub paneli və POS alternativləri | Heselo',
         description:
-          'Satış səhifəsi deyil: oyun klubu, karaoke, bilyard və antikafe axını necə qurulur — saatla ödəniş, rezerv və kassa izahı.',
+          'Oyun klubu, karaoke, bilyard axını; iiko, Clopos, Dine, MinuPOS və Excel alternativləri — dürüst müqayisə.',
         keywords: [
           'oyun klubu idarəetmə sistemi nədir',
+          'iiko alternativ',
+          'clopos alternativ',
+          'dine alternativ',
           'karaoke otaqları necə rezerv edilir',
-          'antikafe idarəetmə sistemi nədir',
         ],
       },
     },

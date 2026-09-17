@@ -10,6 +10,19 @@ export const GUIDE_SLUGS = [
   'billiards-table-booking',
   'karaoke-booking-system',
   'club-pos-vs-excel',
+  // Phase C comparison / alternative intent
+  'iiko-alternative-clubs',
+  'clopos-alternative',
+  'dine-alternative',
+  'restomas-alternative',
+  'minupos-alternative',
+  'robotpos-alternative',
+  'affordable-club-pos',
+  'restaurant-pos-vs-karaoke-system',
+  'playstation-cafe-software-alternative',
+  'izi-alternative',
+  'kaktus-alternative',
+  'resto-az-alternative',
 ] as const
 
 export const TEASER_GUIDE_SLUGS = [
@@ -18,6 +31,9 @@ export const TEASER_GUIDE_SLUGS = [
   'billiards-club-management',
   'playstation-club-software',
   'club-pos-vs-excel',
+  'iiko-alternative-clubs',
+  'dine-alternative',
+  'affordable-club-pos',
 ] as const
 
 export type GuideSlug = (typeof GUIDE_SLUGS)[number]
@@ -52,4 +68,7 @@ export type GuidesHubCopy = {
   seoDescription: string
   keywords: string[]
   cardCta: string
+  /** Optional heading for comparison / alternative guides on the hub */
+  comparisonTitle?: string
+  comparisonIntro?: string
 }
