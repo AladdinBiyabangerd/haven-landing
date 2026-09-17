@@ -17,6 +17,7 @@
 | Bələdçilər | 9 educational + 13 comparison (Phase C0) |
 | Texniki SEO | sitemap, hreflang, JSON-LD, `llms.txt`, 3 dil |
 | Off-site checklist | `docs/off-site-seo-az.md` (icra gözləyir) |
+| AI / GEO ölçmə | `docs/geo-ai-prompts-az.md` (aylıq prompt batareyası) |
 
 Çatışmayan: **sorğu səthi dar**, brend zəif, daxili link funnel zəif ölçülür, GSC-də AZ sorğusu demək olar ki, yoxdur.
 

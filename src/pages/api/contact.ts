@@ -10,7 +10,9 @@ import {
   buildCustomerAutoReply,
   buildOwnerEmail,
   EMAIL_LOGO_CID,
+  isContactHeardFrom,
   isContactVenueType,
+  type ContactHeardFrom,
   type ContactIntent,
   type ContactPayload,
   type ContactVenueType,
@@ -80,6 +82,11 @@ function parseBody(raw: unknown): ContactPayload | null {
   const venuesCount = parseCount(data.venuesCount)
   const staffCount = parseCount(data.staffCount)
   const reservationsPerMonth = parseCount(data.reservationsPerMonth)
+  const heardFromRaw = String(data.heardFrom ?? '').trim()
+  if (heardFromRaw && !isContactHeardFrom(heardFromRaw)) return null
+  const heardFrom: ContactHeardFrom | undefined = isContactHeardFrom(heardFromRaw)
+    ? heardFromRaw
+    : undefined
 
   if (!name || name.length > 120) return null
   if (emailRaw && (emailRaw.length > 200 || !EMAIL_RE.test(emailRaw))) return null
@@ -110,6 +117,7 @@ function parseBody(raw: unknown): ContactPayload | null {
     venuesCount,
     staffCount,
     reservationsPerMonth,
+    heardFrom,
   }
 }
 
@@ -224,7 +232,7 @@ export const ALL: APIRoute = async ({ request }) => {
       ok: true,
       endpoint: '/api/contact/',
       usage:
-        'Send POST with JSON: { name, phone?, email?, venue, venueType?, message, locale, intent?, plan?, period?, venuesCount?, staffCount?, reservationsPerMonth? } — phone or email required',
+        'Send POST with JSON: { name, phone?, email?, venue, venueType?, message, locale, intent?, plan?, period?, venuesCount?, staffCount?, reservationsPerMonth?, heardFrom? } — phone or email required',
     })
   }
 

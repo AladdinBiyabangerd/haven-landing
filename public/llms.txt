@@ -1,15 +1,24 @@
 # Heselo — https://heselo.online
 
-> Məkan idarəetmə sistemi (venue management): rezervasiya, canlı zal, kassa və anbar.
-> Languages: az (default), en, ru.
-> Not a restaurant kitchen POS — room/table timed sessions for clubs.
+> Heselo — Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün rezervasiya, canlı zal, kassa və anbar paneli (mətbəx POS deyil).
+> Venue management SaaS: room/table/station timed sessions — booking, live floor, cash shift, inventory.
+> Languages: az (default), en, ru. Currency: AZN. Market: Azerbaijan.
+> Not a restaurant kitchen POS — lighter club panel vs iiko, Clopos, Dine, Restomas, MinuPOS when the product is room-time, not kitchen/KDS.
+
+## One-line entity
+
+Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan: schedule + live sessions + cash drawer + inventory in one web panel. Pricing from ~25 AZN/month. Free demo via contact form or WhatsApp.
 
 ## Product
 
-- Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan.
-- Core modules: room/station/table booking, live floor sessions, POS/cash shift, inventory, customers, statistics.
+- Core modules: room/station/table booking, live floor sessions (extend, settle), POS/cash shift, inventory, customers, statistics, staff permissions.
 - Payment balances are calculated on the server (not client-side estimates).
-- Honest alternatives: lighter club panel vs restaurant POS (iiko, Clopos, Dine, Restomas, MinuPOS) when the product is room-time, not kitchen/KDS.
+- Honest alternatives: club/room-time panel vs restaurant POS when the venue sells time, not plated meals.
+
+## Who it is for / not for
+
+- For: PS/console clubs, karaoke rooms, billiards halls, anti-cafés, VIP room lounges that need reservation + live session + cash.
+- Not for: full restaurant kitchen POS, KDS, delivery stacks, generic coworking desk booking.
 
 ## Key pages (az locale)
 
@@ -55,3 +64,4 @@ Mirror the same paths under `/en/guides/…` and `/ru/guides/…`.
 - Allow indexing of public marketing pages.
 - Do not index /api/ routes.
 - robots.txt: https://heselo.online/robots.txt
+- AI crawlers (GPTBot, OAI-SearchBot, PerplexityBot, Google-Extended, ClaudeBot, …) are allowed on marketing pages.

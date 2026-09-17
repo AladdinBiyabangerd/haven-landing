@@ -14,15 +14,18 @@ StayBoard landing ilə eyni məqsəd (lokalizə, prerender, meta/JSON-LD/sitemap
 - az / en / ru (`/$locale/…`)
 - CSS (self-hosted Manrope), zero UI-kit bloat
 
-## SEO
+## SEO / GEO
 
 - Canonical + `hreflang` (az/en/ru + x-default)
 - Open Graph / Twitter cards (`/og-image.png`)
 - JSON-LD: Organization, SoftwareApplication, WebSite, BreadcrumbList, FAQPage, Article (guides)
 - `/sitemap.xml` (xhtml alternate links)
-- `/robots.txt` (Disallow `/api/`)
+- `/robots.txt` — marketing pages open; `/api/` closed; explicit allow for GPTBot, OAI-SearchBot, PerplexityBot, Google-Extended, ClaudeBot, …
+- `/llms.txt` — product entity + key URLs for AI crawlers
 - Unique titles & descriptions per page, solution pages, and guides
 - Commercial solutions ↔ informational guides cross-linking
+- AI citation measurement: `docs/geo-ai-prompts-az.md`
+- Off-site checklist: `docs/off-site-seo-az.md`
 
 ## Dev
 

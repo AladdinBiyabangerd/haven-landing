@@ -113,8 +113,23 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | İndekslənmiş səhifə sayı | GSC → Pages |
 | Referral trafik | Plausible / GA4 |
 | Brend axtarış “Heselo” | GSC → Search results |
+| AI tövsiyə görünürlüyü | [geo-ai-prompts-az.md](./geo-ai-prompts-az.md) — 18 prompt batareyası |
+| Demo mənbəyi (AI) | Contact form `heardFrom` + owner email |
 
 Son yeniləmə: 2026-09-17
+
+---
+
+## GEO qısa xatırlatma (AI tövsiyəsi)
+
+On-site artıq güclüdür (`llms.txt`, FAQ schema, müqayisə guide-ları, AI bot `robots` icazəsi). **Qazanan qol off-site-dır:**
+
+1. Bu checklist-dəki kataloqları doldurun (GBP, AlternativeTo, LinkedIn).
+2. Ayda bir dəfə [geo-ai-prompts-az.md](./geo-ai-prompts-az.md) batareyasını ölçün.
+3. Real müştəri rəyi + YouTube demo (transcript) — AI üçün üçüncü tərəf sübutu.
+4. Demo linklərində UTM: `?utm_source=chatgpt&utm_medium=ai&utm_campaign=geo` (forma avtomatik `heardFrom` seçə bilər).
+
+Admin panel (Heselo app) marketing indeksi üçün deyil — yalnız `heselo.online`.
 
 ---
 

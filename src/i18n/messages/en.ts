@@ -149,10 +149,22 @@ export const en: Messages = {
     title: 'People ask us this often',
     items: [
       {
-        q: 'Which businesses is Heselo for?',
-        a: 'Gaming clubs (PlayStation and console), karaoke rooms, billiards, anti-cafés, and room lounges — venues that need room, station, or table booking, live tracking, and cash.',
+        q: 'What is Heselo and who is it for?',
+        a: 'Heselo is a web panel for gaming clubs (PlayStation), karaoke, billiards, anti-cafés, and room lounges in Azerbaijan: booking, live sessions, cash, and inventory in one place. Built for venues that sell room or station time — not a kitchen restaurant POS.',
         href: '/solutions',
         linkLabel: 'Venue types are listed here',
+      },
+      {
+        q: 'Does Heselo replace iiko or Clopos?',
+        a: 'No — if you need kitchen, KDS, and dining-room flow, choose iiko/Clopos. If room/PS time, bookings, and cash shifts are the core job, Heselo is the lighter club-panel alternative.',
+        href: '/guides/iiko-alternative-clubs',
+        linkLabel: 'Honest comparison guide',
+      },
+      {
+        q: 'How much does it cost?',
+        a: 'From about 25 AZN/month for PS/gaming clubs; billiards, karaoke, and lounges vary by type. Annual billing includes two months free. Free demo — no card required.',
+        href: '/pricing',
+        linkLabel: 'Open plans by venue type',
       },
       {
         q: 'Can I manage reservations with Heselo?',
@@ -189,7 +201,7 @@ export const en: Messages = {
     title: 'Business management software',
     titleAccent: 'for daily venue work.',
     paragraphs: [
-      'Heselo is a venue management system for gaming clubs, karaoke rooms, billiards halls, anti-cafés, and room lounges — the places that sell time on a table, a room, or a station.',
+      'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory — for venues that sell table, room, or station time (from ~25 AZN/month).',
       'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is the lighter club panel.',
     ],
   },
@@ -715,6 +727,17 @@ export const en: Messages = {
       lounge: "Hello, I'd like a Heselo demo for a room lounge.",
     },
     planConfirm: '{plan} · {type}',
+    heardFrom: 'How did you hear about us?',
+    heardFromPlaceholder: 'Optional',
+    heardFromOptions: [
+      { value: 'chatgpt', label: 'ChatGPT / AI assistant' },
+      { value: 'perplexity', label: 'Perplexity' },
+      { value: 'gemini', label: 'Gemini / Google AI' },
+      { value: 'google', label: 'Google search' },
+      { value: 'social', label: 'Instagram / Facebook / LinkedIn' },
+      { value: 'friend', label: 'Friend or colleague' },
+      { value: 'other', label: 'Other' },
+    ],
   },
   privacy: {
     title: 'Privacy policy',

@@ -149,10 +149,22 @@ export const az: Messages = {
     title: 'Tez-tez soruşulanlar',
     items: [
       {
-        q: 'Heselo hansı bizneslər üçün uyğundur?',
-        a: 'Oyun klubu (PS və konsol), karaoke otaqları, bilyard, antikafe və otaqlı launj üçün — otaq, masa və ya PS yeri rezervasiyası, canlı izləmə və kassa lazım olan məkanlar.',
+        q: 'Heselo nədir və kimlər üçündür?',
+        a: 'Heselo Azərbaycanda oyun klubu (PS), karaoke, bilyard, antikafe və otaqlı launj üçün veb paneldır: rezervasiya, canlı sessiya, kassa və anbar bir yerdə. Otaq və ya stansiya vaxtı satan məkanlar üçündür — mətbəx restoran POS deyil.',
         href: '/solutions',
         linkLabel: 'Məkan tipləri buradadır',
+      },
+      {
+        q: 'Heselo iiko və ya Clopos-u əvəz edir?',
+        a: 'Yox, əgər sizə mətbəx, KDS və restoran zalı lazımdırsa — iiko/Clopos uyğundur. Otaq/PS vaxtı, bron və kassa növbəsi əsas işdirsə, Heselo daha yüngül klub paneli kimi alternativdir.',
+        href: '/guides/iiko-alternative-clubs',
+        linkLabel: 'Dürüst müqayisə bələdçisi',
+      },
+      {
+        q: 'Qiymət nə qədərdir?',
+        a: 'PS/oyun klubundan təxminən 25 AZN/aydan başlayır; bilyard, karaoke və launj tipə görə dəyişir. İllik ödənişdə 2 ay hədiyyə. Pulsuz demo — kart lazım deyil.',
+        href: '/pricing',
+        linkLabel: 'Tarifləri tipə görə açın',
       },
       {
         q: 'Heselo ilə rezervasiyaları idarə etmək mümkündür?',
@@ -189,7 +201,7 @@ export const az: Messages = {
     title: 'Biznes idarəetmə proqramı',
     titleAccent: 'məkanın gündəlik işi üçün.',
     paragraphs: [
-      'Heselo oyun klubları, karaoke otaqları, bilyard salonları, anti-kafelər və otaq lounge-ları üçün məkan idarəetmə sistemidir — masa, otaq və ya stansiya vaxtını satan yerlər üçün.',
+      'Heselo — Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün rezervasiya, canlı zal, kassa və anbar paneli. Masa, otaq və ya stansiya vaxtını satan yerlər üçündür (~25 AZN/aydan).',
       'iiko və ya Clopos kimi restoran POS axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, bron və kassa növbəsi üçün Heselo daha yüngül klub paneli təklif edir.',
     ],
   },
@@ -715,6 +727,17 @@ export const az: Messages = {
       lounge: 'Salam, otaqlı launj üçün Heselo demo istəyirəm.',
     },
     planConfirm: '{plan} · {type}',
+    heardFrom: 'Haradan eşitdiniz?',
+    heardFromPlaceholder: 'Seçin (istəyə bağlı)',
+    heardFromOptions: [
+      { value: 'chatgpt', label: 'ChatGPT / AI köməkçi' },
+      { value: 'perplexity', label: 'Perplexity' },
+      { value: 'gemini', label: 'Gemini / Google AI' },
+      { value: 'google', label: 'Google axtarış' },
+      { value: 'social', label: 'Instagram / Facebook / LinkedIn' },
+      { value: 'friend', label: 'Dost / həmkar tövsiyəsi' },
+      { value: 'other', label: 'Digər' },
+    ],
   },
   privacy: {
     title: 'Məxfilik siyasəti',

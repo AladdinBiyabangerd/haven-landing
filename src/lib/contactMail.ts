@@ -19,12 +19,34 @@ export const CONTACT_VENUE_TYPES = [
 
 export type ContactVenueType = (typeof CONTACT_VENUE_TYPES)[number]
 
+export const CONTACT_HEARD_FROM = [
+  'chatgpt',
+  'perplexity',
+  'gemini',
+  'google',
+  'social',
+  'friend',
+  'other',
+] as const
+
+export type ContactHeardFrom = (typeof CONTACT_HEARD_FROM)[number]
+
 const VENUE_TYPE_LABEL_AZ: Record<ContactVenueType, string> = {
   gaming: 'Oyun klubu / PS',
   karaoke: 'Karaoke',
   billiards: 'Bilyard',
   antikafe: 'Antikafe',
   lounge: 'Otaqlı launj',
+  other: 'Digər',
+}
+
+const HEARD_FROM_LABEL_AZ: Record<ContactHeardFrom, string> = {
+  chatgpt: 'ChatGPT / AI',
+  perplexity: 'Perplexity',
+  gemini: 'Gemini / Google AI',
+  google: 'Google axtarış',
+  social: 'Sosial şəbəkə',
+  friend: 'Dost / həmkar',
   other: 'Digər',
 }
 
@@ -44,6 +66,10 @@ export function isContactVenueType(value: string): value is ContactVenueType {
   return (CONTACT_VENUE_TYPES as readonly string[]).includes(value)
 }
 
+export function isContactHeardFrom(value: string): value is ContactHeardFrom {
+  return (CONTACT_HEARD_FROM as readonly string[]).includes(value)
+}
+
 export type ContactPayload = {
   name: string
   email: string
@@ -58,6 +84,7 @@ export type ContactPayload = {
   venuesCount?: number
   staffCount?: number
   reservationsPerMonth?: number
+  heardFrom?: ContactHeardFrom
 }
 
 export const EMAIL_LOGO_CID = 'heselo-logo'
@@ -382,6 +409,16 @@ function buildOwnerHtml(payload: ContactPayload): string {
                     <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(localeLabel)}</div>
                   </td>
                 </tr>
+                ${
+                  payload.heardFrom
+                    ? `<tr>
+                  <td style="padding:0 20px 18px;">
+                    <div style="font-size:12px;color:#9ca3af;margin-bottom:5px;">HARADAN EŞİTDİ</div>
+                    <div style="font-size:16px;font-weight:600;color:#111827;">${escapeHtml(HEARD_FROM_LABEL_AZ[payload.heardFrom])}</div>
+                  </td>
+                </tr>`
+                    : ''
+                }
                 ${countRow('MƏKAN SAYI', payload.venuesCount)}
                 ${countRow('İŞÇİ SAYI', payload.staffCount)}
                 ${countRow('AYLIQ REZERVASİYA', payload.reservationsPerMonth)}
@@ -437,6 +474,7 @@ export function buildOwnerEmail(payload: ContactPayload) {
     ...(payload.plan ? [`Tarif: ${PLAN_LABEL_AZ[payload.plan]}`] : []),
     ...(payload.period ? [`Ödəniş dövrü: ${PERIOD_LABEL_AZ[payload.period]}`] : []),
     `Dil: ${payload.locale}`,
+    ...(payload.heardFrom ? [`Haradan eşitdi: ${HEARD_FROM_LABEL_AZ[payload.heardFrom]}`] : []),
     ...counts,
     '',
     'Qeyd:',

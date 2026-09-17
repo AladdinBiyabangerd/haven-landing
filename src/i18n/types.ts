@@ -335,6 +335,9 @@ export type Messages = {
     whatsappPrefill: string
     whatsappPrefills: Record<'gaming' | 'karaoke' | 'billiards' | 'antikafe' | 'lounge', string>
     planConfirm: string
+    heardFrom: string
+    heardFromPlaceholder: string
+    heardFromOptions: Array<{ value: string; label: string }>
   }
   privacy: {
     title: string

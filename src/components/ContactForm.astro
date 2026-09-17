@@ -75,6 +75,15 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     <span>{c.venue}</span>
     <input name="venue" type="text" autocomplete="organization" maxlength="200" />
   </label>
+  <label>
+    <span>{c.heardFrom}</span>
+    <select name="heardFrom" data-heard-from>
+      <option value="">{c.heardFromPlaceholder}</option>
+      {c.heardFromOptions.map((option) => (
+        <option value={option.value}>{option.label}</option>
+      ))}
+    </select>
+  </label>
   <!-- Only a custom quote needs these numbers — hidden until the visitor asks for one. -->
   <fieldset class="criteria" data-criteria hidden>
     <legend class="criteria__hint">{c.criteriaHint}</legend>
@@ -159,6 +168,30 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     if (typeSelect instanceof HTMLSelectElement && rememberedType) {
       const allowed = [...typeSelect.options].some((option) => option.value === rememberedType)
       if (allowed) typeSelect.value = rememberedType
+    }
+
+    const heardSelect = form.querySelector('[data-heard-from]')
+    const utmSource = (params.get('utm_source') || '').toLowerCase()
+    const utmToHeard: Record<string, string> = {
+      chatgpt: 'chatgpt',
+      openai: 'chatgpt',
+      ai: 'chatgpt',
+      perplexity: 'perplexity',
+      gemini: 'gemini',
+      bard: 'gemini',
+      copilot: 'chatgpt',
+      google: 'google',
+      gsc: 'google',
+      instagram: 'social',
+      facebook: 'social',
+      linkedin: 'social',
+      social: 'social',
+    }
+    if (heardSelect instanceof HTMLSelectElement && utmSource) {
+      const mapped = utmToHeard[utmSource]
+      if (mapped && [...heardSelect.options].some((option) => option.value === mapped)) {
+        heardSelect.value = mapped
+      }
     }
 
     function updatePlanChip() {
@@ -257,6 +290,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
         venuesCount: String(data.get('venuesCount') || ''),
         staffCount: String(data.get('staffCount') || ''),
         reservationsPerMonth: String(data.get('reservationsPerMonth') || ''),
+        heardFrom: String(data.get('heardFrom') || ''),
         locale,
       }
 
@@ -281,6 +315,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
             method: 'form',
             placement: 'contact',
             intent: payload.intent,
+            heard_from: payload.heardFrom || undefined,
           })
         }
         form.reset()
