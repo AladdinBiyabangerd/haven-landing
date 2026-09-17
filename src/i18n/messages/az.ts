@@ -48,7 +48,7 @@ export const az: Messages = {
   trust: {
     items: [
       '15 dəq demo, kart lazım deyil',
-      'Ayda 11 AZN-dən',
+      'Ayda 25 AZN-dən',
       'AZ / RU / EN panel',
     ],
   },
@@ -422,7 +422,7 @@ export const az: Messages = {
       },
       {
         q: 'Niyə karaoke PS-dən bahadır?',
-        a: 'PS və bilyard 11 AZN-dən başlayır — stansiya və masa axını daha sadədir. Karaoke və launj otaq cədvəli, uzatma və kassa axınına görə 23 AZN-dən başlayır.',
+        a: 'PS və bilyard 25 AZN-dən başlayır — stansiya və masa axını daha sadədir. Karaoke və launj otaq cədvəli, uzatma və kassa axınına görə 35 AZN-dən başlayır.',
       },
       {
         q: 'Tarifi sonra dəyişmək olar?',
@@ -765,7 +765,7 @@ export const az: Messages = {
       pricing: {
         title: 'Qiymətlər — Heselo abunə tarifləri',
         description:
-          'Məkan tipinə görə hibrid tarif: PS və bilyard ayda 11 AZN-dən, antikafe 18 AZN-dən, karaoke və launj 23 AZN-dən. Aylıq və illik ödəniş, rezervasiya limiti və artıq istifadə haqqı.',
+          'Məkan tipinə görə hibrid tarif: PS və bilyard ayda 25 AZN-dən, antikafe 29 AZN-dən, karaoke və launj 35 AZN-dən. Aylıq və illik ödəniş, rezervasiya limiti və artıq istifadə haqqı.',
         keywords: ['Heselo qiymət', 'abunə planı', 'məkan idarəetmə proqramı qiymət'],
       },
       contact: {

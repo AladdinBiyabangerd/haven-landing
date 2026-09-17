@@ -48,7 +48,7 @@ export const en: Messages = {
   trust: {
     items: [
       '15-minute demo, no card',
-      'From 11 AZN a month',
+      'From 25 AZN a month',
       'AZ / RU / EN panel',
     ],
   },
@@ -422,7 +422,7 @@ export const en: Messages = {
       },
       {
         q: 'Why is karaoke more than PlayStation?',
-        a: 'PlayStation and billiards start at 11 AZN because station and table workflows are simpler. Karaoke and lounges start at 23 AZN for room schedules, extensions, and cash workflows.',
+        a: 'PlayStation and billiards start at 25 AZN because station and table workflows are simpler. Karaoke and lounges start at 35 AZN for room schedules, extensions, and cash workflows.',
       },
       {
         q: 'Can I change plan later?',
@@ -765,7 +765,7 @@ export const en: Messages = {
       pricing: {
         title: 'Pricing — Heselo subscription plans',
         description:
-          'Hybrid pricing by venue type: PlayStation and billiards from 11 AZN/month, anti-cafés from 18, karaoke and lounges from 23. Monthly or annual billing, reservation allowances, and overage pricing.',
+          'Hybrid pricing by venue type: PlayStation and billiards from 25 AZN/month, anti-cafés from 29, karaoke and lounges from 35. Monthly or annual billing, reservation allowances, and overage pricing.',
         keywords: ['Heselo pricing', 'subscription plans', 'venue management pricing'],
       },
       contact: {

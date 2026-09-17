@@ -33,9 +33,9 @@ const PLAN_QUOTA: Record<
   VenuePlanId,
   { includedReservations: number; overagePerReservation: number }
 > = {
-  starter: { includedReservations: 300, overagePerReservation: 0.25 },
-  plus: { includedReservations: 550, overagePerReservation: 0.2 },
-  pro: { includedReservations: 750, overagePerReservation: 0.14 },
+  starter: { includedReservations: 300, overagePerReservation: 0.3 },
+  plus: { includedReservations: 550, overagePerReservation: 0.25 },
+  pro: { includedReservations: 750, overagePerReservation: 0.18 },
 }
 
 function plan(id: VenuePlanId, monthlyFee: number, upTo: number): VenuePlan {
@@ -53,38 +53,38 @@ function plan(id: VenuePlanId, monthlyFee: number, upTo: number): VenuePlan {
 
 /**
  * Hybrid: base fee + capacity by venue type; reservation quota/overage by plan tier.
- * Amounts ~15–20% above prior landing list; annual = monthly × 10 (2 months free).
+ * Market-aligned hybrid fees; annual = monthly × 10 (2 months free).
  */
 export const VENUE_OFFERS: readonly VenueOffer[] = [
   {
     slug: 'gaming',
     model: 'monthly',
     unit: 'stations',
-    plans: [plan('starter', 11, 8), plan('plus', 18, 16), plan('pro', 29, 24)],
+    plans: [plan('starter', 25, 8), plan('plus', 39, 16), plan('pro', 55, 24)],
   },
   {
     slug: 'billiards',
     model: 'monthly',
     unit: 'tables',
-    plans: [plan('starter', 11, 6), plan('plus', 18, 12), plan('pro', 29, 18)],
+    plans: [plan('starter', 25, 6), plan('plus', 39, 12), plan('pro', 55, 18)],
   },
   {
     slug: 'karaoke',
     model: 'monthly',
     unit: 'rooms',
-    plans: [plan('starter', 23, 4), plan('plus', 35, 8), plan('pro', 45, 12)],
+    plans: [plan('starter', 35, 4), plan('plus', 49, 8), plan('pro', 69, 12)],
   },
   {
     slug: 'lounge',
     model: 'monthly',
     unit: 'rooms',
-    plans: [plan('starter', 23, 4), plan('plus', 35, 8), plan('pro', 45, 12)],
+    plans: [plan('starter', 35, 4), plan('plus', 49, 8), plan('pro', 69, 12)],
   },
   {
     slug: 'antikafe',
     model: 'monthly',
     unit: 'zones',
-    plans: [plan('starter', 18, 8), plan('plus', 29, 16), plan('pro', 42, 24)],
+    plans: [plan('starter', 29, 8), plan('plus', 45, 16), plan('pro', 59, 24)],
   },
 ] as const
 
