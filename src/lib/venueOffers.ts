@@ -66,25 +66,25 @@ export const VENUE_OFFERS: readonly VenueOffer[] = [
     slug: 'billiards',
     model: 'monthly',
     unit: 'tables',
-    plans: [plan('starter', 25, 6), plan('plus', 39, 12), plan('pro', 55, 18)],
+    plans: [plan('starter', 29, 6), plan('plus', 45, 12), plan('pro', 59, 18)],
   },
   {
     slug: 'karaoke',
     model: 'monthly',
     unit: 'rooms',
-    plans: [plan('starter', 35, 4), plan('plus', 49, 8), plan('pro', 69, 12)],
+    plans: [plan('starter', 39, 4), plan('plus', 55, 8), plan('pro', 75, 12)],
   },
   {
     slug: 'lounge',
     model: 'monthly',
     unit: 'rooms',
-    plans: [plan('starter', 35, 4), plan('plus', 49, 8), plan('pro', 69, 12)],
+    plans: [plan('starter', 39, 4), plan('plus', 55, 8), plan('pro', 75, 12)],
   },
   {
     slug: 'antikafe',
     model: 'monthly',
     unit: 'zones',
-    plans: [plan('starter', 29, 8), plan('plus', 45, 16), plan('pro', 59, 24)],
+    plans: [plan('starter', 32, 8), plan('plus', 49, 16), plan('pro', 65, 24)],
   },
 ] as const
 

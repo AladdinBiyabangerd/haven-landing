@@ -429,7 +429,7 @@ export const en: Messages = {
       },
       {
         q: 'Why is karaoke more than PlayStation?',
-        a: 'PlayStation and billiards start at 25 AZN because station and table workflows are simpler. Karaoke and lounges start at 35 AZN for room schedules, extensions, and cash workflows.',
+        a: 'PlayStation starts at 25 AZN because station workflows are simpler. Billiards starts at 29 AZN; karaoke and lounges start at 39 AZN for room schedules, extensions, and cash workflows.',
       },
       {
         q: 'Cheaper than Dine or MinuPOS?',
@@ -782,7 +782,7 @@ export const en: Messages = {
       pricing: {
         title: 'Pricing — club panel from 25 AZN | Heselo',
         description:
-          'Affordable club plans: PlayStation and billiards from 25 AZN, karaoke/lounges from 35. Two months free on annual billing. Unlike MinuPOS/Dine-style restaurant POS — built for room-time and cash shifts.',
+          'Affordable club plans: PlayStation from 25 AZN, billiards from 29, karaoke/lounges from 39. Two months free on annual billing. Unlike MinuPOS/Dine-style restaurant POS — built for room-time and cash shifts.',
         keywords: [
           'Heselo pricing',
           'affordable club panel',

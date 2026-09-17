@@ -429,7 +429,7 @@ export const az: Messages = {
       },
       {
         q: 'Niyə karaoke PS-dən bahadır?',
-        a: 'PS və bilyard 25 AZN-dən başlayır — stansiya və masa axını daha sadədir. Karaoke və launj otaq cədvəli, uzatma və kassa axınına görə 35 AZN-dən başlayır.',
+        a: 'PS 25 AZN-dən başlayır — stansiya axını daha sadədir. Bilyard 29 AZN-dən, karaoke və launj otaq cədvəli, uzatma və kassa axınına görə 39 AZN-dən başlayır.',
       },
       {
         q: 'Dine və ya MinuPOS-dan sərfəlidirmi?',
@@ -782,7 +782,7 @@ export const az: Messages = {
       pricing: {
         title: 'Qiymətlər — 25 AZN-dən klub paneli | Heselo',
         description:
-          'Klub üçün sərfəli tarifi: PS və bilyard 25 AZN-dən, karaoke/launj 35 AZN-dən. İllik ödənişdə 2 ay hədiyyə. MinuPOS/Dine tipli restoran POS-dan fərqli — otaq-vaxt və kassa üçün.',
+          'Klub üçün sərfəli tarifi: PS 25 AZN-dən, bilyard 29 AZN-dən, karaoke/launj 39 AZN-dən. İllik ödənişdə 2 ay hədiyyə. MinuPOS/Dine tipli restoran POS-dan fərqli — otaq-vaxt və kassa üçün.',
         keywords: [
           'Heselo qiymət',
           'ucuz klub paneli',
