@@ -196,7 +196,12 @@ export type Messages = {
     chooseType: string
     cta: string
     periodMonthly: string
+    periodAnnual: string
     periodOneTime: string
+    monthlyAlternative: string
+    annualAlternative: string
+    includedReservations: string
+    overage: string
     includedModules: string
     oneVenue: string
     noCard: string
@@ -212,6 +217,23 @@ export type Messages = {
       starter: string
       plus: string
       pro: string
+    }
+    calculator: {
+      eyebrow: string
+      title: string
+      description: string
+      reservationCount: string
+      billingPeriod: string
+      monthly: string
+      annual: string
+      plan: string
+      baseFee: string
+      overageCost: string
+      total: string
+      cheapest: string
+      crossoverTitle: string
+      crossoverHint: string
+      noCrossover: string
     }
     faq: FaqItem[]
     crosslinks: {

@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { localePath } from '@/lib/site'
 import { fillTemplate, formatMoney } from '@/lib/format'
-import { VENUE_OFFERS, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
+import { crossoverPoints, VENUE_OFFERS, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
@@ -13,6 +13,20 @@ interface Props {
 const { locale, messages } = Astro.props
 const page = messages.pricing
 const slugs = VENUE_OFFERS.map((offer) => offer.slug)
+const calculatorData = Object.fromEntries(
+  VENUE_OFFERS.map((offer) => [
+    offer.slug,
+    {
+      plans: offer.plans.map((plan) => ({
+        id: plan.id,
+        monthlyFee: plan.monthlyFee,
+        annualFee: plan.annualFee,
+        includedReservations: plan.includedReservations,
+        overagePerReservation: plan.overagePerReservation,
+      })),
+    },
+  ]),
+)
 
 function planFeatures(features: string[], upTo: number): string[] {
   return features.map((item) => fillTemplate(item, { n: upTo }))
@@ -44,7 +58,7 @@ function planFeatures(features: string[], upTo: number): string[] {
   {
     VENUE_OFFERS.map((offer, index) => {
       const copy = page.offers[offer.slug]
-      const period = offer.model === 'monthly' ? page.periodMonthly : page.periodOneTime
+      const crossovers = crossoverPoints(offer.slug)
       return (
         /* The first type is open on load — an empty pricing page helps nobody. */
         <section
@@ -66,18 +80,44 @@ function planFeatures(features: string[], upTo: number): string[] {
                     {plan.id === 'plus' ? <span class="badge">{page.popular}</span> : null}
                   </header>
                   <p class="price">
-                    {formatMoney(plan.amount, locale)}
-                    <span>{period}</span>
+                    <span data-plan-price>{formatMoney(plan.monthlyFee, locale)}</span>
+                    <span data-plan-period>{page.periodMonthly}</span>
+                  </p>
+                  <p
+                    class="price-alternative"
+                    data-plan-alternative
+                    data-monthly={fillTemplate(page.monthlyAlternative, {
+                      price: formatMoney(plan.monthlyFee, locale),
+                    })}
+                    data-annual={fillTemplate(page.annualAlternative, {
+                      price: formatMoney(plan.annualFee, locale),
+                    })}
+                  >
+                    {fillTemplate(page.annualAlternative, {
+                      price: formatMoney(plan.annualFee, locale),
+                    })}
                   </p>
                   <p class="for-whom">{planCopy.forWhom}</p>
                   <ul>
                     {planFeatures(planCopy.features, plan.upTo).map((item) => (
                       <li>{item}</li>
                     ))}
+                    <li>
+                      {fillTemplate(page.includedReservations, {
+                        n: plan.includedReservations,
+                      })}
+                    </li>
+                    <li>
+                      {fillTemplate(page.overage, {
+                        price: formatMoney(plan.overagePerReservation, locale),
+                      })}
+                    </li>
                   </ul>
                   <a
                     class:list={['btn', plan.id === 'plus' ? 'btn-primary' : 'btn-ghost']}
-                    href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}`}
+                    href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}&period=monthly`}
+                    data-contact-link
+                    data-contact-base={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}`}
                   >
                     {page.cta}
                   </a>
@@ -85,6 +125,92 @@ function planFeatures(features: string[], upTo: number): string[] {
               )
             })}
           </div>
+          <section
+            class="calculator"
+            id={`calculator-${offer.slug}`}
+            data-calculator
+            data-offer={offer.slug}
+            data-period-monthly={page.periodMonthly}
+            data-period-annual={page.periodAnnual}
+          >
+            <div class="calculator__head">
+              <div>
+                <p class="eyebrow">{page.calculator.eyebrow}</p>
+                <h3 class="type-card-title">{page.calculator.title}</h3>
+                <p>{page.calculator.description}</p>
+              </div>
+              <div class="calculator__controls">
+                <label>
+                  <span>{page.calculator.reservationCount}</span>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100000000"
+                    step="1"
+                    value="400"
+                    inputmode="numeric"
+                    data-reservation-count
+                  />
+                </label>
+                <fieldset>
+                  <legend>{page.calculator.billingPeriod}</legend>
+                  <div class="period-toggle">
+                    <label>
+                      <input type="radio" name={`period-${offer.slug}`} value="monthly" checked />
+                      <span>{page.calculator.monthly}</span>
+                    </label>
+                    <label>
+                      <input type="radio" name={`period-${offer.slug}`} value="annual" />
+                      <span>{page.calculator.annual}</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">{page.calculator.plan}</th>
+                    <th scope="col">{page.calculator.baseFee}</th>
+                    <th scope="col">{page.calculator.overageCost}</th>
+                    <th scope="col">{page.calculator.total}</th>
+                  </tr>
+                </thead>
+                <tbody aria-live="polite">
+                  {offer.plans.map((plan) => (
+                    <tr data-calculator-row={plan.id}>
+                      <th scope="row">
+                        {page.planNames[plan.id]}
+                        <span class="cheapest" data-cheapest hidden>{page.calculator.cheapest}</span>
+                      </th>
+                      <td data-base-fee>{formatMoney(plan.monthlyFee, locale)}</td>
+                      <td data-overage-cost>{formatMoney(0, locale)}</td>
+                      <td data-total>{formatMoney(plan.monthlyFee, locale)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div class="crossover">
+              <h4>{page.calculator.crossoverTitle}</h4>
+              {crossovers.length > 0 ? (
+                <ul>
+                  {crossovers.map((point) => (
+                    <li>
+                      {fillTemplate(page.calculator.crossoverHint, {
+                        from: page.planNames[point.fromPlanId],
+                        to: page.planNames[point.toPlanId],
+                        n: point.atCount,
+                      })}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{page.calculator.noCrossover}</p>
+              )}
+            </div>
+          </section>
           <div class="custom">
             <div>
               <h3 class="type-card-title">{page.custom.name}</h3>
@@ -92,7 +218,9 @@ function planFeatures(features: string[], upTo: number): string[] {
             </div>
             <a
               class="btn btn-ghost"
-              href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=custom`}
+              href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=custom&period=monthly`}
+              data-contact-link
+              data-contact-base={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=custom`}
             >
               {page.custom.cta}
             </a>
@@ -103,7 +231,7 @@ function planFeatures(features: string[], upTo: number): string[] {
   }
 </div>
 
-<script is:inline define:vars={{ slugs, storageKey: VENUE_STORAGE_KEY }}>
+<script is:inline define:vars={{ calculatorData, locale, slugs, storageKey: VENUE_STORAGE_KEY }}>
   const root = document.querySelector('[data-pricing-offers]')
   if (root instanceof HTMLElement) {
     const tabs = [...root.querySelectorAll('[data-type]')]
@@ -163,6 +291,107 @@ function planFeatures(features: string[], upTo: number): string[] {
     window.addEventListener('hashchange', () => {
       const slug = location.hash.replace(/^#/, '')
       if (valid.has(slug)) selectType(slug, false)
+    })
+
+    const intlLocale = { az: 'az-AZ', en: 'en-GB', ru: 'ru-RU' }
+    const money = new Intl.NumberFormat(intlLocale[locale] || 'az-AZ', {
+      style: 'currency',
+      currency: 'AZN',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2,
+    })
+
+    root.querySelectorAll('[data-calculator]').forEach((calculator) => {
+      if (!(calculator instanceof HTMLElement)) return
+      const offerSlug = calculator.dataset.offer || ''
+      const offer = calculatorData[offerSlug]
+      if (!offer) return
+      const countInput = calculator.querySelector('[data-reservation-count]')
+      const panel = calculator.closest('[data-panel]')
+
+      function selectedPeriod() {
+        const selected = calculator.querySelector('input[type="radio"]:checked')
+        return selected instanceof HTMLInputElement && selected.value === 'annual'
+          ? 'annual'
+          : 'monthly'
+      }
+
+      const MAX_RESERVATION_COUNT = 100_000_000
+
+      function update() {
+        let rawCount = countInput instanceof HTMLInputElement ? Number(countInput.value) : 0
+        if (countInput instanceof HTMLInputElement && Number.isFinite(rawCount) && rawCount > MAX_RESERVATION_COUNT) {
+          countInput.value = String(MAX_RESERVATION_COUNT)
+          rawCount = MAX_RESERVATION_COUNT
+        }
+        const count =
+          Number.isFinite(rawCount) && rawCount > 0
+            ? Math.min(MAX_RESERVATION_COUNT, Math.floor(rawCount))
+            : 0
+        const period = selectedPeriod()
+        let cheapestId = ''
+        let cheapestTotal = Number.POSITIVE_INFINITY
+
+        offer.plans.forEach((plan) => {
+          const overageCount = Math.max(0, count - plan.includedReservations)
+          const overageCost = Math.round(overageCount * plan.overagePerReservation * 100) / 100
+          const baseFee = period === 'annual' ? plan.annualFee : plan.monthlyFee
+          const total = Math.round((baseFee + overageCost) * 100) / 100
+          if (total < cheapestTotal) {
+            cheapestId = plan.id
+            cheapestTotal = total
+          }
+          const row = calculator.querySelector(`[data-calculator-row="${plan.id}"]`)
+          if (!(row instanceof HTMLElement)) return
+          const baseCell = row.querySelector('[data-base-fee]')
+          const overageCell = row.querySelector('[data-overage-cost]')
+          const totalCell = row.querySelector('[data-total]')
+          if (baseCell) baseCell.textContent = money.format(baseFee)
+          if (overageCell) overageCell.textContent = money.format(overageCost)
+          if (totalCell) totalCell.textContent = money.format(total)
+        })
+
+        calculator.querySelectorAll('[data-calculator-row]').forEach((row) => {
+          if (!(row instanceof HTMLElement)) return
+          const isCheapest = row.dataset.calculatorRow === cheapestId
+          row.classList.toggle('is-cheapest', isCheapest)
+          const badge = row.querySelector('[data-cheapest]')
+          if (badge instanceof HTMLElement) badge.hidden = !isCheapest
+        })
+
+        if (panel instanceof HTMLElement) {
+          panel.querySelectorAll('[data-contact-link]').forEach((link) => {
+            if (!(link instanceof HTMLAnchorElement)) return
+            link.href = `${link.dataset.contactBase || link.href}&period=${period}`
+          })
+          panel.querySelectorAll('.card').forEach((card, index) => {
+            const plan = offer.plans[index]
+            if (!plan) return
+            const price = card.querySelector('[data-plan-price]')
+            const periodLabel = card.querySelector('[data-plan-period]')
+            const alternative = card.querySelector('[data-plan-alternative]')
+            if (price) {
+              price.textContent = money.format(period === 'annual' ? plan.annualFee : plan.monthlyFee)
+            }
+            if (periodLabel) {
+              periodLabel.textContent =
+                period === 'annual'
+                  ? calculator.dataset.periodAnnual || ''
+                  : calculator.dataset.periodMonthly || ''
+            }
+            if (alternative instanceof HTMLElement) {
+              alternative.textContent =
+                period === 'annual' ? alternative.dataset.monthly || '' : alternative.dataset.annual || ''
+            }
+          })
+        }
+      }
+
+      countInput?.addEventListener('input', update)
+      calculator.querySelectorAll('input[type="radio"]').forEach((input) => {
+        input.addEventListener('change', update)
+      })
+      update()
     })
   }
 </script>
@@ -264,6 +493,18 @@ function planFeatures(features: string[], upTo: number): string[] {
     font-weight: 600;
     color: var(--ink-subtle);
   }
+  .price [data-plan-price] {
+    margin-left: 0;
+    color: var(--ink);
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  .price-alternative {
+    margin: -0.4rem 0 0;
+    color: var(--ink-subtle);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
   .for-whom {
     margin: 0;
     color: var(--ink-muted);
@@ -295,6 +536,148 @@ function planFeatures(features: string[], upTo: number): string[] {
     border-radius: 999px;
     background: var(--accent);
   }
+  .calculator {
+    margin-top: var(--space-head);
+    padding: var(--space-card);
+    border-radius: var(--radius-lg);
+    background: var(--surface-muted);
+    box-shadow: var(--shadow);
+  }
+  .calculator__head {
+    display: grid;
+    gap: 1rem;
+  }
+  .calculator__head h3,
+  .calculator__head p {
+    margin: 0;
+  }
+  .calculator__head .eyebrow {
+    margin-bottom: 0.35rem;
+  }
+  .calculator__head h3 + p {
+    margin-top: 0.4rem;
+    max-width: 42rem;
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+  }
+  .calculator__controls {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .calculator__controls > label,
+  .calculator__controls fieldset {
+    display: grid;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .calculator__controls > label > span,
+  .calculator__controls legend {
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+  .calculator__controls input[type='number'] {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+  }
+  .period-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem;
+    padding: 0.25rem;
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+  }
+  .period-toggle label {
+    cursor: pointer;
+  }
+  .period-toggle input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .period-toggle span {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    border-radius: calc(var(--radius) - 3px);
+    color: var(--ink-muted);
+    text-align: center;
+    font-size: var(--text-sm);
+    font-weight: 700;
+  }
+  .period-toggle input:checked + span {
+    background: var(--surface);
+    color: var(--accent);
+  }
+  .period-toggle input:focus-visible + span {
+    outline: 2px solid var(--accent-bright);
+    outline-offset: 1px;
+  }
+  .table-wrap {
+    margin-top: 1rem;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    min-width: 36rem;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+  th,
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--line);
+    text-align: right;
+  }
+  th:first-child {
+    text-align: left;
+  }
+  tbody th {
+    color: var(--ink);
+  }
+  tbody tr.is-cheapest {
+    background: var(--accent-soft);
+  }
+  .cheapest {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.12rem 0.4rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-size: var(--text-xs);
+    font-weight: 700;
+  }
+  .cheapest[hidden] {
+    display: none;
+  }
+  .crossover {
+    margin-top: 1rem;
+  }
+  .crossover h4,
+  .crossover p {
+    margin: 0;
+  }
+  .crossover h4 {
+    font-size: var(--text-sm);
+  }
+  .crossover ul {
+    margin-top: 0.45rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .crossover p {
+    margin-top: 0.35rem;
+    color: var(--ink-subtle);
+    font-size: var(--text-sm);
+  }
   /* "Need more" is one quiet row, not a fourth plan competing with the three. */
   .custom {
     display: flex;
@@ -315,5 +698,15 @@ function planFeatures(features: string[], upTo: number): string[] {
     max-width: 40rem;
     color: var(--ink-muted);
     font-size: var(--text-sm);
+  }
+  @media (min-width: 760px) {
+    .calculator__head {
+      grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.65fr);
+      align-items: end;
+    }
+    .calculator__controls {
+      grid-template-columns: minmax(9rem, 0.75fr) minmax(12rem, 1fr);
+      align-items: end;
+    }
   }
 </style>

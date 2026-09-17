@@ -42,6 +42,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
   <input type="hidden" name="intent" value="demo" data-intent />
   <input type="hidden" name="plan" value="" data-plan />
+  <input type="hidden" name="period" value="" data-period />
   <p class="custom-notice" data-custom-notice hidden>{c.customNotice}</p>
   <p class="plan-chip" data-plan-confirm hidden></p>
   <div class="row">
@@ -129,9 +130,12 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     const phoneOrEmailMsg = form.dataset.phoneOrEmail || ''
     const params = new URLSearchParams(window.location.search)
     const planParam = params.get('plan') || ''
+    const periodParam = params.get('period') || ''
+    const period = ['monthly', 'annual'].includes(periodParam) ? periodParam : ''
     const isCustom = planParam === 'custom'
     const typeSelect = form.querySelector('[data-venue-type]')
     const planInput = form.querySelector('[data-plan]')
+    const periodInput = form.querySelector('[data-period]')
     const planChip = form.querySelector('[data-plan-confirm]')
     let planNames: Record<string, string> = {}
     try {
@@ -143,6 +147,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     if (planInput instanceof HTMLInputElement && (planParam === 'custom' || ['starter', 'plus', 'pro'].includes(planParam))) {
       planInput.value = planParam
     }
+    if (periodInput instanceof HTMLInputElement) periodInput.value = period
     let rememberedType = params.get('type') || ''
     if (!rememberedType) {
       try {
@@ -248,6 +253,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
         company: String(data.get('company') || ''),
         intent: isCustom ? 'custom' : 'demo',
         plan: planParam === 'custom' || ['starter', 'plus', 'pro'].includes(planParam) ? planParam : '',
+        period,
         venuesCount: String(data.get('venuesCount') || ''),
         staffCount: String(data.get('staffCount') || ''),
         reservationsPerMonth: String(data.get('reservationsPerMonth') || ''),

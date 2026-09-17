@@ -15,7 +15,11 @@ import {
   type ContactPayload,
   type ContactVenueType,
 } from '@/lib/contactMail'
-import { isContactPlanId, type ContactPlanId } from '@/lib/venueOffers'
+import {
+  isContactPlanId,
+  type BillingPeriod,
+  type ContactPlanId,
+} from '@/lib/venueOffers'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -69,6 +73,10 @@ function parseBody(raw: unknown): ContactPayload | null {
   const intent: ContactIntent = intentRaw === 'custom' ? 'custom' : 'demo'
   const planRaw = String(data.plan ?? '').trim()
   const plan: ContactPlanId | undefined = isContactPlanId(planRaw) ? planRaw : undefined
+  const periodRaw = String(data.period ?? '').trim()
+  if (periodRaw && periodRaw !== 'monthly' && periodRaw !== 'annual') return null
+  const period: BillingPeriod | undefined =
+    periodRaw === 'monthly' || periodRaw === 'annual' ? periodRaw : undefined
   const venuesCount = parseCount(data.venuesCount)
   const staffCount = parseCount(data.staffCount)
   const reservationsPerMonth = parseCount(data.reservationsPerMonth)
@@ -98,6 +106,7 @@ function parseBody(raw: unknown): ContactPayload | null {
     locale,
     intent,
     plan,
+    period,
     venuesCount,
     staffCount,
     reservationsPerMonth,
@@ -215,7 +224,7 @@ export const ALL: APIRoute = async ({ request }) => {
       ok: true,
       endpoint: '/api/contact/',
       usage:
-        'Send POST with JSON: { name, phone?, email?, venue, venueType?, message, locale, intent?, venuesCount?, staffCount?, reservationsPerMonth? } — phone or email required',
+        'Send POST with JSON: { name, phone?, email?, venue, venueType?, message, locale, intent?, plan?, period?, venuesCount?, staffCount?, reservationsPerMonth? } — phone or email required',
     })
   }
 

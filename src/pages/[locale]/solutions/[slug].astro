@@ -38,7 +38,7 @@ const extraShotId = SOLUTION_EXTRA_SHOT_MAP[solution.slug]
 const range = venuePriceRange(solution.slug)
 const offerPrice = range
   ? {
-      amount: formatMoneyRange(range.low, range.high, locale),
+      monthlyFee: formatMoneyRange(range.low, range.high, locale),
       period:
         range.model === 'monthly'
           ? messages.pricing.periodMonthly
@@ -81,7 +81,7 @@ const faqMessages = {
           offerPrice ? (
             <p class="price-chip">
               <a href={localePath(locale, `/pricing#${solution.slug}`)} data-pricing-type={solution.slug}>
-                {offerPrice.amount}
+                {offerPrice.monthlyFee}
                 <span>{offerPrice.period}</span>
               </a>
             </p>

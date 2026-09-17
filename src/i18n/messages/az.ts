@@ -48,7 +48,7 @@ export const az: Messages = {
   trust: {
     items: [
       '15 dəq demo, kart lazım deyil',
-      'Ayda 9 AZN-dən',
+      'Ayda 11 AZN-dən',
       'AZ / RU / EN panel',
     ],
   },
@@ -371,11 +371,16 @@ export const az: Messages = {
     eyebrow: 'Qiymətlər',
     title: 'Əvvəl məkan tipini seçin',
     intro:
-      'Hər tarif aylıqdır və bir məkanı əhatə edir. Qiymət stansiya, masa və ya otaq sayına görə dəyişir.',
+      'Hər tarif bir məkanı əhatə edir. Aylıq və ya iki ay hədiyyə ilə illik ödəniş seçə bilərsiniz.',
     chooseType: 'Məkan tipi',
     cta: 'Demo istəyin',
     periodMonthly: '/ ay',
+    periodAnnual: '/ il',
     periodOneTime: 'birdəfəlik',
+    monthlyAlternative: 'və ya {price} / ay',
+    annualAlternative: 'və ya {price} / il — 2 ay hədiyyə',
+    includedReservations: 'Ayda {n} rezervasiya daxildir',
+    overage: 'Limitdən sonra hər rezervasiya {price}',
     includedModules: 'Bütün panel modulları',
     oneVenue: '1 məkan',
     noCard: 'Kart tələb olunmur',
@@ -392,6 +397,24 @@ export const az: Messages = {
       plus: 'Orta',
       pro: 'Böyük',
     },
+    calculator: {
+      eyebrow: 'Müqayisə',
+      title: 'Rezervasiya sayına görə xərci hesablayın',
+      description:
+        'Rezervasiya sayını və ödəniş dövrünü seçin. Cədvəl baza haqqını, limitdən artıq istifadəni və ümumi məbləği göstərir.',
+      reservationCount: 'Rezervasiya sayı',
+      billingPeriod: 'Ödəniş dövrü',
+      monthly: 'Aylıq',
+      annual: 'İllik',
+      plan: 'Tarif',
+      baseFee: 'Baza haqqı',
+      overageCost: 'Limitdən artıq',
+      total: 'Cəmi',
+      cheapest: 'Ən sərfəli',
+      crossoverTitle: 'Tarif keçidləri',
+      crossoverHint: '{n} rezervasiyadan etibarən {to} tarifi {from} tarifindən daha sərfəlidir.',
+      noCrossover: 'Bu məkan tipi üçün tarif keçidi yoxdur.',
+    },
     faq: [
       {
         q: 'Niyə bütün qiymətlər bir yerdə deyil?',
@@ -399,7 +422,7 @@ export const az: Messages = {
       },
       {
         q: 'Niyə karaoke PS-dən bahadır?',
-        a: 'PS və bilyard 9 AZN-dən başlayır — stansiya/masa axını sadədir. Karaoke və launjdə otaq cədvəli, uzatma və kassa daha ağırdır, ona görə 19 AZN-dən.',
+        a: 'PS və bilyard 11 AZN-dən başlayır — stansiya və masa axını daha sadədir. Karaoke və launj otaq cədvəli, uzatma və kassa axınına görə 23 AZN-dən başlayır.',
       },
       {
         q: 'Tarifi sonra dəyişmək olar?',
@@ -742,7 +765,7 @@ export const az: Messages = {
       pricing: {
         title: 'Qiymətlər — Heselo abunə tarifləri',
         description:
-          'Məkan tipinə görə tarif: PS və bilyard 9 AZN-dən/ay, antikafe 15-dən, karaoke və launj 19-dan. Kiçik, Orta, Böyük. Kart tələb olunmur — demo pulsuz.',
+          'Məkan tipinə görə hibrid tarif: PS və bilyard ayda 11 AZN-dən, antikafe 18 AZN-dən, karaoke və launj 23 AZN-dən. Aylıq və illik ödəniş, rezervasiya limiti və artıq istifadə haqqı.',
         keywords: ['Heselo qiymət', 'abunə planı', 'məkan idarəetmə proqramı qiymət'],
       },
       contact: {

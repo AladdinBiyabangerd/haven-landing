@@ -48,7 +48,7 @@ export const en: Messages = {
   trust: {
     items: [
       '15-minute demo, no card',
-      'From 9 AZN a month',
+      'From 11 AZN a month',
       'AZ / RU / EN panel',
     ],
   },
@@ -371,11 +371,16 @@ export const en: Messages = {
     eyebrow: 'Pricing',
     title: 'Pick your venue type first',
     intro:
-      'Every plan is monthly and covers one venue. The price follows how many stations, tables, or rooms you run.',
+      'Every plan covers one venue. Pay monthly or annually and get two months included.',
     chooseType: 'Venue type',
     cta: 'Request a demo',
     periodMonthly: '/ month',
+    periodAnnual: '/ year',
     periodOneTime: 'one-time',
+    monthlyAlternative: 'or {price} / month',
+    annualAlternative: 'or {price} / year — 2 months included',
+    includedReservations: '{n} reservations included each month',
+    overage: '{price} per reservation after the allowance',
     includedModules: 'All panel modules',
     oneVenue: '1 venue',
     noCard: 'No card required',
@@ -392,6 +397,24 @@ export const en: Messages = {
       plus: 'Medium',
       pro: 'Large',
     },
+    calculator: {
+      eyebrow: 'Compare',
+      title: 'Estimate cost by reservation volume',
+      description:
+        'Choose a reservation count and billing period. The table shows the base fee, usage above the allowance, and total.',
+      reservationCount: 'Reservation count',
+      billingPeriod: 'Billing period',
+      monthly: 'Monthly',
+      annual: 'Annual',
+      plan: 'Plan',
+      baseFee: 'Base fee',
+      overageCost: 'Overage',
+      total: 'Total',
+      cheapest: 'Best price',
+      crossoverTitle: 'Plan crossover points',
+      crossoverHint: 'From {n} reservations, {to} costs less than {from}.',
+      noCrossover: 'There is no plan crossover for this venue type.',
+    },
     faq: [
       {
         q: 'Why aren’t all prices shown at once?',
@@ -399,7 +422,7 @@ export const en: Messages = {
       },
       {
         q: 'Why is karaoke more than PlayStation?',
-        a: 'PlayStation and billiards start at 9 AZN — station and table flow is simple. Karaoke and lounges run room schedules, extensions, and cash, so they start at 19 AZN.',
+        a: 'PlayStation and billiards start at 11 AZN because station and table workflows are simpler. Karaoke and lounges start at 23 AZN for room schedules, extensions, and cash workflows.',
       },
       {
         q: 'Can I change plan later?',
@@ -742,7 +765,7 @@ export const en: Messages = {
       pricing: {
         title: 'Pricing — Heselo subscription plans',
         description:
-          'Pick a venue type: PlayStation and billiards from 9 AZN/month, anti-cafés from 15, karaoke and lounges from 19. Small, Medium, Large by size. Card not required — free demo.',
+          'Hybrid pricing by venue type: PlayStation and billiards from 11 AZN/month, anti-cafés from 18, karaoke and lounges from 23. Monthly or annual billing, reservation allowances, and overage pricing.',
         keywords: ['Heselo pricing', 'subscription plans', 'venue management pricing'],
       },
       contact: {

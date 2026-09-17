@@ -302,14 +302,14 @@ export function buildJsonLdGraph(
           '@id': `${pageUrl}#offer-${offer.slug}-${plan.id}`,
           name: `${copy.name} — ${messages.pricing.planNames[plan.id]}`,
           description: copy.intro,
-          price: String(plan.amount),
+          price: String(plan.monthlyFee),
           priceCurrency: 'AZN',
           availability: 'https://schema.org/InStock',
           url: `${pageUrl}#${offer.slug}`,
           offeredBy: { '@id': `${siteUrl()}/#organization` },
           eligibleRegion: { '@type': 'Country', name: messages.seo.countryName },
           ...(offer.model === 'monthly'
-            ? { priceSpecification: { '@type': 'UnitPriceSpecification', price: String(plan.amount), priceCurrency: 'AZN', unitText: 'MONTH' } }
+            ? { priceSpecification: { '@type': 'UnitPriceSpecification', price: String(plan.monthlyFee), priceCurrency: 'AZN', unitText: 'MONTH' } }
             : {}),
         }
       }),
