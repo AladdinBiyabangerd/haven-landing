@@ -15,11 +15,13 @@ const alt = productShotAlt(messages, id)
 ---
 
 <figure class:list={['shot', className]}>
+  {/* Product shots ship as WebP (photoreal marketing). Optional PNG source kept for legacy if present. */}
   <picture>
     <source srcset={`${base}@2x.webp 2x, ${base}.webp 1x`} type="image/webp" />
+    <source srcset={`${base}@2x.png 2x, ${base}.png 1x`} type="image/png" />
     <img
-      src={`${base}.png`}
-      srcset={`${base}@2x.png 2x, ${base}.png 1x`}
+      src={`${base}.webp`}
+      srcset={`${base}@2x.webp 2x, ${base}.webp 1x`}
       alt={alt}
       width="1256"
       height="788"

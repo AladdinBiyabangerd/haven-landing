@@ -39,6 +39,7 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | **SUP VC / Innoland** | Demo günü / pitch — backlink + PR |
 | **Facebook / Instagram** | `@heselo` — bio-da `heselo.online`; postlarda həll səhifələrinə link |
 | **LinkedIn Company Page** | Şirkət səhifəsi + məhsul linki |
+| **Sosial post jurnalı** | Artıq paylaşılan mətnlər: [social-posts-log.md](./social-posts-log.md) — təkrarlama
 | **GitHub** | Açıq repo varsa README-də landing linki (məhsul repo ayrı ola bilər) |
 
 ---

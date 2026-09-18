@@ -1,21 +1,45 @@
 # GEO — AI tövsiyə ölçmə batareyası (Heselo)
 
-Bu sənəd **kod deyil**. Məqsəd: ChatGPT, Perplexity, Gemini və Google AI Overview cavablarında Heselo-nun görünüb-görünmədiyini **ayda bir dəfə** eyni suallarla ölçmək.
+Bu sənəd **kod deyil**. Məqsəd: ChatGPT, Perplexity, Gemini və Google AI Overview-də Heselo-nun görünüb-görünmədiyini **ayda bir dəfə** eyni suallarla ölçmək.
 
-Sayt mənbəyi: [https://heselo.online](https://heselo.online) · `llms.txt` · `/az/guides/`
+Sayt: [https://heselo.online](https://heselo.online) · `llms.txt` · `/az/guides/`
 
 ## Necə ölçülür
 
-1. İnkoqnito / yeni söhbət (yaddaş təsirini azaltmaq üçün).
-2. Aşağıdakı **18 promptu** hər engine-də soruş (ChatGPT + web, Perplexity, Gemini, Google AIO).
-3. Cədvələ yaz: Heselo adlıdımı? Hansı URL sitat? Rəqib kimlər?
-4. Tarix qeyd et. Növbəti ay eyni siyahı.
+1. Yeni chat / inkoqnito (həmin AI-da).
+2. Aşağıdakı promptları soruş → cədvələ 1 sətir.
+3. Ayda bir dəfə eyni siyahı — baseline ilə müqayisə.
 
-| Tarix | Engine | Prompt # | Heselo? | Sitat URL | Qeyd |
-| ----- | ------ | -------- | ------- | --------- | ---- |
-|       |        |          |         |           |      |
+---
 
-**90 günlük hədəf:** brend promptunda düzgün təsvir + `heselo.online`; kateqoriya promptlarında (PS/karaoke AZ) ≥30% sınaqda ad və ya sayt.
+## Baseline — 2026-09-17 (ilk yoxlama)
+
+Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18.
+
+### Nəticə cədvəli
+
+| # | Prompt (qısa) | ChatGPT | Perplexity | Qeyd |
+|---|----------------|---------|------------|------|
+| 1 | Heselo nədir? | Xeyr | Xeyr | Hər ikisi markanı tanımır (sual / typo) |
+| 4 | Bakı PS klub proqramı | Xeyr | Xeyr | Rəqiblər: Tendir, GameClub, PsTally, RugoPLAY / SmartApp, CafeSynk, PS Lounge |
+| 5 | Karaoke otaq + kassa AZ | Xeyr | Xeyr | Clopos, custom POS / ARAS, Sistemi, REZO, Menyum, kassaprogrami |
+| 9 | iiko antikafe/karaoke alt. | Xeyr | Xeyr | Poster, r_keeper, Clopos, horeca…; Perplexity: iiko uyğundur + Restik/Poster |
+| 18 | Is Heselo good for gaming clubs? | Xeyr | **Bəli** | ChatGPT: “oyun klubu yeri?”; Perplexity: heselo.online + solutions URL, düzgün təsvir |
+
+### Verdict (agent üçün)
+
+- **Entity:** AZ/brend promptlarında demək olar ki, yoxdur. Yalnız **Perplexity + EN brend sualı (#18)** Heselo-nu software kimi düzgün sitat edir (`heselo.online`, solutions).
+- **Kateqoriya (#4–5, #9):** 0/2 engine — tövsiyə siyahısında Heselo yoxdur; yerli/qlobal PS və restoran POS rəqibləri doludur.
+- **ChatGPT** hazırda brendi demək olar ki, bilmir; kateqoriyada Tendir/Clopos üstün gəlir.
+- **Növbəti fokus (off-site):** AlternativeTo, GBP, LinkedIn, real rəy, YouTube — kateqoriya cavablarına üçüncü tərəf sübutu. On-site artıq var; problem discovery.
+- **Rəqib izləmə (AZ PS):** tendir.fun, SmartApp.az, GameClub, PsTally — bu adlar AI cavablarında üstünlük təşkil edir.
+- **90g hədəf:** #1 hər iki engine-də düzgün; #4/#5/#9-da ≥1 engine-də Heselo mention.
+
+### Növbəti ölçmə üçün boş cədvəl
+
+| Tarix | Engine | # | Heselo? | URL | Qeyd |
+|-------|--------|---|---------|-----|------|
+| | | | | | |
 
 ---
 
@@ -56,23 +80,16 @@ Sayt mənbəyi: [https://heselo.online](https://heselo.online) · `llms.txt` · 
 ## Cavabları necə şərh etmək
 
 | Nəticə | Məna | Növbəti addım |
-| ------ | ---- | ------------- |
+|--------|------|---------------|
 | Brend düzgün, URL doğru | Entity işləyir | Kateqoriya promptlarına fokus |
-| Kateqoriya-da yoxdur | Off-site zəif | [off-site-seo-az.md](./off-site-seo-az.md) — AlternativeTo, GBP, rəylər |
-| Rəqib POS kimi qarışdırır | Kateqoriya dili qeyri-müəyyən | Guide + FAQ “mətbəx POS deyil” cümlələrini gücləndir |
-| Səhv fakt (qiymət, bazar) | Köhnə / nazik mənbə | `llms.txt` + pricing səhifəsi + IndexNow |
+| Kateqoriya-da yoxdur | Off-site zəif | [off-site-seo-az.md](./off-site-seo-az.md) |
+| Rəqib POS kimi qarışdırır | Kateqoriya dili zəif | Guide/FAQ “mətbəx POS deyil” |
+| Səhv fakt | Nazik mənbə | `llms.txt` + pricing + IndexNow |
 
 ---
 
 ## Contact form ölçməsi
 
-Demo formasında **“Haradan eşitdiniz?”** sahəsi var (`heardFrom`). Owner email-də görünür.
+Formada **“Haradan eşitdiniz?”** (`heardFrom`). UTM: `?utm_source=chatgpt&utm_medium=ai&utm_campaign=geo`
 
-UTM nümunələri:
-
-- `?utm_source=chatgpt&utm_medium=ai&utm_campaign=geo`
-- `?utm_source=perplexity&utm_medium=ai&utm_campaign=geo`
-
-Forma `utm_source` dəyərlərindən bəzilərini avtomatik seçə bilər (chatgpt, openai, perplexity, gemini, copilot).
-
-Son yeniləmə: 2026-09-17
+Son yeniləmə: 2026-09-17 (baseline sıxlaşdırıldı)
