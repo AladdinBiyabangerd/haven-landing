@@ -21,11 +21,16 @@ const retiredPaths = {
   '/guides/restaurant-pos-system/': '/solutions/pos/',
   '/guides/restaurant-inventory-basics/': '/solutions/inventory/',
 }
-const redirects = Object.fromEntries(
-  locales.flatMap((locale) =>
-    Object.entries(retiredPaths).map(([from, to]) => [`/${locale}${from}`, `/${locale}${to}`]),
+const redirects = {
+  // Prefer config redirects (HTTP 301 via adapter) over Astro.redirect() pages,
+  // which emit meta-refresh HTML stubs that SEO crawlers flag.
+  '/': { status: 301, destination: '/az/' },
+  ...Object.fromEntries(
+    locales.flatMap((locale) =>
+      Object.entries(retiredPaths).map(([from, to]) => [`/${locale}${from}`, `/${locale}${to}`]),
+    ),
   ),
-)
+}
 
 export default defineConfig({
   site,
