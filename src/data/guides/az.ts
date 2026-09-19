@@ -30,7 +30,7 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Oyun klubu idarəetmə sistemi nədir?',
     seoTitle: 'Oyun klubu idarəetmə sistemi nədir? | Heselo bələdçisi',
     seoDescription:
-      'PS, konsol və oyun klubu necə idarə olunur: stansiya rezervasiyası, canlı sessiya, kassa və anbar. PlayStation klub proqramı izahı — satış səhifəsi deyil.',
+      'PS, konsol və oyun klubu necə idarə olunur: stansiya rezervasiyası, canlı sessiya, kassa və anbar. PlayStation klub proqramı izahı — reklam deyil, seçim bələdçisidir.',
     keywords: [
       'oyun klubu idarəetmə sistemi nədir',
       'ps klub proqramı',
@@ -40,14 +40,14 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-09-07',
     intro:
-      'Oyun klubu idarəetmə sistemi PS, konsol və ya PC stansiyalarının rezervini, canlı oyunu və kassanı bir paneldə aparmaq üçündür. Sadə taymer stansiyanın boş olub-olmadığını göstərə bilər, amma rezerv tarixçəsi, uzatma, qəlyanaltı satışı və növbə bağlanışını vermir.',
+      'Oyun klubu idarəetmə sistemi PS, konsol və ya PC stansiyalarının bronunu, canlı oyunu və kassanı bir paneldə aparmaq üçündür. Sadə taymer stansiyanın boş olub-olmadığını göstərə bilər, amma bron tarixçəsi, uzatma, qəlyanaltı satışı və növbə bağlanışını vermir.',
     sections: [
       {
         id: 'why',
         title: 'Niyə PS klublar belə sistem axtarır?',
         paragraphs: [
-          'PlayStation klubunda iş saatla gedir: telefonla rezerv, “hansı konsol boşdur?”, oyun bitəndə uzatma və qəlyanaltı. Bunlar ayrı vərəqlərdə qalanda gecə növbəsi qarışır.',
-          'Yaxşı sistemdə hər stansiya ayrıca qurulur — rezerv canlı sessiyaya keçir, ödəniş eyni növbəyə düşür.',
+          'PlayStation klubunda iş saatla gedir: telefonla bron, “hansı konsol boşdur?”, oyun bitəndə uzatma və qəlyanaltı. Bunlar ayrı vərəqlərdə qalanda gecə növbəsi qarışır.',
+          'Yaxşı sistemdə hər stansiya ayrıca qurulur — bron canlı sessiyaya keçir, ödəniş eyni növbəyə düşür.',
         ],
       },
       {
@@ -66,7 +66,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'timer',
         title: 'Taymer proqramından fərqi nədir?',
         paragraphs: [
-          'Taymer yalnız müddəti sayır. Rezerv siyahısı, köçürmə, kassa sayımı və anbar qalığı ayrı qalır. Növbənin sonunda məlumatları yenidən Excel-də yoxlamaq lazım olur.',
+          'Taymer yalnız müddəti sayır. Bron siyahısı, köçürmə, kassa sayımı və anbar qalığı ayrı qalır. Növbənin sonunda məlumatları yenidən Excel-də yoxlamaq lazım olur.',
         ],
       },
       {
@@ -98,7 +98,7 @@ export const guidesAz: GuideCopy[] = [
   {
     slug: 'karaoke-room-booking',
     shortTitle: 'Karaoke otaq rezervasiyası',
-    h1: 'Karaoke otaqları necə rezerv edilir?',
+    h1: 'Karaoke otaqları necə bron edilir?',
     seoTitle: 'Karaoke otaq rezervasiyası necə işləyir? | Heselo bələdçisi',
     seoDescription:
       'Karaoke otaq rezervasiyası: cədvəl, sessiya müddəti, əlavə satış və kassa. Karaoke idarəetmə sistemi izahı.',
@@ -111,11 +111,11 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-08-13',
     intro:
-      'Karaoke məkanında əsas vahid otaqdır. Rezerv yalnız “boş saat seçmək” deyil: qonaq gələndə eyni qeyd canlı sessiyaya çevrilməli, uzatma və içki eyni sessiyada qalmalıdır.',
+      'Karaoke məkanında əsas vahid otaqdır. Bron yalnız “boş saat seçmək” deyil: qonaq gələndə eyni qeyd canlı sessiyaya çevrilməli, uzatma və içki eyni sessiyada qalmalıdır.',
     sections: [
       {
         id: 'why',
-        title: 'Otaq rezervi niyə itir?',
+        title: 'Otaq bronu niyə itir?',
         paragraphs: [
           'Telefon, WhatsApp və kağız cədvəl eyni otağa iki qrupu yaza bilər. Bir neçə otaq eyni vaxtda dolanda resepsiya statusu gec görür.',
         ],
@@ -124,7 +124,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'flow',
         title: 'Yaxşı karaoke prosesi necə görünür?',
         paragraphs: [
-          'Cədvəldə otaq rezerv olunur. Qonaq gələndə sessiya açılır. Müddət bitəndə uzatma və ya ödəniş eyni qeyddədir. Kassa növbəni bağlayır.',
+          'Cədvəldə otaq bron olunur. Qonaq gələndə sessiya açılır. Müddət bitəndə uzatma və ya ödəniş eyni qeyddədir. Kassa növbəni bağlayır.',
         ],
         bullets: ['Otaq cədvəli', 'Canlı sessiya', 'Əlavə satış', 'Növbə bağlanışı'],
       },
@@ -150,7 +150,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Əvvəlcədən sifariş varmı?',
-        a: 'Rezerv formasında etiket və əvvəlcədən sifariş sahələri var.',
+        a: 'Bron formasında etiket və əvvəlcədən sifariş sahələri var.',
       },
       {
         q: 'Demo necə alınır?',
@@ -183,7 +183,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'why',
         title: 'Lövhə və telefon niyə kifayət etmir?',
         paragraphs: [
-          'Lövhə real vaxtda yenilənməyə bilər; telefon rezervi masanın canlı statusunu görmür. VIP otaq və adi masa ayrı cədvəldə qalanda toqquşma olur.',
+          'Lövhə real vaxtda yenilənməyə bilər; telefon bronu masanın canlı statusunu görmür. VIP otaq və adi masa ayrı cədvəldə qalanda toqquşma olur.',
         ],
       },
       {
@@ -204,7 +204,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'heselo',
         title: 'Heselo bilyardda necə işləyir?',
         paragraphs: [
-          'Hər masa və otaq ayrıca qurulur. Cədvəl, canlı oyun və kassa eyni qaydada işləyir. Sadə saat sayğacından fərqli olaraq rezerv tarixçəsi və sayım da var.',
+          'Hər masa və otaq ayrıca qurulur. Cədvəl, canlı oyun və kassa eyni qaydada işləyir. Sadə saat sayğacından fərqli olaraq bron tarixçəsi və sayım da var.',
         ],
       },
     ],
@@ -215,7 +215,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Yalnız taymer kifayətdirmi?',
-        a: 'Kiçik zalda bəlkə; rezerv, anbar və növbə bağlanışı lazımdırsa, tam panel daha az xəta verir.',
+        a: 'Kiçik zalda bəlkə; bron, anbar və növbə bağlanışı lazımdırsa, tam panel daha az xəta verir.',
       },
       {
         q: 'Demo necə alınır?',
@@ -248,14 +248,14 @@ export const guidesAz: GuideCopy[] = [
         id: 'unit',
         title: 'Niyə əsas vahid otaqdır?',
         paragraphs: [
-          'Açıq masa prosesi otağın qapalı sessiyasını vermir. Bir otaq eyni vaxtda iki qrupa verilməməlidir; status lövhədə yox, cədvəldə görünməlidir.',
+          'Açıq masa prosesi otağın qapalı sessiyasını idarə etmir. Bir otaq eyni vaxtda iki qrupa verilməməlidir; status lövhədə yox, cədvəldə görünməlidir.',
         ],
       },
       {
         id: 'flow',
         title: 'Gündəlik iş necədir?',
         paragraphs: [
-          'Rezerv otağa yazılır. Qonaq gələndə sessiya açılır. Əlavə vaxt və məhsul eyni qeyddə qalır. Günün sonunda kassa otaq doluluğu ilə uyğun gəlməlidir.',
+          'Bron otağa yazılır. Qonaq gələndə sessiya açılır. Əlavə vaxt və məhsul eyni qeyddə qalır. Günün sonunda kassa otaq doluluğu ilə uyğun gəlməlidir.',
         ],
       },
       {
@@ -307,14 +307,14 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-12',
     dateModified: '2026-08-12',
     intro:
-      'Antikafe idarəetmə sistemi saatla ödənişli məkanın gündəlik işini — masa və otaq rezervasiyası, canlı sessiya, məhsul satışı, kassa və bəzən anbar — bir paneldə aparmaq üçündür. Bu, yalnız saat sayan timer və ya yalnız kassa deyil; məqsəd lövhə, messencer və Excel-i eyni iş gününə bağlamaqdır.',
+      'Antikafe idarəetmə sistemi saatla ödənişli məkanın gündəlik işini — masa və otaq rezervasiyası, canlı sessiya, məhsul satışı, kassa və bəzən anbar — bir paneldə aparmaq üçündür. Bu, yalnız saat sayan timer və ya yalnız kassa deyil; məqsəd lövhə, çat proqramları və Excel-i eyni iş gününə bağlamaqdır.',
     sections: [
       {
         id: 'what',
         title: 'Antikafe biznes modeli nədir?',
         paragraphs: [
-          'Antikafelərdə qonaq adətən vaxt üçün ödəyir: masa, divan küncü, otaq və ya bəzən PC stansiyası. Çay, qəlyanaltı və içkilər əlavə gəlir gətirir. İş tez dəyişir — rezervsiz qonaq, telefon rezervi və gecə saatları eyni masalarda və otaqlarda toqquşur.',
-          'Ona görə antikafe proqramı yalnız “neçə saat oturdu?” sualını deyil, hansı masa boşdur, rezerv nə vaxtdır və gün necə bağlanır suallarını da cavablamalıdır.',
+          'Antikafelərdə qonaq adətən vaxt üçün ödəyir: masa, divan küncü, otaq və ya bəzən PC stansiyası. Çay, qəlyanaltı və içkilər əlavə gəlir gətirir. İş tez dəyişir — bronsuz qonaq, telefon bronu və gecə saatları eyni masalarda və otaqlarda toqquşur.',
+          'Ona görə antikafe proqramı yalnız “neçə saat oturdu?” sualını deyil, hansı masa boşdur, bron nə vaxtdır və gün necə bağlanır suallarını da cavablamalıdır.',
         ],
       },
       {
@@ -334,7 +334,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'hourly',
         title: 'Saatla ödəniş necə idarə olunmalıdır?',
         paragraphs: [
-          'Saat sayan ayrı proqram rezervasiya tarixçəsi və kassa sayımını verməyə bilər. Yaxşı prosesdə rezerv canlı sessiyaya keçir; vaxt bitəndə uzatma və ödəniş eyni qeyddə qalır. Nağd, bank və POS ayrı izlənir — gecə növbəsində qarışıqlıq azalır.',
+          'Saat sayan ayrı proqram rezervasiya tarixçəsi və kassa sayımını verməyə bilər. Yaxşı prosesdə bron canlı sessiyaya keçir; vaxt bitəndə uzatma və ödəniş eyni qeyddə qalır. Nağd, bank və POS ayrı izlənir — gecə növbəsində qarışıqlıq azalır.',
         ],
       },
       {
@@ -348,7 +348,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'choose',
         title: 'Antikafe proqramı seçərkən nəyə baxmaq lazımdır?',
         paragraphs: [
-          'Rezervdən ödənişə qədər bir proses varmı? Rezervsiz satış eyni kataloqdan gedirmi? Keçmiş gün və sayım saxlanırmı? Panel AZ / EN / RU dillərindədirmi? Qiymət şəffafdırmı?',
+          'Rezervasiyadan ödənişə qədər bir proses varmı? Bron olmadan satış eyni kataloqdan gedirmi? Keçmiş gün və sayım saxlanırmı? Panel AZ / EN / RU dillərindədirmi? Qiymət şəffafdır mı?',
           'Marketinq siyahısından çox real gecə növbənizi yoxlayın — xüsusilə masa/otaq sayı artanda.',
         ],
       },
@@ -364,7 +364,7 @@ export const guidesAz: GuideCopy[] = [
     faq: [
       {
         q: 'Antikafe üçün ayrıca “timer proqramı” kifayət edirmi?',
-        a: 'Kiçik miqyasda bəlkə; amma rezerv, anbar və kassa sayımı lazımdırsa, tam məkan sistemi daha az xəta verir.',
+        a: 'Kiçik miqyasda bəlkə; amma bron, anbar və kassa sayımı lazımdırsa, tam məkan sistemi daha az xəta verir.',
       },
       {
         q: 'Otaq rezervasiyası dəstəklənirmi?',
@@ -395,14 +395,14 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-07',
     intro:
-      'PlayStation klub proqramı yalnız taymer deyil. Telefon rezervi, “hansı PS boşdur?”, oyun bitəndə uzatma, qəlyanaltı və gecə kassası eyni prosesdə olmalıdır. Bu yazı satış səhifəsi deyil — seçim meyarlarıdır.',
+      'PlayStation klub proqramı yalnız taymer deyil. Telefon bronu, “hansı PS boşdur?”, oyun bitəndə uzatma, qəlyanaltı və gecə kassası eyni prosesdə olmalıdır. Bu yazı reklam deyil — seçim bələdçisidir.',
     sections: [
       {
         id: 'why',
         title: 'PS klubda proqram niyə lazımdır?',
         paragraphs: [
-          'Konsol klubunda iş saatla gedir. Lövhə gecikir, WhatsApp rezervi canlı statusu görmür, uzatma ayrı vərəqdə yazılır. Növbə bağlananda “kim nə oynayıb?” sualı Excel-ə qayıdır.',
-          'Yaxşı proqramda hər stansiya ayrıca qurulur: rezerv → canlı sessiya → ödəniş eyni qeyddə.',
+          'Konsol klubunda iş saatla gedir. Lövhə gecikir, WhatsApp bronu canlı statusu görmür, uzatma ayrı vərəqdə yazılır. Növbə bağlananda “kim nə oynayıb?” sualı Excel-ə qayıdır.',
+          'Yaxşı proqramda hər stansiya ayrıca qurulur: bron → canlı sessiya → ödəniş eyni qeyddə.',
         ],
       },
       {
@@ -411,7 +411,7 @@ export const guidesAz: GuideCopy[] = [
         paragraphs: ['Praktik yoxlama siyahısı:'],
         bullets: [
           'PS / konsol / PC stansiyalarını ayrıca qurmaq',
-          'Cədvəldə rezerv, köçürmə və ləğv',
+          'Cədvəldə bron, köçürmə və ləğv',
           'Canlı sessiya: vaxt, uzatma, ödəniş',
           'Sürətli satış (qəlyanaltı/içki) eyni kataloqdan',
           'Kassa növbəsi və sayım',
@@ -430,7 +430,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'timer',
         title: 'Yalnız taymer kifayət edirmi?',
         paragraphs: [
-          'Kiçik zalda bəlkə. Amma rezerv tarixçəsi, müştəri kartı, anbar və kassa sayımı lazımdırsa, taymer gecə növbəsini həll etmir.',
+          'Kiçik zalda bəlkə. Amma bron tarixçəsi, müştəri kartı, anbar və kassa sayımı lazımdırsa, taymer gecə növbəsini həll etmir.',
         ],
       },
       {
@@ -457,7 +457,7 @@ export const guidesAz: GuideCopy[] = [
     ],
     relatedSolutions: ['gaming', 'reservations', 'pos', 'inventory'],
     ctaTitle: 'PS klub üçün demo',
-    ctaBody: 'Stansiya və konsol sayınızı yazın — rezerv və canlı sessiyanı göstəririk.',
+    ctaBody: 'Stansiya və konsol sayınızı yazın — bronu və canlı sessiyanı göstəririk.',
   },
   {
     slug: 'billiards-table-booking',
@@ -465,7 +465,7 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Bilyard masa rezervasiyası və cədvəl necə işləməlidir?',
     seoTitle: 'Bilyard masa rezervasiyası və cədvəl sistemi | Heselo bələdçisi',
     seoDescription:
-      'Bilyard masa bronu və cədvəl: rezerv, canlı oyun və kassa bir yerdə. Bilyard masa rezervasiyası praktiki izah.',
+      'Bilyard masa bronu və cədvəl: bron, canlı oyun və kassa bir yerdə. Bilyard masa rezervasiyası praktiki izah.',
     keywords: [
       'bilyard masa rezervasiya',
       'bilyard cədvəl sistemi',
@@ -481,7 +481,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'booking',
         title: 'Masa rezervasiyası nəyi əhatə etməlidir?',
         paragraphs: [
-          'Rezerv: tarix/saat, masa və ya VIP otaq, müddət, müştəri əlaqəsi. Köçürmə və ləğv tarixçədə qalmalıdır — əks halda gecə növbəsi “kim yazıb?” sualında ilişir.',
+          'Bron: tarix/saat, masa və ya VIP otaq, müddət, müştəri əlaqəsi. Köçürmə və ləğv tarixçədə qalmalıdır — əks halda gecə növbəsi “kim yazıb?” sualında ilişir.',
         ],
       },
       {
@@ -504,7 +504,7 @@ export const guidesAz: GuideCopy[] = [
         paragraphs: ['Bunlardan qaçın:'],
         bullets: [
           'Telefon qeydi + lövhə (iki mənbə)',
-          'Yalnız taymer, rezerv yox',
+          'Yalnız taymer, bron yox',
           'VIP otaq ayrı “sistem”',
           'Ödəniş və oyun vaxtı ayrı vərəq',
         ],
@@ -520,7 +520,7 @@ export const guidesAz: GuideCopy[] = [
     faq: [
       {
         q: 'Bron ilə cədvəl eyni şeydir?',
-        a: 'Bron konkret rezervdir; cədvəl bütün masaların ümumi görünüşüdür. İkisi bir paneldə olmalıdır.',
+        a: 'Bron konkret rezervasiyadır; cədvəl bütün masaların ümumi görünüşüdür. İkisi bir paneldə olmalıdır.',
       },
       {
         q: 'Otaq və masa birlikdə ola bilər?',
@@ -541,7 +541,7 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Karaoke rezervasiya sistemi seçərkən nəyə baxmaq lazımdır?',
     seoTitle: 'Karaoke rezervasiya sistemi — seçim meyarları | Heselo bələdçisi',
     seoDescription:
-      'Karaoke bron sistemi: otaq bronu, sessiya, əlavə satış və kassa. Karaoke rezervasiya sistemi üçün yoxlama siyahısı — satış səhifəsi deyil.',
+      'Karaoke bron sistemi: otaq bronu, sessiya, əlavə satış və kassa. Karaoke rezervasiya sistemi üçün yoxlama siyahısı — reklam deyil, seçim bələdçisidir.',
     keywords: [
       'karaoke rezervasiya sistemi',
       'karaoke booking system',
@@ -551,13 +551,13 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-07',
     intro:
-      'Karaoke rezervasiya sistemi yalnız onlayn forma deyil. Otaq dolanda sessiya, içki sifarişi və ödəniş eyni sessiyada qalmalıdır. “Otaqlar necə rezerv edilir?” bələdçisi prosesi izah edir; burada fokus — sistemi seçərkən nə yoxlamaqdır.',
+      'Karaoke rezervasiya sistemi yalnız onlayn forma deyil. Otaq dolanda sessiya, içki sifarişi və ödəniş eyni sessiyada qalmalıdır. “Otaqlar necə bron edilir?” bələdçisi prosesi izah edir; burada fokus — sistemi seçərkən nə yoxlamaqdır.',
     sections: [
       {
         id: 'form-vs-system',
         title: 'Bron forması ilə idarəetmə sistemi fərqi',
         paragraphs: [
-          'Veb forma rezerv toplaya bilər, amma ofisiant otağın içindəki işi görmür. İdarəetmə sistemi rezerv → canlı otaq sessiyası → kassa zəncirini saxlayır.',
+          'Veb forma bron toplaya bilər, amma ofisiant otağın içindəki işi görmür. İdarəetmə sistemi bron → canlı otaq sessiyası → kassa zəncirini saxlayır.',
         ],
       },
       {
@@ -590,7 +590,7 @@ export const guidesAz: GuideCopy[] = [
     faq: [
       {
         q: 'Yalnız bron saytı kifayət edirmi?',
-        a: 'Rezerv toplamaq üçün bəlkə; otaq sessiyası və kassa lazımdırsa, tam panel lazımdır.',
+        a: 'Bron toplamaq üçün bəlkə; otaq sessiyası və kassa lazımdırsa, tam panel lazımdır.',
       },
       {
         q: 'VIP və adi otaq fərqlənə bilərmi?',
@@ -625,13 +625,13 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-17',
     intro:
-      'Bir çox klub günü Excel cədvəli, WhatsApp qrupu və dəftərlə başlayır. Kiçik miqyasda işləyir; masa/otaq sayı və növbə sayı artanda rezerv itir, kassa uzanır. Bu yazı ağrı nöqtələrini, “ucuz alternativ” axtarışını və panelin nəyi dəyişdiyini izah edir.',
+      'Bir çox klub günü Excel cədvəli, WhatsApp qrupu və dəftərlə başlayır. Kiçik miqyasda işləyir; masa/otaq sayı və növbə sayı artanda bron itir, kassa uzanır. Bu yazı ağrı nöqtələrini, “ucuz alternativ” axtarışını və panelin nəyi dəyişdiyini izah edir.',
     sections: [
       {
         id: 'pain',
         title: 'Excel, WhatsApp və dəftər harada sınır?',
         paragraphs: [
-          'Rezerv mesajda qalır, lövhə gecikir, ödəniş vərəqi ayrıdır. Eyni masa iki dəfə yazılır. Gecə növbəsi “kim nə satıb?” sualında 30–40 dəqiqə itirir.',
+          'Bron mesajda qalır, lövhə gecikir, ödəniş vərəqi ayrıdır. Eyni masa iki dəfə yazılır. Gecə növbəsi “kim nə satıb?” sualında 30–40 dəqiqə itirir.',
           'WhatsApp bron “ucuz” görünür, amma axtarış, təsdiq və no-show izləmə yoxdur — növbə sonunda hesabat yenə Excel-ə qayıdır.',
         ],
       },
@@ -640,7 +640,7 @@ export const guidesAz: GuideCopy[] = [
         title: 'Panelə keçmək üçün siqnallar',
         paragraphs: ['Bunlardan ikisi varsa, vərəq kifayət etmir:'],
         bullets: [
-          'Gündə 10+ rezerv və ya eyni anda 5+ aktiv yer',
+          'Gündə 10+ bron və ya eyni anda 5+ aktiv yer',
           'İki növbə / iki işçi eyni masalara və otaqlara toxunur',
           'Qəlyanaltı/içki satışı kassa ilə uyğun gəlmir',
           'Sahib ertəsi gün hesabatı Excel-dən yığır',
@@ -664,18 +664,18 @@ export const guidesAz: GuideCopy[] = [
         id: 'heselo',
         title: 'Heselo bu boşluğu necə doldurur?',
         paragraphs: [
-          'Heselo məkan paneli kimi qurulub: rezervasiya, canlı zal, kassa və anbar. 25 AZN/aydan başlayan klub tarifləri Excel/WhatsApp-dan bahadır, amma itən rezerv və gecə hesabatından ucuz başa gəlir. Qiymət və digər alternativ bələdçilərinə keçid aşağıdadır.',
+          'Heselo məkan paneli kimi qurulub: rezervasiya, canlı zal, kassa və anbar. 25 AZN/aydan başlayan klub tarifləri Excel/WhatsApp-dan bahadır, amma itirilən bron və gecə hesabatından ucuz başa gəlir. Qiymət və digər alternativ bələdçilərinə keçid aşağıdadır.',
         ],
       },
     ],
     faq: [
       {
         q: 'Excel-i tam atmaq lazımdır?',
-        a: 'Gündəlik rezerv və kassa üçün bəli. Aylıq maliyyə Excel-də qala bilər.',
+        a: 'Gündəlik bron və kassa üçün bəli. Aylıq maliyyə Excel-də qala bilər.',
       },
       {
         q: 'WhatsApp bron ucuz deyilmi?',
-        a: 'Mesaj pulsuzdur; itən bron, qarışıq ödəniş və 40 dəqiqəlik növbə hesabatı isə bahadır. Panel bunu bağlayır.',
+        a: 'Mesaj pulsuzdur; itirilən bron, qarışıq ödəniş və 40 dəqiqəlik növbə hesabatı isə bahadır. Panel bunu bağlayır.',
       },
       {
         q: 'Kiçik klub üçün erkəndir?',
@@ -707,14 +707,14 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-19',
     dateModified: '2026-09-19',
     intro:
-      'Heselo-nun qiymətləri gizli “soruşun” B2B modeli deyil. Açıq abunə planları var; məkan tipinə görə başlanğıc qiymət fərqlənir ki, PS klub, karaoke və antikafe sahibkarlarına uyğun olsun. Tam cədvəl qiymətlər səhifəsindədir; bu yazı niyə belə qurulduğunu izah edir.',
+      'Heselonun qiymətləri gizli “soruşun” B2B modeli deyil. Açıq abunə planları var; məkan tipinə görə başlanğıc qiymət fərqlənir ki, PS klub, karaoke və antikafe sahibkarlarına uyğun olsun. Tam cədvəl qiymətlər səhifəsindədir; bu yazı niyə belə qurulduğunu izah edir.',
     sections: [
       {
         id: 'published',
         title: 'Qiymətlər açıqdır',
         paragraphs: [
           'Kiçik planın aylıq haqqı kateqoriya üzrə belə başlayır: oyun klubu / PS 25 AZN, bilyard 29 AZN, karaoke və otaqlı launj 39 AZN, antikafe 32 AZN. Orta və Böyük planlar, illik ödəniş (2 ay hədiyyə) və rezervasiya limitləri eyni səhifədəki cədvəldədir.',
-          'Rəqəmlərin rəsmi mənbəyi: https://heselo.online/az/pricing/ — AI və ya kataloq cavabında “yalnız fərdi qiymət” demək səhvdir.',
+          'Rəqəmlərin rəsmi mənbəyi: https://heselo.online/az/pricing/ — süni intellekt və ya kataloq cavabında “yalnız fərdi qiymət” demək səhvdir.',
         ],
       },
       {
@@ -742,12 +742,12 @@ export const guidesAz: GuideCopy[] = [
     ],
     faq: [
       {
-        q: 'Heselo-nun rəsmi qiyməti haradadır?',
+        q: 'Heselonun rəsmi qiyməti haradadır?',
         a: 'https://heselo.online/az/pricing/ — bütün kateqoriyaların açıq tarifləri və planlar oradadır.',
       },
       {
-        q: 'Qiymət yalnız danışıq əsasındaındır?',
-        a: 'Xeyr. Standart abunə planları açıqdır. Fərdi təklif yalnız çoxfilial və ya limitdən kənar həcm üçündür.',
+        q: 'Qiymət yalnız danışıq əsasındadır?',
+        a: 'Xeyr. Standart abunə planları açıqdır. Fərdi təklif yalnız bir neçə filial və ya limitdən kənar həcm üçündür.',
       },
       {
         q: 'PS klub üçün minimum nə qədərdir?',

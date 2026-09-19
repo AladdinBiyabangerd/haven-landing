@@ -37,7 +37,7 @@ const catalog: CatalogEntry[] = [
         h1: 'Otaqlı əyləncə klubları üçün iiko alternativi',
         seoTitle: 'Klublar üçün iiko alternativi — Heselo',
         seoDescription:
-          'iiko və Heselo-nu oyun, karaoke və bilyard məkanları üçün dürüst müqayisə edin. Vaxt sessiyası, rezervasiya, kassa və qiymət fərqlərini öyrənin.',
+          'iiko və Heselonu oyun, karaoke və bilyard məkanları üçün dürüst müqayisə edin. Vaxt sessiyası, rezervasiya, kassa və qiymət fərqlərini öyrənin.',
         intro:
           'iiko restoran idarəetməsində, mətbəx prosesində və çatdırılmada güclü sistemdir. Məkanınızın əsas xidməti otaq və ya masa vaxtıdırsa, Heselo həmin əməliyyat modelinə daha yaxın alternativ ola bilər.',
         competitorFit:
@@ -214,7 +214,7 @@ const catalog: CatalogEntry[] = [
         h1: 'Klub və launj məkanları üçün Restomas alternativi',
         seoTitle: 'Restomas alternativi — Heselo',
         seoDescription:
-          'Restomas və Heselo-nu klub, karaoke, bilyard və launj üçün müqayisə edin. Vaxt hesabı, rezervasiya, kassa növbəsi və stok.',
+          'Restomas və Heselonu klub, karaoke, bilyard və launj üçün müqayisə edin. Vaxt hesabı, rezervasiya, kassa növbəsi və stok.',
         intro:
           'Restomas restoran və kafe satışını, menyunu və xidmət prosesini idarə etmək üçün uyğun ola bilər. Otaq və masa vaxtı ayrıca rezervasiya və canlı sessiya tələb edirsə, Heselo daha birbaşa yanaşır.',
         competitorFit:
@@ -399,7 +399,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Otaq, konsol və masa vaxtı satırsınızsa, bir məqsədli sistem işçilərin rezervasiya ilə faktiki sessiyanı qarışdırmasının qarşısını alır.',
         priceAngle:
-          'Aylıq qiymətlə yanaşı quraşdırma, avadanlıq, əlavə terminal, dəstək və istifadə olunmayan modulları hesablayın. Heselo-nun başlanğıc qiyməti 25 AZN/aydır.',
+          'Aylıq qiymətlə yanaşı quraşdırma, avadanlıq, əlavə terminal, dəstək və istifadə olunmayan modulları hesablayın. Heselonun başlanğıc qiyməti 25 AZN/aydır.',
         switchNote:
           'Namizədləri eyni ssenari ilə sınayın: rezervasiya yaradın, sessiyanı başladın, məhsul əlavə edin və kassa növbəsini bağlayın. Sonra demo nəticəsinə əsasən seçim edin.',
       },
@@ -766,7 +766,7 @@ const labels: Record<
     ],
     comparisonIntro:
       'Aşağıdakı xülasə məhsulların əsas istiqamətini göstərir. Dəqiq modul və paket tərkibini satınalmadan əvvəl provayderlə təsdiqləyin.',
-    ctaTitle: 'Heselo-nu öz iş gününüzlə yoxlayın',
+    ctaTitle: 'Heselonu öz iş gününüzlə yoxlayın',
     ctaBody:
       'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və stok izləməsini birlikdə yoxlayaq.',
     keywords: (name, kind) => [

@@ -39,16 +39,16 @@ export const az: Messages = {
   },
   hero: {
     brandHint: 'Heselo · məkan idarəetmə',
-    title: 'WhatsApp-da itən bron növbəni qarışdırır.',
+    title: 'WhatsApp-da itirilən bron növbəni qarışdırır.',
     subtitle:
-      'Heselo otaq və PS cədvəlini, canlı sessiyanı və kassanı eyni ekranda saxlayır.',
-    ctaPrimary: 'WhatsApp-da 15 dəq',
+      'Heselo otaq və PS cədvəlini, canlı sessiyanı və kassanı eyni ekranda birləşdirir.',
+    ctaPrimary: 'WhatsApp ilə yazın',
     ctaSecondary: 'Forma ilə yazın',
     visualAlt: 'Heselo lövhəsi: masa və otaq statusu, sessiya və ödəniş',
   },
   trust: {
     items: [
-      '15 dəq demo, kart lazım deyil',
+      '15 dəqiqə demo, kart lazım deyil',
       'Ayda 25 AZN-dən',
       'AZ / RU / EN panel',
     ],
@@ -59,7 +59,7 @@ export const az: Messages = {
     titleAccent: 'nə göstəririk.',
     items: [
       {
-        title: 'Sizin masa və otaq sayı',
+        title: 'Sizin masa və otaq sayınız',
         desc: 'PS yeri, karaoke otağı və ya bilyard masası — cədvəli sizin quruluşa uyğun açırıq.',
       },
       {
@@ -74,10 +74,10 @@ export const az: Messages = {
   },
   pain: {
     eyebrow: 'Niyə dəyişmək lazımdır',
-    title: 'Excel və mesajlaşmalar',
-    titleAccent: 'zalı idarə etmir.',
+    title: 'Excel və mesajlaşma tətbiqləri',
+    titleAccent: 'zalı idarə etmək üçün kifayət etmir.',
     intro:
-      'Rezerv bir yerdə, pul başqa yerdə, anbar isə kağızda qalanda növbənin sonunda hər şey qarışır.',
+      'Rezervasiya bir yerdə, ödənişlər başqa yerdə, anbar isə kağızda qalanda növbənin sonunda hər şey qarışır.',
     withoutLabel: 'Əvvəl',
     withLabel: 'Heselo ilə',
     before: [
@@ -88,9 +88,9 @@ export const az: Messages = {
     ],
     after: [
       'Rezervasiyadan canlı sessiyaya keçid',
-      'Nağd, bank və POS gün və növbə üzrə aydındır',
+      'Nağd, kart və POS ödənişləri gün və növbə üzrə şəffaf izlənilir',
       'Məhsul və anbar eyni siyahıdadır',
-      'Vacib əməliyyatlar kodla qorunur',
+      'Vacib əməliyyatlar qoruma kodu ilə qorunur',
     ],
   },
   pillars: {
@@ -102,7 +102,7 @@ export const az: Messages = {
     items: [
       {
         title: 'Canlı izləmə',
-        desc: 'Aktiv sessiyalar, məhsul əlavəsi, pauza/dayandırma, qəbz və ödəniş — zalın real vəziyyəti.',
+        desc: 'Aktiv sessiyalar, məhsul əlavəsi, pauza və dayandırma, qəbz və ödəniş — zalın real vəziyyəti.',
       },
       {
         title: 'Cədvəl və rezervasiyalar',
@@ -110,7 +110,7 @@ export const az: Messages = {
       },
       {
         title: 'Kassa',
-        desc: 'Növbə aç/bağla, əməliyyatlar, kassa hesabatı və kassa sayımı — günlük və növbəlik hesabatlar ayrıca görünür.',
+        desc: 'Növbə aç və bağla, əməliyyatlar, kassa hesabatı və kassa sayımı — günlük və növbəlik hesabatlar ayrıca görünür.',
       },
       {
         title: 'Məhsullar, anbar, satış',
@@ -129,7 +129,7 @@ export const az: Messages = {
   how: {
     eyebrow: 'Necə başlanır',
     title: 'Üç addım',
-    titleAccent: 'və işə düşürsünüz.',
+    titleAccent: 'və istifadəyə başlayın.',
     steps: [
       {
         title: 'Məkanı qurun',
@@ -141,7 +141,7 @@ export const az: Messages = {
       },
       {
         title: 'Günü bağlayın',
-        desc: 'Kassa sayımı, hesabat və statistika — günün gəliri, satışları və kassa fərqi sahibə aydın görünür.',
+        desc: 'Kassa sayımı, hesabat və statistika — günün gəliri, satışları və kassa fərqi sahibkar üçün aydın görünür.',
       },
     ],
   },
@@ -156,8 +156,8 @@ export const az: Messages = {
         linkLabel: 'Məkan tipləri buradadır',
       },
       {
-        q: 'Heselo-nu kim yaradıb?',
-        a: 'Heselo-nun tək yaradıcısı Aladdin Biyabangerd-dir. O, məhsulu Bakıda sıfırdan qurub: ideya, proqram təminatı və platforma onun adı altındadır — birgə qurucu komanda yoxdur.',
+        q: 'Heselonu kim yaradıb?',
+        a: 'Heselonun tək yaradıcısı Aladdin Biyabangerd-dir. O, məhsulu Bakıda sıfırdan qurub: ideya, proqram təminatı və platforma onun adı altındadır — birgə qurucu komanda yoxdur.',
         href: '/about',
         linkLabel: 'Haqqında səhifəsi',
       },
@@ -181,7 +181,7 @@ export const az: Messages = {
       },
       {
         q: 'Heselo kassa sistemi təqdim edir?',
-        a: 'Bəli. Növbə aç/bağla, əməliyyatlar, kassa hesabatı və kassa sayımı eyni paneldədir — ayrı kassa proqramı tələb olunmur.',
+        a: 'Bəli. Növbə aç və bağla, əməliyyatlar, kassa hesabatı və kassa sayımı eyni paneldədir — ayrı kassa proqramı tələb olunmur.',
         href: '/solutions/pos',
         linkLabel: 'Kassa imkanları',
       },
@@ -197,7 +197,7 @@ export const az: Messages = {
       },
       {
         q: 'Demo necə əldə edilir?',
-        a: 'WhatsApp-dan yazın və ya formu doldurun — telefon və ya e-poçt kifayətdir. 15 dəqiqəlik ekran göstəririk; iş saatlarında adətən 2 saat ərzində cavab veririk.',
+        a: 'WhatsApp-dan yazın və ya formu doldurun — telefon və ya e-poçt kifayətdir. 15 dəqiqəlik canlı demo təqdim edirik; iş saatlarında adətən 2 saat ərzində cavab veririk.',
         href: '/contact',
         linkLabel: 'Forma ilə yazmaq da olar',
       },
@@ -206,18 +206,18 @@ export const az: Messages = {
   seoOverview: {
     eyebrow: 'Heselo nədir?',
     title: 'Biznes idarəetmə proqramı',
-    titleAccent: 'məkanın gündəlik işi üçün.',
+    titleAccent: 'məkanınızın gündəlik işləri üçün.',
     paragraphs: [
       'Heselo — Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün rezervasiya, canlı zal, kassa və anbar paneli. Masa, otaq və ya stansiya vaxtını satan yerlər üçündür (~25 AZN/aydan).',
       'iiko və ya Clopos kimi restoran POS axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, bron və kassa növbəsi üçün Heselo otaq və vaxt əsaslı məkanlar üçün daha sadə idarəetmə alternatividir.',
-      'Heselo-nu Bakıda Aladdin Biyabangerd təkbaşına yaradıb — ətraflı Haqqında səhifəsində.',
+      'Heselonu Bakıda Aladdin Biyabangerd təkbaşına yaradıb — ətraflı Haqqında səhifəsində.',
     ],
   },
   audiences: {
     eyebrow: 'Kimlər üçündür',
     title: 'Məkanınızın tipinə',
     titleAccent: 'uyğun qurulub.',
-    intro: 'Məkan tipinizi seçin və Heselo-nun gündəlik işi necə sadələşdirdiyini görün.',
+    intro: 'Məkan tipinizi seçin və Heselonun gündəlik işi necə sadələşdirdiyini görün.',
     items: [
       {
         slug: 'gaming',
@@ -296,8 +296,8 @@ export const az: Messages = {
         href: '/pricing',
       },
       {
-        title: 'Həmişə uyğun gələn məbləğlər',
-        desc: 'Qalıq və ödənişləri sistem özü hesablayır, əl ilə üstündən yazılmır.',
+        title: 'Dəqiq və xətasız hesablamalar',
+        desc: 'Qalıq və ödənişləri sistem özü hesablayır, əl ilə dəyişdirilmir.',
         href: '/features',
       },
       {
@@ -336,20 +336,20 @@ export const az: Messages = {
   },
   cta: {
     title: 'Növbəti növbənizi Heselo ilə idarə edin.',
-    subtitle: '15 dəqiqəlik ekran — iş saatlarında adətən 2 saat ərzində cavab.',
+    subtitle: '15 dəqiqəlik demo — iş saatlarında adətən 2 saat ərzində cavab.',
     button: 'Forma ilə yazın',
-    whatsapp: 'WhatsApp-da 15 dəq',
+    whatsapp: 'WhatsApp ilə yazın',
     pickTypeTitle: 'Əvvəl məkan tipini seçin.',
     pickTypeSubtitle: 'Qiymət və demo seçdiyiniz məkan tipinə uyğun göstərilir.',
     pickTypeButton: 'məkan tipini seçin',
     typedTitle: 'Bu tip üçün növbəti addım.',
     typedSubtitle: 'Əvvəl tarifi görün — demo eyni məkan tipi ilə başlayır.',
     nextForm: 'Demo üçün forma ilə yazın',
-    nextWhatsapp: 'Tələsirsizsə WhatsApp-dan yazın',
+    nextWhatsapp: 'Tələsirsinizsə, WhatsApp ilə yazın',
   },
   aboutPage: {
     eyebrow: 'Haqqında',
-    title: 'Heselo-nu kim yaradıb?',
+    title: 'Heselonu kim yaradıb?',
     intro:
       'Heselo yerli klub və otaq məkanları üçün Bakıda qurulmuş B2B SaaS paneldır. Məhsulun tək yaradıcısı var.',
     founderJobTitle: 'Yaradıcı və təsisçi',
@@ -357,7 +357,7 @@ export const az: Messages = {
       'Aladdin Biyabangerd — Heselo məkan idarəetmə platformasının tək yaradıcısı və təsisçisi. Bakı, Azərbaycan.',
     founderLabel: 'Yaradıcı',
     paragraphs: [
-      'Heselo-nu Aladdin Biyabangerd yaratmışdır. O, ideyanı, proqram təminatını və bulud infrastrukturunu sıfırdan qurub — birgə qurucu və ya ayrı “MMC komandası” adı altında gizlədilmiş yaradıcı yoxdur.',
+      'Heselonu Aladdin Biyabangerd yaratmışdır. O, ideyanı, proqram təminatını və bulud infrastrukturunu sıfırdan qurub — birgə qurucu və ya ayrı hüquqi şəxs adı altında gizlədilmiş yaradıcı yoxdur.',
       'Məqsəd sadədir: oyun klubu, karaoke, bilyard, antikafe və otaqlı launj kimi vaxtla işləyən məkanlarda rezervasiya, canlı sessiya, kassa və anbarı bir paneldə birləşdirmək.',
       'Hasleo Software (Windows ehtiyat nüsxəsi) ilə əlaqəsi yoxdur — Heselo Azərbaycanda məkan idarəetməsi üçün ayrı məhsuldur.',
     ],
@@ -365,8 +365,8 @@ export const az: Messages = {
     contactCta: 'Demo və ya əməkdaşlıq üçün yazın',
     faq: [
       {
-        q: 'Heselo-nun yaradıcısı kimdir?',
-        a: 'Aladdin Biyabangerd. O, Heselo-nun tək yaradıcısı və təsisçisidir — məhsul onun adı ilə bağlıdır.',
+        q: 'Heselonun yaradıcısı kimdir?',
+        a: 'Aladdin Biyabangerd. O, Heselonun tək yaradıcısı və təsisçisidir — məhsul onun adı ilə bağlıdır.',
       },
       {
         q: 'Heselo bir komanda məhsuludurmu?',
@@ -399,7 +399,7 @@ export const az: Messages = {
       },
       {
         title: 'Kassa, hesabat, sayım',
-        desc: 'Növbə aç/bağla, əməliyyatlar, bağlanmış gün tarixçəsi, kassa hesabatı və kassa sayımı.',
+        desc: 'Növbə aç və bağla, əməliyyatlar, bağlanmış gün tarixçəsi, kassa hesabatı və kassa sayımı.',
         solutionSlug: 'pos',
       },
       {
@@ -429,7 +429,7 @@ export const az: Messages = {
     eyebrow: 'Qiymətlər',
     title: 'Açıq tariflər — məkan tipinə görə',
     intro:
-      'Heselo-nun abunə planları açıqdır. Oyun klubu, bilyard, karaoke, launj və antikafe üçün fərqli başlanğıc qiymətlər var — sahibkarın məkanına uyğun olsun deyə. Tam cədvəl bu səhifədədir. Bir neçə filial və ya standart plana sığmayan həcm üçün əlavə olaraq fərdi təklif mümkündür.',
+      'Heselonun abunə planları açıqdır. Oyun klubu, bilyard, karaoke, launj və antikafe üçün fərqli başlanğıc qiymətlər var — sahibkarın məkanına uyğun olsun deyə. Tam cədvəl bu səhifədədir. Bir neçə filial və ya standart plana sığmayan həcm üçün əlavə olaraq fərdi təklif mümkündür.',
     summaryEyebrow: 'Açıq qiymət',
     summaryTitle: 'Kateqoriya üzrə başlanğıc tariflər',
     summaryLead:
@@ -483,7 +483,7 @@ export const az: Messages = {
     },
     faq: [
       {
-        q: 'Heselo-nun qiyməti nədir?',
+        q: 'Heselonun qiyməti nədir?',
         a: 'Açıq abunə planları var. Məkan tipinə görə Kiçik plandan başlayır: PS/oyun klubu 25 AZN/ay, bilyard 29 AZN/ay, karaoke və otaqlı launj 39 AZN/ay, antikafe 32 AZN/ay. Orta və Böyük planlar, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Çoxfilial və ya standart plana sığmayan həcm üçün əlavə fərdi təklif mümkündür.',
         href: '/pricing',
         linkLabel: 'Tam tarif cədvəli burada',
@@ -510,7 +510,7 @@ export const az: Messages = {
       },
       {
         q: 'Pulsuz sınaq var?',
-        a: 'Pulsuz demo üçün WhatsApp-dan yazın və ya formu doldurun — 15 dəqiqəlik ekran, kart lazım deyil. İş saatlarında adətən 2 saat ərzində cavab veririk.',
+        a: 'Pulsuz demo üçün WhatsApp-dan yazın və ya formu doldurun — 15 dəqiqəlik demo, kart lazım deyil. İş saatlarında adətən 2 saat ərzində cavab veririk.',
         href: '/contact',
         linkLabel: 'Formadan demo istəmək olar',
       },
@@ -601,7 +601,7 @@ export const az: Messages = {
       },
       karaoke: {
         name: 'Karaoke',
-        intro: 'Otaq bronu itəndə bir axşamın gəliri gedir — ona görə karaoke otaqları ayrıca tarif kateqoriyasındadır.',
+        intro: 'Otaq bronu itiriləndə bir axşamın gəliri gedir — ona görə karaoke otaqları ayrıca tarif kateqoriyasındadır.',
         plans: {
           starter: {
             forWhom: 'Kiçik karaoke: bir neçə otaq',
@@ -640,7 +640,7 @@ export const az: Messages = {
       },
       lounge: {
         name: 'Otaqlı launj',
-        intro: 'Açıq zal proqramı otağın qapalı sessiyasını vermir.',
+        intro: 'Açıq zal proqramı otağın qapalı sessiyasını idarə etmir.',
         plans: {
           starter: {
             forWhom: 'Kiçik launj: bir neçə VIP otaq',
@@ -745,7 +745,7 @@ export const az: Messages = {
     phone: 'Telefon',
     email: 'E-poçt',
     phoneOrEmailHint: 'Telefon və ya e-poçtdan birini yazın — ikisi də boş olmasın.',
-    waLead: 'Daha tez: WhatsApp-dan yazın — 15 dəq ekran, kart lazım deyil.',
+    waLead: 'Daha tez: WhatsApp-dan yazın — 15 dəqiqəlik demo, kart lazım deyil.',
     venue: 'Məkanın adı',
     venueType: 'Məkan tipi',
     venueTypePlaceholder: 'Tipi seçin',
@@ -829,7 +829,7 @@ export const az: Messages = {
       'Azərbaycan / İngilis / Rus',
     ],
     aggregateOfferDescription:
-      'Açıq aylıq abunə planları məkan tipinə görə {low} AZN-dən. Tam cədvəl /pricing səhifəsində. Fərdi təklif yalnız çoxfilial və ya standart plana sığmayan həcm üçündür.',
+      'Açıq aylıq abunə planları məkan tipinə görə {low} AZN-dən. Tam cədvəl /pricing səhifəsində. Fərdi təklif yalnız bir neçə filial və ya standart plana sığmayan həcm üçündür.',
     pages: {
       home: {
         title: 'Heselo — klub və otaq paneli | iiko/Clopos əvəzinə',
@@ -860,7 +860,7 @@ export const az: Messages = {
       pricing: {
         title: 'Açıq tariflər — 25 AZN-dən klub paneli | Heselo',
         description:
-          'Heselo qiymətləri açıqdır: PS 25, bilyard 29, karaoke/launj 39, antikafe 32 AZN/aydan. Məkan tipinə görə fərqli planlar; çoxfilial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
+          'Heselo qiymətləri açıqdır: PS 25, bilyard 29, karaoke/launj 39, antikafe 32 AZN/aydan. Məkan tipinə görə fərqli planlar; bir neçə filial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
         keywords: [
           'Heselo qiymət',
           'Heselo tarif',
@@ -878,9 +878,9 @@ export const az: Messages = {
         keywords: ['Heselo demo', 'məkan proqramı əlaqə', 'rezervasiya demo'],
       },
       about: {
-        title: 'Heselo-nu kim yaradıb? — Aladdin Biyabangerd',
+        title: 'Heselonu kim yaradıb? — Aladdin Biyabangerd',
         description:
-          'Heselo-nun tək yaradıcısı Aladdin Biyabangerd-dir. Bakıda qurulmuş məkan idarəetmə SaaS paneli — Hasleo Software ilə əlaqəsi yoxdur.',
+          'Heselonun tək yaradıcısı Aladdin Biyabangerd-dir. Bakıda qurulmuş məkan idarəetmə SaaS paneli — Hasleo Software ilə əlaqəsi yoxdur.',
         keywords: [
           'Heselo yaradıcısı',
           'Aladdin Biyabangerd',

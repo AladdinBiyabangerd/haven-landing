@@ -41,8 +41,8 @@ export const en: Messages = {
     brandHint: 'Heselo · venue management',
     title: 'A booking lost in WhatsApp wrecks the shift.',
     subtitle:
-      'Heselo keeps the room and PlayStation schedule, live session, and cash on one screen.',
-    ctaPrimary: 'WhatsApp — 15 min',
+      'Heselo brings the room and PlayStation schedule, live session, and cash together on one screen.',
+    ctaPrimary: 'Message on WhatsApp',
     ctaSecondary: 'Write via the form',
     visualAlt: 'Heselo board showing table and room status, sessions, and payment',
   },
@@ -74,10 +74,10 @@ export const en: Messages = {
   },
   pain: {
     eyebrow: 'Why change',
-    title: 'Spreadsheets and chat apps',
-    titleAccent: 'cannot run a floor.',
+    title: 'Spreadsheets and messaging apps',
+    titleAccent: 'aren’t enough to run the floor.',
     intro:
-      'When bookings live in one place, money in another, and stock on paper, closing the shift turns messy.',
+      'When bookings live in one place, payments in another, and stock on paper, closing the shift turns messy.',
     withoutLabel: 'Before',
     withLabel: 'With Heselo',
     before: [
@@ -88,7 +88,7 @@ export const en: Messages = {
     ],
     after: [
       'From booking to live session',
-      'Cash, card, and bank stay clear by day and shift',
+      'Cash, card, and POS payments tracked transparently by day and shift',
       'Products and stock share one list',
       'Sensitive actions need a protection code',
     ],
@@ -102,7 +102,7 @@ export const en: Messages = {
     items: [
       {
         title: 'Live tracking',
-        desc: 'Active sessions, add products, pause/stop, receipts, and payment — the real floor state.',
+        desc: 'Active sessions, add products, pause and stop, receipts, and payment — the real floor state.',
       },
       {
         title: 'Schedule & reservations',
@@ -110,7 +110,7 @@ export const en: Messages = {
       },
       {
         title: 'Cash',
-        desc: 'Open/close shift, transactions, cash report, and cash count — daily and shift reports stay separate.',
+        desc: 'Open and close shift, transactions, cash report, and cash count — daily and shift reports stay separate.',
       },
       {
         title: 'Products, stock, sale',
@@ -129,7 +129,7 @@ export const en: Messages = {
   how: {
     eyebrow: 'Getting started',
     title: 'Three steps',
-    titleAccent: 'and you are live.',
+    titleAccent: 'and you’re ready to start.',
     steps: [
       {
         title: 'Set up the venue',
@@ -181,7 +181,7 @@ export const en: Messages = {
       },
       {
         q: 'Does Heselo include a cash / POS flow?',
-        a: 'Yes. Open/close shift, transactions, cash report, and cash count are in the same panel — no separate till app required.',
+        a: 'Yes. Open and close shift, transactions, cash report, and cash count are in the same panel — no separate till app required.',
         href: '/solutions/pos',
         linkLabel: 'Cash features',
       },
@@ -197,7 +197,7 @@ export const en: Messages = {
       },
       {
         q: 'How do I get a demo?',
-        a: 'Message us on WhatsApp or fill in the form — phone or email is enough. We walk through a 15-minute screen share and usually reply within two hours during working hours.',
+        a: 'Message us on WhatsApp or fill in the form — phone or email is enough. We give a 15-minute live demo and usually reply within two hours during working hours.',
         href: '/contact',
         linkLabel: 'You can also write via the form',
       },
@@ -206,7 +206,7 @@ export const en: Messages = {
   seoOverview: {
     eyebrow: 'What is Heselo?',
     title: 'Business management software',
-    titleAccent: 'for daily venue work.',
+    titleAccent: 'for your venue’s daily work.',
     paragraphs: [
       'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory — for venues that sell table, room, or station time (from ~25 AZN/month).',
       'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is a simpler management alternative for room- and time-based venues.',
@@ -296,8 +296,8 @@ export const en: Messages = {
         href: '/pricing',
       },
       {
-        title: 'Totals that always match',
-        desc: 'Balances and payments are worked out by the system, not typed in over the top.',
+        title: 'Accurate, error-free calculations',
+        desc: 'Balances and payments are calculated by the system and are not changed by hand.',
         href: '/features',
       },
       {
@@ -336,9 +336,9 @@ export const en: Messages = {
   },
   cta: {
     title: 'Start the next shift with Heselo.',
-    subtitle: 'A 15-minute screen share — we usually reply within two hours during working hours.',
+    subtitle: 'A 15-minute demo — we usually reply within two hours during working hours.',
     button: 'Write via the form',
-    whatsapp: 'WhatsApp — 15 min',
+    whatsapp: 'Message on WhatsApp',
     pickTypeTitle: 'Pick your venue type first.',
     pickTypeSubtitle: 'Pricing and the demo match the venue type you pick.',
     pickTypeButton: 'pick a venue type',
@@ -399,7 +399,7 @@ export const en: Messages = {
       },
       {
         title: 'Cash, report, reconciliation',
-        desc: 'Open/close shift, transactions, closed-day history, cash report, and cash count.',
+        desc: 'Open and close shift, transactions, closed-day history, cash report, and cash count.',
         solutionSlug: 'pos',
       },
       {
@@ -510,7 +510,7 @@ export const en: Messages = {
       },
       {
         q: 'Is there a free trial?',
-        a: 'Message us on WhatsApp or use the form for a free demo — 15-minute screen share, no card. We usually reply within two hours during working hours.',
+        a: 'Message us on WhatsApp or use the form for a free demo — 15 minutes, no card. We usually reply within two hours during working hours.',
         href: '/contact',
         linkLabel: 'You can request a demo via the form',
       },
@@ -745,7 +745,7 @@ export const en: Messages = {
     phone: 'Phone',
     email: 'Email',
     phoneOrEmailHint: 'Enter a phone number or an email — at least one is required.',
-    waLead: 'Faster: message us on WhatsApp — 15-minute screen share, no card.',
+    waLead: 'Faster: message us on WhatsApp — 15-minute demo, no card.',
     venue: 'Venue name',
     venueType: 'Venue type',
     venueTypePlaceholder: 'Select a type',
