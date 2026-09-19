@@ -53,9 +53,9 @@ const f = messages.faq
     border-bottom: 1px solid var(--line);
   }
   summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
     gap: 1rem;
     cursor: pointer;
     list-style: none;

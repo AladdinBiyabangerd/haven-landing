@@ -623,6 +623,7 @@ function planFeatures(features: string[], upTo: number): string[] {
   .table-wrap {
     margin-top: 1rem;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   table {
     width: 100%;
@@ -636,13 +637,22 @@ function planFeatures(features: string[], upTo: number): string[] {
     border-bottom: 1px solid var(--line);
     text-align: right;
   }
-  th:first-child {
+  th:first-child,
+  td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
     text-align: left;
+    background: var(--surface);
   }
   tbody th {
     color: var(--ink);
   }
   tbody tr.is-cheapest {
+    background: var(--accent-soft);
+  }
+  tbody tr.is-cheapest th:first-child,
+  tbody tr.is-cheapest td:first-child {
     background: var(--accent-soft);
   }
   .cheapest {
@@ -698,6 +708,15 @@ function planFeatures(features: string[], upTo: number): string[] {
     max-width: 40rem;
     color: var(--ink-muted);
     font-size: var(--text-sm);
+  }
+  @media (max-width: 575px) {
+    table {
+      min-width: 32rem;
+    }
+    th,
+    td {
+      padding: 0.55rem 0.45rem;
+    }
   }
   @media (min-width: 760px) {
     .calculator__head {
