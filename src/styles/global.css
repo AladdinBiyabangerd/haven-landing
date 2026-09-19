@@ -268,8 +268,11 @@ h3 {
   margin-bottom: var(--space-head);
 }
 
+/* Prose column: readable line length, centered in the container on wide screens. */
 .narrow {
+  width: 100%;
   max-width: var(--max-prose);
+  margin-inline: auto;
 }
 
 /* ——— Cards ——— */

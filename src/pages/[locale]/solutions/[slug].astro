@@ -74,20 +74,21 @@ const faqMessages = {
   <article class="section">
     <div class="container">
       <div class="narrow">
-      <header class="section-head">
-        <p class="eyebrow">{messages.nav.solutions}</p>
-        <h1 class="type-page-title">{solution.h1}</h1>
-        {
-          offerPrice ? (
-            <p class="price-chip">
-              <a href={localePath(locale, `/pricing#${solution.slug}`)} data-pricing-type={solution.slug}>
-                {offerPrice.label}
-              </a>
-            </p>
-          ) : null
-        }
-        <p class="lead">{solution.intro}</p>
-      </header>
+        <header class="section-head">
+          <p class="eyebrow">{messages.nav.solutions}</p>
+          <h1 class="type-page-title">{solution.h1}</h1>
+          {
+            offerPrice ? (
+              <p class="price-chip">
+                <a href={localePath(locale, `/pricing#${solution.slug}`)} data-pricing-type={solution.slug}>
+                  {offerPrice.label}
+                </a>
+              </p>
+            ) : null
+          }
+          <p class="lead">{solution.intro}</p>
+        </header>
+      </div>
 
       {
         productShotId ? (
@@ -97,26 +98,30 @@ const faqMessages = {
         ) : null
       }
 
-      <section aria-labelledby="who-title">
-        <h2 id="who-title" class="sub">{solution.whoTitle}</h2>
-        <p class="body">{solution.whoBody}</p>
-      </section>
+      <div class="narrow">
+        <section aria-labelledby="who-title">
+          <h2 id="who-title" class="sub">{solution.whoTitle}</h2>
+          <p class="body">{solution.whoBody}</p>
+        </section>
 
-      <section aria-labelledby="problems-title">
-        <h2 id="problems-title" class="sub">{solution.problemsTitle}</h2>
-        <ul class="bullets">
-          {solution.problems.map((item) => <li>{item}</li>)}
-        </ul>
-      </section>
+        <section aria-labelledby="problems-title">
+          <h2 id="problems-title" class="sub">{solution.problemsTitle}</h2>
+          <ul class="bullets">
+            {solution.problems.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
 
-      <section aria-labelledby="how-title">
-        <h2 id="how-title" class="sub">{solution.howTitle}</h2>
-        <p class="body">{solution.howBody}</p>
-      </section>
+        <section aria-labelledby="how-title">
+          <h2 id="how-title" class="sub">{solution.howTitle}</h2>
+          <p class="body">{solution.howBody}</p>
+        </section>
+      </div>
 
-      <section aria-labelledby="features-title">
-        <h2 id="features-title" class="sub">{solution.featuresTitle}</h2>
-        <div class="features">
+      <section class="features-block" aria-labelledby="features-title">
+        <div class="narrow">
+          <h2 id="features-title" class="sub">{solution.featuresTitle}</h2>
+        </div>
+        <div class="features card-grid">
           {
             solution.features.map((f) => (
               <section class="card">
@@ -136,47 +141,48 @@ const faqMessages = {
         ) : null
       }
 
-      <section aria-labelledby="differ-title">
-        <h2 id="differ-title" class="sub">{solution.differTitle}</h2>
-        <p class="body">{solution.differBody}</p>
-      </section>
+      <div class="narrow">
+        <section aria-labelledby="differ-title">
+          <h2 id="differ-title" class="sub">{solution.differTitle}</h2>
+          <p class="body">{solution.differBody}</p>
+        </section>
 
-      {
-        altGuides.length > 0 ? (
-          <section class="alt-block" aria-labelledby="alt-title">
-            <h2 id="alt-title" class="sub">
-              {messages.guidesPage.altSeekingTitle}
-            </h2>
-            <p class="body">{messages.guidesPage.altSeekingBody}</p>
-            <ul class="alt-links">
-              {altGuides.map((item) => (
-                <li>
-                  <a class="link-inline" href={localePath(locale, `/guides/${item.slug}`)}>
-                    {item.shortTitle}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null
-      }
+        {
+          altGuides.length > 0 ? (
+            <section class="alt-block" aria-labelledby="alt-title">
+              <h2 id="alt-title" class="sub">
+                {messages.guidesPage.altSeekingTitle}
+              </h2>
+              <p class="body">{messages.guidesPage.altSeekingBody}</p>
+              <ul class="alt-links">
+                {altGuides.map((item) => (
+                  <li>
+                    <a class="link-inline" href={localePath(locale, `/guides/${item.slug}`)}>
+                      {item.shortTitle}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null
+        }
 
-      {
-        related.length > 0 ? (
-          <nav class="related" aria-label={messages.nav.solutions}>
-            <h2 class="sub">{messages.nav.solutions}</h2>
-            <ul>
-              {related.map((item) => (
-                <li>
-                  <a class="link-inline" href={localePath(locale, `/solutions/${item.slug}`)}>
-                    {item.h1}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        ) : null
-      }
+        {
+          related.length > 0 ? (
+            <nav class="related" aria-label={messages.nav.solutions}>
+              <h2 class="sub">{messages.nav.solutions}</h2>
+              <ul>
+                {related.map((item) => (
+                  <li>
+                    <a class="link-inline" href={localePath(locale, `/solutions/${item.slug}`)}>
+                      {item.h1}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ) : null
+        }
       </div>
     </div>
   </article>
@@ -259,14 +265,23 @@ const faqMessages = {
     font-weight: 600;
     color: var(--ink-subtle);
   }
+  /* Cap below container width so shots stay sharp (assets are ~1256px @1x). */
   .shot-wrap {
-    margin: 0 0 2rem;
+    width: 100%;
+    max-width: 48rem;
+    margin: 1.5rem auto 2.25rem;
+  }
+  .features-block {
+    margin-top: 2.25rem;
+  }
+  .features-block .sub {
+    margin-bottom: 0.15rem;
   }
   /* Sub-headings stay below the H1 so the page reads as one article. */
   .sub {
     font-size: var(--text-2xl);
   }
-  section + section {
+  .narrow > section + section {
     margin-top: 2.25rem;
   }
   .body {
@@ -297,8 +312,6 @@ const faqMessages = {
   }
   .features {
     margin-top: 0.9rem;
-    display: grid;
-    gap: 0.85rem;
   }
   .features section {
     margin: 0;
@@ -332,9 +345,11 @@ const faqMessages = {
     display: grid;
     gap: 0.5rem;
   }
-  @media (min-width: 800px) {
-    .features {
+  @media (min-width: 640px) {
+    .related ul,
+    .alt-links {
       grid-template-columns: 1fr 1fr;
+      column-gap: 1.5rem;
     }
   }
 </style>
