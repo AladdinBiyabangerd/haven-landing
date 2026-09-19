@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { BUILDER, builderPortfolioUrl, localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
+import { FOUNDER, founderPortfolioUrl, localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
 import { formatPhone } from '@/lib/format'
 import { FOOTER_SOLUTION_SLUGS, getSolutionsBySlugs } from '@/data/solutions'
 import BrandMark from '@/components/BrandMark.astro'
@@ -43,6 +43,7 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       <a href={localePath(locale, '/features')}>{messages.nav.features}</a>
       <a href={localePath(locale, '/pricing')}>{messages.nav.pricing}</a>
       <a href={localePath(locale, '/guides')}>{messages.nav.guides}</a>
+      <a href={localePath(locale, '/about')}>{messages.footer.about}</a>
       <a href={localePath(locale, '/contact')}>{messages.nav.demo}</a>
     </div>
     <div class="footer__solutions">
@@ -66,8 +67,8 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
     </nav>
     <p class="footer__credit type-meta">
       {messages.footer.credit}{' '}
-      <a href={builderPortfolioUrl(locale)} target="_blank" rel="noopener noreferrer">
-        {BUILDER.name}<span aria-hidden="true"> ↗</span>
+      <a href={founderPortfolioUrl(locale)} target="_blank" rel="noopener noreferrer">
+        {FOUNDER.name}<span aria-hidden="true"> ↗</span>
       </a>
     </p>
   </div>

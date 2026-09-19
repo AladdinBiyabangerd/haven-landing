@@ -15,21 +15,61 @@ export const SITE = {
   logoPath: '/icon-512.png',
 } as const
 
-/** Builder credit in the site footer — portfolio hub for SEO and attribution. */
-export const BUILDER = {
+/** Sole founder / creator of Heselo — used in footer, About page, and JSON-LD Person. */
+export const FOUNDER = {
   name: 'Aladdin Biyabangerd',
   portfolioOrigin: 'https://aladdinbiyabangerd.site',
+  /** Case study on the personal portfolio (locale-prefixed). */
+  workSlug: 'work/heselo',
 } as const
 
-/** Locale-matched portfolio URL with UTM for the Heselo footer credit. */
-export function builderPortfolioUrl(locale: string): string {
-  const pathLocale = locale === 'ka' ? 'en' : locale
-  const url = new URL(`/${pathLocale}`, BUILDER.portfolioOrigin)
+/** @deprecated Use FOUNDER — kept so older imports keep working. */
+export const BUILDER = FOUNDER
+
+function portfolioLocale(locale: string): string {
+  return locale === 'ka' ? 'en' : locale
+}
+
+/** Locale-matched portfolio home with UTM (footer credit / Person.url). */
+export function founderPortfolioUrl(locale: string): string {
+  const url = new URL(`/${portfolioLocale(locale)}`, FOUNDER.portfolioOrigin)
   url.searchParams.set('utm_source', 'heselo')
-  url.searchParams.set('utm_medium', 'organic_social')
-  url.searchParams.set('utm_campaign', 'portfolio')
-  url.searchParams.set('utm_content', 'footer_credit')
+  url.searchParams.set('utm_medium', 'referral')
+  url.searchParams.set('utm_campaign', 'founder')
+  url.searchParams.set('utm_content', 'portfolio_home')
   return url.toString()
+}
+
+/** @deprecated Use founderPortfolioUrl */
+export function builderPortfolioUrl(locale: string): string {
+  return founderPortfolioUrl(locale)
+}
+
+/** Heselo case study on the founder’s portfolio. */
+export function founderWorkUrl(locale: string): string {
+  const url = new URL(`/${portfolioLocale(locale)}/${FOUNDER.workSlug}`, FOUNDER.portfolioOrigin)
+  url.searchParams.set('utm_source', 'heselo')
+  url.searchParams.set('utm_medium', 'referral')
+  url.searchParams.set('utm_campaign', 'founder')
+  url.searchParams.set('utm_content', 'work_heselo')
+  return url.toString()
+}
+
+/**
+ * Public profile URLs for Person.sameAs (portfolio + optional LinkedIn).
+ * Set PUBLIC_FOUNDER_LINKEDIN=https://www.linkedin.com/in/… when ready.
+ */
+export function founderSameAs(locale: string): string[] {
+  const env = typeof import.meta !== 'undefined' ? import.meta.env : undefined
+  const linkedIn = env?.PUBLIC_FOUNDER_LINKEDIN
+  const urls = [
+    `${FOUNDER.portfolioOrigin}/${portfolioLocale(locale)}/`,
+    `${FOUNDER.portfolioOrigin}/${portfolioLocale(locale)}/${FOUNDER.workSlug}/`,
+  ]
+  if (linkedIn && String(linkedIn).trim().startsWith('https://')) {
+    urls.push(String(linkedIn).trim())
+  }
+  return urls
 }
 
 /** Optional social profile URLs for Organization sameAs (PUBLIC_HESELO_SOCIAL_*). */

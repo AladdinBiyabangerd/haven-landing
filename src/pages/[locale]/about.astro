@@ -1,0 +1,107 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Faq from '@/components/Faq.astro'
+import Cta from '@/components/Cta.astro'
+import { resolveLocale } from '@/i18n/config'
+import { getMessages } from '@/i18n'
+import { FOUNDER, founderPortfolioUrl, localePath } from '@/lib/site'
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const messages = getMessages(locale)
+const page = messages.aboutPage
+
+const faqMessages = {
+  ...messages,
+  faq: {
+    eyebrow: messages.faq.eyebrow,
+    title: messages.faq.title,
+    items: page.faq,
+  },
+}
+---
+
+<BaseLayout locale={locale} messages={messages} page="about">
+  <section class="section">
+    <div class="container">
+      <div class="narrow">
+        <p class="eyebrow">{page.eyebrow}</p>
+        <h1 class="type-page-title">{page.title}</h1>
+        <p class="lead">{page.intro}</p>
+
+        <div class="founder">
+          <p class="founder__label type-eyebrow">{page.founderLabel}</p>
+          <p class="founder__name type-card-title">{FOUNDER.name}</p>
+          <p class="founder__role">{page.founderJobTitle}</p>
+        </div>
+
+        {page.paragraphs.map((p) => <p class="body">{p}</p>)}
+
+        <p class="links">
+          <a
+            class="link-inline"
+            href={founderPortfolioUrl(locale)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {page.portfolioCta}<span aria-hidden="true"> ↗</span>
+          </a>
+          <a class="link-inline" href={localePath(locale, '/contact')}>
+            {page.contactCta}{messages.common.linkArrow}
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Faq locale={locale} messages={faqMessages} />
+  <Cta locale={locale} messages={messages} intent="next" />
+</BaseLayout>
+
+<style>
+  .narrow {
+    max-width: 40rem;
+  }
+  .lead {
+    margin: 0.75rem 0 0;
+    color: var(--ink-muted);
+    font-size: var(--text-base);
+    line-height: 1.55;
+  }
+  .founder {
+    margin: 2rem 0 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .founder__label {
+    margin: 0 0 0.35rem;
+    color: var(--ink-subtle);
+  }
+  .founder__name {
+    margin: 0;
+  }
+  .founder__role {
+    margin: 0.35rem 0 0;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+  .body {
+    margin: 0.85rem 0 0;
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin: 1.75rem 0 0;
+  }
+  .links .link-inline {
+    font-size: var(--text-sm);
+  }
+</style>

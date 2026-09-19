@@ -32,9 +32,10 @@ export const az: Messages = {
     legal: 'Hüquqi',
     privacy: 'Məxfilik',
     terms: 'Şərtlər',
+    about: 'Haqqında',
     rights: 'Bütün hüquqlar qorunur.',
     tagline: 'Masa · Otaq · Canlı zal · Kassa',
-    credit: 'Dizayn edib hazırlayan',
+    credit: 'Yaradıcı',
   },
   hero: {
     brandHint: 'Heselo · məkan idarəetmə',
@@ -155,6 +156,12 @@ export const az: Messages = {
         linkLabel: 'Məkan tipləri buradadır',
       },
       {
+        q: 'Heselo-nu kim yaradıb?',
+        a: 'Heselo-nun tək yaradıcısı Aladdin Biyabangerd-dir. O, məhsulu Bakıda sıfırdan qurub: ideya, proqram təminatı və platforma onun adı altındadır — birgə qurucu komanda yoxdur.',
+        href: '/about',
+        linkLabel: 'Haqqında səhifəsi',
+      },
+      {
         q: 'Heselo iiko və ya Clopos-u əvəz edir?',
         a: 'Yox, əgər sizə mətbəx, KDS və restoran zalı lazımdırsa — iiko/Clopos uyğundur. Otaq/PS vaxtı, bron və kassa növbəsi əsas işdirsə, Heselo daha yüngül klub paneli kimi alternativdir.',
         href: '/guides/iiko-alternative-clubs',
@@ -203,6 +210,7 @@ export const az: Messages = {
     paragraphs: [
       'Heselo — Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün rezervasiya, canlı zal, kassa və anbar paneli. Masa, otaq və ya stansiya vaxtını satan yerlər üçündür (~25 AZN/aydan).',
       'iiko və ya Clopos kimi restoran POS axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, bron və kassa növbəsi üçün Heselo daha yüngül klub paneli təklif edir.',
+      'Heselo-nu Bakıda Aladdin Biyabangerd təkbaşına yaradıb — ətraflı Haqqında səhifəsində.',
     ],
   },
   audiences: {
@@ -338,6 +346,37 @@ export const az: Messages = {
     typedSubtitle: 'Əvvəl tarifi görün — demo eyni məkan tipi ilə açılır.',
     nextForm: 'Demo üçün forma ilə yazın',
     nextWhatsapp: 'Tələsirsizsə WhatsApp-dan yazın',
+  },
+  aboutPage: {
+    eyebrow: 'Haqqında',
+    title: 'Heselo-nu kim yaradıb?',
+    intro:
+      'Heselo yerli klub və otaq məkanları üçün Bakıda qurulmuş B2B SaaS paneldır. Məhsulun tək yaradıcısı var.',
+    founderJobTitle: 'Yaradıcı və təsisçi',
+    founderSchemaDescription:
+      'Aladdin Biyabangerd — Heselo məkan idarəetmə platformasının tək yaradıcısı və təsisçisi. Bakı, Azərbaycan.',
+    founderLabel: 'Yaradıcı',
+    paragraphs: [
+      'Heselo-nu Aladdin Biyabangerd yaratmışdır. O, ideyanı, proqram təminatını və bulud infrastrukturunu sıfırdan qurub — birgə qurucu və ya ayrı “MMC komandası” adı altında gizlədilmiş yaradıcı yoxdur.',
+      'Məqsəd sadədir: oyun klubu, karaoke, bilyard, antikafe və otaqlı launj kimi vaxtla işləyən məkanlarda rezervasiya, canlı sessiya, kassa və anbarı bir paneldə birləşdirmək.',
+      'Hasleo Software (Windows ehtiyat nüsxəsi) ilə əlaqəsi yoxdur — Heselo Azərbaycanda məkan idarəetməsi üçün ayrı məhsuldur.',
+    ],
+    portfolioCta: 'Aladdin Biyabangerd — portfolio',
+    contactCta: 'Demo və ya əməkdaşlıq üçün yazın',
+    faq: [
+      {
+        q: 'Heselo-nun yaradıcısı kimdir?',
+        a: 'Aladdin Biyabangerd. O, Heselo-nun tək yaradıcısı və təsisçisidir — məhsul onun adı ilə bağlıdır.',
+      },
+      {
+        q: 'Heselo bir komanda məhsuludurmu?',
+        a: 'Yox. Heselo tək şəxs — Aladdin Biyabangerd — tərəfindən yaradılıb. Yardımçı xidmətlər və ya müvəqqəti əməkdaşlar ola bilər, amma məhsulun sahibi və yaradıcısı odur.',
+      },
+      {
+        q: 'Heselo Hasleo Software-dirmi?',
+        a: 'Xeyr. Hasleo Windows alətləri şirkətidir. Heselo Azərbaycanda klub və otaq məkanları üçün ayrı B2B paneldır.',
+      },
+    ],
   },
   featuresPage: {
     eyebrow: 'Funksiyalar',
@@ -820,6 +859,18 @@ export const az: Messages = {
         description:
           '15 dəqiqəlik demo üçün yazın. WhatsApp və ya forma — iş saatlarında adətən 2 saat ərzində cavab. Məkan tipi və otaq/masa sayı kifayətdir.',
         keywords: ['Heselo demo', 'məkan proqramı əlaqə', 'rezervasiya demo'],
+      },
+      about: {
+        title: 'Heselo-nu kim yaradıb? — Aladdin Biyabangerd',
+        description:
+          'Heselo-nun tək yaradıcısı Aladdin Biyabangerd-dir. Bakıda qurulmuş məkan idarəetmə SaaS paneli — Hasleo Software ilə əlaqəsi yoxdur.',
+        keywords: [
+          'Heselo yaradıcısı',
+          'Aladdin Biyabangerd',
+          'Heselo kim yaradıb',
+          'Heselo founder',
+          'Heselo Bakı',
+        ],
       },
       privacy: {
         title: 'Məxfilik siyasəti — Heselo',

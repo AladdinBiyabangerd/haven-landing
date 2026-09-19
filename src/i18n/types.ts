@@ -52,9 +52,10 @@ export type Messages = {
     legal: string
     privacy: string
     terms: string
+    about: string
     rights: string
     tagline: string
-    /** Prefixed to the builder name in the footer credit line. */
+    /** Prefixed to the founder name in the footer credit line. */
     credit: string
   }
   hero: {
@@ -193,6 +194,20 @@ export type Messages = {
       /** Link to a feature-focused solution page */
       solutionSlug?: 'reservations' | 'pos' | 'inventory'
     }>
+  }
+  aboutPage: {
+    eyebrow: string
+    title: string
+    intro: string
+    /** Schema.org jobTitle — sole founder */
+    founderJobTitle: string
+    /** Short Person.description for JSON-LD */
+    founderSchemaDescription: string
+    founderLabel: string
+    paragraphs: string[]
+    portfolioCta: string
+    contactCta: string
+    faq: FaqItem[]
   }
   pricing: {
     eyebrow: string
@@ -364,6 +379,7 @@ export type Messages = {
       | 'features'
       | 'pricing'
       | 'contact'
+      | 'about'
       | 'privacy'
       | 'terms'
       | 'solutions'

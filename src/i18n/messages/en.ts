@@ -32,9 +32,10 @@ export const en: Messages = {
     legal: 'Legal',
     privacy: 'Privacy',
     terms: 'Terms',
+    about: 'About',
     rights: 'All rights reserved.',
     tagline: 'Tables · Rooms · Live floor · Cash',
-    credit: 'Designed & built by',
+    credit: 'Founded by',
   },
   hero: {
     brandHint: 'Heselo · venue management',
@@ -155,6 +156,12 @@ export const en: Messages = {
         linkLabel: 'Venue types are listed here',
       },
       {
+        q: 'Who created Heselo?',
+        a: 'Heselo’s sole founder and creator is Aladdin Biyabangerd. He built the product from scratch in Baku — idea, software, and platform under his name. There is no co-founder team.',
+        href: '/about',
+        linkLabel: 'About page',
+      },
+      {
         q: 'Does Heselo replace iiko or Clopos?',
         a: 'No — if you need kitchen, KDS, and dining-room flow, choose iiko/Clopos. If room/PS time, bookings, and cash shifts are the core job, Heselo is the lighter club-panel alternative.',
         href: '/guides/iiko-alternative-clubs',
@@ -203,6 +210,7 @@ export const en: Messages = {
     paragraphs: [
       'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory — for venues that sell table, room, or station time (from ~25 AZN/month).',
       'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is the lighter club panel.',
+      'Heselo was created solely by Aladdin Biyabangerd in Baku — more on the About page.',
     ],
   },
   audiences: {
@@ -338,6 +346,37 @@ export const en: Messages = {
     typedSubtitle: 'See the plan first — the demo opens with the same type.',
     nextForm: 'Write via the form for a demo',
     nextWhatsapp: 'In a hurry? Message on WhatsApp',
+  },
+  aboutPage: {
+    eyebrow: 'About',
+    title: 'Who created Heselo?',
+    intro:
+      'Heselo is a B2B SaaS panel for local clubs and room venues, built in Baku. It has a single creator.',
+    founderJobTitle: 'Founder & creator',
+    founderSchemaDescription:
+      'Aladdin Biyabangerd is the sole founder and creator of the Heselo venue management platform. Based in Baku, Azerbaijan.',
+    founderLabel: 'Founder',
+    paragraphs: [
+      'Heselo was created by Aladdin Biyabangerd. He built the idea, software, and cloud stack from scratch — there is no co-founder group or anonymous “MMC team” behind the product.',
+      'The goal is simple: for time-based venues such as gaming clubs, karaoke, billiards, anti-cafés, and room lounges, put booking, live sessions, cash, and inventory in one panel.',
+      'Heselo is not related to Hasleo Software (Windows backup tools). It is a separate Azerbaijan venue-management product.',
+    ],
+    portfolioCta: 'Aladdin Biyabangerd — portfolio',
+    contactCta: 'Write for a demo or partnership',
+    faq: [
+      {
+        q: 'Who is the creator of Heselo?',
+        a: 'Aladdin Biyabangerd. He is the sole founder and creator of Heselo — the product is his.',
+      },
+      {
+        q: 'Is Heselo a team product?',
+        a: 'No. Heselo was created by one person — Aladdin Biyabangerd. Helpers or contractors may assist at times, but ownership and creation sit with him.',
+      },
+      {
+        q: 'Is Heselo the same as Hasleo Software?',
+        a: 'No. Hasleo makes Windows utilities. Heselo is a separate B2B panel for clubs and room venues in Azerbaijan.',
+      },
+    ],
   },
   featuresPage: {
     eyebrow: 'Features',
@@ -820,6 +859,18 @@ export const en: Messages = {
         description:
           'Book a 15-minute demo. WhatsApp or the form — we usually reply within two hours during working hours. Venue type and table/room count is enough.',
         keywords: ['Heselo demo', 'venue software contact', 'reservation demo'],
+      },
+      about: {
+        title: 'Who created Heselo? — Aladdin Biyabangerd',
+        description:
+          'Heselo’s sole founder and creator is Aladdin Biyabangerd. A venue-management SaaS panel built in Baku — not related to Hasleo Software.',
+        keywords: [
+          'Heselo founder',
+          'Aladdin Biyabangerd',
+          'who created Heselo',
+          'Heselo creator',
+          'Heselo Baku',
+        ],
       },
       privacy: {
         title: 'Privacy policy — Heselo',

@@ -2,7 +2,17 @@ import type { Locale } from '@/i18n/config'
 import { HTML_LANG, LOCALES, OG_LOCALES } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { allVenuePlans, monthlyFeeRange } from '@/lib/venueOffers'
-import { absoluteUrl, localePath, localeUrl, phoneE164, SITE, siteSameAs, siteUrl } from '@/lib/site'
+import {
+  absoluteUrl,
+  FOUNDER,
+  founderSameAs,
+  localePath,
+  localeUrl,
+  phoneE164,
+  SITE,
+  siteSameAs,
+  siteUrl,
+} from '@/lib/site'
 
 export type BreadcrumbItem = { label: string; href: string; current?: boolean }
 
@@ -61,6 +71,7 @@ export type PageKey =
   | 'features'
   | 'pricing'
   | 'contact'
+  | 'about'
   | 'privacy'
   | 'terms'
   | 'notFound'
@@ -74,6 +85,7 @@ const PAGE_SLUGS: Record<Exclude<PageKey, 'solution' | 'guide'>, string> = {
   features: '/features',
   pricing: '/pricing',
   contact: '/contact',
+  about: '/about',
   privacy: '/privacy',
   terms: '/terms',
   notFound: '/404',
@@ -153,6 +165,22 @@ export function buildJsonLdGraph(
     }
   }
 
+  const founderId = `${siteUrl()}/#founder`
+  const personSameAs = founderSameAs(locale)
+
+  const founderPerson: Record<string, unknown> = {
+    '@type': 'Person',
+    '@id': founderId,
+    name: FOUNDER.name,
+    url: localeUrl(locale, '/about'),
+    jobTitle: messages.aboutPage.founderJobTitle,
+    description: messages.aboutPage.founderSchemaDescription,
+    worksFor: { '@id': `${siteUrl()}/#organization` },
+    ...(personSameAs.length > 0 ? { sameAs: personSameAs } : {}),
+  }
+
+  const isAboutPage = input.slug === '/about' || input.slug === '/about/'
+
   const graph: Record<string, unknown>[] = [
     {
       '@type': 'Organization',
@@ -167,6 +195,7 @@ export function buildJsonLdGraph(
       },
       email: SITE.contactEmail,
       description: messages.site.description,
+      founder: { '@id': founderId },
       ...(siteSameAs().length > 0 ? { sameAs: siteSameAs() } : {}),
       knowsAbout: messages.seo.knowsAbout,
       areaServed: {
@@ -181,6 +210,7 @@ export function buildJsonLdGraph(
         availableLanguage: ['az', 'en', 'ru'],
       },
     },
+    founderPerson,
     software,
     {
       '@type': 'WebSite',
@@ -192,20 +222,27 @@ export function buildJsonLdGraph(
       inLanguage: HTML_LANG[locale],
     },
     {
-      '@type': input.article ? 'Article' : 'WebPage',
+      '@type': input.article ? 'Article' : isAboutPage ? 'AboutPage' : 'WebPage',
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
       name: input.title,
       headline: input.article?.headline,
       description: input.description,
       isPartOf: { '@id': `${siteUrl()}/#website` },
-      about: { '@id': `${siteUrl()}/#software` },
+      about: isAboutPage ? { '@id': founderId } : { '@id': `${siteUrl()}/#software` },
       inLanguage: HTML_LANG[locale],
+      ...(isAboutPage
+        ? {
+            mainEntity: { '@id': founderId },
+            author: { '@id': founderId },
+            publisher: { '@id': `${siteUrl()}/#organization` },
+          }
+        : {}),
       ...(input.article
         ? {
             datePublished: input.article.datePublished,
             dateModified: input.article.dateModified || input.article.datePublished,
-            author: { '@id': `${siteUrl()}/#organization` },
+            author: { '@id': founderId },
             publisher: { '@id': `${siteUrl()}/#organization` },
             mainEntityOfPage: pageUrl,
           }
@@ -335,7 +372,12 @@ export function seoFromMessages(
   }
 
   const page = messages.seo.pages[key]
-  const faq = key === 'home' ? messages.faq.items : undefined
+  const faq =
+    key === 'home'
+      ? messages.faq.items
+      : key === 'about'
+        ? messages.aboutPage.faq
+        : undefined
 
   return {
     title: page.title,
@@ -352,9 +394,11 @@ export function seoFromMessages(
             ? messages.nav.pricing
             : key === 'contact'
               ? messages.nav.contact
-              : key === 'privacy'
-                ? messages.footer.privacy
-                : messages.footer.terms,
+              : key === 'about'
+                ? messages.footer.about
+                : key === 'privacy'
+                  ? messages.footer.privacy
+                  : messages.footer.terms,
   }
 }
 
