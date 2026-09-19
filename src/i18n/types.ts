@@ -213,6 +213,15 @@ export type Messages = {
     eyebrow: string
     title: string
     intro: string
+    /** Above the venue tabs — always-visible published from-prices */
+    summaryEyebrow: string
+    summaryTitle: string
+    summaryLead: string
+    summaryHint: string
+    summaryCustom: string
+    summaryCustomLink: string
+    /** Template: "{price}-dən / ay" for summary rows and solution chips */
+    fromMonthly: string
     chooseType: string
     cta: string
     periodMonthly: string
@@ -374,6 +383,8 @@ export type Messages = {
     softwareOperatingSystem: string
     knowsAbout: string[]
     softwareFeatures: string[]
+    /** AggregateOffer.description — {low} = lowest published monthly AZN */
+    aggregateOfferDescription: string
     pages: Record<
       | 'home'
       | 'features'

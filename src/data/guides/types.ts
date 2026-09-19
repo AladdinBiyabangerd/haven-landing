@@ -23,6 +23,7 @@ export const GUIDE_SLUGS = [
   'izi-alternative',
   'kaktus-alternative',
   'resto-az-alternative',
+  'heselo-pricing',
 ] as const
 
 export const TEASER_GUIDE_SLUGS = [

@@ -7,7 +7,26 @@
 
 ## One-line entity
 
-Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan: schedule + live sessions + cash drawer + inventory in one web panel. Pricing from ~25 AZN/month. Free demo via contact form or WhatsApp.
+Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan: schedule + live sessions + cash drawer + inventory in one web panel. Published pricing from 25 AZN/month by venue type (see Pricing section). Free demo via contact form or WhatsApp. Sole founder: Aladdin Biyabangerd (https://heselo.online/az/about/).
+
+## Pricing (published)
+
+Prices are **public** on the pricing page — not quote-only B2B. Different starting fees by venue category so plans fit each kind of business. Custom quotes are an **add-on** for multi-branch or out-of-plan volume only.
+
+Starting monthly AZN (Small / Kiçik plan) — keep in sync with `src/lib/venueOffers.ts`:
+
+| Venue type | From (AZN/month) |
+|------------|------------------|
+| Gaming / PlayStation club | 25 |
+| Billiards | 29 |
+| Karaoke | 39 |
+| Room lounge | 39 |
+| Anti-café | 32 |
+
+- Tiers: Small / Medium / Large (Kiçik / Orta / Böyük). Annual = monthly × 10 (two months free).
+- Full table + calculator: https://heselo.online/az/pricing/
+- EN: https://heselo.online/en/pricing/ · RU: https://heselo.online/ru/pricing/
+- Explainer guide: https://heselo.online/az/guides/heselo-pricing/
 
 ## Product
 
@@ -23,8 +42,9 @@ Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-ca
 ## Key pages (az locale)
 
 - Home: https://heselo.online/az/
+- About / founder: https://heselo.online/az/about/
 - Features: https://heselo.online/az/features/
-- Pricing: https://heselo.online/az/pricing/
+- Pricing (published plans): https://heselo.online/az/pricing/
 - Contact / demo: https://heselo.online/az/contact/
 - Solutions hub: https://heselo.online/az/solutions/
 - Gaming club (PS): https://heselo.online/az/solutions/gaming/
@@ -45,6 +65,7 @@ Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-ca
 - MinuPOS alternative: https://heselo.online/az/guides/minupos-alternative/
 - robotPOS alternative: https://heselo.online/az/guides/robotpos-alternative/
 - Affordable club POS: https://heselo.online/az/guides/affordable-club-pos/
+- Heselo pricing explained: https://heselo.online/az/guides/heselo-pricing/
 - Restaurant POS vs karaoke: https://heselo.online/az/guides/restaurant-pos-vs-karaoke-system/
 - PlayStation cafe software: https://heselo.online/az/guides/playstation-cafe-software-alternative/
 - IZI alternative: https://heselo.online/az/guides/izi-alternative/

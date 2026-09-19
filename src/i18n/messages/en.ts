@@ -169,7 +169,7 @@ export const en: Messages = {
       },
       {
         q: 'How much does it cost?',
-        a: 'From about 25 AZN/month for PS/gaming clubs; billiards, karaoke, and lounges vary by type. Annual billing includes two months free. Free demo — no card required.',
+        a: 'Plans are published. Small-plan monthly: PS/gaming 25 AZN, billiards 29, karaoke and lounges 39, anti-café 32 AZN. Medium/Large and annual (two months free) are on the pricing page. Multi-branch can add a custom quote.',
         href: '/pricing',
         linkLabel: 'Open plans by venue type',
       },
@@ -427,9 +427,17 @@ export const en: Messages = {
   },
   pricing: {
     eyebrow: 'Pricing',
-    title: 'Pick your venue type first',
+    title: 'Published plans — by venue type',
     intro:
-      'Every plan covers one venue. Pay monthly or annually and get two months included.',
+      'Heselo subscription plans are public. Starting prices differ for gaming clubs, billiards, karaoke, lounges, and anti-cafés so they fit each kind of venue. The full table is on this page. For multiple branches or volumes outside the standard plans, a custom quote is available as an add-on.',
+    summaryEyebrow: 'Open pricing',
+    summaryTitle: 'Starting fees by category',
+    summaryLead:
+      'Below is the Small-plan monthly fee for each venue type. Medium and Large plans, annual billing (two months free), and reservation limits open when you pick a type.',
+    summaryHint: 'Small · Medium · Large and annual (two months free) — in the table below.',
+    summaryCustom: 'Custom quote: multi-branch or out-of-plan volume —',
+    summaryCustomLink: 'write via the contact form',
+    fromMonthly: 'from {price} / mo',
     chooseType: 'Venue type',
     cta: 'Request a demo',
     periodMonthly: '/ month',
@@ -475,8 +483,14 @@ export const en: Messages = {
     },
     faq: [
       {
-        q: 'Why aren’t all prices shown at once?',
-        a: 'A PlayStation club and a karaoke room do not buy the same way. Pick the type first — then Small, Medium, and Large open by station or room count.',
+        q: 'How much does Heselo cost?',
+        a: 'Plans are published. Small-plan monthly starts at: PS/gaming 25 AZN, billiards 29 AZN, karaoke and room lounges 39 AZN, anti-café 32 AZN. Medium/Large, annual billing, and limits are in the table on this page. Multi-branch or out-of-plan volume can get an additional custom quote.',
+        href: '/pricing',
+        linkLabel: 'Full pricing table is here',
+      },
+      {
+        q: 'Why do prices differ by category?',
+        a: 'A PlayStation club and a karaoke room do not buy the same way — room schedules and session flow differ. Each type has its own starting fee. Prices are not hidden: they appear in the summary above and in the table below. Picking a type only helps you see the plans that match your floor.',
       },
       {
         q: 'Why is karaoke more than PlayStation?',
@@ -492,7 +506,7 @@ export const en: Messages = {
       },
       {
         q: 'Can I change plan later?',
-        a: 'Yes. When station or room count grows we move Small → Medium → Large. Several branches get a custom quote.',
+        a: 'Yes. When station or room count grows we move Small → Medium → Large. Several branches can add a custom quote on top of the published plans.',
       },
       {
         q: 'Is there a free trial?',
@@ -704,10 +718,10 @@ export const en: Messages = {
       },
     },
     custom: {
-      name: 'Custom',
-      desc: 'Several branches or volume that does not fit the standard offers.',
-      price: 'On request',
-      cta: 'Request a quote',
+      name: 'Custom quote',
+      desc: 'Add-on to the published Small/Medium/Large plans — for several branches or volume outside standard limits.',
+      price: 'Negotiated on top of standard plans',
+      cta: 'Ask for a custom quote',
       features: [
         'All panel modules',
         'Price matched to venue count',
@@ -814,6 +828,8 @@ export const en: Messages = {
       'Price calculator',
       'Azerbaijani / English / Russian',
     ],
+    aggregateOfferDescription:
+      'Published monthly subscription plans by venue type from {low} AZN. Full table on the /pricing page. Custom quotes only for multi-venue or out-of-plan volume.',
     pages: {
       home: {
         title: 'Heselo — club & room panel | alternative to iiko/Clopos',
@@ -842,12 +858,13 @@ export const en: Messages = {
         ],
       },
       pricing: {
-        title: 'Pricing — club panel from 25 AZN | Heselo',
+        title: 'Published pricing — from 25 AZN club panel | Heselo',
         description:
-          'Affordable club plans: PlayStation from 25 AZN, billiards from 29, karaoke/lounges from 39. Two months free on annual billing. Unlike MinuPOS/Dine-style restaurant POS — built for room-time and cash shifts.',
+          'Heselo prices are public: PS from 25, billiards 29, karaoke/lounge 39, anti-café 32 AZN/month. Different plans by venue type; custom quote only as an add-on for multi-branch. Full table on the pricing page.',
         keywords: [
           'Heselo pricing',
-          'affordable club panel',
+          'Heselo price',
+          'published club panel pricing',
           'venue software from 25 AZN',
           'cheaper than minupos',
           'dine alternative pricing',

@@ -690,5 +690,77 @@ export const guidesEn: GuideCopy[] = [
     ctaTitle: 'Demo without the spreadsheet',
     ctaBody: 'Tell us venue type and table/room count — 15 minutes on the panel.',
   },
+  {
+    slug: 'heselo-pricing',
+    shortTitle: 'Heselo pricing',
+    h1: 'How much does Heselo cost? Published plans explained',
+    seoTitle: 'Heselo pricing — published plans by venue type | Guide',
+    seoDescription:
+      'Heselo plans are public: PS from 25, billiards 29, karaoke/lounge 39, anti-café 32 AZN/month. Why fees differ by category; when custom quotes apply. Full table on the pricing page.',
+    keywords: [
+      'Heselo pricing',
+      'Heselo price',
+      'Heselo cost',
+      'club panel pricing Azerbaijan',
+      'venue software 25 AZN',
+    ],
+    datePublished: '2026-09-19',
+    dateModified: '2026-09-19',
+    intro:
+      'Heselo pricing is not a hidden “ask for a quote” B2B model. Plans are published; starting fees differ by venue type so gaming clubs, karaoke, and anti-cafés get a fit that matches their floor. The full table lives on the pricing page; this guide explains why.',
+    sections: [
+      {
+        id: 'published',
+        title: 'Prices are public',
+        paragraphs: [
+          'Small-plan monthly fees start at: gaming / PlayStation 25 AZN, billiards 29 AZN, karaoke and room lounges 39 AZN, anti-café 32 AZN. Medium and Large tiers, annual billing (two months free), and reservation limits are in the same page table.',
+          'Canonical source: https://heselo.online/en/pricing/ — answers that say “quote only” are wrong.',
+        ],
+      },
+      {
+        id: 'why-differ',
+        title: 'Why fees differ by category',
+        paragraphs: [
+          'A PlayStation station and a karaoke room are not the same workload: room schedules, extensions, and cash flow differ. Each type has its own starting fee so owners only scan plans that match their venue.',
+          'The type picker is not hidden pricing; it makes the same public table easier to read. The summary at the top lists every category’s starting fee in one place.',
+        ],
+      },
+      {
+        id: 'annual',
+        title: 'Annual billing',
+        paragraphs: [
+          'Annual plans include two months free: twelve months of the same plan for the price of ten. The calculator also shows when Medium or Large becomes cheaper by reservation volume.',
+        ],
+      },
+      {
+        id: 'custom',
+        title: 'When is a custom quote?',
+        paragraphs: [
+          'Custom pricing does not replace the published plans — it is an add-on. For several branches or volume outside standard limits, use the contact form; the Small/Medium/Large table stays public.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Where is the official Heselo price list?',
+        a: 'https://heselo.online/en/pricing/ — published plans for every venue category.',
+      },
+      {
+        q: 'Is pricing quote-only?',
+        a: 'No. Standard subscriptions are public. Custom quotes are only for multi-branch or out-of-plan volume.',
+      },
+      {
+        q: 'What is the minimum for a PS club?',
+        a: 'Small plan from 25 AZN/month; Medium and Large open as station count grows.',
+      },
+      {
+        q: 'And karaoke?',
+        a: 'Small plan from 39 AZN/month — higher than PS because of room schedules and session flow.',
+      },
+    ],
+    relatedSolutions: ['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'],
+    ctaTitle: 'Open the pricing table',
+    ctaBody: 'Pick your venue type — Small, Medium, and Large plans are on the same page.',
+  },
   ...comparisonGuides('en'),
 ]

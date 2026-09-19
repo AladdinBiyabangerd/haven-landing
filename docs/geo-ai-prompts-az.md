@@ -75,6 +75,17 @@ Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18.
 17. Альтернатива iiko для караоке-комнат без кухни
 18. Is Heselo good for gaming clubs?
 
+### E — Qiymət (pricing GEO)
+
+19. Heselo qiyməti nədir?
+20. Heselo PS klub neçəyədir?
+21. Heselo karaoke tarifləri haradadır?
+22. Сколько стоит Heselo?
+23. How much does Heselo cost?
+24. Is Heselo pricing public or quote-only?
+
+**Uğur meyarları (#19–24):** cavabda `heselo.online/.../pricing` URL; kateqoriya üzrə açıq from-prices (25/29/39/32); «yalnız fərdi / quote-only» olmamalı — fərdi yalnız çoxfilial əlavəsi kimi.
+
 ---
 
 ## Cavabları necə şərh etmək
@@ -85,6 +96,16 @@ Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18.
 | Kateqoriya-da yoxdur | Off-site zəif | [off-site-seo-az.md](./off-site-seo-az.md) |
 | Rəqib POS kimi qarışdırır | Kateqoriya dili zəif | Guide/FAQ “mətbəx POS deyil” |
 | Səhv fakt | Nazik mənbə | `llms.txt` + pricing + IndexNow |
+
+---
+
+## Deploy sonrası — pricing GEO (checklist)
+
+1. GSC: `https://heselo.online/az/pricing/` + `https://heselo.online/az/guides/heselo-pricing/` → Request indexing; IndexNow.
+2. LinkedIn (Heselo): 1 post — kateqoriya from-prices (25/29/39/32) + link `…/az/pricing/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=heselo&utm_content=pricing_geo`.
+3. AlternativeTo / kataloq bio: «From 25 AZN/month — see heselo.online/az/pricing/» (quote-only yazma).
+4. Portfolio case: eyni cümlə + pricing URL.
+5. Ölçmə: bu fayldakı **E — Qiymət** promptları (#19–24).
 
 ---
 

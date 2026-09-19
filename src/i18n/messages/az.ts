@@ -169,7 +169,7 @@ export const az: Messages = {
       },
       {
         q: 'Qiymət nə qədərdir?',
-        a: 'PS/oyun klubundan təxminən 25 AZN/aydan başlayır; bilyard, karaoke və launj tipə görə dəyişir. İllik ödənişdə 2 ay hədiyyə. Pulsuz demo — kart lazım deyil.',
+        a: 'Açıq abunə planları var. Kiçik plandan: PS/oyun 25 AZN/ay, bilyard 29, karaoke və launj 39, antikafe 32 AZN/ay. Orta/Böyük və illik (2 ay hədiyyə) qiymətlər səhifəsindədir. Çoxfilial üçün əlavə fərdi təklif mümkündür.',
         href: '/pricing',
         linkLabel: 'Tarifləri tipə görə açın',
       },
@@ -427,9 +427,17 @@ export const az: Messages = {
   },
   pricing: {
     eyebrow: 'Qiymətlər',
-    title: 'Əvvəl məkan tipini seçin',
+    title: 'Açıq tariflər — məkan tipinə görə',
     intro:
-      'Hər tarif bir məkanı əhatə edir. Aylıq və ya iki ay hədiyyə ilə illik ödəniş seçə bilərsiniz.',
+      'Heselo-nun abunə planları açıqdır. Oyun klubu, bilyard, karaoke, launj və antikafe üçün fərqli başlanğıc qiymətlər var — sahibkarın məkanına uyğun olsun deyə. Tam cədvəl bu səhifədədir. Bir neçə filial və ya standart plana sığmayan həcm üçün əlavə olaraq fərdi təklif mümkündür.',
+    summaryEyebrow: 'Açıq qiymət',
+    summaryTitle: 'Kateqoriya üzrə başlanğıc tariflər',
+    summaryLead:
+      'Hər məkan tipi üçün Kiçik planın aylıq haqqı aşağıdadır. Orta və Böyük planlar, illik ödəniş (2 ay hədiyyə) və rezervasiya limitləri — tip seçəndən sonra açılır.',
+    summaryHint: 'Kiçik · Orta · Böyük və illik (2 ay hədiyyə) — aşağıdakı cədvəldə.',
+    summaryCustom: 'Fərdi təklif: bir neçə filial və ya limitdən kənar həcm —',
+    summaryCustomLink: 'əlaqə formasından yazın',
+    fromMonthly: '{price}-dən / ay',
     chooseType: 'Məkan tipi',
     cta: 'Demo istəyin',
     periodMonthly: '/ ay',
@@ -475,8 +483,14 @@ export const az: Messages = {
     },
     faq: [
       {
-        q: 'Niyə bütün qiymətlər bir yerdə deyil?',
-        a: 'PS klubu ilə karaoke eyni cür ödəmir. Əvvəl tipi seçin — sonra stansiya və ya otaq sayına görə Kiçik, Orta və Böyük tariflər açılır.',
+        q: 'Heselo-nun qiyməti nədir?',
+        a: 'Açıq abunə planları var. Məkan tipinə görə Kiçik plandan başlayır: PS/oyun klubu 25 AZN/ay, bilyard 29 AZN/ay, karaoke və otaqlı launj 39 AZN/ay, antikafe 32 AZN/ay. Orta və Böyük planlar, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Çoxfilial və ya standart plana sığmayan həcm üçün əlavə fərdi təklif mümkündür.',
+        href: '/pricing',
+        linkLabel: 'Tam tarif cədvəli burada',
+      },
+      {
+        q: 'Niyə kateqoriya üzrə fərqli qiymətlər var?',
+        a: 'PS klubu ilə karaoke eyni cür ödəmir — otaq cədvəli və sessiya axını fərqlidir. Ona görə hər tipin öz başlanğıc tarifi var. Qiymətlər gizli deyil: yuxarıdakı xülasədə və aşağıdakı cədvəldə açıq göstərilir. Tipi seçmək yalnız öz məkanınıza uyğun planları rahat görmək üçündür.',
       },
       {
         q: 'Niyə karaoke PS-dən bahadır?',
@@ -492,7 +506,7 @@ export const az: Messages = {
       },
       {
         q: 'Tarifi sonra dəyişmək olar?',
-        a: 'Bəli. Stansiya və ya otaq sayı artanda Kiçikdən Orta və ya Böyüyə keçirik. Bir neçə filial üçün fərdi qiymət var.',
+        a: 'Bəli. Stansiya və ya otaq sayı artanda Kiçikdən Orta və ya Böyüyə keçirik. Bir neçə filial üçün açıq planlara əlavə olaraq fərdi təklif var.',
       },
       {
         q: 'Pulsuz sınaq var?',
@@ -704,10 +718,10 @@ export const az: Messages = {
       },
     },
     custom: {
-      name: 'Fərdi',
-      desc: 'Bir neçə filial və ya standart təklifə sığmayan həcm üçün.',
-      price: 'Danışıq əsasında',
-      cta: 'Qiymət sorğusu',
+      name: 'Fərdi təklif',
+      desc: 'Açıq Kiçik/Orta/Böyük planlara əlavə — bir neçə filial və ya standart limitə sığmayan həcm üçün.',
+      price: 'Standart plana əlavə razılaşma',
+      cta: 'Fərdi təklif soruşun',
       features: [
         'Bütün panel modulları',
         'Məkan sayına uyğun qiymət',
@@ -814,6 +828,8 @@ export const az: Messages = {
       'Qiymət hesablama',
       'Azərbaycan / İngilis / Rus',
     ],
+    aggregateOfferDescription:
+      'Açıq aylıq abunə planları məkan tipinə görə {low} AZN-dən. Tam cədvəl /pricing səhifəsində. Fərdi təklif yalnız çoxfilial və ya standart plana sığmayan həcm üçündür.',
     pages: {
       home: {
         title: 'Heselo — klub və otaq paneli | iiko/Clopos əvəzinə',
@@ -842,12 +858,13 @@ export const az: Messages = {
         ],
       },
       pricing: {
-        title: 'Qiymətlər — 25 AZN-dən klub paneli | Heselo',
+        title: 'Açıq tariflər — 25 AZN-dən klub paneli | Heselo',
         description:
-          'Klub üçün sərfəli tarifi: PS 25 AZN-dən, bilyard 29 AZN-dən, karaoke/launj 39 AZN-dən. İllik ödənişdə 2 ay hədiyyə. MinuPOS/Dine tipli restoran POS-dan fərqli — otaq-vaxt və kassa üçün.',
+          'Heselo qiymətləri açıqdır: PS 25, bilyard 29, karaoke/launj 39, antikafe 32 AZN/aydan. Məkan tipinə görə fərqli planlar; çoxfilial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
         keywords: [
           'Heselo qiymət',
-          'ucuz klub paneli',
+          'Heselo tarif',
+          'açıq klub paneli qiyməti',
           '25 AZN məkan proqramı',
           'minupos-dan sərfəli',
           'dine-dən sərfəli klub',

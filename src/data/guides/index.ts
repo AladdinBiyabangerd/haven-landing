@@ -72,6 +72,7 @@ const RELATED_COMPARISON: Partial<Record<GuideSlug, GuideSlug[]>> = {
   'izi-alternative': ['playstation-cafe-software-alternative', 'affordable-club-pos'],
   'kaktus-alternative': ['club-pos-vs-excel', 'affordable-club-pos'],
   'resto-az-alternative': ['clopos-alternative', 'affordable-club-pos'],
+  'heselo-pricing': ['affordable-club-pos', 'club-pos-vs-excel'],
 }
 
 const byLocale: Record<Locale, { hub: GuidesHubCopy; items: GuideCopy[] }> = {

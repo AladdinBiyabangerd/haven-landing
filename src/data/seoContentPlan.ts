@@ -7,6 +7,7 @@ export const SEO_CONTENT_PLAN = {
     { id: 'what-is-heselo', status: 'covered-on-home', note: 'Home #about + solutions hub' },
     { id: 'how-heselo-works', status: 'covered-on-home', note: 'How section + features page' },
     { id: 'who-created-heselo', path: '/about/', status: 'live', note: 'Sole founder Aladdin Biyabangerd + Person schema' },
+    { id: 'heselo-pricing', path: '/guides/heselo-pricing/', status: 'live', note: 'Published pricing explainer → /pricing' },
   ],
   business: [
     { id: 'gaming', path: '/solutions/gaming/', status: 'live' },

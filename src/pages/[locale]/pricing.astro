@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import Cta from '@/components/Cta.astro'
 import Faq from '@/components/Faq.astro'
 import PricingOffers from '@/components/PricingOffers.astro'
+import PricingSummary from '@/components/PricingSummary.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
 
@@ -43,6 +44,7 @@ const faqMessages = {
         <h1 class="type-page-title">{page.title}</h1>
         <p class="lead">{page.intro}</p>
       </div>
+      <PricingSummary locale={locale} messages={messages} />
       <PricingOffers locale={locale} messages={messages} />
     </div>
   </section>

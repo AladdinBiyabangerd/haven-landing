@@ -11,8 +11,8 @@ import CtaBanner from '@/components/CtaBanner.astro'
 import NextThought from '@/components/NextThought.astro'
 import { localePath } from '@/lib/site'
 import { contactPath, pricingPath } from '@/lib/journey'
-import { VENUE_STORAGE_KEY, isVenueOfferSlug, venuePriceRange } from '@/lib/venueOffers'
-import { formatMoneyRange } from '@/lib/format'
+import { VENUE_STORAGE_KEY, getVenueOffer, isVenueOfferSlug } from '@/lib/venueOffers'
+import { fillTemplate, formatMoney } from '@/lib/format'
 
 export function getStaticPaths() {
   return LOCALES.flatMap((locale) =>
@@ -36,14 +36,13 @@ const relatedGuide = getGuideForSolution(locale, solution.slug)
 const altGuides = getAltGuidesForSolution(locale, solution.slug)
 const productShotId = SOLUTION_SHOT_MAP[solution.slug]
 const extraShotId = SOLUTION_EXTRA_SHOT_MAP[solution.slug]
-const range = venuePriceRange(solution.slug)
-const offerPrice = range
+const venueOffer = getVenueOffer(solution.slug)
+const fromFee = venueOffer?.plans[0].monthlyFee
+const offerPrice = fromFee != null
   ? {
-      monthlyFee: formatMoneyRange(range.low, range.high, locale),
-      period:
-        range.model === 'monthly'
-          ? messages.pricing.periodMonthly
-          : messages.pricing.periodOneTime,
+      label: fillTemplate(messages.pricing.fromMonthly, {
+        price: formatMoney(fromFee, locale),
+      }),
     }
   : null
 const persistVenueType = isVenueOfferSlug(solution.slug) ? solution.slug : ''
@@ -82,8 +81,7 @@ const faqMessages = {
           offerPrice ? (
             <p class="price-chip">
               <a href={localePath(locale, `/pricing#${solution.slug}`)} data-pricing-type={solution.slug}>
-                {offerPrice.monthlyFee}
-                <span>{offerPrice.period}</span>
+                {offerPrice.label}
               </a>
             </p>
           ) : null

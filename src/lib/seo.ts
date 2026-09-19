@@ -1,7 +1,8 @@
 import type { Locale } from '@/i18n/config'
 import { HTML_LANG, LOCALES, OG_LOCALES } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { allVenuePlans, monthlyFeeRange } from '@/lib/venueOffers'
+import { fillTemplate } from '@/lib/format'
+import { allVenuePlans, monthlyFeeRange, VENUE_OFFERS } from '@/lib/venueOffers'
 import {
   absoluteUrl,
   FOUNDER,
@@ -162,6 +163,7 @@ export function buildJsonLdGraph(
       offerCount: String(allVenuePlans().length),
       availability: 'https://schema.org/InStock',
       url: localeUrl(locale, '/pricing'),
+      description: fillTemplate(messages.seo.aggregateOfferDescription, { low }),
     }
   }
 
@@ -180,6 +182,15 @@ export function buildJsonLdGraph(
   }
 
   const isAboutPage = input.slug === '/about' || input.slug === '/about/'
+  const isPricingPage = input.slug === '/pricing' || input.slug === '/pricing/'
+
+  const pageType = input.article
+    ? 'Article'
+    : isAboutPage
+      ? 'AboutPage'
+      : isPricingPage
+        ? 'PricingPage'
+        : 'WebPage'
 
   const graph: Record<string, unknown>[] = [
     {
@@ -222,7 +233,7 @@ export function buildJsonLdGraph(
       inLanguage: HTML_LANG[locale],
     },
     {
-      '@type': input.article ? 'Article' : isAboutPage ? 'AboutPage' : 'WebPage',
+      '@type': pageType,
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
       name: input.title,
@@ -236,6 +247,11 @@ export function buildJsonLdGraph(
             mainEntity: { '@id': founderId },
             author: { '@id': founderId },
             publisher: { '@id': `${siteUrl()}/#organization` },
+          }
+        : {}),
+      ...(isPricingPage
+        ? {
+            mainEntity: { '@id': `${siteUrl()}/#offer-catalog` },
           }
         : {}),
       ...(input.article
@@ -331,6 +347,44 @@ export function buildJsonLdGraph(
   }
 
   if (input.slug === '/pricing' || input.slug === '/pricing/') {
+    const startingOffers = VENUE_OFFERS.map((offer) => {
+      const plan = offer.plans[0]
+      const copy = messages.pricing.offers[offer.slug]
+      return {
+        '@type': 'Offer',
+        '@id': `${pageUrl}#offer-${offer.slug}-start`,
+        name: `${copy.name} — ${messages.pricing.planNames.starter}`,
+        description: fillTemplate(messages.pricing.fromMonthly, {
+          price: `${plan.monthlyFee} AZN`,
+        }),
+        price: String(plan.monthlyFee),
+        priceCurrency: 'AZN',
+        availability: 'https://schema.org/InStock',
+        url: `${pageUrl}#${offer.slug}`,
+        offeredBy: { '@id': `${siteUrl()}/#organization` },
+        eligibleRegion: { '@type': 'Country', name: messages.seo.countryName },
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: String(plan.monthlyFee),
+          priceCurrency: 'AZN',
+          unitText: 'MONTH',
+        },
+      }
+    })
+
+    graph.push({
+      '@type': 'OfferCatalog',
+      '@id': `${siteUrl()}/#offer-catalog`,
+      name: messages.pricing.summaryTitle,
+      description: fillTemplate(messages.seo.aggregateOfferDescription, { low }),
+      url: pageUrl,
+      itemListElement: startingOffers.map((offer, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: offer,
+      })),
+    })
+
     graph.push(
       ...allVenuePlans().map(({ offer, plan }) => {
         const copy = messages.pricing.offers[offer.slug]
@@ -338,7 +392,7 @@ export function buildJsonLdGraph(
           '@type': 'Offer',
           '@id': `${pageUrl}#offer-${offer.slug}-${plan.id}`,
           name: `${copy.name} — ${messages.pricing.planNames[plan.id]}`,
-          description: copy.intro,
+          description: `${copy.intro} ${fillTemplate(messages.pricing.fromMonthly, { price: `${plan.monthlyFee} AZN` })}`,
           price: String(plan.monthlyFee),
           priceCurrency: 'AZN',
           availability: 'https://schema.org/InStock',
@@ -346,7 +400,14 @@ export function buildJsonLdGraph(
           offeredBy: { '@id': `${siteUrl()}/#organization` },
           eligibleRegion: { '@type': 'Country', name: messages.seo.countryName },
           ...(offer.model === 'monthly'
-            ? { priceSpecification: { '@type': 'UnitPriceSpecification', price: String(plan.monthlyFee), priceCurrency: 'AZN', unitText: 'MONTH' } }
+            ? {
+                priceSpecification: {
+                  '@type': 'UnitPriceSpecification',
+                  price: String(plan.monthlyFee),
+                  priceCurrency: 'AZN',
+                  unitText: 'MONTH',
+                },
+              }
             : {}),
         }
       }),
