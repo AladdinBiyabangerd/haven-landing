@@ -39,15 +39,15 @@ const catalog: CatalogEntry[] = [
         seoDescription:
           'iiko və Heselo-nu oyun, karaoke və bilyard məkanları üçün dürüst müqayisə edin. Vaxt sessiyası, rezervasiya, kassa və qiymət fərqlərini öyrənin.',
         intro:
-          'iiko restoran idarəetməsində, mətbəx axınında və çatdırılmada güclü sistemdir. Məkanınızın əsas xidməti otaq və ya masa vaxtıdırsa, Heselo həmin əməliyyat modelinə daha yaxın alternativ ola bilər.',
+          'iiko restoran idarəetməsində, mətbəx prosesində və çatdırılmada güclü sistemdir. Məkanınızın əsas xidməti otaq və ya masa vaxtıdırsa, Heselo həmin əməliyyat modelinə daha yaxın alternativ ola bilər.',
         competitorFit:
-          'Restoran zalı, mətbəx ekranı, reseptura, QR menyu və çatdırılma vahid axında işləməlidirsə, iiko daha uyğun seçimdir. Heselo tam restoran mətbəx POS-unu əvəz etmək üçün nəzərdə tutulmayıb.',
+          'Restoran zalı, mətbəx ekranı, reseptura, QR menyu və çatdırılma bir prosesdə işləməlidirsə, iiko daha uyğun seçimdir. Heselo tam restoran mətbəx POS-unu əvəz etmək üçün nəzərdə tutulmayıb.',
         heseloFit:
-          'PlayStation, karaoke otağı, bilyard masası, antikafe və lounge vaxtla satılırsa, Heselo rezervasiyanı canlı sessiya, kassa növbəsi və stokla birləşdirir.',
+          'PlayStation, karaoke otağı, bilyard masası, antikafe və launj vaxtla satılırsa, Heselo rezervasiyanı canlı sessiya, kassa növbəsi və stokla birləşdirir.',
         priceAngle:
           'Heselo 25 AZN/aydan başlayır və əsasən klub əməliyyatlarına fokuslanır. iiko üzrə yekun xərc seçilən modullar, inteqrasiya və tərəfdaş şərtlərindən asılı olduğuna görə aktual təklifi ayrıca almaq lazımdır.',
         switchNote:
-          'Əvvəlcə resursları — otaq, konsol və masaları — yaradın, sonra tarif və işçi səlahiyyətlərini qurun. Menyu və mətbəx prosesiniz varsa, keçiddən əvvəl onların ayrıca sistemdə qalacağını planlaşdırın.',
+          'Əvvəlcə otaq, konsol və masaları yaradın, sonra tarif və işçi səlahiyyətlərini qurun. Menyu və mətbəx prosesiniz varsa, keçiddən əvvəl onların ayrıca sistemdə qalacağını planlaşdırın.',
       },
       en: {
         shortTitle: 'iiko alternative for clubs',
@@ -98,15 +98,15 @@ const catalog: CatalogEntry[] = [
         seoDescription:
           'Clopos və Heselo müqayisəsi: restoran POS-u ilə otaq sessiyası idarəetməsinin fərqi, rezervasiya, kassa və stok imkanları.',
         intro:
-          'Clopos restoran və kafelərdə sifariş, menyu və mətbəx proseslərinə uyğun qurulub. Karaoke, oyun və lounge məkanında əsas hesab vaxtdan yaranırsa, Heselo daha məqsədli seçimdir.',
+          'Clopos restoran və kafelərdə sifariş, menyu və mətbəx proseslərinə uyğun qurulub. Karaoke, oyun və launj məkanında əsas hesab vaxtdan yaranırsa, Heselo daha məqsədli seçimdir.',
         competitorFit:
-          'Ofisiant sifarişi, mətbəx, QR menyu və çatdırılma gündəlik işin mərkəzindədirsə, Clopos-un restoran yönümlü axını üstünlük verir. Heselo bu funksiyaların tam əvəzi deyil.',
+          'Ofisiant sifarişi, mətbəx, QR menyu və çatdırılma gündəlik işin mərkəzindədirsə, Clopos-un restoran yönümlü prosesi üstünlük verir. Heselo bu funksiyaların tam əvəzi deyil.',
         heseloFit:
-          'Heselo otaq və resurs rezervasiyasını başlat-dayandır sessiyası, tarif, kassanın açılıb-bağlanması və məhsul qalığı ilə eyni iş axınına gətirir.',
+          'Heselo otaq, masa və stansiya rezervasiyasını başlat-dayandır sessiyası, tarif, kassanın açılıb-bağlanması və məhsul qalığı ilə eyni iş prosesinə gətirir.',
         priceAngle:
           'Heselo 25 AZN/aydan başlayır. Clopos-un aktual paket və avadanlıq xərclərini rəsmi təkliflə dəqiqləşdirib, yalnız istifadə edəcəyiniz funksiyalar üzrə müqayisə edin.',
         switchNote:
-          'Bir həftəlik rezervasiya və tarif nümunəsini Heselo demosunda sınaqdan keçirin. Restoran sifarişlərini köçürməyin; yalnız klub resurslarını və satış məhsullarını mərhələli qurun.',
+          'Bir həftəlik rezervasiya və tarif nümunəsini Heselo demosunda sınaqdan keçirin. Restoran sifarişlərini köçürməyin; yalnız klubun otaq, masa və stansiyalarını, satış məhsullarını mərhələli qurun.',
       },
       en: {
         shortTitle: 'Clopos alternative',
@@ -119,11 +119,11 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Clopos fits when waiter orders, kitchen operations, QR menus and delivery sit at the centre of daily work. Heselo does not claim to replace that full restaurant workflow.',
         heseloFit:
-          'Heselo brings room and resource bookings, start-stop sessions, rates, cash-shift opening and closing, and product stock into one club workflow.',
+          'Heselo brings room, table and station bookings, start-stop sessions, rates, cash-shift opening and closing, and product stock into one club workflow.',
         priceAngle:
           'Heselo starts from 25 AZN per month. Confirm current Clopos package and hardware costs through an official quote, then compare only the capabilities you will actually use.',
         switchNote:
-          'Test a representative week of bookings and rates in the Heselo demo. Keep restaurant orders in the appropriate system and migrate club resources and sale items in stages.',
+          'Test a representative week of bookings and rates in the Heselo demo. Keep restaurant orders in the appropriate system and migrate club rooms, tables, stations and sale items in stages.',
       },
       ru: {
         shortTitle: 'Альтернатива Clopos',
@@ -136,11 +136,11 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Clopos уместнее, когда основа работы — заказы официантов, кухня, QR-меню и доставка. Heselo не позиционируется как полноценная замена этому ресторанному контуру.',
         heseloFit:
-          'Heselo объединяет бронирование комнат и ресурсов, запуск сеанса, тарифы, открытие и закрытие кассовой смены и остатки товаров.',
+          'Heselo объединяет бронирование комнат, столов и станций, запуск сеанса, тарифы, открытие и закрытие кассовой смены и остатки товаров.',
         priceAngle:
           'Heselo стоит от 25 AZN в месяц. Уточните актуальную стоимость пакета и оборудования Clopos по официальному предложению и сравнивайте только нужные вам функции.',
         switchNote:
-          'Проверьте в демо Heselo типичную неделю бронирований и тарифов. Ресторанные заказы оставьте в профильной системе, а клубные ресурсы и товары переносите поэтапно.',
+          'Проверьте в демо Heselo типичную неделю бронирований и тарифов. Ресторанные заказы оставьте в профильной системе, а клубные комнаты, столы, станции и товары переносите поэтапно.',
       },
     },
   },
@@ -155,7 +155,7 @@ const catalog: CatalogEntry[] = [
         h1: 'Əyləncə məkanları üçün Dine alternativi',
         seoTitle: 'Dine alternativi — Heselo klub sistemi',
         seoDescription:
-          'Dine və Heselo arasında seçim: restoran sifarişi və mətbəx axınına qarşı otaq rezervasiyası, vaxt sessiyası və kassa idarəetməsi.',
+          'Dine və Heselo arasında seçim: restoran sifarişi və mətbəx prosesinə qarşı otaq rezervasiyası, vaxt sessiyası və kassa idarəetməsi.',
         intro:
           'Dine restoran sifarişləri, masa xidməti və rəqəmsal menyu üçün məntiqli seçim ola bilər. Gəlirin əsas hissəsi otaq, konsol və ya bilyard vaxtından gəlirsə, Heselo fərqli ehtiyacı həll edir.',
         competitorFit:
@@ -211,20 +211,20 @@ const catalog: CatalogEntry[] = [
     copy: {
       az: {
         shortTitle: 'Restomas alternativi',
-        h1: 'Klub və lounge məkanları üçün Restomas alternativi',
+        h1: 'Klub və launj məkanları üçün Restomas alternativi',
         seoTitle: 'Restomas alternativi — Heselo',
         seoDescription:
-          'Restomas və Heselo-nu klub, karaoke, bilyard və lounge üçün müqayisə edin. Vaxt hesabı, rezervasiya, kassa növbəsi və stok.',
+          'Restomas və Heselo-nu klub, karaoke, bilyard və launj üçün müqayisə edin. Vaxt hesabı, rezervasiya, kassa növbəsi və stok.',
         intro:
-          'Restomas restoran və kafe satışını, menyunu və xidmət axınını idarə etmək üçün uyğun ola bilər. Otaq və masa vaxtı ayrıca rezervasiya və canlı sessiya tələb edirsə, Heselo daha birbaşa yanaşır.',
+          'Restomas restoran və kafe satışını, menyunu və xidmət prosesini idarə etmək üçün uyğun ola bilər. Otaq və masa vaxtı ayrıca rezervasiya və canlı sessiya tələb edirsə, Heselo daha birbaşa yanaşır.',
         competitorFit:
           'Mətbəx sifarişləri, masa xidməti, çek və restoran hesabatları əsas ehtiyacdırsa, Restomas tərəfi daha uyğun ola bilər. Heselo tam restoran POS-u deyil.',
         heseloFit:
-          'Heselo vaxt resurslarının təqvimini, aktiv sessiyalarını, kassa növbəsini və inventar satışını bir paneldə izləmək istəyən klublar üçündür.',
+          'Heselo vaxtla satılan otaq və masaların təqvimini, aktiv sessiyaları, kassa növbəsini və inventar satışını bir paneldə izləmək istəyən klublar üçündür.',
         priceAngle:
           'Heselo 25 AZN/aydan başlayır. Restomas üzrə cari lisenziya, quraşdırma və avadanlıq şərtlərini ayrıca soruşun; müqayisəyə birdəfəlik xərcləri də daxil edin.',
         switchNote:
-          'Resurs siyahısını və tarifləri əvvəlcədən təmizləyin, sonra demo üzərindən tipik iş gününü sınaqdan keçirin. Restoran hissəsi qalırsa, iki sistemin məsuliyyətini aydın bölün.',
+          'Otaq və masa siyahısını və tarifləri əvvəlcədən təmizləyin, sonra demo üzərindən tipik iş gününü sınaqdan keçirin. Restoran hissəsi qalırsa, iki sistemin məsuliyyətini aydın bölün.',
       },
       en: {
         shortTitle: 'Restomas alternative',
@@ -237,11 +237,11 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Restomas may fit better when kitchen orders, table service, receipts and restaurant reporting are the main requirements. Heselo is not a full restaurant POS.',
         heseloFit:
-          'Heselo is for clubs that want time-resource calendars, active sessions, cash shifts and inventory sales visible in one panel.',
+          'Heselo is for clubs that want calendars for rooms and tables sold by time, active sessions, cash shifts and inventory sales visible in one panel.',
         priceAngle:
           'Heselo starts from 25 AZN per month. Ask separately about current Restomas licensing, setup and hardware terms, including one-off costs in the comparison.',
         switchNote:
-          'Clean up the resource list and rates first, then test a normal business day in the demo. If restaurant operations remain, define clearly which system owns each workflow.',
+          'Clean up the room and table list and rates first, then test a normal business day in the demo. If restaurant operations remain, define clearly which system owns each workflow.',
       },
       ru: {
         shortTitle: 'Альтернатива Restomas',
@@ -254,11 +254,11 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Restomas может быть уместнее, если главные задачи — кухонные заказы, обслуживание столиков, чеки и ресторанная отчётность. Heselo не является полноценной ресторанной POS-системой.',
         heseloFit:
-          'Heselo подходит клубам, которым нужен единый экран для календаря ресурсов, активных сеансов, кассовых смен и складских продаж.',
+          'Heselo подходит клубам, которым нужен единый экран для календаря комнат и столов, активных сеансов, кассовых смен и складских продаж.',
         priceAngle:
           'Heselo стоит от 25 AZN в месяц. Отдельно уточните актуальные условия лицензии, внедрения и оборудования Restomas и учтите разовые расходы.',
         switchNote:
-          'Сначала приведите в порядок список ресурсов и тарифы, затем проверьте обычный рабочий день в демо. Если ресторанный контур остаётся, чётко разделите ответственность двух систем.',
+          'Сначала приведите в порядок список комнат и столов и тарифы, затем проверьте обычный рабочий день в демо. Если ресторанный контур остаётся, чётко разделите ответственность двух систем.',
       },
     },
   },
@@ -279,11 +279,11 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Restoran sifarişi, mətbəx, menyu və uyğun avadanlıq paketi birlikdə lazımdırsa, MinuPOS-un ixtisaslaşmış təklifi daha məntiqlidir. Heselo tam restoran mətbəx həlli deyil.',
         heseloFit:
-          'Heselo oyun, karaoke, bilyard, antikafe və lounge məkanlarında rezervasiya, canlı vaxt hesabı, kassa növbəsi və stoku birləşdirir.',
+          'Heselo oyun, karaoke, bilyard, antikafe və launj məkanlarında rezervasiya, canlı vaxt hesabı, kassa növbəsi və stoku birləşdirir.',
         priceAngle:
           'MinuPOS paketləri tez-tez 99–799 AZN kimi təqdim olunur, Heselo isə 25 AZN/aydan başlayır. Kampaniya və paket tərkibi dəyişə bildiyi üçün yekun qərardan əvvəl hər iki aktual təklifi yoxlayın.',
         switchNote:
-          'Əvvəlcə istifadə etmədiyiniz restoran modullarını müəyyən edin. Heselo demosunda resurs, tarif və kassa ssenarisini quraraq real aylıq qənaəti funksional fərqlərlə birlikdə ölçün.',
+          'Əvvəlcə istifadə etmədiyiniz restoran modullarını müəyyən edin. Heselo demosunda otaq və masaları, tarifləri və kassa ssenarisini quraraq real aylıq qənaəti funksional fərqlərlə birlikdə ölçün.',
       },
       en: {
         shortTitle: 'MinuPOS alternative',
@@ -300,7 +300,7 @@ const catalog: CatalogEntry[] = [
         priceAngle:
           'MinuPOS packages are often presented at 99–799 AZN, while Heselo starts from 25 AZN per month. Promotions and package contents can change, so verify both current offers before deciding.',
         switchNote:
-          'Identify restaurant modules you do not use first. Build your resource, rate and cash scenario in the Heselo demo, then assess real savings alongside functional differences.',
+          'Identify restaurant modules you do not use first. Set up your rooms, tables, rates and cash scenario in the Heselo demo, then assess real savings alongside functional differences.',
       },
       ru: {
         shortTitle: 'Альтернатива MinuPOS',
@@ -317,7 +317,7 @@ const catalog: CatalogEntry[] = [
         priceAngle:
           'Пакеты MinuPOS часто предлагаются за 99–799 AZN, а Heselo начинается от 25 AZN в месяц. Акции и состав пакетов меняются, поэтому перед решением проверьте обе актуальные цены.',
         switchNote:
-          'Сначала определите ресторанные модули, которыми вы не пользуетесь. В демо Heselo настройте ресурсы, тарифы и кассовый сценарий, затем оцените экономию вместе с разницей функций.',
+          'Сначала определите ресторанные модули, которыми вы не пользуетесь. В демо Heselo настройте комнаты и столы, тарифы и кассовый сценарий, затем оцените экономию вместе с разницей функций.',
       },
     },
   },
@@ -332,13 +332,13 @@ const catalog: CatalogEntry[] = [
         h1: 'Otaq və vaxt biznesi üçün robotPOS alternativi',
         seoTitle: 'robotPOS alternativi — Heselo',
         seoDescription:
-          'robotPOS və Heselo müqayisəsi: restoran avtomatlaşdırması yoxsa karaoke, gaming, bilyard və lounge üçün rezervasiya və sessiya sistemi.',
+          'robotPOS və Heselo müqayisəsi: restoran avtomatlaşdırması yoxsa karaoke, oyun, bilyard və launj üçün rezervasiya və sessiya sistemi.',
         intro:
           'robotPOS restoran və kafe avtomatlaşdırmasına uyğun seçimdir. Biznesinizdə məhsul sifarişindən çox otaq və masa vaxtını izləmək vacibdirsə, Heselo alternativ kimi nəzərdən keçirilə bilər.',
         competitorFit:
           'Mətbəxə sifariş ötürülməsi, menyu, ofisiant işi və restoran hesabatı əsasdırsa, robotPOS daha doğru kateqoriyadadır. Heselo tam restoran POS funksiyalarını əvəz etmir.',
         heseloFit:
-          'Heselo rezervasiyadan canlı sessiyaya keçidi, vaxt tarifini, növbə kassasını və sessiyaya əlavə olunan stok məhsullarını klub məntiqi ilə idarə edir.',
+          'Heselo rezervasiyadan canlı sessiyaya keçidi, vaxt tarifini, növbə kassasını və sessiyaya əlavə olunan stok məhsullarını klub iş qaydası ilə idarə edir.',
         priceAngle:
           'Heselo 25 AZN/aydan başlayır. robotPOS üçün lisenziya, quraşdırma, dəstək və avadanlıq daxil olmaqla aktual ümumi təklif istəyin.',
         switchNote:
@@ -391,7 +391,7 @@ const catalog: CatalogEntry[] = [
         h1: 'Sərfəli klub POS alternativi necə seçilir?',
         seoTitle: 'Sərfəli klub POS alternativi — Heselo',
         seoDescription:
-          'Gaming, karaoke, bilyard, antikafe və lounge üçün sərfəli POS seçimi: vaxt sessiyası, rezervasiya, kassa və stok 25 AZN/aydan.',
+          'Oyun, karaoke, bilyard, antikafe və launj üçün sərfəli POS seçimi: vaxt sessiyası, rezervasiya, kassa və stok 25 AZN/aydan.',
         intro:
           'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Heselo 25 AZN/aydan klub rezervasiyası, canlı sessiya, kassa növbəsi və stoku birləşdirir.',
         competitorFit:
@@ -456,7 +456,7 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Gəlirin əsas hissəsi yemək-içki sifarişindən gəlir, mətbəx və çatdırılma mürəkkəbdirsə, restoran POS-u əsas sistem olmalıdır. Heselo onu tam əvəz etmir.',
         heseloFit:
-          'Karaoke otaqları əvvəlcədən bron edilir, qonaq gəldikdə sessiya başlayır və vaxt uzadıla bilirsə, Heselo həmin axını kassa və stokla birləşdirir.',
+          'Karaoke otaqları əvvəlcədən bron edilir, qonaq gəldikdə sessiya başlayır və vaxt uzadıla bilirsə, Heselo həmin prosesi kassa və stokla birləşdirir.',
         priceAngle:
           'Heselo 25 AZN/aydan başlayır. İki sistem arasında qiyməti deyil, hansı əməliyyatı mərkəzləşdirdiyini müqayisə edin; bəzi böyük məkanlarda hər ikisi lazım ola bilər.',
         switchNote:
@@ -519,7 +519,7 @@ const catalog: CatalogEntry[] = [
         priceAngle:
           'Heselo 25 AZN/aydan başlayır. Sadə taymerin qiyməti aşağı ola bilər, amma ayrıca rezervasiya dəftəri və stok cədvəlinə sərf olunan vaxtı da xərcə daxil edin.',
         switchNote:
-          'Konsolları resurs kimi yaradın, mövcud tarifləri köçürün və əvvəlcə bir iş növbəsində paralel yoxlayın. Demo zamanı rezervasiyadan sessiyaya keçidi işçilərlə sınaqdan keçirin.',
+          'Konsolları ayrı-ayrı stansiyalar kimi yaradın, mövcud tarifləri köçürün və əvvəlcə bir iş növbəsində paralel yoxlayın. Demo zamanı rezervasiyadan sessiyaya keçidi işçilərlə sınaqdan keçirin.',
       },
       en: {
         shortTitle: 'PlayStation café software alternative',
@@ -536,7 +536,7 @@ const catalog: CatalogEntry[] = [
         priceAngle:
           'Heselo starts from 25 AZN per month. A timer may cost less, but include the staff time spent maintaining separate booking and stock records.',
         switchNote:
-          'Create consoles as resources, move current rates and run both systems for one representative shift. Let staff test the booking-to-session handoff in the demo.',
+          'Create each console as its own station, move current rates and run both systems for one representative shift. Let staff test the booking-to-session handoff in the demo.',
       },
       ru: {
         shortTitle: 'Альтернатива программе для PlayStation-кафе',
@@ -553,7 +553,7 @@ const catalog: CatalogEntry[] = [
         priceAngle:
           'Heselo стоит от 25 AZN в месяц. Таймер может быть дешевле, но учтите время сотрудников на отдельные журналы брони и склада.',
         switchNote:
-          'Создайте консоли как ресурсы, перенесите действующие тарифы и одну типичную смену ведите параллельно. В демо дайте сотрудникам проверить переход от брони к сеансу.',
+          'Создайте каждую консоль как отдельную станцию, перенесите действующие тарифы и одну типичную смену ведите параллельно. В демо дайте сотрудникам проверить переход от брони к сеансу.',
       },
     },
   },
@@ -570,15 +570,15 @@ const catalog: CatalogEntry[] = [
         seoDescription:
           'IZI və Heselo müqayisəsi: MDB PC klubları üçün kompüter idarəetməsi yoxsa PlayStation otaqları, rezervasiya, sessiya, kassa və stok.',
         intro:
-          'IZI MDB bazarında PC klublarına yönələn və kompüter parkının idarə edilməsini önə çıxaran həll kimi tanınır. PlayStation otaqları və digər vaxt resursları əsasdırsa, Heselo daha uyğun alternativ ola bilər.',
+          'IZI MDB bazarında PC klublarına yönələn və kompüter parkının idarə edilməsini önə çıxaran həll kimi tanınır. PlayStation otaqları və vaxtla satılan digər yerlər əsasdırsa, Heselo daha uyğun alternativ ola bilər.',
         competitorFit:
-          'Çoxsaylı Windows kompüterində müştəri girişi, workstation nəzarəti və PC klub avtomatlaşdırması əsasdırsa, IZI-nin ixtisaslaşması üstünlükdür.',
+          'Çoxsaylı Windows kompüterində müştəri girişi, iş stansiyalarına nəzarət və PC klub avtomatlaşdırması əsasdırsa, IZI-nin ixtisaslaşması üstünlükdür.',
         heseloFit:
-          'Heselo otaq, konsol, bilyard və lounge kimi resurslarda rezervasiya, canlı sessiya, kassa növbəsi və stoku AZ, EN və RU interfeysdə birləşdirir.',
+          'Heselo otaq, konsol, bilyard və launj kimi yerlərdə rezervasiya, canlı sessiya, kassa növbəsi və stoku AZ, EN və RU interfeysdə birləşdirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. IZI qiymətini kompüter sayı, modul və regional şərtlərlə birlikdə dəqiqləşdirin; iki sistemin idarə etdiyi resurslar eyni deyil.',
+          'Heselo 25 AZN/aydan başlayır. IZI qiymətini kompüter sayı, modul və regional şərtlərlə birlikdə dəqiqləşdirin; iki sistemin idarə etdiyi yerlər və avadanlıq eyni deyil.',
         switchNote:
-          'PC kilidləmə və workstation nəzarəti sizə lazımdırsa, keçməyin. Əsasən otaq və konsol idarə edirsinizsə, həmin resursları Heselo demosunda yaradıb rezervasiya-sessiya axınını yoxlayın.',
+          'PC kilidləmə və iş stansiyalarına nəzarət sizə lazımdırsa, keçməyin. Əsasən otaq və konsol idarə edirsinizsə, həmin otaq və konsolları Heselo demosunda yaradıb rezervasiya-sessiya prosesini yoxlayın.',
       },
       en: {
         shortTitle: 'IZI alternative',
@@ -627,17 +627,17 @@ const catalog: CatalogEntry[] = [
         h1: 'Otaq sessiyaları üçün Kaktus alternativi',
         seoTitle: 'Kaktus alternativi — Heselo rezervasiya sistemi',
         seoDescription:
-          'Kaktus və Heselo müqayisəsi: salon görüş cədvəli yoxsa karaoke, gaming, bilyard və lounge üçün otaq rezervasiyası və canlı sessiya.',
+          'Kaktus və Heselo müqayisəsi: salon görüş cədvəli yoxsa karaoke, oyun, bilyard və launj üçün otaq rezervasiyası və canlı sessiya.',
         intro:
-          'Kaktus salon və xidmət bizneslərində mütəxəssis üzrə görüş planlamağa uyğundur. Rezervasiya işçiyə yox, otaq, konsol və ya masaya bağlanır və sonra canlı sessiyaya çevrilirsə, Heselo fərqli axın təqdim edir.',
+          'Kaktus salon və xidmət bizneslərində mütəxəssis üzrə görüş planlamağa uyğundur. Rezervasiya işçiyə yox, otaq, konsol və ya masaya bağlanır və sonra canlı sessiyaya çevrilirsə, Heselo fərqli proses təqdim edir.',
         competitorFit:
           'Müştəri konkret ustaya və xidmət müddətinə yazılırsa, təqvim salon işçilərinin qrafikini idarə etməlidirsə, Kaktus tipli appointment sistemi daha uyğundur.',
         heseloFit:
-          'Heselo vaxt resursunu bron edir, qonaq gələndə sessiyanı başladır, uzadılmanı və tarif hesabını kassa növbəsi və stokla birləşdirir.',
+          'Heselo vaxtla satılan otağı və ya avadanlığı bron edir, qonaq gələndə sessiyanı başladır, uzadılmanı və tarif hesabını kassa növbəsi və stokla birləşdirir.',
         priceAngle:
           'Heselo 25 AZN/aydan başlayır. Qiymət müqayisəsində istifadəçi və filial sayından əlavə, canlı sessiya və kassa funksiyalarının ayrıca həll tələb edib-etmədiyini nəzərə alın.',
         switchNote:
-          'Usta və xidmətləri deyil, otaq və avadanlığı resurs siyahısına çevirin. Demo zamanı gələcək rezervasiyanı başladıb uzadın və bağlayın; bu axın uyğun deyilsə, salon sistemində qalın.',
+          'Usta və xidmətləri deyil, otaq və avadanlığı sistem siyahısına əlavə edin. Demo zamanı gələcək rezervasiyanı başladıb uzadın və bağlayın; bu proses uyğun deyilsə, salon sistemində qalın.',
       },
       en: {
         shortTitle: 'Kaktus alternative',
@@ -650,7 +650,7 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'An appointment platform like Kaktus fits when customers book a named specialist and service duration, and the calendar must organise staff schedules.',
         heseloFit:
-          'Heselo books a timed resource, starts the session on arrival, and connects extensions and rates with the cash shift and stock.',
+          'Heselo books a room or piece of equipment by time, starts the session on arrival, and connects extensions and rates with the cash shift and stock.',
         priceAngle:
           'Heselo starts from 25 AZN per month. Beyond users and branches, ask whether live sessions and cash operations would require another tool.',
         switchNote:
@@ -667,7 +667,7 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Система записи вроде Kaktus уместнее, когда клиент выбирает конкретного мастера и услугу, а календарь должен организовывать график сотрудников.',
         heseloFit:
-          'Heselo бронирует почасовой ресурс, запускает сеанс по приходу и связывает продление и тариф с кассовой сменой и складом.',
+          'Heselo бронирует комнату или оборудование по часам, запускает сеанс по приходу и связывает продление и тариф с кассовой сменой и складом.',
         priceAngle:
           'Heselo стоит от 25 AZN в месяц. Помимо пользователей и филиалов, учитывайте, потребуются ли отдельные инструменты для живых сеансов и кассы.',
         switchNote:
@@ -686,17 +686,17 @@ const catalog: CatalogEntry[] = [
         h1: 'Vaxtla işləyən məkanlar üçün resto.az alternativi',
         seoTitle: 'resto.az alternativi — Heselo klub sistemi',
         seoDescription:
-          'resto.az və Heselo müqayisəsi: restoran POS-u və menyu axınına qarşı gaming, karaoke, bilyard və lounge sessiyaları.',
+          'resto.az və Heselo müqayisəsi: restoran POS-u və menyu prosesinə qarşı oyun, karaoke, bilyard və launj sessiyaları.',
         intro:
           'resto.az yerli restoran və kafe əməliyyatlarına uyğun POS seçimi ola bilər. Məkanınızda əsas satış otaq və masa vaxtıdırsa, Heselo rezervasiya və sessiyanı mərkəzə qoyan alternativdir.',
         competitorFit:
           'Mətbəx sifarişləri, restoran menyusu, ofisiant xidməti və çatdırılma əsasdırsa, resto.az kimi restoran həlli daha uyğun ola bilər. Heselo tam restoran mətbəx POS-u deyil.',
         heseloFit:
-          'Heselo gaming, karaoke, bilyard, antikafe və lounge resurslarını bron edir, canlı sessiyanı hesablayır, kassa növbəsi və stoku izləyir.',
+          'Heselo oyun, karaoke, bilyard, antikafe və launj yerlərini bron edir, canlı sessiyanı hesablayır, kassa növbəsi və stoku izləyir.',
         priceAngle:
           'Heselo 25 AZN/aydan başlayır. resto.az üzrə aktual tarif, quraşdırma və avadanlıq qiymətlərini birbaşa dəqiqləşdirib eyni istifadə ssenarisi üzrə müqayisə edin.',
         switchNote:
-          'Otaq və masa siyahısını, tarifləri və satılan məhsulları hazırlayın. Demo zamanı bir rezervasiyanı sessiyaya çevirin; mətbəx axını qalırsa, onun üçün ayrıca həlli saxlayın.',
+          'Otaq və masa siyahısını, tarifləri və satılan məhsulları hazırlayın. Demo zamanı bir rezervasiyanı sessiyaya çevirin; mətbəx prosesi qalırsa, onun üçün ayrıca həlli saxlayın.',
       },
       en: {
         shortTitle: 'resto.az alternative',
@@ -709,7 +709,7 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'A restaurant solution such as resto.az may fit better when kitchen orders, menus, waiter service and delivery are primary. Heselo is not a full restaurant kitchen POS.',
         heseloFit:
-          'Heselo books gaming, karaoke, billiards, anticafe and lounge resources, runs live sessions, and tracks cash shifts and stock.',
+          'Heselo books gaming, karaoke, billiards, anticafe and lounge spaces, runs live sessions, and tracks cash shifts and stock.',
         priceAngle:
           'Heselo starts from 25 AZN per month. Confirm current resto.az plan, setup and hardware pricing directly, then compare the same operating scenario.',
         switchNote:
@@ -726,7 +726,7 @@ const catalog: CatalogEntry[] = [
         competitorFit:
           'Ресторанное решение вроде resto.az может быть уместнее, когда важны кухонные заказы, меню, официанты и доставка. Heselo не является полноценной кухонной POS-системой.',
         heseloFit:
-          'Heselo бронирует игровые, караоке-, бильярдные, антикафе- и лаунж-ресурсы, ведёт живые сеансы, кассовые смены и склад.',
+          'Heselo бронирует комнаты и столы игровых, караоке-, бильярдных, антикафе- и лаунж-заведений, ведёт живые сеансы, кассовые смены и склад.',
         priceAngle:
           'Heselo стоит от 25 AZN в месяц. Напрямую уточните актуальную стоимость тарифа, внедрения и оборудования resto.az, затем сравните одинаковый рабочий сценарий.',
         switchNote:
@@ -766,9 +766,9 @@ const labels: Record<
     ],
     comparisonIntro:
       'Aşağıdakı xülasə məhsulların əsas istiqamətini göstərir. Dəqiq modul və paket tərkibini satınalmadan əvvəl provayderlə təsdiqləyin.',
-    ctaTitle: 'Heselo-nu öz iş axınınızla yoxlayın',
+    ctaTitle: 'Heselo-nu öz iş gününüzlə yoxlayın',
     ctaBody:
-      'Demo istəyin: otaq və resurslarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və stok axınını birlikdə yoxlayaq.',
+      'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və stok izləməsini birlikdə yoxlayaq.',
     keywords: (name, kind) => [
       `${name} alternativ`,
       `${name} müqayisə`,
@@ -780,8 +780,8 @@ const labels: Record<
       'Heselo',
     ],
     bullets: (name, kind) => [
-      `${name}: ${kind === 'restaurant' ? 'restoran sifarişi, menyu və mətbəx axını' : kind === 'timer' ? 'sadə cihaz taymeri' : kind === 'pc-club' ? 'PC workstation idarəetməsi' : kind === 'appointments' ? 'usta və xidmət üzrə görüş cədvəli' : 'ümumi satış və kassa funksiyaları'}`,
-      'Heselo: otaq və resurs rezervasiyası + canlı vaxt sessiyası',
+      `${name}: ${kind === 'restaurant' ? 'restoran sifarişi, menyu və mətbəx prosesi' : kind === 'timer' ? 'sadə cihaz taymeri' : kind === 'pc-club' ? 'PC iş stansiyalarının idarəetməsi' : kind === 'appointments' ? 'usta və xidmət üzrə görüş cədvəli' : 'ümumi satış və kassa funksiyaları'}`,
+      'Heselo: otaq, masa və stansiya rezervasiyası + canlı vaxt sessiyası',
       'Heselo: kassa növbəsi + stok və sessiyaya məhsul satışı',
       'Heselo: Azərbaycan, ingilis və rus dilləri; 25 AZN/aydan',
     ],
@@ -792,14 +792,14 @@ const labels: Record<
           kind === 'restaurant'
             ? 'Xeyr. Tam restoran mətbəxi, reseptura və çatdırılma əsasdırsa, ixtisaslaşmış restoran POS-u qalmalıdır. Heselo otaq və vaxt sessiyalarına fokuslanır.'
             : kind === 'pc-club'
-              ? 'PC kilidləmə və workstation nəzarətini tam əvəz etmir. Heselo otaq, konsol, masa, rezervasiya və canlı sessiya axınına fokuslanır.'
+              ? 'PC kilidləmə və iş stansiyalarına nəzarəti tam əvəz etmir. Heselo otaq, konsol, masa, rezervasiya və canlı sessiya prosesinə fokuslanır.'
               : kind === 'appointments'
-                ? 'Salonun usta və xidmət cədvəlini əvəz etmək məqsədi daşımır. Heselo otaq və avadanlıq kimi vaxt resurslarını idarə edir.'
+                ? 'Salonun usta və xidmət cədvəlini əvəz etmək məqsədi daşımır. Heselo otaq və avadanlıq kimi vaxtla satılan yerləri idarə edir.'
                 : 'Sadə taymer funksiyasından daha genişdir, amma uyğunluq rezervasiya, kassa və stok ehtiyacınızdan asılıdır.',
       },
       {
         q: 'Heselo hansı məkanlar üçündür?',
-        a: 'PlayStation və gaming klubları, karaoke otaqları, bilyard, antikafe və otaqlı lounge məkanları üçün nəzərdə tutulub.',
+        a: 'PlayStation və oyun klubları, karaoke otaqları, bilyard, antikafe və otaqlı launj məkanları üçün nəzərdə tutulub.',
       },
       {
         q: 'Heselo neçə dildə işləyir və qiyməti nədir?',
@@ -830,7 +830,7 @@ const labels: Record<
       'This summary shows the products’ primary focus. Confirm exact modules and package contents with each provider before purchasing.',
     ctaTitle: 'Test Heselo with your workflow',
     ctaBody:
-      'Request a demo. We can model your rooms and resources, then walk through bookings, live sessions, cash shifts and inventory together.',
+      'Request a demo. We can model your rooms, tables and stations, then walk through bookings, live sessions, cash shifts and inventory together.',
     keywords: (name, kind) => [
       `${name} alternative`,
       `${name} comparison`,
@@ -843,7 +843,7 @@ const labels: Record<
     ],
     bullets: (name, kind) => [
       `${name}: ${kind === 'restaurant' ? 'restaurant orders, menus and kitchen workflows' : kind === 'timer' ? 'basic device timing' : kind === 'pc-club' ? 'PC workstation control' : kind === 'appointments' ? 'specialist and service appointments' : 'general sales and till functions'}`,
-      'Heselo: room and resource bookings + live timed sessions',
+      'Heselo: room, table and station bookings + live timed sessions',
       'Heselo: cash shifts + inventory and items sold into sessions',
       'Heselo: Azerbaijani, English and Russian; from 25 AZN/month',
     ],
@@ -892,7 +892,7 @@ const labels: Record<
       'Краткое сравнение показывает основную направленность продуктов. Перед покупкой уточните у каждого поставщика точный состав модулей и пакета.',
     ctaTitle: 'Проверьте Heselo на своём сценарии',
     ctaBody:
-      'Запросите демо: создадим пример ваших комнат и ресурсов и вместе проверим бронирования, живые сеансы, кассовые смены и склад.',
+      'Запросите демо: создадим пример ваших комнат, столов и станций и вместе проверим бронирования, живые сеансы, кассовые смены и склад.',
     keywords: (name, kind) => [
       `альтернатива ${name}`,
       `${name} сравнение`,
@@ -905,7 +905,7 @@ const labels: Record<
     ],
     bullets: (name, kind) => [
       `${name}: ${kind === 'restaurant' ? 'ресторанные заказы, меню и кухня' : kind === 'timer' ? 'простой таймер устройств' : kind === 'pc-club' ? 'контроль рабочих станций ПК' : kind === 'appointments' ? 'запись к специалистам и на услуги' : 'общие продажи и кассовые функции'}`,
-      'Heselo: бронь комнат и ресурсов + живые почасовые сеансы',
+      'Heselo: бронь комнат, столов и станций + живые почасовые сеансы',
       'Heselo: кассовые смены + склад и товары в счёте сеанса',
       'Heselo: азербайджанский, английский и русский; от 25 AZN в месяц',
     ],

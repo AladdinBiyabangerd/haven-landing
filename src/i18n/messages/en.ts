@@ -87,7 +87,7 @@ export const en: Messages = {
       'Past edits happen with no clear gate',
     ],
     after: [
-      'A straight path from booking to live session',
+      'From booking to live session',
       'Cash, card, and bank stay clear by day and shift',
       'Products and stock share one list',
       'Sensitive actions need a protection code',
@@ -98,7 +98,7 @@ export const en: Messages = {
     title: 'Everything a shift needs,',
     titleAccent: 'in one panel.',
     intro:
-      'Bookings, live sessions, cash, stock, and customers — all working in the product today.',
+      'Bookings, live sessions, cash, stock, and customers — all available in the panel today.',
     items: [
       {
         title: 'Live tracking',
@@ -110,11 +110,11 @@ export const en: Messages = {
       },
       {
         title: 'Cash',
-        desc: 'Open/close shift, transactions, cash report, and cash count — day and shift stay separate.',
+        desc: 'Open/close shift, transactions, cash report, and cash count — daily and shift reports stay separate.',
       },
       {
         title: 'Products, stock, sale',
-        desc: 'Product catalog, inventory counts, and walk-in quick sale on the same list.',
+        desc: 'Product catalog, inventory counts, and walk-in sales from the same product list — no booking required.',
       },
       {
         title: 'Customers',
@@ -136,12 +136,12 @@ export const en: Messages = {
         desc: 'Add tables and rooms, products, your team, permissions, and the protection code.',
       },
       {
-        title: 'Run the day',
+        title: 'Run the shift',
         desc: 'Take bookings on the schedule, manage sessions in live tracking, post payments to cash.',
       },
       {
         title: 'Close the day',
-        desc: 'Cash count, report, and statistics — owners see a clear end-of-day picture.',
+        desc: 'Cash count, report, and statistics — owners see the day’s revenue, sales, and cash variance clearly.',
       },
     ],
   },
@@ -151,7 +151,7 @@ export const en: Messages = {
     items: [
       {
         q: 'What is Heselo and who is it for?',
-        a: 'Heselo is a web panel for gaming clubs (PlayStation), karaoke, billiards, anti-cafés, and room lounges in Azerbaijan: booking, live sessions, cash, and inventory in one place. Built for venues that sell room or station time — not a kitchen restaurant POS.',
+        a: 'Heselo is a web panel for gaming clubs (PlayStation), karaoke, billiards, anti-cafés, and room lounges in Azerbaijan: booking, live sessions, cash, and inventory in one place. Built for venues that sell room or station time. Heselo is not designed as a kitchen or restaurant POS.',
         href: '/solutions',
         linkLabel: 'Venue types are listed here',
       },
@@ -163,7 +163,7 @@ export const en: Messages = {
       },
       {
         q: 'Does Heselo replace iiko or Clopos?',
-        a: 'No — if you need kitchen, KDS, and dining-room flow, choose iiko/Clopos. If room/PS time, bookings, and cash shifts are the core job, Heselo is the lighter club-panel alternative.',
+        a: 'No — if you need kitchen, KDS, and dining-room flow, choose iiko/Clopos. If room/PS time, bookings, and cash shifts are the core job, Heselo is a simpler management alternative for room- and time-based venues.',
         href: '/guides/iiko-alternative-clubs',
         linkLabel: 'Honest comparison guide',
       },
@@ -177,23 +177,23 @@ export const en: Messages = {
         q: 'Can I manage reservations with Heselo?',
         a: 'Yes. Schedule and reservations cover table and room booking, moves, cancels, and history. When guests arrive, the same booking becomes a live session.',
         href: '/solutions/reservations',
-        linkLabel: 'It opens on the reservations solution',
+        linkLabel: 'Reservation features',
       },
       {
         q: 'Does Heselo include a cash / POS flow?',
         a: 'Yes. Open/close shift, transactions, cash report, and cash count are in the same panel — no separate till app required.',
         href: '/solutions/pos',
-        linkLabel: 'It opens on the cash solution',
+        linkLabel: 'Cash features',
       },
       {
         q: 'Is inventory management included?',
         a: 'Yes. Product catalog, stock levels, and count journals; quick sale works on the same list without a booking.',
         href: '/solutions/inventory',
-        linkLabel: 'It opens on the inventory solution',
+        linkLabel: 'Inventory features',
       },
       {
         q: 'Can I use it on mobile?',
-        a: 'Heselo is a web panel — open it in a modern browser on desktop or mobile. The core flow stays the same.',
+        a: 'Heselo is a web panel — open it in a modern browser on desktop or mobile. You can use the same core features on phone and computer.',
       },
       {
         q: 'How do I get a demo?',
@@ -209,7 +209,7 @@ export const en: Messages = {
     titleAccent: 'for daily venue work.',
     paragraphs: [
       'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory — for venues that sell table, room, or station time (from ~25 AZN/month).',
-      'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is the lighter club panel.',
+      'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is a simpler management alternative for room- and time-based venues.',
       'Heselo was created solely by Aladdin Biyabangerd in Baku — more on the About page.',
     ],
   },
@@ -217,7 +217,7 @@ export const en: Messages = {
     eyebrow: 'Who it is for',
     title: 'Built for your',
     titleAccent: 'kind of venue.',
-    intro: 'Pick the closest match to see how Heselo runs that floor.',
+    intro: 'Choose your venue type and see how Heselo simplifies daily work.',
     items: [
       {
         slug: 'gaming',
@@ -227,7 +227,7 @@ export const en: Messages = {
       {
         slug: 'karaoke',
         title: 'Karaoke management system',
-        desc: 'Room booking, sessions, and cash flow.',
+        desc: 'Room booking, live sessions, and cash in one place.',
       },
       {
         slug: 'billiards',
@@ -265,7 +265,7 @@ export const en: Messages = {
   productShot: {
     alts: {
       'live-floor': 'Heselo live floor — active room sessions and payment',
-      schedule: 'Heselo schedule — room and table booking timeline',
+      schedule: 'Heselo schedule — room and table booking calendar',
       sessions: 'Heselo sessions list — active and closed sessions',
       cash: 'Heselo cash desk — daily transactions and balance',
       inventory: 'Heselo inventory — stock levels and counts',
@@ -340,10 +340,10 @@ export const en: Messages = {
     button: 'Write via the form',
     whatsapp: 'WhatsApp — 15 min',
     pickTypeTitle: 'Pick your venue type first.',
-    pickTypeSubtitle: 'Pricing and the demo open around how your floor runs —',
+    pickTypeSubtitle: 'Pricing and the demo match the venue type you pick.',
     pickTypeButton: 'pick a venue type',
     typedTitle: 'Next step for this venue type.',
-    typedSubtitle: 'See the plan first — the demo opens with the same type.',
+    typedSubtitle: 'See the plan first — the demo starts with the same venue type.',
     nextForm: 'Write via the form for a demo',
     nextWhatsapp: 'In a hurry? Message on WhatsApp',
   },
@@ -381,7 +381,7 @@ export const en: Messages = {
   featuresPage: {
     eyebrow: 'Features',
     title: 'Reservations, cash, and inventory — one panel',
-    intro: 'Everything below is working in the product today — not a roadmap.',
+    intro: 'Everything below is available in the panel today — not a roadmap.',
     solutionLinkLabel: 'View solution page',
     modules: [
       {
@@ -390,7 +390,7 @@ export const en: Messages = {
       },
       {
         title: 'Schedule',
-        desc: 'Day and week views for tables, rooms, and other resources — the same data as reservations.',
+        desc: 'Day and week views for tables, rooms, and other places — the same data as reservations.',
       },
       {
         title: 'Reservations',
@@ -417,7 +417,7 @@ export const en: Messages = {
       },
       {
         title: 'Price calculator',
-        desc: 'Estimates from resource and tariff rules — the same rules as bookings and live sessions.',
+        desc: 'Price from table/room type and tariff — the same calculation as bookings and live sessions.',
       },
       {
         title: 'Settings & security',
@@ -490,11 +490,11 @@ export const en: Messages = {
       },
       {
         q: 'Why do prices differ by category?',
-        a: 'A PlayStation club and a karaoke room do not buy the same way — room schedules and session flow differ. Each type has its own starting fee. Prices are not hidden: they appear in the summary above and in the table below. Picking a type only helps you see the plans that match your floor.',
+        a: 'A PlayStation club and a karaoke room do not buy the same way — room schedules and session management differ. Each type has its own starting fee. Prices are not hidden: they appear in the summary above and in the table below. Picking a type only helps you see the plans that match your floor.',
       },
       {
         q: 'Why is karaoke more than PlayStation?',
-        a: 'PlayStation starts at 25 AZN because station workflows are simpler. Billiards starts at 29 AZN; karaoke and lounges start at 39 AZN for room schedules, extensions, and cash workflows.',
+        a: 'PlayStation starts at 25 AZN because station schedules are simpler. Billiards starts at 29 AZN; karaoke and lounges start at 39 AZN for room schedules, extensions, and cash shifts.',
       },
       {
         q: 'Cheaper than Dine or MinuPOS?',

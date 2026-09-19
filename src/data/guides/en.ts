@@ -8,7 +8,7 @@ export const guidesHubEn: GuidesHubCopy = {
     'These articles answer common search questions — not a sales pitch. Each piece ends with a link to the matching Heselo solution page.',
   seoTitle: 'Guides — club ops and POS alternatives | Heselo',
   seoDescription:
-    'Gaming, karaoke, billiards and anti-café flows; honest alternatives to iiko, Clopos, Dine and Excel for room-time venues.',
+    'Gaming, karaoke, billiards and anti-café operations; honest alternatives to iiko, Clopos, Dine and Excel for room-time venues.',
   keywords: [
     'what is a gaming club management system',
     'playstation club software',
@@ -47,7 +47,7 @@ export const guidesEn: GuideCopy[] = [
         title: 'Why PS clubs look for this',
         paragraphs: [
           'PlayStation clubs run by the hour: phone bookings, “which console is free?”, extensions, and snacks. When those live on separate sheets, the night shift blurs.',
-          'A good system treats the station as a resource — the booking becomes a live session, and payment hits the same shift.',
+          'A good system sets up each station individually — the booking becomes a live session, and payment hits the same shift.',
         ],
       },
       {
@@ -66,21 +66,21 @@ export const guidesEn: GuideCopy[] = [
         id: 'timer',
         title: 'How it differs from a timer',
         paragraphs: [
-          'A timer only counts duration. Booking lists, moves, cash count, and stock stay elsewhere. At close, “who played and what sold?” goes back to a spreadsheet.',
+          'A timer only counts duration. Booking lists, moves, cash count, and stock stay elsewhere. At shift close you end up checking the numbers in Excel again.',
         ],
       },
       {
         id: 'heselo',
         title: 'How Heselo helps a gaming club',
         paragraphs: [
-          'Heselo keeps the station as the same resource on the schedule and live floor. PS and PC can share one panel. Payment balances are calculated on the server.',
+          'Heselo keeps the station as the same unit on the schedule and live floor. PS and PC can share one panel. Amounts due are calculated automatically by the system.',
         ],
       },
     ],
     faq: [
       {
         q: 'Is it only for PlayStation, or PC too?',
-        a: 'Both. Different station types share the same schedule and cash flow.',
+        a: 'Both. Different station types follow the same schedule, session, and cash rules.',
       },
       {
         q: 'How are extensions logged when time ends?',
@@ -93,7 +93,7 @@ export const guidesEn: GuideCopy[] = [
     ],
     relatedSolutions: ['gaming', 'billiards', 'reservations', 'pos'],
     ctaTitle: 'Gaming club demo',
-    ctaBody: 'Tell us your PS and station count — we show booking and live flow.',
+    ctaBody: 'Tell us your PS and station count — we show the schedule and a live session.',
   },
   {
     slug: 'karaoke-room-booking',
@@ -111,7 +111,7 @@ export const guidesEn: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-08-13',
     intro:
-      'In karaoke the unit is the room. Booking is more than picking a free slot: when guests arrive, the same record should become a live session, with extensions and drinks in the same flow.',
+      'In karaoke the main unit is the room. Booking is more than picking a free slot: when guests arrive, the same record should become a live session, with extensions and drinks in the same session.',
     sections: [
       {
         id: 'why',
@@ -122,7 +122,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         id: 'flow',
-        title: 'What a solid karaoke flow looks like',
+        title: 'What a solid karaoke process looks like',
         paragraphs: [
           'Book the room on the schedule. Open a session on arrival. When time ends, extend or pay on the same record. Cash closes the shift.',
         ],
@@ -139,7 +139,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'heselo',
         title: 'What Heselo gives karaoke venues',
         paragraphs: [
-          'Rooms are separate resources. Schedule, live tracking, and cash share one panel. Karaoke and lounge rooms can run together.',
+          'Each room is set up individually. Schedule, live tracking, and cash share one panel. Karaoke and lounge rooms can run together.',
         ],
       },
     ],
@@ -159,7 +159,7 @@ export const guidesEn: GuideCopy[] = [
     ],
     relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
     ctaTitle: 'Karaoke demo',
-    ctaBody: 'Tell us your room count — we show booking and live flow.',
+    ctaBody: 'Tell us your room count — we show the schedule and a live session.',
   },
   {
     slug: 'billiards-club-management',
@@ -190,7 +190,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'time',
         title: 'How time and payment should connect',
         paragraphs: [
-          'A session opens when play starts. Pause, extension, and products stay on the same record. Price follows resource and duration rules; cash closes the shift.',
+          'A session opens when play starts. Pause, extension, and products stay on the same record. Price follows table type and duration rules; cash closes the shift.',
         ],
       },
       {
@@ -204,14 +204,14 @@ export const guidesEn: GuideCopy[] = [
         id: 'heselo',
         title: 'How Heselo works for billiards',
         paragraphs: [
-          'Each table and room is a resource. Schedule, live play, and cash share the same day rules. Unlike a timer, you also get booking history and a cash count.',
+          'Each table and room is set up separately. Schedule, live play, and cash follow the same rules. Unlike a timer, you also get booking history and a cash count.',
         ],
       },
     ],
     faq: [
       {
         q: 'Can VIP rooms and regular tables coexist?',
-        a: 'Yes. Both share schedule and cash flow.',
+        a: 'Yes. Both follow the same schedule, session, and cash rules.',
       },
       {
         q: 'Is a timer enough?',
@@ -224,7 +224,7 @@ export const guidesEn: GuideCopy[] = [
     ],
     relatedSolutions: ['billiards', 'gaming', 'karaoke', 'pos'],
     ctaTitle: 'Billiards demo',
-    ctaBody: 'Tell us your table count — we show the live play flow.',
+    ctaBody: 'Tell us your table count — we show the schedule and a live play session.',
   },
   {
     slug: 'room-lounge-management',
@@ -246,14 +246,14 @@ export const guidesEn: GuideCopy[] = [
     sections: [
       {
         id: 'unit',
-        title: 'Why the unit is the room',
+        title: 'Why the main unit is the room',
         paragraphs: [
-          'Open-table flow does not run a closed room session. One room must not be given to two groups; status belongs on the schedule, not a whiteboard.',
+          'An open-table setup does not run a closed room session. One room must not be given to two groups; status belongs on the schedule, not a whiteboard.',
         ],
       },
       {
         id: 'flow',
-        title: 'What the daily flow looks like',
+        title: 'What the daily work looks like',
         paragraphs: [
           'A booking is written to a room. On arrival a session opens. Extra time and products stay on the same record. At close, cash should match room occupancy.',
         ],
@@ -269,7 +269,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'heselo',
         title: 'What Heselo does for a room lounge',
         paragraphs: [
-          'Rooms use the same resource logic as karaoke. Schedule, live tracking, cash, and customer history live in one panel.',
+          'Rooms are set up the same way as karaoke rooms. Schedule, live tracking, cash, and customer history live in one panel.',
         ],
       },
     ],
@@ -289,7 +289,7 @@ export const guidesEn: GuideCopy[] = [
     ],
     relatedSolutions: ['lounge', 'karaoke', 'antikafe', 'reservations'],
     ctaTitle: 'Room lounge demo',
-    ctaBody: 'Tell us your room count — we show booking and live flow.',
+    ctaBody: 'Tell us your room count — we show the schedule and a live session.',
   },
 {
     slug: 'antikafe-management-system',
@@ -307,13 +307,13 @@ export const guidesEn: GuideCopy[] = [
     datePublished: '2026-08-12',
     dateModified: '2026-08-12',
     intro:
-      'An anti-café management system runs the daily work of a time-based venue — table and room booking, live sessions, product sales, cash, and sometimes inventory — in one panel. It is not just a timer or a standalone POS; the goal is to replace whiteboards, messengers, and spreadsheets with one workflow.',
+      'An anti-café management system runs the daily work of a time-based venue — table and room booking, live sessions, product sales, cash, and sometimes inventory — in one panel. It is not just a timer or a standalone POS; the goal is to tie whiteboards, messengers, and spreadsheets into one working day.',
     sections: [
       {
         id: 'what',
         title: 'What is the anti-café business model?',
         paragraphs: [
-          'Guests usually pay for time: a table, lounge corner, room, or sometimes a PC station. Tea, snacks, and drinks add revenue. Flow changes fast — walk-ins, phone bookings, and late hours compete for the same resources.',
+          'Guests usually pay for time: a table, lounge corner, room, or sometimes a PC station. Tea, snacks, and drinks add revenue. The day changes fast — walk-ins, phone bookings, and late hours compete for the same tables and rooms.',
           'So anti-café software must answer not only “how long did they stay?” but also which seat is free, when the booking starts, and how the day closes.',
         ],
       },
@@ -324,7 +324,7 @@ export const guidesEn: GuideCopy[] = [
         bullets: [
           'Table and room booking (schedule, move, cancel)',
           'Live session (active seat, time, products, payment)',
-          'Cash flow (shift, report, count)',
+          'Cash shift (open, report, count)',
           'Product catalog and inventory (tea, snacks)',
           'Customer notes and simple stats',
           'Staff permissions',
@@ -334,21 +334,21 @@ export const guidesEn: GuideCopy[] = [
         id: 'hourly',
         title: 'How should hourly payment work?',
         paragraphs: [
-          'A standalone timer may not give booking history or cash count. In a solid flow, booking becomes a live session; extensions and payment stay on one record. Cash, card, and POS stay separate — less confusion on night shifts.',
+          'A standalone timer may not give booking history or cash count. In a solid process, booking becomes a live session; extensions and payment stay on one record. Cash, card, and POS stay separate — less confusion on night shifts.',
         ],
       },
       {
         id: 'vs-gaming',
         title: 'Anti-café vs gaming club',
         paragraphs: [
-          'Gaming clubs focus on PC/console stations; anti-cafés emphasize tables, rooms, and lounge atmosphere. Technically the need is the same: resource schedule + live session + cash. One panel can run both zone types.',
+          'Gaming clubs focus on PC/console stations; anti-cafés emphasize tables, rooms, and lounge atmosphere. Technically the need is the same: station and table schedule + live session + cash. One panel can run both zone types.',
         ],
       },
       {
         id: 'choose',
         title: 'What to check when choosing software',
         paragraphs: [
-          'Is there one flow from booking to payment? Do walk-in sales use the same catalog? Are past days and counts preserved? Does the panel support AZ / EN / RU? Is pricing transparent?',
+          'Is there one process from booking to payment? Do walk-in sales use the same catalog? Are past days and counts preserved? Does the panel support AZ / EN / RU? Is pricing transparent?',
           'Test your real night shift, not just the marketing feature list — especially as table and room count grows.',
         ],
       },
@@ -356,8 +356,8 @@ export const guidesEn: GuideCopy[] = [
         id: 'heselo',
         title: 'How Heselo fits anti-cafés',
         paragraphs: [
-          'Heselo is venue management: schedule, live floor, cash, products, and inventory in one panel. Anti-café, gaming club, and billiards can share the same resource logic. Payment balances are calculated on the server.',
-          'See our anti-café solution page and linked reservation and cash pages below.',
+          'Heselo is venue management: schedule, live floor, cash, products, and inventory in one panel. Anti-café, gaming club, and billiards can follow the same schedule, session, and cash rules. The system calculates payment balances automatically.',
+          'See our anti-café product page and linked reservation and cash pages below.',
         ],
       },
     ],
@@ -368,15 +368,15 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'Are room bookings supported?',
-        a: 'Yes. Rooms can be resources on the schedule — same logic as VIP or karaoke rooms.',
+        a: 'Yes. Rooms can be set up on the schedule — the same way as VIP or karaoke rooms.',
       },
       {
         q: 'How do we get a demo?',
-        a: 'Use the contact form — share table/room count and a typical day flow.',
+        a: 'Use the contact form — share table/room count and a typical working day.',
       },
     ],
     relatedSolutions: ['antikafe', 'gaming', 'reservations', 'pos'],
-    ctaTitle: 'Anti-café flow demo',
+    ctaTitle: 'Anti-café demo',
     ctaBody: 'We walk through booking to cash close.',
   },
   {
@@ -395,14 +395,14 @@ export const guidesEn: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-07',
     intro:
-      'PlayStation club software is more than a timer. Phone bookings, “which PS is free?”, extensions, snacks, and the night cash close should live in one flow. This guide is a selection checklist — not a product pitch.',
+      'PlayStation club software is more than a timer. Phone bookings, “which PS is free?”, extensions, snacks, and the night cash close should live in one process. This guide is a selection checklist — not a product pitch.',
     sections: [
       {
         id: 'why',
         title: 'Why a PS club needs real software',
         paragraphs: [
           'Console clubs run by the hour. Boards lag, WhatsApp bookings miss live status, extensions land on another sheet. At close, “who played what?” goes back to Excel.',
-          'Good software treats the station as a resource: booking → live session → payment on one record.',
+          'Good software sets up each station individually: booking → live session → payment on one record.',
         ],
       },
       {
@@ -410,7 +410,7 @@ export const guidesEn: GuideCopy[] = [
         title: 'Minimum checklist',
         paragraphs: ['In practice you need:'],
         bullets: [
-          'PS / console / PC stations as separate resources',
+          'PS / console / PC stations set up individually',
           'Schedule booking, move, and cancel',
           'Live session: time, extend, pay',
           'Quick sale (snacks/drinks) from the same catalog',
@@ -437,7 +437,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'heselo',
         title: 'How Heselo fits the checklist',
         paragraphs: [
-          'Heselo keeps the station as one resource on the schedule and live floor. PS, console, and PC can share a panel. Commercial page: gaming / PS club solution.',
+          'Heselo keeps the station as one unit on the schedule and live floor. PS, console, and PC can share a panel. Product page: gaming / PS club solution.',
         ],
       },
     ],
@@ -448,7 +448,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'Can PC stations share the same software?',
-        a: 'Yes. Different resources hit the same shift.',
+        a: 'Yes. Different stations hit the same shift.',
       },
       {
         q: 'How do I get a demo?',
@@ -456,7 +456,7 @@ export const guidesEn: GuideCopy[] = [
       },
     ],
     relatedSolutions: ['gaming', 'reservations', 'pos', 'inventory'],
-    ctaTitle: 'PS club flow demo',
+    ctaTitle: 'PS club demo',
     ctaBody: 'Tell us station and console count — we show booking and live sessions.',
   },
   {
@@ -513,7 +513,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'heselo',
         title: 'How table booking looks in Heselo',
         paragraphs: [
-          'Each table and room is a resource. Schedule, live play, and cash share the same day rules. Commercial page: billiards club solution.',
+          'Each table and room is set up individually. Schedule, live play, and cash post to the same shift. Product page: billiards club solution.',
         ],
       },
     ],
@@ -551,7 +551,7 @@ export const guidesEn: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-07',
     intro:
-      'A karaoke booking system is more than an online form. When rooms fill, session time, drink orders, and payment must stay in one flow. The sibling guide covers how rooms get booked; this page is about what to verify before you buy.',
+      'A karaoke booking system is more than an online form. When rooms fill, session time, drink orders, and payment must stay in one session record. The sibling guide covers how rooms get booked; this page is about what to verify before you buy.',
     sections: [
       {
         id: 'form-vs-system',
@@ -583,7 +583,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'heselo',
         title: 'What Heselo gives karaoke venues',
         paragraphs: [
-          'Rooms are resources on the schedule and live floor. Products and payment stay on the session. Commercial page: karaoke solution.',
+          'Rooms are set up individually on the schedule and live floor. Products and payment stay on the session. Product page: karaoke solution.',
         ],
       },
     ],
@@ -594,7 +594,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'Can VIP and standard rooms differ?',
-        a: 'Yes. Each room can be its own resource and tariff.',
+        a: 'Yes. Each room is set up on its own and can have its own tariff.',
       },
       {
         q: 'How do I get a demo?',
@@ -603,7 +603,7 @@ export const guidesEn: GuideCopy[] = [
     ],
     relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
     ctaTitle: 'Karaoke booking demo',
-    ctaBody: 'Tell us your room count — we show booking and live room flow.',
+    ctaBody: 'Tell us your room count — we show the booking schedule and a live room session.',
   },
   {
     slug: 'club-pos-vs-excel',
@@ -641,7 +641,7 @@ export const guidesEn: GuideCopy[] = [
         paragraphs: ['If two of these are true, sheets are not enough:'],
         bullets: [
           '10+ bookings a day or 5+ active places at once',
-          'Two shifts / two staff touch the same resources',
+          'Two shifts / two staff touch the same tables and rooms',
           'Snacks and drinks do not match cash',
           'The owner rebuilds yesterday’s report from Excel',
         ],
@@ -650,7 +650,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'panel',
         title: 'What a panel unifies',
         paragraphs: [
-          'Schedule, live session, quick sale, and cash share one day of rules. Payment balances are calculated on the server — no “add it up yourself.”',
+          'Schedule, live session, quick sale, and cash post to the same shift. The system calculates payment balances automatically — no “add it up yourself.”',
         ],
       },
       {
@@ -683,7 +683,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'How do I get a demo?',
-        a: 'Share your venue type — we show the screens for your flow.',
+        a: 'Share your venue type — we show the screens for your setup.',
       },
     ],
     relatedSolutions: ['pos', 'reservations', 'gaming', 'inventory'],
@@ -721,7 +721,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'why-differ',
         title: 'Why fees differ by category',
         paragraphs: [
-          'A PlayStation station and a karaoke room are not the same workload: room schedules, extensions, and cash flow differ. Each type has its own starting fee so owners only scan plans that match their venue.',
+          'A PlayStation station and a karaoke room are not the same workload: room schedules, extensions, and cash work differ. Each type has its own starting fee so owners only scan plans that match their venue.',
           'The type picker is not hidden pricing; it makes the same public table easier to read. The summary at the top lists every category’s starting fee in one place.',
         ],
       },
@@ -755,7 +755,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'And karaoke?',
-        a: 'Small plan from 39 AZN/month — higher than PS because of room schedules and session flow.',
+        a: 'Small plan from 39 AZN/month — higher than PS because of room schedules and session work.',
       },
     ],
     relatedSolutions: ['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'],

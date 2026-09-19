@@ -3,12 +3,12 @@ import { comparisonGuides } from './comparisonGuides'
 
 export const guidesHubAz: GuidesHubCopy = {
   eyebrow: 'Bələdçilər',
-  h1: 'Klub və otaq axını necə işləyir?',
+  h1: 'Klub və otaq işi necə qurulur?',
   intro:
     'Bu bölmə məhsul reklamı deyil — axtarışda tez rast gəlinən suallara aydın cavab verir. Hər yazının sonunda uyğun Heselo həll səhifəsinə keçid var.',
   seoTitle: 'Bələdçilər — klub idarəetməsi və POS alternativləri | Heselo',
   seoDescription:
-    'Oyun klubu, karaoke, bilyard və antikafe axını; iiko, Clopos, Dine və Excel alternativləri — dürüst müqayisə və seçim bələdçiləri.',
+    'Oyun klubu, karaoke, bilyard və antikafe iş prosesi; iiko, Clopos, Dine və Excel alternativləri — dürüst müqayisə və seçim bələdçiləri.',
   keywords: [
     'oyun klubu idarəetmə sistemi nədir',
     'playstation klub proqramı',
@@ -46,8 +46,8 @@ export const guidesAz: GuideCopy[] = [
         id: 'why',
         title: 'Niyə PS klublar belə sistem axtarır?',
         paragraphs: [
-          'PlayStation klubunda axın saatladır: telefonla rezerv, “hansı konsol boşdur?”, oyun bitəndə uzatma və qəlyanaltı. Bunlar ayrı vərəqlərdə qalanda gecə növbəsi qarışır.',
-          'Yaxşı sistem stansiyanı resurs kimi saxlayır — rezerv canlı sessiyaya keçir, ödəniş eyni növbəyə düşür.',
+          'PlayStation klubunda iş saatla gedir: telefonla rezerv, “hansı konsol boşdur?”, oyun bitəndə uzatma və qəlyanaltı. Bunlar ayrı vərəqlərdə qalanda gecə növbəsi qarışır.',
+          'Yaxşı sistemdə hər stansiya ayrıca qurulur — rezerv canlı sessiyaya keçir, ödəniş eyni növbəyə düşür.',
         ],
       },
       {
@@ -66,21 +66,21 @@ export const guidesAz: GuideCopy[] = [
         id: 'timer',
         title: 'Taymer proqramından fərqi nədir?',
         paragraphs: [
-          'Taymer yalnız müddəti sayır. Rezerv siyahısı, köçürmə, kassa sayımı və anbar qalığı ayrı qalır. Klub günü bağlananda “kim nə oynayıb, nə satılıb?” sualı Excel-ə qayıdır.',
+          'Taymer yalnız müddəti sayır. Rezerv siyahısı, köçürmə, kassa sayımı və anbar qalığı ayrı qalır. Növbənin sonunda məlumatları yenidən Excel-də yoxlamaq lazım olur.',
         ],
       },
       {
         id: 'heselo',
         title: 'Heselo oyun klubunda necə kömək edir?',
         paragraphs: [
-          'Heselo stansiyanı cədvəldə və canlı izləmədə eyni resurs kimi saxlayır. PS və PC eyni paneldə ola bilər. Ödəniş qalıqları serverdə hesablanır.',
+          'Heselo stansiyanı cədvəldə və canlı izləmədə eyni vahid kimi saxlayır. PS və PC eyni paneldə ola bilər. Ödəniləcək məbləğ sistem tərəfindən avtomatik hesablanır.',
         ],
       },
     ],
     faq: [
       {
         q: 'Yalnız PS klub üçündür, yoxsa PC də olar?',
-        a: 'Hər ikisi. Fərqli stansiya tipləri eyni cədvəl və kassa axınında qurulur.',
+        a: 'Hər ikisi. Fərqli stansiya tipləri eyni cədvəl, sessiya və kassa qaydaları ilə qurulur.',
       },
       {
         q: 'Saat bitəndə uzatma necə qeyd olunur?',
@@ -93,7 +93,7 @@ export const guidesAz: GuideCopy[] = [
     ],
     relatedSolutions: ['gaming', 'billiards', 'reservations', 'pos'],
     ctaTitle: 'Oyun klubu üçün demo',
-    ctaBody: 'PS və stansiya sayınızı yazın — rezervasiya və canlı axını göstəririk.',
+    ctaBody: 'PS və stansiya sayınızı yazın — cədvəl və canlı sessiyanı göstəririk.',
   },
   {
     slug: 'karaoke-room-booking',
@@ -111,7 +111,7 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-08-13',
     intro:
-      'Karaoke məkanında vahid otaqdır. Rezerv yalnız “boş saat seçmək” deyil: qonaq gələndə eyni qeyd canlı sessiyaya çevrilməli, uzatma və içki eyni axında qalmalıdır.',
+      'Karaoke məkanında əsas vahid otaqdır. Rezerv yalnız “boş saat seçmək” deyil: qonaq gələndə eyni qeyd canlı sessiyaya çevrilməli, uzatma və içki eyni sessiyada qalmalıdır.',
     sections: [
       {
         id: 'why',
@@ -122,7 +122,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         id: 'flow',
-        title: 'Yaxşı karaoke axını necə görünür?',
+        title: 'Yaxşı karaoke prosesi necə görünür?',
         paragraphs: [
           'Cədvəldə otaq rezerv olunur. Qonaq gələndə sessiya açılır. Müddət bitəndə uzatma və ya ödəniş eyni qeyddədir. Kassa növbəni bağlayır.',
         ],
@@ -132,14 +132,14 @@ export const guidesAz: GuideCopy[] = [
         id: 'form',
         title: 'Yalnız onlayn bron forması kifayətdirmi?',
         paragraphs: [
-          'Bron səhifəsi otağın içindəki axını idarə etmir. Ofisiant məhsul əlavə edəndə və kassa bağlananda eyni məlumat lazımdır.',
+          'Bron səhifəsi otağın içindəki işi idarə etmir. Ofisiant məhsul əlavə edəndə və kassa bağlananda eyni məlumat lazımdır.',
         ],
       },
       {
         id: 'heselo',
         title: 'Heselo karaoke-də nə verir?',
         paragraphs: [
-          'Otaqlar ayrı resursdur. Cədvəl, canlı izləmə və kassa eyni paneldədir. Karaoke + launj otaqları birlikdə qurula bilər.',
+          'Hər otaq ayrıca qurulur. Cədvəl, canlı izləmə və kassa eyni paneldədir. Karaoke + launj otaqları birlikdə qurula bilər.',
         ],
       },
     ],
@@ -159,7 +159,7 @@ export const guidesAz: GuideCopy[] = [
     ],
     relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
     ctaTitle: 'Karaoke üçün demo',
-    ctaBody: 'Otaq sayınızı yazın — rezerv və canlı axını göstəririk.',
+    ctaBody: 'Otaq sayınızı yazın — cədvəl və canlı sessiyanı göstəririk.',
   },
   {
     slug: 'billiards-club-management',
@@ -190,7 +190,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'time',
         title: 'Vaxt və ödəniş necə bağlanmalıdır?',
         paragraphs: [
-          'Oyun başlayanda sessiya açılır. Pauza, uzatma və məhsul eyni qeyddə qalır. Qiymət resurs və müddət qaydalarına görə hesablanır; kassa növbəni bağlayır.',
+          'Oyun başlayanda sessiya açılır. Pauza, uzatma və məhsul eyni qeyddə qalır. Qiymət masa tipi və müddət qaydalarına görə hesablanır; kassa növbəni bağlayır.',
         ],
       },
       {
@@ -204,14 +204,14 @@ export const guidesAz: GuideCopy[] = [
         id: 'heselo',
         title: 'Heselo bilyardda necə işləyir?',
         paragraphs: [
-          'Hər masa və otaq resursdur. Cədvəl, canlı oyun və kassa eyni gün qaydalarındadır. Sadə saat sayğacından fərqli olaraq rezerv tarixçəsi və sayım da var.',
+          'Hər masa və otaq ayrıca qurulur. Cədvəl, canlı oyun və kassa eyni qaydada işləyir. Sadə saat sayğacından fərqli olaraq rezerv tarixçəsi və sayım da var.',
         ],
       },
     ],
     faq: [
       {
         q: 'VIP otaq və adi masa birlikdə ola bilər?',
-        a: 'Bəli. Hər ikisi eyni cədvəl və kassa axınındadır.',
+        a: 'Bəli. Hər ikisi eyni cədvəl, sessiya və kassa qaydaları ilə işləyir.',
       },
       {
         q: 'Yalnız taymer kifayətdirmi?',
@@ -224,7 +224,7 @@ export const guidesAz: GuideCopy[] = [
     ],
     relatedSolutions: ['billiards', 'gaming', 'karaoke', 'pos'],
     ctaTitle: 'Bilyard üçün demo',
-    ctaBody: 'Masa sayınızı yazın — canlı oyun axını göstəririk.',
+    ctaBody: 'Masa sayınızı yazın — cədvəl və canlı oyun sessiyasını göstəririk.',
   },
   {
     slug: 'room-lounge-management',
@@ -246,14 +246,14 @@ export const guidesAz: GuideCopy[] = [
     sections: [
       {
         id: 'unit',
-        title: 'Niyə vahid otaqdır?',
+        title: 'Niyə əsas vahid otaqdır?',
         paragraphs: [
-          'Açıq masa axını otağın qapalı sessiyasını vermir. Bir otaq eyni vaxtda iki qrupa verilməməlidir; status lövhədə yox, cədvəldə görünməlidir.',
+          'Açıq masa prosesi otağın qapalı sessiyasını vermir. Bir otaq eyni vaxtda iki qrupa verilməməlidir; status lövhədə yox, cədvəldə görünməlidir.',
         ],
       },
       {
         id: 'flow',
-        title: 'Gündəlik axın necədir?',
+        title: 'Gündəlik iş necədir?',
         paragraphs: [
           'Rezerv otağa yazılır. Qonaq gələndə sessiya açılır. Əlavə vaxt və məhsul eyni qeyddə qalır. Günün sonunda kassa otaq doluluğu ilə uyğun gəlməlidir.',
         ],
@@ -269,7 +269,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'heselo',
         title: 'Heselo otaqlı launj üçün nə edir?',
         paragraphs: [
-          'Otaq karaoke ilə eyni resurs məntiqində qurulur. Cədvəl, canlı izləmə, kassa və müştəri tarixçəsi bir paneldədir.',
+          'Otaq karaoke otağı ilə eyni qaydada qurulur. Cədvəl, canlı izləmə, kassa və müştəri tarixçəsi bir paneldədir.',
         ],
       },
     ],
@@ -289,7 +289,7 @@ export const guidesAz: GuideCopy[] = [
     ],
     relatedSolutions: ['lounge', 'karaoke', 'antikafe', 'reservations'],
     ctaTitle: 'Otaqlı launj üçün demo',
-    ctaBody: 'Otaq sayınızı yazın — rezervasiya və canlı axını göstəririk.',
+    ctaBody: 'Otaq sayınızı yazın — cədvəl və canlı sessiyanı göstəririk.',
   },
 {
     slug: 'antikafe-management-system',
@@ -313,7 +313,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'what',
         title: 'Antikafe biznes modeli nədir?',
         paragraphs: [
-          'Antikafelərdə qonaq adətən vaxt üçün ödəyir: masa, divan küncü, otaq və ya bəzən PC stansiyası. Çay, qəlyanaltı və içkilər əlavə gəlir gətirir. Axın tez dəyişir — rezervsiz qonaq, telefon rezervi və gecə saatları eyni resurslarda toqquşur.',
+          'Antikafelərdə qonaq adətən vaxt üçün ödəyir: masa, divan küncü, otaq və ya bəzən PC stansiyası. Çay, qəlyanaltı və içkilər əlavə gəlir gətirir. İş tez dəyişir — rezervsiz qonaq, telefon rezervi və gecə saatları eyni masalarda və otaqlarda toqquşur.',
           'Ona görə antikafe proqramı yalnız “neçə saat oturdu?” sualını deyil, hansı masa boşdur, rezerv nə vaxtdır və gün necə bağlanır suallarını da cavablamalıdır.',
         ],
       },
@@ -324,7 +324,7 @@ export const guidesAz: GuideCopy[] = [
         bullets: [
           'Masa və otaq rezervasiyası (cədvəl, köçürmə, ləğv)',
           'Canlı sessiya (aktiv yer, vaxt, məhsul, ödəniş)',
-          'Kassa axını (növbə, hesabat, sayım)',
+          'Kassa növbəsi (açılış, hesabat, sayım)',
           'Məhsul kataloqu və anbar (çay, qəlyanaltı)',
           'Müştəri qeydləri və sadə statistika',
           'İşçi icazələri',
@@ -334,21 +334,21 @@ export const guidesAz: GuideCopy[] = [
         id: 'hourly',
         title: 'Saatla ödəniş necə idarə olunmalıdır?',
         paragraphs: [
-          'Saat sayan ayrı proqram rezervasiya tarixçəsi və kassa sayımını verməyə bilər. Yaxşı axında rezerv canlı sessiyaya keçir; vaxt bitəndə uzatma və ödəniş eyni qeyddə qalır. Nağd, bank və POS ayrı izlənir — gecə növbəsində qarışıqlıq azalır.',
+          'Saat sayan ayrı proqram rezervasiya tarixçəsi və kassa sayımını verməyə bilər. Yaxşı prosesdə rezerv canlı sessiyaya keçir; vaxt bitəndə uzatma və ödəniş eyni qeyddə qalır. Nağd, bank və POS ayrı izlənir — gecə növbəsində qarışıqlıq azalır.',
         ],
       },
       {
         id: 'vs-gaming',
-        title: 'Antikafe ilə gaming club fərqi nədir?',
+        title: 'Antikafe ilə oyun klubu fərqi nədir?',
         paragraphs: [
-          'Gaming club-da fokus tez-tez PC/console stansiyasındadır; antikafedə masa, otaq və lounge atmosferi ön plandadır. Amma texniki ehtiyac eynidir: resurs cədvəli + canlı sessiya + kassa. Bir panel hər iki tip zonanı idarə edə bilər.',
+          'Oyun klubunda fokus tez-tez PC/konsol stansiyasındadır; antikafedə masa, otaq və launj atmosferi ön plandadır. Amma texniki ehtiyac eynidir: stansiya və masa cədvəli + canlı sessiya + kassa. Bir panel hər iki tip zonanı idarə edə bilər.',
         ],
       },
       {
         id: 'choose',
         title: 'Antikafe proqramı seçərkən nəyə baxmaq lazımdır?',
         paragraphs: [
-          'Rezervdən ödənişə qədər bir axın varmı? Rezervsiz satış eyni kataloqdan gedirmi? Keçmiş gün və sayım saxlanırmı? Panel AZ / EN / RU dillərindədirmi? Qiymət şəffafdırmı?',
+          'Rezervdən ödənişə qədər bir proses varmı? Rezervsiz satış eyni kataloqdan gedirmi? Keçmiş gün və sayım saxlanırmı? Panel AZ / EN / RU dillərindədirmi? Qiymət şəffafdırmı?',
           'Marketinq siyahısından çox real gecə növbənizi yoxlayın — xüsusilə masa/otaq sayı artanda.',
         ],
       },
@@ -356,8 +356,8 @@ export const guidesAz: GuideCopy[] = [
         id: 'heselo',
         title: 'Heselo antikafe üçün necə uyğundur?',
         paragraphs: [
-          'Heselo məkan idarəetmə sistemidir: cədvəl, canlı izləmə, kassa, məhsullar və anbar eyni paneldədir. Antikafe, gaming club və bilyard eyni resurs məntiqində qurula bilər. Ödəniş qalıqları serverdə hesablanır.',
-          'Antikafe yönümlü kommersiya səhifəmiz və aşağıdakı rezervasiya/kassa həllərinə keçid var.',
+          'Heselo məkan idarəetmə sistemidir: cədvəl, canlı izləmə, kassa, məhsullar və anbar eyni paneldədir. Antikafe, oyun klubu və bilyard eyni cədvəl, sessiya və kassa qaydaları ilə qurula bilər. Ödəniləcək qalıqları sistem avtomatik hesablayır.',
+          'Antikafe yönümlü məhsul səhifəmiz və aşağıdakı rezervasiya/kassa həllərinə keçid var.',
         ],
       },
     ],
@@ -368,15 +368,15 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Otaq rezervasiyası dəstəklənirmi?',
-        a: 'Bəli. Otaq resurs kimi cədvəldə idarə oluna bilər — karaoke VIP otaqları ilə eyni məntiq.',
+        a: 'Bəli. Otaq ayrıca qurulub cədvəldə idarə oluna bilər — karaoke VIP otaqları ilə eyni qayda.',
       },
       {
         q: 'Demo necə əldə edilir?',
-        a: 'Əlaqə formasını doldurun — masa/otaq sayını və tipik gün axınınızı qeyd edin.',
+        a: 'Əlaqə formasını doldurun — masa/otaq sayını və tipik iş gününüzü qeyd edin.',
       },
     ],
     relatedSolutions: ['antikafe', 'gaming', 'reservations', 'pos'],
-    ctaTitle: 'Antikafe axını üçün demo',
+    ctaTitle: 'Antikafe üçün demo',
     ctaBody: 'Rezervasiyadan kassa bağlanışına qədər göstəririk.',
   },
   {
@@ -385,7 +385,7 @@ export const guidesAz: GuideCopy[] = [
     h1: 'PlayStation klub proqramı seçərkən nəyə baxmaq lazımdır?',
     seoTitle: 'PlayStation klub proqramı — nə olmalıdır? | Heselo bələdçisi',
     seoDescription:
-      'PS və konsol klub proqramı: stansiya rezervasiyası, canlı sessiya, kassa. PlayStation klub software seçimi — praktiki checklist.',
+      'PS və konsol klub proqramı: stansiya rezervasiyası, canlı sessiya, kassa. PlayStation klub proqramı seçimi — praktiki yoxlama siyahısı.',
     keywords: [
       'playstation klub proqramı',
       'ps klub proqramı',
@@ -395,25 +395,25 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-07',
     intro:
-      'PlayStation klub proqramı yalnız taymer deyil. Telefon rezervi, “hansı PS boşdur?”, oyun bitəndə uzatma, qəlyanaltı və gecə kassası eyni axında olmalıdır. Bu yazı satış səhifəsi deyil — seçim meyarlarıdır.',
+      'PlayStation klub proqramı yalnız taymer deyil. Telefon rezervi, “hansı PS boşdur?”, oyun bitəndə uzatma, qəlyanaltı və gecə kassası eyni prosesdə olmalıdır. Bu yazı satış səhifəsi deyil — seçim meyarlarıdır.',
     sections: [
       {
         id: 'why',
         title: 'PS klubda proqram niyə lazımdır?',
         paragraphs: [
-          'Konsol klubunda axın saatladır. Lövhə gecikir, WhatsApp rezervi canlı statusu görmür, uzatma ayrı vərəqdə yazılır. Növbə bağlananda “kim nə oynayıb?” sualı Excel-ə qayıdır.',
-          'Yaxşı proqram stansiyanı resurs kimi saxlayır: rezerv → canlı sessiya → ödəniş eyni qeyddə.',
+          'Konsol klubunda iş saatla gedir. Lövhə gecikir, WhatsApp rezervi canlı statusu görmür, uzatma ayrı vərəqdə yazılır. Növbə bağlananda “kim nə oynayıb?” sualı Excel-ə qayıdır.',
+          'Yaxşı proqramda hər stansiya ayrıca qurulur: rezerv → canlı sessiya → ödəniş eyni qeyddə.',
         ],
       },
       {
         id: 'must-have',
         title: 'Minimum nə olmalıdır?',
-        paragraphs: ['Praktik checklist:'],
+        paragraphs: ['Praktik yoxlama siyahısı:'],
         bullets: [
-          'PS / konsol / PC stansiyalarını ayrı resurs kimi qurmaq',
+          'PS / konsol / PC stansiyalarını ayrıca qurmaq',
           'Cədvəldə rezerv, köçürmə və ləğv',
           'Canlı sessiya: vaxt, uzatma, ödəniş',
-          'Sürətli satış (snack/içki) eyni kataloqdan',
+          'Sürətli satış (qəlyanaltı/içki) eyni kataloqdan',
           'Kassa növbəsi və sayım',
           'İşçi icazələri (resepsiya vs sahib)',
         ],
@@ -435,9 +435,9 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         id: 'heselo',
-        title: 'Heselo bu checklist-ə necə oturur?',
+        title: 'Heselo bu siyahıya necə oturur?',
         paragraphs: [
-          'Heselo stansiyanı cədvəl və canlı izləmədə eyni resurs kimi saxlayır. PS, konsol və PC bir paneldə ola bilər. Kommersiya səhifəsi: oyun/PS klub həlli.',
+          'Heselo stansiyanı cədvəl və canlı izləmədə eyni vahid kimi saxlayır. PS, konsol və PC bir paneldə ola bilər. Məhsul səhifəsi: oyun/PS klub həlli.',
         ],
       },
     ],
@@ -448,7 +448,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'PC stansiyaları eyni proqramda ola bilər?',
-        a: 'Bəli. Fərqli resurslar eyni növbəyə düşür.',
+        a: 'Bəli. Fərqli stansiyalar eyni növbəyə düşür.',
       },
       {
         q: 'Demo necə alınır?',
@@ -456,7 +456,7 @@ export const guidesAz: GuideCopy[] = [
       },
     ],
     relatedSolutions: ['gaming', 'reservations', 'pos', 'inventory'],
-    ctaTitle: 'PS klub axını üçün demo',
+    ctaTitle: 'PS klub üçün demo',
     ctaBody: 'Stansiya və konsol sayınızı yazın — rezerv və canlı sessiyanı göstəririk.',
   },
   {
@@ -465,7 +465,7 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Bilyard masa rezervasiyası və cədvəl necə işləməlidir?',
     seoTitle: 'Bilyard masa rezervasiyası və cədvəl sistemi | Heselo bələdçisi',
     seoDescription:
-      'Bilyard booking və scheduling: masa bronu, cədvəl, canlı oyun və kassa. Bilyard masa rezervasiyası praktiki izah.',
+      'Bilyard masa bronu və cədvəl: rezerv, canlı oyun və kassa bir yerdə. Bilyard masa rezervasiyası praktiki izah.',
     keywords: [
       'bilyard masa rezervasiya',
       'bilyard cədvəl sistemi',
@@ -475,7 +475,7 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-07',
     intro:
-      'Bilyard booking sistemi yalnız “masa yazıldı” demək deyil. Cədvəl (scheduling), canlı oyun və ödəniş ayrılıbsa, lövhə ilə telefon toqquşur. Bu yazı bron + cədvəl axınını izah edir — ümumi “klub necə idarə olunur” bələdçisindən daradır.',
+      'Bilyard bron sistemi yalnız “masa yazıldı” demək deyil. Cədvəl, canlı oyun və ödəniş ayrılıbsa, lövhə ilə telefon toqquşur. Bu yazı bron + cədvəl prosesini izah edir — ümumi “klub necə idarə olunur” bələdçisindən daradır.',
     sections: [
       {
         id: 'booking',
@@ -486,9 +486,9 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         id: 'schedule',
-        title: 'Cədvəl (scheduling) niyə ayrı alət olmamalıdır?',
+        title: 'Cədvəl niyə ayrı alət olmamalıdır?',
         paragraphs: [
-          'Bir cədvəl bütün masaları göstərməlidir. VIP otaq ayrıca Excel-dədirsə, eyni vaxta iki bron düşür. Scheduling və booking eyni paneldə olduqda boş masa real vaxtda görünür.',
+          'Bir cədvəl bütün masaları göstərməlidir. VIP otaq ayrıca Excel-dədirsə, eyni vaxta iki bron düşür. Cədvəl və bron eyni paneldə olduqda boş masa real vaxtda görünür.',
         ],
       },
       {
@@ -513,14 +513,14 @@ export const guidesAz: GuideCopy[] = [
         id: 'heselo',
         title: 'Heselo-da masa bronu necə görünür?',
         paragraphs: [
-          'Hər masa və otaq resursdur. Cədvəl, canlı oyun və kassa eyni gün qaydalarındadır. Kommersiya səhifəsi: bilyard klubu həlli.',
+          'Hər masa və otaq ayrıca qurulur. Cədvəl, canlı oyun və kassa eyni növbəyə yazılır. Məhsul səhifəsi: bilyard klubu həlli.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Booking ilə scheduling eyni şeydir?',
-        a: 'Booking konkret rezervdir; scheduling cədvəlin ümumi görünüşüdür. İkisi bir paneldə olmalıdır.',
+        q: 'Bron ilə cədvəl eyni şeydir?',
+        a: 'Bron konkret rezervdir; cədvəl bütün masaların ümumi görünüşüdür. İkisi bir paneldə olmalıdır.',
       },
       {
         q: 'Otaq və masa birlikdə ola bilər?',
@@ -532,7 +532,7 @@ export const guidesAz: GuideCopy[] = [
       },
     ],
     relatedSolutions: ['billiards', 'reservations', 'gaming', 'pos'],
-    ctaTitle: 'Bilyard bron axını üçün demo',
+    ctaTitle: 'Bilyard bronu üçün demo',
     ctaBody: 'Masa sayınızı yazın — cədvəl və canlı oyunu göstəririk.',
   },
   {
@@ -541,7 +541,7 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Karaoke rezervasiya sistemi seçərkən nəyə baxmaq lazımdır?',
     seoTitle: 'Karaoke rezervasiya sistemi — seçim meyarları | Heselo bələdçisi',
     seoDescription:
-      'Karaoke booking system: otaq bronu, sessiya, əlavə satış və kassa. Karaoke rezervasiya sistemi checklist — satış səhifəsi deyil.',
+      'Karaoke bron sistemi: otaq bronu, sessiya, əlavə satış və kassa. Karaoke rezervasiya sistemi üçün yoxlama siyahısı — satış səhifəsi deyil.',
     keywords: [
       'karaoke rezervasiya sistemi',
       'karaoke booking system',
@@ -551,18 +551,18 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-07',
     intro:
-      'Karaoke rezervasiya sistemi yalnız onlayn forma deyil. Otaq dolanda sessiya, içki sifarişi və ödəniş eyni axında qalmalıdır. “Otaqlar necə rezerv edilir?” bələdçisi axını izah edir; burada fokus — sistemi seçərkən nə yoxlamaqdır.',
+      'Karaoke rezervasiya sistemi yalnız onlayn forma deyil. Otaq dolanda sessiya, içki sifarişi və ödəniş eyni sessiyada qalmalıdır. “Otaqlar necə rezerv edilir?” bələdçisi prosesi izah edir; burada fokus — sistemi seçərkən nə yoxlamaqdır.',
     sections: [
       {
         id: 'form-vs-system',
         title: 'Bron forması ilə idarəetmə sistemi fərqi',
         paragraphs: [
-          'Veb forma rezerv toplaya bilər, amma ofisiant otağın içindəki axını görmür. İdarəetmə sistemi rezerv → canlı otaq sessiyası → kassa zəncirini saxlayır.',
+          'Veb forma rezerv toplaya bilər, amma ofisiant otağın içindəki işi görmür. İdarəetmə sistemi rezerv → canlı otaq sessiyası → kassa zəncirini saxlayır.',
         ],
       },
       {
         id: 'checklist',
-        title: 'Seçim checklist',
+        title: 'Seçim üçün yoxlama siyahısı',
         paragraphs: ['Soruşun:'],
         bullets: [
           'Bir neçə otaq eyni cədvəldə görünürmü?',
@@ -583,7 +583,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'heselo',
         title: 'Heselo karaoke üçün nə verir?',
         paragraphs: [
-          'Otaq resurs kimi cədvəl və canlı izləmədədir. Məhsul və ödəniş eyni sessiyadadır. Kommersiya səhifəsi: karaoke həlli.',
+          'Hər otaq ayrıca qurulur — cədvəldə və canlı izləmədə görünür. Məhsul və ödəniş eyni sessiyadadır. Məhsul səhifəsi: karaoke həlli.',
         ],
       },
     ],
@@ -594,7 +594,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'VIP və adi otaq fərqlənə bilərmi?',
-        a: 'Bəli. Hər otaq ayrı resurs və tarifi ola bilər.',
+        a: 'Bəli. Hər otaq ayrıca qurulur və öz tarifi ola bilər.',
       },
       {
         q: 'Demo necə alınır?',
@@ -603,7 +603,7 @@ export const guidesAz: GuideCopy[] = [
     ],
     relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
     ctaTitle: 'Karaoke rezervasiya demo',
-    ctaBody: 'Otaq sayınızı yazın — bron və canlı otaq axını göstəririk.',
+    ctaBody: 'Otaq sayınızı yazın — bron cədvəlini və canlı otaq sessiyasını göstəririk.',
   },
   {
     slug: 'club-pos-vs-excel',
@@ -641,8 +641,8 @@ export const guidesAz: GuideCopy[] = [
         paragraphs: ['Bunlardan ikisi varsa, vərəq kifayət etmir:'],
         bullets: [
           'Gündə 10+ rezerv və ya eyni anda 5+ aktiv yer',
-          'İki növbə / iki işçi eyni resurslara toxunur',
-          'Snack/içki satışı kassa ilə uyğun gəlmir',
+          'İki növbə / iki işçi eyni masalara və otaqlara toxunur',
+          'Qəlyanaltı/içki satışı kassa ilə uyğun gəlmir',
           'Sahib ertəsi gün hesabatı Excel-dən yığır',
         ],
       },
@@ -650,7 +650,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'panel',
         title: 'Panel nəyi birləşdirir?',
         paragraphs: [
-          'Cədvəl, canlı sessiya, sürətli satış və kassa eyni gün qaydalarındadır. Ödəniş qalıqları serverdə hesablanır — “özünüz cəmləyin” yoxdur.',
+          'Cədvəl, canlı sessiya, sürətli satış və kassa eyni növbəyə yazılır. Ödəniləcək qalıqları sistem avtomatik hesablayır — “özünüz cəmləyin” yoxdur.',
         ],
       },
       {
@@ -683,11 +683,11 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Məkan tipini yazın — sizin axına uyğun ekranı göstəririk.',
+        a: 'Məkan tipini yazın — sizin işinizə uyğun ekranı göstəririk.',
       },
     ],
     relatedSolutions: ['pos', 'reservations', 'gaming', 'inventory'],
-    ctaTitle: 'Excel-siz axın üçün demo',
+    ctaTitle: 'Excel-siz iş günü üçün demo',
     ctaBody: 'Məkan tipi və masa/otaq sayını yazın — paneli 15 dəqiqədə göstəririk.',
   },
   {
@@ -721,7 +721,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'why-differ',
         title: 'Niyə kateqoriya üzrə fərqli tariflər?',
         paragraphs: [
-          'PS stansiyası ilə karaoke otağı eyni iş yükü deyil: otaq cədvəli, uzatma və kassa axını fərqlənir. Ona görə hər tipin öz başlanğıc tarifi var — sahibkar yalnız öz məkanına uyğun plana baxır.',
+          'PS stansiyası ilə karaoke otağı eyni iş yükü deyil: otaq cədvəli, uzatma və kassa işi fərqlənir. Ona görə hər tipin öz başlanğıc tarifi var — sahibkar yalnız öz məkanına uyğun plana baxır.',
           'Tip seçici gizli qiymət deyil; eyni açıq cədvəli rahat oxumaq üçündür. Yuxarıdakı xülasədə bütün kateqoriyaların başlanğıc qiyməti bir yerdə görünür.',
         ],
       },
@@ -755,7 +755,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Karaoke üçün?',
-        a: 'Kiçik plan 39 AZN/aydan — otaq cədvəli və sessiya axınına görə PS-dən yüksəkdir.',
+        a: 'Kiçik plan 39 AZN/aydan — otaq cədvəli və sessiya işinə görə PS-dən yüksəkdir.',
       },
     ],
     relatedSolutions: ['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'],
