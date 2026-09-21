@@ -2,7 +2,7 @@ import type { Locale } from '@/i18n/config'
 import { HTML_LANG, LOCALES, OG_LOCALES } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { fillTemplate } from '@/lib/format'
-import { allVenuePlans, monthlyFeeRange, VENUE_OFFERS } from '@/lib/venueOffers'
+import { allVenuePlans, getActiveOffers, monthlyFeeRange } from '@/lib/venueOffers'
 import {
   absoluteUrl,
   FOUNDER,
@@ -347,7 +347,7 @@ export function buildJsonLdGraph(
   }
 
   if (input.slug === '/pricing' || input.slug === '/pricing/') {
-    const startingOffers = VENUE_OFFERS.map((offer) => {
+    const startingOffers = getActiveOffers().map((offer) => {
       const plan = offer.plans[0]
       const copy = messages.pricing.offers[offer.slug]
       return {

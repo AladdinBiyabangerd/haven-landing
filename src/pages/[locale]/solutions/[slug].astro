@@ -11,7 +11,7 @@ import CtaBanner from '@/components/CtaBanner.astro'
 import NextThought from '@/components/NextThought.astro'
 import { localePath } from '@/lib/site'
 import { contactPath, pricingPath } from '@/lib/journey'
-import { VENUE_STORAGE_KEY, getVenueOffer, isVenueOfferSlug } from '@/lib/venueOffers'
+import { VENUE_STORAGE_KEY, getVenueOffer, isVenueOfferSlug, loadVenueOffers } from '@/lib/venueOffers'
 import { fillTemplate, formatMoney } from '@/lib/format'
 
 export function getStaticPaths() {
@@ -36,6 +36,7 @@ const relatedGuide = getGuideForSolution(locale, solution.slug)
 const altGuides = getAltGuidesForSolution(locale, solution.slug)
 const productShotId = SOLUTION_SHOT_MAP[solution.slug]
 const extraShotId = SOLUTION_EXTRA_SHOT_MAP[solution.slug]
+await loadVenueOffers()
 const venueOffer = getVenueOffer(solution.slug)
 const fromFee = venueOffer?.plans[0].monthlyFee
 const offerPrice = fromFee != null

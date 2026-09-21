@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { fillTemplate, formatMoney } from '@/lib/format'
 import { localePath } from '@/lib/site'
-import { VENUE_OFFERS } from '@/lib/venueOffers'
+import { getActiveOffers, loadVenueOffers } from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
@@ -12,6 +12,8 @@ interface Props {
 
 const { locale, messages } = Astro.props
 const page = messages.pricing
+await loadVenueOffers()
+const offers = getActiveOffers()
 ---
 
 <section class="pricing-summary" aria-labelledby="pricing-summary-title">
@@ -20,7 +22,7 @@ const page = messages.pricing
   <p class="lead">{page.summaryLead}</p>
   <ul class="pricing-summary__list">
     {
-      VENUE_OFFERS.map((offer) => {
+      offers.map((offer) => {
         const from = offer.plans[0].monthlyFee
         return (
           <li>

@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { localePath } from '@/lib/site'
 import { fillTemplate, formatMoney } from '@/lib/format'
-import { crossoverPoints, VENUE_OFFERS, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
+import { crossoverPoints, getActiveOffers, loadVenueOffers, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
@@ -12,9 +12,11 @@ interface Props {
 
 const { locale, messages } = Astro.props
 const page = messages.pricing
-const slugs = VENUE_OFFERS.map((offer) => offer.slug)
+await loadVenueOffers()
+const offers = getActiveOffers()
+const slugs = offers.map((offer) => offer.slug)
 const calculatorData = Object.fromEntries(
-  VENUE_OFFERS.map((offer) => [
+  offers.map((offer) => [
     offer.slug,
     {
       plans: offer.plans.map((plan) => ({
@@ -38,7 +40,7 @@ function planFeatures(features: string[], upTo: number): string[] {
     <p class="chooser-label" id="venue-type-label">{page.chooseType}</p>
     <div class="types" role="tablist" aria-labelledby="venue-type-label">
       {
-        VENUE_OFFERS.map((offer, index) => (
+        offers.map((offer, index) => (
           <a
             href={`#${offer.slug}`}
             role="tab"
@@ -56,9 +58,9 @@ function planFeatures(features: string[], upTo: number): string[] {
   </div>
 
   {
-    VENUE_OFFERS.map((offer, index) => {
+    offers.map((offer, index) => {
       const copy = page.offers[offer.slug]
-      const crossovers = crossoverPoints(offer.slug)
+      const crossovers = crossoverPoints(offer.slug, offers)
       return (
         /* The first type is open on load — an empty pricing page helps nobody. */
         <section

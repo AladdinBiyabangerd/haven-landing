@@ -11,6 +11,7 @@ import Analytics from '@/components/Analytics.astro'
 import VercelAnalytics from '@vercel/analytics/astro'
 import WhatsAppFab from '@/components/WhatsAppFab.astro'
 import JourneyContext from '@/components/JourneyContext.astro'
+import { loadVenueOffers } from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
@@ -23,6 +24,9 @@ interface Props {
 }
 
 const { locale, messages, page, seo: seoInput, preloadImages = [] } = Astro.props
+
+// Warm subscription catalog cache (Platform Admin DB → public API).
+await loadVenueOffers()
 
 const input: SeoPageInput =
   seoInput ||
