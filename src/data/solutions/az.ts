@@ -80,6 +80,22 @@ export const solutionsAz: SolutionCopy[] = [
         q: 'Otaq və masa eyni sistemdə ola bilər?',
         a: 'Bəli. VIP otaq və adi masa eyni cədvəl, sessiya və kassa qaydaları ilə işləyir.',
       },
+      {
+        q: 'Heselo hansı bilyard klubları üçün uyğun deyil?',
+        a: 'Əsas işiniz mətbəx, menyu və ofisiant sifarişidirsə, restoran POS daha uyğundur. Heselo masa və otaq vaxtını satan klublar üçündür: bron, canlı oyun, məhsul satışı və kassa növbəsi bir yerdədir. İki masalı kiçik zalda da, böyük bilyard salonunda da eyni qaydada işləyir.',
+      },
+      {
+        q: 'Lövhə, WhatsApp və Excel ilə işləməkdən nə fərqi var?',
+        a: 'Lövhədə və mesajlarda kimin bron etdiyi görünür, amma oyunun nə vaxt başladığı, əlavə satış və ödəniş başqa yerdə qalır. Heselo-da bron cədvəldən canlı sessiyaya keçir, qiymət müddətə görə hesablanır, ödəniş növbəyə yazılır. Gün sonunda Excel-də məbləğləri yenidən toplamağa ehtiyac qalmır.',
+      },
+      {
+        q: 'Bilyard klubu üçün qiymət nə qədərdir?',
+        a: 'Bilyard üçün Kiçik plan ayda 29 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Bir neçə filial və ya standart plana sığmayan həcm üçün ayrıca fərdi təklif hazırlayırıq.',
+      },
+      {
+        q: 'Demo necə alınır, kart lazımdır?',
+        a: 'Əlaqə formasını doldurun — masa və otaq sayını, iş saatlarınızı yazın. Demo pulsuzdur, kart məlumatı istənmir. Cədvəli, canlı oyun sessiyasını və kassa bağlanışını sizin məkana yaxın ssenari ilə göstəririk.',
+      },
     ],
     related: ['gaming', 'karaoke', 'reservations', 'pos'],
     ctaTitle: 'Bilyard klubu üçün demo',
@@ -144,6 +160,22 @@ export const solutionsAz: SolutionCopy[] = [
       {
         q: 'Əvvəlcədən sifariş dəstəklənirmi?',
         a: 'Rezervasiya formasında etiket və əvvəlcədən sifariş sahələri var — paneldəki bron forması ilə eyni sahələrdir.',
+      },
+      {
+        q: 'Mətbəxi olan karaoke iiko və ya Clopos-u saxlamalıdır?',
+        a: 'Tam mətbəx, KDS və ofisiant sifarişi gündəlik işin əsasıdırsa, restoran POS-u saxlamaq məntiqlidir. Heselo otaq cədvəli, sessiya müddəti, uzatma və kassa növbəsi üçündür. Əsas gəlir otaq vaxtından gəlirsə və menyu sadədirsə, içki və qəlyanaltı satışı da Heselo-da eyni sessiyaya yazılır.',
+      },
+      {
+        q: 'Bronları WhatsApp-da qəbul edirik — nə dəyişəcək?',
+        a: 'Qonaq yenə WhatsApp-da və ya zənglə yaza bilər, amma bron mesajda qalmır — otaq cədvəlinə düşür. Kimin hansı otağı neçədən neçəyə tutduğunu bütün komanda eyni ekranda görür. Qonaq gələndə həmin bron canlı sessiyaya keçir, uzatma və ödəniş də orada qalır.',
+      },
+      {
+        q: 'Karaoke üçün qiymət harada göstərilib?',
+        a: 'Karaoke üçün Kiçik plan ayda 39 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Demonu əlaqə formasından pulsuz istəyə bilərsiniz — kart məlumatı tələb olunmur, otaq sayınızı yazmaq kifayətdir.',
+      },
+      {
+        q: 'Karaoke, bilyard və launj eyni paneldə ola bilər?',
+        a: 'Bəli. Karaoke otaqları, bilyard masaları və launj otaqları eyni məkanda ayrıca qurulur, amma eyni cədvəli, canlı izləməni və kassa növbəsini paylaşır. Günün sonunda bütün zonaların satışı bir hesabatda görünür — ayrı proqramlar arasında məbləğ tutuşdurmaq lazım gəlmir.',
       },
     ],
     related: ['reservations', 'lounge', 'gaming', 'pos'],
@@ -210,6 +242,22 @@ export const solutionsAz: SolutionCopy[] = [
       {
         q: 'İcazələr necədir?',
         a: 'İşçilərə səhifə və düymə səviyyəsində icazə verilir; vacib əməliyyatlarda qoruma kodu ola bilər.',
+      },
+      {
+        q: 'Hansı oyun klubları üçün uyğun deyil?',
+        a: 'Kompüterləri uzaqdan idarə etmək, avtomatik kilidləmək və ya oyun lisenziyalarını paylamaq əsas ehtiyacdırsa, ixtisaslaşmış PC club proqramına baxın. Heselo stansiya bronu, canlı sessiya, qəlyanaltı satışı və kassa növbəsi üçündür. PS və konsol klubları, qarışıq oyun məkanları üçün ən uyğundur.',
+      },
+      {
+        q: 'iiko istifadə edirik — saxlamaq lazımdır?',
+        a: 'Klubda tam mətbəx, KDS və menyu sifarişi varsa, iiko həmin hissə üçün qala bilər. Heselo stansiya vaxtı, bron, uzatma və klub kassası üçündür. Əksər PS klublarında isə satış içki və qəlyanaltıdan ibarətdir — bunu Heselo-nun sürətli satışı və anbarı əhatə edir, ayrıca restoran POS-a ehtiyac qalmır.',
+      },
+      {
+        q: 'Excel və WhatsApp ilə müqayisədə nə dəyişir?',
+        a: 'Excel-də stansiya vaxtı sonradan yazılır, WhatsApp-da bron mesajlar arasında itir. Heselo-da bron cədvəldədir, oyun başlayanda canlı sessiya açılır, uzatma və qəlyanaltı eyni qeydə düşür. Növbə bağlananda kassa məbləği hazır olur — axşam cədvəlləri tutuşdurmaq lazım gəlmir.',
+      },
+      {
+        q: 'PS klubu üçün qiymət nə qədərdir?',
+        a: 'PS və oyun klubu üçün Kiçik plan ayda 25 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına stansiya sayını yazın — kart məlumatı tələb olunmur, cədvəli və canlı sessiyanı göstəririk.',
       },
     ],
     related: ['billiards', 'karaoke', 'reservations', 'pos'],
@@ -280,6 +328,22 @@ export const solutionsAz: SolutionCopy[] = [
         q: 'Demo necə əldə edilir?',
         a: 'Əlaqə formasını doldurun — masa/otaq sayını və iş gününüzü qeyd edin.',
       },
+      {
+        q: 'Hansı antikafelər üçün uyğun deyil?',
+        a: 'Qonaqdan vaxta görə yox, yalnız sifarişə görə pul alırsınızsa və mətbəx əsas işdirsə, adi kafe və ya restoran POS-u daha uyğundur. Heselo masa, otaq və ya stansiya vaxtını satan məkanlar üçündür: saatla ödəniş, çay və qəlyanaltı satışı və kassa növbəsi bir yerdədir.',
+      },
+      {
+        q: 'Bronsuz gələn qonaq necə qeyd olunur?',
+        a: 'Boş masa və ya otaqda dərhal canlı sessiya açırsınız — əvvəlcədən bron lazım deyil. Cədvəl həmin yerin məşğul olduğunu göstərir, resepsiya növbəti bronu buna görə planlayır. Qonaq yalnız çay və ya qəlyanaltı alırsa, sürətli satış ilə sessiyasız da satmaq olar.',
+      },
+      {
+        q: 'Excel və ya WhatsApp-dan keçmək nə verir?',
+        a: 'Excel-də saatlar və məbləğ əllə yazılır, WhatsApp-da bronlar mesajlar arasında itir. Heselo-da bron cədvəldədir, qonaq gələndə sessiya açılır, vaxt, çay və qəlyanaltı eyni hesaba yazılır. Növbənin sonunda kassa məbləği hazır olur, qalıqlar da anbarda yenilənir.',
+      },
+      {
+        q: 'Antikafe üçün qiymət nə qədərdir?',
+        a: 'Antikafe üçün Kiçik plan ayda 32 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq göstərilib. Bir neçə zal və ya filial standart plana sığmırsa, ayrıca fərdi təklif hazırlayırıq. Demo pulsuzdur, kart tələb olunmur.',
+      },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
     ctaTitle: 'Antikafe üçün demo istəyin',
@@ -289,10 +353,12 @@ export const solutionsAz: SolutionCopy[] = [
     slug: 'lounge',
     shortTitle: 'Otaqlı launj',
     h1: 'Otaqlı launj idarəetmə sistemi',
-    seoTitle: 'Otaqlı launj proqramı və otaq rezervasiyası | Heselo',
+    seoTitle: 'Lounge bar idarəetmə proqramı — VIP otaq rezervasiyası | Heselo',
     seoDescription:
-      'Otaqlı launj üçün proqram: VIP otaq rezervasiyası, canlı sessiya, kassa və əlavə satış. Otaq əsaslı launj — pulsuz demo.',
+      'Launj bar proqramı: VIP otaq rezervasiyası, canlı sessiya, bar satışı, kassa və anbar bir paneldə. Otaqlı launj üçün — ayda 39 AZN-dən, pulsuz demo.',
     keywords: [
+      'lounge bar idarəetmə proqramı',
+      'launj bar proqramı',
       'otaqlı launj proqramı',
       'launj otaq rezervasiya',
       'launj idarəetmə sistemi',
@@ -343,6 +409,26 @@ export const solutionsAz: SolutionCopy[] = [
       {
         q: 'Açıq zal və otaq eyni sistemdə ola bilər?',
         a: 'Bəli. Masa, otaq və stansiya eyni cədvəl, sessiya və kassa qaydaları ilə idarə olunur.',
+      },
+      {
+        q: 'Lounge bar üçün ayrıca proqram lazımdır?',
+        a: 'Əksər hallarda yox. Launj bar otaq və ya masa vaxtı, içki və qəlyanaltı satışı ilə işləyirsə, Heselo bronu, canlı sessiyanı, bar satışını, kassa növbəsini və anbarı bir paneldə aparır. Ayrıca restoran proqramı yalnız tam mətbəx, KDS və mürəkkəb menyu sifarişi əsas iş olanda lazımdır.',
+      },
+      {
+        q: 'Hansı launjlar üçün uyğun deyil?',
+        a: 'Otaq və ya masa vaxtı satmayan, yalnız açıq zalda ofisiant sifarişi ilə işləyən bar-restoran üçün restoran POS daha uyğundur. Heselo VIP otaqlı launjlar, otaq kirayəsi olan klub-launjlar və karaoke/bilyard ilə qarışıq məkanlar üçündür — əsas vahid otaq və vaxt olanda.',
+      },
+      {
+        q: 'Mətbəx üçün iiko-nu nə vaxt saxlamaq lazımdır?',
+        a: 'Launjda tam mətbəx, KDS ekranı və sifarişin mətbəxə ötürülməsi gündəlik işin əsasıdırsa, iiko və ya oxşar restoran POS-u saxlamaq məntiqlidir. Heselo isə otaq cədvəli, sessiya, uzatma və klub kassası üçündür. Menyu sadədirsə — içki və qəlyanaltı — satış Heselo-da eyni sessiyaya yazılır.',
+      },
+      {
+        q: 'Bronları WhatsApp-da qəbul edirik — nə dəyişəcək?',
+        a: 'Qonaq yenə WhatsApp-da yazır, amma administrator bronu dərhal otaq cədvəlinə salır. Hansı VIP otağın neçədən neçəyə tutulduğunu bütün komanda görür, köçürmə və ləğv tarixçədə qalır. Qonaq gələndə bron canlı sessiyaya keçir — uzatma və məhsul əlavəsi ayrı yerdə yazılmır.',
+      },
+      {
+        q: 'Launj bar proqramının qiyməti nə qədərdir?',
+        a: 'Otaqlı launj üçün Kiçik plan ayda 39 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına otaq sayını yazın — kart məlumatı istənmir, cədvəli və canlı sessiyanı sizin ssenari ilə göstəririk.',
       },
     ],
     related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
@@ -407,6 +493,22 @@ export const solutionsAz: SolutionCopy[] = [
       {
         q: 'Keçmiş gün qorunurmu?',
         a: 'Bəli. Keçmiş günə aid dəyişikliklər məkan qaydalarına görə qorunur.',
+      },
+      {
+        q: 'Onlayn bron vidcetindən nə ilə fərqlənir?',
+        a: 'Vidcet yalnız boş vaxtı seçdirir; qonaq gələndən sonra nə baş verdiyini bilmir. Heselo-da eyni bron canlı sessiyaya keçir, ödəniş, əvvəlcədən sifariş və müştəri tarixçəsi ilə bağlanır. Beləliklə cədvəl, zal və kassa eyni məlumatı görür — bron bir yerdə, ödəniş başqa yerdə qalmır.',
+      },
+      {
+        q: 'Telefon və WhatsApp bronları necə aparılır?',
+        a: 'Administrator zəng və ya mesajla gələn bronu cədvələ yazır: müştəri, vaxt, masa və ya otaq, etiket. Hamı eyni cədvəli gördüyü üçün eyni yerin iki dəfə bron olunması riski azalır. Köçürmə və ləğv də tarixçədə qalır — “kim dəyişdi?” sualının cavabı həmişə var.',
+      },
+      {
+        q: 'Bir neçə məkan tipi eyni cədvəldə ola bilər?',
+        a: 'Bəli. PS stansiyası, bilyard masası, karaoke və ya launj otağı ayrıca qurulur, amma eyni cədvəldə və bron siyahısında görünür. Qarışıq məkanda administrator bütün zonaları bir ekrandan idarə edir, kassa da eyni növbədə bağlanır.',
+      },
+      {
+        q: 'Qiymət harada göstərilib?',
+        a: 'Rezervasiya və cədvəl panelin əsas hissəsidir; qiymət məkan tipinə görə plandan asılıdır. Kiçik plan PS/oyun üçün 25, bilyard üçün 29, antikafe üçün 32, karaoke və launj üçün 39 AZN/aydan başlayır. Tam cədvəl qiymətlər səhifəsindədir, demo isə pulsuzdur.',
       },
     ],
     related: ['karaoke', 'lounge', 'gaming', 'pos'],
@@ -474,6 +576,22 @@ export const solutionsAz: SolutionCopy[] = [
         q: 'Kassa sayımı varmı?',
         a: 'Bəli. Kassa sayımı növbə/gün bağlanışı üçün nəzərdə tutulub.',
       },
+      {
+        q: 'Excel və WhatsApp-dakı kassa hesabından nə fərqi var?',
+        a: 'Excel-də məbləğlər gün sonunda əllə köçürülür, WhatsApp-da isə “bu qədər nağd qaldı” mesajı olur — yoxlamaq çətindir. Heselo-da hər ödəniş sessiyaya və növbəyə bağlı yazılır, bağlanışda sayım aparılır və fərq dərhal görünür. Bağlanmış günlərin tarixçəsi də saxlanılır.',
+      },
+      {
+        q: 'Nağd, kart və bank ödənişləri ayrı görünür?',
+        a: 'Bəli. Əməliyyatlar nağd, bank və POS kimi ödəniş növü ilə yazılır, kassa hesabatı isə növbə və dövr üzrə hər növü ayrıca göstərir. Növbə bağlananda sayılan nağd sistemdəki məbləğlə müqayisə olunur — kartla ödənişin nağd kimi yazılması kimi səhvlər tez tapılır.',
+      },
+      {
+        q: 'Restoran POS-u (iiko, Clopos) nə vaxt saxlamaq lazımdır?',
+        a: 'Mətbəx, KDS və menyu sifarişi əsas işdirsə, restoran POS-u saxlamaq məntiqlidir. Heselo kassası isə otaq, masa və stansiya vaxtını, canlı sessiyanı və bron ödənişlərini eyni növbədə bağlayır. Satışınız əsasən vaxt, içki və qəlyanaltıdırsa, adətən ayrıca restoran kassasına ehtiyac qalmır.',
+      },
+      {
+        q: 'Qiymət nə qədərdir?',
+        a: 'Tariflər məkan tipinə görədir: Kiçik plan PS/oyun üçün 25, bilyard üçün 29, antikafe üçün 32, karaoke və launj üçün 39 AZN/aydan. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demonu əlaqə formasından istəyin — kart lazım deyil.',
+      },
     ],
     related: ['gaming', 'inventory', 'reservations'],
     ctaTitle: 'Kassa növbəsi üçün demo',
@@ -537,6 +655,22 @@ export const solutionsAz: SolutionCopy[] = [
       {
         q: 'Statistikada anbar varmı?',
         a: 'Bəli. Anbar statistikası icmal və kəsmlər üçün mövcuddur.',
+      },
+      {
+        q: 'Hansı məkanlar üçün uyğundur, hansılar üçün yox?',
+        a: 'Oyun klubu, karaoke, bilyard, antikafe və launjda içki, qəlyanaltı və bar məhsullarının qalığını izləmək üçün uyğundur. Çoxlu təchizatçı, reseptə görə silinmə və ya böyük mətbəx anbarı lazımdırsa, ixtisaslaşmış anbar və ya restoran sistemi daha doğru seçimdir. Klub barı üçün isə kassa ilə eyni kataloq adətən kifayət edir.',
+      },
+      {
+        q: 'Excel anbar cədvəlindən nə fərqi var?',
+        a: 'Excel adətən axşam doldurulur və satışdan geri qalır. Heselo-da məhsul canlı sessiyada və ya sürətli satışda əlavə olunanda eyni kataloq işləyir, qalıq satışla uyğun qalır. Sayım jurnalları saxlanılır, ona görə kimin nə vaxt saydığını sonradan yoxlamaq olar.',
+      },
+      {
+        q: 'Bronsuz satış da anbardan çıxılır?',
+        a: 'Bəli. Sürətli satış bron olmadan aparılır, amma canlı sessiya ilə eyni məhsul kataloqunu istifadə edir. Qonaq yalnız içki və ya qəlyanaltı alanda da satış kassaya yazılır və qalıq yenilənir — “satış var, anbarda yoxdur” vəziyyəti yaranmır.',
+      },
+      {
+        q: 'Qiymət harada göstərilib?',
+        a: 'Tariflər məkan tipinə görədir: PS/oyun üçün 25, bilyard üçün 29, antikafe üçün 32, karaoke və launj üçün 39 AZN/aydan. Planlar üzrə limitlər və illik ödəniş qiymətlər səhifəsindədir. Demo pulsuzdur — əlaqə formasına məhsul sayınızı yazın, anbar və sayım prosesini göstəririk.',
       },
     ],
     related: ['pos', 'gaming', 'antikafe'],

@@ -734,6 +734,301 @@ const catalog: CatalogEntry[] = [
       },
     },
   },
+  {
+    slug: 'fazilat-pos-alternative',
+    name: 'Fazilat POS',
+    kind: 'restaurant',
+    relatedSolutions: ['pos', 'karaoke', 'gaming'],
+    copy: {
+      az: {
+        shortTitle: 'Fazilat POS alternativi',
+        h1: 'Klublar üçün Fazilat POS alternativi',
+        seoTitle: 'Fazilat POS alternativi — klublar üçün Heselo',
+        seoDescription:
+          'Fazilat POS və Heselo müqayisəsi: pərakəndə və restoran kassası ilə oyun, karaoke və bilyard klubları üçün otaq-vaxt idarəetməsinin fərqi.',
+        intro:
+          'Fazilat POS mağaza, kafe və restoranlarda məhsul satışı və kassa üçün uyğun seçim ola bilər. Klubunuzda əsas gəlir otaq, konsol və ya masa vaxtından gəlirsə, Heselo həmin vaxtı rezervasiya və canlı sessiya kimi idarə edir.',
+        competitorFit:
+          'Barkodla məhsul satışı, pərakəndə kassa, restoran sifarişi və çek əsas ehtiyacdırsa, Fazilat POS kimi ümumi satış sistemi daha məntiqlidir. Heselo pərakəndə və ya tam restoran POS-unu əvəz etmək üçün qurulmayıb.',
+        heseloFit:
+          'PlayStation stansiyaları, karaoke otaqları və bilyard masaları vaxtla satılırsa, Heselo rezervasiyanı başlat-dayandır sessiyası, tarif, kassa növbəsi və stokla bir prosesdə birləşdirir.',
+        priceAngle:
+          'Heselo 25 AZN/aydan başlayır. Fazilat POS üzrə lisenziya, quraşdırma, avadanlıq və dəstək xərclərini aktual təkliflə dəqiqləşdirin, sonra eyni klub ssenarisi üzrə müqayisə edin.',
+        switchNote:
+          'Əvvəlcə otaq, stansiya və masaları, sonra tarifləri Heselo demosunda qurun. Mağaza və ya mətbəx satışı ayrıca qalırsa, hansı satışın hansı sistemdə qeyd olunacağını əvvəlcədən razılaşdırın.',
+      },
+      en: {
+        shortTitle: 'Fazilat POS alternative',
+        h1: 'A Fazilat POS alternative for clubs',
+        seoTitle: 'Fazilat POS Alternative for Clubs — Heselo',
+        seoDescription:
+          'Compare Fazilat POS and Heselo: retail and restaurant tills versus room-time management for gaming, karaoke and billiards clubs.',
+        intro:
+          'Fazilat POS can be a sensible choice for product sales and tills in shops, cafés and restaurants. If most of your club revenue comes from room, console or table time, Heselo manages that time as bookings and live sessions.',
+        competitorFit:
+          'A general sales system such as Fazilat POS makes more sense when barcode sales, a retail till, restaurant orders and receipts are the main requirement. Heselo is not built to replace a retail or full restaurant POS.',
+        heseloFit:
+          'When PlayStation stations, karaoke rooms and billiards tables are sold by time, Heselo connects bookings with start-stop sessions, rates, cash shifts and stock in one flow.',
+        priceAngle:
+          'Heselo starts from 25 AZN per month. Confirm Fazilat POS licensing, setup, hardware and support costs through a current quote, then compare the same club scenario.',
+        switchNote:
+          'Set up rooms, stations and tables first, then rates, in the Heselo demo. If shop or kitchen sales stay elsewhere, agree in advance which sales each system records.',
+      },
+      ru: {
+        shortTitle: 'Альтернатива Fazilat POS',
+        h1: 'Альтернатива Fazilat POS для клубов',
+        seoTitle: 'Альтернатива Fazilat POS для клубов — Heselo',
+        seoDescription:
+          'Сравнение Fazilat POS и Heselo: розничная и ресторанная касса или учёт времени комнат для игровых, караоке- и бильярдных клубов.',
+        intro:
+          'Fazilat POS может быть разумным выбором для продажи товаров и кассы в магазинах, кафе и ресторанах. Если основную выручку клуба приносит время комнат, консолей или столов, Heselo ведёт это время как бронирования и живые сеансы.',
+        competitorFit:
+          'Общая торговая система вроде Fazilat POS уместнее, когда главное — продажи по штрихкоду, розничная касса, ресторанные заказы и чеки. Heselo не создавалась для замены розничной или полноценной ресторанной POS.',
+        heseloFit:
+          'Если PlayStation-станции, караоке-комнаты и бильярдные столы продаются по времени, Heselo объединяет бронь, запуск и остановку сеанса, тарифы, кассовую смену и склад в одном процессе.',
+        priceAngle:
+          'Heselo стоит от 25 AZN в месяц. Уточните у Fazilat POS актуальную стоимость лицензии, внедрения, оборудования и поддержки, затем сравните одинаковый клубный сценарий.',
+        switchNote:
+          'Сначала создайте в демо Heselo комнаты, станции и столы, затем тарифы. Если розничные или кухонные продажи остаются в другой системе, заранее договоритесь, какие продажи где учитываются.',
+      },
+    },
+  },
+  {
+    slug: 'smartpos-alternative',
+    name: 'SmartPOS',
+    kind: 'restaurant',
+    relatedSolutions: ['pos', 'gaming', 'karaoke'],
+    copy: {
+      az: {
+        shortTitle: 'SmartPOS alternativi',
+        h1: 'Vaxtla işləyən klublar üçün SmartPOS alternativi',
+        seoTitle: 'SmartPOS alternativi — klublar üçün Heselo',
+        seoDescription:
+          'SmartPOS və Heselo müqayisəsi: restoran və kafe satışı ilə oyun və karaoke klubları üçün rezervasiya, vaxt sessiyası, kassa və stok.',
+        intro:
+          'SmartPOS adı altında təqdim olunan həllər əsasən kafe, restoran və mağazalarda sifariş və kassa satışına yönəlir. Klubunuzda hesab vaxtdan yaranırsa, Heselo rezervasiyanı və canlı sessiyanı əməliyyatın mərkəzinə qoyur.',
+        competitorFit:
+          'Menyu, ofisiant sifarişi, mətbəx və gündəlik çek satışı əsas işdirsə, SmartPOS kimi restoran və satış POS-u daha uyğun ola bilər. Heselo tam restoran mətbəx həlli deyil.',
+        heseloFit:
+          'Heselo PlayStation stansiyası, karaoke otağı və digər vaxtla satılan yerlər üçün rezervasiya, canlı vaxt hesabı, uzadılma, kassa növbəsi və stoku bir paneldə birləşdirir.',
+        priceAngle:
+          'Heselo 25 AZN/aydan başlayır. Bazarda eyni adlı bir neçə məhsul ola bildiyi üçün konkret SmartPOS təminatçısından aktual paket, avadanlıq və dəstək qiymətini istəyin.',
+        switchNote:
+          'Tipik həftəsonu rezervasiyalarını və tariflərinizi Heselo demosunda sınayın. Restoran sifarişləri qalırsa, onları SmartPOS-da saxlayıb klub vaxtını mərhələli olaraq Heselo-ya keçirin.',
+      },
+      en: {
+        shortTitle: 'SmartPOS alternative',
+        h1: 'A SmartPOS alternative for time-based clubs',
+        seoTitle: 'SmartPOS Alternative for Clubs — Heselo',
+        seoDescription:
+          'Compare SmartPOS and Heselo: café and restaurant sales versus bookings, timed sessions, cash shifts and stock for gaming and karaoke clubs.',
+        intro:
+          'Solutions sold under the SmartPOS name mostly focus on ordering and till sales in cafés, restaurants and shops. If time drives the bill in your club, Heselo puts bookings and live sessions at the centre of operations.',
+        competitorFit:
+          'A restaurant and sales POS such as SmartPOS may fit better when menus, waiter orders, a kitchen and everyday receipts are the core work. Heselo is not a full restaurant kitchen solution.',
+        heseloFit:
+          'Heselo combines bookings, live time billing, extensions, cash shifts and stock for PlayStation stations, karaoke rooms and other resources sold by time.',
+        priceAngle:
+          'Heselo starts from 25 AZN per month. Several products may share the SmartPOS name, so ask your specific provider for current package, hardware and support pricing.',
+        switchNote:
+          'Test a typical weekend of bookings and your rates in the Heselo demo. If restaurant orders remain, keep them in SmartPOS and move club time to Heselo in stages.',
+      },
+      ru: {
+        shortTitle: 'Альтернатива SmartPOS',
+        h1: 'Альтернатива SmartPOS для клубов с почасовой оплатой',
+        seoTitle: 'Альтернатива SmartPOS для клубов — Heselo',
+        seoDescription:
+          'Сравните SmartPOS и Heselo: продажи в кафе и ресторане или бронирования, почасовые сеансы, кассовые смены и склад для игровых и караоке-клубов.',
+        intro:
+          'Решения под названием SmartPOS в основном рассчитаны на заказы и кассовые продажи в кафе, ресторанах и магазинах. Если счёт в клубе формируется временем, Heselo ставит в центр работы бронирования и живые сеансы.',
+        competitorFit:
+          'Ресторанная и торговая POS вроде SmartPOS может подойти лучше, когда основа работы — меню, заказы официантов, кухня и повседневные чеки. Heselo не является полноценным решением для ресторанной кухни.',
+        heseloFit:
+          'Heselo объединяет бронирования, живой учёт времени, продления, кассовые смены и склад для PlayStation-станций, караоке-комнат и других ресурсов с почасовой оплатой.',
+        priceAngle:
+          'Heselo стоит от 25 AZN в месяц. Под названием SmartPOS может продаваться несколько продуктов, поэтому запросите у конкретного поставщика актуальную цену пакета, оборудования и поддержки.',
+        switchNote:
+          'Проверьте в демо Heselo типичные выходные бронирования и свои тарифы. Если ресторанные заказы остаются, ведите их в SmartPOS, а клубное время переносите в Heselo поэтапно.',
+      },
+    },
+  },
+  {
+    slug: 'kassa-az-alternative',
+    name: 'Kassa.az',
+    kind: 'club-pos',
+    relatedSolutions: ['pos', 'inventory', 'gaming'],
+    copy: {
+      az: {
+        shortTitle: 'Kassa.az alternativi',
+        h1: 'Otaq-vaxt klubları üçün Kassa.az alternativi',
+        seoTitle: 'Kassa.az alternativi — otaq-vaxt klubları üçün Heselo',
+        seoDescription:
+          'Kassa.az brendi ilə Heselo müqayisəsi: ümumi kassa və satış proqramı yoxsa oyun, karaoke və bilyard klubları üçün rezervasiya və vaxt sessiyası.',
+        intro:
+          'Bu bələdçi Kassa.az brendinin satış və kassa həllini Heselo ilə müqayisə edir. Heselo Kassa.az deyil və onunla əlaqəli deyil; Heselo-da kassa növbəsi yalnız klub panelinin funksiyalarından biridir, əsas fokus isə otaq vaxtı, rezervasiya və canlı sessiyadır.',
+        competitorFit:
+          'Mağaza və ya xidmət nöqtəsində əsas ehtiyac məhsul satışı, çek vurmaq və gündəlik kassa hesabatıdırsa, Kassa.az kimi ümumi kassa proqramı sadə və məqsədəuyğun ola bilər.',
+        heseloFit:
+          'Satdığınız əsas məhsul otaq, konsol və ya masa vaxtıdırsa, Heselo rezervasiyanı canlı sessiyaya çevirir, vaxt tarifini hesablayır və nəticəni kassa növbəsi və stokla birləşdirir.',
+        priceAngle:
+          'Heselo 25 AZN/aydan başlayır. Kassa.az üzrə aktual tarif, avadanlıq və inteqrasiya şərtlərini brendin özündən öyrənin; müqayisədə vaxt hesabı üçün ayrıca cədvəl saxlamağın xərcini də nəzərə alın.',
+        switchNote:
+          'Mövcud kassa proqramınız çek və məhsul satışını qaydasında aparırsa, ondan tələsik imtina etməyin. Heselo demosunda otaq və stansiyaları yaradıb rezervasiyadan sessiyanın bağlanışına qədər bir növbəni sınayın.',
+      },
+      en: {
+        shortTitle: 'Kassa.az alternative',
+        h1: 'A Kassa.az alternative for room-time clubs',
+        seoTitle: 'Kassa.az Alternative for Room-Time Clubs — Heselo',
+        seoDescription:
+          'Compare the Kassa.az brand with Heselo: general till and sales software versus bookings and timed sessions for gaming, karaoke and billiards clubs.',
+        intro:
+          'This guide compares the Kassa.az brand’s sales and till solution with Heselo. Heselo is not Kassa.az and is not affiliated with it; in Heselo, cash shifts are one feature of the club panel, while the core focus is room time, bookings and live sessions.',
+        competitorFit:
+          'A general till program such as Kassa.az can be simple and appropriate when a shop or service point mainly needs product sales, receipts and daily cash reporting.',
+        heseloFit:
+          'If your main product is room, console or table time, Heselo turns a booking into a live session, applies the time rate and connects the result to the cash shift and stock.',
+        priceAngle:
+          'Heselo starts from 25 AZN per month. Get current Kassa.az plan, hardware and integration terms from the brand itself, and include the cost of keeping a separate time spreadsheet in the comparison.',
+        switchNote:
+          'If your current till software handles receipts and product sales well, do not drop it in a hurry. Create rooms and stations in the Heselo demo and test one shift from booking to session close.',
+      },
+      ru: {
+        shortTitle: 'Альтернатива Kassa.az',
+        h1: 'Альтернатива Kassa.az для клубов с почасовой арендой комнат',
+        seoTitle: 'Альтернатива Kassa.az для клубов — Heselo',
+        seoDescription:
+          'Сравнение бренда Kassa.az и Heselo: общая кассовая программа или бронирования и почасовые сеансы для игровых, караоке- и бильярдных клубов.',
+        intro:
+          'В этом руководстве кассовое и торговое решение бренда Kassa.az сравнивается с Heselo. Heselo — это не Kassa.az и не связана с этим брендом; в Heselo кассовая смена — лишь одна из функций клубной панели, а основной фокус — время комнат, бронирования и живые сеансы.',
+        competitorFit:
+          'Общая кассовая программа вроде Kassa.az может быть простым и уместным выбором, когда магазину или точке обслуживания нужны прежде всего продажа товаров, чеки и ежедневная кассовая отчётность.',
+        heseloFit:
+          'Если ваш основной товар — время комнаты, консоли или стола, Heselo превращает бронь в живой сеанс, применяет тариф и связывает итог с кассовой сменой и складом.',
+        priceAngle:
+          'Heselo стоит от 25 AZN в месяц. Актуальные тарифы, оборудование и условия интеграции Kassa.az уточняйте у самого бренда; при сравнении учтите и затраты на отдельную таблицу учёта времени.',
+        switchNote:
+          'Если текущая кассовая программа хорошо справляется с чеками и продажей товаров, не отказывайтесь от неё впопыхах. Создайте в демо Heselo комнаты и станции и проверьте одну смену — от брони до закрытия сеанса.',
+      },
+    },
+  },
+  {
+    slug: 'baza-market-alternative',
+    name: 'Baza Market',
+    kind: 'restaurant',
+    relatedSolutions: ['pos', 'inventory', 'karaoke'],
+    copy: {
+      az: {
+        shortTitle: 'Baza Market alternativi',
+        h1: 'Klub əməliyyatları üçün Baza Market alternativi',
+        seoTitle: 'Baza Market alternativi — klub paneli Heselo',
+        seoDescription:
+          'Baza Market və Heselo müqayisəsi: məhsul satışı, kataloq və mağaza yönümlü həll yoxsa karaoke, oyun və bilyard klubları üçün əməliyyat paneli.',
+        intro:
+          'Baza Market adı ilə tanınan həllər daha çox məhsul satışı, kataloq, mağaza və ya marketplace istiqamətində işləyir. Heselo marketplace deyil: bu, məkanın öz otaqlarını, rezervasiyalarını, canlı sessiyalarını, kassa növbəsini və stokunu idarə edən daxili paneldir.',
+        competitorFit:
+          'Məqsədiniz məhsul kataloqu yaratmaq, onlayn və ya mağazada mal satmaq, anbar və təchizatçı ilə işləməkdirsə, Baza Market kimi ticarət yönümlü həll daha uyğun ola bilər. Heselo bu ssenari üçün qurulmayıb.',
+        heseloFit:
+          'Karaoke otağı, PlayStation stansiyası və ya bilyard masası vaxtla satılırsa, Heselo rezervasiyanı sessiyaya çevirir, vaxtı hesablayır və sessiyaya əlavə olunan içki-qəlyanaltını stokdan silir.',
+        priceAngle:
+          'Heselo 25 AZN/aydan başlayır. Baza Market-in aktual qiymət və komissiya şərtlərini birbaşa dəqiqləşdirin; ticarət platforması ilə klub panelinin xərclərini eyni əməliyyat ssenarisi üzrə müqayisə edin.',
+        switchNote:
+          'Onlayn və ya mağaza satışınız varsa, onu mövcud ticarət həllində saxlayın. Heselo demosunda yalnız klubun otaqlarını, tariflərini və sessiyaya satılan məhsulları qurub bir növbəni sınayın.',
+      },
+      en: {
+        shortTitle: 'Baza Market alternative',
+        h1: 'A Baza Market alternative for club operations',
+        seoTitle: 'Baza Market Alternative — Heselo Club Panel',
+        seoDescription:
+          'Compare Baza Market and Heselo: a product sales, catalogue and retail-oriented tool versus an operations panel for karaoke, gaming and billiards clubs.',
+        intro:
+          'Solutions known as Baza Market lean towards product sales, catalogues, retail or marketplace use. Heselo is not a marketplace: it is an internal panel for a venue’s own rooms, bookings, live sessions, cash shifts and stock.',
+        competitorFit:
+          'A commerce-oriented tool such as Baza Market may fit better when you want to build a product catalogue, sell goods online or in store, and work with warehouses and suppliers. Heselo is not built for that scenario.',
+        heseloFit:
+          'When karaoke rooms, PlayStation stations or billiards tables are sold by time, Heselo turns bookings into sessions, bills the time and deducts drinks and snacks added to a session from stock.',
+        priceAngle:
+          'Heselo starts from 25 AZN per month. Confirm current Baza Market pricing and commission terms directly, then compare a commerce platform and a club panel on the same operating scenario.',
+        switchNote:
+          'Keep any online or shop sales in your existing commerce tool. In the Heselo demo, set up only the club’s rooms, rates and items sold into sessions, then test one shift.',
+      },
+      ru: {
+        shortTitle: 'Альтернатива Baza Market',
+        h1: 'Альтернатива Baza Market для клубных операций',
+        seoTitle: 'Альтернатива Baza Market — клубная панель Heselo',
+        seoDescription:
+          'Сравните Baza Market и Heselo: решение для продажи товаров, каталога и розницы или операционная панель для караоке-, игровых и бильярдных клубов.',
+        intro:
+          'Решения под названием Baza Market ориентированы скорее на продажу товаров, каталог, розницу или маркетплейс. Heselo — не маркетплейс, а внутренняя панель заведения для собственных комнат, бронирований, живых сеансов, кассовых смен и склада.',
+        competitorFit:
+          'Торговое решение вроде Baza Market может подойти лучше, если нужно вести каталог товаров, продавать онлайн или в магазине, работать со складом и поставщиками. Heselo для такого сценария не создавалась.',
+        heseloFit:
+          'Если караоке-комнаты, PlayStation-станции или бильярдные столы продаются по времени, Heselo превращает бронь в сеанс, считает время и списывает со склада напитки и закуски, добавленные в счёт.',
+        priceAngle:
+          'Heselo стоит от 25 AZN в месяц. Актуальные цены и комиссии Baza Market уточняйте напрямую, а торговую платформу и клубную панель сравнивайте на одинаковом рабочем сценарии.',
+        switchNote:
+          'Онлайн- и розничные продажи оставьте в текущем торговом решении. В демо Heselo настройте только клубные комнаты, тарифы и товары для сеансов и проверьте одну смену.',
+      },
+    },
+  },
+  {
+    slug: 'azerbaijan-pos-systems-comparison',
+    name: 'Yerli POS',
+    kind: 'club-pos',
+    relatedSolutions: ['pos', 'gaming', 'karaoke', 'billiards'],
+    copy: {
+      az: {
+        shortTitle: 'Yerli POS müqayisəsi',
+        h1: 'Azərbaycanda yerli POS sistemləri müqayisəsi — klub baxışı',
+        seoTitle: 'Yerli POS sistemləri müqayisəsi (klublar üçün) | Heselo',
+        seoDescription:
+          'iiko, Clopos, Dine, Fazilat POS, SmartPOS və Heselo: Azərbaycanda POS seçimi restoran, pərakəndə və otaq-vaxt klubları baxımından dürüst müqayisə.',
+        intro:
+          'Azərbaycanda POS bazarının böyük hissəsi restoran, kafe və pərakəndə satışa yönəlib: iiko, Clopos və Dine sifariş, menyu və mətbəx prosesində güclüdür, Fazilat POS və SmartPOS kimi həllər isə ümumi satış və kassaya fokuslanır. Heselo bu siyahıda fərqli kateqoriyadadır — otaq, konsol və masa vaxtını satan klublar üçün paneldir.',
+        competitorFit:
+          'Gəlirin əsas hissəsi yemək-içki sifarişindən, mətbəxdən, çatdırılmadan və ya mağaza satışından gəlirsə, iiko, Clopos, Dine kimi restoran POS-ları və ya Fazilat POS, SmartPOS kimi ümumi kassa həlləri daha doğru seçimdir. Heselo tam mətbəx və pərakəndə POS-unu əvəz etmir.',
+        heseloFit:
+          'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və stoku bir paneldə birləşdirir — restoran POS-unda bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
+        priceAngle:
+          'Heselo 25 AZN/aydan başlayır və qiyməti açıq göstərilir. Yerli restoran və kassa POS-larında yekun xərc çox vaxt modul, terminal, avadanlıq və quraşdırmadan asılıdır; hər provayderdən eyni ssenari üzrə aktual təklif alın.',
+        switchNote:
+          'Bir həftə üçün vaxt gəliri ilə yemək-içki və məhsul gəlirinin payını ölçün. Vaxt gəliri üstünlük təşkil edirsə, Heselo demosunu sınayın; mətbəx güclüdürsə, restoran POS-unu saxlayıb Heselo-nu yalnız otaqlar üçün istifadə edin.',
+      },
+      en: {
+        shortTitle: 'Local POS comparison',
+        h1: 'Local POS systems in Azerbaijan compared — a club perspective',
+        seoTitle: 'Local POS Systems Compared (for Clubs) | Heselo',
+        seoDescription:
+          'iiko, Clopos, Dine, Fazilat POS, SmartPOS and Heselo: an honest look at POS choice in Azerbaijan for restaurants, retail and room-time clubs.',
+        intro:
+          'Most of the POS market in Azerbaijan targets restaurants, cafés and retail: iiko, Clopos and Dine are strong in ordering, menus and kitchen workflows, while tools such as Fazilat POS and SmartPOS focus on general sales and tills. Heselo sits in a different category — a panel for clubs that sell room, console and table time.',
+        competitorFit:
+          'When most revenue comes from food and drink orders, a kitchen, delivery or shop sales, a restaurant POS such as iiko, Clopos or Dine, or a general till like Fazilat POS or SmartPOS, is the right choice. Heselo does not replace a full kitchen or retail POS.',
+        heseloFit:
+          'When PlayStation stations, karaoke rooms, billiards tables or anticafe seats are sold by time, Heselo combines bookings, live sessions, extensions, cash shifts and stock in one panel — something a restaurant POS usually needs an extra spreadsheet or timer to cover.',
+        priceAngle:
+          'Heselo starts from 25 AZN per month with public pricing. For local restaurant and till POS tools, the total often depends on modules, terminals, hardware and setup, so request current quotes for the same scenario from each provider.',
+        switchNote:
+          'Measure the share of time revenue versus food, drink and product revenue for one week. If time dominates, try the Heselo demo; if the kitchen is significant, keep your restaurant POS and use Heselo for the rooms only.',
+      },
+      ru: {
+        shortTitle: 'Сравнение местных POS-систем',
+        h1: 'Сравнение местных POS-систем в Азербайджане — взгляд клуба',
+        seoTitle: 'Сравнение местных POS-систем (для клубов) | Heselo',
+        seoDescription:
+          'iiko, Clopos, Dine, Fazilat POS, SmartPOS и Heselo: честное сравнение POS в Азербайджане для ресторанов, розницы и клубов с почасовой оплатой.',
+        intro:
+          'Большая часть рынка POS в Азербайджане ориентирована на рестораны, кафе и розницу: iiko, Clopos и Dine сильны в заказах, меню и кухонных процессах, а решения вроде Fazilat POS и SmartPOS сосредоточены на общих продажах и кассе. Heselo относится к другой категории — это панель для клубов, которые продают время комнат, консолей и столов.',
+        competitorFit:
+          'Если основную выручку дают заказы еды и напитков, кухня, доставка или розничные продажи, правильнее выбрать ресторанную POS вроде iiko, Clopos или Dine либо общую кассу вроде Fazilat POS или SmartPOS. Heselo не заменяет полноценную кухонную или розничную POS.',
+        heseloFit:
+          'Если PlayStation-станции, караоке-комнаты, бильярдные столы или места в антикафе продаются по времени, Heselo объединяет бронь, живые сеансы, продления, кассовые смены и склад в одной панели — ресторанную POS для этого обычно приходится дополнять таблицей или таймером.',
+        priceAngle:
+          'Heselo стоит от 25 AZN в месяц, цены опубликованы открыто. У местных ресторанных и кассовых POS итоговая стоимость часто зависит от модулей, терминалов, оборудования и внедрения, поэтому запросите у каждого поставщика актуальный расчёт на одинаковый сценарий.',
+        switchNote:
+          'За неделю измерьте долю выручки от времени и от еды, напитков и товаров. Если преобладает время, попробуйте демо Heselo; если кухня значима, оставьте ресторанную POS и используйте Heselo только для комнат.',
+      },
+    },
+  },
 ]
 
 const labels: Record<
@@ -795,7 +1090,9 @@ const labels: Record<
               ? 'PC kilidləmə və iş stansiyalarına nəzarəti tam əvəz etmir. Heselo otaq, konsol, masa, rezervasiya və canlı sessiya prosesinə fokuslanır.'
               : kind === 'appointments'
                 ? 'Salonun usta və xidmət cədvəlini əvəz etmək məqsədi daşımır. Heselo otaq və avadanlıq kimi vaxtla satılan yerləri idarə edir.'
-                : 'Sadə taymer funksiyasından daha genişdir, amma uyğunluq rezervasiya, kassa və stok ehtiyacınızdan asılıdır.',
+                : kind === 'club-pos'
+                  ? 'Ümumi satış və ya kassa proqramını hər ssenaridə əvəz etmir. Otaq/stansiya vaxtı, bron və növbə əsasdırsa Heselo daha uyğundur; yalnız retail/kassa lazımdırsa digər alət qala bilər.'
+                  : 'Sadə taymer funksiyasından daha genişdir, amma uyğunluq rezervasiya, kassa və stok ehtiyacınızdan asılıdır.',
       },
       {
         q: 'Heselo hansı məkanlar üçündür?',
@@ -808,6 +1105,18 @@ const labels: Record<
       {
         q: 'Keçməzdən əvvəl necə yoxlaya bilərəm?',
         a: 'Demo istəyin və öz real ssenarinizi — rezervasiya, sessiyanın başlaması, məhsul satışı və kassa bağlanışını — addım-addım sınaqdan keçirin.',
+      },
+      {
+        q: 'Klub üçün WhatsApp və Excel kifayət etmirmi?',
+        a: 'Kiçik həcmdə kifayət edə bilər, amma bron WhatsApp-da, vaxt taymerdə, ödəniş isə Excel-də qalanda üst-üstə düşən rezervasiya, unudulmuş uzadılma və kassa fərqi yaranır. Heselo panelində bron, canlı sessiya, kassa növbəsi və stok bir yerdə görünür.',
+      },
+      {
+        q: 'Heselonun qiyməti açıqdır? Harada baxa bilərəm?',
+        a: `Bəli. Paketlər 25 AZN/aydan başlayır və saytdakı Qiymətlər səhifəsində açıq göstərilir. ${name} üzrə yekun xərci isə provayderin aktual təklifi ilə dəqiqləşdirin.`,
+      },
+      {
+        q: `Nə vaxt həm ${name}, həm də Heselo saxlamaq məntiqlidir?`,
+        a: 'Məkanda güclü mətbəx, geniş menyu və ya mağaza satışı ilə yanaşı vaxtla satılan otaq və masalar da varsa. Belə halda restoran və ya satış POS-u sifarişləri, Heselo isə rezervasiya, sessiya və otaq vaxtını idarə edir; hansı satışın harada qeyd olunacağını əvvəlcədən bölün.',
       },
     ],
   },
@@ -857,7 +1166,9 @@ const labels: Record<
               ? 'It does not fully replace PC locking and workstation control. Heselo focuses on rooms, consoles, tables, bookings and live sessions.'
               : kind === 'appointments'
                 ? 'It is not intended to replace specialist and service scheduling for salons. Heselo manages timed resources such as rooms and equipment.'
-                : 'It goes beyond a basic timer, but the right fit depends on whether you need bookings, cash shifts and inventory.',
+                : kind === 'club-pos'
+                  ? 'It does not replace every general sales or till tool. When room or station time, bookings and shifts are the core work, Heselo fits better; if you only need retail till functions, keep the other tool.'
+                  : 'It goes beyond a basic timer, but the right fit depends on whether you need bookings, cash shifts and inventory.',
       },
       {
         q: 'Which venues is Heselo built for?',
@@ -870,6 +1181,18 @@ const labels: Record<
       {
         q: 'How can I check the fit before switching?',
         a: 'Request a demo and test your real flow step by step: booking, session start, item sale and cash-shift close.',
+      },
+      {
+        q: 'Aren’t WhatsApp and Excel enough for a club?',
+        a: 'They can work at small volumes, but when bookings live in WhatsApp, time on a timer and payments in Excel, you get double bookings, forgotten extensions and cash discrepancies. In the Heselo panel, bookings, live sessions, cash shifts and stock are visible in one place.',
+      },
+      {
+        q: 'Is Heselo pricing public? Where can I see it?',
+        a: `Yes. Plans start from 25 AZN per month and are listed openly on the Pricing page of this site. For ${name}, confirm the total cost with the provider’s current quote.`,
+      },
+      {
+        q: `When does it make sense to keep both ${name} and Heselo?`,
+        a: 'When a venue has a strong kitchen, a large menu or shop sales alongside rooms and tables sold by time. The restaurant or sales POS then handles orders while Heselo manages bookings, sessions and room time; agree in advance which sales each system records.',
       },
     ],
   },
@@ -919,7 +1242,9 @@ const labels: Record<
               ? 'Она не заменяет полностью блокировку ПК и контроль рабочих станций. Heselo сосредоточена на комнатах, консолях, столах, брони и живых сеансах.'
               : kind === 'appointments'
                 ? 'Она не предназначена для замены салонного расписания мастеров и услуг. Heselo управляет почасовыми ресурсами: комнатами и оборудованием.'
-                : 'Она шире простого таймера, но выбор зависит от потребности в бронированиях, кассовых сменах и складе.',
+                : kind === 'club-pos'
+                  ? 'Она не заменяет любую общую кассовую или торговую программу. Если основа — время комнаты или станции, бронь и смена, Heselo подходит лучше; если нужна только розничная касса, другой инструмент может остаться.'
+                  : 'Она шире простого таймера, но выбор зависит от потребности в бронированиях, кассовых сменах и складе.',
       },
       {
         q: 'Для каких заведений создана Heselo?',
@@ -932,6 +1257,18 @@ const labels: Record<
       {
         q: 'Как проверить систему до перехода?',
         a: 'Запросите демо и по шагам проверьте реальный сценарий: бронь, запуск сеанса, продажу товара и закрытие кассовой смены.',
+      },
+      {
+        q: 'Разве клубу недостаточно WhatsApp и Excel?',
+        a: 'При небольшом потоке этого может хватить, но когда брони живут в WhatsApp, время — в таймере, а оплаты — в Excel, появляются двойные брони, забытые продления и расхождения в кассе. В панели Heselo бронирования, живые сеансы, кассовые смены и склад видны в одном месте.',
+      },
+      {
+        q: 'Цены Heselo открыты? Где их посмотреть?',
+        a: `Да. Тарифы начинаются от 25 AZN в месяц и открыто опубликованы на странице «Цены» этого сайта. Итоговую стоимость ${name} уточняйте по актуальному предложению поставщика.`,
+      },
+      {
+        q: `Когда имеет смысл использовать и ${name}, и Heselo?`,
+        a: 'Когда в заведении есть сильная кухня, большое меню или розничные продажи, а рядом — комнаты и столы с почасовой оплатой. Тогда ресторанная или торговая POS ведёт заказы, а Heselo — бронирования, сеансы и время комнат; заранее договоритесь, какие продажи учитываются в какой системе.',
       },
     ],
   },

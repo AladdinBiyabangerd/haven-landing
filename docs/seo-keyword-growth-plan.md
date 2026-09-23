@@ -291,5 +291,6 @@ Satış hələ də outreach-dən gəlir; SEO demo dəstəyidir.
 | B | Done (qismən) | Footer/hub linklər artıq var; gaming `related` → karaoke əlavə |
 | C1 | Done (2026-09-07) | 4 guide: playstation-club-software, billiards-table-booking, karaoke-booking-system, club-pos-vs-excel |
 | C2+ | Gözləyir | GSC impressiya > 0 olan klasterlər |
+| **C3–C5** | **Done (2026-09-23)** | Keyword gap: 5 educational + 5 comparison + FAQ 5–8 — [`content-strategy-keyword-gap.md`](./content-strategy-keyword-gap.md) |
 
-Son yeniləmə: 2026-09-07
+Son yeniləmə: 2026-09-23 (C3–C5 shipped)

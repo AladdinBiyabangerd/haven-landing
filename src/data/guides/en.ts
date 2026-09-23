@@ -1,5 +1,6 @@
 import type { GuideCopy, GuidesHubCopy } from './types'
 import { comparisonGuides } from './comparisonGuides'
+import { gapEducationalGuides } from './gapEducationalGuides'
 
 export const guidesHubEn: GuidesHubCopy = {
   eyebrow: 'Guides',
@@ -38,7 +39,7 @@ export const guidesEn: GuideCopy[] = [
       'PS club booking',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-23',
     intro:
       'A gaming club management system keeps PlayStation, console, or PC station bookings, live play, and cash in one panel. A timer can show whether a station is free; it does not give booking history, extensions, snack sales, or a shift close.',
     sections: [
@@ -87,6 +88,14 @@ export const guidesEn: GuideCopy[] = [
         a: 'Extend the live session; payment stays on the same record — no extra sheet.',
       },
       {
+        q: 'Can snacks and drinks go on the same bill as play time?',
+        a: 'Yes. Quick sales are added to the live session of the station, so the guest pays once for time and snacks together. The items come from the shared product catalog, so stock and the cash shift both reflect the sale — no separate snack notebook at the end of the night.',
+      },
+      {
+        q: 'How does the owner see the day without being at the club?',
+        a: 'The panel runs in a browser, so the owner can check the schedule, active stations, and the cash shift from a phone or laptop. Staff permissions keep front-desk and owner roles separate: the desk runs sessions and sales, while reports and settings stay with the owner.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Pick gaming club / PS on the contact form and share your station count.',
       },
@@ -109,7 +118,7 @@ export const guidesEn: GuideCopy[] = [
       'karaoke software',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-08-13',
+    dateModified: '2026-09-23',
     intro:
       'In karaoke the main unit is the room. Booking is more than picking a free slot: when guests arrive, the same record should become a live session, with extensions and drinks in the same session.',
     sections: [
@@ -153,6 +162,14 @@ export const guidesEn: GuideCopy[] = [
         a: 'Reservation forms include labels and pre-order fields.',
       },
       {
+        q: 'What happens when a group wants to stay longer?',
+        a: 'Staff extend the live session of the room, and the extra time is added to the same bill as the drinks. Before extending, the schedule shows whether the next booking for that room starts soon, so the desk can offer another free room instead of cutting the next group short.',
+      },
+      {
+        q: 'How do we avoid giving one room to two groups?',
+        a: 'Keep every booking — phone, WhatsApp, or walk-in — on one room schedule that the whole team sees. When a slot is taken, it shows as occupied for everyone at once. Moves and cancellations stay in the history, so the evening shift knows exactly who changed what.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Pick karaoke on the contact form and share your room count.',
       },
@@ -175,7 +192,7 @@ export const guidesEn: GuideCopy[] = [
       'pool hall operations',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-23',
     intro:
       'In a billiards club, tables run on a schedule. Which table is free, when play started, whether extras were added — when booking and live status sit apart, the night cash close stretches.',
     sections: [
@@ -218,6 +235,14 @@ export const guidesEn: GuideCopy[] = [
         a: 'Maybe in a tiny hall. If you need booking, stock, and shift close, a full panel makes fewer mistakes.',
       },
       {
+        q: 'Can different tables have different prices?',
+        a: 'Yes. Each table is set up on its own, so a pool table, a Russian billiards table, and a VIP room can each follow their own tariff. The system calculates the amount from the table type and actual play time, so staff do not work out the bill by hand.',
+      },
+      {
+        q: 'What if guests pause the game?',
+        a: 'The session can be paused and resumed on the same record, so the break is not billed as play time. Drinks and snacks ordered during the pause stay on the same table bill, and the final amount lands in the current cash shift when the guests pay.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Pick billiards on the contact form and share your table count.',
       },
@@ -240,7 +265,7 @@ export const guidesEn: GuideCopy[] = [
       'lounge management system',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-08-13',
+    dateModified: '2026-09-23',
     intro:
       'A room lounge is not an open cafe: guests take a room, sessions can extend, drinks and snacks are added. Management should connect the room schedule to live sessions and cash.',
     sections: [
@@ -283,6 +308,14 @@ export const guidesEn: GuideCopy[] = [
         a: 'No. The focus is session-based entertainment rooms — PS, karaoke, billiards, anti-café, lounge.',
       },
       {
+        q: 'I am looking for lounge bar software — where is the product page?',
+        a: 'This article explains how room lounges work. If you are choosing lounge bar management software, go to the room lounge solution page: VIP room booking, live sessions, bar sales, cash, and inventory in one panel, with the Small plan from 39 AZN/month and a free demo.',
+      },
+      {
+        q: 'Can bar sales outside the rooms go through the same cash?',
+        a: 'Yes. Quick sales at the bar use the same product catalog as room orders, so stock and the cash shift see every sale. Room sessions and walk-up bar sales close in one shift report — the owner does not reconcile two separate registers at the end of the night.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Pick room lounge on the contact form and share your room count.',
       },
@@ -305,7 +338,7 @@ export const guidesEn: GuideCopy[] = [
       'time-based cafe POS',
     ],
     datePublished: '2026-08-12',
-    dateModified: '2026-08-12',
+    dateModified: '2026-09-23',
     intro:
       'An anti-café management system runs the daily work of a time-based venue — table and room booking, live sessions, product sales, cash, and sometimes inventory — in one panel. It is not just a timer or a standalone POS; the goal is to tie whiteboards, messengers, and spreadsheets into one working day.',
     sections: [
@@ -371,6 +404,14 @@ export const guidesEn: GuideCopy[] = [
         a: 'Yes. Rooms can be set up on the schedule — the same way as VIP or karaoke rooms.',
       },
       {
+        q: 'How is the hourly fee calculated?',
+        a: 'Each table or room follows its own tariff, and the system calculates the amount from the actual session time. Extensions are added to the same record, and tea or snacks go on the same bill. Staff do not add up minutes and products by hand, so the night cash count matches the sessions.',
+      },
+      {
+        q: 'How much does anti-café software cost?',
+        a: 'Heselo’s Small plan for anti-cafés starts at 32 AZN/month. Medium and Large tiers, annual billing with two months free, and reservation limits are published on the pricing page — there is no “quote only” pricing for standard plans. The demo is free and needs no card.',
+      },
+      {
         q: 'How do we get a demo?',
         a: 'Use the contact form — share table/room count and a typical working day.',
       },
@@ -393,7 +434,7 @@ export const guidesEn: GuideCopy[] = [
       'console club software',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-23',
     intro:
       'PlayStation club software is more than a timer. Phone bookings, “which PS is free?”, extensions, snacks, and the night cash close should live in one process. This guide is a selection checklist — not a product pitch.',
     sections: [
@@ -451,6 +492,14 @@ export const guidesEn: GuideCopy[] = [
         a: 'Yes. Different stations hit the same shift.',
       },
       {
+        q: 'How much does PS club software cost?',
+        a: 'Heselo’s Small plan for PlayStation and gaming clubs starts at 25 AZN/month. Medium and Large tiers open as your station count and bookings grow; annual billing gives two months free. The full table is public on the pricing page, and the demo is free with no card required.',
+      },
+      {
+        q: 'What should I test in a demo before choosing?',
+        a: 'Run a real Friday night: a phone booking, a walk-in on a free console, an extension when time runs out, snacks added to the session, and a shift close. If any step pushes staff back to a notebook or Excel, the software does not cover your club yet.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Pick gaming club / PS on the contact form and share station count.',
       },
@@ -465,15 +514,16 @@ export const guidesEn: GuideCopy[] = [
     h1: 'How billiards table booking and scheduling should work',
     seoTitle: 'Billiards table booking & scheduling explained | Heselo guide',
     seoDescription:
-      'Billiards booking and scheduling: table reservations, calendar, live play, and cash — a focused ops guide.',
+      'Billiards booking and scheduling: how guests book a billiards table online or by phone, how the calendar, live play, and cash connect — a focused ops guide.',
     keywords: [
       'billiards booking system',
       'billiards scheduling system',
       'billiards table booking',
+      'book a billiards table online',
       'pool hall scheduling',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-23',
     intro:
       'A billiards booking system is not just “table noted.” If scheduling, live play, and payment sit apart, the board and the phone collide. This page zooms in on booking + scheduling — narrower than the general “how billiards clubs run” guide.',
     sections: [
@@ -489,6 +539,14 @@ export const guidesEn: GuideCopy[] = [
         title: 'Why scheduling should not be a separate tool',
         paragraphs: [
           'One calendar should show every table. If VIP rooms live in another spreadsheet, two bookings hit the same slot. When scheduling and booking share a panel, free tables are visible in real time.',
+        ],
+      },
+      {
+        id: 'online',
+        title: 'How online table booking works',
+        paragraphs: [
+          'For the guest, booking a billiards table online means choosing a date, time, duration, and table type (regular or VIP) and leaving a contact — via a booking page, Instagram, or a messenger — without waiting for someone to answer the phone.',
+          'For the front desk, an online request is only useful if it lands on the same schedule as phone bookings and walk-ins. Staff confirm, move, or decline it there; when the guest arrives, the same booking becomes a live session. If online requests sit in a separate inbox, the double-booking problem simply moves online.',
         ],
       },
       {
@@ -527,6 +585,18 @@ export const guidesEn: GuideCopy[] = [
         a: 'Yes. Both share schedule and cash.',
       },
       {
+        q: 'Is online booking better than phone booking?',
+        a: 'Neither replaces the other. Online requests save the desk from answering calls at peak time, while the phone still suits groups and last-minute changes. What matters is that both land on one schedule — otherwise the same table gets promised twice, once online and once by phone.',
+      },
+      {
+        q: 'Can guests book a table for the same day?',
+        a: 'Yes, if the slot is actually free. Same-day bookings compete with walk-ins, so the front desk needs a live view of which tables are playing, which are reserved, and when each frees up. With schedule and live play in one panel, staff can confirm a same-day request in seconds.',
+      },
+      {
+        q: 'Is a deposit required to book a table?',
+        a: 'That depends on each venue’s rules — many clubs take no deposit on weekdays and ask for prepayment only on busy nights or for VIP rooms. Whatever the policy, it should be visible on the booking itself; in Heselo staff can mark it with labels in the booking form.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Pick billiards on the contact form and share table count.',
       },
@@ -549,7 +619,7 @@ export const guidesEn: GuideCopy[] = [
       'choose karaoke software',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-09-23',
     intro:
       'A karaoke booking system is more than an online form. When rooms fill, session time, drink orders, and payment must stay in one session record. The sibling guide covers how rooms get booked; this page is about what to verify before you buy.',
     sections: [
@@ -597,6 +667,14 @@ export const guidesEn: GuideCopy[] = [
         a: 'Yes. Each room is set up on its own and can have its own tariff.',
       },
       {
+        q: 'How much does a karaoke booking system cost?',
+        a: 'Heselo’s Small plan for karaoke starts at 39 AZN/month — higher than PS clubs because room schedules, extensions, and in-room orders are more work. Medium and Large tiers and annual billing with two months free are on the public pricing page; the demo is free and needs no card.',
+      },
+      {
+        q: 'Can drink pre-orders be attached to the booking?',
+        a: 'Yes. The booking form has pre-order fields and labels, so the order is ready when the group arrives. Once the session opens, the pre-order and anything added during the evening stay on the same room bill, and the total lands in the current cash shift.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Pick karaoke on the contact form and share room count.',
       },
@@ -623,7 +701,7 @@ export const guidesEn: GuideCopy[] = [
       'venue management panel',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-17',
+    dateModified: '2026-09-23',
     intro:
       'Many clubs start the day with a spreadsheet, a WhatsApp group and a notebook. It works at tiny scale; when tables/rooms and shifts grow, bookings vanish and cash close stretches. This guide covers the pain, “cheap alternative” searches, and what a panel changes.',
     sections: [
@@ -682,6 +760,10 @@ export const guidesEn: GuideCopy[] = [
         a: 'One table / two rooms — maybe; if you plan to grow, switching early is cheaper.',
       },
       {
+        q: 'How long does it take to move from Excel to a panel?',
+        a: 'Less than most owners expect: the setup is mostly adding tables, rooms, or stations, setting tariffs, and loading the product list. From the next shift, new bookings go straight onto the schedule. Old spreadsheets can stay as an archive — you do not need to import every past booking to start.',
+      },
+      {
         q: 'How do I get a demo?',
         a: 'Share your venue type — we show the screens for your setup.',
       },
@@ -705,7 +787,7 @@ export const guidesEn: GuideCopy[] = [
       'venue software 25 AZN',
     ],
     datePublished: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-09-23',
     intro:
       'Heselo pricing is not a hidden “ask for a quote” B2B model. Plans are published; starting fees differ by venue type so gaming clubs, karaoke, and anti-cafés get a fit that matches their floor. The full table lives on the pricing page; this guide explains why.',
     sections: [
@@ -757,10 +839,19 @@ export const guidesEn: GuideCopy[] = [
         q: 'And karaoke?',
         a: 'Small plan from 39 AZN/month — higher than PS because of room schedules and session work.',
       },
+      {
+        q: 'How much is Heselo for an anti-café?',
+        a: 'The Small plan for anti-cafés starts at 32 AZN/month — between billiards and karaoke, because anti-cafés mix tables, rooms, and hourly sessions. Medium and Large tiers, annual billing with two months free, and reservation limits are in the same table on the pricing page.',
+      },
+      {
+        q: 'Is there a free trial or demo?',
+        a: 'Yes — a free demo. Send your venue type and table, room, or station count through the contact form or WhatsApp; we walk you through the panel on your scenario in about 15 minutes. No card details are needed, and there is no obligation to subscribe afterwards.',
+      },
     ],
     relatedSolutions: ['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'],
     ctaTitle: 'Open the pricing table',
     ctaBody: 'Pick your venue type — Small, Medium, and Large plans are on the same page.',
   },
+  ...gapEducationalGuides('en'),
   ...comparisonGuides('en'),
 ]

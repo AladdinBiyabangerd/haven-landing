@@ -14,7 +14,7 @@ export const SEO_CONTENT_PLAN = {
     { id: 'karaoke', path: '/solutions/karaoke/', status: 'live' },
     { id: 'billiards', path: '/solutions/billiards/', status: 'live' },
     { id: 'antikafe', path: '/solutions/antikafe/', status: 'live' },
-    { id: 'lounge', path: '/solutions/lounge/', status: 'live' },
+    { id: 'lounge', path: '/solutions/lounge/', status: 'live', note: 'C3c — lounge bar software keyword polish' },
   ],
   feature: [
     { id: 'reservations', path: '/solutions/reservations/', status: 'live' },
@@ -58,7 +58,7 @@ export const SEO_CONTENT_PLAN = {
       id: 'billiards-table-booking',
       path: '/guides/billiards-table-booking/',
       status: 'live',
-      note: 'Phase C1 — booking + scheduling',
+      note: 'C3c — online booking keyword polish',
     },
     {
       id: 'karaoke-booking-system',
@@ -71,6 +71,36 @@ export const SEO_CONTENT_PLAN = {
       path: '/guides/club-pos-vs-excel/',
       status: 'live',
       note: 'Phase C0/C1 — Excel/WhatsApp pain + polish',
+    },
+    {
+      id: 'how-to-open-playstation-club',
+      path: '/guides/how-to-open-playstation-club/',
+      status: 'live',
+      note: 'C3a — playstation klubu necə açılır',
+    },
+    {
+      id: 'club-pos-terminal-selection',
+      path: '/guides/club-pos-terminal-selection/',
+      status: 'live',
+      note: 'C3b — POS terminal seçimi',
+    },
+    {
+      id: 'game-hall-automation',
+      path: '/guides/game-hall-automation/',
+      status: 'live',
+      note: 'C3d — oyun salonu avtomatlaşdırma',
+    },
+    {
+      id: 'karaoke-club-business-plan',
+      path: '/guides/karaoke-club-business-plan/',
+      status: 'live',
+      note: 'C3a — karaoke biznes planı',
+    },
+    {
+      id: 'anticafe-rent-cost-calculation',
+      path: '/guides/anticafe-rent-cost-calculation/',
+      status: 'live',
+      note: 'C3b — antikafe menzil/icarə hesablama',
     },
   ],
   comparison: [
@@ -145,6 +175,36 @@ export const SEO_CONTENT_PLAN = {
       path: '/guides/resto-az-alternative/',
       status: 'live',
       note: 'Phase C0 P2',
+    },
+    {
+      id: 'fazilat-pos-alternative',
+      path: '/guides/fazilat-pos-alternative/',
+      status: 'live',
+      note: 'C4a — Fazilat POS',
+    },
+    {
+      id: 'smartpos-alternative',
+      path: '/guides/smartpos-alternative/',
+      status: 'live',
+      note: 'C4a — SmartPOS',
+    },
+    {
+      id: 'kassa-az-alternative',
+      path: '/guides/kassa-az-alternative/',
+      status: 'live',
+      note: 'C4b — Kassa.az (brand ≠ Heselo kassa feature)',
+    },
+    {
+      id: 'baza-market-alternative',
+      path: '/guides/baza-market-alternative/',
+      status: 'live',
+      note: 'C4b — Baza Market (verify product facts)',
+    },
+    {
+      id: 'azerbaijan-pos-systems-comparison',
+      path: '/guides/azerbaijan-pos-systems-comparison/',
+      status: 'live',
+      note: 'C4c — yerli POS müqayisəsi',
     },
   ],
 } as const

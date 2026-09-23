@@ -10,6 +10,12 @@ export const GUIDE_SLUGS = [
   'billiards-table-booking',
   'karaoke-booking-system',
   'club-pos-vs-excel',
+  // Phase C3 keyword-gap educational
+  'how-to-open-playstation-club',
+  'club-pos-terminal-selection',
+  'game-hall-automation',
+  'karaoke-club-business-plan',
+  'anticafe-rent-cost-calculation',
   // Phase C comparison / alternative intent
   'iiko-alternative-clubs',
   'clopos-alternative',
@@ -23,17 +29,23 @@ export const GUIDE_SLUGS = [
   'izi-alternative',
   'kaktus-alternative',
   'resto-az-alternative',
+  // Phase C4 keyword-gap comparisons
+  'fazilat-pos-alternative',
+  'smartpos-alternative',
+  'kassa-az-alternative',
+  'baza-market-alternative',
+  'azerbaijan-pos-systems-comparison',
   'heselo-pricing',
 ] as const
 
 export const TEASER_GUIDE_SLUGS = [
   'gaming-club-management',
   'karaoke-room-booking',
-  'billiards-club-management',
+  'how-to-open-playstation-club',
   'playstation-club-software',
   'club-pos-vs-excel',
   'iiko-alternative-clubs',
-  'dine-alternative',
+  'azerbaijan-pos-systems-comparison',
   'affordable-club-pos',
 ] as const
 

@@ -18,7 +18,7 @@ export const SOLUTION_GUIDE_MAP: Partial<Record<SolutionSlug, GuideSlug>> = {
   billiards: 'billiards-club-management',
   lounge: 'room-lounge-management',
   antikafe: 'antikafe-management-system',
-  pos: 'club-pos-vs-excel',
+  pos: 'club-pos-terminal-selection',
   reservations: 'club-pos-vs-excel',
 }
 
@@ -30,15 +30,20 @@ export const SOLUTION_ALT_GUIDES: Partial<Record<SolutionSlug, GuideSlug[]>> = {
   gaming: [
     'iiko-alternative-clubs',
     'playstation-cafe-software-alternative',
-    'club-pos-vs-excel',
+    'azerbaijan-pos-systems-comparison',
   ],
-  karaoke: ['restaurant-pos-vs-karaoke-system', 'dine-alternative', 'clopos-alternative'],
-  billiards: ['affordable-club-pos', 'club-pos-vs-excel', 'dine-alternative'],
-  lounge: ['kaktus-alternative', 'affordable-club-pos', 'iiko-alternative-clubs'],
-  antikafe: ['affordable-club-pos', 'dine-alternative', 'club-pos-vs-excel'],
-  pos: ['club-pos-vs-excel', 'affordable-club-pos', 'dine-alternative', 'minupos-alternative'],
+  karaoke: ['restaurant-pos-vs-karaoke-system', 'dine-alternative', 'fazilat-pos-alternative'],
+  billiards: ['affordable-club-pos', 'club-pos-vs-excel', 'smartpos-alternative'],
+  lounge: ['kaktus-alternative', 'affordable-club-pos', 'azerbaijan-pos-systems-comparison'],
+  antikafe: ['affordable-club-pos', 'dine-alternative', 'baza-market-alternative'],
+  pos: [
+    'club-pos-vs-excel',
+    'affordable-club-pos',
+    'kassa-az-alternative',
+    'azerbaijan-pos-systems-comparison',
+  ],
   reservations: ['club-pos-vs-excel', 'kaktus-alternative', 'dine-alternative'],
-  inventory: ['club-pos-vs-excel', 'affordable-club-pos'],
+  inventory: ['club-pos-vs-excel', 'kassa-az-alternative'],
 }
 
 /** Named / category comparison guides (Phase C competitor track). */
@@ -56,22 +61,32 @@ export const COMPARISON_GUIDE_SLUGS = [
   'izi-alternative',
   'kaktus-alternative',
   'resto-az-alternative',
+  'fazilat-pos-alternative',
+  'smartpos-alternative',
+  'kassa-az-alternative',
+  'baza-market-alternative',
+  'azerbaijan-pos-systems-comparison',
 ] as const satisfies readonly GuideSlug[]
 
 const RELATED_COMPARISON: Partial<Record<GuideSlug, GuideSlug[]>> = {
   'club-pos-vs-excel': ['affordable-club-pos', 'iiko-alternative-clubs'],
-  'iiko-alternative-clubs': ['clopos-alternative', 'dine-alternative'],
-  'clopos-alternative': ['dine-alternative', 'restomas-alternative'],
-  'dine-alternative': ['minupos-alternative', 'clopos-alternative'],
+  'iiko-alternative-clubs': ['clopos-alternative', 'azerbaijan-pos-systems-comparison'],
+  'clopos-alternative': ['dine-alternative', 'fazilat-pos-alternative'],
+  'dine-alternative': ['minupos-alternative', 'smartpos-alternative'],
   'restomas-alternative': ['dine-alternative', 'clopos-alternative'],
-  'minupos-alternative': ['affordable-club-pos', 'dine-alternative'],
+  'minupos-alternative': ['affordable-club-pos', 'kassa-az-alternative'],
   'robotpos-alternative': ['affordable-club-pos', 'iiko-alternative-clubs'],
-  'affordable-club-pos': ['minupos-alternative', 'club-pos-vs-excel'],
+  'affordable-club-pos': ['azerbaijan-pos-systems-comparison', 'club-pos-vs-excel'],
   'restaurant-pos-vs-karaoke-system': ['dine-alternative', 'iiko-alternative-clubs'],
   'playstation-cafe-software-alternative': ['izi-alternative', 'iiko-alternative-clubs'],
   'izi-alternative': ['playstation-cafe-software-alternative', 'affordable-club-pos'],
   'kaktus-alternative': ['club-pos-vs-excel', 'affordable-club-pos'],
-  'resto-az-alternative': ['clopos-alternative', 'affordable-club-pos'],
+  'resto-az-alternative': ['clopos-alternative', 'baza-market-alternative'],
+  'fazilat-pos-alternative': ['smartpos-alternative', 'azerbaijan-pos-systems-comparison'],
+  'smartpos-alternative': ['fazilat-pos-alternative', 'kassa-az-alternative'],
+  'kassa-az-alternative': ['club-pos-vs-excel', 'affordable-club-pos'],
+  'baza-market-alternative': ['resto-az-alternative', 'affordable-club-pos'],
+  'azerbaijan-pos-systems-comparison': ['iiko-alternative-clubs', 'fazilat-pos-alternative'],
   'heselo-pricing': ['affordable-club-pos', 'club-pos-vs-excel'],
 }
 

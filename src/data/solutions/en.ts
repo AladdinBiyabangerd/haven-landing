@@ -80,6 +80,22 @@ export const solutionsEn: SolutionCopy[] = [
         q: 'Can rooms and tables coexist?',
         a: 'Yes. VIP rooms and regular tables follow the same schedule, session, and cash rules.',
       },
+      {
+        q: 'Which billiards clubs is Heselo not a fit for?',
+        a: 'If your core business is a kitchen, a menu, and waiter orders, a restaurant POS fits better. Heselo is for clubs that sell table and room time: booking, live play, product sales, and the cash shift in one place. It works the same way in a two-table room or a full billiards hall.',
+      },
+      {
+        q: 'How is it different from a whiteboard, WhatsApp, or Excel?',
+        a: 'A board and chat threads show who booked, but start time, extras, and payment end up somewhere else. In Heselo a booking moves from the schedule into a live session, the price follows play time, and payment lands in the shift. You stop re-adding totals in Excel at closing time.',
+      },
+      {
+        q: 'How much does it cost for a billiards club?',
+        a: 'The Small plan for billiards starts at 29 AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. For several branches or volume beyond a standard plan, we prepare a separate custom quote.',
+      },
+      {
+        q: 'How do we get a demo — is a card required?',
+        a: 'Fill in the contact form with your table and room count and opening hours. The demo is free and no card details are needed. We walk through the schedule, a live play session, and the cash close on a scenario close to your venue.',
+      },
     ],
     related: ['gaming', 'karaoke', 'reservations', 'pos'],
     ctaTitle: 'Billiards club demo',
@@ -144,6 +160,22 @@ export const solutionsEn: SolutionCopy[] = [
       {
         q: 'Is pre-order supported?',
         a: 'Reservation forms include labels and pre-order fields — the same fields as in the panel booking form.',
+      },
+      {
+        q: 'Should a karaoke venue with a kitchen keep iiko or Clopos?',
+        a: 'If a full kitchen, KDS, and waiter orders are the core of the day, keeping a restaurant POS makes sense. Heselo handles the room schedule, session length, extensions, and the cash shift. If most revenue comes from room time and the menu is simple, drinks and snacks go on the same Heselo session.',
+      },
+      {
+        q: 'We take bookings on WhatsApp — what changes?',
+        a: 'Guests can still message or call, but the booking no longer lives in a chat — it goes onto the room schedule. The whole team sees who has which room and from when to when. When guests arrive, that booking becomes a live session, and extensions and payment stay there too.',
+      },
+      {
+        q: 'Where is karaoke pricing listed?',
+        a: 'The Small plan for karaoke starts at 39 AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. You can request a free demo through the contact form — no card details needed, just tell us how many rooms you run.',
+      },
+      {
+        q: 'Can karaoke, billiards, and a lounge share one panel?',
+        a: 'Yes. Karaoke rooms, billiard tables, and lounge rooms are set up separately in the same venue but share one schedule, live tracking, and cash shift. At day end, sales from every zone show up in one report — no matching totals across separate programs.',
       },
     ],
     related: ['reservations', 'lounge', 'gaming', 'pos'],
@@ -211,6 +243,22 @@ export const solutionsEn: SolutionCopy[] = [
       {
         q: 'How do permissions work?',
         a: 'Staff get page- and action-level permissions; sensitive actions can require a protection code.',
+      },
+      {
+        q: 'Which gaming clubs is it not a fit for?',
+        a: 'If your main need is remote PC control, automatic machine locking, or game licence management, look at specialised PC club software. Heselo covers station booking, live sessions, snack sales, and the cash shift. It fits PlayStation and console clubs and mixed gaming venues best.',
+      },
+      {
+        q: 'We use iiko — should we keep it?',
+        a: 'If the club runs a full kitchen, KDS, and menu orders, iiko can stay for that part. Heselo is for station time, bookings, extensions, and club cash. In most PS clubs, though, sales are drinks and snacks — Heselo’s quick sale and inventory cover that, so a separate restaurant POS is usually unnecessary.',
+      },
+      {
+        q: 'What changes compared with Excel and WhatsApp?',
+        a: 'In Excel, station time gets typed in after the fact; in WhatsApp, bookings get buried in chats. In Heselo the booking sits on the schedule, a live session opens when play starts, and extensions and snacks land on the same record. At shift close the cash total is ready — no evening spreadsheet matching.',
+      },
+      {
+        q: 'How much does it cost for a PS club?',
+        a: 'The Small plan for PlayStation and gaming clubs starts at 25 AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your station count through the contact form — no card details needed; we show the schedule and a live session.',
       },
     ],
     related: ['billiards', 'karaoke', 'reservations', 'pos'],
@@ -281,6 +329,22 @@ export const solutionsEn: SolutionCopy[] = [
         q: 'How do we get a demo?',
         a: 'Use the contact form — share table/room count and your typical working day.',
       },
+      {
+        q: 'Which anti-cafés is it not a fit for?',
+        a: 'If you charge only for orders rather than time, and the kitchen is the main business, a regular café or restaurant POS fits better. Heselo is for venues that sell table, room, or station time: hourly payment, tea and snack sales, and the cash shift in one place.',
+      },
+      {
+        q: 'How are walk-in guests handled?',
+        a: 'Open a live session on a free table or room right away — no booking needed first. The schedule shows the place as occupied, so the front desk plans the next booking around it. If a guest only buys tea or snacks, you can sell through quick sale without a session.',
+      },
+      {
+        q: 'What do we gain by moving off Excel or WhatsApp?',
+        a: 'In Excel, hours and totals are typed by hand; in WhatsApp, bookings get lost between messages. In Heselo the booking is on the schedule, a session opens when guests arrive, and time, tea, and snacks go on the same bill. At shift end the cash total is ready and stock levels are updated.',
+      },
+      {
+        q: 'How much does it cost for an anti-café?',
+        a: 'The Small plan for anti-cafés starts at 32 AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. If several halls or branches do not fit a standard plan, we prepare a separate custom quote. The demo is free and needs no card.',
+      },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
     ctaTitle: 'Anti-café demo',
@@ -290,10 +354,12 @@ export const solutionsEn: SolutionCopy[] = [
     slug: 'lounge',
     shortTitle: 'Room lounge',
     h1: 'Room lounge management system',
-    seoTitle: 'Room lounge software & private room booking | Heselo',
+    seoTitle: 'Lounge bar management software & VIP room booking | Heselo',
     seoDescription:
-      'Room lounge software: VIP room booking, live sessions, cash, and extras. Built for room-based lounges — free demo.',
+      'Lounge bar management software: VIP room booking, live sessions, bar sales, cash, and inventory in one panel. For room lounges — from 39 AZN/month, free demo.',
     keywords: [
+      'lounge bar management software',
+      'lounge bar software',
       'room lounge software',
       'lounge room booking',
       'lounge management system',
@@ -344,6 +410,26 @@ export const solutionsEn: SolutionCopy[] = [
       {
         q: 'Can an open hall and rooms share one system?',
         a: 'Yes. Tables, rooms, and stations follow the same schedule, session, and cash rules.',
+      },
+      {
+        q: 'Do we need separate lounge bar software?',
+        a: 'Usually not. If your lounge bar sells room or table time plus drinks and snacks, Heselo runs bookings, live sessions, bar sales, the cash shift, and inventory in one panel. Separate restaurant software is only worth it when a full kitchen, KDS, and complex menu orders are the core of the business.',
+      },
+      {
+        q: 'Which lounges is it not a fit for?',
+        a: 'A bar-restaurant that sells no room or table time and works only through waiter orders on an open floor is better served by a restaurant POS. Heselo is for VIP room lounges, club-lounges that rent rooms, and venues mixed with karaoke or billiards — wherever the room and its time are the unit.',
+      },
+      {
+        q: 'When should we keep iiko for the kitchen?',
+        a: 'If a full kitchen, a KDS screen, and sending orders to the kitchen drive your day, keeping iiko or a similar restaurant POS makes sense. Heselo covers the room schedule, sessions, extensions, and club cash. With a simple menu — drinks and snacks — sales go straight onto the same Heselo session.',
+      },
+      {
+        q: 'We take bookings on WhatsApp — what changes?',
+        a: 'Guests still message you, but the admin puts the booking onto the room schedule right away. The whole team sees which VIP room is taken and for which hours, and moves and cancellations stay in the history. On arrival the booking becomes a live session — extensions and extras are not written down elsewhere.',
+      },
+      {
+        q: 'How much does lounge bar software cost?',
+        a: 'The Small plan for room lounges starts at 39 AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your room count through the contact form — no card details needed; we show the schedule and a live session on your scenario.',
       },
     ],
     related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
@@ -408,6 +494,22 @@ export const solutionsEn: SolutionCopy[] = [
       {
         q: 'Are past days protected?',
         a: 'Yes. Changes to past days follow venue protection rules.',
+      },
+      {
+        q: 'How is it different from an online booking widget?',
+        a: 'A widget only lets guests pick a free slot; it knows nothing about what happens after they arrive. In Heselo the same booking becomes a live session and stays linked to payment, pre-order, and customer history. Schedule, floor, and cash all see the same data — the booking and the payment never drift apart.',
+      },
+      {
+        q: 'How do phone and WhatsApp bookings work?',
+        a: 'The admin enters a booking from a call or message straight onto the schedule: guest, time, table or room, and labels. Because everyone sees the same schedule, the risk of double-booking a place drops. Moves and cancellations stay in the history, so “who changed this?” always has an answer.',
+      },
+      {
+        q: 'Can several venue types share one schedule?',
+        a: 'Yes. PlayStation stations, billiard tables, and karaoke or lounge rooms are set up separately but appear on one schedule and one reservation list. In a mixed venue the admin runs every zone from one screen, and cash closes in the same shift.',
+      },
+      {
+        q: 'Where is pricing listed?',
+        a: 'Reservations and the schedule are the core of the panel; the price depends on your venue-type plan. The Small plan starts at 25 AZN a month for PS/gaming, 29 for billiards, 32 for anti-cafés, and 39 for karaoke and lounges. The full table is on the pricing page, and the demo is free.',
       },
     ],
     related: ['karaoke', 'lounge', 'gaming', 'pos'],
@@ -475,6 +577,22 @@ export const solutionsEn: SolutionCopy[] = [
         q: 'Is there a cash count?',
         a: 'Yes. Cash count is part of shift/day close.',
       },
+      {
+        q: 'How is it different from tracking cash in Excel or WhatsApp?',
+        a: 'In Excel, totals get copied by hand at day end; in WhatsApp you get a “this much cash left” message that is hard to verify. In Heselo every payment is recorded against a session and a shift, the close includes a count, and any gap shows up immediately. Closed-day history is kept too.',
+      },
+      {
+        q: 'Are cash, card, and bank payments shown separately?',
+        a: 'Yes. Transactions are recorded by payment method — cash, bank, or POS — and the cash report breaks each method out by shift and period. At shift close the counted cash is compared with the system total, so mistakes like a card payment logged as cash surface quickly.',
+      },
+      {
+        q: 'When should we keep a restaurant POS like iiko or Clopos?',
+        a: 'If the kitchen, KDS, and menu orders are the core business, keeping a restaurant POS makes sense. Heselo cash closes room, table, and station time, live sessions, and booking payments in the same shift. If your sales are mostly time, drinks, and snacks, a separate restaurant till is usually unnecessary.',
+      },
+      {
+        q: 'How much does it cost?',
+        a: 'Plans are priced by venue type: the Small plan starts at 25 AZN a month for PS/gaming, 29 for billiards, 32 for anti-cafés, and 39 for karaoke and lounges. Medium and Large plans, annual billing, and limits are on the pricing page. Request a free demo through the contact form — no card needed.',
+      },
     ],
     related: ['gaming', 'inventory', 'reservations'],
     ctaTitle: 'Cash shift demo',
@@ -538,6 +656,22 @@ export const solutionsEn: SolutionCopy[] = [
       {
         q: 'Is inventory in statistics?',
         a: 'Yes. Inventory statistics cover summaries and cuts.',
+      },
+      {
+        q: 'Which venues is it a fit for — and which not?',
+        a: 'It fits gaming clubs, karaoke, billiards, anti-cafés, and lounges that track drinks, snacks, and bar stock. If you need many suppliers, recipe-based write-offs, or a large kitchen store, a specialised inventory or restaurant system is the better choice. For a club bar, one catalog shared with cash is usually enough.',
+      },
+      {
+        q: 'How is it different from a stock spreadsheet?',
+        a: 'A spreadsheet is usually filled in at night and lags behind sales. In Heselo, adding a product in a live session or quick sale uses the same catalog, so stock levels keep pace with sales. Count journals are kept, so you can later check who counted what and when.',
+      },
+      {
+        q: 'Do walk-in sales come off stock too?',
+        a: 'Yes. Quick sale runs without a booking but uses the same product catalog as live sessions. Even when a guest only buys a drink or a snack, the sale is recorded in cash and the stock level updates — no more “sold, but inventory never changed”.',
+      },
+      {
+        q: 'Where is pricing listed?',
+        a: 'Plans are priced by venue type: from 25 AZN a month for PS/gaming, 29 for billiards, 32 for anti-cafés, and 39 for karaoke and lounges. Plan limits and annual billing are on the pricing page. The demo is free — share your product count in the contact form and we walk through stock and counts.',
       },
     ],
     related: ['pos', 'gaming', 'antikafe'],
