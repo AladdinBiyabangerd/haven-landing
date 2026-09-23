@@ -6,22 +6,25 @@ export const guidesHubAz: GuidesHubCopy = {
   eyebrow: 'Bələdçilər',
   h1: 'Klub və otaq işi necə qurulur?',
   intro:
-    'Bu bölmə məhsul reklamı deyil — axtarışda tez rast gəlinən suallara aydın cavab verir. Hər yazının sonunda uyğun Heselo həll səhifəsinə keçid var.',
-  seoTitle: 'Bələdçilər — klub idarəetməsi və POS alternativləri | Heselo',
+    'Burada oyun klubu, bilyard, karaoke, launj və antikafe idarəetməsi ilə bağlı praktik suallara cavab veririk. Məqsəd məhsulu tərifləmək yox, hansı prosesə hansı alətin uyğun olduğunu aydın göstərməkdir.',
+  seoTitle: 'Bələdçilər — klub idarəetməsi, proqram seçimi və POS alternativləri | Heselo',
   seoDescription:
-    'Oyun klubu, karaoke, bilyard və antikafe iş prosesi; iiko, Clopos, Dine və Excel alternativləri — dürüst müqayisə və seçim bələdçiləri.',
+    'Oyun klubu, karaoke, bilyard, launj və antikafe idarəetməsi; rezervasiya, canlı sessiya, kassa; iiko, Clopos, Dine və Excel alternativləri — praktik bələdçilər.',
   keywords: [
     'oyun klubu idarəetmə sistemi nədir',
     'playstation klub proqramı',
+    'karaoke rezervasiya sistemi',
+    'bilyard masa rezervasiya',
+    'antikafe proqramı',
+    'klub kassa proqramı',
     'iiko alternativ',
     'clopos alternativ',
     'dine alternativ',
-    'karaoke rezervasiya sistemi',
   ],
   cardCta: 'Oxu',
   comparisonTitle: 'Alternativlər və müqayisələr',
   comparisonIntro:
-    'iiko, Clopos, Dine, MinuPOS və digər sistemləri axtarırsınızsa — klub/otaq-vaxt üçün dürüst müqayisə yazıları.',
+    'iiko, Clopos, Dine, MinuPOS və digər sistemləri klub/otaq-vaxt üçün müqayisə edirsinizsə — funksiyalar, iş prosesi və seçim meyarları üzrə ayrıca bələdçilər burada.',
 }
 
 export const guidesAz: GuideCopy[] = [
@@ -29,9 +32,9 @@ export const guidesAz: GuideCopy[] = [
     slug: 'gaming-club-management',
     shortTitle: 'Oyun klubu idarəetməsi',
     h1: 'Oyun klubu idarəetmə sistemi nədir?',
-    seoTitle: 'Oyun klubu idarəetmə sistemi nədir? | Heselo bələdçisi',
+    seoTitle: 'Oyun klubu idarəetmə sistemi nədir? | Heselo',
     seoDescription:
-      'PS, konsol və oyun klubu necə idarə olunur: stansiya rezervasiyası, canlı sessiya, kassa və anbar. PlayStation klub proqramı izahı — reklam deyil, seçim bələdçisidir.',
+      'PS, konsol və PC oyun klubunda rezervasiya, canlı sessiya, satış və kassa necə idarə olunur? Praktik izah və proqram seçimi üçün əsas meyarlar.',
     keywords: [
       'oyun klubu idarəetmə sistemi nədir',
       'ps klub proqramı',
@@ -41,76 +44,81 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-09-23',
     intro:
-      'Oyun klubu idarəetmə sistemi PS, konsol və ya PC stansiyalarının bronunu, canlı oyunu və kassanı bir paneldə aparmaq üçündür. Sadə taymer stansiyanın boş olub-olmadığını göstərə bilər, amma bron tarixçəsi, uzatma, qəlyanaltı satışı və növbə bağlanışını vermir.',
+      'Oyun klubunda əsas məsələ yalnız vaxt saymaq deyil. Hansı stansiyanın boş olduğu, hansı bronun gəldiyi, sessiyanın nə vaxt başladığı, əlavə satışların və ödənişin necə bağlandığı da eyni iş prosesinin hissəsidir.',
     sections: [
       {
         id: 'why',
-        title: 'Niyə PS klublar belə sistem axtarır?',
+        title: 'Niyə oyun klubu üçün ayrıca sistem lazımdır?',
         paragraphs: [
-          'PlayStation klubunda iş saatla gedir: telefonla bron, “hansı konsol boşdur?”, oyun bitəndə uzatma və qəlyanaltı. Bunlar ayrı vərəqlərdə qalanda gecə növbəsi qarışır.',
-          'Yaxşı sistemdə hər stansiya ayrıca qurulur — bron canlı sessiyaya keçir, ödəniş eyni növbəyə düşür.',
+          'PS və PC klublarında iş saat üzərindən gedir. Gün ərzində telefonla bronlar, boş stansiyalar, uzatmalar və əlavə satışlar yaranır. Bunlar ayrı-ayrı dəftər, WhatsApp və Excel-də saxlananda növbələr arasında məlumat itə bilər.',
+          'Mərkəzləşdirilmiş sistemdə isə stansiya, bron və canlı sessiya bir-birinə bağlı olur. İşçi hansı stansiyanın hazırda aktiv, boş və ya bronlu olduğunu eyni yerdən görür.',
         ],
       },
       {
         id: 'modules',
-        title: 'Adətən hansı hissələrdən ibarət olur?',
-        paragraphs: ['Praktiki ehtiyaclar oxşardır:'],
+        title: 'Oyun klubu proqramında hansı funksiyalar olmalıdır?',
+        paragraphs: [
+          'Funksiyalar məkanın ölçüsündən asılıdır, amma gündəlik iş üçün əsas ehtiyaclar adətən bunlardır:',
+        ],
         bullets: [
-          'Stansiya rezervasiyası (PS, konsol, PC)',
-          'Canlı sessiya (vaxt, uzatma, ödəniş)',
-          'Sürətli satış (qəlyanaltı/içki)',
-          'Kassa növbəsi və sayım',
-          'Müştəri tarixçəsi',
+          'PS, konsol və PC stansiyalarının idarəsi',
+          'Rezervasiya və cədvəl',
+          'Canlı sessiya və vaxt uzatma',
+          'İçki və qəlyanaltı satışı',
+          'Kassa növbəsi və gün sonu hesabatı',
+          'Müştəri tarixçəsi və işçi icazələri',
         ],
       },
       {
         id: 'timer',
-        title: 'Taymer proqramından fərqi nədir?',
+        title: 'Sadə taymer proqramından fərqi nədir?',
         paragraphs: [
-          'Taymer yalnız müddəti sayır. Bron siyahısı, köçürmə, kassa sayımı və anbar qalığı ayrı qalır. Növbənin sonunda məlumatları yenidən Excel-də yoxlamaq lazım olur.',
+          'Taymer əsasən vaxtı göstərir. Amma bronun kimə aid olduğunu, növbənin necə bağlandığını, hansı məhsulun satıldığını və gün ərzində nə qədər gəlir olduğunu ayrıca izləmək lazım gəlir.',
+          'Klub böyüdükcə bu məlumatları müxtəlif yerlərdən toplamaq əvəzinə bir prosesdə saxlamaq daha rahat olur.',
         ],
       },
       {
         id: 'heselo',
-        title: 'Heselo oyun klubunda necə kömək edir?',
+        title: 'Heselo oyun klubunda necə işləyir?',
         paragraphs: [
-          'Heselo stansiyanı cədvəldə və canlı izləmədə eyni vahid kimi saxlayır. PS və PC eyni paneldə ola bilər. Ödəniləcək məbləğ sistem tərəfindən avtomatik hesablanır.',
+          'Heselo-da PS, konsol və PC stansiyaları eyni cədvəldə qurula bilər. Bron aktiv sessiyaya çevrilir, vaxt uzatılır, əlavə satışlar sessiyaya əlavə olunur və yekun məbləğ kassa növbəsində görünür.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Yalnız PS klub üçündür, yoxsa PC də olar?',
-        a: 'Hər ikisi. Fərqli stansiya tipləri eyni cədvəl, sessiya və kassa qaydaları ilə qurulur.',
+        q: 'Yalnız PS klub üçündür, yoxsa PC də işləyir?',
+        a: 'Hər ikisi mümkündür. Stansiya növü ayrıca qurulur, amma rezervasiya, sessiya və kassa prosesi eyni qalır.',
       },
       {
-        q: 'Saat bitəndə uzatma necə qeyd olunur?',
-        a: 'Canlı sessiyada vaxt uzadılır; ödəniş eyni qeydə düşür — ayrı vərəq lazım deyil.',
+        q: 'Sessiyanın vaxtını uzatmaq mümkündür?',
+        a: 'Bəli. Aktiv sessiyanın müddəti uzadılır və əlavə vaxt həmin sessiyanın hesabına əlavə olunur.',
       },
       {
-        q: 'Qəlyanaltı və içki oyun vaxtı ilə eyni hesaba yazılırmı?',
-        a: 'Bəli. Sürətli satış stansiyanın canlı sessiyasına əlavə olunur, qonaq vaxtı və qəlyanaltını birlikdə bir dəfə ödəyir. Məhsullar ümumi kataloqdan gəlir, ona görə satış həm anbarda, həm də kassa növbəsində görünür — gecənin sonunda ayrıca qəlyanaltı dəftəri lazım olmur.',
+        q: 'Qəlyanaltı və içkilər sessiyaya əlavə edilə bilər?',
+        a: 'Bəli. Əlavə satışlar aktiv sessiyaya yazılır və yekun ödənişlə birlikdə görünür.',
       },
       {
-        q: 'Sahib klubda olmadan günün gedişini necə görür?',
-        a: 'Panel brauzerdə açılır, ona görə sahib cədvəli, aktiv stansiyaları və kassa növbəsini telefondan və ya noutbukdan yoxlaya bilər. İşçi icazələri resepsiya ilə sahibin rolunu ayırır: resepsiya sessiya və satışı aparır, hesabatlar və ayarlar isə sahibdə qalır.',
+        q: 'Sahib klubda olmadan vəziyyəti görə bilər?',
+        a: 'Bəli. Paneldən cədvəl, aktiv stansiyalar və kassa növbəsi izlənə bilər. İşçi icazələri ilə resepsiya və sahib üçün fərqli giriş səviyyələri yaratmaq mümkündür.',
       },
       {
         q: 'Demo necə əldə edilir?',
-        a: 'Əlaqə formasında məkan tipi olaraq oyun klubu / PS seçin və stansiya sayını qeyd edin.',
+        a: 'Əlaqə formasında oyun klubu / PS seçib stansiya sayını qeyd etmək kifayətdir.',
       },
     ],
     relatedSolutions: ['gaming', 'billiards', 'reservations', 'pos'],
     ctaTitle: 'Oyun klubu üçün demo',
-    ctaBody: 'PS və stansiya sayınızı yazın — cədvəl və canlı sessiyanı göstəririk.',
+    ctaBody: 'Stansiya sayınızı yazın — rezervasiya, canlı sessiya və kassanı real ssenari ilə göstərək.',
   },
+
   {
     slug: 'karaoke-room-booking',
     shortTitle: 'Karaoke otaq rezervasiyası',
     h1: 'Karaoke otaqları necə bron edilir?',
-    seoTitle: 'Karaoke otaq rezervasiyası necə işləyir? | Heselo bələdçisi',
+    seoTitle: 'Karaoke otaq rezervasiyası necə işləyir? | Heselo',
     seoDescription:
-      'Karaoke otaq rezervasiyası: cədvəl, sessiya müddəti, əlavə satış və kassa. Karaoke idarəetmə sistemi izahı.',
+      'Karaoke otaq rezervasiyasında cədvəl, sessiya, əlavə satış və kassa necə əlaqələndirilir? Praktik idarəetmə bələdçisi.',
     keywords: [
       'karaoke otaq rezervasiya',
       'karaoke idarəetmə sistemi',
@@ -120,71 +128,78 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-09-23',
     intro:
-      'Karaoke məkanında əsas vahid otaqdır. Bron yalnız “boş saat seçmək” deyil: qonaq gələndə eyni qeyd canlı sessiyaya çevrilməli, uzatma və içki eyni sessiyada qalmalıdır.',
+      'Karaoke məkanında rezervasiya otağın boş vaxtını qeyd etməklə bitmir. Qonaq gəldikdən sonra həmin rezervasiya canlı sessiyaya çevrilir, əlavə vaxt və sifarişlər isə eyni hesabda davam edir.',
     sections: [
       {
         id: 'why',
-        title: 'Otaq bronu niyə itir?',
+        title: 'Otaq bronları niyə qarışa bilər?',
         paragraphs: [
-          'Telefon, WhatsApp və kağız cədvəl eyni otağa iki qrupu yaza bilər. Bir neçə otaq eyni vaxtda dolanda resepsiya statusu gec görür.',
+          'Telefon, WhatsApp və kağız cədvəl paralel istifadə olunanda eyni otağın vəziyyətini hamı eyni anda görməyə bilər. Xüsusilə bir neçə otaq eyni vaxtda dolanda bu, resepsiyada əlavə yoxlama yaradır.',
         ],
       },
       {
         id: 'flow',
-        title: 'Yaxşı karaoke prosesi necə görünür?',
+        title: 'Karaoke rezervasiyasının düzgün axını necədir?',
         paragraphs: [
-          'Cədvəldə otaq bron olunur. Qonaq gələndə sessiya açılır. Müddət bitəndə uzatma və ya ödəniş eyni qeyddədir. Kassa növbəni bağlayır.',
+          'Əvvəlcə otaq və vaxt seçilir. Qonaq gəldikdə rezervasiya aktiv sessiyaya çevrilir. Sessiya zamanı əlavə vaxt və məhsullar hesaba əlavə olunur, ödəniş isə növbənin sonunda bağlanır.',
         ],
-        bullets: ['Otaq cədvəli', 'Canlı sessiya', 'Əlavə satış', 'Növbə bağlanışı'],
+        bullets: [
+          'Otaq cədvəli',
+          'Rezervasiya',
+          'Canlı sessiya',
+          'Əlavə satış',
+          'Kassa növbəsi',
+        ],
       },
       {
         id: 'form',
-        title: 'Yalnız onlayn bron forması kifayətdirmi?',
+        title: 'Sadəcə onlayn bron forması kifayətdirmi?',
         paragraphs: [
-          'Bron səhifəsi otağın içindəki işi idarə etmir. Ofisiant məhsul əlavə edəndə və kassa bağlananda eyni məlumat lazımdır.',
+          'Bron forması rezervasiya toplamaq üçün faydalıdır, amma məkan daxilindəki işi idarə etmir. Otaq açıldıqda sessiyanın başlaması, sifarişlərin əlavə olunması və yekun ödəniş üçün ayrıca proses lazımdır.',
         ],
       },
       {
         id: 'heselo',
-        title: 'Heselo karaoke-də nə verir?',
+        title: 'Heselo karaoke üçün nə verir?',
         paragraphs: [
-          'Hər otaq ayrıca qurulur. Cədvəl, canlı izləmə və kassa eyni paneldədir. Karaoke + launj otaqları birlikdə qurula bilər.',
+          'Otaqlar cədvəldə ayrıca qurulur və aktiv sessiyalar canlı görünür. Rezervasiya, sessiya və kassa eyni paneldə saxlanıldığı üçün resepsiya gün ərzində müxtəlif mənbələr arasında keçid etmir.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Bir neçə otaq eyni lövhədə görünürmü?',
-        a: 'Bəli. Bütün otaqlar eyni cədvəl və canlı izləmədədir.',
+        q: 'Bir neçə otaq eyni cədvəldə görünür?',
+        a: 'Bəli. Bütün otaqlar eyni cədvəldə və canlı görünüşdə idarə oluna bilər.',
       },
       {
-        q: 'Əvvəlcədən sifariş varmı?',
-        a: 'Bron formasında etiket və əvvəlcədən sifariş sahələri var.',
+        q: 'Əvvəlcədən sifariş əlavə etmək mümkündür?',
+        a: 'Bəli. Rezervasiyaya əvvəlcədən sifariş və digər qeydlər əlavə etmək mümkündür.',
       },
       {
-        q: 'Qrup daha çox qalmaq istəsə nə olur?',
-        a: 'İşçi otağın canlı sessiyasını uzadır, əlavə vaxt içkilərlə eyni hesaba düşür. Uzatmadan əvvəl cədvəl həmin otağın növbəti bronunun nə vaxt başladığını göstərir — resepsiya növbəti qrupun vaxtını kəsmək əvəzinə başqa boş otaq təklif edə bilər.',
+        q: 'Qrup daha uzun qalmaq istəsə necə olur?',
+        a: 'Aktiv sessiyanın vaxtı uzadılır. Əlavə vaxt və sifarişlər həmin otağın hesabında davam edir.',
       },
       {
-        q: 'Bir otağın iki qrupa verilməsinin qarşısını necə almaq olar?',
-        a: 'Bütün bronları — telefon, WhatsApp və ya bronsuz gələn qonaq — bütün komandanın gördüyü bir otaq cədvəlində saxlayın. Saat tutulanda hamı üçün eyni anda məşğul görünür. Köçürmə və ləğvlər tarixçədə qalır, axşam növbəsi kimin nəyi dəyişdiyini dəqiq bilir.',
+        q: 'İki qrupa eyni otağın verilməsinin qarşısı necə alınır?',
+        a: 'Bütün rezervasiyalar vahid cədvəldə saxlananda otağın həmin saat üçün boş, bronlu və ya aktiv olduğu eyni yerdə görünür.',
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Əlaqə formasında karaoke seçin və otaq sayını yazın.',
+        a: 'Əlaqə formasında karaoke seçib otaq sayını yazmaq kifayətdir.',
       },
     ],
     relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
     ctaTitle: 'Karaoke üçün demo',
-    ctaBody: 'Otaq sayınızı yazın — cədvəl və canlı sessiyanı göstəririk.',
+    ctaBody: 'Otaq sayınızı yazın — rezervasiya və canlı sessiya prosesini göstərək.',
   },
+
   {
     slug: 'billiards-club-management',
     shortTitle: 'Bilyard klubu idarəetməsi',
     h1: 'Bilyard klubu necə idarə olunur?',
-    seoTitle: 'Bilyard klubu idarəetmə sistemi nədir? | Heselo bələdçisi',
+    seoTitle: 'Bilyard klubu idarəetmə sistemi nədir? | Heselo',
     seoDescription:
-      'Bilyard masa rezervasiyası və cədvəl, canlı oyun, vaxt və kassa necə birləşir — izah. Satış səhifəsi üçün həll bölməsinə keçin.',
+      'Bilyard klubunda masa rezervasiyası, canlı oyun, vaxt, əlavə satış və kassa necə birləşdirilir? Praktik idarəetmə izahı.',
     keywords: [
       'bilyard klubu idarəetmə sistemi nədir',
       'bilyard masa rezervasiya necə',
@@ -194,70 +209,71 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-09-23',
     intro:
-      'Bilyard klubunda masa saatla işləyir. Hansı masa boşdur, oyun nə vaxt başlayıb, əlavə içki yazılıb, yoxsa yox — bunlar ayrı qalanda gecə kassası uzanır.',
+      'Bilyard klubunda əsas iş vahidi masadır. Masanın boş və ya bronlu olması, oyunun nə vaxt başlaması, nə qədər davam etməsi və əlavə sifarişlərin hansı hesaba aid olması gün ərzində birlikdə izlənməlidir.',
     sections: [
       {
         id: 'why',
-        title: 'Lövhə və telefon niyə kifayət etmir?',
+        title: 'Sadə lövhə və telefon niyə çətinlik yaradır?',
         paragraphs: [
-          'Lövhə real vaxtda yenilənməyə bilər; telefon bronu masanın canlı statusunu görmür. VIP otaq və adi masa ayrı cədvəldə qalanda toqquşma olur.',
+          'Lövhədəki məlumat gec yenilənə bilər, telefonla alınan bron isə digər işçilər tərəfindən dərhal görünməyə bilər. VIP otaq və adi masalar ayrı siyahılarda saxlananda vəziyyəti yoxlamaq daha da çətinləşir.',
         ],
       },
       {
         id: 'time',
-        title: 'Vaxt və ödəniş necə bağlanmalıdır?',
+        title: 'Vaxt və ödəniş necə əlaqələndirilir?',
         paragraphs: [
-          'Oyun başlayanda sessiya açılır. Pauza, uzatma və məhsul eyni qeyddə qalır. Qiymət masa tipi və müddət qaydalarına görə hesablanır; kassa növbəni bağlayır.',
+          'Oyun başladıqda sessiya açılır. Fasilə, uzatma və əlavə məhsullar həmin sessiya ilə əlaqələndirilir. Tarif masa növünə və vaxt qaydasına əsasən hesablanır, yekun məbləğ isə kassa növbəsinə düşür.',
         ],
       },
       {
         id: 'mix',
-        title: 'Bilyard + karaoke və ya launj?',
+        title: 'Bilyard, karaoke və launj birlikdə işləyə bilər?',
         paragraphs: [
-          'Qarışıq məkanlarda masa və otaq eyni paneldə olmalıdır. Əks halda kassa iki alətdən yığılır.',
+          'Bəli. Qarışıq məkanlarda fərqli masa və otaq növlərini eyni idarəetmə panelində saxlamaq mümkündür. Belə olduqda rezervasiya və satış məlumatlarını müxtəlif sistemlərdən toplamaq lazım gəlmir.',
         ],
       },
       {
         id: 'heselo',
-        title: 'Heselo bilyardda necə işləyir?',
+        title: 'Heselo bilyard üçün necə işləyir?',
         paragraphs: [
-          'Hər masa və otaq ayrıca qurulur. Cədvəl, canlı oyun və kassa eyni qaydada işləyir. Sadə saat sayğacından fərqli olaraq bron tarixçəsi və sayım da var.',
+          'Masa və otaqlar ayrıca qurulur. Rezervasiya, canlı oyun və kassa eyni iş axınında davam edir. Fərqli masa tipləri üçün ayrıca tariflər də təyin edilə bilər.',
         ],
       },
     ],
     faq: [
       {
         q: 'VIP otaq və adi masa birlikdə ola bilər?',
-        a: 'Bəli. Hər ikisi eyni cədvəl, sessiya və kassa qaydaları ilə işləyir.',
+        a: 'Bəli. Hər ikisi ayrıca resurs kimi qurulur və eyni cədvəldə idarə edilə bilər.',
       },
       {
         q: 'Yalnız taymer kifayətdirmi?',
-        a: 'Kiçik zalda bəlkə; bron, anbar və növbə bağlanışı lazımdırsa, tam panel daha az xəta verir.',
+        a: 'Əgər yalnız vaxtı izləmək lazımdırsa, taymer kifayət edə bilər. Rezervasiya, satış və kassa da eyni prosesdə lazımdırsa, daha geniş idarəetmə sistemi tələb olunur.',
       },
       {
         q: 'Fərqli masaların fərqli qiyməti ola bilər?',
-        a: 'Bəli. Hər masa ayrıca qurulur, ona görə Amerika bilyardı (pool) masası, rus bilyardı masası və VIP otaq öz tarifi ilə işləyə bilər. Sistem məbləği masa tipi və faktiki oyun vaxtına görə hesablayır — işçi hesabı əllə çıxarmır.',
+        a: 'Bəli. Masa tipləri ayrıca qurularaq hər birinə fərqli tarif tətbiq etmək mümkündür.',
       },
       {
-        q: 'Qonaqlar oyunu dayandırsa nə olur?',
-        a: 'Sessiya eyni qeyddə pauzaya qoyulub yenidən davam etdirilə bilər, fasilə oyun vaxtı kimi hesablanmır. Pauza zamanı sifariş olunan içki və qəlyanaltı eyni masa hesabında qalır, qonaq ödəyəndə yekun məbləğ cari kassa növbəsinə düşür.',
+        q: 'Oyun zamanı fasilə verilə bilər?',
+        a: 'Sessiya pauzaya qoyulub daha sonra davam etdirilə bilər. Əlavə satışlar isə həmin sessiyanın hesabında saxlanır.',
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Əlaqə formasında bilyard seçin və masa sayını yazın.',
+        a: 'Əlaqə formasında bilyard seçib masa sayını yazmaq kifayətdir.',
       },
     ],
     relatedSolutions: ['billiards', 'gaming', 'karaoke', 'pos'],
     ctaTitle: 'Bilyard üçün demo',
-    ctaBody: 'Masa sayınızı yazın — cədvəl və canlı oyun sessiyasını göstəririk.',
+    ctaBody: 'Masa sayınızı yazın — rezervasiya, canlı oyun və kassa prosesini göstərək.',
   },
+
   {
     slug: 'room-lounge-management',
     shortTitle: 'Otaqlı launj idarəetməsi',
     h1: 'Otaqlı launj necə idarə olunur?',
-    seoTitle: 'Otaqlı launj idarəetmə sistemi nədir? | Heselo bələdçisi',
+    seoTitle: 'Otaqlı launj idarəetmə sistemi nədir? | Heselo',
     seoDescription:
-      'Otaqlı launj: VIP otaq rezervasiyası, sessiya, əlavə satış və kassa. Launj otaq proqramı izahı.',
+      'Otaqlı launjda VIP otaq rezervasiyası, sessiya, əlavə satış və kassa necə idarə olunur? Praktik bələdçi.',
     keywords: [
       'otaqlı launj proqramı',
       'launj otaq rezervasiya',
@@ -267,70 +283,71 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-13',
     dateModified: '2026-09-23',
     intro:
-      'Otaqlı launj açıq kafe deyil: qonaq otaq götürür, sessiya uzana bilər, içki və qəlyanaltı əlavə olunur. İdarəetmə otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir.',
+      'Otaqlı launjda qonaq müəyyən müddət üçün otaq götürür. Rezervasiya, sessiyanın başlaması, əlavə vaxt və sifarişlər bir-birindən ayrı qeyd olunanda günün sonunda hesabları tutuşdurmaq çətinləşir.',
     sections: [
       {
         id: 'unit',
         title: 'Niyə əsas vahid otaqdır?',
         paragraphs: [
-          'Açıq masa prosesi otağın qapalı sessiyasını idarə etmir. Bir otaq eyni vaxtda iki qrupa verilməməlidir; status lövhədə yox, cədvəldə görünməlidir.',
+          'Otaqlı məkanda əsas resurs otağın özüdür. Otağın hansı saatda boş olduğu, hansı qonaq üçün saxlandığı və hazırda aktiv sessiyanın olub-olmadığı cədvəldə aydın görünməlidir.',
         ],
       },
       {
         id: 'flow',
-        title: 'Gündəlik iş necədir?',
+        title: 'Gündəlik iş prosesi necə qurulur?',
         paragraphs: [
-          'Bron otağa yazılır. Qonaq gələndə sessiya açılır. Əlavə vaxt və məhsul eyni qeyddə qalır. Günün sonunda kassa otaq doluluğu ilə uyğun gəlməlidir.',
+          'Rezervasiya otağa yazılır. Qonaq gəldikdə sessiya başlayır. Əlavə vaxt və məhsullar həmin sessiyaya əlavə edilir. Ödəniş bağlandıqda məlumat kassa növbəsində əks olunur.',
         ],
       },
       {
         id: 'mix',
-        title: 'Launj + karaoke və ya bilyard',
+        title: 'Launj, karaoke və bilyard birlikdə ola bilər?',
         paragraphs: [
-          'Çox məkan qarışıqdır. Eyni panel otaq, masa və stansiyanı bir kassada saxlayır — iki proqram yığmaq lazım olmur.',
+          'Qarışıq məkanlarda otaq, masa və digər resursları eyni sistemdə idarə etmək mümkündür. Bunun əsas üstünlüyü bütün rezervasiya və satışların vahid iş axınında görünməsidir.',
         ],
       },
       {
         id: 'heselo',
         title: 'Heselo otaqlı launj üçün nə edir?',
         paragraphs: [
-          'Otaq karaoke otağı ilə eyni qaydada qurulur. Cədvəl, canlı izləmə, kassa və müştəri tarixçəsi bir paneldədir.',
+          'Otaqlar ayrıca resurs kimi qurulur. Rezervasiya, canlı sessiya, satış və kassa eyni paneldə davam edir. Karaoke otaqları ilə oxşar iş prosesi qurmaq mümkündür.',
         ],
       },
     ],
     faq: [
       {
         q: 'Açıq zal da eyni sistemdə ola bilər?',
-        a: 'Bəli. Masa və otaq eyni cədvəl və kassadadır.',
+        a: 'Bəli. Masa və otaqlar eyni cədvəldə və kassa prosesində idarə oluna bilər.',
       },
       {
         q: 'Bu, kouorkinq proqramıdır?',
-        a: 'Xeyr. Fokus saatla/sessiya ilə işləyən otaqlı əyləncə məkanlarıdır — PS, karaoke, bilyard, antikafe, launj.',
+        a: 'Xeyr. Fokus saat və sessiya əsasında işləyən əyləncə məkanlarıdır: PS, karaoke, bilyard, antikafe və launj kimi.',
       },
       {
-        q: 'Launj bar proqramı axtarıram — məhsul səhifəsi haradadır?',
-        a: 'Bu yazı otaqlı launjun necə işlədiyini izah edir. Launj bar idarəetmə proqramı seçirsinizsə, otaqlı launj həlli səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı, kassa və anbar bir paneldə. Kiçik plan ayda 39 AZN-dən başlayır, demo pulsuzdur.',
+        q: 'Launj bar proqramı axtarıram. Bu həll uyğundur?',
+        a: 'Bu yazı otaqlı launj prosesini izah edir. Lounge bar idarəetmə proqramı (məhsul) axtarırsınızsa — otaqlı launj həll səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı və kassa bir paneldə; Kiçik plan 39 AZN/aydan.',
       },
       {
-        q: 'Otaqdan kənar bar satışı eyni kassadan keçə bilər?',
-        a: 'Bəli. Barda sürətli satış otaq sifarişləri ilə eyni məhsul kataloqundan istifadə edir, ona görə anbar və kassa növbəsi hər satışı görür. Otaq sessiyaları və bardan birbaşa satış bir növbə hesabatında bağlanır — sahib gecənin sonunda iki ayrı kassanı tutuşdurmur.',
+        q: 'Otaqdan kənar bar satışı da eyni kassadan keçə bilər?',
+        a: 'Bəli. Birbaşa bar satışları və otaq hesabları eyni kassa növbəsində izlənə bilər.',
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Əlaqə formasında otaqlı launj seçin və otaq sayını yazın.',
+        a: 'Əlaqə formasında otaqlı launj seçib otaq sayını yazmaq kifayətdir.',
       },
     ],
     relatedSolutions: ['lounge', 'karaoke', 'antikafe', 'reservations'],
     ctaTitle: 'Otaqlı launj üçün demo',
-    ctaBody: 'Otaq sayınızı yazın — cədvəl və canlı sessiyanı göstəririk.',
+    ctaBody: 'Otaq sayınızı yazın — rezervasiya və canlı sessiya prosesini göstərək.',
   },
-{
+
+  {
     slug: 'antikafe-management-system',
     shortTitle: 'Antikafe idarəetməsi',
     h1: 'Antikafe idarəetmə sistemi nədir?',
-    seoTitle: 'Antikafe idarəetmə sistemi nədir? | Heselo bələdçisi',
+    seoTitle: 'Antikafe idarəetmə sistemi nədir? | Heselo',
     seoDescription:
-      'Antikafe idarəetmə sistemi nədir, saatla ödəniş, rezervasiya və kassa necə birləşir — praktiki izah. Antikafe proqramı seçimi.',
+      'Antikafedə saatla ödəniş, masa və otaq rezervasiyası, məhsul satışı və kassa necə idarə olunur? Praktik seçim bələdçisi.',
     keywords: [
       'antikafe idarəetmə sistemi nədir',
       'antikafe proqramı',
@@ -340,93 +357,96 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-08-12',
     dateModified: '2026-09-23',
     intro:
-      'Antikafe idarəetmə sistemi saatla ödənişli məkanın gündəlik işini — masa və otaq rezervasiyası, canlı sessiya, məhsul satışı, kassa və bəzən anbar — bir paneldə aparmaq üçündür. Bu, yalnız saat sayan timer və ya yalnız kassa deyil; məqsəd lövhə, çat proqramları və Excel-i eyni iş gününə bağlamaqdır.',
+      'Antikafedə qonaq əsasən keçirdiyi vaxta görə ödəniş edir. Buna masa və otaq rezervasiyası, içki və qəlyanaltı satışı, kassa və bəzən anbar da əlavə olunur. Buna görə yalnız vaxt sayan proqram bütün prosesi əhatə etməyə bilər.',
     sections: [
       {
         id: 'what',
-        title: 'Antikafe biznes modeli nədir?',
+        title: 'Antikafe biznes modeli necə işləyir?',
         paragraphs: [
-          'Antikafelərdə qonaq adətən vaxt üçün ödəyir: masa, divan küncü, otaq və ya bəzən PC stansiyası. Çay, qəlyanaltı və içkilər əlavə gəlir gətirir. İş tez dəyişir — bronsuz qonaq, telefon bronu və gecə saatları eyni masalarda və otaqlarda toqquşur.',
-          'Ona görə antikafe proqramı yalnız “neçə saat oturdu?” sualını deyil, hansı masa boşdur, bron nə vaxtdır və gün necə bağlanır suallarını da cavablamalıdır.',
+          'Qonaq masa, divan, otaq və ya başqa bir zona seçir və müəyyən müddət qalır. Bu müddətdə içki və qəlyanaltı sifarişləri də yarana bilər.',
+          'Əsas məsələ vaxtı, məkanı və əlavə satışları bir-birindən ayırmadan idarə etməkdir.',
         ],
       },
       {
         id: 'modules',
-        title: 'Sistem adətən nəyi əhatə edir?',
-        paragraphs: ['Praktik ehtiyaclar oxşar modullardan ibarət olur:'],
+        title: 'Antikafe proqramında hansı funksiyalar vacibdir?',
+        paragraphs: [
+          'Məkanın modelindən asılı olaraq əsas funksiyalar bunlar ola bilər:',
+        ],
         bullets: [
-          'Masa və otaq rezervasiyası (cədvəl, köçürmə, ləğv)',
-          'Canlı sessiya (aktiv yer, vaxt, məhsul, ödəniş)',
-          'Kassa növbəsi (açılış, hesabat, sayım)',
-          'Məhsul kataloqu və anbar (çay, qəlyanaltı)',
-          'Müştəri qeydləri və sadə statistika',
+          'Masa və otaq rezervasiyası',
+          'Canlı sessiya və vaxt izləmə',
+          'Əlavə məhsul satışı',
+          'Kassa növbəsi və sayım',
+          'Məhsul kataloqu və anbar',
+          'Müştəri qeydləri',
           'İşçi icazələri',
         ],
       },
       {
         id: 'hourly',
-        title: 'Saatla ödəniş necə idarə olunmalıdır?',
+        title: 'Saatla ödəniş necə hesablanır?',
         paragraphs: [
-          'Saat sayan ayrı proqram rezervasiya tarixçəsi və kassa sayımını verməyə bilər. Yaxşı prosesdə bron canlı sessiyaya keçir; vaxt bitəndə uzatma və ödəniş eyni qeyddə qalır. Nağd, bank və POS ayrı izlənir — gecə növbəsində qarışıqlıq azalır.',
+          'Bron və ya giriş canlı sessiyaya çevrilir. Sessiyanın müddəti uzadıldıqda əlavə vaxt hesaba əlavə olunur. Məhsul satışı da həmin hesabda saxlanıla bilər. Beləliklə, işçi vaxtı və məhsulları ayrıca hesablamaq məcburiyyətində qalmır.',
         ],
       },
       {
         id: 'vs-gaming',
-        title: 'Antikafe ilə oyun klubu fərqi nədir?',
+        title: 'Antikafe ilə oyun klubunun fərqi nədir?',
         paragraphs: [
-          'Oyun klubunda fokus tez-tez PC/konsol stansiyasındadır; antikafedə masa, otaq və launj atmosferi ön plandadır. Amma texniki ehtiyac eynidir: stansiya və masa cədvəli + canlı sessiya + kassa. Bir panel hər iki tip zonanı idarə edə bilər.',
+          'Oyun klubunda əsas resurs adətən PS, konsol və ya PC stansiyasıdır. Antikafedə isə masa, otaq və digər zonalar ön plana çıxır. Buna baxmayaraq hər iki məkanda rezervasiya, canlı sessiya və kassa kimi oxşar proseslər var.',
         ],
       },
       {
         id: 'choose',
-        title: 'Antikafe proqramı seçərkən nəyə baxmaq lazımdır?',
+        title: 'Antikafe proqramı seçərkən nələrə baxmaq lazımdır?',
         paragraphs: [
-          'Rezervasiyadan ödənişə qədər bir proses varmı? Bron olmadan satış eyni kataloqdan gedirmi? Keçmiş gün və sayım saxlanırmı? Panel AZ / EN / RU dillərindədirmi? Qiymət şəffafdır mı?',
-          'Marketinq siyahısından çox real gecə növbənizi yoxlayın — xüsusilə masa/otaq sayı artanda.',
+          'Rezervasiya və canlı sessiya eyni sistemdə işləyirmi? Məhsul satışı sessiyaya əlavə oluna bilirmi? Kassa növbəsi ayrıca bağlanırmı? Masa və otaqların tariflərini fərqli təyin etmək mümkündürmü?',
+          'Ən yaxşı test real iş gününüzü sistemdə təkrarlamaqdır: bron, giriş, uzatma, satış və gün sonu bağlanışı.',
         ],
       },
       {
         id: 'heselo',
-        title: 'Heselo antikafe üçün necə uyğundur?',
+        title: 'Heselo antikafe üçün necə istifadə olunur?',
         paragraphs: [
-          'Heselo məkan idarəetmə sistemidir: cədvəl, canlı izləmə, kassa, məhsullar və anbar eyni paneldədir. Antikafe, oyun klubu və bilyard eyni cədvəl, sessiya və kassa qaydaları ilə qurula bilər. Ödəniləcək qalıqları sistem avtomatik hesablayır.',
-          'Antikafe yönümlü məhsul səhifəmiz və aşağıdakı rezervasiya/kassa həllərinə keçid var.',
+          'Heselo-da masa və otaqlar, canlı sessiyalar, məhsullar və kassa eyni paneldə idarə oluna bilər. Məkanın quruluşuna uyğun olaraq fərqli resurs və tariflər yaratmaq mümkündür.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Antikafe üçün ayrıca “timer proqramı” kifayət edirmi?',
-        a: 'Kiçik miqyasda bəlkə; amma bron, anbar və kassa sayımı lazımdırsa, tam məkan sistemi daha az xəta verir.',
+        q: 'Antikafe üçün sadəcə timer proqramı kifayətdirmi?',
+        a: 'Yalnız vaxtı izləmək lazımdırsa, timer kifayət edə bilər. Rezervasiya, satış və kassa da idarə olunacaqsa, əlavə funksiyalar lazım olur.',
       },
       {
-        q: 'Otaq rezervasiyası dəstəklənirmi?',
-        a: 'Bəli. Otaq ayrıca qurulub cədvəldə idarə oluna bilər — karaoke VIP otaqları ilə eyni qayda.',
+        q: 'Otaq rezervasiyası mümkündür?',
+        a: 'Bəli. Otaq ayrıca resurs kimi qurulub cədvəldə idarə edilə bilər.',
       },
       {
         q: 'Saatlıq ödəniş necə hesablanır?',
-        a: 'Hər masa və ya otaq öz tarifi ilə işləyir, sistem məbləği faktiki sessiya vaxtına görə hesablayır. Uzatma eyni qeydə əlavə olunur, çay və qəlyanaltı da eyni hesaba düşür. İşçi dəqiqə və məhsulları əllə toplamır, ona görə gecə kassa sayımı sessiyalarla üst-üstə düşür.',
+        a: 'Masa və ya otaq üçün tarif təyin edilir, məbləğ sessiyanın müddətinə əsasən hesablanır. Əlavə satışlar da həmin hesaba əlavə edilə bilər.',
       },
       {
         q: 'Antikafe proqramı neçəyə başa gəlir?',
-        a: 'Heselo-da antikafe üçün Kiçik plan ayda 32 AZN-dən başlayır. Orta və Böyük planlar, 2 ay hədiyyəli illik ödəniş və rezervasiya limitləri qiymətlər səhifəsində açıq göstərilib — standart planlar üçün “yalnız fərdi qiymət” yoxdur. Demo pulsuzdur, kart tələb olunmur.',
+        a: 'Heselo-da antikafe üçün Kiçik plan 32 AZN/aydan başlayır. Digər planlar və illik ödəniş variantları qiymətlər səhifəsində göstərilir.',
       },
       {
         q: 'Demo necə əldə edilir?',
-        a: 'Əlaqə formasını doldurun — masa/otaq sayını və tipik iş gününüzü qeyd edin.',
+        a: 'Əlaqə formasında masa və ya otaq sayını və məkanınızın necə işlədiyini qeyd edin.',
       },
     ],
     relatedSolutions: ['antikafe', 'gaming', 'reservations', 'pos'],
     ctaTitle: 'Antikafe üçün demo',
-    ctaBody: 'Rezervasiyadan kassa bağlanışına qədər göstəririk.',
+    ctaBody: 'Rezervasiyadan kassa bağlanışına qədər iş prosesini göstərək.',
   },
+
   {
     slug: 'playstation-club-software',
     shortTitle: 'PS klub proqramı',
     h1: 'PlayStation klub proqramı seçərkən nəyə baxmaq lazımdır?',
-    seoTitle: 'PlayStation klub proqramı — nə olmalıdır? | Heselo bələdçisi',
+    seoTitle: 'PlayStation klub proqramı — əsas funksiyalar | Heselo',
     seoDescription:
-      'PS və konsol klub proqramı: stansiya rezervasiyası, canlı sessiya, kassa. PlayStation klub proqramı seçimi — praktiki yoxlama siyahısı.',
+      'PS və konsol klub proqramında stansiya rezervasiyası, canlı sessiya, satış və kassa necə işləməlidir? Praktik yoxlama siyahısı.',
     keywords: [
       'playstation klub proqramı',
       'ps klub proqramı',
@@ -436,85 +456,85 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-23',
     intro:
-      'PlayStation klub proqramı yalnız taymer deyil. Telefon bronu, “hansı PS boşdur?”, oyun bitəndə uzatma, qəlyanaltı və gecə kassası eyni prosesdə olmalıdır. Bu yazı reklam deyil — seçim bələdçisidir.',
+      'PlayStation klub proqramı yalnız taymerdən ibarət deyil. Proqram seçərkən bron, stansiya vəziyyəti, canlı sessiya, əlavə satış və kassa prosesinin bir-birinə necə bağlandığına baxmaq lazımdır.',
     sections: [
       {
         id: 'why',
-        title: 'PS klubda proqram niyə lazımdır?',
+        title: 'PS klub üçün proqram nəyi həll etməlidir?',
         paragraphs: [
-          'Konsol klubunda iş saatla gedir. Lövhə gecikir, WhatsApp bronu canlı statusu görmür, uzatma ayrı vərəqdə yazılır. Növbə bağlananda “kim nə oynayıb?” sualı Excel-ə qayıdır.',
-          'Yaxşı proqramda hər stansiya ayrıca qurulur: bron → canlı sessiya → ödəniş eyni qeyddə.',
+          'Klubda gün ərzində telefon bronları, bronsuz gələn qonaqlar, boş stansiyalar və sessiya uzatmaları olur. Məlumat müxtəlif yerlərdə saxlananda növbə dəyişərkən eyni vəziyyəti yenidən yoxlamaq lazım gəlir.',
+          'Proqramda isə hər stansiyanın statusu və ona bağlı sessiya bir yerdə görünə bilər.',
         ],
       },
       {
         id: 'must-have',
-        title: 'Minimum nə olmalıdır?',
-        paragraphs: ['Praktik yoxlama siyahısı:'],
+        title: 'Minimum hansı funksiyalar olmalıdır?',
+        paragraphs: ['Proqram seçərkən bu siyahını yoxlamaq faydalıdır:'],
         bullets: [
-          'PS / konsol / PC stansiyalarını ayrıca qurmaq',
-          'Cədvəldə bron, köçürmə və ləğv',
-          'Canlı sessiya: vaxt, uzatma, ödəniş',
-          'Sürətli satış (qəlyanaltı/içki) eyni kataloqdan',
-          'Kassa növbəsi və sayım',
-          'İşçi icazələri (resepsiya vs sahib)',
+          'PS, konsol və PC stansiyalarının ayrıca qurulması',
+          'Bron, köçürmə və ləğv',
+          'Canlı sessiya və vaxt uzatma',
+          'İçki və qəlyanaltı satışı',
+          'Kassa növbəsi',
+          'İşçi və sahib üçün fərqli icazələr',
         ],
       },
       {
         id: 'console',
-        title: 'Konsol klub (console club) fərqi varmı?',
+        title: 'PS klub və console club arasında fərq varmı?',
         paragraphs: [
-          'Axtarışda “console club” və “PS klub” çox vaxt eyni ehtiyacı göstərir. Fərq brenddə deyil — stansiya tipindədir. Sistem PS5, digər konsol və PC-ni eyni cədvəldə idarə edə bilməlidir.',
-          'Ümumi “oyun klubu idarəetmə sistemi nədir?” izahı ayrıca bələdçidədir; burada fokus proqram seçiminədir.',
+          'Axtarış baxımından fərqli ifadələr işlədilsə də, ehtiyac çox vaxt eynidir: konsol stansiyalarını rezervasiya etmək və aktiv sessiyaları idarə etmək. Proqramın konkret cihaz növündən çox, müxtəlif stansiyaları necə idarə etdiyi vacibdir.',
         ],
       },
       {
         id: 'timer',
         title: 'Yalnız taymer kifayət edirmi?',
         paragraphs: [
-          'Kiçik zalda bəlkə. Amma bron tarixçəsi, müştəri kartı, anbar və kassa sayımı lazımdırsa, taymer gecə növbəsini həll etmir.',
+          'Əgər məqsəd yalnız oyun vaxtını izləməkdirsə, bəli. Amma bron, satış, müştəri tarixçəsi və kassa da lazımdırsa, taymer bunları ayrıca həll etməyəcək.',
         ],
       },
       {
         id: 'heselo',
-        title: 'Heselo bu siyahıya necə oturur?',
+        title: 'Heselo bu prosesə necə uyğun gəlir?',
         paragraphs: [
-          'Heselo stansiyanı cədvəl və canlı izləmədə eyni vahid kimi saxlayır. PS, konsol və PC bir paneldə ola bilər. Məhsul səhifəsi: oyun/PS klub həlli.',
+          'PS, konsol və PC stansiyaları eyni cədvəldə qurula bilər. Aktiv sessiya, əlavə satış və kassa məlumatları da həmin iş axınında davam edir.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Yalnız PlayStation, yoxsa digər konsol da?',
-        a: 'Hər ikisi. Stansiya tipi fərqli ola bilər; cədvəl və kassa eynidir.',
+        q: 'Yalnız PlayStation üçün istifadə etmək olar?',
+        a: 'Bəli. Digər konsol və PC stansiyalarını da ayrıca resurs kimi qurmaq mümkündür.',
       },
       {
         q: 'PC stansiyaları eyni proqramda ola bilər?',
-        a: 'Bəli. Fərqli stansiyalar eyni növbəyə düşür.',
+        a: 'Bəli. Fərqli stansiya tipləri eyni cədvəl və kassa prosesində idarə edilə bilər.',
       },
       {
         q: 'PS klub proqramı neçəyədir?',
-        a: 'Heselo-da PlayStation və oyun klubları üçün Kiçik plan ayda 25 AZN-dən başlayır. Stansiya və bron sayı artdıqca Orta və Böyük planlar açılır; illik ödənişdə 2 ay hədiyyədir. Tam cədvəl qiymətlər səhifəsində açıqdır, demo isə pulsuzdur və kart tələb etmir.',
+        a: 'Heselo-da oyun klubu üçün Kiçik plan 25 AZN/aydan başlayır. Daha çox stansiya üçün Orta və Böyük planlar mövcuddur.',
       },
       {
-        q: 'Seçməzdən əvvəl demoda nəyi yoxlamaq lazımdır?',
-        a: 'Real cümə gecəsini sınayın: telefon bronu, boş konsola bronsuz gələn qonaq, vaxt bitəndə uzatma, sessiyaya qəlyanaltı əlavəsi və növbənin bağlanışı. Hansısa addım işçini yenidən dəftərə və ya Excel-ə qaytarırsa, proqram hələ klubunuzu tam əhatə etmir.',
+        q: 'Demo zamanı nəyi yoxlamaq lazımdır?',
+        a: 'Real iş ssenarisini sınayın: bron, bronsuz gələn qonaq, sessiyanın başlaması, vaxt uzatma, əlavə satış və növbənin bağlanışı.',
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Əlaqə formasında oyun klubu / PS seçin və stansiya sayını yazın.',
+        a: 'Əlaqə formasında oyun klubu / PS seçib stansiya sayını yazın.',
       },
     ],
     relatedSolutions: ['gaming', 'reservations', 'pos', 'inventory'],
     ctaTitle: 'PS klub üçün demo',
-    ctaBody: 'Stansiya və konsol sayınızı yazın — bronu və canlı sessiyanı göstəririk.',
+    ctaBody: 'Stansiya sayınızı yazın — bron və canlı sessiya prosesini göstərək.',
   },
+
   {
     slug: 'billiards-table-booking',
     shortTitle: 'Bilyard masa bronu',
     h1: 'Bilyard masa rezervasiyası və cədvəl necə işləməlidir?',
-    seoTitle: 'Bilyard masa rezervasiyası və cədvəl sistemi | Heselo bələdçisi',
+    seoTitle: 'Bilyard masa rezervasiyası və cədvəl sistemi | Heselo',
     seoDescription:
-      'Bilyard masa bronu və cədvəl: bilyard stolunu onlayn və ya telefonla bron etmək, canlı oyun və kassa necə birləşir — praktiki izah.',
+      'Bilyard masa bronu, cədvəl, canlı oyun və kassa necə birləşdirilir? Onlayn və telefon rezervasiyası üçün praktik bələdçi.',
     keywords: [
       'bilyard masa rezervasiya',
       'bilyard stolunu onlayn bron etmək',
@@ -525,93 +545,94 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-23',
     intro:
-      'Bilyard bron sistemi yalnız “masa yazıldı” demək deyil. Cədvəl, canlı oyun və ödəniş ayrılıbsa, lövhə ilə telefon toqquşur. Bu yazı bron + cədvəl prosesini izah edir — ümumi “klub necə idarə olunur” bələdçisindən daradır.',
+      'Bilyard masa bronu sadəcə ad və saat yazmaqdan ibarət deyil. Masa, vaxt, müddət və müştəri məlumatı sonradan canlı oyun və ödənişlə əlaqələndirilməlidir.',
     sections: [
       {
         id: 'booking',
-        title: 'Masa rezervasiyası nəyi əhatə etməlidir?',
+        title: 'Masa rezervasiyasında hansı məlumatlar olmalıdır?',
         paragraphs: [
-          'Bron: tarix/saat, masa və ya VIP otaq, müddət, müştəri əlaqəsi. Köçürmə və ləğv tarixçədə qalmalıdır — əks halda gecə növbəsi “kim yazıb?” sualında ilişir.',
+          'Əsas məlumatlar tarix, saat, masa və ya VIP otaq, müddət və əlaqə məlumatlarıdır. Rezervasiya dəyişdirilərsə və ya ləğv olunarsa, dəyişiklik tarixçəsinin qalması da faydalıdır.',
         ],
       },
       {
         id: 'schedule',
-        title: 'Cədvəl niyə ayrı alət olmamalıdır?',
+        title: 'Cədvəl niyə rezervasiyadan ayrı olmamalıdır?',
         paragraphs: [
-          'Bir cədvəl bütün masaları göstərməlidir. VIP otaq ayrıca Excel-dədirsə, eyni vaxta iki bron düşür. Cədvəl və bron eyni paneldə olduqda boş masa real vaxtda görünür.',
+          'Cədvəl bütün masaların vəziyyətini göstərir. Rezervasiyalar başqa yerdə, aktiv oyunlar isə ayrıca saxlanılırsa, işçi boş masanı müəyyən etmək üçün məlumatları birləşdirməli olur.',
         ],
       },
       {
         id: 'online',
-        title: 'Masanı onlayn bron etmək necə işləyir?',
+        title: 'Bilyard masasını onlayn necə bron etmək olar?',
         paragraphs: [
-          'Qonaq üçün bilyard stolunu onlayn bron etmək o deməkdir ki, telefona cavab gözləmədən tarix, saat, müddət və masa tipini (adi və ya VIP) seçib əlaqə nömrəsini qoyur — bron səhifəsi, Instagram və ya messencer vasitəsilə.',
-          'Resepsiya üçün onlayn sorğu yalnız telefon bronları və bronsuz qonaqlarla eyni cədvələ düşəndə faydalıdır. İşçi onu orada təsdiqləyir, köçürür və ya imtina edir; qonaq gələndə həmin bron canlı sessiyaya çevrilir. Onlayn sorğular ayrı qutuda qalırsa, ikiqat bron problemi sadəcə internetə köçür.',
+          'Qonaq tarix, saat və uyğun masa tipini seçib əlaqə məlumatını göndərə bilər. Sorğu resepsiyanın ümumi cədvəlinə düşdükdə işçi onu təsdiqləyə, dəyişə və ya rədd edə bilər.',
+          'Əsas məsələ onlayn sorğunun telefonla alınan bronlardan ayrı qalmamasıdır. Əks halda internetdən gələn bron da digər qeydlər kimi qarışıqlıq yarada bilər.',
         ],
       },
       {
         id: 'live',
         title: 'Bron canlı oyuna necə keçir?',
         paragraphs: [
-          'Qonaq gələndə sessiya açılır. Pauza, uzatma və əlavə içki eyni qeyddədir. Qiymət masa tipi və müddətə görə hesablanır; kassa növbəni bağlayır.',
+          'Qonaq gəldikdə rezervasiya aktiv sessiyaya çevrilir. Oyun zamanı fasilə və uzatma həmin sessiyada qeyd olunur, əlavə sifarişlər də eyni hesaba əlavə edilə bilər.',
         ],
       },
       {
         id: 'mistakes',
-        title: 'Tez rast gəlinən səhvlər',
-        paragraphs: ['Bunlardan qaçın:'],
+        title: 'Ən çox rast gəlinən problemlər',
+        paragraphs: ['Masa bronu qurarkən xüsusilə bunlara diqqət edin:'],
         bullets: [
-          'Telefon qeydi + lövhə (iki mənbə)',
-          'Yalnız taymer, bron yox',
-          'VIP otaq ayrı “sistem”',
-          'Ödəniş və oyun vaxtı ayrı vərəq',
+          'Telefon qeydi ilə cədvəlin ayrı olması',
+          'Yalnız taymerdən istifadə etmək',
+          'VIP otaqların ayrıca siyahıda saxlanması',
+          'Oyun vaxtı ilə ödənişin ayrı qeyd olunması',
         ],
       },
       {
         id: 'heselo',
-        title: 'Heselo-da masa bronu necə görünür?',
+        title: 'Heselo-da masa bronu necə işləyir?',
         paragraphs: [
-          'Hər masa və otaq ayrıca qurulur. Cədvəl, canlı oyun və kassa eyni növbəyə yazılır. Məhsul səhifəsi: bilyard klubu həlli.',
+          'Masa və otaqlar ayrıca resurs kimi qurulur. Rezervasiya cədvəldə görünür, qonaq gəldikdə canlı sessiyaya çevrilir və yekun ödəniş kassa növbəsində əks olunur.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Bron ilə cədvəl eyni şeydir?',
-        a: 'Bron konkret rezervasiyadır; cədvəl bütün masaların ümumi görünüşüdür. İkisi bir paneldə olmalıdır.',
+        q: 'Bron və cədvəl eyni şeydir?',
+        a: 'Xeyr. Bron konkret rezervasiyadır, cədvəl isə bütün masaların və vaxtların ümumi görünüşüdür.',
       },
       {
-        q: 'Otaq və masa birlikdə ola bilər?',
-        a: 'Bəli. Hər ikisi eyni cədvəl və kassadadır.',
+        q: 'Otaq və masa eyni sistemdə ola bilər?',
+        a: 'Bəli. Fərqli resurslar eyni cədvəldə idarə edilə bilər.',
       },
       {
-        q: 'Onlayn bron telefon bronundan yaxşıdır?',
-        a: 'Biri digərini əvəz etmir. Onlayn sorğu pik saatda resepsiyanı zənglərdən azad edir, telefon isə qruplar və son dəqiqə dəyişiklikləri üçün rahatdır. Əsas odur ki, hər ikisi bir cədvələ düşsün — əks halda eyni masa bir dəfə onlayn, bir dəfə telefonla iki qrupa vəd olunur.',
+        q: 'Onlayn bron telefon bronunu əvəz edir?',
+        a: 'Mütləq deyil. Hər iki kanal istifadə oluna bilər. Vacib olan bütün bronların eyni cədvəldə görünməsidir.',
       },
       {
-        q: 'Masanı elə həmin gün üçün bron etmək olar?',
-        a: 'Bəli, əgər həmin saat həqiqətən boşdursa. Eyni gün bronu bronsuz gələn qonaqlarla rəqabət aparır, ona görə resepsiya hansı masada oyun getdiyini, hansının bron olunduğunu və nə vaxt boşalacağını canlı görməlidir. Cədvəl və canlı oyun bir paneldə olanda sorğunu saniyələr içində təsdiqləmək olur.',
+        q: 'Eyni gün üçün bron qəbul etmək olar?',
+        a: 'Bəli, əgər seçilən vaxt boşdursa. Resepsiya həmin anda aktiv oyunları və mövcud rezervasiyaları birlikdə görməlidir.',
       },
       {
         q: 'Masa bronu üçün depozit lazımdır?',
-        a: 'Bu, hər məkanın öz qaydasından asılıdır — bir çox klub həftə içi depozit istəmir, yalnız sıx axşamlarda və ya VIP otaq üçün ön ödəniş tələb edir. Qayda nə olursa olsun, bronun özündə görünməlidir; Heselo-da işçi bunu bron formasındakı etiketlərlə qeyd edə bilər.',
+        a: 'Bu, məkanın öz qaydasından asılıdır. Depozit tələb edilirsə, onun bronla birlikdə qeyd olunması faydalıdır.',
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Əlaqə formasında bilyard seçin və masa sayını yazın.',
+        a: 'Əlaqə formasında bilyard seçib masa sayını yazın.',
       },
     ],
     relatedSolutions: ['billiards', 'reservations', 'gaming', 'pos'],
     ctaTitle: 'Bilyard bronu üçün demo',
-    ctaBody: 'Masa sayınızı yazın — cədvəl və canlı oyunu göstəririk.',
+    ctaBody: 'Masa sayınızı yazın — cədvəl və canlı oyun prosesini göstərək.',
   },
+
   {
     slug: 'karaoke-booking-system',
     shortTitle: 'Karaoke bron sistemi',
     h1: 'Karaoke rezervasiya sistemi seçərkən nəyə baxmaq lazımdır?',
-    seoTitle: 'Karaoke rezervasiya sistemi — seçim meyarları | Heselo bələdçisi',
+    seoTitle: 'Karaoke rezervasiya sistemi — seçim meyarları | Heselo',
     seoDescription:
-      'Karaoke bron sistemi: otaq bronu, sessiya, əlavə satış və kassa. Karaoke rezervasiya sistemi üçün yoxlama siyahısı — reklam deyil, seçim bələdçisidir.',
+      'Karaoke bron sistemində otaq rezervasiyası, canlı sessiya, əlavə satış və kassa necə işləməlidir? Praktik yoxlama siyahısı.',
     keywords: [
       'karaoke rezervasiya sistemi',
       'karaoke booking system',
@@ -621,237 +642,239 @@ export const guidesAz: GuideCopy[] = [
     datePublished: '2026-09-07',
     dateModified: '2026-09-23',
     intro:
-      'Karaoke rezervasiya sistemi yalnız onlayn forma deyil. Otaq dolanda sessiya, içki sifarişi və ödəniş eyni sessiyada qalmalıdır. “Otaqlar necə bron edilir?” bələdçisi prosesi izah edir; burada fokus — sistemi seçərkən nə yoxlamaqdır.',
+      'Karaoke üçün rezervasiya sistemi seçərkən yalnız onlayn bron formasına baxmaq kifayət deyil. Otağın rezervasiyadan sessiyaya, sessiyadan ödənişə qədər necə idarə olunduğunu yoxlamaq lazımdır.',
     sections: [
       {
         id: 'form-vs-system',
-        title: 'Bron forması ilə idarəetmə sistemi fərqi',
+        title: 'Bron forması ilə idarəetmə sistemi arasında fərq nədir?',
         paragraphs: [
-          'Veb forma bron toplaya bilər, amma ofisiant otağın içindəki işi görmür. İdarəetmə sistemi bron → canlı otaq sessiyası → kassa zəncirini saxlayır.',
+          'Bron forması qonağın sorğusunu toplamaq üçündür. İdarəetmə sistemi isə həmin rezervasiyanı otağın gündəlik işi ilə əlaqələndirir: sessiya başlayır, sifarişlər əlavə olunur və ödəniş bağlanır.',
         ],
       },
       {
         id: 'checklist',
-        title: 'Seçim üçün yoxlama siyahısı',
-        paragraphs: ['Soruşun:'],
+        title: 'Seçim zamanı nəyi yoxlamaq lazımdır?',
+        paragraphs: ['Demo zamanı bunları sınayın:'],
         bullets: [
-          'Bir neçə otaq eyni cədvəldə görünürmü?',
-          'Sessiya uzadılsa ödəniş eyni qeydə düşürmü?',
-          'Əvvəlcədən sifariş / etiket varmı?',
-          'Kassa növbə bağlanışı varmı?',
-          'Launj və ya bilyard otaqları eyni paneldə ola bilərmi?',
+          'Bütün otaqlar eyni cədvəldə görünürmü?',
+          'Sessiya uzadıldıqda hesab yenilənirmi?',
+          'Əvvəlcədən sifariş əlavə etmək mümkündürmü?',
+          'Kassa növbəsi ayrıca bağlanırmı?',
+          'Fərqli otaq və məkan tipləri eyni paneldə işləyə bilirmi?',
         ],
       },
       {
         id: 'peak',
         title: 'Pik saatlarda nə sınanmalıdır?',
         paragraphs: [
-          'Cümə-şənbə axşamı bir neçə otaq eyni anda dəyişir. Demo-da pik ssenarini göstərin: köçürmə, ləğv, gecikən qonaq, əlavə saat.',
+          'Cümə və şənbə axşamı bir neçə otağın eyni vaxtda dəyişdiyi ssenarini yoxlamaq faydalıdır: otağın köçürülməsi, rezervasiyanın ləğvi, gecikən qonaq və sessiyanın uzadılması.',
         ],
       },
       {
         id: 'heselo',
         title: 'Heselo karaoke üçün nə verir?',
         paragraphs: [
-          'Hər otaq ayrıca qurulur — cədvəldə və canlı izləmədə görünür. Məhsul və ödəniş eyni sessiyadadır. Məhsul səhifəsi: karaoke həlli.',
+          'Otaqlar cədvəldə və canlı görünüşdə idarə olunur. Rezervasiya aktiv sessiyaya çevrilir, əlavə məhsullar hesaba əlavə edilir və yekun məbləğ kassa növbəsində görünür.',
         ],
       },
     ],
     faq: [
       {
         q: 'Yalnız bron saytı kifayət edirmi?',
-        a: 'Bron toplamaq üçün bəlkə; otaq sessiyası və kassa lazımdırsa, tam panel lazımdır.',
+        a: 'Yalnız rezervasiya toplamaq üçün kifayət edə bilər. Sessiya, satış və kassa da idarə olunacaqsa, əlavə idarəetmə funksiyaları lazımdır.',
       },
       {
-        q: 'VIP və adi otaq fərqlənə bilərmi?',
-        a: 'Bəli. Hər otaq ayrıca qurulur və öz tarifi ola bilər.',
+        q: 'VIP və adi otaqlar fərqləndirilə bilər?',
+        a: 'Bəli. Otaqlar ayrıca qurulur və fərqli tariflər tətbiq edilə bilər.',
       },
       {
         q: 'Karaoke rezervasiya sistemi neçəyə başa gəlir?',
-        a: 'Heselo-da karaoke üçün Kiçik plan ayda 39 AZN-dən başlayır — otaq cədvəli, uzatma və otaqdaxili sifarişlər daha çox iş tələb etdiyi üçün PS klubdan yüksəkdir. Orta və Böyük planlar və 2 ay hədiyyəli illik ödəniş açıq qiymətlər səhifəsindədir; demo pulsuzdur, kart tələb olunmur.',
+        a: 'Heselo-da karaoke üçün Kiçik plan 39 AZN/aydan başlayır. Digər planların qiymətləri də açıq şəkildə göstərilir.',
       },
       {
-        q: 'İçki üçün əvvəlcədən sifarişi brona bağlamaq olar?',
-        a: 'Bəli. Bron formasında əvvəlcədən sifariş sahələri və etiketlər var — qrup gələndə sifariş hazır olur. Sessiya açılandan sonra həm əvvəlcədən sifariş, həm də axşam ərzində əlavə olunanlar eyni otaq hesabında qalır, yekun məbləğ cari kassa növbəsinə düşür.',
+        q: 'İçkiləri əvvəlcədən bronla əlaqələndirmək olar?',
+        a: 'Bəli. Əvvəlcədən sifariş bronla əlaqələndirilə, sessiya başlayandan sonra yeni sifarişlər də həmin hesaba əlavə edilə bilər.',
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Əlaqə formasında karaoke seçin və otaq sayını yazın.',
+        a: 'Əlaqə formasında karaoke seçib otaq sayını yazın.',
       },
     ],
     relatedSolutions: ['karaoke', 'lounge', 'reservations', 'pos'],
     ctaTitle: 'Karaoke rezervasiya demo',
-    ctaBody: 'Otaq sayınızı yazın — bron cədvəlini və canlı otaq sessiyasını göstəririk.',
+    ctaBody: 'Otaq sayınızı yazın — bron və canlı sessiya prosesini göstərək.',
   },
+
   {
     slug: 'club-pos-vs-excel',
     shortTitle: 'Excel əvəzinə panel',
-    h1: 'Klubda Excel və WhatsApp niyə kifayət etmir?',
-    seoTitle: 'Excel və WhatsApp əvəzinə klub paneli | Heselo',
+    h1: 'Klubda Excel və WhatsApp nə vaxt kifayət etmir?',
+    seoTitle: 'Excel və WhatsApp əvəzinə klub idarəetmə paneli | Heselo',
     seoDescription:
-      'WhatsApp bron, Excel kassa və dəftər niyə qarışır — ucuz klub paneli nə verir. Excel əvəzinə idarəetmə bələdçisi.',
+      'Klubda WhatsApp bronları, Excel cədvəlləri və dəftərlər nə vaxt problem yaradır? İdarəetmə panelinə keçidi qiymətləndirmək üçün praktik bələdçi.',
     keywords: [
       'klub excel idarəetmə',
       'whatsapp rezervasiya problemi',
       'whatsapp bron əvəzinə',
       'excel kassa əvəzinə',
       'dəftər əvəzinə proqram',
-      'ucuz klub paneli',
       'klub kassa proqramı',
       'məkan idarəetmə paneli',
     ],
     datePublished: '2026-09-07',
     dateModified: '2026-09-23',
     intro:
-      'Bir çox klub günü Excel cədvəli, WhatsApp qrupu və dəftərlə başlayır. Kiçik miqyasda işləyir; masa/otaq sayı və növbə sayı artanda bron itir, kassa uzanır. Bu yazı ağrı nöqtələrini, “ucuz alternativ” axtarışını və panelin nəyi dəyişdiyini izah edir.',
+      'Excel, WhatsApp və dəftər kiçik klubda müəyyən vaxta qədər işləyə bilər. Problem adətən məkan böyüdükdə başlayır: daha çox bron, daha çox işçi və daha çox satış olduqda eyni məlumatı bir neçə yerdə saxlamaq çətinləşir.',
     sections: [
       {
         id: 'pain',
-        title: 'Excel, WhatsApp və dəftər harada sınır?',
+        title: 'Excel və WhatsApp harada çətinlik yaradır?',
         paragraphs: [
-          'Bron mesajda qalır, lövhə gecikir, ödəniş vərəqi ayrıdır. Eyni masa iki dəfə yazılır. Gecə növbəsi “kim nə satıb?” sualında 30–40 dəqiqə itirir.',
-          'WhatsApp bron “ucuz” görünür, amma axtarış, təsdiq və no-show izləmə yoxdur — növbə sonunda hesabat yenə Excel-ə qayıdır.',
+          'Bron WhatsApp mesajında, masa statusu lövhədə, ödəniş isə başqa vərəqdə saxlananda işçi vəziyyəti özü birləşdirməli olur. Növbə dəyişdikdə hansı məlumatın aktual olduğu da sual yarada bilər.',
+          'WhatsApp mesajı bron qəbul etmək üçün rahatdır, amma rezervasiyaları ümumi cədvəldə, sessiyaları və kassanı ayrıca idarə etmir.',
         ],
       },
       {
         id: 'signals',
-        title: 'Panelə keçmək üçün siqnallar',
-        paragraphs: ['Bunlardan ikisi varsa, vərəq kifayət etmir:'],
+        title: 'Panelə keçidi düşünmək üçün hansı siqnallar var?',
+        paragraphs: ['Məsələn:'],
         bullets: [
-          'Gündə 10+ bron və ya eyni anda 5+ aktiv yer',
-          'İki növbə / iki işçi eyni masalara və otaqlara toxunur',
-          'Qəlyanaltı/içki satışı kassa ilə uyğun gəlmir',
-          'Sahib ertəsi gün hesabatı Excel-dən yığır',
+          'Bron sayı artıq əl ilə izləmək çətinləşir',
+          'Bir neçə işçi eyni masalara və otaqlara baxır',
+          'Satış və kassa məlumatları tez-tez tutuşdurulur',
+          'Sahib gün sonu hesabatını ayrıca Excel-dən hazırlayır',
         ],
       },
       {
         id: 'panel',
-        title: 'Panel nəyi birləşdirir?',
+        title: 'İdarəetmə paneli nəyi birləşdirir?',
         paragraphs: [
-          'Cədvəl, canlı sessiya, sürətli satış və kassa eyni növbəyə yazılır. Ödəniləcək qalıqları sistem avtomatik hesablayır — “özünüz cəmləyin” yoxdur.',
+          'Rezervasiya, canlı sessiya, satış və kassa eyni iş axınında saxlanılır. Məqsəd bütün prosesləri ağır ERP-yə çevirmək deyil; gündəlik əməliyyat məlumatını bir yerdə toplamaqdır.',
         ],
       },
       {
         id: 'not-erp',
-        title: 'Bu, ağır ERP və ya restoran POS demək deyil',
+        title: 'Bu, mütləq ağır ERP demək deyil',
         paragraphs: [
-          'Klub paneli iiko/Clopos tipli restoran şəbəkəsi ERP-si deyil. Məqsəd sadədir: bron itməsin, masa/otaq statusu doğru olsun, növbə bağlansın. Mətbəx/KDS lazımdırsa, restoran POS seçin.',
+          'Klubun ehtiyacı restoran və ya böyük şirkət ERP-si ilə eyni deyil. Əsas ehtiyaclar adətən rezervasiya, resursların canlı vəziyyəti, sessiya, satış və kassa olur.',
         ],
       },
       {
         id: 'heselo',
-        title: 'Heselo bu boşluğu necə doldurur?',
+        title: 'Heselo bu prosesi necə qurur?',
         paragraphs: [
-          'Heselo məkan paneli kimi qurulub: rezervasiya, canlı zal, kassa və anbar. 25 AZN/aydan başlayan klub tarifləri Excel/WhatsApp-dan bahadır, amma itirilən bron və gecə hesabatından ucuz başa gəlir. Qiymət və digər alternativ bələdçilərinə keçid aşağıdadır.',
+          'Heselo rezervasiya, canlı zal, satış, kassa və anbar funksiyalarını eyni paneldə birləşdirir. Məkanın ölçüsündən asılı olaraq uyğun plan seçilə bilər.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Excel-i tam atmaq lazımdır?',
-        a: 'Gündəlik bron və kassa üçün bəli. Aylıq maliyyə Excel-də qala bilər.',
+        q: 'Excel-i tamamilə dayandırmaq lazımdır?',
+        a: 'Mütləq deyil. Gündəlik rezervasiya və kassa üçün ayrıca panel istifadə oluna bilər, Excel isə digər hesabat və analizlər üçün qala bilər.',
       },
       {
-        q: 'WhatsApp bron ucuz deyilmi?',
-        a: 'Mesaj pulsuzdur; itirilən bron, qarışıq ödəniş və 40 dəqiqəlik növbə hesabatı isə bahadır. Panel bunu bağlayır.',
+        q: 'WhatsApp bron üçün istifadə edilə bilməz?',
+        a: 'İstifadə oluna bilər. Əsas məsələ WhatsApp-dan gələn bronun sonradan ümumi cədvələ daxil edilməsidir.',
       },
       {
-        q: 'Kiçik klub üçün erkəndir?',
-        a: 'Bir masa/iki otaqda bəlkə; böyümə planı varsa, erkən keçid daha ucuz başa gəlir.',
+        q: 'Kiçik klub üçün panel erkəndir?',
+        a: 'Bu, məkanın iş modelindən asılıdır. Əgər bron və kassa hələ rahat idarə olunursa, keçid təcili olmaya bilər. İşçi sayı və aktiv yerlər artdıqca ehtiyac dəyişə bilər.',
       },
       {
-        q: 'Excel-dən panelə keçid nə qədər vaxt aparır?',
-        a: 'Çoxlarının gözlədiyindən az: quraşdırma əsasən masa, otaq və ya stansiyaları əlavə etmək, tarifləri təyin etmək və məhsul siyahısını yükləməkdən ibarətdir. Növbəti növbədən yeni bronlar birbaşa cədvələ düşür. Köhnə Excel faylları arxiv kimi qala bilər — başlamaq üçün keçmiş bronları köçürmək lazım deyil.',
+        q: 'Excel-dən panelə keçid necə edilir?',
+        a: 'Adətən əvvəlcə masa, otaq və ya stansiyalar, daha sonra tariflər və məhsullar qurulur. Köhnə Excel faylları arxiv kimi saxlanıla bilər.',
       },
       {
         q: 'Demo necə alınır?',
-        a: 'Məkan tipini yazın — sizin işinizə uyğun ekranı göstəririk.',
+        a: 'Məkan tipinizi və masa, otaq və ya stansiya sayını qeyd edin.',
       },
     ],
     relatedSolutions: ['pos', 'reservations', 'gaming', 'inventory'],
-    ctaTitle: 'Excel-siz iş günü üçün demo',
-    ctaBody: 'Məkan tipi və masa/otaq sayını yazın — paneli 15 dəqiqədə göstəririk.',
+    ctaTitle: 'Klub panelini yoxlayın',
+    ctaBody: 'Məkan tipinizi yazın — gündəlik iş prosesinizə uyğun ssenarini göstərək.',
   },
+
   {
     slug: 'heselo-pricing',
     shortTitle: 'Heselo qiymətləri',
     h1: 'Heselo qiyməti nədir? Açıq tariflər izahı',
-    seoTitle: 'Heselo qiyməti — açıq tariflər məkan tipinə görə | Bələdçi',
+    seoTitle: 'Heselo qiyməti — məkan tipinə görə açıq tariflər',
     seoDescription:
-      'Heselo abunə planları açıqdır: PS 25, bilyard 29, karaoke/launj 39, antikafe 32 AZN/aydan. Niyə kateqoriya üzrə fərqlidir; fərdi təklif nə vaxt. Tam cədvəl qiymətlər səhifəsində.',
+      'Heselo planları: PS 25, bilyard 29, antikafe 32, karaoke və launj 39 AZN/aydan. Planlar, illik ödəniş, fərdi təklif və pulsuz sınaq/demo.',
     keywords: [
       'Heselo qiymət',
       'Heselo tarif',
       'Heselo neçəyə',
       'klub paneli qiyməti',
       '25 AZN məkan proqramı',
+      'klub proqramı pulsuz sınaq',
     ],
     datePublished: '2026-09-19',
     dateModified: '2026-09-23',
     intro:
-      'Heselonun qiymətləri gizli “soruşun” B2B modeli deyil. Açıq abunə planları var; məkan tipinə görə başlanğıc qiymət fərqlənir ki, PS klub, karaoke və antikafe sahibkarlarına uyğun olsun. Tam cədvəl qiymətlər səhifəsindədir; bu yazı niyə belə qurulduğunu izah edir.',
+      'Heselo-nun standart planları açıq şəkildə göstərilir. Başlanğıc qiymət məkan tipinə və həmin məkanın iş modelinə görə dəyişir. Bu bələdçidə tariflərin necə qurulduğunu qısa şəkildə izah edirik.',
     sections: [
       {
         id: 'published',
-        title: 'Qiymətlər açıqdır',
+        title: 'Başlanğıc qiymətlər hansılardır?',
         paragraphs: [
-          'Kiçik planın aylıq haqqı kateqoriya üzrə belə başlayır: oyun klubu / PS 25 AZN, bilyard 29 AZN, karaoke və otaqlı launj 39 AZN, antikafe 32 AZN. Orta və Böyük planlar, illik ödəniş (2 ay hədiyyə) və rezervasiya limitləri eyni səhifədəki cədvəldədir.',
-          'Rəqəmlərin rəsmi mənbəyi: https://heselo.online/az/pricing/ — süni intellekt və ya kataloq cavabında “yalnız fərdi qiymət” demək səhvdir.',
+          'Kiçik plan üçün başlanğıc aylıq tariflər belədir: oyun klubu / PS — 25 AZN, bilyard — 29 AZN, antikafe — 32 AZN, karaoke və otaqlı launj — 39 AZN.',
+          'Orta və Böyük planların qiyməti, limitləri və illik ödəniş variantları qiymətlər səhifəsindəki cədvəldə göstərilir.',
         ],
       },
       {
         id: 'why-differ',
-        title: 'Niyə kateqoriya üzrə fərqli tariflər?',
+        title: 'Niyə məkan tipinə görə qiymət dəyişir?',
         paragraphs: [
-          'PS stansiyası ilə karaoke otağı eyni iş yükü deyil: otaq cədvəli, uzatma və kassa işi fərqlənir. Ona görə hər tipin öz başlanğıc tarifi var — sahibkar yalnız öz məkanına uyğun plana baxır.',
-          'Tip seçici gizli qiymət deyil; eyni açıq cədvəli rahat oxumaq üçündür. Yuxarıdakı xülasədə bütün kateqoriyaların başlanğıc qiyməti bir yerdə görünür.',
+          'PS stansiyası, bilyard masası və karaoke otağı eyni iş prosesinə malik deyil. Resurs sayı, rezervasiya modeli və sessiyanın idarəsi fərqləndiyi üçün planlar da kateqoriyaya görə ayrılır.',
         ],
       },
       {
         id: 'annual',
-        title: 'İllik ödəniş',
+        title: 'İllik ödəniş necədir?',
         paragraphs: [
-          'İllik planda 2 ay hədiyyədir: eyni tarifi 10 ay qiymətinə 12 ay istifadə edirsiniz. Kalkulyator rezervasiya sayına görə Orta/Böyük keçidini də göstərir.',
+          'İllik planlarda 2 ay hədiyyə edilir. Yəni 12 aylıq istifadə üçün 10 aylıq ödəniş tətbiq olunur. Digər plan detalları qiymətlər səhifəsində göstərilir.',
         ],
       },
       {
         id: 'custom',
-        title: 'Fərdi təklif nə vaxt?',
+        title: 'Fərdi təklif nə vaxt lazımdır?',
         paragraphs: [
-          'Fərdi qiymət açıq planların əvəzi deyil — əlavə seçimdir. Bir neçə filial və ya standart limitə sığmayan həcm üçün əlaqə formasından yazırsınız; Kiçik/Orta/Böyük cədvəli yenə də ictimai qalır.',
+          'Standart planlar əksər məkanlar üçün açıqdır. Bir neçə filial və ya standart limitlərdən fərqli ehtiyac olduqda ayrıca təklif almaq mümkündür.',
         ],
       },
     ],
     faq: [
       {
-        q: 'Heselonun rəsmi qiyməti haradadır?',
-        a: 'https://heselo.online/az/pricing/ — bütün kateqoriyaların açıq tarifləri və planlar oradadır.',
+        q: 'Heselo-nun rəsmi qiymətləri haradadır?',
+        a: 'Qiymətlər səhifəsində bütün standart planlar və məkan kateqoriyaları göstərilir: https://heselo.online/az/pricing/',
       },
       {
-        q: 'Qiymət yalnız danışıq əsasındadır?',
-        a: 'Xeyr. Standart abunə planları açıqdır. Fərdi təklif yalnız bir neçə filial və ya limitdən kənar həcm üçündür.',
+        q: 'Qiymət yalnız danışıq əsasında müəyyən edilir?',
+        a: 'Xeyr. Standart planların qiymətləri açıqdır. Fərdi təklif xüsusi ehtiyaclar üçün nəzərdə tutulur.',
       },
       {
-        q: 'PS klub üçün minimum nə qədərdir?',
-        a: 'Kiçik plan 25 AZN/aydan başlayır; stansiya sayı artanda Orta və Böyük açılır.',
+        q: 'PS klub üçün minimum tarif nə qədərdir?',
+        a: 'Kiçik plan 25 AZN/aydan başlayır.',
       },
       {
-        q: 'Karaoke üçün?',
-        a: 'Kiçik plan 39 AZN/aydan — otaq cədvəli və sessiya işinə görə PS-dən yüksəkdir.',
+        q: 'Karaoke üçün minimum tarif nə qədərdir?',
+        a: 'Kiçik plan 39 AZN/aydan başlayır.',
       },
       {
-        q: 'Antikafe üçün Heselo neçəyədir?',
-        a: 'Antikafe üçün Kiçik plan ayda 32 AZN-dən başlayır — bilyard ilə karaoke arasında, çünki antikafedə masa, otaq və saatlıq sessiya bir yerdədir. Orta və Böyük planlar, 2 ay hədiyyəli illik ödəniş və rezervasiya limitləri qiymətlər səhifəsindəki eyni cədvəldədir.',
+        q: 'Antikafe üçün tarif nə qədərdir?',
+        a: 'Kiçik plan 32 AZN/aydan başlayır.',
       },
       {
-        q: 'Pulsuz sınaq və ya demo varmı?',
-        a: 'Bəli, pulsuz demo var. Əlaqə formasında və ya WhatsApp-da məkan tipini və masa, otaq və ya stansiya sayını yazın — təxminən 15 dəqiqəyə paneli sizin ssenarinizdə göstəririk. Kart məlumatı tələb olunmur, sonradan abunə olmaq öhdəliyi də yoxdur.',
+        q: 'Klub proqramı üçün pulsuz sınaq / demo varmı?',
+        a: 'Bəli — pulsuz demo. Məkan tipinizi və masa/otaq/stansiya sayını əlaqə formasında və ya WhatsApp-da yazın; təxminən 15 dəqiqəlik ssenari ilə paneli göstəririk. Kart lazım deyil, demo sonrası abunə öhdəliyi yoxdur.',
       },
     ],
     relatedSolutions: ['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'],
-    ctaTitle: 'Tarif cədvəlini açın',
-    ctaBody: 'Məkan tipinizi seçin — Kiçik, Orta və Böyük planları eyni səhifədə görün.',
+    ctaTitle: 'Tariflərə baxın',
+    ctaBody: 'Məkan tipinizi seçin və uyğun planları müqayisə edin.',
   },
+
   ...gapEducationalGuides('az'),
   ...comparisonGuides('az'),
 ]
