@@ -9,6 +9,7 @@ import Footer from '@/components/Footer.astro'
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import Analytics from '@/components/Analytics.astro'
 import VercelAnalytics from '@vercel/analytics/astro'
+import SpeedInsights from '@vercel/speed-insights/astro'
 import WhatsAppFab from '@/components/WhatsAppFab.astro'
 import JourneyContext from '@/components/JourneyContext.astro'
 import { loadVenueOffers } from '@/lib/venueOffers'
@@ -122,6 +123,7 @@ const breadcrumbs =
 
     <Analytics />
     <VercelAnalytics />
+    <SpeedInsights />
 
     <script is:inline type="application/ld+json" set:html={seo.jsonLd} />
   </head>
