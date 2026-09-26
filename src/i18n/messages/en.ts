@@ -685,7 +685,7 @@ export const en: Messages = {
             forWhom: 'Small anti-café: a few tables or zones',
             desc: 'Hourly pay ties to the booking; tea and snacks sell on the same session.',
             features: [
-              'Up to {n} hourly zones',
+              'Up to {n} zones',
               'Table/zone booking',
               'Hourly live session',
               'Tea and snack sales',

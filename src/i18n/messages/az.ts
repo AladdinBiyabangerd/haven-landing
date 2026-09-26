@@ -685,7 +685,7 @@ export const az: Messages = {
             forWhom: 'Kiçik antikafe: bir neçə masa/zona',
             desc: 'Saatla ödəniş rezervə bağlanır; çay və qəlyanaltı eyni sessiyada satılır.',
             features: [
-              '{n} saatla zonaya qədər',
+              '{n} zonaya qədər',
               'Masa/zona rezervi',
               'Saatla canlı sessiya',
               'Çay və qəlyanaltı satışı',
