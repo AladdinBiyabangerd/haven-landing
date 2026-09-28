@@ -2,10 +2,11 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import ContactForm from '@/components/ContactForm.astro'
 import DemoPromise from '@/components/DemoPromise.astro'
+import Faq from '@/components/Faq.astro'
 import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
 import { getMessages } from '@/i18n'
-import { localePath } from '@/lib/site'
+import { SITE, localePath } from '@/lib/site'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -14,6 +15,15 @@ export function getStaticPaths() {
 const locale = resolveLocale(Astro.params.locale)
 const messages = getMessages(locale)
 const page = messages.contact
+
+const faqMessages = {
+  ...messages,
+  faq: {
+    eyebrow: messages.faq.eyebrow,
+    title: messages.faq.title,
+    items: page.faq,
+  },
+}
 ---
 
 <BaseLayout locale={locale} messages={messages} page="contact">
@@ -38,6 +48,15 @@ const page = messages.contact
           {page.intro}
         </p>
       </div>
+
+      <section class="reach" aria-labelledby="contact-reach">
+        <h2 id="contact-reach" class="type-card-title">{page.reachTitle}</h2>
+        {page.reachBody.map((p) => <p class="reach__body">{p}</p>)}
+        <p class="reach__email">
+          <a class="link-inline" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+        </p>
+      </section>
+
       <DemoPromise messages={messages} />
       <ContactForm locale={locale} messages={messages} />
       <NextThought
@@ -60,10 +79,36 @@ const page = messages.contact
       />
     </div>
   </section>
+
+  <Faq locale={locale} messages={faqMessages} />
 </BaseLayout>
 
 <style>
   .contact {
     max-width: 720px;
+  }
+  .lead {
+    margin: 0.75rem 0 0;
+    color: var(--ink-muted);
+    font-size: var(--text-base);
+    line-height: 1.55;
+  }
+  .reach {
+    margin: 2rem 0 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .reach .type-card-title {
+    margin: 0;
+  }
+  .reach__body {
+    margin: 0.85rem 0 0;
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+  .reach__email {
+    margin: 0.85rem 0 0;
+    font-size: var(--text-sm);
   }
 </style>

@@ -64,7 +64,6 @@ export type Messages = {
     subtitle: string
     ctaPrimary: string
     ctaSecondary: string
-    visualAlt: string
   }
   trust: {
     items: string[]
@@ -199,6 +198,11 @@ export type Messages = {
     eyebrow: string
     title: string
     intro: string
+    whatTitle: string
+    whatBody: string[]
+    whoTitle: string
+    whoBody: string[]
+    founderSectionTitle: string
     /** Schema.org jobTitle — sole founder */
     founderJobTitle: string
     /** Short Person.description for JSON-LD */
@@ -329,6 +333,8 @@ export type Messages = {
     eyebrow: string
     title: string
     intro: string
+    reachTitle: string
+    reachBody: string[]
     customTitle: string
     customIntro: string
     customNotice: string
@@ -362,6 +368,7 @@ export type Messages = {
     heardFrom: string
     heardFromPlaceholder: string
     heardFromOptions: Array<{ value: string; label: string }>
+    faq: FaqItem[]
   }
   privacy: {
     title: string

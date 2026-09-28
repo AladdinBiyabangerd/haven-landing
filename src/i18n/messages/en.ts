@@ -44,7 +44,6 @@ export const en: Messages = {
       'Heselo brings the room and PlayStation schedule, live session, and cash together on one screen.',
     ctaPrimary: 'Message on WhatsApp',
     ctaSecondary: 'Write via the form',
-    visualAlt: 'Heselo board showing table and room status, sessions, and payment',
   },
   trust: {
     items: [
@@ -208,7 +207,7 @@ export const en: Messages = {
     title: 'Business management software',
     titleAccent: 'for your venue’s daily work.',
     paragraphs: [
-      'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges: booking, live floor, cash, and inventory — for venues that sell table, room, or station time (from ~25 AZN/month).',
+      'Heselo is venue management software for Azerbaijan: gaming clubs, karaoke, billiards, anti-cafés, and room lounges use it for booking, live floor, cash, and inventory — for places that sell table, room, or station time (from ~25 AZN/month).',
       'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is a simpler management alternative for room- and time-based venues.',
       'Heselo was created solely by Aladdin Biyabangerd in Baku — more on the About page.',
     ],
@@ -351,7 +350,18 @@ export const en: Messages = {
     eyebrow: 'About',
     title: 'Who created Heselo?',
     intro:
-      'Heselo is a B2B SaaS panel for local clubs and room venues, built in Baku. It has a single creator.',
+      'Heselo is a B2B venue management panel built in Baku, Azerbaijan. Gaming clubs, karaoke rooms, billiards halls, anti-cafés, and room lounges use it for booking, live sessions, cash, and inventory in one place — with a single founder behind the product.',
+    whatTitle: 'What is Heselo?',
+    whatBody: [
+      'Heselo is web software for venues that sell table, room, or PlayStation station time. Operators run reservations, the live floor (who is playing now), cash shifts, and inventory from one panel — not a kitchen POS or restaurant KDS.',
+      'Published plans start from about 25 AZN per month depending on venue type. The panel ships in Azerbaijani, English, and Russian so staff can work in the language they already use on shift.',
+    ],
+    whoTitle: 'Who is Heselo for?',
+    whoBody: [
+      'It is built for time-based venues: PlayStation and PC gaming clubs, karaoke with private rooms, billiards clubs, anti-cafés with zones, and lounges that rent rooms by the hour.',
+      'If most of your revenue comes from room or station time rather than kitchen tickets, Heselo fits daily floor work better than a restaurant POS stack.',
+    ],
+    founderSectionTitle: 'Who built Heselo?',
     founderJobTitle: 'Founder & creator',
     founderSchemaDescription:
       'Aladdin Biyabangerd is the sole founder and creator of the Heselo venue management platform. Based in Baku, Azerbaijan.',
@@ -375,6 +385,12 @@ export const en: Messages = {
       {
         q: 'Is Heselo the same as Hasleo Software?',
         a: 'No. Hasleo makes Windows utilities. Heselo is a separate B2B panel for clubs and room venues in Azerbaijan.',
+      },
+      {
+        q: 'How do I see Heselo in a demo?',
+        a: 'Write via the contact form or WhatsApp. We run a 15-minute live demo and usually reply within two hours during working hours. Published pricing is on the pricing page.',
+        href: '/contact',
+        linkLabel: 'Open the contact form',
       },
     ],
   },
@@ -734,7 +750,13 @@ export const en: Messages = {
     eyebrow: 'Contact',
     title: 'Ask for a demo or send a question',
     intro:
-      'Tell us your venue type and roughly how many rooms or stations you have — we usually reply within two hours during working hours.',
+      'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges — booking, live floor, and cash in one place. Ask for a 15-minute demo; we usually reply within two hours during working hours.',
+    reachTitle: 'How can I reach Heselo?',
+    reachBody: [
+      'WhatsApp is the fastest path for a short demo — no card required. Prefer email? Use the address below or fill in the form with your venue type and roughly how many rooms or stations you run.',
+      'Tell us your venue type so the demo matches your floor: PlayStation club, karaoke, billiards, anti-café, or room lounge. Multi-branch or out-of-plan volume can ask for a custom quote on top of the published plans.',
+      'After you write, we usually reply within two hours during working hours: we schedule the demo or explain the next step against the published plans. If you need a faster reply, WhatsApp is quicker.',
+    ],
     customTitle: 'Write to us for a custom price',
     customIntro:
       'Tell us how many venues, staff, and reservations you run each month — we quote from those numbers.',
@@ -790,6 +812,26 @@ export const en: Messages = {
       { value: 'social', label: 'Instagram / Facebook / LinkedIn' },
       { value: 'friend', label: 'Friend or colleague' },
       { value: 'other', label: 'Other' },
+    ],
+    faq: [
+      {
+        q: 'How fast do you reply?',
+        a: 'During working hours we usually reply within two hours on WhatsApp or email. After hours we pick up the next working day.',
+      },
+      {
+        q: 'What should I prepare for a demo?',
+        a: 'Venue type, roughly how many rooms or PlayStation stations you run, and whether you care most about booking, live floor, or cash. Fifteen minutes is enough for a live walkthrough.',
+      },
+      {
+        q: 'Do I need a demo or a custom quote?',
+        a: 'Most venues start with a 15-minute demo against the published Small/Medium/Large plans. Ask for a custom quote when you have several branches or volume outside those limits.',
+        href: '/pricing',
+        linkLabel: 'See published pricing',
+      },
+      {
+        q: 'Which venue types does Heselo support?',
+        a: 'Gaming / PlayStation clubs, karaoke, billiards, anti-cafés, and room lounges — any floor that sells table, room, or station time rather than kitchen tickets. Picking a type opens the demo and pricing table around that floor’s schedule.',
+      },
     ],
   },
   privacy: {

@@ -438,7 +438,9 @@ export function seoFromMessages(
       ? messages.faq.items
       : key === 'about'
         ? messages.aboutPage.faq
-        : undefined
+        : key === 'contact'
+          ? messages.contact.faq
+          : undefined
 
   return {
     title: page.title,

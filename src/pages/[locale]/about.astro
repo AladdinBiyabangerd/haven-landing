@@ -32,13 +32,25 @@ const faqMessages = {
         <h1 class="type-page-title">{page.title}</h1>
         <p class="lead">{page.intro}</p>
 
-        <div class="founder">
-          <p class="founder__label type-eyebrow">{page.founderLabel}</p>
-          <p class="founder__name type-card-title">{FOUNDER.name}</p>
-          <p class="founder__role">{page.founderJobTitle}</p>
-        </div>
+        <section class="block" aria-labelledby="about-what">
+          <h2 id="about-what" class="type-card-title">{page.whatTitle}</h2>
+          {page.whatBody.map((p) => <p class="body">{p}</p>)}
+        </section>
 
-        {page.paragraphs.map((p) => <p class="body">{p}</p>)}
+        <section class="block" aria-labelledby="about-who">
+          <h2 id="about-who" class="type-card-title">{page.whoTitle}</h2>
+          {page.whoBody.map((p) => <p class="body">{p}</p>)}
+        </section>
+
+        <section class="block" aria-labelledby="about-founder">
+          <h2 id="about-founder" class="type-card-title">{page.founderSectionTitle}</h2>
+          <div class="founder">
+            <p class="founder__label type-eyebrow">{page.founderLabel}</p>
+            <p class="founder__name type-card-title">{FOUNDER.name}</p>
+            <p class="founder__role">{page.founderJobTitle}</p>
+          </div>
+          {page.paragraphs.map((p) => <p class="body">{p}</p>)}
+        </section>
 
         <p class="links">
           <a
@@ -71,10 +83,16 @@ const faqMessages = {
     font-size: var(--text-base);
     line-height: 1.55;
   }
-  .founder {
-    margin: 2rem 0 1.5rem;
+  .block {
+    margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--line);
+  }
+  .block .type-card-title {
+    margin: 0;
+  }
+  .founder {
+    margin: 1.25rem 0 0;
   }
   .founder__label {
     margin: 0 0 0.35rem;
