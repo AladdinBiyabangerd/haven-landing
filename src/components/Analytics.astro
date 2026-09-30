@@ -3,9 +3,13 @@
  * GA4 Measurement ID is public (visible in page source). Default enables tracking
  * on production builds without requiring env; override via PUBLIC_HESELO_GA4_ID.
  *
+ * Microsoft Clarity runs alongside GA4/Plausible for session replay + heatmaps.
+ * Project ID is public; override via PUBLIC_HESELO_CLARITY_ID (empty = disable).
+ *
  * Lead CTAs emit `generate_lead` (mark as a key event in GA4 Admin → Events).
  */
 const DEFAULT_GA4_ID = 'G-HKT0YR5W38'
+const DEFAULT_CLARITY_ID = 'yqenuclqam'
 
 const provider = String(
   import.meta.env.PUBLIC_HESELO_ANALYTICS || import.meta.env.PUBLIC_ANALYTICS || 'ga4',
@@ -15,6 +19,12 @@ const plausibleDomain = (import.meta.env.PUBLIC_HESELO_PLAUSIBLE_DOMAIN ||
 const ga4Id = (import.meta.env.PUBLIC_HESELO_GA4_ID ||
   import.meta.env.PUBLIC_GA4_ID ||
   DEFAULT_GA4_ID) as string
+const clarityIdRaw =
+  import.meta.env.PUBLIC_HESELO_CLARITY_ID ?? import.meta.env.PUBLIC_CLARITY_ID
+const clarityId =
+  clarityIdRaw === undefined || clarityIdRaw === null
+    ? DEFAULT_CLARITY_ID
+    : String(clarityIdRaw).trim()
 ---
 
 {
@@ -72,5 +82,23 @@ const ga4Id = (import.meta.env.PUBLIC_HESELO_GA4_ID ||
         )
       </script>
     </>
+  ) : null
+}
+{
+  clarityId ? (
+    <script is:inline define:vars={{ clarityId }}>
+      ;(function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            ;(c[a].q = c[a].q || []).push(arguments)
+          }
+        t = l.createElement(r)
+        t.async = 1
+        t.src = 'https://www.clarity.ms/tag/' + i
+        y = l.getElementsByTagName(r)[0]
+        y.parentNode.insertBefore(t, y)
+      })(window, document, 'clarity', 'script', clarityId)
+    </script>
   ) : null
 }

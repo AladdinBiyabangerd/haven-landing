@@ -6,6 +6,8 @@ interface ImportMetaEnv {
   readonly PUBLIC_HESELO_ANALYTICS?: string
   readonly PUBLIC_HESELO_PLAUSIBLE_DOMAIN?: string
   readonly PUBLIC_HESELO_GA4_ID?: string
+  /** Microsoft Clarity project id; set empty string to disable */
+  readonly PUBLIC_HESELO_CLARITY_ID?: string
   readonly PUBLIC_HESELO_SOCIAL_INSTAGRAM?: string
   readonly PUBLIC_HESELO_SOCIAL_FACEBOOK?: string
   readonly PUBLIC_HESELO_SOCIAL_LINKEDIN?: string
@@ -16,6 +18,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_ANALYTICS?: string
   readonly PUBLIC_PLAUSIBLE_DOMAIN?: string
   readonly PUBLIC_GA4_ID?: string
+  readonly PUBLIC_CLARITY_ID?: string
   readonly PUBLIC_SOCIAL_INSTAGRAM?: string
   readonly PUBLIC_SOCIAL_FACEBOOK?: string
   readonly PUBLIC_SOCIAL_LINKEDIN?: string
@@ -46,6 +49,7 @@ interface ImportMeta {
 interface Window {
   dataLayer?: unknown[]
   gtag?: (...args: unknown[]) => void
+  clarity?: (...args: unknown[]) => void
   heseloTrack?: (name: string, params?: Record<string, string | undefined>) => void
 }
 
