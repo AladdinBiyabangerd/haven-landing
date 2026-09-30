@@ -67,6 +67,7 @@ Output depends on target:
 | `PUBLIC_HESELO_ANALYTICS` | `ga4` (default) or `plausible` |
 | `PUBLIC_HESELO_GA4_ID` | GA4 Measurement ID (default: `G-HKT0YR5W38`) |
 | `PUBLIC_HESELO_CLARITY_ID` | Microsoft Clarity project ID (default: `yqenuclqam`; empty disables) |
+| `HESELO_INDEXNOW_KEY` | IndexNow API key (file served at `/{key}.txt`; run `npm run indexnow` after deploy) |
 
 Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
 
@@ -89,5 +90,6 @@ Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
 1. Set `PUBLIC_SITE_URL=https://heselo.online` in production env
 2. Submit `https://heselo.online/sitemap.xml` in Google Search Console
 3. Verify OG image and canonical URLs on a live page
-4. Optional: `PUBLIC_ANALYTICS`, `PUBLIC_SOCIAL_*`, `INDEXNOW_KEY` — see `.env.example`
-5. Off-site backlinks: [docs/off-site-seo-az.md](docs/off-site-seo-az.md)
+4. Optional: `PUBLIC_ANALYTICS`, `PUBLIC_SOCIAL_*` — see `.env.example`
+5. IndexNow: set `HESELO_INDEXNOW_KEY` on Vercel; confirm `https://heselo.online/{key}.txt`; then `npm run indexnow`
+6. Off-site backlinks: [docs/off-site-seo-az.md](docs/off-site-seo-az.md)

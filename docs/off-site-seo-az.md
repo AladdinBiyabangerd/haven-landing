@@ -25,7 +25,7 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | **Tap.az (biznes / xidmət)** | https://tap.az | “Proqram təminatı” / biznes xidməti elanı — spam deyil, 1 keyfiyyətli elan |
 | **Boss.az** | https://boss.az | İş elanları deyil — şirkət/profil varsa SaaS təqdimatı |
 | **Linq.az** | https://linq.az | Startup / biznes kataloqu (aktivdirsə qeydiyyat) |
-| **Product Hunt** | https://www.producthunt.com | EN launch — beynəlxalq backlink + brend |
+| **Product Hunt** | https://www.producthunt.com | EN launch — beynəlxalq backlink + brend; copy/checklist: [producthunt-playbook.md](./producthunt-playbook.md); assets: `docs/marketing-raw/producthunt/` |
 | **AlternativeTo** | https://alternativeto.net | “Venue management”, “Booking system” kateqoriyalarında siyahı; **alternative to** iiko / Clopos / Dine / Restomas / MinuPOS / robotPOS siyahılarına əlavə (dürüst: klub/otaq-vaxt, mətbəx POS yox) |
 | **Capterra / GetApp** | https://www.capterra.com | SaaS kataloqu (uzunmüddətli; rəy yalnız real istifadəçidən) |
 
@@ -39,7 +39,8 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | **SUP VC / Innoland** | Demo günü / pitch — backlink + PR |
 | **Facebook / Instagram** | `@heselo` — bio-da `heselo.online`; postlarda həll səhifələrinə link |
 | **LinkedIn Company Page** | Şirkət səhifəsi + məhsul linki |
-| **Sosial post jurnalı** | Artıq paylaşılan mətnlər: [social-posts-log.md](./social-posts-log.md) — təkrarlama
+| **Quora** | Profil + faydalı cavablar (AZ/EN) — [quora-playbook.md](./quora-playbook.md); spam reklam yox |
+| **Sosial post jurnalı** | Artıq paylaşılan mətnlər: [social-posts-log.md](./social-posts-log.md) — təkrarlama |
 | **GitHub** | Açıq repo varsa README-də landing linki (məhsul repo ayrı ola bilər) |
 
 ---
@@ -73,18 +74,20 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 
 ## IndexNow (Bing sürətli index)
 
-1. `.env`-də `INDEXNOW_KEY=<32-char-hex>` təyin edin
-2. `npm run build` — açar faylı `public/{key}.txt` yaradılır
-3. Deploy-dan sonra Bing Webmaster Tools → URL submit və ya API:
+Açar: `6333c2a8c71f44f0a0f557eaaebd5745` (public by design).
+
+1. Açar faylı repo-da: `public/6333c2a8c71f44f0a0f557eaaebd5745.txt`
+2. Vercel env: `HESELO_INDEXNOW_KEY=6333c2a8c71f44f0a0f557eaaebd5745` (prebuild eyni faylı yazır)
+3. Deploy-dan sonra yoxla: https://heselo.online/6333c2a8c71f44f0a0f557eaaebd5745.txt
+4. Bütün sitemap URL-lərini göndər:
+   ```bash
+   npm run indexnow
    ```
-   POST https://api.indexnow.org/indexnow
-   {
-     "host": "heselo.online",
-     "key": "YOUR_KEY",
-     "keyLocation": "https://heselo.online/YOUR_KEY.txt",
-     "urlList": ["https://heselo.online/az/solutions/antikafe/"]
-   }
+   Və ya tək URL:
+   ```bash
+   npm run indexnow -- https://heselo.online/az/pricing/
    ```
+5. Bing Webmaster Tools → URL Inspection / IndexNow status ilə təsdiqlə
 
 ---
 
@@ -117,7 +120,7 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 | AI tövsiyə görünürlüyü | [geo-ai-prompts-az.md](./geo-ai-prompts-az.md) — 18 prompt batareyası |
 | Demo mənbəyi (AI) | Contact form `heardFrom` + owner email |
 
-Son yeniləmə: 2026-09-17
+Son yeniləmə: 2026-09-30
 
 ---
 
@@ -150,4 +153,21 @@ Hədəf: brend + “alternative to X” siyahıları. Təsvirdə restoran mətb�
 - [ ] Qısa EN təsvir (unik): room-time clubs, karaoke, billiards, live sessions, cash shifts; from 25 AZN/mo in Azerbaijan
 - [ ] Screenshot: live floor və ya schedule (mətbəx/KDS ekranı yox)
 - [ ] UTM: `?utm_source=alternativeto&utm_medium=referral&utm_campaign=seo-c0`
+
+---
+
+## Product Hunt icra checklist
+
+Hədəf: EN listing + backlink. Kateqoriya: room-time clubs — mətbəx POS **yox**. Tam copy: [producthunt-playbook.md](./producthunt-playbook.md).
+
+- [x] Playbook + assets (`docs/marketing-raw/producthunt/`)
+- [x] Maker profile website: `utm_content=ph_profile`
+- [x] Product draft: name, tagline, short/full description, topics
+- [x] Product link: `utm_content=ph_launch_01`
+- [x] Thumbnail + gallery upload (assets hazır; PH-də Select an image ilə tamamlanır)
+- [x] Schedule — **Thu Oct 1, 2026** PT midnight — Launch now edilmədi
+- [x] Maker first comment (prelaunch ✓); canlı günü cavablar + social announce qalır
+- [x] [social-posts-log.md](./social-posts-log.md) → `ph_launch_01` + PH URL (Scheduled)
+
+Listing: https://www.producthunt.com/products/heselo?launch=heselo
 
