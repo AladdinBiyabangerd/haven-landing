@@ -1,9 +1,10 @@
 /**
  * Venue-type hybrid SaaS catalog (landing).
  *
- * Default: hardcoded FALLBACK_VENUE_OFFERS (no network).
- * Optional live source: set PUBLIC_HESELO_API_BASE_URL → GET /v1/public/subscription-catalog
- * (Heselo Platform Admin DB). Until app/admin custom domains are ready, leave the env unset.
+ * Live source (default): GET {PUBLIC_HESELO_API_BASE_URL}/v1/public/subscription-catalog
+ * on app.heselo.online — platform plans only (not venue-custom plans).
+ * Falls back to FALLBACK_VENUE_OFFERS if the request fails.
+ * Set PUBLIC_HESELO_API_BASE_URL= (empty) to force offline fallback.
  */
 import { PRIMARY_SOLUTION_SLUGS, type PrimarySolutionSlug } from '@/data/solutions/types'
 
@@ -52,7 +53,9 @@ function plan(id: VenuePlanId, monthlyFee: number, upTo: number): VenuePlan {
   }
 }
 
-/** Offline catalog — used whenever PUBLIC_HESELO_API_BASE_URL is unset (recommended for now). */
+const DEFAULT_API_BASE = 'https://app.heselo.online'
+
+/** Offline catalog — used when API is disabled or unreachable. */
 export const FALLBACK_VENUE_OFFERS: readonly VenueOffer[] = [
   {
     slug: 'gaming',
@@ -98,8 +101,10 @@ export type ContactPlanId = VenuePlanId | 'custom'
 let cachedOffers: readonly VenueOffer[] | null = null
 
 function apiBase(): string | null {
-  const raw = (import.meta.env.PUBLIC_HESELO_API_BASE_URL as string | undefined)?.trim()
-  if (!raw) return null
+  const configured = (import.meta.env as Record<string, string | undefined>).PUBLIC_HESELO_API_BASE_URL
+  // unset → production API; empty / false → offline fallback only
+  const raw = String(configured ?? DEFAULT_API_BASE).trim()
+  if (!raw || raw === '0' || raw === 'false') return null
   return raw.replace(/\/$/, '')
 }
 
@@ -168,8 +173,10 @@ export async function loadVenueOffers(): Promise<readonly VenueOffer[]> {
     })
     if (!res.ok) throw new Error(`catalog ${res.status}`)
     const mapped = mapApiOffers(await res.json())
-    cachedOffers = mapped ?? FALLBACK_VENUE_OFFERS
-  } catch {
+    if (!mapped) throw new Error('catalog empty or invalid')
+    cachedOffers = mapped
+  } catch (error) {
+    console.error('[venueOffers] catalog fetch failed, using fallback', base, error)
     cachedOffers = FALLBACK_VENUE_OFFERS
   }
   return cachedOffers

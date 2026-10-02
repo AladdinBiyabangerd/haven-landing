@@ -26,7 +26,7 @@ interface Props {
 
 const { locale, messages, page, seo: seoInput, preloadImages = [] } = Astro.props
 
-// Warm subscription catalog cache (Platform Admin DB → public API).
+// Warm catalog from app.heselo.online public subscription API (build/SSR).
 await loadVenueOffers()
 
 const input: SeoPageInput =

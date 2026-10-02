@@ -3,6 +3,8 @@
 interface ImportMetaEnv {
   readonly PUBLIC_HESELO_SITE_URL?: string
   readonly PUBLIC_HESELO_CONTACT_ENDPOINT?: string
+  /** Platform API origin for public subscription catalog. Empty = offline fallback. */
+  readonly PUBLIC_HESELO_API_BASE_URL?: string
   readonly PUBLIC_HESELO_ANALYTICS?: string
   readonly PUBLIC_HESELO_PLAUSIBLE_DOMAIN?: string
   readonly PUBLIC_HESELO_GA4_ID?: string
