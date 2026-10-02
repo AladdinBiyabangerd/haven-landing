@@ -28,7 +28,6 @@ interface ImportMetaEnv {
   readonly HESELO_SMTP_SECURE?: string
   readonly HESELO_SMTP_USER?: string
   readonly HESELO_SMTP_PASS?: string
-  readonly HESELO_CONTACT_NOTIFY_EMAIL?: string
   readonly HESELO_CONTACT_FROM_EMAIL?: string
   readonly HESELO_INDEXNOW_KEY?: string
   /** @deprecated use HESELO_* */
@@ -37,7 +36,6 @@ interface ImportMetaEnv {
   readonly SMTP_SECURE?: string
   readonly SMTP_USER?: string
   readonly SMTP_PASS?: string
-  readonly CONTACT_NOTIFY_EMAIL?: string
   readonly CONTACT_FROM_EMAIL?: string
   readonly INDEXNOW_KEY?: string
 }
