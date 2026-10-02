@@ -152,8 +152,11 @@ async function handlePost(request: Request): Promise<Response> {
 
   const smtpUser = readEnv('HESELO_SMTP_USER', 'SMTP_USER') || SITE.contactEmail
   const smtpPass = readEnv('HESELO_SMTP_PASS', 'SMTP_PASS').replaceAll(' ', '')
+  // FROM must match the SMTP mailbox (Gmail). Lead alerts go to NOTIFY (personal inbox).
   const fromAddress =
     readEnv('HESELO_CONTACT_FROM_EMAIL', 'CONTACT_FROM_EMAIL') || smtpUser || SITE.contactEmail
+  const notifyTo =
+    readEnv('HESELO_CONTACT_NOTIFY_EMAIL', 'CONTACT_NOTIFY_EMAIL') || SITE.notifyEmail
 
   if (!smtpPass) {
     console.error('[contact] HESELO_SMTP_PASS is missing')
@@ -179,7 +182,7 @@ async function handlePost(request: Request): Promise<Response> {
 
     await transporter.sendMail({
       from,
-      to: fromAddress,
+      to: notifyTo,
       replyTo: fromAddress,
       subject: owner.subject,
       text: owner.text,

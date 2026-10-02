@@ -3,6 +3,8 @@ export const SITE = {
   contactEmail: 'heselo.online@gmail.com',
   /** Local AZ mobile format (NAP / display). */
   contactPhone: '0777381803',
+  /** Inbox that receives demo / contact lead alerts. */
+  notifyEmail: 'aladdinbiyabangerd@gmail.com',
   twitterHandle: '@heselo',
   themeColor: '#0f766e',
   ogImage: {
