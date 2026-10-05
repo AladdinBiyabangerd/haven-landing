@@ -12,6 +12,15 @@ export type VenueOfferModel = 'oneTime' | 'monthly'
 export type VenuePlanId = 'starter' | 'plus' | 'pro'
 export type VenueCapacityUnit = 'stations' | 'tables' | 'rooms' | 'zones'
 export type BillingPeriod = 'monthly' | 'annual'
+export type MarketingLocale = 'az' | 'en' | 'ru'
+
+export type PlanMarketingLocaleCopy = {
+  forWhom: string
+  desc: string
+  features: string[]
+}
+
+export type PlanMarketingCopy = Partial<Record<MarketingLocale, PlanMarketingLocaleCopy>>
 
 export type VenuePlan = {
   id: VenuePlanId
@@ -20,6 +29,8 @@ export type VenuePlan = {
   upTo: number
   includedReservations: number
   overagePerReservation: number
+  /** Landing CMS copy from public catalog (az/en/ru). */
+  marketingCopy?: PlanMarketingCopy
   /** @deprecated use monthlyFee — kept for older call sites */
   amount: number
 }
@@ -115,6 +126,45 @@ function normalizePlanId(id: string): VenuePlanId {
   return 'starter'
 }
 
+function parseMarketingLocaleCopy(raw: unknown): PlanMarketingLocaleCopy | null {
+  if (!raw || typeof raw !== 'object') return null
+  const block = raw as Record<string, unknown>
+  const forWhom = String(block.forWhom ?? '').trim()
+  const desc = String(block.desc ?? '').trim()
+  const featuresRaw = block.features
+  const features = Array.isArray(featuresRaw)
+    ? featuresRaw.map((item) => String(item).trim()).filter(Boolean)
+    : []
+  if (!forWhom && !desc && features.length === 0) return null
+  return { forWhom, desc, features }
+}
+
+export function parseMarketingCopy(raw: unknown): PlanMarketingCopy | undefined {
+  if (!raw || typeof raw !== 'object') return undefined
+  const source = raw as Record<string, unknown>
+  const out: PlanMarketingCopy = {}
+  for (const loc of ['az', 'en', 'ru'] as const) {
+    const parsed = parseMarketingLocaleCopy(source[loc])
+    if (parsed) out[loc] = parsed
+  }
+  return Object.keys(out).length > 0 ? out : undefined
+}
+
+/** Prefer API marketing copy for the active locale; fall back to static i18n. */
+export function resolvePlanMarketing(
+  plan: VenuePlan,
+  locale: MarketingLocale,
+  fallback: PlanMarketingLocaleCopy,
+): PlanMarketingLocaleCopy {
+  const fromApi = plan.marketingCopy?.[locale]
+  if (!fromApi) return fallback
+  return {
+    forWhom: fromApi.forWhom || fallback.forWhom,
+    desc: fromApi.desc || fallback.desc,
+    features: fromApi.features.length > 0 ? fromApi.features : fallback.features,
+  }
+}
+
 function mapApiOffers(payload: unknown): VenueOffer[] | null {
   if (!payload || typeof payload !== 'object') return null
   const offersRaw = (payload as { offers?: unknown }).offers
@@ -140,6 +190,7 @@ function mapApiOffers(payload: unknown): VenueOffer[] | null {
         upTo: Math.floor(Number(planRow.upTo) || 0),
         includedReservations: Math.floor(Number(planRow.includedReservations) || 0),
         overagePerReservation: Number(planRow.overagePerReservation) || 0,
+        marketingCopy: parseMarketingCopy(planRow.marketingCopy),
       } satisfies VenuePlan
     })
     if (mappedPlans.length === 0) continue

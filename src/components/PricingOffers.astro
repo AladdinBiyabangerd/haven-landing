@@ -3,7 +3,13 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { localePath } from '@/lib/site'
 import { fillTemplate, formatMoney } from '@/lib/format'
-import { crossoverPoints, getActiveOffers, loadVenueOffers, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
+import {
+  crossoverPoints,
+  getActiveOffers,
+  loadVenueOffers,
+  resolvePlanMarketing,
+  VENUE_STORAGE_KEY,
+} from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
@@ -74,7 +80,7 @@ function planFeatures(features: string[], upTo: number): string[] {
           <p class="panel__intro">{copy.intro}</p>
           <div class="plans">
             {offer.plans.map((plan) => {
-              const planCopy = copy.plans[plan.id]
+              const planCopy = resolvePlanMarketing(plan, locale, copy.plans[plan.id])
               return (
                 <article class:list={['card', { featured: plan.id === 'plus' }]}>
                   <header>
