@@ -43,6 +43,56 @@ Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18.
 
 ---
 
+## Ölçmə — 2026-09-22
+
+Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18 (eyni baseline siyahısı).
+
+### Nəticə cədvəli
+
+| # | Prompt (qısa) | ChatGPT | Perplexity | Qeyd |
+|---|----------------|---------|------------|------|
+| 1 | Heselo nədir? | Xeyr | **Bəli** | ChatGPT: markanı tanımır (typo/kontekst soruşur). Perplexity: düzgün — oyun/karaoke/bilyard/antikafe veb idarəetmə; rezervasiya, canlı sessiya, kassa, anbar; **25 AZN/aydan**, pulsuz demo |
+| 4 | Bakı PS klub proqramı | Xeyr | Xeyr | ChatGPT: Club Timer (~30 AZN), Akinsoft (95–99 AZN) — proqram kimi. Perplexity: GameYer klub siyahısı (yerlər) + Club Timer qeydi; Heselo yoxdur |
+| 5 | Karaoke otaq + kassa AZ | Xeyr | **Bəli** | ChatGPT: karaoke məkanları (Reina, Soprano, Voyage, Moko, El Nato) — proqram deyil. Perplexity: Heselo tövsiyə + heselo.online/az/; otaq/sessiya/kassa/anbar; PS üçün ~25 AZN |
+| 9 | iiko antikafe/karaoke alt. | Xeyr | **Bəli** | ChatGPT (həm “alt.” həm “iiko alternative”): məkan siyahısı (Concept, Tik Talk, 5 Doors, Moko, V9…). Perplexity: Heselo = iiko alternativ; müqayisə cədvəli (mətbəx/KDS vs otaq-vaxt); heselo.online/az/; + KaraFun (musiqi) |
+| 18 | Is Heselo good for gaming clubs? | **Bəli** (zəif) | Xeyr | ChatGPT: LinkedIn iş elanı ilə tanıyır; gaming club / karaoke / anticafe idarəetmə; stansiya/timer/POS yoxlanılmalı deyir. Perplexity: kifayət qədər məlumat yoxdur (link istəyir) — baseline-dakı Bəli geriləyib |
+
+### Xam qeydlər (qısa)
+
+**ChatGPT**
+- #1: «standart söz deyil» / sayt linki və ya ekran istəyir.
+- #4: Club Timer, Akinsoft; özün qurmaq üçün funksiya strukturu təklifi.
+- #5 / #9: Maps üslubunda karaoke/antikafe **yerləri** — software discovery uğursuz.
+- #18: heselo LinkedIn job URL; rezervasiya + venue management; tam POS olduğunu təsdiqləmir.
+
+**Perplexity**
+- #1: tam məhsul təsviri + follow-up: qiymət, PS funksiyaları, anbar/kassa, restoran POS fərqi, demo.
+- #4: PS **klub kataloqu** (LaLiga, Qarabağ, Race…) — idarəetmə proqramı kimi oxumur; Club Timer follow-up.
+- #5 / #9: heselo.online/az/ sitat; #9-da iiko vs Heselo cədvəli.
+- #18: bu dəfə entity uğursuz (əvvəlki ölçmədə uğurlu idi).
+
+### Verdict (agent üçün)
+
+- **Entity (#1):** Perplexity artıq AZ brend sualında düzgün cavab verir (baseline: hər ikisi Xeyr). ChatGPT hələ tanımır.
+- **EN brend (#18):** əksinə dəyişib — ChatGPT zəif tanıma (LinkedIn), Perplexity bu dəfə Xeyr. Stabil entity yoxdur.
+- **Kateqoriya (#4):** hələ 0/2 — Club Timer / Akinsoft / GameYer üstün; Heselo mention yoxdur.
+- **Kateqoriya (#5, #9):** Perplexity-də **Bəli** (baseline: hər ikisi Xeyr) — karaoke+kassa və iiko alternativində Heselo + URL. ChatGPT hələ məkan kimi oxuyur.
+- **Pricing siqnalı:** Perplexity #1/#5/#9-da «25 AZN/aydan» keçir — pricing GEO başlamış sayılır.
+- **Növbəti fokus:** ChatGPT üçün off-site (AlternativeTo, GBP, LinkedIn case); #4 üçün «PS klub **proqramı** / taymer / kassa» dilini gücləndir (yer kataloqundan ayır); #18 üçün heselo.online EN səhifə + third-party.
+- **90g hədəfə doğru:** #1 Perplexity ✅; #5/#9 Perplexity ✅; #1 ChatGPT və #4 hələ açıq.
+
+### Baseline (09-17) → bu ölçmə
+
+| # | 09-17 ChatGPT / Pplx | 09-22 ChatGPT / Pplx |
+|---|----------------------|----------------------|
+| 1 | Xeyr / Xeyr | Xeyr / **Bəli** |
+| 4 | Xeyr / Xeyr | Xeyr / Xeyr |
+| 5 | Xeyr / Xeyr | Xeyr / **Bəli** |
+| 9 | Xeyr / Xeyr | Xeyr / **Bəli** |
+| 18 | Xeyr / **Bəli** | **Bəli** (zəif) / Xeyr |
+
+---
+
 ## Prompt batareyası
 
 ### A — Brend
@@ -113,4 +163,4 @@ Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18.
 
 Formada **“Haradan eşitdiniz?”** (`heardFrom`). UTM: `?utm_source=chatgpt&utm_medium=ai&utm_campaign=geo`
 
-Son yeniləmə: 2026-09-17 (baseline sıxlaşdırıldı)
+Son yeniləmə: 2026-09-22 (ChatGPT + Perplexity; promptlar 1, 4, 5, 9, 18)

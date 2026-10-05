@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" fill="none">
+  <defs>
+    <linearGradient id="teal" x1="200" y1="200" x2="880" y2="880" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="#0B0F10"/>
+  <circle cx="540" cy="540" r="420" fill="url(#teal)" opacity="0.08"/>
+  <circle cx="540" cy="540" r="360" stroke="url(#teal)" stroke-width="10" opacity="0.35"/>
+  <circle
+    cx="540"
+    cy="540"
+    r="268"
+    stroke="url(#teal)"
+    stroke-width="28"
+    stroke-dasharray="160 55 40 55 120 55 40 55"
+    stroke-linecap="round"
+    transform="rotate(15 540 540)"
+  />
+  <path
+    d="M390 320v440M690 320v440M390 540h300"
+    stroke="url(#teal)"
+    stroke-width="72"
+    stroke-linecap="round"
+  />
+  <circle cx="780" cy="300" r="36" fill="#14B8A6"/>
+</svg>
