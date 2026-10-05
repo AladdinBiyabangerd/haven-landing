@@ -465,6 +465,8 @@ export const az: Messages = {
     overage: 'Limitdən sonra hər açılmış sessiya {price}',
     includedModules: 'Bütün panel modulları',
     oneVenue: 'Hesab üzrə {n} məkan',
+    staffPerVenue: 'Hər məkanda {n} işçi',
+    dataRetentionMonths: 'Əməliyyat tarixçəsi {n} ay saxlanılır',
     noCard: 'Kart tələb olunmur',
     bestFor: 'Kimə uyğundur',
     popular: 'Ən çox seçilən',

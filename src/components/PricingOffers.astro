@@ -120,6 +120,21 @@ function planFeatures(features: string[], upTo: number): string[] {
                         price: formatMoney(plan.overagePerReservation, locale),
                       })}
                     </li>
+                    <li>
+                      {fillTemplate(page.oneVenue, {
+                        n: plan.includedVenues,
+                      })}
+                    </li>
+                    <li>
+                      {fillTemplate(page.staffPerVenue, {
+                        n: plan.maxStaffPerVenue,
+                      })}
+                    </li>
+                    <li>
+                      {fillTemplate(page.dataRetentionMonths, {
+                        n: plan.dataRetentionMonths,
+                      })}
+                    </li>
                   </ul>
                   <a
                     class:list={['btn', plan.id === 'plus' ? 'btn-primary' : 'btn-ghost']}

@@ -237,6 +237,8 @@ export type Messages = {
     overage: string
     includedModules: string
     oneVenue: string
+    staffPerVenue: string
+    dataRetentionMonths: string
     noCard: string
     bestFor: string
     popular: string

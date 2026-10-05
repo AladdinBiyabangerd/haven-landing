@@ -27,8 +27,11 @@ export type VenuePlan = {
   monthlyFee: number
   annualFee: number
   upTo: number
+  includedVenues: number
   includedReservations: number
   overagePerReservation: number
+  maxStaffPerVenue: number
+  dataRetentionMonths: number
   /** Landing CMS copy from public catalog (az/en/ru). */
   marketingCopy?: PlanMarketingCopy
   /** @deprecated use monthlyFee — kept for older call sites */
@@ -44,11 +47,35 @@ export type VenueOffer = {
 
 const PLAN_QUOTA: Record<
   VenuePlanId,
-  { includedReservations: number; overagePerReservation: number }
+  {
+    includedReservations: number
+    overagePerReservation: number
+    includedVenues: number
+    maxStaffPerVenue: number
+    dataRetentionMonths: number
+  }
 > = {
-  starter: { includedReservations: 300, overagePerReservation: 0.3 },
-  plus: { includedReservations: 550, overagePerReservation: 0.25 },
-  pro: { includedReservations: 750, overagePerReservation: 0.18 },
+  starter: {
+    includedReservations: 300,
+    overagePerReservation: 0.3,
+    includedVenues: 1,
+    maxStaffPerVenue: 8,
+    dataRetentionMonths: 4,
+  },
+  plus: {
+    includedReservations: 550,
+    overagePerReservation: 0.25,
+    includedVenues: 3,
+    maxStaffPerVenue: 16,
+    dataRetentionMonths: 8,
+  },
+  pro: {
+    includedReservations: 750,
+    overagePerReservation: 0.18,
+    includedVenues: 10,
+    maxStaffPerVenue: 32,
+    dataRetentionMonths: 12,
+  },
 }
 
 function plan(id: VenuePlanId, monthlyFee: number, upTo: number): VenuePlan {
@@ -59,8 +86,11 @@ function plan(id: VenuePlanId, monthlyFee: number, upTo: number): VenuePlan {
     annualFee: monthlyFee * 10,
     amount: monthlyFee,
     upTo,
+    includedVenues: quota.includedVenues,
     includedReservations: quota.includedReservations,
     overagePerReservation: quota.overagePerReservation,
+    maxStaffPerVenue: quota.maxStaffPerVenue,
+    dataRetentionMonths: quota.dataRetentionMonths,
   }
 }
 
@@ -182,14 +212,24 @@ function mapApiOffers(payload: unknown): VenueOffer[] | null {
       const id = normalizePlanId(String(planRow.id || 'starter'))
       const monthlyFee = Number(planRow.monthlyFee) || 0
       const annualFee = Number(planRow.annualFee) || monthlyFee * 10
+      const fallbackQuota = PLAN_QUOTA[id]
       return {
         id,
         monthlyFee,
         annualFee,
         amount: monthlyFee,
         upTo: Math.floor(Number(planRow.upTo) || 0),
+        includedVenues: Math.floor(
+          Number(planRow.includedVenues) || fallbackQuota.includedVenues,
+        ),
         includedReservations: Math.floor(Number(planRow.includedReservations) || 0),
         overagePerReservation: Number(planRow.overagePerReservation) || 0,
+        maxStaffPerVenue: Math.floor(
+          Number(planRow.maxStaffPerVenue) || fallbackQuota.maxStaffPerVenue,
+        ),
+        dataRetentionMonths: Math.floor(
+          Number(planRow.dataRetentionMonths) || fallbackQuota.dataRetentionMonths,
+        ),
         marketingCopy: parseMarketingCopy(planRow.marketingCopy),
       } satisfies VenuePlan
     })
