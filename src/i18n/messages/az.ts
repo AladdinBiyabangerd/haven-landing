@@ -287,7 +287,7 @@ export const az: Messages = {
     title: 'Saxta rəy yox —',
     titleAccent: 'yoxlanıla bilən faktlar.',
     intro:
-        'Heselo yeni məhsuldur, ona görə burada uydurma rəy və ya ulduz reytinqi tapmayacaqsınız. Göstərdiklərimizi — qiymətləri, pulun necə hesablandığını və hüquqi sənədləri — özünüz yoxlaya bilərsiniz.',
+        'Heselo artıq real məkanlarda istifadə olunur. Burada uydurma rəy və ya ulduz reytinqi tapa bilməzsiniz — göstərdiklərimizi (qiymətlər, pulun necə hesablandığı və hüquqi sənədlər) özünüz yoxlaya bilərsiniz.',
     items: [
       {
         title: 'Açıq qiymət',

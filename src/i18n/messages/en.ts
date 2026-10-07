@@ -287,7 +287,7 @@ export const en: Messages = {
     title: 'No fake reviews —',
     titleAccent: 'verifiable facts.',
     intro:
-      'Heselo is a young product, so you will not find invented testimonials or star ratings here. What we do show — prices, how money is counted, and our legal pages — you can check yourself.',
+      'Heselo is already used in real venues. You will not find invented testimonials or star ratings here. What we do show — prices, how money is counted, and our legal pages — you can check yourself.',
     items: [
       {
         title: 'Open pricing',
