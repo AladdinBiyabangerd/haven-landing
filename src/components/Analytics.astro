@@ -7,6 +7,8 @@
  * Project ID is public; override via PUBLIC_HESELO_CLARITY_ID (empty = disable).
  *
  * Lead CTAs emit `generate_lead` (mark as a key event in GA4 Admin → Events).
+ * Funnel: `cta_click` (contact links), `pricing_select` (plan → contact).
+ * Events include first-touch UTM params from sessionStorage (`heselo.campaign`).
  */
 const DEFAULT_GA4_ID = 'G-HKT0YR5W38'
 const DEFAULT_CLARITY_ID = 'yqenuclqam'
@@ -25,6 +27,7 @@ const clarityId =
   clarityIdRaw === undefined || clarityIdRaw === null
     ? DEFAULT_CLARITY_ID
     : String(clarityIdRaw).trim()
+const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
 ---
 
 {
@@ -49,39 +52,90 @@ const clarityId =
         window.heseloTrack = function heseloTrack(name, params) {
           if (typeof gtag === 'function') gtag('event', name, params || {})
         }
-
-        function leadPlacement(el) {
-          if (!(el instanceof Element)) return 'other'
-          const marked = el.closest('[data-track-placement]')
-          if (marked instanceof HTMLElement && marked.dataset.trackPlacement) {
-            return marked.dataset.trackPlacement
-          }
-          if (el.closest('.hero')) return 'hero'
-          if (el.closest('.contact-fab')) return 'fab'
-          if (el.closest('[data-cta]')) return 'cta'
-          if (el.closest('[data-contact-form]') || el.closest('.wa-lead')) return 'contact'
-          return 'other'
-        }
-
-        document.addEventListener(
-          'click',
-          function (event) {
-            const target = event.target
-            if (!(target instanceof Element)) return
-            const a = target.closest('a')
-            if (!(a instanceof HTMLAnchorElement)) return
-            const href = a.href || ''
-            if (/wa\.me\/|whatsapp\.com\//i.test(href)) {
-              window.heseloTrack('generate_lead', {
-                method: 'whatsapp',
-                placement: leadPlacement(a),
-              })
-            }
-          },
-          true,
-        )
       </script>
     </>
+  ) : null
+}
+{
+  enableGa4Funnels ? (
+    <script>
+      import { campaignTrackParams, captureCampaignFromLocation } from '@/lib/campaign'
+
+      captureCampaignFromLocation()
+
+      function leadPlacement(el: Element): string {
+        const marked = el.closest('[data-track-placement]')
+        if (marked instanceof HTMLElement && marked.dataset.trackPlacement) {
+          return marked.dataset.trackPlacement
+        }
+        if (el.closest('.hero')) return 'hero'
+        if (el.closest('.contact-fab')) return 'fab'
+        if (el.closest('[data-cta]')) return 'cta'
+        if (el.closest('[data-contact-form]') || el.closest('.wa-lead')) return 'contact'
+        if (el.closest('[data-pricing-offers], .pricing-offers, .offers')) return 'pricing'
+        if (el.closest('header, .header')) return 'header'
+        if (el.closest('footer, .footer')) return 'footer'
+        return 'other'
+      }
+
+      function isWhatsAppHref(href: string): boolean {
+        return /wa\.me\/|whatsapp\.com\//i.test(href)
+      }
+
+      function isContactPath(pathname: string): boolean {
+        return /\/contact\/?$/i.test(pathname) || /\/(az|en|ru)\/contact\/?/i.test(pathname)
+      }
+
+      function track(name: string, params: Record<string, string | undefined>) {
+        if (typeof window.heseloTrack !== 'function') return
+        window.heseloTrack(name, { ...campaignTrackParams(), ...params })
+      }
+
+      document.addEventListener(
+        'click',
+        (event) => {
+          const target = event.target
+          if (!(target instanceof Element)) return
+          const a = target.closest('a')
+          if (!(a instanceof HTMLAnchorElement)) return
+          const href = a.href || ''
+          const placement = leadPlacement(a)
+
+          if (isWhatsAppHref(href)) {
+            track('generate_lead', {
+              method: 'whatsapp',
+              placement,
+            })
+            return
+          }
+
+          let url: URL
+          try {
+            url = new URL(href, window.location.origin)
+          } catch {
+            return
+          }
+          if (url.origin !== window.location.origin) return
+          if (!isContactPath(url.pathname)) return
+
+          const plan = url.searchParams.get('plan') || a.dataset.plan || ''
+          if (plan || a.hasAttribute('data-contact-link') || a.closest('[data-pricing-offers]')) {
+            track('pricing_select', {
+              placement: placement === 'other' ? 'pricing' : placement,
+              plan: plan || undefined,
+              period: url.searchParams.get('period') || undefined,
+              venue_type: url.searchParams.get('type') || undefined,
+            })
+          }
+
+          track('cta_click', {
+            placement,
+            link_url: url.pathname + url.search,
+          })
+        },
+        true,
+      )
+    </script>
   ) : null
 }
 {

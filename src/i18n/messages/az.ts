@@ -871,6 +871,7 @@ export const az: Messages = {
       { value: 'perplexity', label: 'Perplexity' },
       { value: 'gemini', label: 'Gemini / Google AI' },
       { value: 'google', label: 'Google axtarış' },
+      { value: 'producthunt', label: 'Product Hunt' },
       { value: 'social', label: 'Instagram / Facebook / LinkedIn' },
       { value: 'friend', label: 'Dost / həmkar tövsiyəsi' },
       { value: 'other', label: 'Digər' },

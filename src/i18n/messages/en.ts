@@ -42,8 +42,8 @@ export const en: Messages = {
     title: 'A booking lost in WhatsApp wrecks the shift.',
     subtitle:
       'Heselo brings the room and PlayStation schedule, live session, and cash together on one screen.',
-    ctaPrimary: 'Message on WhatsApp',
-    ctaSecondary: 'Write via the form',
+    ctaPrimary: 'Request a demo',
+    ctaSecondary: 'Message on WhatsApp',
   },
   trust: {
     items: [
@@ -871,6 +871,7 @@ export const en: Messages = {
       { value: 'perplexity', label: 'Perplexity' },
       { value: 'gemini', label: 'Gemini / Google AI' },
       { value: 'google', label: 'Google search' },
+      { value: 'producthunt', label: 'Product Hunt' },
       { value: 'social', label: 'Instagram / Facebook / LinkedIn' },
       { value: 'friend', label: 'Friend or colleague' },
       { value: 'other', label: 'Other' },

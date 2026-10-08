@@ -4,6 +4,7 @@ import type { Messages } from '@/i18n/types'
 import { formatPhone } from '@/lib/format'
 import { SITE, telUrl, whatsappUrl } from '@/lib/site'
 import { VENUE_STORAGE_KEY } from '@/lib/venueOffers'
+import { CAMPAIGN_STORAGE_KEY } from '@/lib/campaign'
 
 interface Props {
   messages: Messages
@@ -35,6 +36,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
   data-submit-custom={c.customSubmit}
   data-phone-or-email={c.phoneOrEmailHint}
   data-venue-storage={VENUE_STORAGE_KEY}
+  data-campaign-storage={CAMPAIGN_STORAGE_KEY}
   data-plan-confirm-tpl={c.planConfirm}
   data-plan-names={JSON.stringify({ ...messages.pricing.planNames, custom: messages.pricing.custom.name })}
   novalidate
@@ -123,8 +125,16 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
 </form>
 
 <script>
+  import {
+    campaignTrackParams,
+    captureCampaignFromLocation,
+    heardFromFromUtmSource,
+    readStoredCampaign,
+  } from '@/lib/campaign'
+
   const form = document.querySelector('[data-contact-form]')
   if (form instanceof HTMLFormElement) {
+    captureCampaignFromLocation()
     const status = form.querySelector('[data-status]')
     const submit = form.querySelector('[data-submit]')
     const hint = form.querySelector('[data-contact-hint]')
@@ -171,26 +181,12 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
     }
 
     const heardSelect = form.querySelector('[data-heard-from]')
-    const utmSource = (params.get('utm_source') || '').toLowerCase()
-    const utmToHeard: Record<string, string> = {
-      chatgpt: 'chatgpt',
-      openai: 'chatgpt',
-      ai: 'chatgpt',
-      perplexity: 'perplexity',
-      gemini: 'gemini',
-      bard: 'gemini',
-      copilot: 'chatgpt',
-      google: 'google',
-      gsc: 'google',
-      instagram: 'social',
-      facebook: 'social',
-      linkedin: 'social',
-      social: 'social',
-    }
-    if (heardSelect instanceof HTMLSelectElement && utmSource) {
-      const mapped = utmToHeard[utmSource]
-      if (mapped && [...heardSelect.options].some((option) => option.value === mapped)) {
-        heardSelect.value = mapped
+    const campaign = readStoredCampaign()
+    const utmSource = (campaign?.utm_source || params.get('utm_source') || '').toLowerCase()
+    const mappedHeard = heardFromFromUtmSource(utmSource)
+    if (heardSelect instanceof HTMLSelectElement && mappedHeard) {
+      if ([...heardSelect.options].some((option) => option.value === mappedHeard)) {
+        heardSelect.value = mappedHeard
       }
     }
 
@@ -316,6 +312,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
             placement: 'contact',
             intent: payload.intent,
             heard_from: payload.heardFrom || undefined,
+            ...campaignTrackParams(),
           })
         }
         form.reset()

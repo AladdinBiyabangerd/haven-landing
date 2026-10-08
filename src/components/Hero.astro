@@ -11,6 +11,13 @@ interface Props {
 const { locale, messages } = Astro.props
 const h = messages.hero
 const waHref = whatsappUrl(messages.contact.whatsappPrefill)
+const contactHref = localePath(locale, '/contact')
+/** EN / intl: form-first (PH bounce ~5s). AZ/RU keep WhatsApp primary. */
+const formFirst = locale === 'en'
+const primaryHref = formFirst ? contactHref : waHref
+const secondaryHref = formFirst ? waHref : contactHref
+const primaryIsWhatsApp = !formFirst
+const secondaryIsWhatsApp = formFirst
 ---
 
 <section class="hero">
@@ -23,14 +30,20 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       <div class="hero__cta reveal reveal-delay-3">
         <a
           class="btn btn-primary"
-          href={waHref}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={primaryHref}
+          target={primaryIsWhatsApp ? '_blank' : undefined}
+          rel={primaryIsWhatsApp ? 'noopener noreferrer' : undefined}
           data-track-placement="hero"
         >
           {h.ctaPrimary}
         </a>
-        <a class="btn btn-ghost" href={localePath(locale, '/contact')} data-track-placement="hero">
+        <a
+          class="btn btn-ghost"
+          href={secondaryHref}
+          target={secondaryIsWhatsApp ? '_blank' : undefined}
+          rel={secondaryIsWhatsApp ? 'noopener noreferrer' : undefined}
+          data-track-placement="hero"
+        >
           {h.ctaSecondary}
         </a>
       </div>

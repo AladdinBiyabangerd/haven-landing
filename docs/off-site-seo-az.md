@@ -72,6 +72,22 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 
 ---
 
+## Organic amplify (GA prioriteti)
+
+7 günlük GA: `google / organic` ən yaxşı engagement (~80%, ~41s); sosial ~0 eng. Böyümə = guide/SEO publish, sosial bounce chase deyil.
+
+### Deploy + IndexNow checklist (yeni guide-lar sonrası)
+
+1. [ ] Push / Vercel deploy — `/az|en|ru/guides/…` live
+2. [ ] IndexNow açar URL yoxla: https://heselo.online/6333c2a8c71f44f0a0f557eaaebd5745.txt
+3. [ ] `npm run indexnow` (və ya yeni guide URL-ləri tək-tək)
+4. [ ] GSC URL Inspection — kritik guide səhifələri
+5. [ ] GA4: organic sessions / eng rate 7–14 gün sonra müqayisə
+
+Sosial UTM hygiene: [social-posts-log.md](./social-posts-log.md). PH ölçmə: [producthunt-playbook.md](./producthunt-playbook.md).
+
+---
+
 ## IndexNow (Bing sürətli index)
 
 Açar: `6333c2a8c71f44f0a0f557eaaebd5745` (public by design).

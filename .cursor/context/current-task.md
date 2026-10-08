@@ -1,32 +1,35 @@
-# Current task — PS/PC competitor alternative guides
+# Current task — GA-based measurement + conversion
 
 ## Completed
 
-- 8 rich comparison guides (az/en/ru): LANGAME, Club Timer, Akinsoft, Hasansoft, Təndir, SmartApp.az, GameClub, CafeSynk
-- Wiring: `GUIDE_SLUGS`, `comparisonGuides.ts`, `COMPARISON_GUIDE_SLUGS`, `RELATED_COMPARISON`, `seoContentPlan.ts`, `llms.txt.ts`
-- `SOLUTION_ALT_GUIDES.gaming` → langame, club-timer, gameclub
-- Landscape cross-links in IZI + playstation cafe guides
-- Build OK (all 8 × 3 locales prerendered)
-- PsTally: landscape-only (CafeSynk guide), no dedicated URL
+- `src/lib/campaign.ts` — first-touch UTM + heardFrom map (incl. producthunt)
+- ContactForm + contactMail + az/en/ru `heardFromOptions`
+- Analytics funnel: `generate_lead` (+ UTM), `cta_click`, `pricing_select`
+- EN hero form-first (`Request a demo` → contact); AZ/RU WhatsApp primary
+- Docs: social UTM hygiene, PH post-launch GA checklist, organic amplify (off-site-seo)
+- Verified locally: PH UTM → sessionStorage → contact heardFrom=Product Hunt
+- PH listing live; Visit website UTM correct; maker comment/reply blocked (PH Sign in)
 
 ## Current state
 
-All plan steps done. Commit when user asks.
+Code + docs done. Build OK. Commit when user asks.
 
 ## Decisions
 
-- LANGAME = PC club soft (like IZI) — Heselo does not replace
-- Club Timer / Akinsoft / Hasansoft = timer category — keep when enough
-- Təndir / SmartApp = broad AZ platforms — kitchen/POS stay if needed
-- GameClub / CafeSynk = closest lounge SaaS peers — honest peer comparison
+- Site-wide measurement (not PH-only)
+- EN form-first; AZ/RU WA primary
+- No dedicated `/producthunt` LP
 
 ## Remaining work
 
-1. Commit when asked
-2. Optional: IndexNow submit for new URLs
+1. User: GA4 Admin → mark `generate_lead` as key event
+2. User: PH Sign in → reply to comments / maker update (agent cannot while logged out)
+3. Deploy this branch + guide IndexNow after publish
+4. Commit when asked
 
 ## Relevant files
 
-- `src/data/guides/*AlternativeGuide.ts` (8 new)
-- `src/data/guides/types.ts`, `comparisonGuides.ts`, `index.ts`
-- `src/data/seoContentPlan.ts`, `src/pages/llms.txt.ts`
+- `src/lib/campaign.ts`, `src/lib/contactMail.ts`
+- `src/components/{Analytics,ContactForm,Hero,Header,Footer,PricingOffers}.astro`
+- `src/i18n/messages/{az,en,ru}.ts`
+- `docs/{producthunt-playbook,social-posts-log,off-site-seo-az}.md`

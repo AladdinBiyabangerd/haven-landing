@@ -170,11 +170,12 @@ Brauzer file-upload avtomatlaşdırıla bilməyəndə: PH-də **Select an image*
 
 ### Launch day
 
-1. [ ] Listing canlı — URL: https://www.producthunt.com/products/heselo?launch=heselo (Oct 1 PT)
+1. [x] Listing canlı — URL: https://www.producthunt.com/products/heselo?launch=heselo (Oct 1 PT)
 2. [x] Maker **first comment** (prelaunch checklist ✓ — room-time vs POS stub; tam şablon yuxarıda cavablar üçün)
-3. [ ] 4–6 saat: kommentlərə cavab (3 şablon + uyğunlaşdır) — canlı launch sonrası
+3. [ ] 4–6 saat: kommentlərə cavab (3 şablon + uyğunlaşdır) — **maker Sign in lazımdır** (agent brauzerdə logged out; 2026-10-08 yoxlama)
 4. [ ] LinkedIn/FB-də 1 announce (`utm_content=ph_social_announce`) — spam upvote çağırışı yox
-5. [x] [social-posts-log.md](./social-posts-log.md) → `ph_launch_01` + PH URL + Scheduled
+5. [x] [social-posts-log.md](./social-posts-log.md) → `ph_launch_01` + PH URL + Launched
+6. [x] Product link UTM yoxlandı (2026-10-08): `utm_source=producthunt&utm_medium=referral&utm_campaign=heselo&utm_content=ph_launch_01`
 
 ### Launch-gün qadağalar
 
@@ -191,11 +192,41 @@ Brauzer file-upload avtomatlaşdırıla bilməyəndə: PH-də **Select an image*
 - Analytics: `utm_source=producthunt` sessions + demo sorğuları
 - Hədəf: **1+ ciddi demo lead**; PotD əsas KPI deyil
 
+---
+
+## Post-launch ölçmə (GA4)
+
+Launch sonrası 7g-də: çox sessiya Direct-ə düşə bilər; PH referral qısa eng (~5s) tipikdir. Kod tərəfi: first-touch UTM + EN form-first hero + funnel events.
+
+### GA4 Admin checklist
+
+1. [ ] Events → `generate_lead` → **Mark as key event**
+2. [ ] (opsional) Explorations: Session source/medium × `generate_lead` / `cta_click` / `pricing_select`
+3. [ ] Filter / compare: `utm_source=producthunt` vs Direct vs `google / organic`
+
+### Hadisələr (sayt)
+
+| Event | Məna |
+|-------|------|
+| `generate_lead` | WhatsApp klik və ya contact form success — **əsas KPI** |
+| `cta_click` | `/contact` link klik (hero, header, footer, …) |
+| `pricing_select` | Pricing plan → contact |
+
+Event params: `placement`, `method` / `plan`, plus `utm_source|medium|campaign|content` (first-touch `sessionStorage`).
+
+### Organic amplify (PH-dən güclü keyfiyyət)
+
+7g GA: `google / organic` ən yaxşı eng (~80%, ~41s). Növbəti böyümə: guide/SEO publish — sosial bounce chase yox.
+
+1. [ ] Competitor alternative guide-ları **deploy** (live URL-lər)
+2. [ ] Deploy sonrası **IndexNow** (submit publish-dən əvvəl olubsa yenidən)
+3. [ ] GSC: yeni `/guides/…` URL-ləri Coverage / URL Inspection
+
 ## Əlaqəli sənədlər
 
 - [off-site-seo-az.md](./off-site-seo-az.md) — Prioritet 1 kataloqlar
 - [alternativeto-form-fill.md](./alternativeto-form-fill.md) — EN təsvir / pricing eyni məntiq
 - [quora-playbook.md](./quora-playbook.md) — kateqoriya sərhədi (otaq-vaxt vs mətbəx)
-- [social-posts-log.md](./social-posts-log.md) — `ph_launch_01` jurnalı
+- [social-posts-log.md](./social-posts-log.md) — `ph_launch_01` jurnalı + sosial UTM hygiene
 
-Son yeniləmə: 2026-09-30
+Son yeniləmə: 2026-10-08

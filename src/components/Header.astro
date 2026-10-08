@@ -85,7 +85,7 @@ const links = [
           ))
         }
       </div>
-      <a class="btn btn-primary header__cta" href={localePath(locale, '/contact')} data-journey-link="contact">{m.demo}</a>
+      <a class="btn btn-primary header__cta" href={localePath(locale, '/contact')} data-journey-link="contact" data-track-placement="header">{m.demo}</a>
       <button
         class="menu-btn"
         type="button"
@@ -102,7 +102,7 @@ const links = [
   <div class="mobile" id="mobile-nav" data-mobile hidden>
     <div class="container mobile__inner">
       {links.map((link) => <a href={link.href} class="mobile__link">{link.label}</a>)}
-      <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')} data-journey-link="contact">{m.demo}</a>
+      <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')} data-journey-link="contact" data-track-placement="header">{m.demo}</a>
       <div class="locales locales--menu" role="navigation" aria-label={m.languageNav}>
         {
           localeItems.map((item) => (

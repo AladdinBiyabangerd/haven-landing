@@ -16,6 +16,24 @@ Bu sənəd **kod deyil**. Məqsəd: artıq paylaşılan Facebook / LinkedIn (və
 **UTM şablonu:**  
 `?utm_source={facebook|linkedin|instagram|tiktok|quora|producthunt}&utm_medium={organic_social|referral}&utm_campaign=heselo&utm_content={channel}_post_NN|quora_answer_NN|ph_launch_01|ph_profile`
 
+### Outbound UTM hygiene (GA: IG/FB ~0% engagement)
+
+Sosial kanal **investisiya prioriteti deyil** (7g GA: ~0 eng / 0s). Yenə də hər link ölçülməlidir — əks halda Direct/`(not set)` şişir.
+
+| Qayda | Dəyər |
+|-------|--------|
+| `utm_source` | Kanal adı: `instagram` \| `facebook` \| `linkedin` \| `tiktok` (birləşdirmə: `social` istifadə etmə) |
+| `utm_medium` | Sosial post: `organic_social`; kataloq/referral: `referral` |
+| `utm_campaign` | Həmişə `heselo` |
+| `utm_content` | Unikal: `{channel}_post_NN` — təkrar məzmun üçün `_02`, `_03`… |
+| Locale | Default landing: `/az/` (AZ auditoriya) və ya `/en/` (beynəlxalq) — URL-də dil açıq olsun |
+| Bio / profile link | Eyni UTM; bio üçün `utm_content={channel}_bio` |
+
+**Nümunə (Instagram post):**  
+`https://heselo.online/az/?utm_source=instagram&utm_medium=organic_social&utm_campaign=heselo&utm_content=instagram_post_11`
+
+Sayt first-touch UTM-i `sessionStorage` (`heselo.campaign`) saxlayır — home → `/contact` keçiddə `heardFrom` avtomatik `social` olur. Yeni sosial landing **yazma**.
+
 ---
 
 ## Jurnal
@@ -42,7 +60,7 @@ Bu sənəd **kod deyil**. Məqsəd: artıq paylaşılan Facebook / LinkedIn (və
 | 2026-09-30 | Quora | `quora_post_az_03` | AZ post: Antikafedə saatla ödəniş — sessiya + kassa | post | Paylaşıldı · [post](https://www.quora.com/profile/Aladdin-Biyabangerd/Antikafed%C9%99-saatla-%C3%B6d%C9%99ni%C5%9Fi-nec%C9%99-izl%C9%99m%C9%99k-olar-Antikafe-d%C9%99qiq%C9%99-saat-v%C9%99-ya-a%C3%A7%C4%B1q-sessiya-il%C9%99-i%C5%9Fl%C9%99yir-klassik-restoran-%C3%A7ek) |
 | 2026-09-30 | Quora | `quora_answer_06` | AZ sual+cavab: Karaoke otağı rezervasiyası — hansı proqram | cavab | Paylaşıldı · [answer](https://www.quora.com/Karaoke-ota%C4%9F%C4%B1-rezervasiyas%C4%B1-%C3%BC%C3%A7%C3%BCn-hans%C4%B1-proqram-laz%C4%B1md%C4%B1r/answer/Aladdin-Biyabangerd) |
 | 2026-09-30 | Quora | `profile` | Profil bio AZ+EN; credential **Founder at Heselo** (default) | profil | Yeniləndi · [profile](https://www.quora.com/profile/Aladdin-Biyabangerd) |
-| 2026-09-30 | Product Hunt | `ph_launch_01` | EN launch — room-time ops (gaming/karaoke/anti-café); maker first comment; scheduled Oct 1 PT midnight | listing | Scheduled · [product](https://www.producthunt.com/products/heselo) · [launch](https://www.producthunt.com/products/heselo?launch=heselo) · prelaunch OK · playbook: [producthunt-playbook.md](./producthunt-playbook.md) |
+| 2026-09-30 | Product Hunt | `ph_launch_01` | EN launch — room-time ops (gaming/karaoke/anti-café); maker first comment; scheduled Oct 1 PT midnight | listing | Launched · [product](https://www.producthunt.com/products/heselo) · [launch](https://www.producthunt.com/products/heselo?launch=heselo) · UTM OK 2026-10-08 · playbook: [producthunt-playbook.md](./producthunt-playbook.md) |
 
 ---
 

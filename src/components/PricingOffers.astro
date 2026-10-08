@@ -41,7 +41,7 @@ function planFeatures(features: string[], upTo: number): string[] {
 }
 ---
 
-<div class="pricing-offers" data-pricing-offers data-storage-key={VENUE_STORAGE_KEY}>
+<div class="pricing-offers" data-pricing-offers data-track-placement="pricing" data-storage-key={VENUE_STORAGE_KEY}>
   <div class="chooser">
     <p class="chooser-label" id="venue-type-label">{page.chooseType}</p>
     <div class="types" role="tablist" aria-labelledby="venue-type-label">
@@ -140,6 +140,7 @@ function planFeatures(features: string[], upTo: number): string[] {
                     class:list={['btn', plan.id === 'plus' ? 'btn-primary' : 'btn-ghost']}
                     href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}&period=monthly`}
                     data-contact-link
+                    data-plan={plan.id}
                     data-contact-base={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}`}
                   >
                     {page.cta}
@@ -243,6 +244,7 @@ function planFeatures(features: string[], upTo: number): string[] {
               class="btn btn-ghost"
               href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=custom&period=monthly`}
               data-contact-link
+              data-plan="custom"
               data-contact-base={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=custom`}
             >
               {page.custom.cta}

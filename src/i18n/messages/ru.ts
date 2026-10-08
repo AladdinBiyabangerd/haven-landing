@@ -871,6 +871,7 @@ export const ru: Messages = {
       { value: 'perplexity', label: 'Perplexity' },
       { value: 'gemini', label: 'Gemini / Google AI' },
       { value: 'google', label: 'Поиск Google' },
+      { value: 'producthunt', label: 'Product Hunt' },
       { value: 'social', label: 'Instagram / Facebook / LinkedIn' },
       { value: 'friend', label: 'Рекомендация друга или коллеги' },
       { value: 'other', label: 'Другое' },
