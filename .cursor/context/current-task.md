@@ -1,28 +1,32 @@
-# Current task — deepen all comparison guides
+# Current task — PS/PC competitor alternative guides
 
 ## Completed
 
-- iiko + Clopos rich guides (prior)
-- All remaining thin comparison guides → dedicated rich files (az/en/ru, table, FAQ, landscape, `dateModified: 2026-10-08`)
-- [`comparisonGuides.ts`](src/data/guides/comparisonGuides.ts) now only wires rich overrides (no thin catalog)
-- Build OK for all `/az|/en|/ru/guides/{slug}/` comparison URLs
+- 8 rich comparison guides (az/en/ru): LANGAME, Club Timer, Akinsoft, Hasansoft, Təndir, SmartApp.az, GameClub, CafeSynk
+- Wiring: `GUIDE_SLUGS`, `comparisonGuides.ts`, `COMPARISON_GUIDE_SLUGS`, `RELATED_COMPARISON`, `seoContentPlan.ts`, `llms.txt.ts`
+- `SOLUTION_ALT_GUIDES.gaming` → langame, club-timer, gameclub
+- Landscape cross-links in IZI + playstation cafe guides
+- Build OK (all 8 × 3 locales prerendered)
+- PsTally: landscape-only (CafeSynk guide), no dedicated URL
 
 ## Current state
 
-Deepen plan done. Commit when user asks.
+All plan steps done. Commit when user asks.
 
 ## Decisions
 
-- Niche: club / room-time; not full restaurant/retail POS replacement
-- Heselo prices `{low}` only; MinuPOS may cite public 99–799; others “official quote”
-- One winner URL per slug (unchanged)
-- `club-pos-vs-excel` stayed outside this wave (already full guide)
+- LANGAME = PC club soft (like IZI) — Heselo does not replace
+- Club Timer / Akinsoft / Hasansoft = timer category — keep when enough
+- Təndir / SmartApp = broad AZ platforms — kitchen/POS stay if needed
+- GameClub / CafeSynk = closest lounge SaaS peers — honest peer comparison
 
 ## Remaining work
 
 1. Commit when asked
+2. Optional: IndexNow submit for new URLs
 
 ## Relevant files
 
-- `src/data/guides/*AlternativeGuide.ts`, `*Guide.ts` (rich)
-- `src/data/guides/comparisonGuides.ts`
+- `src/data/guides/*AlternativeGuide.ts` (8 new)
+- `src/data/guides/types.ts`, `comparisonGuides.ts`, `index.ts`
+- `src/data/seoContentPlan.ts`, `src/pages/llms.txt.ts`

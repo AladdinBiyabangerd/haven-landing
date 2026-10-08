@@ -77,6 +77,14 @@ Starting monthly AZN (Small / Kiçik plan) — live from public subscription cat
 - Restaurant POS vs karaoke: https://heselo.online/az/guides/restaurant-pos-vs-karaoke-system/
 - PlayStation cafe software: https://heselo.online/az/guides/playstation-cafe-software-alternative/
 - IZI alternative: https://heselo.online/az/guides/izi-alternative/
+- LANGAME alternative: https://heselo.online/az/guides/langame-alternative/
+- Club Timer alternative: https://heselo.online/az/guides/club-timer-alternative/
+- Akinsoft alternative: https://heselo.online/az/guides/akinsoft-alternative/
+- Hasansoft alternative: https://heselo.online/az/guides/hasansoft-alternative/
+- Tendir alternative: https://heselo.online/az/guides/tendir-alternative/
+- SmartApp.az alternative: https://heselo.online/az/guides/smartapp-alternative/
+- GameClub alternative: https://heselo.online/az/guides/gameclub-alternative/
+- CafeSynk alternative: https://heselo.online/az/guides/cafesynk-alternative/
 - Kaktus alternative: https://heselo.online/az/guides/kaktus-alternative/
 - resto.az alternative: https://heselo.online/az/guides/resto-az-alternative/
 

@@ -100,14 +100,14 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Oyun klubu landşaftı (qısa)',
           paragraphs: [
-            'Azərbaycan PC klubunda IZI və oxşar həllər workstation nəzarətinə görə tanınır. Otaq-vaxt, karaoke və PlayStation otaqları üçün ayrıca klub paneli (Heselo) baxılır. Sadə stansiya taymeri (Hasansoft tipli) üçüncü kiçik kateqoriyadır — yalnız vaxt sayğacı.',
+            'Azərbaycan PC klubunda IZI və LANGAME workstation nəzarətinə görə tanınır. Otaq-vaxt, karaoke və PlayStation otaqları üçün ayrıca klub paneli (Heselo) baxılır. Sadə stansiya taymeri (Club Timer, Hasansoft) üçüncü kiçik kateqoriyadır — yalnız vaxt sayğacı.',
             '«IZI alternativi» axtarışı bəzən otaq proqramı gözlədir; kateqoriyanı ayırmaq səhv alış-verişin qarşısını alır.',
           ],
           bullets: [
-            'IZI — PC kilidləmə və klub agenti',
+            'IZI / LANGAME — PC kilidləmə və klub agenti',
             'Heselo — otaq-vaxt, bron, sessiya, kassa; PC kilidləmə deyil',
-            'Stansiya taymeri — minimal PS kafe',
-            'Hibrid klub: IZI (PC zalı) + Heselo (otaqlar)',
+            'Club Timer / Hasansoft — minimal PS kafe taymeri',
+            'Hibrid klub: IZI/LANGAME (PC zalı) + Heselo (otaqlar)',
           ],
         },
         {
@@ -259,14 +259,14 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Gaming club landscape (short)',
           paragraphs: [
-            'In Azerbaijan, IZI and similar tools are known for workstation control. Room-time, karaoke and PlayStation rooms use a separate club panel (Heselo). Simple station timers (Hasansoft-style) are a third small category — countdown only.',
+            'In Azerbaijan, IZI and LANGAME are known for workstation control. Room-time, karaoke and PlayStation rooms use a separate club panel (Heselo). Simple station timers (Club Timer, Hasansoft) are a third small category — countdown only.',
             '“IZI alternative” searches sometimes expect room software; separating categories avoids wrong purchases.',
           ],
           bullets: [
-            'IZI — PC lock and club agent',
+            'IZI / LANGAME — PC lock and club agent',
             'Heselo — room-time, booking, session, cash; not PC lock',
-            'Station timer — minimal PS café',
-            'Hybrid club: IZI (PC hall) + Heselo (rooms)',
+            'Club Timer / Hasansoft — minimal PS café timer',
+            'Hybrid club: IZI/LANGAME (PC hall) + Heselo (rooms)',
           ],
         },
         {
@@ -418,14 +418,14 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Ландшафт игрового клуба (кратко)',
           paragraphs: [
-            'В Азербайджане IZI и аналоги известны контролем рабочих мест. Время комнат, караоке и PS-комнаты — отдельная клубная панель (Heselo). Простой таймер станций (Hasansoft) — третья малая категория.',
+            'В Азербайджане IZI и LANGAME известны контролем рабочих мест. Время комнат, караоке и PS-комнаты — отдельная клубная панель (Heselo). Простой таймер станций (Club Timer, Hasansoft) — третья малая категория.',
             'Поиск «альтернатива IZI» иногда ждёт комнатное ПО — разделение категорий экономит ошибочные покупки.',
           ],
           bullets: [
-            'IZI — блокировка PC и агент клуба',
+            'IZI / LANGAME — блокировка PC и агент клуба',
             'Heselo — время комнат, бронь, сеанс, касса; не блокировка PC',
-            'Таймер станций — минимальное PS-кафе',
-            'Гибрид: IZI (PC-зал) + Heselo (комнаты)',
+            'Club Timer / Hasansoft — минимальный таймер PS-кафе',
+            'Гибрид: IZI/LANGAME (PC-зал) + Heselo (комнаты)',
           ],
         },
         {
