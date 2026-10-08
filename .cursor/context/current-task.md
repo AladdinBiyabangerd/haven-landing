@@ -1,23 +1,22 @@
-# Current task — Clopos alternative guide deepen
+# Current task — deepen all comparison guides
 
 ## Completed
 
-- Catalog prices from API (`catalogCopy.ts`, placeholders in copy)
-- iiko rich guide: `iikoAlternativeGuide.ts` + optional `sections[].table`
-- Clopos rich guide: `cloposAlternativeGuide.ts` (az/en/ru) — table, FAQ, landscape, SEO, `dateModified: 2026-10-08`
-- Thin Clopos template removed from `comparisonGuides.ts`; prepended like iiko
-- URL unchanged: `/guides/clopos-alternative/` (az/en/ru)
+- iiko + Clopos rich guides (prior)
+- All remaining thin comparison guides → dedicated rich files (az/en/ru, table, FAQ, landscape, `dateModified: 2026-10-08`)
+- [`comparisonGuides.ts`](src/data/guides/comparisonGuides.ts) now only wires rich overrides (no thin catalog)
+- Build OK for all `/az|/en|/ru/guides/{slug}/` comparison URLs
 
 ## Current state
 
-Clopos deepen done. Build OK (`/az|/en|/ru/guides/clopos-alternative/`). Commit when user asks.
+Deepen plan done. Commit when user asks.
 
-## Decisions (reuse)
+## Decisions
 
-- Niche: club / room-time — not full restaurant POS replacement
-- Landscape: Clopos / iiko / Dine / MinuPOS named only to redirect restaurant intent
-- Heselo prices via `{low}` only; no invented Clopos package prices
-- One winner URL: `/guides/clopos-alternative/`
+- Niche: club / room-time; not full restaurant/retail POS replacement
+- Heselo prices `{low}` only; MinuPOS may cite public 99–799; others “official quote”
+- One winner URL per slug (unchanged)
+- `club-pos-vs-excel` stayed outside this wave (already full guide)
 
 ## Remaining work
 
@@ -25,7 +24,5 @@ Clopos deepen done. Build OK (`/az|/en|/ru/guides/clopos-alternative/`). Commit 
 
 ## Relevant files
 
-- `src/data/guides/cloposAlternativeGuide.ts`
+- `src/data/guides/*AlternativeGuide.ts`, `*Guide.ts` (rich)
 - `src/data/guides/comparisonGuides.ts`
-- `src/data/guides/iikoAlternativeGuide.ts` (pattern)
-- Live: https://heselo.online/az/guides/clopos-alternative/

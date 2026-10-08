@@ -8,7 +8,8 @@
   - Clopos page: Clopos / iiko / Dine / MinuPOS (AZ-local restaurant stack)
 - **Guide tables:** optional `section.table` on `GuideCopy` is allowed for comparison pages (`iiko-alternative-clubs`, `clopos-alternative`).
 - **One winner URL per intent:** keep `/guides/iiko-alternative-clubs/` and `/guides/clopos-alternative/`; no doorway clones.
-- **Rich overrides:** named competitors that need depth use dedicated files (`iikoAlternativeGuide.ts`, `cloposAlternativeGuide.ts`) prepended in `comparisonGuides.ts`; thin template catalog stays for the rest.
+- **Rich overrides:** all Phase C comparison guides use dedicated files; `comparisonGuides.ts` only imports/returns them (thin template catalog removed 2026-10-08).
+- **Kinds covered:** restaurant (Dine, Restomas, MinuPOS, robotPOS, resto.az, Fazilat, SmartPOS), timer (PlayStation café), pc-club (IZI), appointments (Kaktus), club-pos (affordable, Kassa.az), category (restaurant vs karaoke), multi-column (azerbaijan-pos-systems-comparison), marketplace honesty (Baza Market).
 
 ## Catalog prices in copy (2026-10-08)
 
