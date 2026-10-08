@@ -1,30 +1,31 @@
-# Current task — catalog prices from API in all copy
+# Current task — Clopos alternative guide deepen
 
 ## Completed
 
-- `src/lib/catalogCopy.ts`: `{low|high|gaming|billiards|karaoke|lounge|antikafe}` from public subscription catalog
-- `loadPricedMessages()` warms API then deep-fills i18n
-- Pages + guides/solutions + SEO/`llms.txt` use catalog numbers (not hardcoded 25/29/32/39)
-- Static `public/llms.txt` → dynamic `src/pages/llms.txt.ts`
-- Build check: 0 leftover `{low}` / `{gaming}` placeholders in `dist/client`
+- Catalog prices from API (`catalogCopy.ts`, placeholders in copy)
+- iiko rich guide: `iikoAlternativeGuide.ts` + optional `sections[].table`
+- Clopos rich guide: `cloposAlternativeGuide.ts` (az/en/ru) — table, FAQ, landscape, SEO, `dateModified: 2026-10-08`
+- Thin Clopos template removed from `comparisonGuides.ts`; prepended like iiko
+- URL unchanged: `/guides/clopos-alternative/` (az/en/ru)
 
 ## Current state
 
-Hardcoded marketing fees replaced with API-backed placeholders. Offline fallback remains in `FALLBACK_VENUE_OFFERS` only.
+Clopos deepen done. Build OK (`/az|/en|/ru/guides/clopos-alternative/`). Commit when user asks.
 
-## Decisions
+## Decisions (reuse)
 
-- Placeholders in copy; fill at build/SSR via `applyCatalogPricesDeep` / `withCatalogPrices`
-- Competitor prices (e.g. MinuPOS 99–799) stay literal — not Heselo catalog
+- Niche: club / room-time — not full restaurant POS replacement
+- Landscape: Clopos / iiko / Dine / MinuPOS named only to redirect restaurant intent
+- Heselo prices via `{low}` only; no invented Clopos package prices
+- One winner URL: `/guides/clopos-alternative/`
 
 ## Remaining work
 
-1. Commit when user asks
-2. Optional: visual QA that hero/FAQ/guides cards match live catalog after API price change
+1. Commit when asked
 
 ## Relevant files
 
-- `src/lib/catalogCopy.ts`, `src/lib/venueOffers.ts`, `src/lib/seo.ts`
-- `src/i18n/index.ts` + `messages/{az,en,ru}.ts`
-- `src/data/guides/*`, `src/data/solutions/*`
-- `src/pages/llms.txt.ts`
+- `src/data/guides/cloposAlternativeGuide.ts`
+- `src/data/guides/comparisonGuides.ts`
+- `src/data/guides/iikoAlternativeGuide.ts` (pattern)
+- Live: https://heselo.online/az/guides/clopos-alternative/

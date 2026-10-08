@@ -1,5 +1,6 @@
 import type { Locale } from '@/i18n/config'
 import type { GuideCopy } from './types'
+import { cloposAlternativeGuide } from './cloposAlternativeGuide'
 import { iikoAlternativeGuide } from './iikoAlternativeGuide'
 
 const PUBLISHED = '2026-09-17'
@@ -27,65 +28,6 @@ type CatalogEntry = {
 }
 
 const catalog: CatalogEntry[] = [
-  {
-    slug: 'clopos-alternative',
-    name: 'Clopos',
-    kind: 'restaurant',
-    relatedSolutions: ['karaoke', 'lounge', 'pos', 'inventory'],
-    copy: {
-      az: {
-        shortTitle: 'Clopos alternativi',
-        h1: 'Vaxtla işləyən klublar üçün Clopos alternativi',
-        seoTitle: 'Clopos alternativi — klub üçün Heselo',
-        seoDescription:
-          'Clopos və Heselo müqayisəsi: restoran POS-u ilə otaq sessiyası idarəetməsinin fərqi, rezervasiya, kassa və stok imkanları.',
-        intro:
-          'Clopos restoran və kafelərdə sifariş, menyu və mətbəx proseslərinə uyğun qurulub. Karaoke, oyun və launj məkanında əsas hesab vaxtdan yaranırsa, Heselo daha məqsədli seçimdir.',
-        competitorFit:
-          'Ofisiant sifarişi, mətbəx, QR menyu və çatdırılma gündəlik işin mərkəzindədirsə, Clopos-un restoran yönümlü prosesi üstünlük verir. Heselo bu funksiyaların tam əvəzi deyil.',
-        heseloFit:
-          'Heselo otaq, masa və stansiya rezervasiyasını başlat-dayandır sessiyası, tarif, kassanın açılıb-bağlanması və məhsul qalığı ilə eyni iş prosesinə gətirir.',
-        priceAngle:
-          'Heselo {low} AZN/aydan başlayır. Clopos-un aktual paket və avadanlıq xərclərini rəsmi təkliflə dəqiqləşdirib, yalnız istifadə edəcəyiniz funksiyalar üzrə müqayisə edin.',
-        switchNote:
-          'Bir həftəlik rezervasiya və tarif nümunəsini Heselo demosunda sınaqdan keçirin. Restoran sifarişlərini köçürməyin; yalnız klubun otaq, masa və stansiyalarını, satış məhsullarını mərhələli qurun.',
-      },
-      en: {
-        shortTitle: 'Clopos alternative',
-        h1: 'A Clopos alternative for time-based clubs',
-        seoTitle: 'Clopos Alternative for Clubs — Heselo',
-        seoDescription:
-          'Compare Clopos and Heselo: restaurant POS versus room-session management, with bookings, cash shifts and inventory.',
-        intro:
-          'Clopos is designed around restaurant and café ordering, menus and kitchen workflows. If time drives the bill in a karaoke, gaming or lounge venue, Heselo is a more focused option.',
-        competitorFit:
-          'Clopos fits when waiter orders, kitchen operations, QR menus and delivery sit at the centre of daily work. Heselo does not claim to replace that full restaurant workflow.',
-        heseloFit:
-          'Heselo brings room, table and station bookings, start-stop sessions, rates, cash-shift opening and closing, and product stock into one club workflow.',
-        priceAngle:
-          'Heselo starts from {low} AZN per month. Confirm current Clopos package and hardware costs through an official quote, then compare only the capabilities you will actually use.',
-        switchNote:
-          'Test a representative week of bookings and rates in the Heselo demo. Keep restaurant orders in the appropriate system and migrate club rooms, tables, stations and sale items in stages.',
-      },
-      ru: {
-        shortTitle: 'Альтернатива Clopos',
-        h1: 'Альтернатива Clopos для клубов с почасовой оплатой',
-        seoTitle: 'Альтернатива Clopos для клубов — Heselo',
-        seoDescription:
-          'Сравнение Clopos и Heselo: ресторанная POS-система или управление комнатами и сеансами, бронирования, касса и склад.',
-        intro:
-          'Clopos рассчитана на заказы, меню и кухонные процессы ресторанов и кафе. Если счёт в караоке, игровом клубе или лаунже зависит прежде всего от времени, Heselo предлагает более узкий и подходящий сценарий.',
-        competitorFit:
-          'Clopos уместнее, когда основа работы — заказы официантов, кухня, QR-меню и доставка. Heselo не позиционируется как полноценная замена этому ресторанному контуру.',
-        heseloFit:
-          'Heselo объединяет бронирование комнат, столов и станций, запуск сеанса, тарифы, открытие и закрытие кассовой смены и остатки товаров.',
-        priceAngle:
-          'Heselo стоит от {low} AZN в месяц. Уточните актуальную стоимость пакета и оборудования Clopos по официальному предложению и сравнивайте только нужные вам функции.',
-        switchNote:
-          'Проверьте в демо Heselo типичную неделю бронирований и тарифов. Ресторанные заказы оставьте в профильной системе, а клубные комнаты, столы, станции и товары переносите поэтапно.',
-      },
-    },
-  },
   {
     slug: 'dine-alternative',
     name: 'Dine',
@@ -1269,5 +1211,5 @@ export function comparisonGuides(locale: Locale): GuideCopy[] {
     }
   })
 
-  return [iikoAlternativeGuide(locale), ...templated]
+  return [iikoAlternativeGuide(locale), cloposAlternativeGuide(locale), ...templated]
 }
