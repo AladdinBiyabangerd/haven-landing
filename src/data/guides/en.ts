@@ -325,7 +325,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'I’m looking for lounge bar software. Does this fit?',
-        a: 'This guide explains how a room lounge operates. If you’re looking for lounge bar management software itself, see the room lounge solution page: VIP room bookings, live sessions, bar sales, and cash in one panel, with the Small plan from 39 AZN/month.',
+        a: 'This guide explains how a room lounge operates. If you’re looking for lounge bar management software itself, see the room lounge solution page: VIP room bookings, live sessions, bar sales, and cash in one panel, with the Small plan from {lounge} AZN/month.',
       },
       {
         q: 'Can bar sales outside the rooms go through the same cash register?',
@@ -428,7 +428,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'How much does anti-café software cost?',
-        a: 'In Heselo, the Small plan for anti-cafés starts at 32 AZN/month. Other plans and annual billing options are listed on the pricing page.',
+        a: 'In Heselo, the Small plan for anti-cafés starts at {antikafe} AZN/month. Other plans and annual billing options are listed on the pricing page.',
       },
       {
         q: 'How do I get a demo?',
@@ -512,7 +512,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'How much does PS club software cost?',
-        a: 'In Heselo, the Small plan for gaming clubs starts at 25 AZN/month. Medium and Large plans are available for more stations.',
+        a: 'In Heselo, the Small plan for gaming clubs starts at {gaming} AZN/month. Medium and Large plans are available for more stations.',
       },
       {
         q: 'What should I check during a demo?',
@@ -689,7 +689,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'How much does a karaoke booking system cost?',
-        a: 'In Heselo, the Small plan for karaoke starts at 39 AZN/month. Prices for the other plans are published too.',
+        a: 'In Heselo, the Small plan for karaoke starts at {karaoke} AZN/month. Prices for the other plans are published too.',
       },
       {
         q: 'Can drinks be linked to a booking in advance?',
@@ -800,13 +800,13 @@ export const guidesEn: GuideCopy[] = [
     h1: 'How much does Heselo cost? Published plans explained',
     seoTitle: 'Heselo pricing — published plans by venue type',
     seoDescription:
-      'Heselo plans: PS 25, billiards 29, anti-café 32, karaoke and lounge 39 AZN/month. Plans, annual billing, custom quotes, and a free trial/demo.',
+      'Heselo plans: PS {gaming}, billiards {billiards}, anti-café {antikafe}, karaoke and lounge {karaoke} AZN/month. Plans, annual billing, custom quotes, and a free trial/demo.',
     keywords: [
       'Heselo pricing',
       'Heselo plans',
       'how much is Heselo',
       'club panel pricing',
-      '25 AZN venue software',
+      '{low} AZN venue software',
       'free club software trial',
       'club software free demo',
     ],
@@ -819,7 +819,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'published',
         title: 'What are the starting prices?',
         paragraphs: [
-          'Starting monthly fees for the Small plan are: gaming club / PS — 25 AZN, billiards — 29 AZN, anti-café — 32 AZN, karaoke and room lounge — 39 AZN.',
+          'Starting monthly fees for the Small plan are: gaming club / PS — {gaming} AZN, billiards — {billiards} AZN, anti-café — {antikafe} AZN, karaoke and room lounge — {karaoke} AZN.',
           'Prices, limits, and annual billing options for the Medium and Large plans are in the table on the pricing page.',
         ],
       },
@@ -856,15 +856,15 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'What is the minimum plan for a PS club?',
-        a: 'The Small plan starts at 25 AZN/month.',
+        a: 'The Small plan starts at {gaming} AZN/month.',
       },
       {
         q: 'What is the minimum plan for karaoke?',
-        a: 'The Small plan starts at 39 AZN/month.',
+        a: 'The Small plan starts at {karaoke} AZN/month.',
       },
       {
         q: 'What does it cost for an anti-café?',
-        a: 'The Small plan starts at 32 AZN/month.',
+        a: 'The Small plan starts at {antikafe} AZN/month.',
       },
       {
         q: 'Is there a free trial or demo of the club software?',

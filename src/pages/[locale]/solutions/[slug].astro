@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import Faq from '@/components/Faq.astro'
 import { resolveLocale, LOCALES } from '@/i18n/config'
-import { getMessages } from '@/i18n'
+import { loadPricedMessages } from '@/i18n'
 import { getSolution, getSolutions, SOLUTION_SLUGS } from '@/data/solutions'
 import { getAltGuidesForSolution, getGuideForSolution } from '@/data/guides'
 import { SOLUTION_SHOT_MAP, SOLUTION_EXTRA_SHOT_MAP } from '@/lib/productShots'
@@ -11,6 +11,7 @@ import CtaBanner from '@/components/CtaBanner.astro'
 import NextThought from '@/components/NextThought.astro'
 import { localePath } from '@/lib/site'
 import { contactPath, pricingPath } from '@/lib/journey'
+import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { VENUE_STORAGE_KEY, getVenueOffer, isVenueOfferSlug, loadVenueOffers } from '@/lib/venueOffers'
 import { fillTemplate, formatMoney } from '@/lib/format'
 
@@ -24,19 +25,20 @@ export function getStaticPaths() {
 
 const locale = resolveLocale(Astro.params.locale)
 const slug = String(Astro.params.slug || '')
-const messages = getMessages(locale)
-const solution = getSolution(locale, slug)
+const messages = await loadPricedMessages(locale)
+await loadVenueOffers()
+const solutionRaw = getSolution(locale, slug)
 
-if (!solution) {
+if (!solutionRaw) {
   return Astro.redirect(localePath(locale, '/solutions'))
 }
+const solution = applyCatalogPricesDeep(solutionRaw)
 
 const related = getSolutions(locale).filter((item) => solution.related.includes(item.slug))
 const relatedGuide = getGuideForSolution(locale, solution.slug)
 const altGuides = getAltGuidesForSolution(locale, solution.slug)
 const productShotId = SOLUTION_SHOT_MAP[solution.slug]
 const extraShotId = SOLUTION_EXTRA_SHOT_MAP[solution.slug]
-await loadVenueOffers()
 const venueOffer = getVenueOffer(solution.slug)
 const fromFee = venueOffer?.plans[0].monthlyFee
 const offerPrice = fromFee != null

@@ -2,21 +2,24 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import Cta from '@/components/Cta.astro'
 import { resolveLocale } from '@/i18n/config'
-import { getMessages } from '@/i18n'
+import { loadPricedMessages } from '@/i18n'
 import { getComparisonGuides, getEducationalGuides, getGuidesHub } from '@/data/guides'
 import LinkCard from '@/components/LinkCard.astro'
+import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { localePath } from '@/lib/site'
 import { truncateText } from '@/lib/format'
+import { loadVenueOffers } from '@/lib/venueOffers'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
 }
 
 const locale = resolveLocale(Astro.params.locale)
-const messages = getMessages(locale)
-const hub = getGuidesHub(locale)
-const educational = getEducationalGuides(locale)
-const comparisons = getComparisonGuides(locale)
+const messages = await loadPricedMessages(locale)
+await loadVenueOffers()
+const hub = applyCatalogPricesDeep(getGuidesHub(locale))
+const educational = applyCatalogPricesDeep(getEducationalGuides(locale))
+const comparisons = applyCatalogPricesDeep(getComparisonGuides(locale))
 ---
 
 <BaseLayout

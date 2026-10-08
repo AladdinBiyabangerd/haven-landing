@@ -4,7 +4,7 @@ import ProductGallery from '@/components/ProductGallery.astro'
 import Cta from '@/components/Cta.astro'
 import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
-import { getMessages } from '@/i18n'
+import { loadPricedMessages } from '@/i18n'
 import { getSolution } from '@/data/solutions'
 import { localePath } from '@/lib/site'
 
@@ -13,7 +13,7 @@ export function getStaticPaths() {
 }
 
 const locale = resolveLocale(Astro.params.locale)
-const messages = getMessages(locale)
+const messages = await loadPricedMessages(locale)
 const page = messages.featuresPage
 ---
 

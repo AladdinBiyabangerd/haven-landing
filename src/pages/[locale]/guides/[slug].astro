@@ -4,7 +4,7 @@ import Faq from '@/components/Faq.astro'
 import NextThought from '@/components/NextThought.astro'
 import CtaBanner from '@/components/CtaBanner.astro'
 import { resolveLocale, LOCALES } from '@/i18n/config'
-import { getMessages } from '@/i18n'
+import { loadPricedMessages } from '@/i18n'
 import {
   getGuide,
   getRelatedComparisonGuides,
@@ -12,10 +12,11 @@ import {
   type GuideSlug,
 } from '@/data/guides'
 import { getSolution } from '@/data/solutions'
+import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { formatDate } from '@/lib/format'
 import { localePath } from '@/lib/site'
 import { contactPath, pricingPath } from '@/lib/journey'
-import { isVenueOfferSlug, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
+import { isVenueOfferSlug, loadVenueOffers, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
 export function getStaticPaths() {
   return LOCALES.flatMap((locale) =>
@@ -27,12 +28,14 @@ export function getStaticPaths() {
 
 const locale = resolveLocale(Astro.params.locale)
 const slug = String(Astro.params.slug || '')
-const messages = getMessages(locale)
-const guide = getGuide(locale, slug)
+const messages = await loadPricedMessages(locale)
+await loadVenueOffers()
+const guideRaw = getGuide(locale, slug)
 
-if (!guide) {
+if (!guideRaw) {
   return Astro.redirect(localePath(locale, '/guides'))
 }
+const guide = applyCatalogPricesDeep(guideRaw)
 
 const related = guide.relatedSolutions
   .map((s) => getSolution(locale, s))

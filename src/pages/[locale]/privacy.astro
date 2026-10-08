@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import LegalDocument from '@/components/LegalDocument.astro'
 import { resolveLocale } from '@/i18n/config'
-import { getMessages } from '@/i18n'
+import { loadPricedMessages } from '@/i18n'
 import { privacyPolicyBlocks } from '@/content/privacyPolicy'
 import { formatDate as formatDateForLocale } from '@/lib/format'
 
@@ -11,7 +11,7 @@ export function getStaticPaths() {
 }
 
 const locale = resolveLocale(Astro.params.locale)
-const messages = getMessages(locale)
+const messages = await loadPricedMessages(locale)
 const page = messages.privacy
 const blocks = privacyPolicyBlocks[locale]
 

@@ -90,7 +90,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost for a billiards club?',
-        a: 'The Small plan for billiards starts at 29 AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. For several branches or volume beyond a standard plan, we prepare a separate custom quote.',
+        a: 'The Small plan for billiards starts at {billiards} AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. For several branches or volume beyond a standard plan, we prepare a separate custom quote.',
       },
       {
         q: 'How do we get a demo — is a card required?',
@@ -171,7 +171,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'Where is karaoke pricing listed?',
-        a: 'The Small plan for karaoke starts at 39 AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. You can request a free demo through the contact form — no card details needed, just tell us how many rooms you run.',
+        a: 'The Small plan for karaoke starts at {karaoke} AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. You can request a free demo through the contact form — no card details needed, just tell us how many rooms you run.',
       },
       {
         q: 'Can karaoke, billiards, and a lounge share one panel?',
@@ -258,7 +258,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost for a PS club?',
-        a: 'The Small plan for PlayStation and gaming clubs starts at 25 AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your station count through the contact form — no card details needed; we show the schedule and a live session.',
+        a: 'The Small plan for PlayStation and gaming clubs starts at {gaming} AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your station count through the contact form — no card details needed; we show the schedule and a live session.',
       },
     ],
     related: ['billiards', 'karaoke', 'reservations', 'pos'],
@@ -343,7 +343,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost for an anti-café?',
-        a: 'The Small plan for anti-cafés starts at 32 AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. If several halls or branches do not fit a standard plan, we prepare a separate custom quote. The demo is free and needs no card.',
+        a: 'The Small plan for anti-cafés starts at {antikafe} AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. If several halls or branches do not fit a standard plan, we prepare a separate custom quote. The demo is free and needs no card.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
@@ -356,7 +356,7 @@ export const solutionsEn: SolutionCopy[] = [
     h1: 'Room lounge management system',
     seoTitle: 'Lounge bar management software & VIP room booking | Heselo',
     seoDescription:
-      'Lounge bar management software: VIP room booking, live sessions, bar sales, cash, and inventory in one panel. For room lounges — from 39 AZN/month, free demo.',
+      'Lounge bar management software: VIP room booking, live sessions, bar sales, cash, and inventory in one panel. For room lounges — from {lounge} AZN/month, free demo.',
     keywords: [
       'lounge bar management software',
       'lounge bar software',
@@ -429,7 +429,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does lounge bar software cost?',
-        a: 'The Small plan for room lounges starts at 39 AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your room count through the contact form — no card details needed; we show the schedule and a live session on your scenario.',
+        a: 'The Small plan for room lounges starts at {lounge} AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your room count through the contact form — no card details needed; we show the schedule and a live session on your scenario.',
       },
     ],
     related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
@@ -509,7 +509,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'Where is pricing listed?',
-        a: 'Reservations and the schedule are the core of the panel; the price depends on your venue-type plan. The Small plan starts at 25 AZN a month for PS/gaming, 29 for billiards, 32 for anti-cafés, and 39 for karaoke and lounges. The full table is on the pricing page, and the demo is free.',
+        a: 'Reservations and the schedule are the core of the panel; the price depends on your venue-type plan. The Small plan starts at {gaming} AZN a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. The full table is on the pricing page, and the demo is free.',
       },
     ],
     related: ['karaoke', 'lounge', 'gaming', 'pos'],
@@ -591,7 +591,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'Plans are priced by venue type: the Small plan starts at 25 AZN a month for PS/gaming, 29 for billiards, 32 for anti-cafés, and 39 for karaoke and lounges. Medium and Large plans, annual billing, and limits are on the pricing page. Request a free demo through the contact form — no card needed.',
+        a: 'Plans are priced by venue type: the Small plan starts at {gaming} AZN a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. Medium and Large plans, annual billing, and limits are on the pricing page. Request a free demo through the contact form — no card needed.',
       },
     ],
     related: ['gaming', 'inventory', 'reservations'],
@@ -671,7 +671,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'Where is pricing listed?',
-        a: 'Plans are priced by venue type: from 25 AZN a month for PS/gaming, 29 for billiards, 32 for anti-cafés, and 39 for karaoke and lounges. Plan limits and annual billing are on the pricing page. The demo is free — share your product count in the contact form and we walk through stock and counts.',
+        a: 'Plans are priced by venue type: from {gaming} AZN a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. Plan limits and annual billing are on the pricing page. The demo is free — share your product count in the contact form and we walk through stock and counts.',
       },
     ],
     related: ['pos', 'gaming', 'antikafe'],

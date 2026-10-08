@@ -48,7 +48,7 @@ export const az: Messages = {
   trust: {
     items: [
       '15 dəqiqəlik demo, kart tələb olunmur',
-      'Ayda 25 AZN-dən',
+      'Ayda {low} AZN-dən',
       'AZ / RU / EN panel',
     ],
   },
@@ -168,7 +168,7 @@ export const az: Messages = {
       },
       {
         q: 'Qiymət nə qədərdir?',
-        a: 'Açıq abunə planları var. Kiçik plandan başlayaraq: PS/oyun klubu 25 AZN/ay, bilyard 29, karaoke və launj 39, antikafe 32 AZN/ay. Orta/Böyük və illik (2 ay hədiyyə) qiymətlər qiymətlər səhifəsindədir. Çoxfiliallı məkanlar üçün əlavə fərdi təklif mümkündür.',
+        a: 'Açıq abunə planları var. Kiçik plandan başlayaraq: PS/oyun klubu {gaming} AZN/ay, bilyard {billiards}, karaoke və launj {karaoke}, antikafe {antikafe} AZN/ay. Orta/Böyük və illik (2 ay hədiyyə) qiymətlər qiymətlər səhifəsindədir. Çoxfiliallı məkanlar üçün əlavə fərdi təklif mümkündür.',
         href: '/pricing',
         linkLabel: 'Tarifləri tipə görə açın',
       },
@@ -207,7 +207,7 @@ export const az: Messages = {
     title: 'Biznes idarəetmə proqramı',
     titleAccent: 'məkanınızın gündəlik işləri üçün.',
     paragraphs: [
-      'Heselo Azərbaycan üçün məkan idarəetmə proqramıdır: oyun klubu, karaoke, bilyard, antikafe və otaqlı launj rezervasiya, canlı zal, kassa və anbar üçün ondan istifadə edir — masa, otaq və ya stansiya vaxtı satan məkanlar (~25 AZN/aydan).',
+      'Heselo Azərbaycan üçün məkan idarəetmə proqramıdır: oyun klubu, karaoke, bilyard, antikafe və otaqlı launj rezervasiya, canlı zal, kassa və anbar üçün ondan istifadə edir — masa, otaq və ya stansiya vaxtı satan məkanlar (~{low} AZN/aydan).',
       'iiko və ya Clopos kimi restoran POS-u axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, bron və kassa növbəsi üçün Heselo otaq və vaxt əsaslı məkanlar üçün daha sadə idarəetmə alternatividir.',
       'Heselonu Bakıda Aladdin Biyabangerd təkbaşına yaradıb — ətraflı məlumat Haqqında səhifəsindədir.',
     ],
@@ -254,7 +254,7 @@ export const az: Messages = {
   },
   guidesPage: {
     updatedLabel: 'Son yeniləmə:',
-    pricingCta: 'Klub tarifləri — 25 AZN/aydan',
+    pricingCta: 'Klub tarifləri — {low} AZN/aydan',
     demoCta: '15 dəqiqəlik demo istəyin',
     relatedComparisonsTitle: 'Digər müqayisələr',
     altSeekingTitle: 'iiko, Clopos və ya Excel axtarırsınız?',
@@ -354,7 +354,7 @@ export const az: Messages = {
     whatTitle: 'Heselo nədir?',
     whatBody: [
       'Heselo masa, otaq və ya PlayStation stansiyası vaxtı satan məkanlar üçün veb proqramdır. Operatorlar rezervasiya, canlı zal (indi kim oynayır), kassa növbəsi və anbarı bir paneldən aparır — mətbəx POS-u və ya restoran KDS-i deyil.',
-      'Açıq planlar məkan tipindən asılı olaraq ayda təxminən 25 AZN-dən başlayır. Panel Azərbaycan, İngilis və Rus dillərindədir ki, növbədəki heyət artıq işlədiyi dildə qalsın.',
+      'Açıq planlar məkan tipindən asılı olaraq ayda təxminən {low} AZN-dən başlayır. Panel Azərbaycan, İngilis və Rus dillərindədir ki, növbədəki heyət artıq işlədiyi dildə qalsın.',
     ],
     whoTitle: 'Heselo kimlər üçündür?',
     whoBody: [
@@ -502,7 +502,7 @@ export const az: Messages = {
     faq: [
       {
         q: 'Heselonun qiyməti nədir?',
-        a: 'Açıq abunə planları var. Məkan tipinə görə Kiçik plandan başlayır: PS/oyun klubu 25 AZN/ay, bilyard 29 AZN/ay, karaoke və otaqlı launj 39 AZN/ay, antikafe 32 AZN/ay. Orta və Böyük planlar, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Çoxfiliallı məkanlar və ya standart plana sığmayan həcm üçün əlavə fərdi təklif mümkündür.',
+        a: 'Açıq abunə planları var. Məkan tipinə görə Kiçik plandan başlayır: PS/oyun klubu {gaming} AZN/ay, bilyard {billiards} AZN/ay, karaoke və otaqlı launj {karaoke} AZN/ay, antikafe {antikafe} AZN/ay. Orta və Böyük planlar, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Çoxfiliallı məkanlar və ya standart plana sığmayan həcm üçün əlavə fərdi təklif mümkündür.',
         href: '/pricing',
         linkLabel: 'Tam tarif cədvəli burada',
       },
@@ -512,11 +512,11 @@ export const az: Messages = {
       },
       {
         q: 'Niyə karaoke PS-dən bahadır?',
-        a: 'PS 25 AZN-dən başlayır — stansiya cədvəli daha sadədir. Bilyard 29 AZN-dən, karaoke və launj isə otaq cədvəli, uzatma və kassa növbəsinə görə 39 AZN-dən başlayır.',
+        a: 'PS {gaming} AZN-dən başlayır — stansiya cədvəli daha sadədir. Bilyard {billiards} AZN-dən, karaoke və launj isə otaq cədvəli, uzatma və kassa növbəsinə görə {karaoke} AZN-dən başlayır.',
       },
       {
         q: 'Dine və ya MinuPOS-dan sərfəlidirmi?',
-        a: 'Onlar əsasən restoran masa/QR POS sistemləridir. Heselo otaq-vaxt, canlı sessiya və klub kassası üçündür — 25 AZN/aydan. Mətbəx/KDS lazımdırsa restoran POS sistemi daha uyğundur; klub/karaoke otağı üçün Heselo otaq və vaxt əsaslı iş prosesinə uyğunlaşdırılıb.',
+        a: 'Onlar əsasən restoran masa/QR POS sistemləridir. Heselo otaq-vaxt, canlı sessiya və klub kassası üçündür — {low} AZN/aydan. Mətbəx/KDS lazımdırsa restoran POS sistemi daha uyğundur; klub/karaoke otağı üçün Heselo otaq və vaxt əsaslı iş prosesinə uyğunlaşdırılıb.',
       },
       {
         q: 'İllik ödənişdə nə qazanıram?',
@@ -938,7 +938,7 @@ export const az: Messages = {
       home: {
         title: 'Heselo — klub və otaq paneli | iiko/Clopos əvəzinə',
         description:
-            'Heselo Azərbaycanda PS/oyun, karaoke, bilyard, antikafe və launj üçün otaq-vaxt panelidir: rezervasiya, canlı sessiya, kassa. Restoran POS-u (iiko, Clopos) əvəzinə klub və otaq işi üçün panel — 25 AZN/aydan. Pulsuz demo.',
+            'Heselo Azərbaycanda PS/oyun, karaoke, bilyard, antikafe və launj üçün otaq-vaxt panelidir: rezervasiya, canlı sessiya, kassa. Restoran POS-u (iiko, Clopos) əvəzinə klub və otaq işi üçün panel — {low} AZN/aydan. Pulsuz demo.',
         keywords: [
           'Heselo',
           'məkan idarəetmə sistemi',
@@ -962,14 +962,14 @@ export const az: Messages = {
         ],
       },
       pricing: {
-        title: 'Açıq tariflər — 25 AZN-dən klub paneli | Heselo',
+        title: 'Açıq tariflər — {low} AZN-dən klub paneli | Heselo',
         description:
-            'Heselo qiymətləri açıqdır: PS 25, bilyard 29, karaoke/launj 39, antikafe 32 AZN/aydan. Məkan tipinə görə fərqli planlar; bir neçə filial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
+            'Heselo qiymətləri açıqdır: PS {gaming}, bilyard {billiards}, karaoke/launj {karaoke}, antikafe {antikafe} AZN/aydan. Məkan tipinə görə fərqli planlar; bir neçə filial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
         keywords: [
           'Heselo qiymət',
           'Heselo tarif',
           'açıq klub paneli qiyməti',
-          '25 AZN məkan proqramı',
+          '{low} AZN məkan proqramı',
           'minupos-dan sərfəli',
           'dine-dən sərfəli klub',
           'abunə planı',

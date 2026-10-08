@@ -1,40 +1,30 @@
-# Current task — iiko alternative guide deepen
+# Current task — catalog prices from API in all copy
 
 ## Completed
 
-- Gap analysis vs Poster / katalog “альтернатива iiko” pages
-- Plan: club-niche deepen + short restaurant landscape redirect (not compete as kitchen POS)
-- Plan file: `iiko_guide_deepen` (Cursor plans)
-- `GuideCopy.sections[].table?: { headers; rows }` in `types.ts`
-- Table render + CSS in `guides/[slug].astro`
-- Rich az/en/ru override for `iiko-alternative-clubs` only (`iikoAlternativeGuide.ts`)
-- Thin iiko catalog entry removed from `comparisonGuides.ts`; rich guide prepended
-- SEO title/description/keywords + `dateModified: 2026-10-08` for this slug
-- Build sanity-check: `/az|/en|/ru/guides/iiko-alternative-clubs/` has table, landscape, 8 FAQ
+- `src/lib/catalogCopy.ts`: `{low|high|gaming|billiards|karaoke|lounge|antikafe}` from public subscription catalog
+- `loadPricedMessages()` warms API then deep-fills i18n
+- Pages + guides/solutions + SEO/`llms.txt` use catalog numbers (not hardcoded 25/29/32/39)
+- Static `public/llms.txt` → dynamic `src/pages/llms.txt.ts`
+- Build check: 0 leftover `{low}` / `{gaming}` placeholders in `dist/client`
 
 ## Current state
 
-Implementation **done** for stage 1 (iiko only). Other comparison guides remain on shared template.
+Hardcoded marketing fees replaced with API-backed placeholders. Offline fallback remains in `FALLBACK_VENUE_OFFERS` only.
 
 ## Decisions
 
-- Winner URL stays `/guides/iiko-alternative-clubs/` (az/en/ru) — no new slug
-- Heselo stays club/room-time alternative, **not** full restaurant iiko replacement
-- Short landscape block: Poster, Quick Resto, r_keeper, Saby → for kitchen/delivery seekers only
-- Optional `sections[].table` on `GuideCopy`; rendered in `guides/[slug].astro`
-- Rich override **only for iiko** this stage; other comparison guides keep shared template
-- Honest pricing: Heselo from 25 AZN/mo public; do not invent iiko prices
+- Placeholders in copy; fill at build/SSR via `applyCatalogPricesDeep` / `withCatalogPrices`
+- Competitor prices (e.g. MinuPOS 99–799) stay literal — not Heselo catalog
 
 ## Remaining work
 
-1. Phase 2+ (separate chat): Clopos/Dine rich model; AlternativeTo off-site
-2. Optional: visual QA in browser for table mobile scroll
-3. Commit when user asks
+1. Commit when user asks
+2. Optional: visual QA that hero/FAQ/guides cards match live catalog after API price change
 
 ## Relevant files
 
-- `src/data/guides/types.ts`
-- `src/pages/[locale]/guides/[slug].astro`
-- `src/data/guides/iikoAlternativeGuide.ts` (new)
-- `src/data/guides/comparisonGuides.ts`
-- Live: https://heselo.online/ru/guides/iiko-alternative-clubs/
+- `src/lib/catalogCopy.ts`, `src/lib/venueOffers.ts`, `src/lib/seo.ts`
+- `src/i18n/index.ts` + `messages/{az,en,ru}.ts`
+- `src/data/guides/*`, `src/data/solutions/*`
+- `src/pages/llms.txt.ts`

@@ -46,7 +46,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo otaq, masa və stansiya rezervasiyasını başlat-dayandır sessiyası, tarif, kassanın açılıb-bağlanması və məhsul qalığı ilə eyni iş prosesinə gətirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Clopos-un aktual paket və avadanlıq xərclərini rəsmi təkliflə dəqiqləşdirib, yalnız istifadə edəcəyiniz funksiyalar üzrə müqayisə edin.',
+          'Heselo {low} AZN/aydan başlayır. Clopos-un aktual paket və avadanlıq xərclərini rəsmi təkliflə dəqiqləşdirib, yalnız istifadə edəcəyiniz funksiyalar üzrə müqayisə edin.',
         switchNote:
           'Bir həftəlik rezervasiya və tarif nümunəsini Heselo demosunda sınaqdan keçirin. Restoran sifarişlərini köçürməyin; yalnız klubun otaq, masa və stansiyalarını, satış məhsullarını mərhələli qurun.',
       },
@@ -63,7 +63,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo brings room, table and station bookings, start-stop sessions, rates, cash-shift opening and closing, and product stock into one club workflow.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Confirm current Clopos package and hardware costs through an official quote, then compare only the capabilities you will actually use.',
+          'Heselo starts from {low} AZN per month. Confirm current Clopos package and hardware costs through an official quote, then compare only the capabilities you will actually use.',
         switchNote:
           'Test a representative week of bookings and rates in the Heselo demo. Keep restaurant orders in the appropriate system and migrate club rooms, tables, stations and sale items in stages.',
       },
@@ -80,7 +80,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo объединяет бронирование комнат, столов и станций, запуск сеанса, тарифы, открытие и закрытие кассовой смены и остатки товаров.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Уточните актуальную стоимость пакета и оборудования Clopos по официальному предложению и сравнивайте только нужные вам функции.',
+          'Heselo стоит от {low} AZN в месяц. Уточните актуальную стоимость пакета и оборудования Clopos по официальному предложению и сравнивайте только нужные вам функции.',
         switchNote:
           'Проверьте в демо Heselo типичную неделю бронирований и тарифов. Ресторанные заказы оставьте в профильной системе, а клубные комнаты, столы, станции и товары переносите поэтапно.',
       },
@@ -105,7 +105,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo boş vaxtı rezervasiya edir, qonaq gələndə canlı sessiyanı başladır və həmin sessiyanı kassa növbəsi ilə stok satışına bağlayır.',
         priceAngle:
-          'Heselo paketləri 25 AZN/aydan başlayır. Dine qiymətini modul, terminal və xidmət tərkibi ilə birlikdə öyrənmək, sonra ümumi aylıq xərci müqayisə etmək daha düzgündür.',
+          'Heselo paketləri {low} AZN/aydan başlayır. Dine qiymətini modul, terminal və xidmət tərkibi ilə birlikdə öyrənmək, sonra ümumi aylıq xərci müqayisə etmək daha düzgündür.',
         switchNote:
           'Ən çox istifadə olunan otaqları və tarifləri demo mühitində qurun. Mətbəx funksiyaları vacibdirsə, onları saxlamaq üçün paralel restoran həllini əvvəlcədən müəyyənləşdirin.',
       },
@@ -122,7 +122,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo reserves available time, starts a live session when the guest arrives, and links that session to a cash shift and stock sales.',
         priceAngle:
-          'Heselo plans start from 25 AZN per month. Ask for Dine pricing with modules, terminals and service included, then compare the complete monthly cost.',
+          'Heselo plans start from {low} AZN per month. Ask for Dine pricing with modules, terminals and service included, then compare the complete monthly cost.',
         switchNote:
           'Set up your most-used rooms and rates in the demo. If kitchen capabilities are essential, identify the restaurant solution that will retain them before moving club operations.',
       },
@@ -139,7 +139,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo резервирует свободное время, запускает живой сеанс по приходу гостя и связывает его с кассовой сменой и продажей товаров со склада.',
         priceAngle:
-          'Тарифы Heselo начинаются от 25 AZN в месяц. Запросите стоимость Dine с учётом модулей, терминалов и обслуживания, а затем сравните полный ежемесячный расход.',
+          'Тарифы Heselo начинаются от {low} AZN в месяц. Запросите стоимость Dine с учётом модулей, терминалов и обслуживания, а затем сравните полный ежемесячный расход.',
         switchNote:
           'Настройте в демо самые востребованные комнаты и тарифы. Если кухня критична, заранее выберите ресторанную систему, в которой останутся эти процессы.',
       },
@@ -164,7 +164,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo vaxtla satılan otaq və masaların təqvimini, aktiv sessiyaları, kassa növbəsini və inventar satışını bir paneldə izləmək istəyən klublar üçündür.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Restomas üzrə cari lisenziya, quraşdırma və avadanlıq şərtlərini ayrıca soruşun; müqayisəyə birdəfəlik xərcləri də daxil edin.',
+          'Heselo {low} AZN/aydan başlayır. Restomas üzrə cari lisenziya, quraşdırma və avadanlıq şərtlərini ayrıca soruşun; müqayisəyə birdəfəlik xərcləri də daxil edin.',
         switchNote:
           'Otaq və masa siyahısını və tarifləri əvvəlcədən təmizləyin, sonra demo üzərindən tipik iş gününü sınaqdan keçirin. Restoran hissəsi qalırsa, iki sistemin məsuliyyətini aydın bölün.',
       },
@@ -181,7 +181,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo is for clubs that want calendars for rooms and tables sold by time, active sessions, cash shifts and inventory sales visible in one panel.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Ask separately about current Restomas licensing, setup and hardware terms, including one-off costs in the comparison.',
+          'Heselo starts from {low} AZN per month. Ask separately about current Restomas licensing, setup and hardware terms, including one-off costs in the comparison.',
         switchNote:
           'Clean up the room and table list and rates first, then test a normal business day in the demo. If restaurant operations remain, define clearly which system owns each workflow.',
       },
@@ -198,7 +198,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo подходит клубам, которым нужен единый экран для календаря комнат и столов, активных сеансов, кассовых смен и складских продаж.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Отдельно уточните актуальные условия лицензии, внедрения и оборудования Restomas и учтите разовые расходы.',
+          'Heselo стоит от {low} AZN в месяц. Отдельно уточните актуальные условия лицензии, внедрения и оборудования Restomas и учтите разовые расходы.',
         switchNote:
           'Сначала приведите в порядок список комнат и столов и тарифы, затем проверьте обычный рабочий день в демо. Если ресторанный контур остаётся, чётко разделите ответственность двух систем.',
       },
@@ -213,51 +213,51 @@ const catalog: CatalogEntry[] = [
       az: {
         shortTitle: 'MinuPOS alternativi',
         h1: 'Klublar üçün daha sərfəli MinuPOS alternativi',
-        seoTitle: 'MinuPOS alternativi — 25 AZN-dan Heselo',
+        seoTitle: 'MinuPOS alternativi — {low} AZN-dan Heselo',
         seoDescription:
-          'MinuPOS və Heselo qiymət və funksiya müqayisəsi. 99–799 AZN paketlərə qarşı klublar üçün 25 AZN/aydan otaq və sessiya idarəetməsi.',
+          'MinuPOS və Heselo qiymət və funksiya müqayisəsi. 99–799 AZN paketlərə qarşı klublar üçün {low} AZN/aydan otaq və sessiya idarəetməsi.',
         intro:
-          'MinuPOS restoran və kafe satışına yönəlmiş paketlər təklif edir və açıq qiymətlər çox vaxt 99–799 AZN aralığında görünür. Klubunuz üçün mətbəx POS-u yox, vaxt sessiyası lazımdırsa, 25 AZN/aydan başlayan Heselo daha sərfəli ola bilər.',
+          'MinuPOS restoran və kafe satışına yönəlmiş paketlər təklif edir və açıq qiymətlər çox vaxt 99–799 AZN aralığında görünür. Klubunuz üçün mətbəx POS-u yox, vaxt sessiyası lazımdırsa, {low} AZN/aydan başlayan Heselo daha sərfəli ola bilər.',
         competitorFit:
           'Restoran sifarişi, mətbəx, menyu və uyğun avadanlıq paketi birlikdə lazımdırsa, MinuPOS-un ixtisaslaşmış təklifi daha məntiqlidir. Heselo tam restoran mətbəx həlli deyil.',
         heseloFit:
           'Heselo oyun, karaoke, bilyard, antikafe və launj məkanlarında rezervasiya, canlı vaxt hesabı, kassa növbəsi və stoku birləşdirir.',
         priceAngle:
-          'MinuPOS paketləri tez-tez 99–799 AZN kimi təqdim olunur, Heselo isə 25 AZN/aydan başlayır. Kampaniya və paket tərkibi dəyişə bildiyi üçün yekun qərardan əvvəl hər iki aktual təklifi yoxlayın.',
+          'MinuPOS paketləri tez-tez 99–799 AZN kimi təqdim olunur, Heselo isə {low} AZN/aydan başlayır. Kampaniya və paket tərkibi dəyişə bildiyi üçün yekun qərardan əvvəl hər iki aktual təklifi yoxlayın.',
         switchNote:
           'Əvvəlcə istifadə etmədiyiniz restoran modullarını müəyyən edin. Heselo demosunda otaq və masaları, tarifləri və kassa ssenarisini quraraq real aylıq qənaəti funksional fərqlərlə birlikdə ölçün.',
       },
       en: {
         shortTitle: 'MinuPOS alternative',
         h1: 'A more affordable MinuPOS alternative for clubs',
-        seoTitle: 'MinuPOS Alternative — Heselo from 25 AZN',
+        seoTitle: 'MinuPOS Alternative — Heselo from {low} AZN',
         seoDescription:
-          'Compare MinuPOS and Heselo on price and fit: commonly listed 99–799 AZN packages versus club session management from 25 AZN/month.',
+          'Compare MinuPOS and Heselo on price and fit: commonly listed 99–799 AZN packages versus club session management from {low} AZN/month.',
         intro:
-          'MinuPOS offers packages aimed at restaurant and café sales, with public pricing often shown around 99–799 AZN. If your club needs timed sessions rather than a kitchen POS, Heselo from 25 AZN per month may cost less.',
+          'MinuPOS offers packages aimed at restaurant and café sales, with public pricing often shown around 99–799 AZN. If your club needs timed sessions rather than a kitchen POS, Heselo from {low} AZN per month may cost less.',
         competitorFit:
           'MinuPOS makes more sense when restaurant ordering, a kitchen, menus and a compatible hardware package are needed together. Heselo is not a complete restaurant kitchen solution.',
         heseloFit:
           'Heselo combines bookings, live time billing, cash shifts and stock for gaming, karaoke, billiards, anticafe and lounge venues.',
         priceAngle:
-          'MinuPOS packages are often presented at 99–799 AZN, while Heselo starts from 25 AZN per month. Promotions and package contents can change, so verify both current offers before deciding.',
+          'MinuPOS packages are often presented at 99–799 AZN, while Heselo starts from {low} AZN per month. Promotions and package contents can change, so verify both current offers before deciding.',
         switchNote:
           'Identify restaurant modules you do not use first. Set up your rooms, tables, rates and cash scenario in the Heselo demo, then assess real savings alongside functional differences.',
       },
       ru: {
         shortTitle: 'Альтернатива MinuPOS',
         h1: 'Более доступная альтернатива MinuPOS для клубов',
-        seoTitle: 'Альтернатива MinuPOS — Heselo от 25 AZN',
+        seoTitle: 'Альтернатива MinuPOS — Heselo от {low} AZN',
         seoDescription:
-          'Сравнение цен и возможностей MinuPOS и Heselo: пакеты примерно за 99–799 AZN и управление клубными сеансами от 25 AZN в месяц.',
+          'Сравнение цен и возможностей MinuPOS и Heselo: пакеты примерно за 99–799 AZN и управление клубными сеансами от {low} AZN в месяц.',
         intro:
-          'MinuPOS предлагает пакеты для продаж в ресторанах и кафе; открытые цены часто находятся в диапазоне 99–799 AZN. Если клубу нужны почасовые сеансы, а не кухонная POS-система, Heselo от 25 AZN в месяц может быть выгоднее.',
+          'MinuPOS предлагает пакеты для продаж в ресторанах и кафе; открытые цены часто находятся в диапазоне 99–799 AZN. Если клубу нужны почасовые сеансы, а не кухонная POS-система, Heselo от {low} AZN в месяц может быть выгоднее.',
         competitorFit:
           'MinuPOS логичнее, когда ресторанные заказы, кухня, меню и совместимое оборудование нужны единым комплектом. Heselo не является полноценным решением для ресторанной кухни.',
         heseloFit:
           'Heselo объединяет бронирования, живой учёт времени, кассовые смены и склад для игровых, караоке-, бильярдных, антикафе- и лаунж-заведений.',
         priceAngle:
-          'Пакеты MinuPOS часто предлагаются за 99–799 AZN, а Heselo начинается от 25 AZN в месяц. Акции и состав пакетов меняются, поэтому перед решением проверьте обе актуальные цены.',
+          'Пакеты MinuPOS часто предлагаются за 99–799 AZN, а Heselo начинается от {low} AZN в месяц. Акции и состав пакетов меняются, поэтому перед решением проверьте обе актуальные цены.',
         switchNote:
           'Сначала определите ресторанные модули, которыми вы не пользуетесь. В демо Heselo настройте комнаты и столы, тарифы и кассовый сценарий, затем оцените экономию вместе с разницей функций.',
       },
@@ -282,7 +282,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo rezervasiyadan canlı sessiyaya keçidi, vaxt tarifini, növbə kassasını və sessiyaya əlavə olunan stok məhsullarını klub iş qaydası ilə idarə edir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. robotPOS üçün lisenziya, quraşdırma, dəstək və avadanlıq daxil olmaqla aktual ümumi təklif istəyin.',
+          'Heselo {low} AZN/aydan başlayır. robotPOS üçün lisenziya, quraşdırma, dəstək və avadanlıq daxil olmaqla aktual ümumi təklif istəyin.',
         switchNote:
           'Tipik rezervasiya, uzadılma və sessiya bağlanışı ssenarisini demoda yoxlayın. Mətbəx əməliyyatları varsa, onların hansı sistemdə qalacağını keçiddən əvvəl sənədləşdirin.',
       },
@@ -299,7 +299,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo manages the path from booking to live session, timed rates, shift cash and stock items added to a session using club-specific workflows.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Request a current total robotPOS quote that includes licensing, setup, support and hardware.',
+          'Heselo starts from {low} AZN per month. Request a current total robotPOS quote that includes licensing, setup, support and hardware.',
         switchNote:
           'Test a normal booking, extension and session-closing scenario in the demo. If kitchen operations exist, document which system will retain them before switching.',
       },
@@ -316,7 +316,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo ведёт гостя от бронирования к живому сеансу, применяет тариф времени и связывает кассовую смену и товары со счётом клуба.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Для robotPOS запросите актуальный полный расчёт с лицензией, внедрением, поддержкой и оборудованием.',
+          'Heselo стоит от {low} AZN в месяц. Для robotPOS запросите актуальный полный расчёт с лицензией, внедрением, поддержкой и оборудованием.',
         switchNote:
           'Проверьте в демо обычную бронь, продление и закрытие сеанса. Если есть кухня, до перехода зафиксируйте, в какой системе останутся её процессы.',
       },
@@ -333,15 +333,15 @@ const catalog: CatalogEntry[] = [
         h1: 'Sərfəli klub POS alternativi necə seçilir?',
         seoTitle: 'Sərfəli klub POS alternativi — Heselo',
         seoDescription:
-          'Oyun, karaoke, bilyard, antikafe və launj üçün sərfəli POS seçimi: vaxt sessiyası, rezervasiya, kassa və stok 25 AZN/aydan.',
+          'Oyun, karaoke, bilyard, antikafe və launj üçün sərfəli POS seçimi: vaxt sessiyası, rezervasiya, kassa və stok {low} AZN/aydan.',
         intro:
-          'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Heselo 25 AZN/aydan klub rezervasiyası, canlı sessiya, kassa növbəsi və stoku birləşdirir.',
+          'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Heselo {low} AZN/aydan klub rezervasiyası, canlı sessiya, kassa növbəsi və stoku birləşdirir.',
         competitorFit:
           'Əsas fəaliyyət restoran sifarişi, mətbəx, QR menyu və çatdırılmadırsa, münasib qiymətli restoran POS-u seçmək daha düzgündür. Heselo tam mətbəx POS-una alternativ deyil.',
         heseloFit:
           'Otaq, konsol və masa vaxtı satırsınızsa, bir məqsədli sistem işçilərin rezervasiya ilə faktiki sessiyanı qarışdırmasının qarşısını alır.',
         priceAngle:
-          'Aylıq qiymətlə yanaşı quraşdırma, avadanlıq, əlavə terminal, dəstək və istifadə olunmayan modulları hesablayın. Heselonun başlanğıc qiyməti 25 AZN/aydır.',
+          'Aylıq qiymətlə yanaşı quraşdırma, avadanlıq, əlavə terminal, dəstək və istifadə olunmayan modulları hesablayın. Heselonun başlanğıc qiyməti {low} AZN/aydır.',
         switchNote:
           'Namizədləri eyni ssenari ilə sınayın: rezervasiya yaradın, sessiyanı başladın, məhsul əlavə edin və kassa növbəsini bağlayın. Sonra demo nəticəsinə əsasən seçim edin.',
       },
@@ -350,15 +350,15 @@ const catalog: CatalogEntry[] = [
         h1: 'How to choose an affordable club POS alternative',
         seoTitle: 'Affordable Club POS Alternative — Heselo',
         seoDescription:
-          'Choose affordable POS software for gaming, karaoke, billiards, anticafe and lounges: timed sessions, bookings, cash and stock from 25 AZN/month.',
+          'Choose affordable POS software for gaming, karaoke, billiards, anticafe and lounges: timed sessions, bookings, cash and stock from {low} AZN/month.',
         intro:
-          'The cheapest POS is not always the lowest-cost option if club time still lives in a separate spreadsheet. Heselo starts from 25 AZN per month and combines bookings, live sessions, cash shifts and inventory.',
+          'The cheapest POS is not always the lowest-cost option if club time still lives in a separate spreadsheet. Heselo starts from {low} AZN per month and combines bookings, live sessions, cash shifts and inventory.',
         competitorFit:
           'If restaurant orders, a kitchen, QR menus and delivery are the main operation, an affordable restaurant POS is the better category. Heselo is not an alternative to a complete kitchen POS.',
         heseloFit:
           'When you sell room, console or table time, one purpose-built system helps staff keep bookings and actual sessions distinct.',
         priceAngle:
-          'Count setup, hardware, extra terminals, support and unused modules alongside the monthly fee. Heselo starts from 25 AZN per month.',
+          'Count setup, hardware, extra terminals, support and unused modules alongside the monthly fee. Heselo starts from {low} AZN per month.',
         switchNote:
           'Test every candidate with the same scenario: create a booking, start the session, add an item and close the cash shift. Choose after reviewing the demo result.',
       },
@@ -367,15 +367,15 @@ const catalog: CatalogEntry[] = [
         h1: 'Как выбрать доступную альтернативу POS-системе для клуба',
         seoTitle: 'Доступная альтернатива клубной POS — Heselo',
         seoDescription:
-          'Выбор доступной POS для игровых, караоке-, бильярдных, антикафе- и лаунж-заведений: сеансы, бронь, касса и склад от 25 AZN в месяц.',
+          'Выбор доступной POS для игровых, караоке-, бильярдных, антикафе- и лаунж-заведений: сеансы, бронь, касса и склад от {low} AZN в месяц.',
         intro:
-          'Самая дешёвая POS-система не всегда обходится дешевле, если клубное время приходится вести в отдельной таблице. Heselo от 25 AZN в месяц объединяет бронирования, живые сеансы, кассовые смены и склад.',
+          'Самая дешёвая POS-система не всегда обходится дешевле, если клубное время приходится вести в отдельной таблице. Heselo от {low} AZN в месяц объединяет бронирования, живые сеансы, кассовые смены и склад.',
         competitorFit:
           'Если основа бизнеса — ресторанные заказы, кухня, QR-меню и доставка, лучше выбирать доступную ресторанную POS-систему. Heselo не служит альтернативой полноценной кухонной POS.',
         heseloFit:
           'При продаже времени комнаты, консоли или стола специализированная система помогает сотрудникам не путать бронь с фактическим сеансом.',
         priceAngle:
-          'Учитывайте не только абонплату, но и внедрение, оборудование, дополнительные терминалы, поддержку и ненужные модули. Heselo начинается от 25 AZN в месяц.',
+          'Учитывайте не только абонплату, но и внедрение, оборудование, дополнительные терминалы, поддержку и ненужные модули. Heselo начинается от {low} AZN в месяц.',
         switchNote:
           'Проверьте кандидатов на одном сценарии: создайте бронь, запустите сеанс, добавьте товар и закройте кассовую смену. Решение принимайте после демо.',
       },
@@ -400,7 +400,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Karaoke otaqları əvvəlcədən bron edilir, qonaq gəldikdə sessiya başlayır və vaxt uzadıla bilirsə, Heselo həmin prosesi kassa və stokla birləşdirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. İki sistem arasında qiyməti deyil, hansı əməliyyatı mərkəzləşdirdiyini müqayisə edin; bəzi böyük məkanlarda hər ikisi lazım ola bilər.',
+          'Heselo {low} AZN/aydan başlayır. İki sistem arasında qiyməti deyil, hansı əməliyyatı mərkəzləşdirdiyini müqayisə edin; bəzi böyük məkanlarda hər ikisi lazım ola bilər.',
         switchNote:
           'Bir həftə ərzində vaxt gəliri ilə mətbəx gəlirinin payını ölçün. Demo zamanı otaq bronu və sessiya bağlanışını sınaqdan keçirib əsas sistem qərarını bu nisbətə görə verin.',
       },
@@ -417,7 +417,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'When karaoke rooms are reserved ahead, started on arrival and extended during the visit, Heselo connects that flow to cash and stock.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Compare the operation each system centres, not price alone; larger venues may legitimately need both.',
+          'Heselo starts from {low} AZN per month. Compare the operation each system centres, not price alone; larger venues may legitimately need both.',
         switchNote:
           'Measure the share of time revenue versus kitchen revenue for one week. Test room booking and session closeout in the demo, then choose the primary system from that evidence.',
       },
@@ -434,7 +434,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Если караоке-комнаты бронируют заранее, запускают по приходу и продлевают во время визита, Heselo связывает этот процесс с кассой и складом.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Сравнивайте не только цену, но и центральный процесс; крупному заведению действительно могут понадобиться обе системы.',
+          'Heselo стоит от {low} AZN в месяц. Сравнивайте не только цену, но и центральный процесс; крупному заведению действительно могут понадобиться обе системы.',
         switchNote:
           'За неделю измерьте долю выручки от времени и от кухни. Проверьте в демо бронирование комнаты и закрытие сеанса, затем выберите основную систему по этим данным.',
       },
@@ -459,7 +459,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo taymerdən əlavə öncədən rezervasiya, canlı sessiya, tarif, kassa növbəsi, işçi səlahiyyəti və məhsul qalığını idarə edir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Sadə taymerin qiyməti aşağı ola bilər, amma ayrıca rezervasiya dəftəri və stok cədvəlinə sərf olunan vaxtı da xərcə daxil edin.',
+          'Heselo {low} AZN/aydan başlayır. Sadə taymerin qiyməti aşağı ola bilər, amma ayrıca rezervasiya dəftəri və stok cədvəlinə sərf olunan vaxtı da xərcə daxil edin.',
         switchNote:
           'Konsolları ayrı-ayrı stansiyalar kimi yaradın, mövcud tarifləri köçürün və əvvəlcə bir iş növbəsində paralel yoxlayın. Demo zamanı rezervasiyadan sessiyaya keçidi işçilərlə sınaqdan keçirin.',
       },
@@ -476,7 +476,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Beyond timing, Heselo manages advance bookings, live sessions, rates, cash shifts, staff permissions and product stock.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. A timer may cost less, but include the staff time spent maintaining separate booking and stock records.',
+          'Heselo starts from {low} AZN per month. A timer may cost less, but include the staff time spent maintaining separate booking and stock records.',
         switchNote:
           'Create each console as its own station, move current rates and run both systems for one representative shift. Let staff test the booking-to-session handoff in the demo.',
       },
@@ -493,7 +493,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Помимо времени Heselo управляет предварительными бронированиями, живыми сеансами, тарифами, кассовыми сменами, правами сотрудников и остатками товаров.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Таймер может быть дешевле, но учтите время сотрудников на отдельные журналы брони и склада.',
+          'Heselo стоит от {low} AZN в месяц. Таймер может быть дешевле, но учтите время сотрудников на отдельные журналы брони и склада.',
         switchNote:
           'Создайте каждую консоль как отдельную станцию, перенесите действующие тарифы и одну типичную смену ведите параллельно. В демо дайте сотрудникам проверить переход от брони к сеансу.',
       },
@@ -518,7 +518,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo otaq, konsol, bilyard və launj kimi yerlərdə rezervasiya, canlı sessiya, kassa növbəsi və stoku AZ, EN və RU interfeysdə birləşdirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. IZI qiymətini kompüter sayı, modul və regional şərtlərlə birlikdə dəqiqləşdirin; iki sistemin idarə etdiyi yerlər və avadanlıq eyni deyil.',
+          'Heselo {low} AZN/aydan başlayır. IZI qiymətini kompüter sayı, modul və regional şərtlərlə birlikdə dəqiqləşdirin; iki sistemin idarə etdiyi yerlər və avadanlıq eyni deyil.',
         switchNote:
           'PC kilidləmə və iş stansiyalarına nəzarət sizə lazımdırsa, keçməyin. Əsasən otaq və konsol idarə edirsinizsə, həmin otaq və konsolları Heselo demosunda yaradıb rezervasiya-sessiya prosesini yoxlayın.',
       },
@@ -535,7 +535,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo combines bookings, live sessions, cash shifts and stock for rooms, consoles, billiards and lounges, with AZ, EN and RU interfaces.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Confirm IZI pricing by PC count, modules and regional terms; the two systems do not manage exactly the same resources.',
+          'Heselo starts from {low} AZN per month. Confirm IZI pricing by PC count, modules and regional terms; the two systems do not manage exactly the same resources.',
         switchNote:
           'Do not switch if PC locking and workstation control are essential. If rooms and consoles dominate, create them in the Heselo demo and test the booking-to-session flow.',
       },
@@ -552,7 +552,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo объединяет бронь, живые сеансы, кассовые смены и склад для комнат, консолей, бильярда и лаунжей; интерфейс доступен на AZ, EN и RU.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Уточните цену IZI с учётом числа ПК, модулей и региональных условий: системы управляют не вполне одинаковыми ресурсами.',
+          'Heselo стоит от {low} AZN в месяц. Уточните цену IZI с учётом числа ПК, модулей и региональных условий: системы управляют не вполне одинаковыми ресурсами.',
         switchNote:
           'Не переходите, если необходимы блокировка ПК и контроль рабочих станций. Если преобладают комнаты и консоли, создайте их в демо Heselo и проверьте путь от брони к сеансу.',
       },
@@ -577,7 +577,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo vaxtla satılan otağı və ya avadanlığı bron edir, qonaq gələndə sessiyanı başladır, uzadılmanı və tarif hesabını kassa növbəsi və stokla birləşdirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Qiymət müqayisəsində istifadəçi və filial sayından əlavə, canlı sessiya və kassa funksiyalarının ayrıca həll tələb edib-etmədiyini nəzərə alın.',
+          'Heselo {low} AZN/aydan başlayır. Qiymət müqayisəsində istifadəçi və filial sayından əlavə, canlı sessiya və kassa funksiyalarının ayrıca həll tələb edib-etmədiyini nəzərə alın.',
         switchNote:
           'Usta və xidmətləri deyil, otaq və avadanlığı sistem siyahısına əlavə edin. Demo zamanı gələcək rezervasiyanı başladıb uzadın və bağlayın; bu proses uyğun deyilsə, salon sistemində qalın.',
       },
@@ -594,7 +594,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo books a room or piece of equipment by time, starts the session on arrival, and connects extensions and rates with the cash shift and stock.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Beyond users and branches, ask whether live sessions and cash operations would require another tool.',
+          'Heselo starts from {low} AZN per month. Beyond users and branches, ask whether live sessions and cash operations would require another tool.',
         switchNote:
           'Translate rooms and equipment—not specialists and services—into your resource list. Start, extend and close a future booking in the demo; remain with salon software if that flow does not fit.',
       },
@@ -611,7 +611,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo бронирует комнату или оборудование по часам, запускает сеанс по приходу и связывает продление и тариф с кассовой сменой и складом.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Помимо пользователей и филиалов, учитывайте, потребуются ли отдельные инструменты для живых сеансов и кассы.',
+          'Heselo стоит от {low} AZN в месяц. Помимо пользователей и филиалов, учитывайте, потребуются ли отдельные инструменты для живых сеансов и кассы.',
         switchNote:
           'Перенесите в список ресурсов комнаты и оборудование, а не мастеров и услуги. В демо запустите, продлите и закройте будущую бронь; если сценарий не подходит, оставайтесь на салонной системе.',
       },
@@ -636,7 +636,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo oyun, karaoke, bilyard, antikafe və launj yerlərini bron edir, canlı sessiyanı hesablayır, kassa növbəsi və stoku izləyir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. resto.az üzrə aktual tarif, quraşdırma və avadanlıq qiymətlərini birbaşa dəqiqləşdirib eyni istifadə ssenarisi üzrə müqayisə edin.',
+          'Heselo {low} AZN/aydan başlayır. resto.az üzrə aktual tarif, quraşdırma və avadanlıq qiymətlərini birbaşa dəqiqləşdirib eyni istifadə ssenarisi üzrə müqayisə edin.',
         switchNote:
           'Otaq və masa siyahısını, tarifləri və satılan məhsulları hazırlayın. Demo zamanı bir rezervasiyanı sessiyaya çevirin; mətbəx prosesi qalırsa, onun üçün ayrıca həlli saxlayın.',
       },
@@ -653,7 +653,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo books gaming, karaoke, billiards, anticafe and lounge spaces, runs live sessions, and tracks cash shifts and stock.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Confirm current resto.az plan, setup and hardware pricing directly, then compare the same operating scenario.',
+          'Heselo starts from {low} AZN per month. Confirm current resto.az plan, setup and hardware pricing directly, then compare the same operating scenario.',
         switchNote:
           'Prepare room and table lists, rates and sale items. Convert one booking into a session in the demo; retain a separate restaurant solution if the kitchen workflow remains.',
       },
@@ -670,7 +670,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo бронирует комнаты и столы игровых, караоке-, бильярдных, антикафе- и лаунж-заведений, ведёт живые сеансы, кассовые смены и склад.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Напрямую уточните актуальную стоимость тарифа, внедрения и оборудования resto.az, затем сравните одинаковый рабочий сценарий.',
+          'Heselo стоит от {low} AZN в месяц. Напрямую уточните актуальную стоимость тарифа, внедрения и оборудования resto.az, затем сравните одинаковый рабочий сценарий.',
         switchNote:
           'Подготовьте список комнат и столов, тарифы и товары. В демо превратите одну бронь в сеанс; если кухня остаётся, сохраните для неё отдельное ресторанное решение.',
       },
@@ -695,7 +695,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'PlayStation stansiyaları, karaoke otaqları və bilyard masaları vaxtla satılırsa, Heselo rezervasiyanı başlat-dayandır sessiyası, tarif, kassa növbəsi və stokla bir prosesdə birləşdirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Fazilat POS üzrə lisenziya, quraşdırma, avadanlıq və dəstək xərclərini aktual təkliflə dəqiqləşdirin, sonra eyni klub ssenarisi üzrə müqayisə edin.',
+          'Heselo {low} AZN/aydan başlayır. Fazilat POS üzrə lisenziya, quraşdırma, avadanlıq və dəstək xərclərini aktual təkliflə dəqiqləşdirin, sonra eyni klub ssenarisi üzrə müqayisə edin.',
         switchNote:
           'Əvvəlcə otaq, stansiya və masaları, sonra tarifləri Heselo demosunda qurun. Mağaza və ya mətbəx satışı ayrıca qalırsa, hansı satışın hansı sistemdə qeyd olunacağını əvvəlcədən razılaşdırın.',
       },
@@ -712,7 +712,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'When PlayStation stations, karaoke rooms and billiards tables are sold by time, Heselo connects bookings with start-stop sessions, rates, cash shifts and stock in one flow.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Confirm Fazilat POS licensing, setup, hardware and support costs through a current quote, then compare the same club scenario.',
+          'Heselo starts from {low} AZN per month. Confirm Fazilat POS licensing, setup, hardware and support costs through a current quote, then compare the same club scenario.',
         switchNote:
           'Set up rooms, stations and tables first, then rates, in the Heselo demo. If shop or kitchen sales stay elsewhere, agree in advance which sales each system records.',
       },
@@ -729,7 +729,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Если PlayStation-станции, караоке-комнаты и бильярдные столы продаются по времени, Heselo объединяет бронь, запуск и остановку сеанса, тарифы, кассовую смену и склад в одном процессе.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Уточните у Fazilat POS актуальную стоимость лицензии, внедрения, оборудования и поддержки, затем сравните одинаковый клубный сценарий.',
+          'Heselo стоит от {low} AZN в месяц. Уточните у Fazilat POS актуальную стоимость лицензии, внедрения, оборудования и поддержки, затем сравните одинаковый клубный сценарий.',
         switchNote:
           'Сначала создайте в демо Heselo комнаты, станции и столы, затем тарифы. Если розничные или кухонные продажи остаются в другой системе, заранее договоритесь, какие продажи где учитываются.',
       },
@@ -754,7 +754,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo PlayStation stansiyası, karaoke otağı və digər vaxtla satılan yerlər üçün rezervasiya, canlı vaxt hesabı, uzadılma, kassa növbəsi və stoku bir paneldə birləşdirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Bazarda eyni adlı bir neçə məhsul ola bildiyi üçün konkret SmartPOS təminatçısından aktual paket, avadanlıq və dəstək qiymətini istəyin.',
+          'Heselo {low} AZN/aydan başlayır. Bazarda eyni adlı bir neçə məhsul ola bildiyi üçün konkret SmartPOS təminatçısından aktual paket, avadanlıq və dəstək qiymətini istəyin.',
         switchNote:
           'Tipik həftəsonu rezervasiyalarını və tariflərinizi Heselo demosunda sınayın. Restoran sifarişləri qalırsa, onları SmartPOS-da saxlayıb klub vaxtını mərhələli olaraq Heselo-ya keçirin.',
       },
@@ -771,7 +771,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo combines bookings, live time billing, extensions, cash shifts and stock for PlayStation stations, karaoke rooms and other resources sold by time.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Several products may share the SmartPOS name, so ask your specific provider for current package, hardware and support pricing.',
+          'Heselo starts from {low} AZN per month. Several products may share the SmartPOS name, so ask your specific provider for current package, hardware and support pricing.',
         switchNote:
           'Test a typical weekend of bookings and your rates in the Heselo demo. If restaurant orders remain, keep them in SmartPOS and move club time to Heselo in stages.',
       },
@@ -788,7 +788,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Heselo объединяет бронирования, живой учёт времени, продления, кассовые смены и склад для PlayStation-станций, караоке-комнат и других ресурсов с почасовой оплатой.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Под названием SmartPOS может продаваться несколько продуктов, поэтому запросите у конкретного поставщика актуальную цену пакета, оборудования и поддержки.',
+          'Heselo стоит от {low} AZN в месяц. Под названием SmartPOS может продаваться несколько продуктов, поэтому запросите у конкретного поставщика актуальную цену пакета, оборудования и поддержки.',
         switchNote:
           'Проверьте в демо Heselo типичные выходные бронирования и свои тарифы. Если ресторанные заказы остаются, ведите их в SmartPOS, а клубное время переносите в Heselo поэтапно.',
       },
@@ -813,7 +813,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Satdığınız əsas məhsul otaq, konsol və ya masa vaxtıdırsa, Heselo rezervasiyanı canlı sessiyaya çevirir, vaxt tarifini hesablayır və nəticəni kassa növbəsi və stokla birləşdirir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Kassa.az üzrə aktual tarif, avadanlıq və inteqrasiya şərtlərini brendin özündən öyrənin; müqayisədə vaxt hesabı üçün ayrıca cədvəl saxlamağın xərcini də nəzərə alın.',
+          'Heselo {low} AZN/aydan başlayır. Kassa.az üzrə aktual tarif, avadanlıq və inteqrasiya şərtlərini brendin özündən öyrənin; müqayisədə vaxt hesabı üçün ayrıca cədvəl saxlamağın xərcini də nəzərə alın.',
         switchNote:
           'Mövcud kassa proqramınız çek və məhsul satışını qaydasında aparırsa, ondan tələsik imtina etməyin. Heselo demosunda otaq və stansiyaları yaradıb rezervasiyadan sessiyanın bağlanışına qədər bir növbəni sınayın.',
       },
@@ -830,7 +830,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'If your main product is room, console or table time, Heselo turns a booking into a live session, applies the time rate and connects the result to the cash shift and stock.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Get current Kassa.az plan, hardware and integration terms from the brand itself, and include the cost of keeping a separate time spreadsheet in the comparison.',
+          'Heselo starts from {low} AZN per month. Get current Kassa.az plan, hardware and integration terms from the brand itself, and include the cost of keeping a separate time spreadsheet in the comparison.',
         switchNote:
           'If your current till software handles receipts and product sales well, do not drop it in a hurry. Create rooms and stations in the Heselo demo and test one shift from booking to session close.',
       },
@@ -847,7 +847,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Если ваш основной товар — время комнаты, консоли или стола, Heselo превращает бронь в живой сеанс, применяет тариф и связывает итог с кассовой сменой и складом.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Актуальные тарифы, оборудование и условия интеграции Kassa.az уточняйте у самого бренда; при сравнении учтите и затраты на отдельную таблицу учёта времени.',
+          'Heselo стоит от {low} AZN в месяц. Актуальные тарифы, оборудование и условия интеграции Kassa.az уточняйте у самого бренда; при сравнении учтите и затраты на отдельную таблицу учёта времени.',
         switchNote:
           'Если текущая кассовая программа хорошо справляется с чеками и продажей товаров, не отказывайтесь от неё впопыхах. Создайте в демо Heselo комнаты и станции и проверьте одну смену — от брони до закрытия сеанса.',
       },
@@ -872,7 +872,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Karaoke otağı, PlayStation stansiyası və ya bilyard masası vaxtla satılırsa, Heselo rezervasiyanı sessiyaya çevirir, vaxtı hesablayır və sessiyaya əlavə olunan içki-qəlyanaltını stokdan silir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır. Baza Market-in aktual qiymət və komissiya şərtlərini birbaşa dəqiqləşdirin; ticarət platforması ilə klub panelinin xərclərini eyni əməliyyat ssenarisi üzrə müqayisə edin.',
+          'Heselo {low} AZN/aydan başlayır. Baza Market-in aktual qiymət və komissiya şərtlərini birbaşa dəqiqləşdirin; ticarət platforması ilə klub panelinin xərclərini eyni əməliyyat ssenarisi üzrə müqayisə edin.',
         switchNote:
           'Onlayn və ya mağaza satışınız varsa, onu mövcud ticarət həllində saxlayın. Heselo demosunda yalnız klubun otaqlarını, tariflərini və sessiyaya satılan məhsulları qurub bir növbəni sınayın.',
       },
@@ -889,7 +889,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'When karaoke rooms, PlayStation stations or billiards tables are sold by time, Heselo turns bookings into sessions, bills the time and deducts drinks and snacks added to a session from stock.',
         priceAngle:
-          'Heselo starts from 25 AZN per month. Confirm current Baza Market pricing and commission terms directly, then compare a commerce platform and a club panel on the same operating scenario.',
+          'Heselo starts from {low} AZN per month. Confirm current Baza Market pricing and commission terms directly, then compare a commerce platform and a club panel on the same operating scenario.',
         switchNote:
           'Keep any online or shop sales in your existing commerce tool. In the Heselo demo, set up only the club’s rooms, rates and items sold into sessions, then test one shift.',
       },
@@ -906,7 +906,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Если караоке-комнаты, PlayStation-станции или бильярдные столы продаются по времени, Heselo превращает бронь в сеанс, считает время и списывает со склада напитки и закуски, добавленные в счёт.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц. Актуальные цены и комиссии Baza Market уточняйте напрямую, а торговую платформу и клубную панель сравнивайте на одинаковом рабочем сценарии.',
+          'Heselo стоит от {low} AZN в месяц. Актуальные цены и комиссии Baza Market уточняйте напрямую, а торговую платформу и клубную панель сравнивайте на одинаковом рабочем сценарии.',
         switchNote:
           'Онлайн- и розничные продажи оставьте в текущем торговом решении. В демо Heselo настройте только клубные комнаты, тарифы и товары для сеансов и проверьте одну смену.',
       },
@@ -931,7 +931,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və stoku bir paneldə birləşdirir — restoran POS-unda bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
         priceAngle:
-          'Heselo 25 AZN/aydan başlayır və qiyməti açıq göstərilir. Yerli restoran və kassa POS-larında yekun xərc çox vaxt modul, terminal, avadanlıq və quraşdırmadan asılıdır; hər provayderdən eyni ssenari üzrə aktual təklif alın.',
+          'Heselo {low} AZN/aydan başlayır və qiyməti açıq göstərilir. Yerli restoran və kassa POS-larında yekun xərc çox vaxt modul, terminal, avadanlıq və quraşdırmadan asılıdır; hər provayderdən eyni ssenari üzrə aktual təklif alın.',
         switchNote:
           'Bir həftə üçün vaxt gəliri ilə yemək-içki və məhsul gəlirinin payını ölçün. Vaxt gəliri üstünlük təşkil edirsə, Heselo demosunu sınayın; mətbəx güclüdürsə, restoran POS-unu saxlayıb Heselo-nu yalnız otaqlar üçün istifadə edin.',
       },
@@ -948,7 +948,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'When PlayStation stations, karaoke rooms, billiards tables or anticafe seats are sold by time, Heselo combines bookings, live sessions, extensions, cash shifts and stock in one panel — something a restaurant POS usually needs an extra spreadsheet or timer to cover.',
         priceAngle:
-          'Heselo starts from 25 AZN per month with public pricing. For local restaurant and till POS tools, the total often depends on modules, terminals, hardware and setup, so request current quotes for the same scenario from each provider.',
+          'Heselo starts from {low} AZN per month with public pricing. For local restaurant and till POS tools, the total often depends on modules, terminals, hardware and setup, so request current quotes for the same scenario from each provider.',
         switchNote:
           'Measure the share of time revenue versus food, drink and product revenue for one week. If time dominates, try the Heselo demo; if the kitchen is significant, keep your restaurant POS and use Heselo for the rooms only.',
       },
@@ -965,7 +965,7 @@ const catalog: CatalogEntry[] = [
         heseloFit:
           'Если PlayStation-станции, караоке-комнаты, бильярдные столы или места в антикафе продаются по времени, Heselo объединяет бронь, живые сеансы, продления, кассовые смены и склад в одной панели — ресторанную POS для этого обычно приходится дополнять таблицей или таймером.',
         priceAngle:
-          'Heselo стоит от 25 AZN в месяц, цены опубликованы открыто. У местных ресторанных и кассовых POS итоговая стоимость часто зависит от модулей, терминалов, оборудования и внедрения, поэтому запросите у каждого поставщика актуальный расчёт на одинаковый сценарий.',
+          'Heselo стоит от {low} AZN в месяц, цены опубликованы открыто. У местных ресторанных и кассовых POS итоговая стоимость часто зависит от модулей, терминалов, оборудования и внедрения, поэтому запросите у каждого поставщика актуальный расчёт на одинаковый сценарий.',
         switchNote:
           'За неделю измерьте долю выручки от времени и от еды, напитков и товаров. Если преобладает время, попробуйте демо Heselo; если кухня значима, оставьте ресторанную POS и используйте Heselo только для комнат.',
       },
@@ -1020,7 +1020,7 @@ const labels: Record<
       `${name}: ${kind === 'restaurant' ? 'restoran sifarişi, menyu və mətbəx prosesi' : kind === 'timer' ? 'sadə cihaz taymeri' : kind === 'pc-club' ? 'PC iş stansiyalarının idarəetməsi' : kind === 'appointments' ? 'usta və xidmət üzrə görüş cədvəli' : 'ümumi satış və kassa funksiyaları'}`,
       'Heselo: otaq, masa və stansiya rezervasiyası + canlı vaxt sessiyası',
       'Heselo: kassa növbəsi + stok və sessiyaya məhsul satışı',
-      'Heselo: Azərbaycan, ingilis və rus dilləri; 25 AZN/aydan',
+      'Heselo: Azərbaycan, ingilis və rus dilləri; {low} AZN/aydan',
     ],
     faq: (name, kind) => [
       {
@@ -1042,7 +1042,7 @@ const labels: Record<
       },
       {
         q: 'Heselo neçə dildə işləyir və qiyməti nədir?',
-        a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər 25 AZN/aydan başlayır; uyğun planı demo zamanı dəqiqləşdirə bilərsiniz.',
+        a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} AZN/aydan başlayır; uyğun planı demo zamanı dəqiqləşdirə bilərsiniz.',
       },
       {
         q: 'Keçməzdən əvvəl necə yoxlaya bilərəm?',
@@ -1054,7 +1054,7 @@ const labels: Record<
       },
       {
         q: 'Heselonun qiyməti açıqdır? Harada baxa bilərəm?',
-        a: `Bəli. Paketlər 25 AZN/aydan başlayır və saytdakı Qiymətlər səhifəsində açıq göstərilir. ${name} üzrə yekun xərci isə provayderin aktual təklifi ilə dəqiqləşdirin.`,
+        a: `Bəli. Paketlər {low} AZN/aydan başlayır və saytdakı Qiymətlər səhifəsində açıq göstərilir. ${name} üzrə yekun xərci isə provayderin aktual təklifi ilə dəqiqləşdirin.`,
       },
       {
         q: `Nə vaxt həm ${name}, həm də Heselo saxlamaq məntiqlidir?`,
@@ -1096,7 +1096,7 @@ const labels: Record<
       `${name}: ${kind === 'restaurant' ? 'restaurant orders, menus and kitchen workflows' : kind === 'timer' ? 'basic device timing' : kind === 'pc-club' ? 'PC workstation control' : kind === 'appointments' ? 'specialist and service appointments' : 'general sales and till functions'}`,
       'Heselo: room, table and station bookings + live timed sessions',
       'Heselo: cash shifts + inventory and items sold into sessions',
-      'Heselo: Azerbaijani, English and Russian; from 25 AZN/month',
+      'Heselo: Azerbaijani, English and Russian; from {low} AZN/month',
     ],
     faq: (name, kind) => [
       {
@@ -1118,7 +1118,7 @@ const labels: Record<
       },
       {
         q: 'Which languages does Heselo support and what does it cost?',
-        a: 'The interface supports Azerbaijani, English and Russian. Plans start from 25 AZN per month; confirm the suitable plan during a demo.',
+        a: 'The interface supports Azerbaijani, English and Russian. Plans start from {low} AZN per month; confirm the suitable plan during a demo.',
       },
       {
         q: 'How can I check the fit before switching?',
@@ -1130,7 +1130,7 @@ const labels: Record<
       },
       {
         q: 'Is Heselo pricing public? Where can I see it?',
-        a: `Yes. Plans start from 25 AZN per month and are listed openly on the Pricing page of this site. For ${name}, confirm the total cost with the provider’s current quote.`,
+        a: `Yes. Plans start from {low} AZN per month and are listed openly on the Pricing page of this site. For ${name}, confirm the total cost with the provider’s current quote.`,
       },
       {
         q: `When does it make sense to keep both ${name} and Heselo?`,
@@ -1172,7 +1172,7 @@ const labels: Record<
       `${name}: ${kind === 'restaurant' ? 'ресторанные заказы, меню и кухня' : kind === 'timer' ? 'простой таймер устройств' : kind === 'pc-club' ? 'контроль рабочих станций ПК' : kind === 'appointments' ? 'запись к специалистам и на услуги' : 'общие продажи и кассовые функции'}`,
       'Heselo: бронь комнат, столов и станций + живые почасовые сеансы',
       'Heselo: кассовые смены + склад и товары в счёте сеанса',
-      'Heselo: азербайджанский, английский и русский; от 25 AZN в месяц',
+      'Heselo: азербайджанский, английский и русский; от {low} AZN в месяц',
     ],
     faq: (name, kind) => [
       {
@@ -1194,7 +1194,7 @@ const labels: Record<
       },
       {
         q: 'Какие языки поддерживает Heselo и сколько она стоит?',
-        a: 'Интерфейс доступен на азербайджанском, английском и русском. Тарифы начинаются от 25 AZN в месяц; подходящий план уточняется на демо.',
+        a: 'Интерфейс доступен на азербайджанском, английском и русском. Тарифы начинаются от {low} AZN в месяц; подходящий план уточняется на демо.',
       },
       {
         q: 'Как проверить систему до перехода?',
@@ -1206,7 +1206,7 @@ const labels: Record<
       },
       {
         q: 'Цены Heselo открыты? Где их посмотреть?',
-        a: `Да. Тарифы начинаются от 25 AZN в месяц и открыто опубликованы на странице «Цены» этого сайта. Итоговую стоимость ${name} уточняйте по актуальному предложению поставщика.`,
+        a: `Да. Тарифы начинаются от {low} AZN в месяц и открыто опубликованы на странице «Цены» этого сайта. Итоговую стоимость ${name} уточняйте по актуальному предложению поставщика.`,
       },
       {
         q: `Когда имеет смысл использовать и ${name}, и Heselo?`,

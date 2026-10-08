@@ -71,7 +71,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
             'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət (25 AZN/aydan) vacibdir',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
           ],
         },
         {
@@ -89,7 +89,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Mətbəx / KDS', 'Güclü restoran konturu', 'Tam mətbəx POS əvəzi deyil'],
               ['Çatdırılma', 'Aqreqator və restoran inteqrasiyaları', 'Klub sessiyasına fokus'],
               ['Kassa', 'Restoran növbəsi və çeklər', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Modul və tərəfdaş təklifi ilə', 'Açıq: 25 AZN/aydan'],
+              ['Qiymət', 'Modul və tərəfdaş təklifi ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Region və paketdən asılı', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -163,7 +163,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo neçə dildədir və qiyməti nədir?',
-          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər 25 AZN/aydan başlayır və saytda açıq göstərilir. iiko üzrə yekun xərci aktual tərəfdaş təklifi ilə dəqiqləşdirin.',
+          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} AZN/aydan başlayır və saytda açıq göstərilir. iiko üzrə yekun xərci aktual tərəfdaş təklifi ilə dəqiqləşdirin.',
         },
         {
           q: 'Keçməzdən əvvəl necə yoxlaya bilərəm?',
@@ -236,7 +236,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, console or table hours',
             'Advance booking and session start on arrival are required',
             'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from 25 AZN/month) matter',
+            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
           ],
         },
         {
@@ -254,7 +254,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Kitchen / KDS', 'Strong restaurant stack', 'Not a full kitchen POS'],
               ['Delivery', 'Aggregator and restaurant integrations', 'Club session focus'],
               ['Cash', 'Restaurant shifts and receipts', 'Club shifts + session sales'],
-              ['Pricing', 'By modules and partner quote', 'Public: from 25 AZN/month'],
+              ['Pricing', 'By modules and partner quote', 'Public: from {low} AZN/month'],
               ['Languages', 'Depends on region and package', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -328,7 +328,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Which languages does Heselo support and what does it cost?',
-          a: 'The interface is in Azerbaijani, English and Russian. Plans start from 25 AZN per month and are listed publicly on this site. Confirm iiko totals with a current partner quote.',
+          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} AZN per month and are listed publicly on this site. Confirm iiko totals with a current partner quote.',
         },
         {
           q: 'How can I check the fit before switching?',
@@ -401,7 +401,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, консоли или стола',
             'Нужны предварительная бронь и запуск сеанса по приходу',
             'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от 25 AZN/мес.)',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
           ],
         },
         {
@@ -419,7 +419,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Кухня / KDS', 'Сильный ресторанный контур', 'Не полноценная кухонная POS'],
               ['Доставка', 'Агрегаторы и ресторанные интеграции', 'Фокус на клубном сеансе'],
               ['Касса', 'Ресторанные смены и чеки', 'Клубные смены + продажи в сеансе'],
-              ['Цена', 'По модулям и предложению партнёра', 'Открыто: от 25 AZN/мес.'],
+              ['Цена', 'По модулям и предложению партнёра', 'Открыто: от {low} AZN/мес.'],
               ['Языки', 'Зависит от региона и пакета', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -493,7 +493,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Какие языки поддерживает Heselo и сколько она стоит?',
-          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от 25 AZN в месяц и открыто указаны на сайте. Итоговую стоимость iiko уточняйте по актуальному предложению партнёра.',
+          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} AZN в месяц и открыто указаны на сайте. Итоговую стоимость iiko уточняйте по актуальному предложению партнёра.',
         },
         {
           q: 'Как проверить систему до перехода?',

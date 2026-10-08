@@ -5,7 +5,7 @@ import DemoPromise from '@/components/DemoPromise.astro'
 import Faq from '@/components/Faq.astro'
 import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
-import { getMessages } from '@/i18n'
+import { loadPricedMessages } from '@/i18n'
 import { SITE, localePath } from '@/lib/site'
 
 export function getStaticPaths() {
@@ -13,7 +13,7 @@ export function getStaticPaths() {
 }
 
 const locale = resolveLocale(Astro.params.locale)
-const messages = getMessages(locale)
+const messages = await loadPricedMessages(locale)
 const page = messages.contact
 
 const faqMessages = {

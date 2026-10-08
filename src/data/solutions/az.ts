@@ -90,7 +90,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Bilyard klubu üçün qiymət nə qədərdir?',
-        a: 'Bilyard üçün Kiçik plan ayda 29 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Bir neçə filial və ya standart plana sığmayan həcm üçün ayrıca fərdi təklif hazırlayırıq.',
+        a: 'Bilyard üçün Kiçik plan ayda {billiards} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Bir neçə filial və ya standart plana sığmayan həcm üçün ayrıca fərdi təklif hazırlayırıq.',
       },
       {
         q: 'Demo necə alınır, kart lazımdır?',
@@ -171,7 +171,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Karaoke üçün qiymət harada göstərilib?',
-        a: 'Karaoke üçün Kiçik plan ayda 39 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Demonu əlaqə formasından pulsuz istəyə bilərsiniz — kart məlumatı tələb olunmur, otaq sayınızı yazmaq kifayətdir.',
+        a: 'Karaoke üçün Kiçik plan ayda {karaoke} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Demonu əlaqə formasından pulsuz istəyə bilərsiniz — kart məlumatı tələb olunmur, otaq sayınızı yazmaq kifayətdir.',
       },
       {
         q: 'Karaoke, bilyard və launj eyni paneldə ola bilər?',
@@ -257,7 +257,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'PS klubu üçün qiymət nə qədərdir?',
-        a: 'PS və oyun klubu üçün Kiçik plan ayda 25 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına stansiya sayını yazın — kart məlumatı tələb olunmur, cədvəli və canlı sessiyanı göstəririk.',
+        a: 'PS və oyun klubu üçün Kiçik plan ayda {gaming} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına stansiya sayını yazın — kart məlumatı tələb olunmur, cədvəli və canlı sessiyanı göstəririk.',
       },
     ],
     related: ['billiards', 'karaoke', 'reservations', 'pos'],
@@ -342,7 +342,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Antikafe üçün qiymət nə qədərdir?',
-        a: 'Antikafe üçün Kiçik plan ayda 32 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq göstərilib. Bir neçə zal və ya filial standart plana sığmırsa, ayrıca fərdi təklif hazırlayırıq. Demo pulsuzdur, kart tələb olunmur.',
+        a: 'Antikafe üçün Kiçik plan ayda {antikafe} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq göstərilib. Bir neçə zal və ya filial standart plana sığmırsa, ayrıca fərdi təklif hazırlayırıq. Demo pulsuzdur, kart tələb olunmur.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
@@ -355,7 +355,7 @@ export const solutionsAz: SolutionCopy[] = [
     h1: 'Otaqlı launj idarəetmə sistemi',
     seoTitle: 'Lounge bar idarəetmə proqramı — VIP otaq rezervasiyası | Heselo',
     seoDescription:
-      'Launj bar proqramı: VIP otaq rezervasiyası, canlı sessiya, bar satışı, kassa və anbar bir paneldə. Otaqlı launj üçün — ayda 39 AZN-dən, pulsuz demo.',
+      'Launj bar proqramı: VIP otaq rezervasiyası, canlı sessiya, bar satışı, kassa və anbar bir paneldə. Otaqlı launj üçün — ayda {lounge} AZN-dən, pulsuz demo.',
     keywords: [
       'lounge bar idarəetmə proqramı',
       'launj bar proqramı',
@@ -428,7 +428,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Launj bar proqramının qiyməti nə qədərdir?',
-        a: 'Otaqlı launj üçün Kiçik plan ayda 39 AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına otaq sayını yazın — kart məlumatı istənmir, cədvəli və canlı sessiyanı sizin ssenari ilə göstəririk.',
+        a: 'Otaqlı launj üçün Kiçik plan ayda {lounge} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına otaq sayını yazın — kart məlumatı istənmir, cədvəli və canlı sessiyanı sizin ssenari ilə göstəririk.',
       },
     ],
     related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
@@ -508,7 +508,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Qiymət harada göstərilib?',
-        a: 'Rezervasiya və cədvəl panelin əsas hissəsidir; qiymət məkan tipinə görə plandan asılıdır. Kiçik plan PS/oyun üçün 25, bilyard üçün 29, antikafe üçün 32, karaoke və launj üçün 39 AZN/aydan başlayır. Tam cədvəl qiymətlər səhifəsindədir, demo isə pulsuzdur.',
+        a: 'Rezervasiya və cədvəl panelin əsas hissəsidir; qiymət məkan tipinə görə plandan asılıdır. Kiçik plan PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} AZN/aydan başlayır. Tam cədvəl qiymətlər səhifəsindədir, demo isə pulsuzdur.',
       },
     ],
     related: ['karaoke', 'lounge', 'gaming', 'pos'],
@@ -590,7 +590,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Qiymət nə qədərdir?',
-        a: 'Tariflər məkan tipinə görədir: Kiçik plan PS/oyun üçün 25, bilyard üçün 29, antikafe üçün 32, karaoke və launj üçün 39 AZN/aydan. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demonu əlaqə formasından istəyin — kart lazım deyil.',
+        a: 'Tariflər məkan tipinə görədir: Kiçik plan PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} AZN/aydan. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demonu əlaqə formasından istəyin — kart lazım deyil.',
       },
     ],
     related: ['gaming', 'inventory', 'reservations'],
@@ -670,7 +670,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Qiymət harada göstərilib?',
-        a: 'Tariflər məkan tipinə görədir: PS/oyun üçün 25, bilyard üçün 29, antikafe üçün 32, karaoke və launj üçün 39 AZN/aydan. Planlar üzrə limitlər və illik ödəniş qiymətlər səhifəsindədir. Demo pulsuzdur — əlaqə formasına məhsul sayınızı yazın, anbar və sayım prosesini göstəririk.',
+        a: 'Tariflər məkan tipinə görədir: PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} AZN/aydan. Planlar üzrə limitlər və illik ödəniş qiymətlər səhifəsindədir. Demo pulsuzdur — əlaqə formasına məhsul sayınızı yazın, anbar və sayım prosesini göstəririk.',
       },
     ],
     related: ['pos', 'gaming', 'antikafe'],

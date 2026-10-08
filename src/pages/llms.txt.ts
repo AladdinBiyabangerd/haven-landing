@@ -1,4 +1,12 @@
-# Heselo — https://heselo.online
+import type { APIRoute } from 'astro'
+import { catalogPriceVars } from '@/lib/catalogCopy'
+import { loadVenueOffers } from '@/lib/venueOffers'
+
+export const GET: APIRoute = async () => {
+  await loadVenueOffers()
+  const p = catalogPriceVars()
+
+  const body = `# Heselo — https://heselo.online
 
 > Heselo — Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün rezervasiya, canlı zal, kassa və anbar paneli (mətbəx POS deyil).
 > Venue management SaaS: room/table/station timed sessions — booking, live floor, cash shift, inventory.
@@ -7,21 +15,21 @@
 
 ## One-line entity
 
-Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan: schedule + live sessions + cash drawer + inventory in one web panel. Published pricing from 25 AZN/month by venue type (see Pricing section). Free demo via contact form or WhatsApp. Sole founder: Aladdin Biyabangerd (https://heselo.online/az/about/).
+Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan: schedule + live sessions + cash drawer + inventory in one web panel. Published pricing from ${p.low} AZN/month by venue type (see Pricing section). Free demo via contact form or WhatsApp. Sole founder: Aladdin Biyabangerd (https://heselo.online/az/about/).
 
 ## Pricing (published)
 
 Prices are **public** on the pricing page — not quote-only B2B. Different starting fees by venue category so plans fit each kind of business. Custom quotes are an **add-on** for multi-branch or out-of-plan volume only.
 
-Starting monthly AZN (Small / Kiçik plan) — keep in sync with `src/lib/venueOffers.ts`:
+Starting monthly AZN (Small / Kiçik plan) — live from public subscription catalog API:
 
 | Venue type | From (AZN/month) |
 |------------|------------------|
-| Gaming / PlayStation club | 25 |
-| Billiards | 29 |
-| Karaoke | 39 |
-| Room lounge | 39 |
-| Anti-café | 32 |
+| Gaming / PlayStation club | ${p.gaming} |
+| Billiards | ${p.billiards} |
+| Karaoke | ${p.karaoke} |
+| Room lounge | ${p.lounge} |
+| Anti-café | ${p.antikafe} |
 
 - Tiers: Small / Medium / Large (Kiçik / Orta / Böyük). Annual = monthly × 10 (two months free).
 - Full table + calculator: https://heselo.online/az/pricing/
@@ -72,7 +80,7 @@ Starting monthly AZN (Small / Kiçik plan) — keep in sync with `src/lib/venueO
 - Kaktus alternative: https://heselo.online/az/guides/kaktus-alternative/
 - resto.az alternative: https://heselo.online/az/guides/resto-az-alternative/
 
-Mirror the same paths under `/en/guides/…` and `/ru/guides/…`.
+Mirror the same paths under \`/en/guides/…\` and \`/ru/guides/…\`.
 
 ## Contact
 
@@ -86,3 +94,12 @@ Mirror the same paths under `/en/guides/…` and `/ru/guides/…`.
 - Do not index /api/ routes.
 - robots.txt: https://heselo.online/robots.txt
 - AI crawlers (GPTBot, OAI-SearchBot, PerplexityBot, Google-Extended, ClaudeBot, …) are allowed on marketing pages.
+`
+
+  return new Response(body, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600',
+    },
+  })
+}

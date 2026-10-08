@@ -2,6 +2,7 @@ import type { Locale } from '@/i18n/config'
 import { HTML_LANG, LOCALES, OG_LOCALES } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { fillTemplate } from '@/lib/format'
+import { applyCatalogPricesDeep, withCatalogPrices } from '@/lib/catalogCopy'
 import { allVenuePlans, getActiveOffers, monthlyFeeRange } from '@/lib/venueOffers'
 import {
   absoluteUrl,
@@ -328,8 +329,8 @@ export function buildJsonLdGraph(
       '@type': 'FAQPage',
       mainEntity: input.faq.map((f) => ({
         '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
+        name: withCatalogPrices(f.q),
+        acceptedAnswer: { '@type': 'Answer', text: withCatalogPrices(f.a) },
       })),
     })
   }
@@ -488,10 +489,28 @@ export function seoMeta(
     ? 'noindex, nofollow'
     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 
+  const title = withCatalogPrices(input.title)
+  const description = withCatalogPrices(input.description)
+  const keywords = (input.keywords || []).map((k) => withCatalogPrices(k))
+  const pricedInput: SeoPageInput = {
+    ...input,
+    title,
+    description,
+    keywords,
+    faq: input.faq ? applyCatalogPricesDeep(input.faq) : undefined,
+    article: input.article
+      ? {
+          ...input.article,
+          headline: withCatalogPrices(input.article.headline),
+          description: withCatalogPrices(input.article.description),
+        }
+      : undefined,
+  }
+
   return {
-    title: input.title,
-    description: input.description,
-    keywords: (input.keywords || []).join(', '),
+    title,
+    description,
+    keywords: keywords.join(', '),
     canonical: localeUrl(locale, input.slug),
     ogLocale: OG_LOCALES[locale],
     alternateLocales: LOCALES.filter((l) => l !== locale).map((l) => OG_LOCALES[l]),
@@ -499,10 +518,10 @@ export function seoMeta(
     imageAlt: messages.seo.ogImageAlt,
     imageType: SITE.ogImage.type,
     robots,
-    ogType: input.ogType || (input.article ? 'article' : 'website'),
+    ogType: pricedInput.ogType || (pricedInput.article ? 'article' : 'website'),
     jsonLd: JSON.stringify({
       '@context': 'https://schema.org',
-      '@graph': buildJsonLdGraph(locale, messages, input),
+      '@graph': buildJsonLdGraph(locale, messages, pricedInput),
     }),
   }
 }

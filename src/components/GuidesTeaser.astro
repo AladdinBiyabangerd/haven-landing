@@ -3,17 +3,20 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import LinkCard from '@/components/LinkCard.astro'
 import { TEASER_GUIDE_SLUGS, getGuides } from '@/data/guides'
+import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { localePath } from '@/lib/site'
 import { truncateText } from '@/lib/format'
+import { loadVenueOffers } from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
   messages: Messages
 }
 const { locale, messages } = Astro.props
+await loadVenueOffers()
 const g = messages.guidesTeaser
-const guides = getGuides(locale).filter((item) =>
-  (TEASER_GUIDE_SLUGS as readonly string[]).includes(item.slug),
+const guides = applyCatalogPricesDeep(
+  getGuides(locale).filter((item) => (TEASER_GUIDE_SLUGS as readonly string[]).includes(item.slug)),
 )
 ---
 

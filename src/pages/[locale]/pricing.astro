@@ -5,14 +5,14 @@ import Faq from '@/components/Faq.astro'
 import PricingOffers from '@/components/PricingOffers.astro'
 import PricingSummary from '@/components/PricingSummary.astro'
 import { resolveLocale } from '@/i18n/config'
-import { getMessages } from '@/i18n'
+import { loadPricedMessages } from '@/i18n'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
 }
 
 const locale = resolveLocale(Astro.params.locale)
-const messages = getMessages(locale)
+const messages = await loadPricedMessages(locale)
 const page = messages.pricing
 const faqMessages = {
   ...messages,
