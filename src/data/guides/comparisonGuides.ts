@@ -1,5 +1,6 @@
 import type { Locale } from '@/i18n/config'
 import type { GuideCopy } from './types'
+import { iikoAlternativeGuide } from './iikoAlternativeGuide'
 
 const PUBLISHED = '2026-09-17'
 
@@ -26,65 +27,6 @@ type CatalogEntry = {
 }
 
 const catalog: CatalogEntry[] = [
-  {
-    slug: 'iiko-alternative-clubs',
-    name: 'iiko',
-    kind: 'restaurant',
-    relatedSolutions: ['gaming', 'karaoke', 'pos', 'inventory'],
-    copy: {
-      az: {
-        shortTitle: 'Klublar üçün iiko alternativi',
-        h1: 'Otaqlı əyləncə klubları üçün iiko alternativi',
-        seoTitle: 'Klublar üçün iiko alternativi — Heselo',
-        seoDescription:
-          'iiko və Heselonu oyun, karaoke və bilyard məkanları üçün dürüst müqayisə edin. Vaxt sessiyası, rezervasiya, kassa və qiymət fərqlərini öyrənin.',
-        intro:
-          'iiko restoran idarəetməsində, mətbəx prosesində və çatdırılmada güclü sistemdir. Məkanınızın əsas xidməti otaq və ya masa vaxtıdırsa, Heselo həmin əməliyyat modelinə daha yaxın alternativ ola bilər.',
-        competitorFit:
-          'Restoran zalı, mətbəx ekranı, reseptura, QR menyu və çatdırılma bir prosesdə işləməlidirsə, iiko daha uyğun seçimdir. Heselo tam restoran mətbəx POS-unu əvəz etmək üçün nəzərdə tutulmayıb.',
-        heseloFit:
-          'PlayStation, karaoke otağı, bilyard masası, antikafe və launj vaxtla satılırsa, Heselo rezervasiyanı canlı sessiya, kassa növbəsi və stokla birləşdirir.',
-        priceAngle:
-          'Heselo 25 AZN/aydan başlayır və əsasən klub əməliyyatlarına fokuslanır. iiko üzrə yekun xərc seçilən modullar, inteqrasiya və tərəfdaş şərtlərindən asılı olduğuna görə aktual təklifi ayrıca almaq lazımdır.',
-        switchNote:
-          'Əvvəlcə otaq, konsol və masaları yaradın, sonra tarif və işçi səlahiyyətlərini qurun. Menyu və mətbəx prosesiniz varsa, keçiddən əvvəl onların ayrıca sistemdə qalacağını planlaşdırın.',
-      },
-      en: {
-        shortTitle: 'iiko alternative for clubs',
-        h1: 'An iiko alternative for room-based entertainment clubs',
-        seoTitle: 'iiko Alternative for Clubs — Heselo',
-        seoDescription:
-          'Compare iiko and Heselo honestly for gaming, karaoke and billiards venues. Review timed sessions, bookings, cash shifts and pricing.',
-        intro:
-          'iiko is strong in restaurant operations, kitchen workflows and delivery. If your core product is room or table time, Heselo may be the closer operational alternative.',
-        competitorFit:
-          'Choose iiko when dining-room service, kitchen screens, recipes, QR menus and delivery must work as one restaurant flow. Heselo is not intended to replace a full restaurant kitchen POS.',
-        heseloFit:
-          'When PlayStation stations, karaoke rooms, billiards tables, anticafe seats or lounges are sold by time, Heselo connects bookings with live sessions, cash shifts and stock.',
-        priceAngle:
-          'Heselo starts from 25 AZN per month and focuses on club operations. iiko pricing depends on modules, integrations and partner terms, so request a current quote before comparing totals.',
-        switchNote:
-          'Create rooms, consoles and tables first, then configure rates and staff permissions. If you run a kitchen or menu flow, decide which restaurant system will continue to handle it before switching.',
-      },
-      ru: {
-        shortTitle: 'Альтернатива iiko для клубов',
-        h1: 'Альтернатива iiko для клубов с комнатами и почасовой оплатой',
-        seoTitle: 'Альтернатива iiko для клубов — Heselo',
-        seoDescription:
-          'Честное сравнение iiko и Heselo для игровых, караоке- и бильярдных клубов: сеансы, бронирования, кассовые смены и стоимость.',
-        intro:
-          'iiko сильна в ресторанном учёте, кухонных процессах и доставке. Если основной продукт заведения — время комнаты или стола, Heselo может точнее соответствовать такой модели работы.',
-        competitorFit:
-          'iiko лучше подходит, когда зал, кухонные экраны, техкарты, QR-меню и доставка должны работать в едином ресторанном контуре. Heselo не заменяет полноценную ресторанную POS-систему для кухни.',
-        heseloFit:
-          'Если время PlayStation, караоке-комнат, бильярдных столов, антикафе или лаунж-комнат продаётся по часам, Heselo связывает бронирование с живым сеансом, кассовой сменой и складом.',
-        priceAngle:
-          'Heselo стоит от 25 AZN в месяц и сосредоточена на клубных операциях. Цена iiko зависит от модулей, интеграций и условий партнёра, поэтому для точного сравнения нужен актуальный расчёт.',
-        switchNote:
-          'Сначала создайте комнаты, консоли и столы, затем настройте тарифы и права сотрудников. Если есть кухня или меню, заранее определите, какая ресторанная система продолжит обслуживать этот контур.',
-      },
-    },
-  },
   {
     slug: 'clopos-alternative',
     name: 'Clopos',
@@ -1277,7 +1219,7 @@ const labels: Record<
 export function comparisonGuides(locale: Locale): GuideCopy[] {
   const localeLabels = labels[locale]
 
-  return catalog.map((entry) => {
+  const templated = catalog.map((entry) => {
     const copy = entry.copy[locale]
 
     return {
@@ -1326,4 +1268,6 @@ export function comparisonGuides(locale: Locale): GuideCopy[] {
       ctaBody: localeLabels.ctaBody,
     }
   })
+
+  return [iikoAlternativeGuide(locale), ...templated]
 }

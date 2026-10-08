@@ -99,6 +99,28 @@ const faqMessages = {
                 ))}
               </ul>
             ) : null}
+            {section.table ? (
+              <div class="table-wrap">
+                <table class="guide-table">
+                  <thead>
+                    <tr>
+                      {section.table.headers.map((h) => (
+                        <th scope="col">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {section.table.rows.map((row) => (
+                      <tr>
+                        {row.map((cell) => (
+                          <td>{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
           </section>
         ))
       }
@@ -244,6 +266,38 @@ const faqMessages = {
     height: 0.35rem;
     border-radius: 999px;
     background: var(--accent);
+  }
+  .table-wrap {
+    margin: 1rem 0 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .guide-table {
+    width: 100%;
+    min-width: 28rem;
+    border-collapse: collapse;
+    font-size: var(--text-sm, 0.9375rem);
+  }
+  .guide-table th,
+  .guide-table td {
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-muted);
+  }
+  .guide-table th {
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom-color: var(--line-strong);
+  }
+  .guide-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .guide-table td:first-child {
+    color: var(--ink);
+    font-weight: 500;
+    white-space: nowrap;
   }
   .related {
     margin-top: 2.5rem;

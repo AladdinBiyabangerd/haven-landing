@@ -66,6 +66,11 @@ export type GuideCopy = {
     title: string
     paragraphs: string[]
     bullets?: string[]
+    /** Optional comparison / feature table rendered under paragraphs and bullets */
+    table?: {
+      headers: string[]
+      rows: string[][]
+    }
   }>
   faq: Array<{ q: string; a: string }>
   relatedSolutions: SolutionSlug[]
