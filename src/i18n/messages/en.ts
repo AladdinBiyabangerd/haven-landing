@@ -449,47 +449,27 @@ export const en: Messages = {
   featuresPage: {
     eyebrow: 'Features',
     title: 'Reservations, cash, and inventory — one panel',
-    intro: 'Everything below is available in the panel today — not a roadmap.',
-    solutionLinkLabel: 'View solution page',
+    intro: 'All of this is in the panel today — not a roadmap.',
+    solutionLinkLabel: 'Details',
     modules: [
       {
-        title: 'Live tracking',
-        desc: 'Active floor sessions: add products or amounts, pause, stop, receipts, payment, and delete (behind a code).',
-      },
-      {
-        title: 'Schedule',
-        desc: 'Day and week views for tables, rooms, and other places — the same data as reservations.',
-      },
-      {
-        title: 'Reservations',
-        desc: 'List and form: customer, time, labels, pre-order, collect payment, transfer, cancel, and history.',
+        title: 'Schedule, booking, and live session',
+        desc: 'Table/room schedule, reservations, and active floor sessions on the same data.',
         solutionSlug: 'reservations',
       },
       {
-        title: 'Cash, report, reconciliation',
-        desc: 'Open and close shift, transactions, closed-day history, cash report, and cash count.',
+        title: 'Cash and shift',
+        desc: 'Open and close the shift, payments, reports, and cash count.',
         solutionSlug: 'pos',
       },
       {
-        title: 'Products, inventory, quick sale',
-        desc: 'Catalog prices, stock balances and count logs; walk-in sale without a booking.',
+        title: 'Products and inventory',
+        desc: 'Catalog, stock, counts, and quick sale without a booking.',
         solutionSlug: 'inventory',
       },
       {
-        title: 'Customers',
-        desc: 'Customer cards, source/profile, and import — one database with reservations and sessions.',
-      },
-      {
-        title: 'Statistics',
-        desc: 'Payment, customer, and inventory statistics — overview, slices, and compare.',
-      },
-      {
-        title: 'Price calculator',
-        desc: 'Price from table/room type and tariff — the same calculation as bookings and live sessions.',
-      },
-      {
-        title: 'Settings & security',
-        desc: 'Staff invites, page-and-button permissions, venue protection code, receipts, and other venue settings.',
+        title: 'Customers, stats, and settings',
+        desc: 'Customer cards, reports, pricing rules, staff, and protection code.',
       },
     ],
   },

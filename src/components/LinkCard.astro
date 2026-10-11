@@ -1,21 +1,37 @@
 ---
 /**
- * One card = one destination. The heading is the link, so the card never
- * repeats the same title twice (title + "read more about <title>").
+ * One card = one destination. The whole card is the link (no nested anchors).
  */
 interface Props {
   href: string
   title: string
   desc?: string
+  /** Optional trailing CTA line (e.g. “Rezervasiya →”). */
+  cta?: string
   /** Heading level for correct document outline (default h3) */
   as?: 'h2' | 'h3'
 }
 
-const { href, title, desc, as = 'h3' } = Astro.props
+const { href, title, desc, cta, as = 'h3' } = Astro.props
 const Heading = as
 ---
 
 <a class="card card-link" href={href}>
   <Heading class="type-card-title card-link__title">{title}</Heading>
   {desc ? <p>{desc}</p> : null}
+  {cta ? <span class="card-link__cta">{cta}</span> : null}
 </a>
+
+<style>
+  .card-link__cta {
+    margin-top: auto;
+    padding-top: 0.65rem;
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+  .card-link:hover .card-link__cta {
+    color: var(--accent-deep);
+  }
+</style>

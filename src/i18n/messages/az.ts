@@ -449,47 +449,27 @@ export const az: Messages = {
   featuresPage: {
     eyebrow: 'Funksiyalar',
     title: 'Rezervasiya, kassa və anbar — eyni paneldə',
-    intro: 'Aşağıdakıların hamısı hazırda paneldə istifadə oluna bilir — gələcək planlar deyil.',
-    solutionLinkLabel: 'Həll səhifəsinə bax',
+    intro: 'Hamısı hazırda paneldədir — gələcək plan deyil.',
+    solutionLinkLabel: 'Ətraflı',
     modules: [
       {
-        title: 'Canlı izləmə',
-        desc: 'Zaldakı aktiv sessiyalar: məhsul və məbləğ əlavəsi, pauza, dayandırma, qəbz, ödəniş və silmə (kodla).',
-      },
-      {
-        title: 'Cədvəl',
-        desc: 'Gün və həftə üzrə masa, otaq və digər yerlərin cədvəli — rezervasiya ilə eyni məlumatlar üzərindən işləyir.',
-      },
-      {
-        title: 'Rezervasiyalar',
-        desc: 'Siyahı və forma: müştəri, vaxt, etiket, əvvəlcədən sifariş, ödəniş toplama, köçürmə, ləğv və tarixçə.',
+        title: 'Cədvəl, rezervasiya və canlı sessiya',
+        desc: 'Masa/otaq cədvəli, bron və zaldakı aktiv sessiya eyni məlumat üzərində.',
         solutionSlug: 'reservations',
       },
       {
-        title: 'Kassa, hesabat, sayım',
-        desc: 'Növbəni açmaq və bağlamaq, əməliyyatlar, bağlanmış günlərin tarixçəsi, kassa hesabatı və kassa sayımı.',
+        title: 'Kassa və növbə',
+        desc: 'Növbəni açın-bağlayın, ödənişlər, hesabat və kassa sayımı.',
         solutionSlug: 'pos',
       },
       {
-        title: 'Məhsullar, anbar, sürətli satış',
-        desc: 'Kataloq qiymətləri, anbar qalıqları və sayım jurnalları; rezervasiyasız satışlar da eyni sistemdən aparılır.',
+        title: 'Məhsullar və anbar',
+        desc: 'Kataloq, qalıq, sayım və bron olmadan sürətli satış.',
         solutionSlug: 'inventory',
       },
       {
-        title: 'Müştərilər',
-        desc: 'Müştəri kartları, mənbə/profil və idxal — rezervasiya və sessiya ilə eyni məlumat bazasında.',
-      },
-      {
-        title: 'Statistika',
-        desc: 'Ödəniş, müştəri və anbar statistikası — icmal, kəsim və müqayisə.',
-      },
-      {
-        title: 'Qiymət hesablama',
-        desc: 'Masa/otaq tipi və tarifə görə qiymət — rezervasiya və canlı sessiyada eyni qaydada hesablanır.',
-      },
-      {
-        title: 'Ayarlar və təhlükəsizlik',
-        desc: 'İşçi dəvəti, səhifə və düymə icazələri, məkan qoruma kodu, qəbz və digər məkan ayarları.',
+        title: 'Müştəri, statistika və ayarlar',
+        desc: 'Müştəri kartları, hesabatlar, qiymət qaydaları, işçilər və qoruma kodu.',
       },
     ],
   },

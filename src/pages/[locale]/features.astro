@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import ProductGallery from '@/components/ProductGallery.astro'
 import Cta from '@/components/Cta.astro'
 import NextThought from '@/components/NextThought.astro'
+import LinkCard from '@/components/LinkCard.astro'
 import { resolveLocale } from '@/i18n/config'
 import { loadPricedMessages } from '@/i18n'
 import { getSolution } from '@/data/solutions'
@@ -25,23 +25,30 @@ const page = messages.featuresPage
         <h1 class="type-page-title">{page.title}</h1>
         <p class="lead">{page.intro}</p>
       </div>
-      <div class="card-grid">
+      <ul class="card-grid">
         {
-          page.modules.map((mod) => (
-            <article class="card">
-              <h2 class="type-card-title">{mod.title}</h2>
-              <p>{mod.desc}</p>
-              {
-                mod.solutionSlug ? (
-                  <a class="link-inline module-link" href={localePath(locale, `/solutions/${mod.solutionSlug}`)}>
-                    {getSolution(locale, mod.solutionSlug)?.h1 ?? page.solutionLinkLabel}{messages.common.linkArrow}
-                  </a>
-                ) : null
-              }
-            </article>
-          ))
+          page.modules.map((mod) => {
+            const href = mod.solutionSlug
+              ? localePath(locale, `/solutions/${mod.solutionSlug}`)
+              : null
+            const cta = mod.solutionSlug
+              ? `${getSolution(locale, mod.solutionSlug)?.shortTitle ?? page.solutionLinkLabel}${messages.common.linkArrow}`
+              : null
+            return (
+              <li>
+                {href ? (
+                  <LinkCard href={href} title={mod.title} desc={mod.desc} cta={cta} as="h2" />
+                ) : (
+                  <article class="card">
+                    <h2 class="type-card-title">{mod.title}</h2>
+                    <p>{mod.desc}</p>
+                  </article>
+                )}
+              </li>
+            )
+          })
         }
-      </div>
+      </ul>
     </div>
   </section>
   <NextThought
@@ -55,7 +62,6 @@ const page = messages.featuresPage
       },
     ]}
   />
-  <ProductGallery messages={messages} />
   <Cta locale={locale} messages={messages} intent="next" />
 </BaseLayout>
 
@@ -64,15 +70,16 @@ const page = messages.featuresPage
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100%;
   }
-  p {
+  article p {
     margin: 0.4rem 0 0;
     color: var(--ink-muted);
     font-size: var(--text-sm);
-    flex: 1;
   }
-  .module-link {
-    margin-top: 0.85rem;
-    font-size: var(--text-sm);
+  @media (max-width: 759px) {
+    .section-head :global(.type-page-title) {
+      font-size: var(--text-2xl);
+    }
   }
 </style>
