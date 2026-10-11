@@ -360,6 +360,8 @@ const PLAN_FEATURE_PREVIEW = 5
       if (valid.has(slug)) selectType(slug, false)
     })
 
+    const carouselMq = window.matchMedia('(max-width: 899px)')
+
     root.querySelectorAll('[data-plans-carousel]').forEach((carousel) => {
       if (!(carousel instanceof HTMLElement)) return
       const track = carousel.querySelector('[data-plans-track]')
@@ -373,6 +375,10 @@ const PLAN_FEATURE_PREVIEW = 5
       if (!Number.isFinite(index) || index < 0 || index >= cards.length) index = 0
       let scrolling = false
 
+      function isCarousel() {
+        return carouselMq.matches
+      }
+
       function syncDots(active) {
         index = active
         carousel.dataset.planIndex = String(active)
@@ -382,6 +388,7 @@ const PLAN_FEATURE_PREVIEW = 5
       }
 
       function scrollToIndex(nextIndex, behavior) {
+        if (!isCarousel()) return
         const target = ((nextIndex % cards.length) + cards.length) % cards.length
         const card = cards[target]
         if (!(card instanceof HTMLElement)) return
@@ -423,7 +430,7 @@ const PLAN_FEATURE_PREVIEW = 5
       track.addEventListener(
         'scroll',
         () => {
-          if (scrolling) return
+          if (!isCarousel() || scrolling) return
           syncDots(nearestIndex())
         },
         { passive: true },
@@ -444,11 +451,16 @@ const PLAN_FEATURE_PREVIEW = 5
       const panel = carousel.closest('[data-panel]')
       const ready = () => {
         if (panel instanceof HTMLElement && panel.hidden) return
+        if (!isCarousel()) {
+          track.scrollLeft = 0
+          return
+        }
         requestAnimationFrame(() => {
           requestAnimationFrame(() => scrollToIndex(index, 'auto'))
         })
       }
       ready()
+      carouselMq.addEventListener('change', ready)
       if (panel instanceof HTMLElement) {
         const observer = new MutationObserver(() => {
           if (!panel.hidden) ready()
@@ -701,6 +713,31 @@ const PLAN_FEATURE_PREVIEW = 5
   .plans-dots button:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
+  }
+  /* Desktop: all three plans side by side — carousel is mobile-only. */
+  @media (min-width: 900px) {
+    .plans-carousel {
+      max-width: none;
+      margin-inline: 0;
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--gap);
+      overflow: visible;
+      scroll-snap-type: none;
+      padding: 0;
+    }
+    .plans > article {
+      flex: unset;
+      width: auto;
+      min-width: 0;
+      scroll-snap-align: unset;
+    }
+    .plans-nav,
+    .plans-dots {
+      display: none;
+    }
   }
   article {
     display: flex;
