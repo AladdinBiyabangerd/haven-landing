@@ -38,19 +38,32 @@ const messages = await loadPricedMessages(locale)
 </BaseLayout>
 
 <style is:global>
-  /* Home-only: tighter mobile rhythm (SaaS landing scannability). */
+  /* Home-only: less empty band between blocks (scroll ≠ prestige). */
+  .home .section {
+    padding: 1.6rem 0;
+  }
+  .home .section-head {
+    margin-bottom: 0.9rem;
+  }
+  .home #solutions .all {
+    margin-top: 0.85rem;
+  }
+  .home .cta-next {
+    padding-top: 0.65rem;
+    padding-bottom: 1.5rem;
+  }
+  .home .cta-next .prose p {
+    margin-top: 0.3rem;
+  }
   @media (max-width: 759px) {
     .home .section {
-      padding: 1.5rem 0;
-    }
-    .home .section-head {
-      margin-bottom: 1rem;
+      padding: 1.35rem 0;
     }
     .home .section-head .type-section {
       font-size: var(--text-2xl);
     }
     .home .section-head .lead {
-      margin-top: 0.4rem;
+      margin-top: 0.35rem;
       font-size: var(--text-md);
     }
   }
