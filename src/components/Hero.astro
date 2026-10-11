@@ -29,7 +29,7 @@ const secondaryIsWhatsApp = formFirst
       <p class="lead reveal reveal-delay-2">{h.subtitle}</p>
       <div class="hero__cta reveal reveal-delay-3">
         <a
-          class="btn btn-primary"
+          class="btn btn-primary hero__cta-primary"
           href={primaryHref}
           target={primaryIsWhatsApp ? '_blank' : undefined}
           rel={primaryIsWhatsApp ? 'noopener noreferrer' : undefined}
@@ -38,7 +38,7 @@ const secondaryIsWhatsApp = formFirst
           {h.ctaPrimary}
         </a>
         <a
-          class="btn btn-ghost"
+          class="hero__cta-secondary"
           href={secondaryHref}
           target={secondaryIsWhatsApp ? '_blank' : undefined}
           rel={secondaryIsWhatsApp ? 'noopener noreferrer' : undefined}
@@ -60,7 +60,7 @@ const secondaryIsWhatsApp = formFirst
 <style>
   .hero {
     position: relative;
-    padding: clamp(2rem, 5vw, 3.25rem) 0 var(--space-section);
+    padding: clamp(1.25rem, 3vw, 3.25rem) 0 clamp(1.5rem, 3vw, var(--space-section));
     overflow: hidden;
   }
   .hero__glow {
@@ -74,27 +74,39 @@ const secondaryIsWhatsApp = formFirst
   }
   .hero__grid {
     display: grid;
-    gap: 2.5rem;
+    gap: 1.75rem;
     align-items: center;
   }
   .hero__cta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+    margin-top: 1.15rem;
   }
-  /*
-   * Three facts separated by space alone. Dot separators between flex items
-   * dangle at the end of whichever line happens to wrap, and the wrap point
-   * moves with the viewport — spacing carries the grouping at every width.
-   */
+  .hero__cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.35rem 0.5rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink-muted);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+  .hero__cta-secondary:hover {
+    color: var(--accent-deep);
+  }
   .trust {
     list-style: none;
-    margin: 1.25rem 0 0;
+    margin: 0.85rem 0 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3rem 1.75rem;
+    gap: 0.25rem 1.25rem;
     max-width: 36rem;
     font-family: var(--font-body);
     font-size: var(--text-sm);
@@ -103,26 +115,64 @@ const secondaryIsWhatsApp = formFirst
   .hero__visual {
     position: relative;
   }
-  @media (max-width: 559px) {
-    .hero__cta .btn {
-      flex: 1 1 100%;
+  /* Mobile-first: one dominant CTA, smaller type, shot below copy. */
+  @media (max-width: 959px) {
+    .hero :global(.type-hero) {
+      font-size: var(--text-3xl);
     }
-    .trust {
-      gap: 0.45rem;
+    .hero :global(.lead) {
+      margin-top: 0.5rem;
+      font-size: var(--text-md);
+      max-width: 28rem;
+    }
+    .hero__visual {
+      max-width: 22rem;
+      margin-inline: auto;
+    }
+    .hero__visual :global(img) {
+      max-height: 9.5rem;
+      width: 100%;
+      object-fit: cover;
+      object-position: top left;
     }
     .trust li {
       flex-basis: 100%;
     }
   }
-  @media (min-width: 560px) and (max-width: 767px) {
-    .trust {
-      gap: 0.3rem 1rem;
+  @media (min-width: 560px) {
+    .hero__cta {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero__cta-primary {
+      flex: 0 1 auto;
     }
   }
   @media (min-width: 960px) {
     .hero__grid {
       grid-template-columns: 1.05fr 0.95fr;
       gap: 3rem;
+    }
+    .hero__cta-secondary {
+      min-height: 2.85rem;
+      padding: 0.7rem 1.15rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--ink);
+      background: transparent;
+    }
+    .hero__cta-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent-deep);
+      background: rgba(20, 184, 166, 0.06);
+    }
+    .hero__visual {
+      max-width: none;
+    }
+    .hero__visual :global(img) {
+      max-height: none;
     }
   }
 </style>

@@ -21,6 +21,7 @@ export const en: Messages = {
     toggleMenu: 'Open or close menu',
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
+    menu: 'Menu',
     skipToContent: 'Skip to content',
     breadcrumbs: 'Breadcrumb',
     primaryNav: 'Primary',
@@ -38,10 +39,10 @@ export const en: Messages = {
     credit: 'Founded by',
   },
   hero: {
-    brandHint: 'Heselo · venue management',
-    title: 'A booking lost in WhatsApp wrecks the shift.',
+    brandHint: 'Heselo',
+    title: 'Booking and cash panel for gaming clubs, karaoke, and room venues.',
     subtitle:
-      'Heselo brings the room and PlayStation schedule, live session, and cash together on one screen.',
+      'Schedule, live sessions, and the shift on one screen — instead of WhatsApp and spreadsheets. Not restaurant POS or kitchen software.',
     ctaPrimary: 'Request a demo',
     ctaSecondary: 'Message on WhatsApp',
   },
@@ -49,7 +50,6 @@ export const en: Messages = {
     items: [
       '15-minute demo, no card',
       'From {low} AZN a month',
-      'AZ / RU / EN panel',
     ],
   },
   demoPromise: {
@@ -82,13 +82,11 @@ export const en: Messages = {
     before: [
       'The schedule and live floor fall out of sync',
       'Payments blur when the shift closes',
-      'Stock counts sit outside day-to-day work',
       'Past edits happen with no clear gate',
     ],
     after: [
       'From booking to live session',
-      'Cash, card, and POS payments tracked transparently by day and shift',
-      'Products and stock share one list',
+      'Payments tracked by day and shift',
       'Sensitive actions need a protection code',
     ],
   },
@@ -96,34 +94,30 @@ export const en: Messages = {
     eyebrow: 'What you get',
     title: 'Everything a shift needs,',
     titleAccent: 'in one panel.',
-    intro:
-      'Bookings, live sessions, cash, stock, and customers — all available in the panel today.',
+    intro: 'Schedule, live session, and cash — on one screen.',
+    featuresLink: 'All features',
     items: [
       {
         title: 'Live tracking',
-        desc: 'Active sessions, add products, pause and stop, receipts, and payment — the real floor state.',
+        desc: 'Active sessions, pause, receipts, and payment — the real floor state.',
       },
       {
         title: 'Schedule & reservations',
-        desc: 'Tables and rooms on one schedule. Reservation list, transfer, cancel, and history.',
+        desc: 'Tables and rooms on one schedule — transfer, cancel, history.',
       },
       {
         title: 'Cash',
-        desc: 'Open and close shift, transactions, cash report, and cash count — daily and shift reports stay separate.',
-      },
-      {
-        title: 'Products, stock, sale',
-        desc: 'Product catalog, inventory counts, and walk-in sales from the same product list — no booking required.',
-      },
-      {
-        title: 'Customers',
-        desc: 'Customer cards, history, and import — tied to reservations and live sessions.',
-      },
-      {
-        title: 'Stats & settings',
-        desc: 'Payment, customer, and inventory statistics; staff, permissions, protection code, and price calculator.',
+        desc: 'Open and close the shift; daily and shift reports in the same panel.',
       },
     ],
+  },
+  homePricing: {
+    eyebrow: 'Pricing',
+    title: 'From {low} AZN',
+    titleAccent: 'a month.',
+    lead: '15-minute demo, no card required. Published rates by venue type.',
+    ctaPricing: 'See plans',
+    ctaDemo: 'Request a demo',
   },
   how: {
     eyebrow: 'Getting started',
@@ -147,6 +141,7 @@ export const en: Messages = {
   faq: {
     eyebrow: 'Questions',
     title: 'People ask us this often',
+    moreLabel: 'All questions',
     items: [
       {
         q: 'What is Heselo and who is it for?',
@@ -1019,9 +1014,9 @@ export const en: Messages = {
         keywords: ['Heselo FAQ', 'Heselo questions', 'Heselo pricing', 'gaming club software FAQ', 'venue management system FAQ'],
       },
       home: {
-        title: 'Heselo — club & room panel | alternative to iiko/Clopos',
+        title: 'Heselo — booking & cash panel for gaming clubs and room venues',
         description:
-          'Heselo is a room-time panel for PlayStation/gaming, karaoke, billiards, anti-cafés and lounges: booking, live sessions, cash. Club ops instead of restaurant POS (iiko, Clopos) — from {low} AZN/month. Free demo.',
+          'Heselo is a booking and cash panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges. Schedule, live session, and shift in one place — instead of WhatsApp/spreadsheets, not restaurant POS. From {low} AZN/month. Free demo.',
         keywords: [
           'Heselo',
           'venue management system',

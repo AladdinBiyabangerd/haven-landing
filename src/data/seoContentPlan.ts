@@ -4,8 +4,8 @@
  */
 export const SEO_CONTENT_PLAN = {
   product: [
-    { id: 'what-is-heselo', status: 'covered-on-home', note: 'Home #about + solutions hub' },
-    { id: 'how-heselo-works', status: 'covered-on-home', note: 'How section + features page' },
+    { id: 'what-is-heselo', path: '/about/', status: 'live', note: 'SeoOverview on about + solutions hub' },
+    { id: 'how-heselo-works', path: '/features/', status: 'live', note: 'ProductProof on home; full detail on features' },
     { id: 'who-created-heselo', path: '/about/', status: 'live', note: 'Sole founder Aladdin Biyabangerd + Person schema' },
     { id: 'heselo-pricing', path: '/guides/heselo-pricing/', status: 'live', note: 'Published pricing explainer → /pricing' },
   ],

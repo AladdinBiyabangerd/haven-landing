@@ -133,7 +133,11 @@ const breadcrumbs =
     <main id="main">
       {
         breadcrumbs.length > 0 ? (
-          <Breadcrumbs locale={locale} items={breadcrumbs} ariaLabel={messages.nav.breadcrumbs} />
+          <Breadcrumbs
+            locale={locale}
+            items={breadcrumbs}
+            ariaLabel={messages.nav.breadcrumbs}
+          />
         ) : null
       }
       <slot />

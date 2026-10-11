@@ -41,6 +41,8 @@ export type Messages = {
     toggleMenu: string
     openMenu: string
     closeMenu: string
+    /** Short visible label on the mobile menu button. */
+    menu: string
     skipToContent: string
     breadcrumbs: string
     primaryNav: string
@@ -89,10 +91,21 @@ export type Messages = {
     title: string
     titleAccent: string
     intro: string
+    /** Link label to /features under the three product proofs. */
+    featuresLink: string
     items: Array<{
       title: string
       desc: string
     }>
+  }
+  homePricing: {
+    eyebrow: string
+    title: string
+    titleAccent: string
+    /** May include {low} — filled by loadPricedMessages. */
+    lead: string
+    ctaPricing: string
+    ctaDemo: string
   }
   how: {
     eyebrow: string
@@ -103,6 +116,8 @@ export type Messages = {
   faq: {
     eyebrow: string
     title: string
+    /** “All questions” link when home shows a limited FAQ. */
+    moreLabel: string
     items: FaqItem[]
   }
   /** Dedicated /faq/ page: groups reuse faq / pricing.faq / aboutPage.faq / contact.faq. */

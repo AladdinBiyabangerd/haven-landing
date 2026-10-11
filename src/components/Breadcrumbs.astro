@@ -9,10 +9,17 @@ interface Props {
 }
 const { items, ariaLabel } = Astro.props
 if (items.length < 2) return null
+
+/** Parent page to go “back” to (home or hub), never the current page. */
+const parent = [...items].reverse().find((item) => !item.current) ?? items[0]
 ---
 
 <nav class="breadcrumbs container" aria-label={ariaLabel}>
-  <ol>
+  <a class="breadcrumbs__back" href={parent.href}>
+    <span class="breadcrumbs__chevron" aria-hidden="true">←</span>
+    <span class="breadcrumbs__back-label">{parent.label}</span>
+  </a>
+  <ol class="breadcrumbs__trail">
     {
       items.map((item, i) => (
         <li>
@@ -29,9 +36,43 @@ if (items.length < 2) return null
 
 <style>
   .breadcrumbs {
-    padding: 0.85rem 0 0;
+    display: grid;
+    gap: 0.45rem;
+    padding: 0.75rem 0 0;
   }
-  ol {
+  /* Primary escape hatch — large enough to notice on a phone. */
+  .breadcrumbs__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 2.5rem;
+    padding: 0.35rem 0.85rem 0.35rem 0.65rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .breadcrumbs__back:hover {
+    border-color: var(--accent);
+    color: var(--accent-deep);
+    background: var(--accent-soft);
+  }
+  .breadcrumbs__chevron {
+    flex-shrink: 0;
+    font-size: 1.05em;
+  }
+  .breadcrumbs__back-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .breadcrumbs__trail {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -39,25 +80,48 @@ if (items.length < 2) return null
     flex-wrap: wrap;
     gap: 0.35rem 0.5rem;
     align-items: center;
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
     color: var(--ink-subtle);
   }
-  li:not(:last-child)::after {
+  .breadcrumbs__trail li:not(:last-child)::after {
     content: '/';
     margin-left: 0.5rem;
     color: var(--ink-subtle);
     opacity: 0.7;
   }
-  a {
+  .breadcrumbs__trail a {
     color: var(--ink-muted);
     text-decoration: none;
   }
-  a:hover {
+  .breadcrumbs__trail a:hover {
     color: var(--accent);
     text-decoration: underline;
   }
   span[aria-current='page'] {
     color: var(--ink);
     font-weight: 600;
+  }
+  /* Desktop: trail is enough; keep back chip but quieter. */
+  @media (min-width: 960px) {
+    .breadcrumbs {
+      gap: 0.35rem;
+      padding-top: 0.85rem;
+    }
+    .breadcrumbs__back {
+      min-height: 0;
+      padding: 0;
+      border: none;
+      background: transparent;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--ink-muted);
+    }
+    .breadcrumbs__back:hover {
+      background: transparent;
+      color: var(--accent);
+    }
+    .breadcrumbs__trail {
+      font-size: var(--text-sm);
+    }
   }
 </style>

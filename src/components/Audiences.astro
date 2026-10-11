@@ -46,4 +46,19 @@ const a = messages.audiences
   .all {
     margin: 1.25rem 0 0;
   }
+  /* Mobile: title-only cards — faster scan, less text wall. */
+  @media (max-width: 759px) {
+    .section-head .lead {
+      display: none;
+    }
+    .card-grid :global(.card-link p) {
+      display: none;
+    }
+    .card-grid :global(.card-link) {
+      padding: 0.9rem 1rem;
+    }
+    .card-grid :global(.type-card-title) {
+      font-size: var(--text-lg);
+    }
+  }
 </style>

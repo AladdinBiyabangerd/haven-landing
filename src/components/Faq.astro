@@ -8,9 +8,15 @@ interface Props {
   locale: Locale
   /** Section anchor id; override when several FAQ blocks share one page. */
   id?: string
+  /** When set, only the first N items render (full list stays on /faq). */
+  limit?: number
+  /** Absolute-or-locale path for “all questions” when limit is used. */
+  moreHref?: string
 }
-const { messages, locale, id = 'faq' } = Astro.props
+const { messages, locale, id = 'faq', limit, moreHref } = Astro.props
 const f = messages.faq
+const items = typeof limit === 'number' ? f.items.slice(0, limit) : f.items
+const showMore = typeof limit === 'number' && f.items.length > limit && moreHref
 ---
 
 <section class="section" id={id}>
@@ -22,7 +28,7 @@ const f = messages.faq
       </div>
       <div class="list">
         {
-          f.items.map((item, i) => (
+          items.map((item, i) => (
             <details open={i === 0}>
               <summary>{item.q}</summary>
               <p>
@@ -42,6 +48,15 @@ const f = messages.faq
           ))
         }
       </div>
+      {
+        showMore ? (
+          <p class="more">
+            <a class="link-inline" href={moreHref}>
+              {f.moreLabel}{messages.common.linkArrow}
+            </a>
+          </p>
+        ) : null
+      }
     </div>
   </div>
 </section>
@@ -93,5 +108,8 @@ const f = messages.faq
     max-width: 42rem;
     color: var(--ink-muted);
     font-size: var(--text-sm);
+  }
+  .more {
+    margin: 1.25rem 0 0;
   }
 </style>

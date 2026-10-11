@@ -1,34 +1,18 @@
-# Current task — FAQ expand + rewrite (2026-10-11)
+# Current task — Home mobile SaaS layout pass (2026-10-11)
 
 ## Completed
 
-Expanded and rewrote site FAQ copy in `src/i18n/messages/{az,en,ru}.ts` (same counts, aligned intent).
+Applied Shadcn/SaaS landing principles on **Astro** (no Tailwind/React port):
 
-| Group | Before | After |
-|-------|--------|-------|
-| Home (`faq.items`) | 9 | 15 |
-| Pricing | 7 | 9 |
-| About | 4 | 7 |
-| Contact | 4 | 7 |
-| **FAQ page total** | **24** | **38** |
+1. **Hero:** mobile = smaller H1, one dominant CTA, secondary as text link; shot below copy and capped
+2. **Home sections:** tighter padding via `.home` wrapper
+3. **Audiences:** mobile title-only cards (desc hidden)
+4. **Pricing teaser:** primary button + text secondary (same pattern as hero)
+5. **ProductProof:** denser mobile list (still no schedule image)
 
-New home topics: Excel/WhatsApp, languages, PC lock (no), setup time, multi-branch, opened session.
-Polished choppy AZ/EN/RU answers (price lists, co-founder wording, contact venue-type answer).
-
-## Decisions
-
-1. FAQ source of truth remains message catalogs; `/faq/` aggregates via `getFaqGroups`.
-2. PC-lock FAQ links to `/guides/izi-alternative`.
-3. Did not touch solution/guide FAQs in this pass.
+Stack unchanged: Astro 5 + CSS modules/tokens.
 
 ## Remaining
 
-1. Optional: spot-check `/faq/`, home, pricing, about, contact in browser (az/en/ru).
-2. Commit when user asks.
-
-## Relevant files
-
-- `src/i18n/messages/az.ts`
-- `src/i18n/messages/en.ts`
-- `src/i18n/messages/ru.ts`
-- `src/lib/faqPage.ts`
+1. Real-phone check
+2. Commit when asked

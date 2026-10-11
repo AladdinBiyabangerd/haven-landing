@@ -21,6 +21,7 @@ export const az: Messages = {
     toggleMenu: 'Menyunu aç və ya bağla',
     openMenu: 'Menyunu aç',
     closeMenu: 'Menyunu bağla',
+    menu: 'Menyu',
     skipToContent: 'Məzmuna keç',
     breadcrumbs: 'Səhifə yolu',
     primaryNav: 'Əsas naviqasiya',
@@ -38,10 +39,10 @@ export const az: Messages = {
     credit: 'Yaradıcı',
   },
   hero: {
-    brandHint: 'Heselo · məkan idarəetməsi',
-    title: 'WhatsApp-da itirilən bron növbəni qarışdırır.',
+    brandHint: 'Heselo',
+    title: 'Oyun klubu, karaoke və otaqlı məkanlar üçün rezervasiya və kassa paneli.',
     subtitle:
-        'Heselo otaq və PS cədvəlini, canlı sessiyanı və kassanı eyni ekranda birləşdirir.',
+      'Cədvəl, canlı sessiya və növbə bir ekranda — WhatsApp və Excel əvəzinə. Restoran POS və ya mətbəx sistemi deyil.',
     ctaPrimary: 'WhatsApp ilə yazın',
     ctaSecondary: 'Forma ilə yazın',
   },
@@ -49,7 +50,6 @@ export const az: Messages = {
     items: [
       '15 dəqiqəlik demo, kart tələb olunmur',
       'Ayda {low} AZN-dən',
-      'AZ / RU / EN panel',
     ],
   },
   demoPromise: {
@@ -82,13 +82,11 @@ export const az: Messages = {
     before: [
       'Cədvəl və canlı zal bir-biri ilə əlaqəli deyil',
       'Növbə bağlananda ödənişlər qarışır',
-      'Anbar sayımı əsas işdən ayrı aparılır',
       'Keçmiş günlərdə kimin nə dəyişdiyi bilinmir',
     ],
     after: [
       'Rezervasiyadan canlı sessiyaya keçid',
-      'Nağd, kart və POS ödənişləri gün və növbə üzrə şəffaf şəkildə izlənilir',
-      'Məhsullar və anbar eyni siyahıdadır',
+      'Ödənişlər gün və növbə üzrə izlənilir',
       'Vacib əməliyyatlar qoruma kodu ilə qorunur',
     ],
   },
@@ -96,34 +94,30 @@ export const az: Messages = {
     eyebrow: 'Nə daxildir',
     title: 'Bir növbə üçün lazım olan hər şey',
     titleAccent: 'bir paneldə.',
-    intro:
-        'Rezervasiya, canlı sessiya, kassa, anbar və müştərilər — hamısı hazırda paneldə istifadə oluna bilir.',
+    intro: 'Cədvəl, canlı sessiya və kassa — eyni ekranda.',
+    featuresLink: 'Bütün funksiyalar',
     items: [
       {
         title: 'Canlı izləmə',
-        desc: 'Aktiv sessiyalar, məhsul əlavəsi, pauza və dayandırma, qəbz və ödəniş — zalın real vəziyyəti.',
+        desc: 'Aktiv sessiyalar, pauza, qəbz və ödəniş — zalın real vəziyyəti.',
       },
       {
         title: 'Cədvəl və rezervasiyalar',
-        desc: 'Masa və otaqlar eyni cədvəldə. Rezervasiya siyahısı, köçürmə, ləğv və tarixçə.',
+        desc: 'Masa və otaqlar eyni cədvəldə — köçürmə, ləğv, tarixçə.',
       },
       {
         title: 'Kassa',
-        desc: 'Növbəni açın və bağlayın, əməliyyatları qeyd edin, kassa hesabatına və sayımına baxın — günlük və növbəlik hesabatlar ayrıca görünür.',
-      },
-      {
-        title: 'Məhsullar, anbar, satış',
-        desc: 'Məhsul kataloqu, anbar sayımı və bron olmadan edilən satışlar da eyni məhsul siyahısından idarə olunur.',
-      },
-      {
-        title: 'Müştərilər',
-        desc: 'Müştəri kartları, tarixçə və idxal — rezervasiya və canlı sessiya ilə əlaqəli şəkildə.',
-      },
-      {
-        title: 'Statistika və ayarlar',
-        desc: 'Ödəniş, müştəri və anbar statistikası; işçilər, icazələr, qoruma kodu və qiymət hesablamaları.',
+        desc: 'Növbəni açın və bağlayın; günlük və növbəlik hesabat eyni paneldə.',
       },
     ],
+  },
+  homePricing: {
+    eyebrow: 'Qiymət',
+    title: 'Ayda {low} AZN-dən',
+    titleAccent: 'başlayır.',
+    lead: '15 dəqiqəlik demo, kart tələb olunmur. Tariflər məkan tipinə görə açıqdır.',
+    ctaPricing: 'Tariflərə baxın',
+    ctaDemo: 'WhatsApp ilə yazın',
   },
   how: {
     eyebrow: 'Necə başlanır',
@@ -147,6 +141,7 @@ export const az: Messages = {
   faq: {
     eyebrow: 'Suallar',
     title: 'Tez-tez verilən suallar',
+    moreLabel: 'Bütün suallar',
     items: [
       {
         q: 'Heselo nədir və kimlər üçündür?',
@@ -337,7 +332,7 @@ export const az: Messages = {
     ],
   },
   faqPage: {
-    navLabel: 'Tez-tez verilən suallar',
+    navLabel: 'Suallar',
     eyebrow: 'Suallar',
     title: 'Tez-tez verilən suallar',
     intro:
@@ -1019,9 +1014,9 @@ export const az: Messages = {
         keywords: ['Heselo FAQ', 'Heselo suallar', 'Heselo qiymət', 'oyun klubu proqramı suallar', 'klub idarəetmə sistemi'],
       },
       home: {
-        title: 'Heselo — klub və otaq paneli | iiko/Clopos əvəzinə',
+        title: 'Heselo — rezervasiya və kassa paneli | oyun klubu, karaoke, otaq',
         description:
-            'Heselo Azərbaycanda PS/oyun, karaoke, bilyard, antikafe və launj üçün otaq-vaxt panelidir: rezervasiya, canlı sessiya, kassa. Restoran POS-u (iiko, Clopos) əvəzinə klub və otaq işi üçün panel — {low} AZN/aydan. Pulsuz demo.',
+          'Heselo oyun klubu, karaoke, bilyard, antikafe və otaqlı məkanlar üçün rezervasiya və kassa panelidir. Cədvəl, canlı sessiya və növbə bir yerdə — WhatsApp/Excel əvəzinə, restoran POS deyil. {low} AZN/aydan; pulsuz demo.',
         keywords: [
           'Heselo',
           'məkan idarəetmə sistemi',
