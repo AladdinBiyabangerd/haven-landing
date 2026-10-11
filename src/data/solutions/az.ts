@@ -3,8 +3,7 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 export const solutionsHubAz: SolutionsHubCopy = {
   eyebrow: 'Biznes həlləri',
   h1: 'Hansı məkan tipinə uyğunsunuz?',
-  intro:
-    'Heselo otaq, stansiya və masa rezervasiyasını, canlı sessiyanı və kassanı bir paneldə birləşdirir. Aşağıdakı səhifələr oyun/PS klubu, karaoke, bilyard, antikafe və otaqlı launj işinə görə yazılıb — tipinizi seçin.',
+  intro: 'Tipinizi seçin — hər səhifə o məkanın gündəlik işinə görə yazılıb.',
   seoTitle: 'Məkan tiplərinə görə həllər — PS, karaoke, bilyard | Heselo',
   seoDescription:
     'Hər tipə ayrı səhifə: oyun/PS klubu, karaoke, bilyard, antikafe, otaqlı launj — rezervasiya, kassa və anbar. Pulsuz demo.',
@@ -15,9 +14,9 @@ export const solutionsHubAz: SolutionsHubCopy = {
     'bilyard klubu proqramı',
     'antikafe proqramı',
   ],
-  cardCta: 'Ətraflı oxu',
-  primaryTitle: 'Əsas məkan tipləri',
-  featuresTitle: 'Funksiyalar',
+  cardCta: 'Ətraflı',
+  primaryTitle: 'Məkan tipləri',
+  featuresTitle: 'Panel modulları',
 }
 
 export const solutionsAz: SolutionCopy[] = [

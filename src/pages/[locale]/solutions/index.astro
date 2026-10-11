@@ -25,6 +25,7 @@ await loadVenueOffers()
 const hub = applyCatalogPricesDeep(getSolutionsHub(locale))
 const primary = applyCatalogPricesDeep(getSolutionsBySlugs(locale, PRIMARY_SOLUTION_SLUGS))
 const features = applyCatalogPricesDeep(getSolutionsBySlugs(locale, FEATURE_SOLUTION_SLUGS))
+const cardCta = `${hub.cardCta}${messages.common.linkArrow}`
 ---
 
 <BaseLayout
@@ -39,7 +40,7 @@ const features = applyCatalogPricesDeep(getSolutionsBySlugs(locale, FEATURE_SOLU
     breadcrumbName: messages.nav.solutions,
   }}
 >
-  <section class="section">
+  <section class="section solutions-hub">
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">{hub.eyebrow}</p>
@@ -53,8 +54,10 @@ const features = applyCatalogPricesDeep(getSolutionsBySlugs(locale, FEATURE_SOLU
             <li>
               <LinkCard
                 href={localePath(locale, `/solutions/${item.slug}`)}
-                title={item.h1}
-                desc={truncateText(item.intro, 140, messages.common.truncatedEllipsis)}
+                title={item.shortTitle}
+                desc={truncateText(item.intro, 90, messages.common.truncatedEllipsis)}
+                cta={cardCta}
+                as="h3"
               />
             </li>
           ))
@@ -67,8 +70,10 @@ const features = applyCatalogPricesDeep(getSolutionsBySlugs(locale, FEATURE_SOLU
             <li>
               <LinkCard
                 href={localePath(locale, `/solutions/${item.slug}`)}
-                title={item.h1}
-                desc={truncateText(item.intro, 140, messages.common.truncatedEllipsis)}
+                title={item.shortTitle}
+                desc={truncateText(item.intro, 90, messages.common.truncatedEllipsis)}
+                cta={cardCta}
+                as="h3"
               />
             </li>
           ))
@@ -86,10 +91,24 @@ const features = applyCatalogPricesDeep(getSolutionsBySlugs(locale, FEATURE_SOLU
 
 <style>
   .group-title {
-    margin: 2rem 0 1rem;
-    font-size: var(--text-xl);
+    margin: 1.75rem 0 0.85rem;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--ink-subtle);
   }
   .guides-link {
     margin: 1.25rem 0 0;
+  }
+  @media (max-width: 759px) {
+    .solutions-hub .section-head :global(.type-page-title) {
+      font-size: var(--text-2xl);
+    }
+    .solutions-hub .section-head .lead {
+      font-size: var(--text-md);
+    }
+    .group-title {
+      margin: 1.35rem 0 0.65rem;
+      font-size: var(--text-md);
+    }
   }
 </style>

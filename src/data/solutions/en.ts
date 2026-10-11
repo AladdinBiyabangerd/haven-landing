@@ -3,8 +3,7 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 export const solutionsHubEn: SolutionsHubCopy = {
   eyebrow: 'Business solutions',
   h1: 'Which venue type matches your floor?',
-  intro:
-    'Heselo connects room, station, and table booking with live sessions and cash in one panel. The pages below are written for gaming / PlayStation clubs, karaoke, billiards, anti-cafés, and room lounges — pick your venue type.',
+  intro: 'Pick your type — each page is written for that venue’s day-to-day work.',
   seoTitle: 'Solutions by venue — gaming club, karaoke, billiards | Heselo',
   seoDescription:
     'One page per venue: gaming club software (PlayStation / console), karaoke, billiards booking, anti-cafés, and room lounges. Free demo.',
@@ -15,9 +14,9 @@ export const solutionsHubEn: SolutionsHubCopy = {
     'billiards club software',
     'anti-cafe software',
   ],
-  cardCta: 'Read more',
-  primaryTitle: 'Core venue types',
-  featuresTitle: 'Features',
+  cardCta: 'Details',
+  primaryTitle: 'Venue types',
+  featuresTitle: 'Panel modules',
 }
 
 export const solutionsEn: SolutionCopy[] = [

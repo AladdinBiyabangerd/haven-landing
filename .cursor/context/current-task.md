@@ -1,26 +1,17 @@
-# Current task — Features page mobile clarity (next)
+# Current task — Solutions hub clarity
 
-## Completed (prior)
+## Completed
 
-Mobile home five-second clarity + nav back UX — committed `0c759fc`.
+### Home + features (committed)
+- `0c759fc` mobile home
+- `c42b288` features 4 cards, no gallery
 
-## Current state — `/az/features/`
+### Solutions hub `/az/solutions/` (this pass)
+- Shorter hub intro (az/en/ru)
+- Cards use `shortTitle` + 90-char desc + clickable CTA
+- Tighter mobile heading/spacing
+- Files: `solutions/index.astro`, `data/solutions/{az,en,ru}.ts`
 
-[`src/pages/[locale]/features.astro`](src/pages/[locale]/features.astro):
-
-1. H1 + short intro + **4 list rows** (was 9 cards)
-2. NextThought (pricing door)
-3. Cta
-
-**Done:** gallery removed; modules 9→4; card-grid → compact list.
-
-## Remaining (optional)
-
-1. Delete unused `ProductGallery.astro` if still unreferenced
+## Remaining
+1. Optional: individual `/solutions/[slug]` pages (long copy) — separate pass
 2. Commit when user asks
-
-## Relevant files
-
-- `src/pages/[locale]/features.astro`
-- `src/components/ProductGallery.astro`
-- `src/i18n/messages/{az,en,ru}.ts` → `featuresPage`

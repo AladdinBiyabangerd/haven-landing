@@ -3,8 +3,7 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 export const solutionsHubRu: SolutionsHubCopy = {
   eyebrow: 'Решения для бизнеса',
   h1: 'Какой тип заведения у вас на полу?',
-  intro:
-    'Heselo связывает бронь комнат, станций и столов с живой сессией и кассой в одной панели. Страницы ниже — под игровой / PlayStation-клуб, караоке, бильярд, антикафе и лаунж с комнатами. Выберите свой тип заведения.',
+  intro: 'Выберите тип — каждая страница написана под повседневную работу этого заведения.',
   seoTitle: 'Решения по типу заведения — PS, караоке, бильярд | Heselo',
   seoDescription:
     'Отдельная страница под тип: игровой клуб (PlayStation / консоль), караоке, бильярд, антикафе, лаунж — бронь, касса и склад. Бесплатное демо.',
@@ -16,8 +15,8 @@ export const solutionsHubRu: SolutionsHubCopy = {
     'программа для антикафе',
   ],
   cardCta: 'Подробнее',
-  primaryTitle: 'Основные типы заведений',
-  featuresTitle: 'Функции',
+  primaryTitle: 'Типы заведений',
+  featuresTitle: 'Модули панели',
 }
 
 export const solutionsRu: SolutionCopy[] = [
