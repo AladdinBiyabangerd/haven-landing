@@ -1,12 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import Hero from '@/components/Hero.astro'
+import How from '@/components/How.astro'
 import ProductProof from '@/components/ProductProof.astro'
 import HomePricingTeaser from '@/components/HomePricingTeaser.astro'
+import TrustEeat from '@/components/TrustEeat.astro'
+import Faq from '@/components/Faq.astro'
 import Audiences from '@/components/Audiences.astro'
 import Cta from '@/components/Cta.astro'
 import { resolveLocale } from '@/i18n/config'
 import { loadPricedMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -14,6 +18,10 @@ export function getStaticPaths() {
 
 const locale = resolveLocale(Astro.params.locale)
 const messages = await loadPricedMessages(locale)
+
+/** Conversion-critical home FAQ: what / POS fit / price / demo (full list on /faq). */
+const demoFaqIndex = messages.faq.items.findIndex((item) => item.href === '/contact')
+const homeFaqPick = [0, 2, 3, demoFaqIndex >= 0 ? demoFaqIndex : messages.faq.items.length - 1]
 ---
 
 <BaseLayout
@@ -30,10 +38,19 @@ const messages = await loadPricedMessages(locale)
 >
   <div class="home">
     <Hero locale={locale} messages={messages} />
+    <How messages={messages} />
     <ProductProof locale={locale} messages={messages} />
     <Audiences locale={locale} messages={messages} />
     <HomePricingTeaser locale={locale} messages={messages} />
-    <Cta locale={locale} messages={messages} intent="next" />
+    <TrustEeat locale={locale} messages={messages} />
+    <Faq
+      locale={locale}
+      messages={messages}
+      pick={homeFaqPick}
+      moreHref={localePath(locale, '/faq')}
+      class="reveal-on-scroll"
+    />
+    <Cta locale={locale} messages={messages} intent="demo" />
   </div>
 </BaseLayout>
 
@@ -48,12 +65,9 @@ const messages = await loadPricedMessages(locale)
   .home #solutions .all {
     margin-top: 0.85rem;
   }
-  .home .cta-next {
+  .home [data-cta] {
     padding-top: 0.65rem;
     padding-bottom: 1.5rem;
-  }
-  .home .cta-next .prose p {
-    margin-top: 0.3rem;
   }
   @media (max-width: 759px) {
     .home .section {

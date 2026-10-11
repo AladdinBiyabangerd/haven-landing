@@ -12,7 +12,7 @@ const { locale, messages } = Astro.props
 const e = messages.eeat
 ---
 
-<section class="section" id="trust" aria-labelledby="trust-title">
+<section class="section eeat reveal-on-scroll" id="trust" aria-labelledby="trust-title">
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">{e.eyebrow}</p>
@@ -21,7 +21,7 @@ const e = messages.eeat
       </h2>
       <p class="lead">{e.intro}</p>
     </div>
-    <ul class="card-grid">
+    <ul class="card-grid eeat__grid">
       {
         e.items.map((item) => (
           <li>
@@ -32,3 +32,24 @@ const e = messages.eeat
     </ul>
   </div>
 </section>
+
+<style>
+  /* Mobile: stack tight; avoid three tall cards eating the fold. */
+  .eeat :global(.lead) {
+    max-width: 36rem;
+  }
+  @media (max-width: 759px) {
+    .eeat__grid {
+      gap: 0.65rem;
+    }
+    .eeat :global(.lead) {
+      font-size: var(--text-sm);
+    }
+    .eeat :global(.card-link) {
+      padding: 0.85rem 1rem;
+    }
+    .eeat :global(.card-link p) {
+      font-size: var(--text-sm);
+    }
+  }
+</style>

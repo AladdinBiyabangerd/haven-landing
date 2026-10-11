@@ -5,23 +5,27 @@ interface Props {
 }
 const { messages } = Astro.props
 const h = messages.how
+const last = h.steps.length - 1
 ---
 
-<section class="section">
+<section class="section how reveal-on-scroll" aria-labelledby="how-title">
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">{h.eyebrow}</p>
-      <h2 class="type-section">{h.title} <span class="accent">{h.titleAccent}</span></h2>
+      <h2 id="how-title" class="type-section">{h.title} <span class="accent">{h.titleAccent}</span></h2>
     </div>
     <ol class="steps">
       {
         h.steps.map((step, i) => (
           <li>
-            <span class="num" aria-hidden="true">
-              {i + 1}
-            </span>
-            <h3 class="type-card-title">{step.title}</h3>
-            <p>{step.desc}</p>
+            <div class="rail" aria-hidden="true">
+              <span class="dot" />
+              {i < last ? <span class="arrow" /> : null}
+            </div>
+            <div class="step-body">
+              <h3 class="type-card-title">{step.title}</h3>
+              <p>{step.desc}</p>
+            </div>
           </li>
         ))
       }
@@ -29,40 +33,107 @@ const h = messages.how
   </div>
 </section>
 
-<style>
-  .steps {
+<style is:global>
+  .how .steps {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 1.75rem var(--gap);
+    gap: 0;
   }
-  li {
+
+  .how .steps > li {
     display: grid;
-    gap: 0.3rem;
+    grid-template-columns: 1.25rem 1fr;
+    gap: 0 0.85rem;
+    align-items: stretch;
   }
-  .num {
-    display: grid;
-    place-content: center;
-    width: 1.85rem;
-    height: 1.85rem;
-    margin-bottom: 0.35rem;
+
+  .how .rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.45rem;
+  }
+
+  .how .dot {
+    display: block;
+    width: 0.55rem;
+    height: 0.55rem;
+    flex-shrink: 0;
     border-radius: 999px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    font-family: var(--font-display);
-    font-size: var(--text-sm);
-    font-weight: 800;
+    background: var(--accent);
   }
-  p {
+
+  .how .arrow {
+    display: block;
+    flex: 1 1 auto;
+    width: 2px;
+    min-height: 2.25rem;
+    margin-top: 0.35rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 118, 110, 0.55),
+      rgba(15, 118, 110, 0.25)
+    );
+    position: relative;
+  }
+
+  .how .arrow::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0.15rem;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid var(--accent);
+  }
+
+  .how .step-body {
+    display: grid;
+    gap: 0.2rem;
+    min-width: 0;
+    padding-bottom: 1.25rem;
+  }
+
+  .how .steps > li:last-child .step-body {
+    padding-bottom: 0;
+  }
+
+  .how .step-body .type-card-title {
+    font-size: var(--text-md);
+  }
+
+  .how .step-body p {
     margin: 0;
     color: var(--ink-muted);
     font-size: var(--text-sm);
+    line-height: var(--lh-body);
   }
+
   @media (min-width: 800px) {
-    .steps {
+    .how .steps {
       grid-template-columns: repeat(3, 1fr);
       gap: var(--gap);
+    }
+
+    .how .steps > li {
+      grid-template-columns: 1fr;
+    }
+
+    .how .rail {
+      display: none;
+    }
+
+    .how .step-body {
+      padding-bottom: 0;
+    }
+
+    .how .step-body .type-card-title {
+      font-size: inherit;
     }
   }
 </style>

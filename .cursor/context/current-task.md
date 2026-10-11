@@ -1,12 +1,19 @@
-# Current task — Landing motion (done)
+# Current task — Home conversion (done)
 
-## Completed — performance-safe home motion
+## Completed
 
-1. Hero stagger: softer `fade-up` (12px), delays 0 / 0.12 / 0.24 / 0.36s — `global.css`
-2. Hero product shot settle (desktop ≥960px): `scale(1.02→1)` — `Hero.astro`
-3. Below-fold scroll reveal (IntersectionObserver): ProductProof, Audiences, HomePricingTeaser — `ScrollReveal.astro` + BaseLayout
+1. Hero trust strip (4 verifiable lines; mobile 2×2)
+2. How workflow on home — mobile left timeline (dot + arrow, no numbers)
+3. TrustEeat on home after pricing (short copy; mobile-tight cards)
+4. Home FAQ teaser — pick what / POS / price / demo + `/faq` link
+5. CTA path: home `intent="demo"`; EN form-first aligned in `Cta.astro` / `CtaBanner`
+6. i18n az/en/ru synced; `astro check` clean; no pageHelp on this landing repo
 
-Skipped intentionally: Lenis, GSAP, Three.js, dark cinematic templates.
+## Out of scope (kept)
+
+- Customer logos / named quotes / metrics
+- ProductGallery on home
+- Skynet cinematic / variants
 
 ## Remaining
 

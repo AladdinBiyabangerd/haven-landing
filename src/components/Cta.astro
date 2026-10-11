@@ -22,6 +22,8 @@ const contactHref = contactPath(locale, known || undefined)
 const pricingHref = pricingPath(locale, known || undefined)
 const solutionsHref = localePath(locale, '/solutions')
 const waHref = whatsappHrefFor(messages, known || undefined)
+/** Match Hero / HomePricingTeaser: EN form-first, AZ/RU WhatsApp-first. */
+const formFirst = locale === 'en'
 
 const title = known ? c.typedTitle : c.title
 const subtitle =
@@ -33,13 +35,29 @@ const subtitle =
       ? c.typedSubtitle
       : c.subtitle
 
-const primaryHref = intent === 'next' ? (known ? pricingHref : solutionsHref) : waHref
+const primaryHref =
+  intent === 'next'
+    ? known
+      ? pricingHref
+      : solutionsHref
+    : formFirst
+      ? contactHref
+      : waHref
 const primaryLabel =
-  intent === 'next' ? (known ? j.priceForType.label : c.pickTypeButton) : c.whatsapp
-const secondaryHref = intent === 'next' ? (known ? contactHref : waHref) : contactHref
-const secondaryLabel = intent === 'next' ? (known ? c.nextForm : c.nextWhatsapp) : c.button
-const primaryExternal = intent === 'demo'
-const secondaryExternal = intent === 'next' && !known
+  intent === 'next'
+    ? known
+      ? j.priceForType.label
+      : c.pickTypeButton
+    : formFirst
+      ? c.button
+      : c.whatsapp
+const secondaryHref =
+  intent === 'next' ? (known ? contactHref : waHref) : formFirst ? waHref : contactHref
+const secondaryLabel =
+  intent === 'next' ? (known ? c.nextForm : c.nextWhatsapp) : formFirst ? c.whatsapp : c.button
+const primaryExternal = intent === 'demo' && !formFirst
+const secondaryExternal =
+  intent === 'next' ? !known : formFirst
 ---
 
 <section
@@ -76,6 +94,7 @@ const secondaryExternal = intent === 'next' && !known
           external={primaryExternal}
           secondaryHref={secondaryHref}
           secondaryLabel={secondaryLabel}
+          secondaryExternal={secondaryExternal}
           titleAttrs={{ 'data-cta-title': '' }}
           bodyAttrs={{ 'data-cta-sub': '' }}
           primaryAttrs={{ 'data-cta-primary': '' }}
@@ -90,6 +109,7 @@ const secondaryExternal = intent === 'next' && !known
     storageKey: VENUE_STORAGE_KEY,
     intent,
     known,
+    formFirst,
     copy: {
       title: c.title,
       subtitle: c.subtitle,
@@ -164,8 +184,16 @@ const secondaryExternal = intent === 'next' && !known
       } else if (type) {
         if (titleEl) titleEl.textContent = copy.typedTitle
         if (subEl) subEl.textContent = copy.typedSubtitle
-        setLink(primary, waHref(type), true)
-        setLink(secondary, paths.contact + '?type=' + encodeURIComponent(type), false)
+        const contactTyped = paths.contact + '?type=' + encodeURIComponent(type)
+        if (formFirst) {
+          if (primary) primary.textContent = copy.button
+          if (secondary) secondary.textContent = copy.whatsapp
+          setLink(primary, contactTyped, false)
+          setLink(secondary, waHref(type), true)
+        } else {
+          setLink(primary, waHref(type), true)
+          setLink(secondary, contactTyped, false)
+        }
       }
     }
     apply(readType())

@@ -10,16 +10,24 @@ interface Props {
   id?: string
   /** When set, only the first N items render (full list stays on /faq). */
   limit?: number
-  /** Absolute-or-locale path for “all questions” when limit is used. */
+  /** Pick specific items by index into messages.faq.items (order preserved). */
+  pick?: number[]
+  /** Absolute-or-locale path for “all questions” when the list is truncated. */
   moreHref?: string
+  class?: string
 }
-const { messages, locale, id = 'faq', limit, moreHref } = Astro.props
+const { messages, locale, id = 'faq', limit, pick, moreHref, class: className = '' } = Astro.props
 const f = messages.faq
-const items = typeof limit === 'number' ? f.items.slice(0, limit) : f.items
-const showMore = typeof limit === 'number' && f.items.length > limit && moreHref
+const items = pick?.length
+  ? pick.map((i) => f.items[i]).filter(Boolean)
+  : typeof limit === 'number'
+    ? f.items.slice(0, limit)
+    : f.items
+const truncated = items.length < f.items.length
+const showMore = Boolean(moreHref) && truncated
 ---
 
-<section class="section" id={id}>
+<section class:list={['section', 'faq', className]} id={id}>
   <div class="container">
     <div class="narrow">
       <div class="section-head">
@@ -111,5 +119,15 @@ const showMore = typeof limit === 'number' && f.items.length > limit && moreHref
   }
   .more {
     margin: 1.25rem 0 0;
+  }
+  @media (max-width: 759px) {
+    summary {
+      gap: 0.75rem;
+      padding: 0.8rem 0;
+      font-size: var(--text-md);
+    }
+    p {
+      margin: 0 0 0.9rem;
+    }
   }
 </style>

@@ -48,8 +48,10 @@ export const az: Messages = {
   },
   trust: {
     items: [
-      '15 dəqiqəlik demo, kart tələb olunmur',
+      '15 dəq demo — kart lazım deyil',
       'Ayda {low} AZN-dən',
+      'Panel AZ / EN / RU',
+      'Açıq tariflər',
     ],
   },
   demoPromise: {
@@ -126,15 +128,15 @@ export const az: Messages = {
     steps: [
       {
         title: 'Məkanı qurun',
-        desc: 'Masaları, otaqları, məhsulları, komandanı, icazələri və qoruma kodunu təyin edin.',
+        desc: 'Masalar, otaqlar, məhsullar, komanda və qoruma kodu.',
       },
       {
         title: 'Növbəni idarə edin',
-        desc: 'Cədvəldə rezerv qəbul edin, canlı izləmədə sessiyanı idarə edin, ödənişləri kassada qeyd edin.',
+        desc: 'Rezerv, canlı sessiya və kassa — eyni paneldə.',
       },
       {
         title: 'Günü bağlayın',
-        desc: 'Kassa sayımı, hesabat və statistika — günün gəliri, satışları və kassa fərqi sahibkar üçün aydın görünür.',
+        desc: 'Kassa sayımı və hesabat — gəlir aydın görünür.',
       },
     ],
   },
@@ -312,21 +314,21 @@ export const az: Messages = {
     title: 'Saxta rəy yox —',
     titleAccent: 'yoxlanıla bilən faktlar.',
     intro:
-        'Heselo artıq real məkanlarda istifadə olunur. Burada uydurma rəy və ya ulduz reytinqi tapa bilməzsiniz — göstərdiklərimizi (qiymətlər, pulun necə hesablandığı və hüquqi sənədlər) özünüz yoxlaya bilərsiniz.',
+      'Uydurma rəy və ulduz yoxdur. Qiymət, hesablar və hüquqi sənədləri özünüz yoxlaya bilərsiniz.',
     items: [
       {
         title: 'Açıq qiymət',
-        desc: 'Abunə planları və limitlər qiymətlər səhifəsindədir — gizli komissiya yoxdur.',
+        desc: 'Planlar və limitlər qiymətlər səhifəsində — gizli komissiya yoxdur.',
         href: '/pricing',
       },
       {
-        title: 'Dəqiq və xətasız hesablamalar',
-        desc: 'Qalıq və ödənişləri sistem özü hesablayır, əl ilə dəyişdirilmir.',
+        title: 'Dəqiq hesablamalar',
+        desc: 'Qalıq və ödənişləri sistem hesablayır, əl ilə dəyişmir.',
         href: '/features',
       },
       {
         title: 'Məxfilik və şərtlər',
-        desc: 'Məhsulun real işinə uyğun, hər kəs üçün açıq sənədlər.',
+        desc: 'Məhsula uyğun, hər kəs üçün açıq sənədlər.',
         href: '/privacy',
       },
     ],

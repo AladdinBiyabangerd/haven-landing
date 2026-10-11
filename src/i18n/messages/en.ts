@@ -48,8 +48,10 @@ export const en: Messages = {
   },
   trust: {
     items: [
-      '15-minute demo, no card',
-      'From {low} AZN a month',
+      '15-min demo, no card',
+      'From {low} AZN/mo',
+      'Panel AZ / EN / RU',
+      'Open pricing',
     ],
   },
   demoPromise: {
@@ -126,15 +128,15 @@ export const en: Messages = {
     steps: [
       {
         title: 'Set up the venue',
-        desc: 'Add tables and rooms, products, your team, permissions, and the protection code.',
+        desc: 'Tables, rooms, products, team, and protection code.',
       },
       {
         title: 'Run the shift',
-        desc: 'Take bookings on the schedule, manage sessions in live tracking, post payments to cash.',
+        desc: 'Bookings, live sessions, and cash — one panel.',
       },
       {
         title: 'Close the day',
-        desc: 'Cash count, report, and statistics — owners see the day’s revenue, sales, and cash variance clearly.',
+        desc: 'Cash count and report — revenue is clear.',
       },
     ],
   },
@@ -312,21 +314,21 @@ export const en: Messages = {
     title: 'No fake reviews —',
     titleAccent: 'verifiable facts.',
     intro:
-      'Heselo is already used in real venues. You will not find invented testimonials or star ratings here. What we do show — prices, how money is counted, and our legal pages — you can check yourself.',
+      'No invented testimonials or star ratings. Check prices, money math, and legal pages yourself.',
     items: [
       {
         title: 'Open pricing',
-        desc: 'Plans and limits are on the pricing page — no hidden fees.',
+        desc: 'Plans and limits on the pricing page — no hidden fees.',
         href: '/pricing',
       },
       {
-        title: 'Accurate, error-free calculations',
-        desc: 'Balances and payments are calculated by the system and are not changed by hand.',
+        title: 'Accurate calculations',
+        desc: 'Balances and payments are system-calculated, not edited by hand.',
         href: '/features',
       },
       {
         title: 'Privacy & terms',
-        desc: 'Public documents that match what the product actually does.',
+        desc: 'Public docs that match what the product does.',
         href: '/privacy',
       },
     ],

@@ -104,13 +104,21 @@ const secondaryIsWhatsApp = formFirst
     list-style: none;
     margin: 0.85rem 0 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem 0.75rem;
     max-width: 36rem;
     font-family: var(--font-body);
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
     color: var(--ink-subtle);
+  }
+  @media (min-width: 560px) {
+    .trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.25rem;
+      font-size: var(--text-sm);
+    }
   }
   .hero__visual {
     position: relative;
@@ -145,9 +153,6 @@ const secondaryIsWhatsApp = formFirst
       width: 100%;
       object-fit: cover;
       object-position: top left;
-    }
-    .trust li {
-      flex-basis: 100%;
     }
   }
   @media (min-width: 560px) {
