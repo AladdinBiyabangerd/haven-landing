@@ -38,14 +38,16 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
       </a>
       <a class="mail tel" href={telUrl()}>{phoneDisplay}</a>
     </div>
-    <div>
+    <div class="footer__product">
       <h3 class="type-eyebrow">{messages.footer.product}</h3>
-      <a href={localePath(locale, '/features')}>{messages.nav.features}</a>
-      <a href={localePath(locale, '/pricing')}>{messages.nav.pricing}</a>
-      <a href={localePath(locale, '/guides')}>{messages.nav.guides}</a>
-      <a href={localePath(locale, '/faq')}>{messages.faqPage.navLabel}</a>
-      <a href={localePath(locale, '/about')}>{messages.footer.about}</a>
-      <a href={localePath(locale, '/contact')} data-track-placement="footer">{messages.nav.demo}</a>
+      <div class="footer__links">
+        <a href={localePath(locale, '/features')}>{messages.nav.features}</a>
+        <a href={localePath(locale, '/pricing')}>{messages.nav.pricing}</a>
+        <a href={localePath(locale, '/guides')}>{messages.nav.guides}</a>
+        <a href={localePath(locale, '/faq')}>{messages.faqPage.navLabel}</a>
+        <a href={localePath(locale, '/about')}>{messages.footer.about}</a>
+        <a href={localePath(locale, '/contact')} data-track-placement="footer">{messages.nav.demo}</a>
+      </div>
     </div>
     <div class="footer__solutions">
       <h3 class="type-eyebrow">
