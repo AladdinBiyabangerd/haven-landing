@@ -1,19 +1,13 @@
-# Current task — Pricing page clarity
+# Current task — Landing motion (done)
 
-## Principle
+## Completed — performance-safe home motion
 
-Clear path + low bounce; deep detail on demand (details / /faq). Do not dump every calculator + FAQ on first paint.
+1. Hero stagger: softer `fade-up` (12px), delays 0 / 0.12 / 0.24 / 0.36s — `global.css`
+2. Hero product shot settle (desktop ≥960px): `scale(1.02→1)` — `Hero.astro`
+3. Below-fold scroll reveal (IntersectionObserver): ProductProof, Audiences, HomePricingTeaser — `ScrollReveal.astro` + BaseLayout
 
-## Completed — `/az/pricing/`
-
-1. Shorter intro + summary copy (az/en/ru)
-2. Session calculator collapsed behind `<details>` (`revealLabel`)
-3. Pricing FAQ limited to 4 + link to `/faq`
-4. Mobile page title size tightened
-5. Plan cards: horizontal scroll-snap carousel (‹ › + swipe + dots), peek next card
-6. Feature list truncated (5) + “Daha çox / Read more / Ещё”
-
-Kept: PricingSummary from-prices, venue tabs, JSON-LD faq on page (seo still gets `page.faq`).
+Skipped intentionally: Lenis, GSAP, Three.js, dark cinematic templates.
 
 ## Remaining
+
 1. Commit when user asks

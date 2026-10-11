@@ -409,7 +409,7 @@ h3 {
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -438,17 +438,30 @@ h3 {
 }
 
 .reveal {
-  animation: fade-up 0.8s var(--ease) both;
+  animation: fade-up 0.75s var(--ease) both;
 }
 
 .reveal-delay-1 {
-  animation-delay: 0.1s;
+  animation-delay: 0.12s;
 }
 .reveal-delay-2 {
-  animation-delay: 0.2s;
+  animation-delay: 0.24s;
 }
 .reveal-delay-3 {
-  animation-delay: 0.3s;
+  animation-delay: 0.36s;
+}
+
+/* Below-fold sections: one-shot scroll reveal (see ScrollReveal.astro). */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+}
+.reveal-on-scroll.is-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -460,5 +473,10 @@ h3 {
   .reveal-delay-2,
   .reveal-delay-3 {
     animation: none;
+  }
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

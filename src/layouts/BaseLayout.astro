@@ -12,6 +12,7 @@ import VercelAnalytics from '@vercel/analytics/astro'
 import SpeedInsights from '@vercel/speed-insights/astro'
 import WhatsAppFab from '@/components/WhatsAppFab.astro'
 import JourneyContext from '@/components/JourneyContext.astro'
+import ScrollReveal from '@/components/ScrollReveal.astro'
 import { loadVenueOffers } from '@/lib/venueOffers'
 
 interface Props {
@@ -145,6 +146,7 @@ const breadcrumbs =
     <Footer locale={locale} messages={messages} />
     <WhatsAppFab messages={messages} />
     <JourneyContext locale={locale} messages={messages} />
+    <ScrollReveal />
   </body>
 </html>
 

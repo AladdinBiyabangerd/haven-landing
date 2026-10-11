@@ -115,6 +115,17 @@ const secondaryIsWhatsApp = formFirst
   .hero__visual {
     position: relative;
   }
+  /* Desktop: soft scale settle (mobile keeps shared fade-up). */
+  @keyframes settle {
+    from {
+      opacity: 0;
+      transform: scale(1.02);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
   /* Mobile-first: one dominant CTA, smaller type, shot below copy. */
   @media (max-width: 959px) {
     .hero :global(.type-hero) {
@@ -171,8 +182,18 @@ const secondaryIsWhatsApp = formFirst
     .hero__visual {
       max-width: none;
     }
+    .hero__visual.reveal {
+      animation-name: settle;
+      animation-duration: 0.9s;
+      transform-origin: center center;
+    }
     .hero__visual :global(img) {
       max-height: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__visual.reveal {
+      animation: none;
     }
   }
 </style>

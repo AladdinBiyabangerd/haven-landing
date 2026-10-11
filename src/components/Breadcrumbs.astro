@@ -101,13 +101,18 @@ const parent = [...items].reverse().find((item) => !item.current) ?? items[0]
     color: var(--ink);
     font-weight: 600;
   }
-  /* Desktop: trail is enough; keep back chip but quieter. */
+  /* Desktop: trail left + back right on one row. */
   @media (min-width: 960px) {
     .breadcrumbs {
-      gap: 0.35rem;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
       padding-top: 0.85rem;
     }
     .breadcrumbs__back {
+      flex-shrink: 0;
       min-height: 0;
       padding: 0;
       border: none;
@@ -122,6 +127,7 @@ const parent = [...items].reverse().find((item) => !item.current) ?? items[0]
     }
     .breadcrumbs__trail {
       font-size: var(--text-sm);
+      min-width: 0;
     }
   }
 </style>
