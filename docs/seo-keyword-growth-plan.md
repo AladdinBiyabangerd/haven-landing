@@ -292,5 +292,6 @@ Satış hələ də outreach-dən gəlir; SEO demo dəstəyidir.
 | C1 | Done (2026-09-07) | 4 guide: playstation-club-software, billiards-table-booking, karaoke-booking-system, club-pos-vs-excel |
 | C2+ | Gözləyir | GSC impressiya > 0 olan klasterlər |
 | **C3–C5** | **Done (2026-09-23)** | Keyword gap: 5 educational + 5 comparison + FAQ 5–8 — [`content-strategy-keyword-gap.md`](./content-strategy-keyword-gap.md) |
+| **CTR cila** | **Done (2026-10-11)** | GSC impressiya>0, klik≈0: EN/RU billiards+gaming meta/intro; RU `how-to-open-playstation-club` + `iiko-alternative-clubs` (`замена iiko`) |
 
-Son yeniləmə: 2026-09-23 (C3–C5 shipped)
+Son yeniləmə: 2026-10-11 (CTR cila GSC queries)

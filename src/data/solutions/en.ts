@@ -25,17 +25,18 @@ export const solutionsEn: SolutionCopy[] = [
     slug: 'billiards',
     shortTitle: 'Billiards',
     h1: 'Billiards club management system',
-    seoTitle: 'Billiards booking & scheduling software | Heselo',
+    seoTitle: 'Billiards Booking System & Scheduling Software | Heselo',
     seoDescription:
-      'Billiards booking system with table scheduling, live play sessions, time-based pricing, and cash. Demo for pool halls and billiards clubs.',
+      'Billiards booking and scheduling system for pool tables: live sessions, time pricing, and cash in one panel — not a kitchen POS. Free demo for billiards clubs.',
     keywords: [
       'billiards booking system',
       'billiards scheduling system',
+      'billiards reservation software',
       'billiards club software',
-      'pool hall booking',
+      'pool table booking system',
     ],
     intro:
-      'In a billiards club, tables run on time: booking, scheduling, live play, pause, and payment are linked. A billiards management system should not split the schedule from the live session — Heselo sets up each table individually and runs them in one panel.',
+      'A billiards booking system should keep table scheduling, live play, pause, and payment on one record. Heselo is billiards reservation software for clubs that sell table time — each table is set up individually and runs in one panel, not a restaurant kitchen POS.',
     whoTitle: 'Who is it for?',
     whoBody:
       'Billiards halls, lounge + billiards venues, and clubs that book tables or rooms with time-based payment.',
@@ -186,20 +187,21 @@ export const solutionsEn: SolutionCopy[] = [
     slug: 'gaming',
     shortTitle: 'Gaming club',
     h1: 'Gaming club management system',
-    seoTitle: 'Gaming club software for PS & console clubs | Heselo',
+    seoTitle: 'Gaming Club Software & Management for PS Clubs | Heselo',
     seoDescription:
-      'Gaming club software for PlayStation, console, and PC clubs: station booking, live sessions, cash, and inventory. Gaming management in one panel — free demo.',
+      'Gaming club software for PlayStation and console clubs: station booking, live sessions, cash, and stock. Gaming management system in one panel — free demo.',
     keywords: [
       'gaming club software',
+      'gaming management system',
       'gaming management',
-      'console club software',
+      'console club',
       'playstation club software',
+      'ps club',
       'PC club software',
       'iiko alternative clubs',
-      'playstation cafe software',
     ],
     intro:
-      'Gaming and console clubs fill stations by the hour; booking, live play, and cash run together. Gaming club software should join the station schedule to live sessions — a timer alone is not enough. Note for iiko shoppers: Heselo is not a kitchen POS. For simple PS timer shoppers, room and station time sales live here in one place.',
+      'Gaming club software for PS and console clubs should join station booking to live sessions and cash — a timer alone is not enough. Heselo is a gaming management system for PlayStation / console clubs that sell station time; it is not a kitchen POS like iiko.',
     whoTitle: 'Who is it for?',
     whoBody:
       'PlayStation clubs, console lounges, PC clubs, and mixed gaming venues that need station/table booking, live sessions, and cash.',

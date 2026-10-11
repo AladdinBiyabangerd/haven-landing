@@ -1,35 +1,35 @@
-# Current task — GA-based measurement + conversion
+# Current task — GSC CTR cila (EN/RU)
 
-## Completed
+## Completed (2026-10-11)
 
-- `src/lib/campaign.ts` — first-touch UTM + heardFrom map (incl. producthunt)
-- ContactForm + contactMail + az/en/ru `heardFromOptions`
-- Analytics funnel: `generate_lead` (+ UTM), `cta_click`, `pricing_select`
-- EN hero form-first (`Request a demo` → contact); AZ/RU WhatsApp primary
-- Docs: social UTM hygiene, PH post-launch GA checklist, organic amplify (off-site-seo)
-- Verified locally: PH UTM → sessionStorage → contact heardFrom=Product Hunt
-- PH listing live; Visit website UTM correct; maker comment/reply blocked (PH Sign in)
+Copy-only CTR pass for queries with impressions but ~0 clicks (GSC ~3 months).
 
-## Current state
+| Query cluster | URL | Files |
+|---|---|---|
+| billiards booking/scheduling/reservation | `/en/solutions/billiards/` | `src/data/solutions/en.ts` |
+| gaming club / management / ps club | `/en/solutions/gaming/` | same |
+| программа для бильярдного клуба | `/ru/solutions/billiards/` | `src/data/solutions/ru.ts` |
+| программа для playstation клуба | `/ru/solutions/gaming/` | same |
+| как открыть свой пс клуб | `/ru/guides/how-to-open-playstation-club/` | `src/data/guides/gapEducationalGuides.ts` |
+| замена iiko | `/ru/guides/iiko-alternative-clubs/` | `src/data/guides/iikoAlternativeGuide.ts` |
 
-Code + docs done. Build OK. Commit when user asks.
+Status logged in `docs/seo-keyword-growth-plan.md` → İcra statusu.
 
-## Decisions
+## Remaining (ops, not code)
 
-- Site-wide measurement (not PH-only)
-- EN form-first; AZ/RU WA primary
-- No dedicated `/producthunt` LP
+1. Deploy
+2. GSC URL Inspection → Request indexing on the 6 URLs above
+3. Re-check Queries after 14 days (CTR / clicks on non-brand)
 
-## Remaining work
+## Not in this change
 
-1. User: GA4 Admin → mark `generate_lead` as key event
-2. User: PH Sign in → reply to comments / maker update (agent cannot while logged out)
-3. Deploy this branch + guide IndexNow after publish
-4. Commit when asked
+- New guides/solutions
+- AZ meta rewrite
+- AlternativeTo claim (still pending ATO approval)
 
 ## Relevant files
 
-- `src/lib/campaign.ts`, `src/lib/contactMail.ts`
-- `src/components/{Analytics,ContactForm,Hero,Header,Footer,PricingOffers}.astro`
-- `src/i18n/messages/{az,en,ru}.ts`
-- `docs/{producthunt-playbook,social-posts-log,off-site-seo-az}.md`
+- `src/data/solutions/en.ts`, `ru.ts`
+- `src/data/guides/gapEducationalGuides.ts`
+- `src/data/guides/iikoAlternativeGuide.ts`
+- `docs/seo-keyword-growth-plan.md`
