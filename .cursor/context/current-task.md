@@ -1,41 +1,34 @@
-# Current task — GA4 action report (2026-10-11)
+# Current task — FAQ expand + rewrite (2026-10-11)
 
 ## Completed
 
-Read Heselo GA4 (28d ≈ 90d traffic) and wrote action report canvas:
-`canvases/ga4-heselo-action-report.canvas.tsx` (Cursor project canvases).
+Expanded and rewrote site FAQ copy in `src/i18n/messages/{az,en,ru}.ts` (same counts, aligned intent).
 
-### Snapshot (13 Sep – 10 Oct)
+| Group | Before | After |
+|-------|--------|-------|
+| Home (`faq.items`) | 9 | 15 |
+| Pricing | 7 | 9 |
+| About | 4 | 7 |
+| Contact | 4 | 7 |
+| **FAQ page total** | **24** | **38** |
 
-| Metric | Value |
-|--------|-------|
-| Active users | 251 |
-| Page views | 1 814 |
-| Avg engagement | 17s |
-| Key events (GA) | 0 (not marked) |
-| generate_lead (raw) | 11 events / 5 users |
-| form_start | 5 / 2 users |
-| Scroll 90% | 87 users (~35%) |
-
-Traffic: Direct ~150; social (LI/FB/IG) ~14 each; Google organic ~13; PH ~11.
-Top page: AZ home 1 301 views / 93 users (14 view/user — investigate). Funnel: home → pricing 20 → contact 12.
+New home topics: Excel/WhatsApp, languages, PC lock (no), setup time, multi-branch, opened session.
+Polished choppy AZ/EN/RU answers (price lists, co-founder wording, contact venue-type answer).
 
 ## Decisions
 
-1. **P0 ops:** Mark `generate_lead` as key event in GA4 Admin (code already fires).
-2. **P0 code next:** Home → pricing/contact funnel (CTA + internal links), not new pages.
-3. **P1:** Home view inflation + Clarity on Sept 19 spike; pricing title consolidation; verify `cta_click` in Realtime.
-4. Keep SEO plan: deploy GSC CTR cila + index; don’t open new guides yet.
+1. FAQ source of truth remains message catalogs; `/faq/` aggregates via `getFaqGroups`.
+2. PC-lock FAQ links to `/guides/izi-alternative`.
+3. Did not touch solution/guide FAQs in this pass.
 
 ## Remaining
 
-1. User: GA Admin key event + Clarity glance
-2. Next chat/PR: home funnel + pricing title unify (+ cta_click fix if Realtime empty)
-3. Deploy + GSC URL Inspection (6 EN/RU URLs from prior CTR pass)
+1. Optional: spot-check `/faq/`, home, pricing, about, contact in browser (az/en/ru).
+2. Commit when user asks.
 
 ## Relevant files
 
-- `src/components/Analytics.astro`
-- `src/components/ContactForm.astro` / Hero / PricingOffers
-- `docs/seo-keyword-growth-plan.md`
-- Canvas: project `canvases/ga4-heselo-action-report.canvas.tsx`
+- `src/i18n/messages/az.ts`
+- `src/i18n/messages/en.ts`
+- `src/i18n/messages/ru.ts`
+- `src/lib/faqPage.ts`

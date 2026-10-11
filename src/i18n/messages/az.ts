@@ -150,55 +150,85 @@ export const az: Messages = {
     items: [
       {
         q: 'Heselo nədir və kimlər üçündür?',
-        a: 'Heselo Azərbaycanda oyun klubu (PS), karaoke, bilyard, antikafe və otaqlı launj üçün veb paneldir: rezervasiya, canlı sessiya, kassa və anbar bir yerdə. Otaq və ya stansiya vaxtı satan məkanlar üçündür. Heselo mətbəx və restoran POS sistemi üçün nəzərdə tutulmayıb.',
+        a: 'Heselo Azərbaycanda oyun klubu (PlayStation), karaoke, bilyard, antikafe və otaqlı launj üçün veb paneldir. Rezervasiya, canlı sessiya, kassa və anbar bir yerdədir. Otaq və ya stansiya vaxtı satan məkanlar üçündür — mətbəx və restoran POS sistemi deyil.',
         href: '/solutions',
-        linkLabel: 'Məkan tipləri buradadır',
+        linkLabel: 'Məkan tiplərinə baxın',
       },
       {
         q: 'Heselonu kim yaradıb?',
-        a: 'Heselonun tək yaradıcısı Aladdin Biyabangerd-dir. O, məhsulu Bakıda sıfırdan qurub: ideya, proqram təminatı və platforma onun tərəfindən hazırlanıb — birgə qurucu komanda yoxdur.',
+        a: 'Heselonu Bakıda Aladdin Biyabangerd təkbaşına yaradıb. İdea, proqram təminatı və platforma onun işidir — ortaq təsisçi yoxdur.',
         href: '/about',
         linkLabel: 'Haqqında səhifəsi',
       },
       {
         q: 'Heselo iiko və ya Clopos-u əvəz edir?',
-        a: 'Yox, əgər sizə mətbəx, KDS və restoran zalının idarə olunması lazımdırsa — iiko/Clopos uyğundur. Otaq/PS vaxtı, bron və kassa növbəsi əsas işdirsə, Heselo otaq və vaxt əsaslı məkanlar üçün daha sadə idarəetmə alternatividir.',
+        a: 'Mətbəx, KDS və restoran zalı lazımdırsa — xeyr, iiko və ya Clopos seçin. Əsas iş otaq və PlayStation vaxtı, bron və kassa növbəsidirsə, Heselo bu məkanlar üçün daha sadə alternativdir.',
         href: '/guides/iiko-alternative-clubs',
         linkLabel: 'Dürüst müqayisə bələdçisi',
       },
       {
         q: 'Qiymət nə qədərdir?',
-        a: 'Açıq abunə planları var. Kiçik plandan başlayaraq: PS/oyun klubu {gaming} AZN/ay, bilyard {billiards}, karaoke və launj {karaoke}, antikafe {antikafe} AZN/ay. Orta/Böyük və illik (2 ay hədiyyə) qiymətlər qiymətlər səhifəsindədir. Çoxfiliallı məkanlar üçün əlavə fərdi təklif mümkündür.',
+        a: 'Tariflər açıqdır. Kiçik plan ayda belə başlayır: oyun klubu / PS {gaming} AZN, bilyard {billiards} AZN, karaoke və launj {karaoke} AZN, antikafe {antikafe} AZN. Orta, Böyük və illik (2 ay hədiyyə) qiymətlər səhifəsindədir. Bir neçə filial üçün fərdi təklif də mümkündür.',
         href: '/pricing',
         linkLabel: 'Tarifləri tipə görə açın',
       },
       {
-        q: 'Heselo ilə rezervasiyaları idarə etmək mümkündür?',
-        a: 'Bəli. Cədvəl və rezervasiyalar modulunda masa və otaq bronu, köçürmə, ləğv və tarixçə var. Qonaq gələndə eyni rezerv canlı sessiyaya keçir.',
+        q: 'Heselo ilə rezervasiyaları idarə etmək olar?',
+        a: 'Bəli. Cədvəl və rezervasiya modulunda masa və otaq bronu, köçürmə, ləğv və tarixçə var. Qonaq gələndə eyni bron canlı sessiyaya çevrilir.',
         href: '/solutions/reservations',
         linkLabel: 'Rezervasiya imkanları',
       },
       {
-        q: 'Heselo kassa sistemi təqdim edir?',
-        a: 'Bəli. Növbəni açmaq və bağlamaq, əməliyyatlar, kassa hesabatı və kassa sayımı eyni paneldədir — ayrıca kassa proqramı tələb olunmur.',
+        q: 'Heseloda kassa varmı?',
+        a: 'Bəli. Növbəni açmaq və bağlamaq, əməliyyatlar, kassa hesabatı və sayım eyni paneldədir — ayrı kassa proqramı lazım deyil.',
         href: '/solutions/pos',
         linkLabel: 'Kassa imkanları',
       },
       {
-        q: 'Anbar idarəetməsi mümkündür?',
-        a: 'Bəli. Məhsul kataloqu, anbar qalıqları və sayım jurnalları var; sürətli satış da bron olmadan eyni siyahı üzərindən aparılır.',
+        q: 'Anbar idarəetməsi varmı?',
+        a: 'Bəli. Məhsul kataloqu, anbar qalıqları və sayım jurnalları var. Bron olmadan sürətli satış da eyni siyahıdan gedir.',
         href: '/solutions/inventory',
         linkLabel: 'Anbar imkanları',
       },
       {
-        q: 'Mobil cihazlardan istifadə etmək mümkündür?',
-        a: 'Heselo veb paneldir — müasir brauzer vasitəsilə masaüstü və mobil cihazlarda açılır. Telefon və kompüterdə eyni əsas funksiyalardan istifadə edə bilərsiniz.',
+        q: 'Excel və WhatsApp-ı əvəz edirmi?',
+        a: 'Çox klub bron və növbəni Excel və WhatsApp-da aparır — sonra qarışıqlıq yaranır. Heselo eyni işi bir paneldə toplayır: cədvəl, canlı sessiya və kassa bir yerdə qalır. Mesajlaşma silinmir; növbənin əsas qeydi paneldə olur.',
       },
       {
-        q: 'Demo necə əldə edilir?',
-        a: 'WhatsApp-dan yazın və ya formu doldurun — telefon və ya e-poçt kifayətdir. 15 dəqiqəlik canlı demo təqdim edirik; iş saatlarında adətən 2 saat ərzində cavab veririk.',
+        q: 'Mobil telefondan istifadə etmək olar?',
+        a: 'Heselo veb paneldir — müasir brauzerdə kompüterdə və telefonda açılır. Əsas funksiyalar hər iki cihazda eynidir.',
+      },
+      {
+        q: 'Panel hansı dillərdədir?',
+        a: 'Panel Azərbaycan, İngilis və Rus dillərindədir. Növbədəki heyət artıq işlədiyi dildə qala bilir.',
+      },
+      {
+        q: 'PC stansiyalarını kilidləyirmi?',
+        a: 'Xeyr. Heselo otaq-vaxt, bron və kassa paneldir — PC stansiya kilidləmə proqramını əvəz etmir. Kilid lazımdırsa ayrı alət saxlayın; Heselo bron və növbə üçündür.',
+        href: '/guides/izi-alternative',
+        linkLabel: 'IZI ilə müqayisə',
+      },
+      {
+        q: 'Qurulum nə qədər çəkir?',
+        a: 'Heselo bulud veb paneldir — kompüterə quraşdırma tələb olunmur. Demo və məkan ayarlarından sonra komanda tez-tez eyni gün və ya bir-iki gün ərzində işə başlaya bilir. İlkin quraşdırma danışıqla razılaşdırılır.',
+      },
+      {
+        q: 'Bir neçə filial üçün işləyir?',
+        a: 'Bəli. Açıq planlarda hesab üzrə məkan limiti var; bir neçə filial və ya limitdən kənar həcm üçün fərdi təklif mümkündür.',
+        href: '/pricing',
+        linkLabel: 'Plan və limitlərə baxın',
+      },
+      {
+        q: '«Açılmış sessiya» nə deməkdir?',
+        a: 'Tarif limitləri hesab üzrə aylıq açılmış sessiya sayına görədir — qonağın zalda başlayan canlı oyun və ya otaq sessiyası. Limitə daxil olan say plana yazılıb; artıq hər sessiya üçün əlavə haqq qiymətlər səhifəsində göstərilir.',
+        href: '/pricing',
+        linkLabel: 'Limitləri cədvəldə görün',
+      },
+      {
+        q: 'Demo necə alınır?',
+        a: 'WhatsApp-dan yazın və ya formu doldurun — telefon və ya e-poçt kifayətdir. 15 dəqiqəlik canlı demo göstəririk; iş saatlarında adətən 2 saat ərzində cavab veririk. Kart tələb olunmur.',
         href: '/contact',
-        linkLabel: 'Forma ilə yazmaq da olar',
+        linkLabel: 'Forma ilə yazın',
       },
     ],
   },
@@ -311,7 +341,7 @@ export const az: Messages = {
     eyebrow: 'Suallar',
     title: 'Tez-tez verilən suallar',
     intro:
-      'Heselo haqqında ən çox verilən suallara qısa cavablar: məhsul, qiymət, təsisçi və demo.',
+      'Heselo haqqında ən çox verilən suallar: məhsul, qiymət, qurulum, təsisçi və demo — qısa, düz cavablar.',
     groups: {
       general: 'Heselo haqqında',
       pricing: 'Qiymət və planlar',
@@ -389,15 +419,29 @@ export const az: Messages = {
     faq: [
       {
         q: 'Heselonun yaradıcısı kimdir?',
-        a: 'Aladdin Biyabangerd. O, Heselonun tək yaradıcısı və təsisçisidir — məhsul onun adı ilə bağlıdır.',
+        a: 'Aladdin Biyabangerd — Heselonun tək yaradıcısı və təsisçisi. Məhsul onun adı ilə bağlıdır.',
       },
       {
         q: 'Heselo bir komanda məhsuludurmu?',
-        a: 'Yox. Heselo tək şəxs — Aladdin Biyabangerd — tərəfindən yaradılıb. Yardımçı xidmətlər və ya müvəqqəti əməkdaşlar ola bilər, amma məhsulun sahibi və yaradıcısı odur.',
+        a: 'Xeyr. Heselonu bir nəfər — Aladdin Biyabangerd — yaradıb. Bəzən köməkçi və ya müvəqqəti əməkdaş ola bilər, amma sahibi və yaradıcısı odur.',
+      },
+      {
+        q: 'Heselo niyə yaradılıb?',
+        a: 'Oyun klubu, karaoke, bilyard, antikafe və otaqlı launjda bron, canlı sessiya, kassa və anbarı bir paneldə birləşdirmək üçün. Məqsəd Excel və mesajlaşma əvəzinə növbənin aydın qalmasıdır.',
+      },
+      {
+        q: 'Heselo harada qurulub?',
+        a: 'Heselo Bakıda, Azərbaycanda qurulub. Məhsul yerli klub və otaq məkanlarının gündəlik işinə uyğunlaşdırılıb.',
       },
       {
         q: 'Heselo Hasleo Software-dirmi?',
         a: 'Xeyr. Hasleo Windows alətləri hazırlayan şirkətdir. Heselo Azərbaycanda klub və otaq məkanları üçün ayrıca B2B paneldir.',
+      },
+      {
+        q: 'Təsisçi ilə birbaşa əlaqə saxlamaq olar?',
+        a: 'Bəli. Demo və ya əməkdaşlıq üçün əlaqə forması və ya WhatsApp kifayətdir — sorğular birbaşa Heselo komandasına (yaradıcıya) çatır.',
+        href: '/contact',
+        linkLabel: 'Əlaqə formasını açın',
       },
       {
         q: 'Heselonu demoda necə görmək olar?',
@@ -515,35 +559,43 @@ export const az: Messages = {
     faq: [
       {
         q: 'Heselonun qiyməti nədir?',
-        a: 'Açıq abunə planları var. Məkan tipinə görə Kiçik plandan başlayır: PS/oyun klubu {gaming} AZN/ay, bilyard {billiards} AZN/ay, karaoke və otaqlı launj {karaoke} AZN/ay, antikafe {antikafe} AZN/ay. Orta və Böyük planlar, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Çoxfiliallı məkanlar və ya standart plana sığmayan həcm üçün əlavə fərdi təklif mümkündür.',
+        a: 'Tariflər açıqdır. Məkan tipinə görə Kiçik plan ayda belə başlayır: oyun klubu / PS {gaming} AZN, bilyard {billiards} AZN, karaoke və otaqlı launj {karaoke} AZN, antikafe {antikafe} AZN. Orta, Böyük, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Bir neçə filial və ya plana sığmayan həcm üçün fərdi təklif mümkündür.',
         href: '/pricing',
         linkLabel: 'Tam tarif cədvəli burada',
       },
       {
-        q: 'Niyə kateqoriya üzrə fərqli qiymətlər var?',
-        a: 'PS klubu ilə karaoke eyni şəkildə işləmir — otaq cədvəli və sessiya idarəsi fərqlidir. Ona görə hər tipin öz başlanğıc tarifi var. Qiymətlər gizli deyil: yuxarıdakı xülasədə və aşağıdakı cədvəldə açıq göstərilir. Tipi seçmək yalnız öz məkanınıza uyğun planları rahat görmək üçündür.',
+        q: 'Niyə kateqoriya üzrə qiymətlər fərqlidir?',
+        a: 'PlayStation klubu ilə karaoke eyni cür işləmir — otaq cədvəli və sessiya idarəsi fərqlidir. Ona görə hər tipin öz başlanğıc tarifi var. Qiymətlər gizli deyil: yuxarıdakı xülasədə və aşağıdakı cədvəldə açıq göstərilir. Tip seçmək yalnız öz məkanınıza uyğun planları rahat görmək üçündür.',
       },
       {
-        q: 'Niyə karaoke PS-dən bahadır?',
-        a: 'PS {gaming} AZN-dən başlayır — stansiya cədvəli daha sadədir. Bilyard {billiards} AZN-dən, karaoke və launj isə otaq cədvəli, uzatma və kassa növbəsinə görə {karaoke} AZN-dən başlayır.',
+        q: 'Niyə karaoke PlayStation-dan bahadır?',
+        a: 'PlayStation {gaming} AZN-dən başlayır — stansiya cədvəli daha sadədir. Bilyard {billiards} AZN-dən, karaoke və launj isə otaq cədvəli, uzatma və kassa növbəsinə görə {karaoke} AZN-dən başlayır.',
       },
       {
         q: 'Dine və ya MinuPOS-dan sərfəlidirmi?',
-        a: 'Onlar əsasən restoran masa/QR POS sistemləridir. Heselo otaq-vaxt, canlı sessiya və klub kassası üçündür — {low} AZN/aydan. Mətbəx/KDS lazımdırsa restoran POS sistemi daha uyğundur; klub/karaoke otağı üçün Heselo otaq və vaxt əsaslı iş prosesinə uyğunlaşdırılıb.',
+        a: 'Onlar əsasən restoran masa və QR POS sistemləridir. Heselo otaq-vaxt, canlı sessiya və klub kassası üçündür — ayda {low} AZN-dən. Mətbəx və KDS lazımdırsa restoran POS-u seçin; klub və karaoke otağı üçün Heselo daha uyğundur.',
+      },
+      {
+        q: 'Plana nə daxildir?',
+        a: 'Bütün açıq planlarda panel modulları daxildir: rezervasiya, canlı sessiya, kassa, anbar və müştəri kartları. Fərq əsasən stansiya/otaq limiti, işçi sayı və aylıq açılmış sessiya limitindədir.',
+      },
+      {
+        q: '«Açılmış sessiya» nədir?',
+        a: 'Qonağın zalda başlayan canlı oyun və ya otaq sessiyasıdır. Hər planın hesab üzrə aylıq limiti var; limitdən sonra hər əlavə sessiya üçün qiymət cədvəldə göstərilir.',
       },
       {
         q: 'İllik ödənişdə nə qazanıram?',
-        a: 'İllik planda 2 ay hədiyyə verilir — 12 ay istifadəni 10 aylıq ödənişlə əldə edirsiniz.',
+        a: 'İllik planda 2 ay hədiyyə verilir — 12 ay istifadəni 10 aylıq ödənişlə alırsınız.',
       },
       {
         q: 'Tarifi sonra dəyişmək olar?',
-        a: 'Bəli. Stansiya və ya otaq sayı artanda Kiçikdən Orta və ya Böyük plana keçmək mümkündür. Bir neçə filial üçün açıq planlara əlavə olaraq fərdi təklif var.',
+        a: 'Bəli. Stansiya və ya otaq sayı artanda Kiçikdən Orta və ya Böyük plana keçmək olar. Bir neçə filial üçün açıq planlara əlavə fərdi təklif var.',
       },
       {
         q: 'Pulsuz sınaq var?',
         a: 'Pulsuz demo üçün WhatsApp-dan yazın və ya formu doldurun — 15 dəqiqəlik demo, kart tələb olunmur. İş saatlarında adətən 2 saat ərzində cavab veririk.',
         href: '/contact',
-        linkLabel: 'Formadan demo istəmək olar',
+        linkLabel: 'Formadan demo istəyin',
       },
     ],
     crosslinks: {
@@ -896,17 +948,29 @@ export const az: Messages = {
       },
       {
         q: 'Demo üçün nə hazırlamaq lazımdır?',
-        a: 'Məkan tipi, təxmini otaq və ya PlayStation sayı, və ən çox nəyə baxmaq istədiyiniz: bron, canlı zal, yoxsa kassa. Canlı nümayiş üçün 15 dəqiqə kifayətdir.',
+        a: 'Məkan tipini, təxmini otaq və ya PlayStation sayını və ən çox nəyə baxmaq istədiyinizi yazın: bron, canlı zal, yoxsa kassa. Canlı nümayiş üçün 15 dəqiqə kifayətdir.',
+      },
+      {
+        q: 'Demo üçün kart lazımdır?',
+        a: 'Xeyr. Demo pulsuzdur — kart və ya ödəniş tələb olunmur. Yalnız telefon və ya e-poçt kifayətdir.',
       },
       {
         q: 'Demo, yoxsa fərdi təklif?',
-        a: 'Əksər məkanlar açıq Kiçik/Orta/Böyük planlara qarşı 15 dəqiqəlik demo ilə başlayır. Bir neçə filial və ya bu limitlərdən kənar həcm olanda fərdi təklif soruşun.',
+        a: 'Əksər məkanlar açıq Kiçik, Orta və ya Böyük planlarla 15 dəqiqəlik demoya başlayır. Bir neçə filial və ya bu limitlərdən kənar həcm olanda fərdi təklif soruşun.',
         href: '/pricing',
         linkLabel: 'Açıq qiymətlərə baxın',
       },
       {
         q: 'Heselo hansı məkan tiplərini dəstəkləyir?',
-        a: 'Oyun / PlayStation klubları, karaoke, bilyard, antikafe və otaqlı launjlar — mətbəx çekindən çox masa, otaq və ya stansiya vaxtı satan zal. Tip seçəndə demo və qiymət cədvəli həmin zalın cədvəlinə uyğun açılır.',
+        a: 'Oyun / PlayStation klubları, karaoke, bilyard, antikafe və otaqlı launjlar — mətbəx çekindən çox masa, otaq və ya stansiya vaxtı satan məkanlar. Tip seçəndə demo və qiymət cədvəli həmin məkan tipinə uyğun açılır.',
+      },
+      {
+        q: 'Demodan sonra nə qədər tez başlamaq olar?',
+        a: 'Heselo bulud paneldir — ayrı quraşdırma gözləmədən brauzerdə açılır. Demo və məkan ayarlarından sonra bir çox komanda eyni gün və ya bir-iki gün ərzində işə başlayır.',
+      },
+      {
+        q: 'WhatsApp, yoxsa forma?',
+        a: 'Tələsirsinizsə WhatsApp daha sürətlidir. E-poçt və ya yazılı izləmə istəyirsinizsə, formu doldurun — hər iki yolla eyni demo razılaşdırılır.',
       },
     ],
   },

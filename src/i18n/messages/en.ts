@@ -150,25 +150,25 @@ export const en: Messages = {
     items: [
       {
         q: 'What is Heselo and who is it for?',
-        a: 'Heselo is a web panel for gaming clubs (PlayStation), karaoke, billiards, anti-cafés, and room lounges in Azerbaijan: booking, live sessions, cash, and inventory in one place. Built for venues that sell room or station time. Heselo is not designed as a kitchen or restaurant POS.',
+        a: 'Heselo is a web panel for gaming clubs (PlayStation), karaoke, billiards, anti-cafés, and room lounges in Azerbaijan. Booking, live sessions, cash, and inventory sit in one place. It is built for venues that sell room or station time — not for kitchen or restaurant POS.',
         href: '/solutions',
-        linkLabel: 'Venue types are listed here',
+        linkLabel: 'See venue types',
       },
       {
         q: 'Who created Heselo?',
-        a: 'Heselo’s sole founder and creator is Aladdin Biyabangerd. He built the product from scratch in Baku — idea, software, and platform under his name. There is no co-founder team.',
+        a: 'Aladdin Biyabangerd built Heselo alone in Baku. The idea, software, and platform are his work — there is no co-founder.',
         href: '/about',
         linkLabel: 'About page',
       },
       {
         q: 'Does Heselo replace iiko or Clopos?',
-        a: 'No — if you need kitchen, KDS, and dining-room flow, choose iiko/Clopos. If room/PS time, bookings, and cash shifts are the core job, Heselo is a simpler management alternative for room- and time-based venues.',
+        a: 'If you need kitchen, KDS, and a dining floor — no; choose iiko or Clopos. If the core job is room and PlayStation time, bookings, and cash shifts, Heselo is the simpler alternative for those venues.',
         href: '/guides/iiko-alternative-clubs',
         linkLabel: 'Honest comparison guide',
       },
       {
         q: 'How much does it cost?',
-        a: 'Plans are published. Small-plan monthly: PS/gaming {gaming} AZN, billiards {billiards}, karaoke and lounges {karaoke}, anti-café {antikafe} AZN. Medium/Large and annual (two months free) are on the pricing page. Multi-branch can add a custom quote.',
+        a: 'Plans are published. Small-plan monthly starts at: gaming / PS {gaming} AZN, billiards {billiards} AZN, karaoke and lounges {karaoke} AZN, anti-café {antikafe} AZN. Medium, Large, and annual (two months free) are on the pricing page. Multi-branch venues can ask for a custom quote.',
         href: '/pricing',
         linkLabel: 'Open plans by venue type',
       },
@@ -179,26 +179,56 @@ export const en: Messages = {
         linkLabel: 'Reservation features',
       },
       {
-        q: 'Does Heselo include a cash / POS flow?',
-        a: 'Yes. Open and close shift, transactions, cash report, and cash count are in the same panel — no separate till app required.',
+        q: 'Does Heselo include cash / POS?',
+        a: 'Yes. Open and close shift, transactions, cash report, and cash count are in the same panel — no separate till app needed.',
         href: '/solutions/pos',
         linkLabel: 'Cash features',
       },
       {
-        q: 'Is inventory management included?',
-        a: 'Yes. Product catalog, stock levels, and count journals; quick sale works on the same list without a booking.',
+        q: 'Is inventory included?',
+        a: 'Yes. Product catalog, stock levels, and count journals are included. Quick sale without a booking uses the same list.',
         href: '/solutions/inventory',
         linkLabel: 'Inventory features',
       },
       {
+        q: 'Does it replace Excel and WhatsApp?',
+        a: 'Many clubs keep bookings and shifts in Excel and WhatsApp — then things get messy. Heselo puts the same work in one panel: schedule, live session, and cash stay together. Messaging does not disappear; the shift’s main record lives in the panel.',
+      },
+      {
         q: 'Can I use it on mobile?',
-        a: 'Heselo is a web panel — open it in a modern browser on desktop or mobile. You can use the same core features on phone and computer.',
+        a: 'Heselo is a web panel — open it in a modern browser on computer or phone. The core features are the same on both.',
+      },
+      {
+        q: 'Which languages does the panel support?',
+        a: 'The panel is in Azerbaijani, English, and Russian, so staff can stay in the language they already work in.',
+      },
+      {
+        q: 'Does it lock PC stations?',
+        a: 'No. Heselo is a room-time, booking, and cash panel — it does not replace PC station lock software. Keep a separate lock tool if you need one; use Heselo for booking and shifts.',
+        href: '/guides/izi-alternative',
+        linkLabel: 'Compare with IZI',
+      },
+      {
+        q: 'How long does setup take?',
+        a: 'Heselo is a cloud web panel — nothing to install on your PCs. After a demo and venue setup, teams often start the same day or within a day or two. Initial setup is agreed with you.',
+      },
+      {
+        q: 'Does it work for several branches?',
+        a: 'Yes. Published plans have a venue limit per account; several branches or volume outside those limits can get a custom quote.',
+        href: '/pricing',
+        linkLabel: 'See plans and limits',
+      },
+      {
+        q: 'What is an “opened session”?',
+        a: 'Plan limits are based on opened sessions per account per month — a live game or room session that starts on the floor. The included count is on each plan; the price for each session after the limit is on the pricing page.',
+        href: '/pricing',
+        linkLabel: 'See limits in the table',
       },
       {
         q: 'How do I get a demo?',
-        a: 'Message us on WhatsApp or fill in the form — phone or email is enough. We give a 15-minute live demo and usually reply within two hours during working hours.',
+        a: 'Message us on WhatsApp or fill in the form — phone or email is enough. We run a 15-minute live demo and usually reply within two hours during working hours. No card required.',
         href: '/contact',
-        linkLabel: 'You can also write via the form',
+        linkLabel: 'Write via the form',
       },
     ],
   },
@@ -311,7 +341,7 @@ export const en: Messages = {
     eyebrow: 'Questions',
     title: 'Frequently asked questions',
     intro:
-      'Short answers about Heselo: product, pricing, the founder, and how to get a demo.',
+      'Common questions about Heselo: product, pricing, setup, the founder, and how to get a demo — short, direct answers.',
     groups: {
       general: 'About Heselo',
       pricing: 'Pricing and plans',
@@ -389,15 +419,29 @@ export const en: Messages = {
     faq: [
       {
         q: 'Who is the creator of Heselo?',
-        a: 'Aladdin Biyabangerd. He is the sole founder and creator of Heselo — the product is his.',
+        a: 'Aladdin Biyabangerd — the sole founder and creator of Heselo. The product is his.',
       },
       {
         q: 'Is Heselo a team product?',
-        a: 'No. Heselo was created by one person — Aladdin Biyabangerd. Helpers or contractors may assist at times, but ownership and creation sit with him.',
+        a: 'No. One person — Aladdin Biyabangerd — built Heselo. Helpers or contractors may assist at times, but he owns and created it.',
+      },
+      {
+        q: 'Why was Heselo built?',
+        a: 'To put booking, live session, cash, and inventory in one panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges — so the shift stays clear instead of living in Excel and chat.',
+      },
+      {
+        q: 'Where is Heselo based?',
+        a: 'Heselo was built in Baku, Azerbaijan. The product is tuned for how local clubs and room venues work day to day.',
       },
       {
         q: 'Is Heselo the same as Hasleo Software?',
         a: 'No. Hasleo makes Windows utilities. Heselo is a separate B2B panel for clubs and room venues in Azerbaijan.',
+      },
+      {
+        q: 'Can I reach the founder directly?',
+        a: 'Yes. The contact form or WhatsApp is enough for a demo or partnership — messages go straight to the Heselo team (the founder).',
+        href: '/contact',
+        linkLabel: 'Open the contact form',
       },
       {
         q: 'How do I see Heselo in a demo?',
@@ -515,13 +559,13 @@ export const en: Messages = {
     faq: [
       {
         q: 'How much does Heselo cost?',
-        a: 'Plans are published. Small-plan monthly starts at: PS/gaming {gaming} AZN, billiards {billiards} AZN, karaoke and room lounges {karaoke} AZN, anti-café {antikafe} AZN. Medium/Large, annual billing, and limits are in the table on this page. Multi-branch or out-of-plan volume can get an additional custom quote.',
+        a: 'Plans are published. Small-plan monthly starts at: gaming / PS {gaming} AZN, billiards {billiards} AZN, karaoke and room lounges {karaoke} AZN, anti-café {antikafe} AZN. Medium, Large, annual billing, and limits are in the table on this page. Multi-branch or out-of-plan volume can get a custom quote.',
         href: '/pricing',
         linkLabel: 'Full pricing table is here',
       },
       {
         q: 'Why do prices differ by category?',
-        a: 'A PlayStation club and a karaoke room do not buy the same way — room schedules and session management differ. Each type has its own starting fee. Prices are not hidden: they appear in the summary above and in the table below. Picking a type only helps you see the plans that match your floor.',
+        a: 'A PlayStation club and a karaoke room do not run the same way — room schedules and session management differ. Each type has its own starting fee. Prices are not hidden: they appear in the summary above and in the table below. Picking a type only helps you see the plans that match your floor.',
       },
       {
         q: 'Why is karaoke more than PlayStation?',
@@ -529,7 +573,15 @@ export const en: Messages = {
       },
       {
         q: 'Cheaper than Dine or MinuPOS?',
-        a: 'Those tools are mainly restaurant table/QR POS. Heselo is for room-time, live sessions and club cash — from {low} AZN/month. Need kitchen/KDS? Keep a restaurant POS. For club/karaoke rooms, Heselo is usually the simpler fit.',
+        a: 'Those tools are mainly restaurant table and QR POS. Heselo is for room-time, live sessions, and club cash — from {low} AZN/month. Need kitchen and KDS? Keep a restaurant POS. For club and karaoke rooms, Heselo fits better.',
+      },
+      {
+        q: 'What is included in a plan?',
+        a: 'Every published plan includes the panel modules: reservations, live sessions, cash, inventory, and customer cards. Plans mainly differ by station/room limit, staff count, and monthly opened-session allowance.',
+      },
+      {
+        q: 'What is an “opened session”?',
+        a: 'A live game or room session that starts on the floor. Each plan has a monthly allowance per account; the price for each session after the limit is shown in the table.',
       },
       {
         q: 'What do I get with annual billing?',
@@ -537,13 +589,13 @@ export const en: Messages = {
       },
       {
         q: 'Can I change plan later?',
-        a: 'Yes. When station or room count grows we move Small → Medium → Large. Several branches can add a custom quote on top of the published plans.',
+        a: 'Yes. When station or room count grows, you can move from Small to Medium or Large. Several branches can add a custom quote on top of the published plans.',
       },
       {
         q: 'Is there a free trial?',
         a: 'Message us on WhatsApp or use the form for a free demo — 15 minutes, no card. We usually reply within two hours during working hours.',
         href: '/contact',
-        linkLabel: 'You can request a demo via the form',
+        linkLabel: 'Request a demo via the form',
       },
     ],
     crosslinks: {
@@ -896,17 +948,29 @@ export const en: Messages = {
       },
       {
         q: 'What should I prepare for a demo?',
-        a: 'Venue type, roughly how many rooms or PlayStation stations you run, and whether you care most about booking, live floor, or cash. Fifteen minutes is enough for a live walkthrough.',
+        a: 'Tell us your venue type, roughly how many rooms or PlayStation stations you run, and what you care about most: booking, live floor, or cash. Fifteen minutes is enough for a live walkthrough.',
+      },
+      {
+        q: 'Do I need a card for the demo?',
+        a: 'No. The demo is free — no card or payment required. Phone or email is enough.',
       },
       {
         q: 'Do I need a demo or a custom quote?',
-        a: 'Most venues start with a 15-minute demo against the published Small/Medium/Large plans. Ask for a custom quote when you have several branches or volume outside those limits.',
+        a: 'Most venues start with a 15-minute demo on the published Small, Medium, or Large plans. Ask for a custom quote when you have several branches or volume outside those limits.',
         href: '/pricing',
         linkLabel: 'See published pricing',
       },
       {
         q: 'Which venue types does Heselo support?',
-        a: 'Gaming / PlayStation clubs, karaoke, billiards, anti-cafés, and room lounges — any floor that sells table, room, or station time rather than kitchen tickets. Picking a type opens the demo and pricing table around that floor’s schedule.',
+        a: 'Gaming / PlayStation clubs, karaoke, billiards, anti-cafés, and room lounges — venues that sell table, room, or station time more than kitchen tickets. Picking a type opens the demo and pricing table for that venue type.',
+      },
+      {
+        q: 'How soon can we start after a demo?',
+        a: 'Heselo is a cloud panel — it opens in the browser with no separate install wait. After the demo and venue setup, many teams start the same day or within a day or two.',
+      },
+      {
+        q: 'WhatsApp or the form?',
+        a: 'WhatsApp is faster if you are in a hurry. Prefer email or a written trail? Use the form — either way we schedule the same demo.',
       },
     ],
   },
