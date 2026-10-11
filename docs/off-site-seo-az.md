@@ -78,11 +78,11 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 
 ### Deploy + IndexNow checklist (yeni guide-lar sonrası)
 
-1. [ ] Push / Vercel deploy — `/az|en|ru/guides/…` live
-2. [ ] IndexNow açar URL yoxla: https://heselo.online/6333c2a8c71f44f0a0f557eaaebd5745.txt
-3. [ ] `npm run indexnow` (və ya yeni guide URL-ləri tək-tək)
+1. [x] Push / Vercel deploy — `/az|en|ru/guides/…` live (+ GA measurement `e70ff9d`, 2026-10-08)
+2. [x] IndexNow açar URL yoxla: https://heselo.online/6333c2a8c71f44f0a0f557eaaebd5745.txt
+3. [x] `npm run indexnow` — 171 URL OK 200 (2026-10-08)
 4. [ ] GSC URL Inspection — kritik guide səhifələri
-5. [ ] GA4: organic sessions / eng rate 7–14 gün sonra müqayisə
+5. [ ] GA4: organic sessions / eng rate 7–14 gün sonra müqayisə + `generate_lead` **key event**
 
 Sosial UTM hygiene: [social-posts-log.md](./social-posts-log.md). PH ölçmə: [producthunt-playbook.md](./producthunt-playbook.md).
 
@@ -157,18 +157,18 @@ Admin panel (Heselo app) marketing indeksi üçün deyil — yalnız `heselo.onl
 
 Hədəf: brend + “alternative to X” siyahıları. Təsvirdə restoran mətbəxi POS iddiası **yox** — otaq/masa sessiya + kassa.
 
-- [ ] Heselo profili yaradılıb (Venue / Booking software)
-- [ ] Sayt: `https://heselo.online/az/` + EN mirror link
-- [ ] “Similar to / Alternative to” siyahılarına əlavə:
-  - [ ] iiko → daxili link `…/guides/iiko-alternative-clubs/`
-  - [ ] Clopos → `…/guides/clopos-alternative/`
-  - [ ] Dine / dine.az → `…/guides/dine-alternative/`
-  - [ ] Restomas → `…/guides/restomas-alternative/`
-  - [ ] MinuPOS → `…/guides/minupos-alternative/`
-  - [ ] robotPOS → `…/guides/robotpos-alternative/`
-- [ ] Qısa EN təsvir (unik): room-time clubs, karaoke, billiards, live sessions, cash shifts; from 25 AZN/mo in Azerbaijan
-- [ ] Screenshot: live floor və ya schedule (mətbəx/KDS ekranı yox)
-- [ ] UTM: `?utm_source=alternativeto&utm_medium=referral&utm_campaign=seo-c0`
+- [x] Heselo profili yaradılıb (Venue / Booking software) — submitted as **Heselo Online** (`a619c853-6b88-4c60-91cd-fe15089008b2`); exact “Heselo” reserved
+- [x] Sayt: Official Website `https://heselo.online/en/` (no UTM — ATO FAQ); AZ/EN/RU languages set
+- [x] “Similar to / Alternative to” siyahılarına əlavə (ATO-da yox idilər → yeni app kimi `mid=` Heselo ilə; dürüst: klub/otaq-vaxt vs mətbəx POS):
+  - [x] iiko → https://alternativeto.net/software/iiko/ (+ daxili `…/guides/iiko-alternative-clubs/` after live)
+  - [x] Clopos → ID `20150964-8788-488a-ac9d-5601ddbf4471` (+ `…/guides/clopos-alternative/`)
+  - [x] Dine / dine.az → https://alternativeto.net/software/dine/ (`f1aa5baa-0357-44cd-8b95-fff4e8c7c422`) (+ `…/guides/dine-alternative/`)
+  - [ ] Restomas → `…/guides/restomas-alternative/` (optional, not submitted)
+  - [ ] MinuPOS → `…/guides/minupos-alternative/` (optional, not submitted)
+  - [ ] robotPOS → `…/guides/robotpos-alternative/` (optional, not submitted)
+- [x] Qısa EN təsvir (unik): room-time clubs, karaoke, billiards, live sessions, cash shifts; Commercial/Subscription
+- [x] Screenshot: live floor / schedule (mətbəx/KDS ekranı yox)
+- [ ] UTM on outbound listing links after approval: `?utm_source=alternativeto&utm_medium=referral&utm_campaign=seo-c0` (Official Website field: no UTM)
 
 ---
 

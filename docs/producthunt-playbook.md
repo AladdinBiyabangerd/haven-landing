@@ -172,9 +172,10 @@ Brauzer file-upload avtomatlaşdırıla bilməyəndə: PH-də **Select an image*
 
 1. [x] Listing canlı — URL: https://www.producthunt.com/products/heselo?launch=heselo (Oct 1 PT)
 2. [x] Maker **first comment** (prelaunch checklist ✓ — room-time vs POS stub; tam şablon yuxarıda cavablar üçün)
-3. [ ] 4–6 saat: kommentlərə cavab (3 şablon + uyğunlaşdır) — **maker Sign in lazımdır** (agent brauzerdə logged out; 2026-10-08 yoxlama)
+3. [x] Komment yoxlama (2026-10-08): yalnız maker pinned first comment — **cavabsız community komment yoxdur**; yeni komment gələndə Sign in + 3 şablon
+3b. [x] Maker update comment (2026-10-08): AZ+RU üstünlük + qısa EN; PH trafik təşəkkürü — [launch](https://www.producthunt.com/products/heselo?launch=heselo)
 4. [ ] LinkedIn/FB-də 1 announce (`utm_content=ph_social_announce`) — spam upvote çağırışı yox
-5. [x] [social-posts-log.md](./social-posts-log.md) → `ph_launch_01` + PH URL + Launched
+5. [x] [social-posts-log.md](./social-posts-log.md) → `ph_launch_01` + PH URL + Launched; maker update → `ph_maker_update_01`
 6. [x] Product link UTM yoxlandı (2026-10-08): `utm_source=producthunt&utm_medium=referral&utm_campaign=heselo&utm_content=ph_launch_01`
 
 ### Launch-gün qadağalar
@@ -218,8 +219,8 @@ Event params: `placement`, `method` / `plan`, plus `utm_source|medium|campaign|c
 
 7g GA: `google / organic` ən yaxşı eng (~80%, ~41s). Növbəti böyümə: guide/SEO publish — sosial bounce chase yox.
 
-1. [ ] Competitor alternative guide-ları **deploy** (live URL-lər)
-2. [ ] Deploy sonrası **IndexNow** (submit publish-dən əvvəl olubsa yenidən)
+1. [x] Measurement + guides **deploy** — `e70ff9d` Vercel Ready (2026-10-08); live `generate_lead` / `cta_click` / `pricing_select`
+2. [x] Deploy sonrası **IndexNow** — 171 URL OK 200 (2026-10-08)
 3. [ ] GSC: yeni `/guides/…` URL-ləri Coverage / URL Inspection
 
 ## Əlaqəli sənədlər

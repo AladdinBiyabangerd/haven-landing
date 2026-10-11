@@ -61,6 +61,8 @@ Sayt first-touch UTM-i `sessionStorage` (`heselo.campaign`) saxlayır — home �
 | 2026-09-30 | Quora | `quora_answer_06` | AZ sual+cavab: Karaoke otağı rezervasiyası — hansı proqram | cavab | Paylaşıldı · [answer](https://www.quora.com/Karaoke-ota%C4%9F%C4%B1-rezervasiyas%C4%B1-%C3%BC%C3%A7%C3%BCn-hans%C4%B1-proqram-laz%C4%B1md%C4%B1r/answer/Aladdin-Biyabangerd) |
 | 2026-09-30 | Quora | `profile` | Profil bio AZ+EN; credential **Founder at Heselo** (default) | profil | Yeniləndi · [profile](https://www.quora.com/profile/Aladdin-Biyabangerd) |
 | 2026-09-30 | Product Hunt | `ph_launch_01` | EN launch — room-time ops (gaming/karaoke/anti-café); maker first comment; scheduled Oct 1 PT midnight | listing | Launched · [product](https://www.producthunt.com/products/heselo) · [launch](https://www.producthunt.com/products/heselo?launch=heselo) · UTM OK 2026-10-08 · playbook: [producthunt-playbook.md](./producthunt-playbook.md) |
+| 2026-10-08 | Product Hunt | `ph_maker_update_01` | Maker update: PH trafik təşəkkürü; AZ+RU prioritet + qısa EN; demo link `ph_launch_01` UTM | comment | Paylaşıldı · [launch](https://www.producthunt.com/products/heselo?launch=heselo) |
+| 2026-10-08 | Product Hunt | `ph_forum_01` | Forum: room bookings WhatsApp vs panel — AZ/RU + EN discussion; soft Heselo mention | forum | Paylaşıldı · [thread](https://www.producthunt.com/p/heselo/how-do-gaming-karaoke-clubs-in-your-city-handle-room-bookings) |
 
 ---
 

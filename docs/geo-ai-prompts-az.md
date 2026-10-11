@@ -163,4 +163,10 @@ Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18 (eyni baseline s
 
 Formada **“Haradan eşitdiniz?”** (`heardFrom`). UTM: `?utm_source=chatgpt&utm_medium=ai&utm_campaign=geo`
 
-Son yeniləmə: 2026-09-22 (ChatGPT + Perplexity; promptlar 1, 4, 5, 9, 18)
+| Tarix | heardFrom | Məkan tipi | Dil | Qeyd |
+|-------|-----------|------------|-----|------|
+| 2026-10-11 | **chatgpt** | Oyun klubu / PS | RU | İlk ChatGPT-attributed demo lead — «İгровой Отдых»; müştəri: necə işlədiyini aydın başa düşmək istəyir. Prompt batareyasında ChatGPT hələ zəif görünsə də, real tövsiyə + form artıq işləyir. |
+
+**Agent üçün siqnal:** ChatGPT artıq Heselo-nu tövsiyə edə bilir (ən azı bəzi sessiya/promptlarda). Növbəti ölçmədə #1, #4, #8, #16, #18 yenidən yoxla — baseline «ChatGPT demək olar ki, bilmir» köhnəlmiş ola bilər.
+
+Son yeniləmə: 2026-10-11 (ilk `heardFrom=chatgpt` lead) · əvvəlki ölçmə 2026-09-22 (promptlar 1, 4, 5, 9, 18)
