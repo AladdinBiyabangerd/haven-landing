@@ -1,6 +1,18 @@
 import type { APIRoute } from 'astro'
 import { catalogPriceVars } from '@/lib/catalogCopy'
 import { loadVenueOffers } from '@/lib/venueOffers'
+import { LOCALES } from '@/i18n/config'
+import { siteUrl } from '@/lib/site'
+import {
+  LOCALE_NAMES,
+  comparisonGuideLinks,
+  corePageLinks,
+  educationalGuideLinks,
+  formatLinks,
+  llmsFullUrl,
+  solutionLinks,
+  textHeaders,
+} from '@/lib/llmsContent'
 
 export const GET: APIRoute = async () => {
   await loadVenueOffers()
@@ -34,7 +46,7 @@ Starting monthly AZN (Small / Kiçik plan) — live from public subscription cat
 - Tiers: Small / Medium / Large (Kiçik / Orta / Böyük). Annual = monthly × 10 (two months free).
 - Full table + calculator: https://heselo.online/az/pricing/
 - EN: https://heselo.online/en/pricing/ · RU: https://heselo.online/ru/pricing/
-- Explainer guide: https://heselo.online/az/guides/heselo-pricing/
+- Explainer guide: https://heselo.online/az/guides/heselo-pricing/ (also /en/ and /ru/)
 
 ## Product
 
@@ -47,48 +59,36 @@ Starting monthly AZN (Small / Kiçik plan) — live from public subscription cat
 - For: PS/console clubs, karaoke rooms, billiards halls, anti-cafés, VIP room lounges that need reservation + live session + cash.
 - Not for: full restaurant kitchen POS, KDS, delivery stacks, generic coworking desk booking.
 
-## Key pages (az locale)
+## Key pages
 
-- Home: https://heselo.online/az/
-- About / founder: https://heselo.online/az/about/
-- Features: https://heselo.online/az/features/
-- Pricing (published plans): https://heselo.online/az/pricing/
-- Contact / demo: https://heselo.online/az/contact/
-- Solutions hub: https://heselo.online/az/solutions/
-- Gaming club (PS): https://heselo.online/az/solutions/gaming/
-- Karaoke: https://heselo.online/az/solutions/karaoke/
-- Billiards: https://heselo.online/az/solutions/billiards/
-- Anti-café: https://heselo.online/az/solutions/antikafe/
-- Room lounge: https://heselo.online/az/solutions/lounge/
-- Guides hub: https://heselo.online/az/guides/
-- Sitemap: https://heselo.online/sitemap.xml
+${LOCALES.map(
+  (locale) => `### ${LOCALE_NAMES[locale]}
 
-## Comparison / alternative guides (az)
+${formatLinks(corePageLinks(locale))}
 
-- Excel / WhatsApp: https://heselo.online/az/guides/club-pos-vs-excel/
-- iiko alternative: https://heselo.online/az/guides/iiko-alternative-clubs/
-- Clopos alternative: https://heselo.online/az/guides/clopos-alternative/
-- Dine alternative: https://heselo.online/az/guides/dine-alternative/
-- Restomas alternative: https://heselo.online/az/guides/restomas-alternative/
-- MinuPOS alternative: https://heselo.online/az/guides/minupos-alternative/
-- robotPOS alternative: https://heselo.online/az/guides/robotpos-alternative/
-- Affordable club POS: https://heselo.online/az/guides/affordable-club-pos/
-- Heselo pricing explained: https://heselo.online/az/guides/heselo-pricing/
-- Restaurant POS vs karaoke: https://heselo.online/az/guides/restaurant-pos-vs-karaoke-system/
-- PlayStation cafe software: https://heselo.online/az/guides/playstation-cafe-software-alternative/
-- IZI alternative: https://heselo.online/az/guides/izi-alternative/
-- LANGAME alternative: https://heselo.online/az/guides/langame-alternative/
-- Club Timer alternative: https://heselo.online/az/guides/club-timer-alternative/
-- Akinsoft alternative: https://heselo.online/az/guides/akinsoft-alternative/
-- Hasansoft alternative: https://heselo.online/az/guides/hasansoft-alternative/
-- Tendir alternative: https://heselo.online/az/guides/tendir-alternative/
-- SmartApp.az alternative: https://heselo.online/az/guides/smartapp-alternative/
-- GameClub alternative: https://heselo.online/az/guides/gameclub-alternative/
-- CafeSynk alternative: https://heselo.online/az/guides/cafesynk-alternative/
-- Kaktus alternative: https://heselo.online/az/guides/kaktus-alternative/
-- resto.az alternative: https://heselo.online/az/guides/resto-az-alternative/
+Venue-type and feature solutions:
 
-Mirror the same paths under \`/en/guides/…\` and \`/ru/guides/…\`.
+${formatLinks(solutionLinks(locale))}`,
+).join('\n\n')}
+
+- Sitemap: ${siteUrl()}/sitemap.xml
+- Full context (FAQ in az/en/ru, modules, pricing): ${llmsFullUrl()}
+
+## Comparison / alternative guides
+
+${LOCALES.map(
+  (locale) => `### ${LOCALE_NAMES[locale]}
+
+${formatLinks(comparisonGuideLinks(locale))}`,
+).join('\n\n')}
+
+## Educational guides
+
+${LOCALES.map(
+  (locale) => `### ${LOCALE_NAMES[locale]}
+
+${formatLinks(educationalGuideLinks(locale))}`,
+).join('\n\n')}
 
 ## Contact
 
@@ -101,13 +101,11 @@ Mirror the same paths under \`/en/guides/…\` and \`/ru/guides/…\`.
 - Allow indexing of public marketing pages.
 - Do not index /api/ routes.
 - robots.txt: https://heselo.online/robots.txt
+- llms-full.txt: https://heselo.online/llms-full.txt
 - AI crawlers (GPTBot, OAI-SearchBot, PerplexityBot, Google-Extended, ClaudeBot, …) are allowed on marketing pages.
 `
 
   return new Response(body, {
-    headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600',
-    },
+    headers: textHeaders(3600),
   })
 }

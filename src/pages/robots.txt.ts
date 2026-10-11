@@ -36,6 +36,7 @@ export const GET: APIRoute = () => {
     'Disallow: /ru/404/',
     '',
     ...AI_BOTS.flatMap((agent) => [botBlock(agent).trimEnd(), '']),
+    `# LLM-friendly summaries: ${siteUrl()}/llms.txt and ${siteUrl()}/llms-full.txt`,
     `Sitemap: ${siteUrl()}/sitemap.xml`,
     '',
   ].join('\n')
