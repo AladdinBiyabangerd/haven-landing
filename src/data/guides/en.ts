@@ -5,8 +5,7 @@ import { gapEducationalGuides } from './gapEducationalGuides'
 export const guidesHubEn: GuidesHubCopy = {
   eyebrow: 'Guides',
   h1: 'How club and room operations actually work',
-  intro:
-    'Practical answers to everyday questions about running gaming clubs, billiards halls, karaoke, room lounges, and anti-cafés. The goal is not to praise a product, but to show clearly which tool fits which part of the job.',
+  intro: 'Start with a core topic. Other comparisons and alternatives are listed below.',
   seoTitle: 'Guides — club operations, choosing software, and POS alternatives | Heselo',
   seoDescription:
     'Running gaming clubs, karaoke, billiards, lounges, and anti-cafés: bookings, live sessions, and cash — plus practical guides on iiko, Clopos, Dine, and Excel alternatives.',
@@ -22,9 +21,8 @@ export const guidesHubEn: GuidesHubCopy = {
     'dine alternative',
   ],
   cardCta: 'Read',
-  comparisonTitle: 'Alternatives and comparisons',
-  comparisonIntro:
-    'Comparing iiko, Clopos, Dine, MinuPOS, or other systems for a club or room-time venue? These guides cover features, daily workflow, and what to look for when choosing.',
+  featuredTitle: 'Start here',
+  moreTitle: 'All guides',
 }
 
 export const guidesEn: GuideCopy[] = [

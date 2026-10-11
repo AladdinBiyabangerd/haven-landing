@@ -5,8 +5,7 @@ import { gapEducationalGuides } from './gapEducationalGuides'
 export const guidesHubAz: GuidesHubCopy = {
   eyebrow: 'Bələdçilər',
   h1: 'Klub və otaq işi necə qurulur?',
-  intro:
-    'Burada oyun klubu, bilyard, karaoke, launj və antikafe idarəetməsi ilə bağlı praktik suallara cavab veririk. Məqsəd məhsulu tərifləmək yox, hansı prosesə hansı alətin uyğun olduğunu aydın göstərməkdir.',
+  intro: 'Əvvəl əsas mövzunu seçin. Digər müqayisə və alternativlər aşağıda siyahıdadır.',
   seoTitle: 'Bələdçilər — klub idarəetməsi, proqram seçimi və POS alternativləri | Heselo',
   seoDescription:
     'Oyun klubu, karaoke, bilyard, launj və antikafe idarəetməsi; rezervasiya, canlı sessiya, kassa; iiko, Clopos, Dine və Excel alternativləri — praktik bələdçilər.',
@@ -22,9 +21,8 @@ export const guidesHubAz: GuidesHubCopy = {
     'dine alternativ',
   ],
   cardCta: 'Oxu',
-  comparisonTitle: 'Alternativlər və müqayisələr',
-  comparisonIntro:
-    'iiko, Clopos, Dine, MinuPOS və digər sistemləri klub/otaq-vaxt üçün müqayisə edirsinizsə — funksiyalar, iş prosesi və seçim meyarları üzrə ayrıca bələdçilər burada.',
+  featuredTitle: 'Haradan başlayaq',
+  moreTitle: 'Bütün bələdçilər',
 }
 
 export const guidesAz: GuideCopy[] = [

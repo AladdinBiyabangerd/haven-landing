@@ -94,7 +94,8 @@ export type GuidesHubCopy = {
   seoDescription: string
   keywords: string[]
   cardCta: string
-  /** Optional heading for comparison / alternative guides on the hub */
-  comparisonTitle?: string
-  comparisonIntro?: string
+  /** Primary card grid on the hub (start-here set). */
+  featuredTitle: string
+  /** Expandable list of remaining guides (crawlable links, less visual noise). */
+  moreTitle: string
 }

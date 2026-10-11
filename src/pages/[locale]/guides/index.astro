@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import Cta from '@/components/Cta.astro'
 import { resolveLocale } from '@/i18n/config'
 import { loadPricedMessages } from '@/i18n'
-import { getComparisonGuides, getEducationalGuides, getGuidesHub } from '@/data/guides'
+import { getGuide, getGuides, getGuidesHub, TEASER_GUIDE_SLUGS } from '@/data/guides'
 import LinkCard from '@/components/LinkCard.astro'
 import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { localePath } from '@/lib/site'
@@ -18,8 +18,17 @@ const locale = resolveLocale(Astro.params.locale)
 const messages = await loadPricedMessages(locale)
 await loadVenueOffers()
 const hub = applyCatalogPricesDeep(getGuidesHub(locale))
-const educational = applyCatalogPricesDeep(getEducationalGuides(locale))
-const comparisons = applyCatalogPricesDeep(getComparisonGuides(locale))
+const cardCta = `${hub.cardCta}${messages.common.linkArrow}`
+
+const featured = applyCatalogPricesDeep(
+  TEASER_GUIDE_SLUGS.map((slug) => getGuide(locale, slug)).filter(
+    (item): item is NonNullable<typeof item> => Boolean(item),
+  ),
+)
+const featuredSlugs = new Set<string>(TEASER_GUIDE_SLUGS)
+const more = applyCatalogPricesDeep(
+  getGuides(locale).filter((item) => !featuredSlugs.has(item.slug)),
+)
 ---
 
 <BaseLayout
@@ -34,22 +43,25 @@ const comparisons = applyCatalogPricesDeep(getComparisonGuides(locale))
     breadcrumbName: messages.nav.guides,
   }}
 >
-  <section class="section">
+  <section class="section guides-hub">
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">{hub.eyebrow}</p>
         <h1 class="type-page-title">{hub.h1}</h1>
         <p class="lead">{hub.intro}</p>
       </header>
+
+      <h2 class="group-title">{hub.featuredTitle}</h2>
       <ul class="card-grid">
         {
-          educational.map((item) => (
+          featured.map((item) => (
             <li>
               <LinkCard
-                as="h2"
+                as="h3"
                 href={localePath(locale, `/guides/${item.slug}`)}
-                title={item.h1}
-                desc={truncateText(item.intro, 160, messages.common.truncatedEllipsis)}
+                title={item.shortTitle}
+                desc={truncateText(item.intro, 90, messages.common.truncatedEllipsis)}
+                cta={cardCta}
               />
             </li>
           ))
@@ -57,27 +69,20 @@ const comparisons = applyCatalogPricesDeep(getComparisonGuides(locale))
       </ul>
 
       {
-        hub.comparisonTitle && comparisons.length > 0 ? (
-          <header class="section-head comparison-head">
-            <h2 class="type-section">{hub.comparisonTitle}</h2>
-            {hub.comparisonIntro ? <p class="lead">{hub.comparisonIntro}</p> : null}
-          </header>
-        ) : null
-      }
-      {
-        comparisons.length > 0 ? (
-          <ul class="card-grid">
-            {comparisons.map((item) => (
-              <li>
-                <LinkCard
-                  as="h3"
-                  href={localePath(locale, `/guides/${item.slug}`)}
-                  title={item.shortTitle}
-                  desc={truncateText(item.intro, 140, messages.common.truncatedEllipsis)}
-                />
-              </li>
-            ))}
-          </ul>
+        more.length > 0 ? (
+          <details class="more">
+            <summary>
+              {hub.moreTitle}
+              <span class="more__count">({more.length})</span>
+            </summary>
+            <ul class="more__list">
+              {more.map((item) => (
+                <li>
+                  <a href={localePath(locale, `/guides/${item.slug}`)}>{item.shortTitle}</a>
+                </li>
+              ))}
+            </ul>
+          </details>
         ) : null
       }
 
@@ -92,10 +97,76 @@ const comparisons = applyCatalogPricesDeep(getComparisonGuides(locale))
 </BaseLayout>
 
 <style>
+  .group-title {
+    margin: 0 0 0.85rem;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--ink-subtle);
+  }
+  .more {
+    margin-top: 1.75rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+  }
+  .more summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .more summary::-webkit-details-marker {
+    display: none;
+  }
+  .more summary::before {
+    content: '+';
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .more[open] summary::before {
+    content: '−';
+  }
+  .more__count {
+    color: var(--ink-subtle);
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+  .more__list {
+    list-style: none;
+    margin: 0.85rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.15rem 1.25rem;
+    columns: 1;
+  }
+  .more__list a {
+    display: block;
+    padding: 0.35rem 0;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+  .more__list a:hover {
+    color: var(--accent-deep);
+  }
   .solutions-link {
     margin: 1.25rem 0 0;
   }
-  .comparison-head {
-    margin-top: 2.75rem;
+  @media (min-width: 640px) {
+    .more__list {
+      columns: 2;
+    }
+  }
+  @media (max-width: 759px) {
+    .guides-hub .section-head :global(.type-page-title) {
+      font-size: var(--text-2xl);
+    }
+    .guides-hub .section-head .lead {
+      font-size: var(--text-md);
+    }
   }
 </style>
