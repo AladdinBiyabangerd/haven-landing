@@ -105,6 +105,19 @@ export type Messages = {
     title: string
     items: FaqItem[]
   }
+  /** Dedicated /faq/ page: groups reuse faq / pricing.faq / aboutPage.faq / contact.faq. */
+  faqPage: {
+    navLabel: string
+    eyebrow: string
+    title: string
+    intro: string
+    groups: {
+      general: string
+      pricing: string
+      about: string
+      demo: string
+    }
+  }
   journey: {
     navLabel: string
     insidePanel: JourneyDoorCopy
@@ -389,7 +402,6 @@ export type Messages = {
     ogImageAlt: string
     geoPlacename: string
     countryName: string
-    softwareOperatingSystem: string
     knowsAbout: string[]
     softwareFeatures: string[]
     /** AggregateOffer.description — {low} = lowest published monthly AZN */
@@ -400,6 +412,7 @@ export type Messages = {
       | 'pricing'
       | 'contact'
       | 'about'
+      | 'faq'
       | 'privacy'
       | 'terms'
       | 'solutions'

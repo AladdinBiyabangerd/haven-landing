@@ -6,16 +6,18 @@ import { localePath } from '@/lib/site'
 interface Props {
   messages: Messages
   locale: Locale
+  /** Section anchor id; override when several FAQ blocks share one page. */
+  id?: string
 }
-const { messages, locale } = Astro.props
+const { messages, locale, id = 'faq' } = Astro.props
 const f = messages.faq
 ---
 
-<section class="section" id="faq">
+<section class="section" id={id}>
   <div class="container">
     <div class="narrow">
       <div class="section-head">
-        <p class="eyebrow">{f.eyebrow}</p>
+        {f.eyebrow ? <p class="eyebrow">{f.eyebrow}</p> : null}
         <h2 class="type-section">{f.title}</h2>
       </div>
       <div class="list">

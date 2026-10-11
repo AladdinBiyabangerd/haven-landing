@@ -306,6 +306,19 @@ export const ru: Messages = {
       },
     ],
   },
+  faqPage: {
+    navLabel: 'Частые вопросы',
+    eyebrow: 'Вопросы',
+    title: 'Частые вопросы',
+    intro:
+      'Короткие ответы о Heselo: продукт, цены, основатель и как получить демо.',
+    groups: {
+      general: 'О Heselo',
+      pricing: 'Цены и тарифы',
+      about: 'Основатель и продукт',
+      demo: 'Демо и контакты',
+    },
+  },
   journey: {
     navLabel: 'Следующий шаг',
     insidePanel: {
@@ -914,7 +927,6 @@ export const ru: Messages = {
     ogImageAlt: 'Heselo — управление заведением: бронь, живой зал и касса',
     geoPlacename: 'Азербайджан',
     countryName: 'Азербайджан',
-    softwareOperatingSystem: 'Веб-браузер',
     knowsAbout: [
       'программа управления заведением',
       'управление игровым клубом',
@@ -936,6 +948,12 @@ export const ru: Messages = {
     aggregateOfferDescription:
       'Открытые месячные тарифы по типу заведения от {low} AZN. Полная таблица на странице /pricing. Индивидуальный расчёт только для нескольких филиалов или объёма вне стандартных планов.',
     pages: {
+      faq: {
+        title: 'Частые вопросы (FAQ) | Heselo',
+        description:
+          'Ответы о Heselo: для кого сервис, цены от {low} AZN/мес, бронирование, касса, склад, основатель и как получить бесплатное демо.',
+        keywords: ['Heselo вопросы', 'Heselo FAQ', 'Heselo цены', 'программа для игрового клуба вопросы', 'система управления клубом'],
+      },
       home: {
         title: 'Heselo — клубная панель | альтернатива iiko/Clopos',
         description:

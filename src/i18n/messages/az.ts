@@ -306,6 +306,19 @@ export const az: Messages = {
       },
     ],
   },
+  faqPage: {
+    navLabel: 'Tez-tez verilən suallar',
+    eyebrow: 'Suallar',
+    title: 'Tez-tez verilən suallar',
+    intro:
+      'Heselo haqqında ən çox verilən suallara qısa cavablar: məhsul, qiymət, təsisçi və demo.',
+    groups: {
+      general: 'Heselo haqqında',
+      pricing: 'Qiymət və planlar',
+      about: 'Təsisçi və məhsul',
+      demo: 'Demo və əlaqə',
+    },
+  },
   journey: {
     navLabel: 'Növbəti addım',
     insidePanel: {
@@ -914,7 +927,6 @@ export const az: Messages = {
     ogImageAlt: 'Heselo — məkan idarəetmə sistemi: rezervasiya, canlı zal və kassa',
     geoPlacename: 'Azərbaycan',
     countryName: 'Azərbaycan',
-    softwareOperatingSystem: 'Veb brauzer',
     knowsAbout: [
       'məkan idarəetmə proqramı',
       'oyun klubu idarəetmə sistemi',
@@ -936,6 +948,12 @@ export const az: Messages = {
     aggregateOfferDescription:
         'Açıq aylıq abunə planları məkan tipinə görə {low} AZN-dən. Tam cədvəl /pricing səhifəsində. Fərdi təklif yalnız bir neçə filial və ya standart plana sığmayan həcm üçündür.',
     pages: {
+      faq: {
+        title: 'Tez-tez verilən suallar | Heselo',
+        description:
+          'Heselo haqqında cavablar: kimlər üçündür, qiymət {low} AZN-dən, rezervasiya, kassa, anbar, təsisçi və pulsuz demo necə alınır.',
+        keywords: ['Heselo FAQ', 'Heselo suallar', 'Heselo qiymət', 'oyun klubu proqramı suallar', 'klub idarəetmə sistemi'],
+      },
       home: {
         title: 'Heselo — klub və otaq paneli | iiko/Clopos əvəzinə',
         description:

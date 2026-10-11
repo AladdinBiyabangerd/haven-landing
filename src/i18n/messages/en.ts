@@ -306,6 +306,19 @@ export const en: Messages = {
       },
     ],
   },
+  faqPage: {
+    navLabel: 'FAQ',
+    eyebrow: 'Questions',
+    title: 'Frequently asked questions',
+    intro:
+      'Short answers about Heselo: product, pricing, the founder, and how to get a demo.',
+    groups: {
+      general: 'About Heselo',
+      pricing: 'Pricing and plans',
+      about: 'Founder and product',
+      demo: 'Demo and contact',
+    },
+  },
   journey: {
     navLabel: 'Next step',
     insidePanel: {
@@ -914,7 +927,6 @@ export const en: Messages = {
     ogImageAlt: 'Heselo — venue management: reservations, live floor, and cash',
     geoPlacename: 'Azerbaijan',
     countryName: 'Azerbaijan',
-    softwareOperatingSystem: 'Web browser',
     knowsAbout: [
       'venue management software',
       'gaming club management',
@@ -936,6 +948,12 @@ export const en: Messages = {
     aggregateOfferDescription:
       'Published monthly subscription plans by venue type from {low} AZN. Full table on the /pricing page. Custom quotes only for multi-venue or out-of-plan volume.',
     pages: {
+      faq: {
+        title: 'FAQ — Heselo pricing, features, demo | Heselo',
+        description:
+          'Answers about Heselo: who it is for, pricing from {low} AZN/month, reservations, cash, inventory, the founder, and how to get a free demo.',
+        keywords: ['Heselo FAQ', 'Heselo questions', 'Heselo pricing', 'gaming club software FAQ', 'venue management system FAQ'],
+      },
       home: {
         title: 'Heselo — club & room panel | alternative to iiko/Clopos',
         description:

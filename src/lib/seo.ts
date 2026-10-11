@@ -2,6 +2,7 @@ import type { Locale } from '@/i18n/config'
 import { HTML_LANG, LOCALES, OG_LOCALES } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { fillTemplate } from '@/lib/format'
+import { getAllFaqItems } from '@/lib/faqPage'
 import { applyCatalogPricesDeep, withCatalogPrices } from '@/lib/catalogCopy'
 import { allVenuePlans, getActiveOffers, monthlyFeeRange } from '@/lib/venueOffers'
 import {
@@ -74,6 +75,7 @@ export type PageKey =
   | 'pricing'
   | 'contact'
   | 'about'
+  | 'faq'
   | 'privacy'
   | 'terms'
   | 'notFound'
@@ -88,6 +90,7 @@ const PAGE_SLUGS: Record<Exclude<PageKey, 'solution' | 'guide'>, string> = {
   pricing: '/pricing',
   contact: '/contact',
   about: '/about',
+  faq: '/faq',
   privacy: '/privacy',
   terms: '/terms',
   notFound: '/404',
@@ -147,7 +150,7 @@ export function buildJsonLdGraph(
     '@id': `${siteUrl()}/#software`,
     name: SITE.name,
     applicationCategory: 'BusinessApplication',
-    operatingSystem: messages.seo.softwareOperatingSystem,
+    operatingSystem: 'Web',
     description: messages.site.description,
     featureList: messages.seo.softwareFeatures.join(', '),
     inLanguage: LOCALES.map((l) => HTML_LANG[l]),
@@ -441,7 +444,9 @@ export function seoFromMessages(
         ? messages.aboutPage.faq
         : key === 'contact'
           ? messages.contact.faq
-          : undefined
+          : key === 'faq'
+            ? getAllFaqItems(messages)
+            : undefined
 
   return {
     title: page.title,
@@ -460,9 +465,11 @@ export function seoFromMessages(
               ? messages.nav.contact
               : key === 'about'
                 ? messages.footer.about
-                : key === 'privacy'
-                  ? messages.footer.privacy
-                  : messages.footer.terms,
+                : key === 'faq'
+                  ? messages.faqPage.navLabel
+                  : key === 'privacy'
+                    ? messages.footer.privacy
+                    : messages.footer.terms,
   }
 }
 
