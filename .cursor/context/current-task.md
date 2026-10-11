@@ -1,17 +1,19 @@
-# Current task — Guides hub clarity
+# Current task — Pricing page clarity
 
-## Principle (do not forget)
+## Principle
 
-Clear path + low bounce: visible structure first; deep SEO content on dedicated URLs / expandable lists — not a wall of identical cards.
+Clear path + low bounce; deep detail on demand (details / /faq). Do not dump every calculator + FAQ on first paint.
 
-## Completed
+## Completed — `/az/pricing/`
 
-### Guides hub `/az/guides/`
-- ~40 similar cards → **8 featured** (`TEASER_GUIDE_SLUGS`) + expandable “all guides” link list (crawlable)
-- shortTitle + 90-char blurb + CTA
-- short hub intro (az/en/ru)
-- SEO meta unchanged; individual `/guides/{slug}` untouched
+1. Shorter intro + summary copy (az/en/ru)
+2. Session calculator collapsed behind `<details>` (`revealLabel`)
+3. Pricing FAQ limited to 4 + link to `/faq`
+4. Mobile page title size tightened
+5. Plan cards: horizontal scroll-snap carousel (‹ › + swipe + dots), peek next card
+6. Feature list truncated (5) + “Daha çox / Read more / Ещё”
+
+Kept: PricingSummary from-prices, venue tabs, JSON-LD faq on page (seo still gets `page.faq`).
 
 ## Remaining
-1. Optional: individual guide pages length
-2. Commit when user asks
+1. Commit when user asks

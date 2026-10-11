@@ -281,10 +281,18 @@ export type Messages = {
       plus: string
       pro: string
     }
+    /** Carousel controls for switching plan cards. */
+    planPrev: string
+    planNext: string
+    /** Expand / collapse truncated plan feature list. */
+    planFeaturesMore: string
+    planFeaturesLess: string
     calculator: {
       eyebrow: string
       title: string
       description: string
+      /** Summary label when the calculator is collapsed behind <details>. */
+      revealLabel: string
       reservationCount: string
       billingPeriod: string
       monthly: string

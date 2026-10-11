@@ -6,6 +6,7 @@ import PricingOffers from '@/components/PricingOffers.astro'
 import PricingSummary from '@/components/PricingSummary.astro'
 import { resolveLocale } from '@/i18n/config'
 import { loadPricedMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -38,7 +39,7 @@ const faqMessages = {
     faq: page.faq,
   }}
 >
-  <section class="section">
+  <section class="section pricing-page">
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">{page.eyebrow}</p>
@@ -49,6 +50,22 @@ const faqMessages = {
       <PricingOffers locale={locale} messages={messages} />
     </div>
   </section>
-  <Faq locale={locale} messages={faqMessages} />
+  <Faq
+    locale={locale}
+    messages={faqMessages}
+    limit={4}
+    moreHref={localePath(locale, '/faq')}
+  />
   <Cta locale={locale} messages={messages} intent="demo" />
 </BaseLayout>
+
+<style>
+  @media (max-width: 759px) {
+    .pricing-page .section-head :global(.type-page-title) {
+      font-size: var(--text-2xl);
+    }
+    .pricing-page .section-head .lead {
+      font-size: var(--text-md);
+    }
+  }
+</style>

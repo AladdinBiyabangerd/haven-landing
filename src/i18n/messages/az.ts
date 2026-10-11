@@ -476,13 +476,11 @@ export const az: Messages = {
   pricing: {
     eyebrow: 'Qiymətlər',
     title: 'Açıq tariflər — məkan tipinə görə',
-    intro:
-        'Heselonun abunə planları açıqdır. Oyun klubu, bilyard, karaoke, launj və antikafe üçün fərqli başlanğıc qiymətlər var — sahibkarın məkanına uyğun olsun deyə. Tam cədvəl bu səhifədədir. Bir neçə filial və ya standart plana sığmayan həcm üçün əlavə olaraq fərdi təklif mümkündür.',
+    intro: 'Tipinizi seçin — Kiçik plandan başlayan açıq qiymət. Orta, Böyük və illik (2 ay hədiyyə) tipdən sonra açılır.',
     summaryEyebrow: 'Açıq qiymət',
-    summaryTitle: 'Kateqoriya üzrə başlanğıc tariflər',
-    summaryLead:
-        'Hər məkan tipi üçün Kiçik planın aylıq haqqı aşağıdadır. Orta və Böyük planlar, illik ödəniş (2 ay hədiyyə) və hesab üzrə açılmış sessiya limitləri — tip seçəndən sonra açılır.',
-    summaryHint: 'Kiçik · Orta · Böyük və illik (2 ay hədiyyə) — aşağıdakı cədvəldə.',
+    summaryTitle: 'Kateqoriya üzrə başlanğıc',
+    summaryLead: 'Hər tip üçün Kiçik planın aylıq haqqı. Tam planlar tip seçəndə açılır.',
+    summaryHint: 'Kart tələb olunmur · demo pulsuzdur',
     summaryCustom: 'Fərdi təklif: bir neçə filial və ya limitdən kənar həcm —',
     summaryCustomLink: 'əlaqə formasından yazın',
     fromMonthly: '{price}-dən / ay',
@@ -513,11 +511,15 @@ export const az: Messages = {
       plus: 'Orta',
       pro: 'Böyük',
     },
+    planPrev: 'Əvvəlki plan',
+    planNext: 'Növbəti plan',
+    planFeaturesMore: 'Daha çox',
+    planFeaturesLess: 'Daha az',
     calculator: {
       eyebrow: 'Müqayisə',
       title: 'Açılmış sessiya sayına görə xərci hesablayın',
-      description:
-          'Açılmış sessiya sayını (hesab üzrə) və ödəniş dövrünü seçin. Cədvəl baza haqqını, limitdən artıq istifadəni və ümumi məbləği göstərir.',
+      description: 'Sessiya sayı və ödəniş dövrünü seçin — baza, limitdən artıq və cəmi.',
+      revealLabel: 'Sessiya kalkulyatorunu aç',
       reservationCount: 'Açılmış sessiya sayı',
       billingPeriod: 'Ödəniş dövrü',
       monthly: 'Aylıq',

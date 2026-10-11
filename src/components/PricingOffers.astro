@@ -39,6 +39,9 @@ const calculatorData = Object.fromEntries(
 function planFeatures(features: string[], upTo: number): string[] {
   return features.map((item) => fillTemplate(item, { n: upTo }))
 }
+
+/** How many feature bullets show before “read more”. */
+const PLAN_FEATURE_PREVIEW = 5
 ---
 
 <div class="pricing-offers" data-pricing-offers data-track-placement="pricing" data-storage-key={VENUE_STORAGE_KEY}>
@@ -67,6 +70,10 @@ function planFeatures(features: string[], upTo: number): string[] {
     offers.map((offer, index) => {
       const copy = page.offers[offer.slug]
       const crossovers = crossoverPoints(offer.slug, offers)
+      const defaultPlanIndex = Math.max(
+        0,
+        offer.plans.findIndex((plan) => plan.id === 'plus'),
+      )
       return (
         /* The first type is open on load — an empty pricing page helps nobody. */
         <section
@@ -78,163 +85,198 @@ function planFeatures(features: string[], upTo: number): string[] {
           hidden={index !== 0}
         >
           <p class="panel__intro">{copy.intro}</p>
-          <div class="plans">
-            {offer.plans.map((plan) => {
-              const planCopy = resolvePlanMarketing(plan, locale, copy.plans[plan.id])
-              return (
-                <article class:list={['card', { featured: plan.id === 'plus' }]}>
-                  <header>
-                    <h3 class="type-card-title">{page.planNames[plan.id]}</h3>
-                    {plan.id === 'plus' ? <span class="badge">{page.popular}</span> : null}
-                  </header>
-                  <p class="price">
-                    <span data-plan-price>{formatMoney(plan.monthlyFee, locale)}</span>
-                    <span data-plan-period>{page.periodMonthly}</span>
-                  </p>
-                  <p
-                    class="price-alternative"
-                    data-plan-alternative
-                    data-monthly={fillTemplate(page.monthlyAlternative, {
-                      price: formatMoney(plan.monthlyFee, locale),
-                    })}
-                    data-annual={fillTemplate(page.annualAlternative, {
-                      price: formatMoney(plan.annualFee, locale),
-                    })}
-                  >
-                    {fillTemplate(page.annualAlternative, {
-                      price: formatMoney(plan.annualFee, locale),
-                    })}
-                  </p>
-                  <p class="for-whom">{planCopy.forWhom}</p>
-                  <ul>
-                    {planFeatures(planCopy.features, plan.upTo).map((item) => (
-                      <li>{item}</li>
-                    ))}
-                    <li>
-                      {fillTemplate(page.includedReservations, {
-                        n: plan.includedReservations,
-                      })}
-                    </li>
-                    <li>
-                      {fillTemplate(page.overage, {
-                        price: formatMoney(plan.overagePerReservation, locale),
-                      })}
-                    </li>
-                    <li>
-                      {fillTemplate(page.oneVenue, {
-                        n: plan.includedVenues,
-                      })}
-                    </li>
-                    <li>
-                      {fillTemplate(page.staffPerVenue, {
-                        n: plan.maxStaffPerVenue,
-                      })}
-                    </li>
-                    <li>
-                      {fillTemplate(page.dataRetentionMonths, {
-                        n: plan.dataRetentionMonths,
-                      })}
-                    </li>
-                  </ul>
-                  <a
-                    class:list={['btn', plan.id === 'plus' ? 'btn-primary' : 'btn-ghost']}
-                    href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}&period=monthly`}
-                    data-contact-link
-                    data-plan={plan.id}
-                    data-contact-base={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}`}
-                  >
-                    {page.cta}
-                  </a>
-                </article>
-              )
-            })}
-          </div>
-          <section
-            class="calculator"
-            id={`calculator-${offer.slug}`}
-            data-calculator
-            data-offer={offer.slug}
-            data-period-monthly={page.periodMonthly}
-            data-period-annual={page.periodAnnual}
+          <div
+            class="plans-carousel"
+            data-plans-carousel
+            data-plan-index={defaultPlanIndex}
           >
-            <div class="calculator__head">
-              <div>
-                <p class="eyebrow">{page.calculator.eyebrow}</p>
-                <h3 class="type-card-title">{page.calculator.title}</h3>
-                <p>{page.calculator.description}</p>
-              </div>
-              <div class="calculator__controls">
-                <label>
-                  <span>{page.calculator.reservationCount}</span>
-                  <input
-                    type="number"
-                    min="0"
-                    max="100000000"
-                    step="1"
-                    value="400"
-                    inputmode="numeric"
-                    data-reservation-count
-                  />
-                </label>
-                <fieldset>
-                  <legend>{page.calculator.billingPeriod}</legend>
-                  <div class="period-toggle">
-                    <label>
-                      <input type="radio" name={`period-${offer.slug}`} value="monthly" checked />
-                      <span>{page.calculator.monthly}</span>
-                    </label>
-                    <label>
-                      <input type="radio" name={`period-${offer.slug}`} value="annual" />
-                      <span>{page.calculator.annual}</span>
-                    </label>
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">{page.calculator.plan}</th>
-                    <th scope="col">{page.calculator.baseFee}</th>
-                    <th scope="col">{page.calculator.overageCost}</th>
-                    <th scope="col">{page.calculator.total}</th>
-                  </tr>
-                </thead>
-                <tbody aria-live="polite">
-                  {offer.plans.map((plan) => (
-                    <tr data-calculator-row={plan.id}>
-                      <th scope="row">
-                        {page.planNames[plan.id]}
-                        <span class="cheapest" data-cheapest hidden>{page.calculator.cheapest}</span>
-                      </th>
-                      <td data-base-fee>{formatMoney(plan.monthlyFee, locale)}</td>
-                      <td data-overage-cost>{formatMoney(0, locale)}</td>
-                      <td data-total>{formatMoney(plan.monthlyFee, locale)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div class="crossover">
-              <h4>{page.calculator.crossoverTitle}</h4>
-              {crossovers.length > 0 ? (
-                <ul>
-                  {crossovers.map((point) => (
-                    <li>
-                      {fillTemplate(page.calculator.crossoverHint, {
-                        from: page.planNames[point.fromPlanId],
-                        to: page.planNames[point.toPlanId],
-                        n: point.atCount,
+            <button type="button" class="plans-nav plans-nav--prev" data-plan-prev aria-label={page.planPrev}>
+              <span aria-hidden="true">‹</span>
+            </button>
+            <div class="plans" data-plans-track>
+              {offer.plans.map((plan) => {
+                const planCopy = resolvePlanMarketing(plan, locale, copy.plans[plan.id])
+                const featured = plan.id === 'plus'
+                const featureItems = [
+                  ...planFeatures(planCopy.features, plan.upTo),
+                  fillTemplate(page.includedReservations, {
+                    n: plan.includedReservations,
+                  }),
+                  fillTemplate(page.overage, {
+                    price: formatMoney(plan.overagePerReservation, locale),
+                  }),
+                  fillTemplate(page.oneVenue, {
+                    n: plan.includedVenues,
+                  }),
+                  fillTemplate(page.staffPerVenue, {
+                    n: plan.maxStaffPerVenue,
+                  }),
+                  fillTemplate(page.dataRetentionMonths, {
+                    n: plan.dataRetentionMonths,
+                  }),
+                ]
+                const hasMoreFeatures = featureItems.length > PLAN_FEATURE_PREVIEW
+                return (
+                  <article class:list={['card', { featured }]} data-plan-card>
+                    <header>
+                      <h3 class="type-card-title">{page.planNames[plan.id]}</h3>
+                      {featured ? <span class="badge">{page.popular}</span> : null}
+                    </header>
+                    <p class="price">
+                      <span data-plan-price>{formatMoney(plan.monthlyFee, locale)}</span>
+                      <span data-plan-period>{page.periodMonthly}</span>
+                    </p>
+                    <p
+                      class="price-alternative"
+                      data-plan-alternative
+                      data-monthly={fillTemplate(page.monthlyAlternative, {
+                        price: formatMoney(plan.monthlyFee, locale),
                       })}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p>{page.calculator.noCrossover}</p>
-              )}
+                      data-annual={fillTemplate(page.annualAlternative, {
+                        price: formatMoney(plan.annualFee, locale),
+                      })}
+                    >
+                      {fillTemplate(page.annualAlternative, {
+                        price: formatMoney(plan.annualFee, locale),
+                      })}
+                    </p>
+                    <p class="for-whom">{planCopy.forWhom}</p>
+                    <ul>
+                      {featureItems.map((item, featureIndex) => (
+                        <li data-feature-extra={featureIndex >= PLAN_FEATURE_PREVIEW ? '' : undefined}>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {hasMoreFeatures ? (
+                      <button
+                        type="button"
+                        class="features-more"
+                        data-features-toggle
+                        data-more={page.planFeaturesMore}
+                        data-less={page.planFeaturesLess}
+                        aria-expanded="false"
+                      >
+                        {page.planFeaturesMore}
+                      </button>
+                    ) : null}
+                    <a
+                      class:list={['btn', featured ? 'btn-primary' : 'btn-ghost']}
+                      href={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}&period=monthly`}
+                      data-contact-link
+                      data-plan={plan.id}
+                      data-contact-base={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}`}
+                    >
+                      {page.cta}
+                    </a>
+                  </article>
+                )
+              })}
             </div>
-          </section>
+            <button type="button" class="plans-nav plans-nav--next" data-plan-next aria-label={page.planNext}>
+              <span aria-hidden="true">›</span>
+            </button>
+            <div class="plans-dots" role="tablist">
+              {offer.plans.map((plan, planIndex) => (
+                <button
+                  type="button"
+                  role="tab"
+                  data-plan-dot={planIndex}
+                  aria-label={page.planNames[plan.id]}
+                  aria-selected={planIndex === defaultPlanIndex ? 'true' : 'false'}
+                />
+              ))}
+            </div>
+          </div>
+          <details class="calculator-details">
+            <summary>{page.calculator.revealLabel}</summary>
+            <section
+              class="calculator"
+              id={`calculator-${offer.slug}`}
+              data-calculator
+              data-offer={offer.slug}
+              data-period-monthly={page.periodMonthly}
+              data-period-annual={page.periodAnnual}
+            >
+              <div class="calculator__head">
+                <div>
+                  <p class="eyebrow">{page.calculator.eyebrow}</p>
+                  <h3 class="type-card-title">{page.calculator.title}</h3>
+                  <p>{page.calculator.description}</p>
+                </div>
+                <div class="calculator__controls">
+                  <label>
+                    <span>{page.calculator.reservationCount}</span>
+                    <input
+                      type="number"
+                      min="0"
+                      max="100000000"
+                      step="1"
+                      value="400"
+                      inputmode="numeric"
+                      data-reservation-count
+                    />
+                  </label>
+                  <fieldset>
+                    <legend>{page.calculator.billingPeriod}</legend>
+                    <div class="period-toggle">
+                      <label>
+                        <input type="radio" name={`period-${offer.slug}`} value="monthly" checked />
+                        <span>{page.calculator.monthly}</span>
+                      </label>
+                      <label>
+                        <input type="radio" name={`period-${offer.slug}`} value="annual" />
+                        <span>{page.calculator.annual}</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">{page.calculator.plan}</th>
+                      <th scope="col">{page.calculator.baseFee}</th>
+                      <th scope="col">{page.calculator.overageCost}</th>
+                      <th scope="col">{page.calculator.total}</th>
+                    </tr>
+                  </thead>
+                  <tbody aria-live="polite">
+                    {offer.plans.map((plan) => (
+                      <tr data-calculator-row={plan.id}>
+                        <th scope="row">
+                          {page.planNames[plan.id]}
+                          <span class="cheapest" data-cheapest hidden>{page.calculator.cheapest}</span>
+                        </th>
+                        <td data-base-fee>{formatMoney(plan.monthlyFee, locale)}</td>
+                        <td data-overage-cost>{formatMoney(0, locale)}</td>
+                        <td data-total>{formatMoney(plan.monthlyFee, locale)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div class="crossover">
+                <h4>{page.calculator.crossoverTitle}</h4>
+                {crossovers.length > 0 ? (
+                  <ul>
+                    {crossovers.map((point) => (
+                      <li>
+                        {fillTemplate(page.calculator.crossoverHint, {
+                          from: page.planNames[point.fromPlanId],
+                          to: page.planNames[point.toPlanId],
+                          n: point.atCount,
+                        })}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{page.calculator.noCrossover}</p>
+                )}
+              </div>
+            </section>
+          </details>
           <div class="custom">
             <div>
               <h3 class="type-card-title">{page.custom.name}</h3>
@@ -316,6 +358,103 @@ function planFeatures(features: string[], upTo: number): string[] {
     window.addEventListener('hashchange', () => {
       const slug = location.hash.replace(/^#/, '')
       if (valid.has(slug)) selectType(slug, false)
+    })
+
+    root.querySelectorAll('[data-plans-carousel]').forEach((carousel) => {
+      if (!(carousel instanceof HTMLElement)) return
+      const track = carousel.querySelector('[data-plans-track]')
+      const cards = [...carousel.querySelectorAll('[data-plan-card]')]
+      const dots = [...carousel.querySelectorAll('[data-plan-dot]')]
+      const prev = carousel.querySelector('[data-plan-prev]')
+      const next = carousel.querySelector('[data-plan-next]')
+      if (!(track instanceof HTMLElement) || cards.length === 0) return
+
+      let index = Number(carousel.dataset.planIndex)
+      if (!Number.isFinite(index) || index < 0 || index >= cards.length) index = 0
+      let scrolling = false
+
+      function syncDots(active) {
+        index = active
+        carousel.dataset.planIndex = String(active)
+        dots.forEach((dot, i) => {
+          dot.setAttribute('aria-selected', i === active ? 'true' : 'false')
+        })
+      }
+
+      function scrollToIndex(nextIndex, behavior) {
+        const target = ((nextIndex % cards.length) + cards.length) % cards.length
+        const card = cards[target]
+        if (!(card instanceof HTMLElement)) return
+        scrolling = true
+        syncDots(target)
+        const left =
+          card.offsetLeft - (track.clientWidth - card.clientWidth) / 2
+        track.scrollTo({ left: Math.max(0, left), behavior: behavior || 'smooth' })
+        window.setTimeout(() => {
+          scrolling = false
+        }, 400)
+      }
+
+      function nearestIndex() {
+        const mid = track.scrollLeft + track.clientWidth / 2
+        let best = 0
+        let bestDist = Number.POSITIVE_INFINITY
+        cards.forEach((card, i) => {
+          if (!(card instanceof HTMLElement)) return
+          const center = card.offsetLeft + card.clientWidth / 2
+          const dist = Math.abs(center - mid)
+          if (dist < bestDist) {
+            bestDist = dist
+            best = i
+          }
+        })
+        return best
+      }
+
+      prev?.addEventListener('click', () => scrollToIndex(index - 1, 'smooth'))
+      next?.addEventListener('click', () => scrollToIndex(index + 1, 'smooth'))
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          const i = Number(dot.getAttribute('data-plan-dot'))
+          if (Number.isFinite(i)) scrollToIndex(i, 'smooth')
+        })
+      })
+
+      track.addEventListener(
+        'scroll',
+        () => {
+          if (scrolling) return
+          syncDots(nearestIndex())
+        },
+        { passive: true },
+      )
+
+      carousel.querySelectorAll('[data-features-toggle]').forEach((button) => {
+        if (!(button instanceof HTMLButtonElement)) return
+        button.addEventListener('click', () => {
+          const card = button.closest('[data-plan-card]')
+          if (!(card instanceof HTMLElement)) return
+          const open = !card.classList.contains('is-expanded')
+          card.classList.toggle('is-expanded', open)
+          button.setAttribute('aria-expanded', open ? 'true' : 'false')
+          button.textContent = open ? button.dataset.less || '' : button.dataset.more || ''
+        })
+      })
+
+      const panel = carousel.closest('[data-panel]')
+      const ready = () => {
+        if (panel instanceof HTMLElement && panel.hidden) return
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => scrollToIndex(index, 'auto'))
+        })
+      }
+      ready()
+      if (panel instanceof HTMLElement) {
+        const observer = new MutationObserver(() => {
+          if (!panel.hidden) ready()
+        })
+        observer.observe(panel, { attributes: true, attributeFilter: ['hidden', 'class'] })
+      }
     })
 
     const intlLocale = { az: 'az-AZ', en: 'en-GB', ru: 'ru-RU' }
@@ -475,17 +614,120 @@ function planFeatures(features: string[], upTo: number): string[] {
     color: var(--ink-muted);
     font-size: var(--text-sm);
   }
-  /* A responsive grid — the old fixed-width row scrolled sideways on desktop. */
-  .plans {
+  .plans-carousel {
+    position: relative;
     display: grid;
-    gap: var(--gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-    align-items: stretch;
+    gap: 0.85rem;
+    max-width: 26rem;
+    margin-inline: auto;
+  }
+  .plans {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0.15rem 2.5rem 0.35rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .plans::-webkit-scrollbar {
+    display: none;
+  }
+  .plans > article {
+    flex: 0 0 calc(100% - 0.5rem);
+    scroll-snap-align: center;
+  }
+  .plans-nav {
+    position: absolute;
+    top: calc(50% - 1.4rem);
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      border-color 0.25s var(--ease),
+      background 0.25s var(--ease),
+      color 0.25s var(--ease);
+  }
+  .plans-nav--prev {
+    left: 0.15rem;
+  }
+  .plans-nav--next {
+    right: 0.15rem;
+  }
+  .plans-nav:hover {
+    border-color: var(--line-strong);
+    background: var(--surface-muted);
+  }
+  .plans-nav:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .plans-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem;
+  }
+  .plans-dots button {
+    width: 0.55rem;
+    height: 0.55rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: var(--line-strong);
+    cursor: pointer;
+    transition:
+      background 0.25s var(--ease),
+      transform 0.25s var(--ease);
+  }
+  .plans-dots button[aria-selected='true'] {
+    background: var(--accent);
+    transform: scale(1.2);
+  }
+  .plans-dots button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
   article {
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
+  }
+  article:not(.is-expanded) [data-feature-extra] {
+    display: none;
+  }
+  .features-more {
+    align-self: flex-start;
+    margin: -0.15rem 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .features-more:hover {
+    text-decoration: underline;
+  }
+  .features-more:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
   article header {
     display: flex;
@@ -541,9 +783,12 @@ function planFeatures(features: string[], upTo: number): string[] {
     list-style: none;
     display: grid;
     gap: 0.4rem;
-    flex: 1;
+    align-content: start;
     padding-top: 0.65rem;
     border-top: 1px solid var(--line);
+  }
+  article > .btn {
+    margin-top: auto;
   }
   li {
     position: relative;
@@ -561,8 +806,35 @@ function planFeatures(features: string[], upTo: number): string[] {
     border-radius: 999px;
     background: var(--accent);
   }
-  .calculator {
+  .calculator-details {
     margin-top: var(--space-head);
+    border-top: 1px solid var(--line);
+    padding-top: 0.85rem;
+  }
+  .calculator-details > summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.75rem;
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .calculator-details > summary::-webkit-details-marker {
+    display: none;
+  }
+  .calculator-details > summary::before {
+    content: '+';
+    color: var(--accent);
+  }
+  .calculator-details[open] > summary::before {
+    content: '−';
+  }
+  .calculator {
+    margin-top: 0.85rem;
     padding: var(--space-card);
     border-radius: var(--radius-lg);
     background: var(--surface-muted);

@@ -476,13 +476,11 @@ export const en: Messages = {
   pricing: {
     eyebrow: 'Pricing',
     title: 'Published plans — by venue type',
-    intro:
-      'Heselo subscription plans are public. Starting prices differ for gaming clubs, billiards, karaoke, lounges, and anti-cafés so they fit each kind of venue. The full table is on this page. For multiple branches or volumes outside the standard plans, a custom quote is available as an add-on.',
+    intro: 'Pick your venue type — published Small-plan starting fees. Medium, Large, and annual (two months free) open after you choose.',
     summaryEyebrow: 'Open pricing',
     summaryTitle: 'Starting fees by category',
-    summaryLead:
-      'Below is the Small-plan monthly fee for each venue type. Medium and Large plans, annual billing (two months free), and account-wide opened-session limits open when you pick a type.',
-    summaryHint: 'Small · Medium · Large and annual (two months free) — in the table below.',
+    summaryLead: 'Small-plan monthly fee per type. Full plans open when you pick a type.',
+    summaryHint: 'No card · free demo',
     summaryCustom: 'Custom quote: multi-branch or out-of-plan volume —',
     summaryCustomLink: 'write via the contact form',
     fromMonthly: 'from {price} / mo',
@@ -513,11 +511,15 @@ export const en: Messages = {
       plus: 'Medium',
       pro: 'Large',
     },
+    planPrev: 'Previous plan',
+    planNext: 'Next plan',
+    planFeaturesMore: 'Read more',
+    planFeaturesLess: 'Show less',
     calculator: {
       eyebrow: 'Compare',
       title: 'Estimate cost by opened sessions',
-      description:
-        'Choose an opened-session count (account-wide) and billing period. The table shows the base fee, usage above the allowance, and total.',
+      description: 'Pick session count and billing period — base fee, overage, and total.',
+      revealLabel: 'Open session calculator',
       reservationCount: 'Opened sessions',
       billingPeriod: 'Billing period',
       monthly: 'Monthly',
