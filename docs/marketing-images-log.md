@@ -136,3 +136,4 @@ Negative: shared block yuxarıda.
 | 2026-09-18 | (marketing) | — | Bütün fotoreal shot-lar WebP-only; ProductShot img → `.webp` | `ProductShot.astro` |
 | 2026-09-18 | audit | (user) | Blame notebooks → Audit log tablet; WebP-only (köhnə UI PNG silindi) | `docs/marketing-raw/audit-final.jpg` → `public/images/product/audit*.webp` |
 | 2026-09-18 | og-image | (user) | Satış OG: WhatsApp lost booking → Live floor; köhnə minimal backup | `docs/marketing-raw/og-image-final.jpg` → `public/og-image.png` (old: `og-image-old.png`) |
+| 2026-10-12 | og-image | (user) | URL preview yeniləndi: Lost notes / WhatsApp → Live floor tablet (From_Lost_Notes…) | `docs/marketing-raw/og-image-final.jpg` → `public/og-image.png` (prev: `og-image-prev-2026-09-18.png`) |
