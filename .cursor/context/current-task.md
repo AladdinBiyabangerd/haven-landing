@@ -1,28 +1,26 @@
-# Current task — Heselo-first presentation (guides + solutions)
+# Current task — PanCafe alternative guide
 
 ## Completed
 
-1. All guide `sections` arrays: Heselo / `when-heselo-fits` / `how-heselo-fits` moved to **first** (az/en/ru + alternatives + gap educational).
-2. Gap guides without a Heselo block (`how-to-open-playstation-club`, `karaoke-club-business-plan`, `anticafe-rent-cost-calculation`): Heselo-first section added/renamed in az/en/ru.
-3. Solution page template: **how → features → who → problems → differ** ([slug].astro).
-4. Solution `howTitle`/`howBody` → hook form (“Heselo X üçün nə verir?” / EN/RU equivalents).
-5. Alternative first-section titles → hook (“Heselo sizə nə verir?” etc.).
-6. Main guide intros mention Heselo; heselo paragraphs lead with brand; `dateModified` → 2026-10-13 on az/en/ru guides.
+1. New comparison guide `pancafe-alternative` (az/en/ru) — PanCafe Pro vs Heselo (honest: free local café software vs cloud club panel).
+2. Wired: `types.ts`, `comparisonGuides.ts`, `COMPARISON_GUIDE_SLUGS`, `RELATED_COMPARISON`, `SOLUTION_ALT_GUIDES.gaming`, `seoContentPlan`.
+3. Site FAQ (az/en/ru): “Heselo PanCafe / PanCafe Pro-nu əvəz edir?” → guide link.
+4. Social hooks in `docs/social-guide-hooks.md` (no competitor name in hook line).
+5. Landscape mentions: Club Timer, Hasansoft, Akinsoft, playstation-cafe-software guides + geo-ai note.
 
 ## Current state
 
-- `heselo-pricing` still starts with `published` (page is already about Heselo) — intentional.
-- Brace-balance check on key files: OK.
+- URL: `/az/guides/pancafe-alternative/` (and en/ru).
+- Homepage hero unchanged (intentional).
 
 ## Remaining
 
-- Optional: bump `dateModified` on alternative/gap guide constants if they expose it separately.
-- Optional: EN/RU solution `howBody` sentences that still open without “Heselo” (titles already hook).
+- Deploy / verify live page after merge.
+- Optional: DM sales script paste into month-1-sales or CRM notes.
 
 ## Relevant files
 
-- `src/data/guides/az.ts`, `en.ts`, `ru.ts`
-- `src/data/guides/gapEducationalGuides.ts`
-- `src/data/guides/*AlternativeGuide.ts` (+ affordable / restaurant / playstation / azerbaijan)
-- `src/data/solutions/{az,en,ru}.ts`
-- `src/pages/[locale]/solutions/[slug].astro`
+- `src/data/guides/pancafeAlternativeGuide.ts`
+- `src/data/guides/{types,index,comparisonGuides}.ts`
+- `src/i18n/messages/{az,en,ru}.ts`
+- `docs/social-guide-hooks.md`

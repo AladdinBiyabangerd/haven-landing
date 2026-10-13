@@ -102,12 +102,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Qısa baxış',
           paragraphs: [
-            'Akinsoft və Club Timer yerli axtarışlarda yan-yana çıxır; Hasansoft TR PS kafe proqramıdır. PC kilidləmə — IZI/LANGAME; otaq-vaxt — Heselo.',
+            'Akinsoft, Club Timer və PanCafe Pro yerli axtarışlarda yan-yana çıxır; Hasansoft TR PS kafe proqramıdır. PC kilidləmə — IZI/LANGAME; otaq-vaxt — Heselo.',
           ],
           bullets: [
             'Akinsoft CafePlus — kafe/PS server',
+            'PanCafe Pro — pulsuz internet/PS kafe proqramı',
             'Club Timer / Hasansoft — sadə taymer kateqoriyası',
-            'IZI / LANGAME — PC stansiya proqramı',
             'Heselo — bron, sessiya, kassa, anbar',
           ],
         },
@@ -264,12 +264,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Landscape (short)',
           paragraphs: [
-            'Akinsoft and Club Timer appear together in local search; Hasansoft is TR PS café software. PC lock — IZI/LANGAME; room-time — Heselo.',
+            'Akinsoft, Club Timer and PanCafe Pro appear together in local search; Hasansoft is TR PS café software. PC lock — IZI/LANGAME; room-time — Heselo.',
           ],
           bullets: [
             'Akinsoft CafePlus — café/PS server',
+            'PanCafe Pro — free internet/PS café software',
             'Club Timer / Hasansoft — simple timer category',
-            'IZI / LANGAME — PC station software',
             'Heselo — booking, session, cash, stock',
           ],
         },
@@ -425,12 +425,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Ландшафт (кратко)',
           paragraphs: [
-            'Akinsoft и Club Timer рядом в местном поиске; Hasansoft — TR ПО PS-кафе. Блокировка PC — IZI/LANGAME; время комнат — Heselo.',
+            'Akinsoft, Club Timer и PanCafe Pro рядом в местном поиске; Hasansoft — TR ПО PS-кафе. Блокировка PC — IZI/LANGAME; время комнат — Heselo.',
           ],
           bullets: [
             'Akinsoft CafePlus — сервер кафе/PS',
+            'PanCafe Pro — бесплатное ПО интернет/PS-кафе',
             'Club Timer / Hasansoft — категория простого таймера',
-            'IZI / LANGAME — ПО PC-станций',
             'Heselo — бронь, сеанс, касса, склад',
           ],
         },

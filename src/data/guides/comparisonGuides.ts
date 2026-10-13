@@ -12,6 +12,7 @@ import { cafesynkAlternativeGuide } from './cafesynkAlternativeGuide'
 import { clubTimerAlternativeGuide } from './clubTimerAlternativeGuide'
 import { gameclubAlternativeGuide } from './gameclubAlternativeGuide'
 import { hasansoftAlternativeGuide } from './hasansoftAlternativeGuide'
+import { pancafeAlternativeGuide } from './pancafeAlternativeGuide'
 import { iziAlternativeGuide } from './iziAlternativeGuide'
 import { kaktusAlternativeGuide } from './kaktusAlternativeGuide'
 import { kassaAzAlternativeGuide } from './kassaAzAlternativeGuide'
@@ -41,6 +42,7 @@ export function comparisonGuides(locale: Locale): GuideCopy[] {
     iziAlternativeGuide(locale),
     langameAlternativeGuide(locale),
     clubTimerAlternativeGuide(locale),
+    pancafeAlternativeGuide(locale),
     akinsoftAlternativeGuide(locale),
     hasansoftAlternativeGuide(locale),
     tendirAlternativeGuide(locale),

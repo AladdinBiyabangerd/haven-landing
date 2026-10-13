@@ -102,12 +102,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Qısa baxış',
           paragraphs: [
-            'Hasansoft, Club Timer və Akinsoft eyni geniş «PS kafe proqramı» axtarışında görünür. PC proqram — IZI/LANGAME; otaq paneli — Heselo. GameClub konsol launj SaaS-dir.',
+            'Hasansoft, Club Timer, PanCafe Pro və Akinsoft eyni geniş «PS kafe proqramı» axtarışında görünür. PC proqram — IZI/LANGAME; otaq paneli — Heselo. GameClub konsol launj SaaS-dir.',
           ],
           bullets: [
             'Hasansoft — TR PS kafe proqramı',
+            'PanCafe Pro — pulsuz internet/PS kafe proqramı',
             'Club Timer / Akinsoft — yerli/oxşar taymer-kafe',
-            'GameClub — konsola üstünlük verən launj SaaS',
             'Heselo — otaq-vaxt klub paneli (AZ)',
           ],
         },
@@ -263,12 +263,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Landscape (short)',
           paragraphs: [
-            'Hasansoft, Club Timer and Akinsoft appear in the same broad “PS café software” search. PC software — IZI/LANGAME; room panel — Heselo. GameClub is console lounge SaaS.',
+            'Hasansoft, Club Timer, PanCafe Pro and Akinsoft appear in the same broad “PS café software” search. PC software — IZI/LANGAME; room panel — Heselo. GameClub is console lounge SaaS.',
           ],
           bullets: [
             'Hasansoft — TR PS café software',
+            'PanCafe Pro — free internet/PS café software',
             'Club Timer / Akinsoft — local/similar timer-café',
-            'GameClub — console-first lounge SaaS',
             'Heselo — room-time club panel (AZ)',
           ],
         },
@@ -424,12 +424,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Ландшафт (кратко)',
           paragraphs: [
-            'Hasansoft, Club Timer и Akinsoft попадают в один широкий поиск «ПО PS-кафе». PC-софт — IZI/LANGAME; комнатная панель — Heselo. GameClub — console lounge SaaS.',
+            'Hasansoft, Club Timer, PanCafe Pro и Akinsoft попадают в один широкий поиск «ПО PS-кафе». PC-софт — IZI/LANGAME; комнатная панель — Heselo. GameClub — console lounge SaaS.',
           ],
           bullets: [
             'Hasansoft — TR ПО PS-кафе',
+            'PanCafe Pro — бесплатное ПО интернет/PS-кафе',
             'Club Timer / Akinsoft — локальный/похожий таймер-кафе',
-            'GameClub — console-first lounge SaaS',
             'Heselo — клубная панель времени комнат (AZ)',
           ],
         },

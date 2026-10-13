@@ -32,7 +32,7 @@ Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18.
 - **Kateqoriya (#4–5, #9):** 0/2 engine — tövsiyə siyahısında Heselo yoxdur; yerli/qlobal PS və restoran POS rəqibləri doludur.
 - **ChatGPT** hazırda brendi demək olar ki, bilmir; kateqoriyada Tendir/Clopos üstün gəlir.
 - **Növbəti fokus (off-site):** AlternativeTo, GBP, LinkedIn, real rəy, YouTube — kateqoriya cavablarına üçüncü tərəf sübutu. On-site artıq var; problem discovery.
-- **Rəqib izləmə (AZ PS):** tendir.fun, SmartApp.az, GameClub, PsTally — bu adlar AI cavablarında üstünlük təşkil edir.
+- **Rəqib izləmə (AZ PS):** tendir.fun, SmartApp.az, GameClub, PsTally, PanCafe Pro, Club Timer — bu adlar AI cavablarında və sahə danışığında üstünlük təşkil edir.
 - **90g hədəf:** #1 hər iki engine-də düzgün; #4/#5/#9-da ≥1 engine-də Heselo mention.
 
 ### Növbəti ölçmə üçün boş cədvəl

@@ -177,6 +177,12 @@ export const SEO_CONTENT_PLAN = {
       note: 'PS/PC — Club Timer (AZ)',
     },
     {
+      id: 'pancafe-alternative',
+      path: '/guides/pancafe-alternative/',
+      status: 'live',
+      note: 'PS/PC — PanCafe Pro (free café software)',
+    },
+    {
       id: 'akinsoft-alternative',
       path: '/guides/akinsoft-alternative/',
       status: 'live',

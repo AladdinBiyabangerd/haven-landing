@@ -29,6 +29,7 @@ export const GUIDE_SLUGS = [
   'izi-alternative',
   'langame-alternative',
   'club-timer-alternative',
+  'pancafe-alternative',
   'akinsoft-alternative',
   'hasansoft-alternative',
   'tendir-alternative',

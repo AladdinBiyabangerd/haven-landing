@@ -192,6 +192,12 @@ export const en: Messages = {
         a: 'Many clubs keep bookings and shifts in Excel and WhatsApp — then things get messy. Heselo puts the same work in one panel: schedule, live session, and cash stay together. Messaging does not disappear; the shift’s main record lives in the panel.',
       },
       {
+        q: 'Does Heselo replace PanCafe / PanCafe Pro?',
+        a: 'Different category. PanCafe Pro is free internet/PS café station software; Heselo is booking, live sessions and club cash. For a simple walk-in café PanCafe can be enough — look at Heselo when you need room booking and a shift panel.',
+        href: '/guides/pancafe-alternative',
+        linkLabel: 'PanCafe comparison guide',
+      },
+      {
         q: 'Can I use it on mobile?',
         a: 'Heselo is a web panel — open it in a modern browser on computer or phone. The core features are the same on both.',
       },

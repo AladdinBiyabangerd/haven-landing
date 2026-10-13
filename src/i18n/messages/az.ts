@@ -192,6 +192,12 @@ export const az: Messages = {
         a: 'Çox klub bron və növbəni Excel və WhatsApp-da aparır — sonra qarışıqlıq yaranır. Heselo eyni işi bir paneldə toplayır: cədvəl, canlı sessiya və kassa bir yerdə qalır. Mesajlaşma qalır; növbənin əsas qeydiyyatı paneldə saxlanılır.',
       },
       {
+        q: 'Heselo PanCafe / PanCafe Pro-nu əvəz edir?',
+        a: 'Eyni kateqoriya deyil. PanCafe Pro pulsuz internet/PS kafe stansiya proqramıdır; Heselo bron, canlı sessiya və klub kassasıdır. Sadə walk-in kafe üçün PanCafe kifayət edə bilər — otaq bronu və növbə paneli lazımdırsa Heselo-ya baxın.',
+        href: '/guides/pancafe-alternative',
+        linkLabel: 'PanCafe müqayisə bələdçisi',
+      },
+      {
         q: 'Mobil telefondan istifadə etmək olar?',
         a: 'Heselo veb paneldir — müasir brauzerdə kompüterdə və telefonda açılır. Əsas funksiyalar hər iki cihazda eynidir.',
       },

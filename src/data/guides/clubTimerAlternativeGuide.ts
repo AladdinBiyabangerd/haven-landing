@@ -104,12 +104,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'PlayStation / internet klub bazar mənzərəsi',
           paragraphs: [
-            'Azərbaycanda Club Timer və Akinsoft tipli həllər yerli elanlarda görünür; Hasansoft TR bazasından gəlir. PC kilidləmə üçün IZI/LANGAME; otaq-vaxt üçün Heselo.',
+            'Azərbaycanda Club Timer, PanCafe Pro və Akinsoft tipli həllər yerli elanlarda görünür; Hasansoft TR bazasından gəlir. PC kilidləmə üçün IZI/LANGAME; otaq-vaxt üçün Heselo.',
           ],
           bullets: [
             'Club Timer — sadə stansiya taymeri',
+            'PanCafe Pro — pulsuz internet/PS kafe proqramı',
             'Akinsoft / Hasansoft — oxşar taymer/kafe kateqoriyası',
-            'IZI / LANGAME — PC stansiya idarəetməsi',
             'Heselo — bron, sessiya, kassa, anbar',
           ],
         },
@@ -270,12 +270,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'PlayStation / internet club landscape',
           paragraphs: [
-            'In Azerbaijan, Club Timer and Akinsoft-style tools show up in local ads; Hasansoft comes from TR. PC lock uses IZI/LANGAME; room-time uses Heselo.',
+            'In Azerbaijan, Club Timer, PanCafe Pro and Akinsoft-style tools show up in local ads; Hasansoft comes from TR. PC lock uses IZI/LANGAME; room-time uses Heselo.',
           ],
           bullets: [
             'Club Timer — simple station timer',
+            'PanCafe Pro — free internet/PS café software',
             'Akinsoft / Hasansoft — similar timer/café category',
-            'IZI / LANGAME — PC station control',
             'Heselo — booking, session, cash, stock',
           ],
         },
@@ -435,12 +435,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Ландшафт PlayStation / интернет-клуба',
           paragraphs: [
-            'В Азербайджане Club Timer и решения в духе Akinsoft видны в местных объявлениях; Hasansoft — из TR. Блокировка PC — IZI/LANGAME; время комнат — Heselo.',
+            'В Азербайджане Club Timer, PanCafe Pro и решения в духе Akinsoft видны в местных объявлениях; Hasansoft — из TR. Блокировка PC — IZI/LANGAME; время комнат — Heselo.',
           ],
           bullets: [
             'Club Timer — простой таймер станций',
+            'PanCafe Pro — бесплатное ПО интернет/PS-кафе',
             'Akinsoft / Hasansoft — похожая категория таймер/кафе',
-            'IZI / LANGAME — управление PC-станциями',
             'Heselo — бронь, сеанс, касса, склад',
           ],
         },

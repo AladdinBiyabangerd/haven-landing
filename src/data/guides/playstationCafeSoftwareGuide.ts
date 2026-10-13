@@ -104,11 +104,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'PlayStation kafe proqramı bazar mənzərəsi (qısa)',
           paragraphs: [
-            'Azərbaycan oyun klubunda tez-tez üç ayrı ehtiyac görünür: (1) stansiya taymeri — Club Timer, Hasansoft, Akinsoft; (2) PC kilidləmə — IZI/LANGAME; (3) otaq-vaxt, bron və kassa — Heselo (və konsol launj SaaS: GameClub). Bir proqram hamısını əvəz etmir.',
-            'Sadə taymer axtarışında Club Timer, Hasansoft və Akinsoft ad çəkilir; qiymət və funksiyanı birbaşa yoxlayın.',
+            'Azərbaycan oyun klubunda tez-tez üç ayrı ehtiyac görünür: (1) stansiya taymeri — Club Timer, PanCafe Pro, Hasansoft, Akinsoft; (2) PC kilidləmə — IZI/LANGAME; (3) otaq-vaxt, bron və kassa — Heselo (və konsol launj SaaS: GameClub). Bir proqram hamısını əvəz etmir.',
+            'Sadə taymer axtarışında Club Timer, PanCafe Pro, Hasansoft və Akinsoft ad çəkilir; qiymət və funksiyanı birbaşa yoxlayın.',
           ],
           bullets: [
-            'Stansiya taymeri (Club Timer / Hasansoft / Akinsoft) — kiçik kafe',
+            'Stansiya taymeri (Club Timer / PanCafe / Hasansoft / Akinsoft) — kiçik kafe',
             'PC klub idarəetməsi (IZI / LANGAME) — kilidləmə; otaq-vaxt deyil',
             'Heselo / GameClub — bron, sessiya, kassa; PC kilidləmə əvəzi deyil',
             'Böyüyəndə: taymer + panel və ya panelə keçid',
@@ -269,11 +269,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'PlayStation café software landscape (short)',
           paragraphs: [
-            'Azerbaijan gaming clubs often have three separate needs: (1) station timer — Club Timer, Hasansoft, Akinsoft; (2) PC lock — IZI/LANGAME; (3) room-time, booking and cash — Heselo (and console lounge SaaS: GameClub). One product does not replace all.',
-            'Timer searches mention Club Timer, Hasansoft and Akinsoft; verify price and features directly.',
+            'Azerbaijan gaming clubs often have three separate needs: (1) station timer — Club Timer, PanCafe Pro, Hasansoft, Akinsoft; (2) PC lock — IZI/LANGAME; (3) room-time, booking and cash — Heselo (and console lounge SaaS: GameClub). One product does not replace all.',
+            'Timer searches mention Club Timer, PanCafe Pro, Hasansoft and Akinsoft; verify price and features directly.',
           ],
           bullets: [
-            'Station timer (Club Timer / Hasansoft / Akinsoft) — small café',
+            'Station timer (Club Timer / PanCafe / Hasansoft / Akinsoft) — small café',
             'PC club control (IZI / LANGAME) — lockdown; not room-time',
             'Heselo / GameClub — booking, session, cash; not PC lock replacement',
             'As you grow: timer + panel or move to panel',
@@ -432,11 +432,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Ландшафт ПО для PS-кафе (кратко)',
           paragraphs: [
-            'В азербайджанских клубах часто три отдельные потребности: (1) таймер станций — Club Timer, Hasansoft, Akinsoft; (2) блокировка PC — IZI/LANGAME; (3) время комнат, бронь и касса — Heselo (и console lounge SaaS: GameClub). Один продукт не заменяет всё.',
-            'В поиске таймеров упоминают Club Timer, Hasansoft и Akinsoft — цену и функции уточняйте напрямую.',
+            'В азербайджанских клубах часто три отдельные потребности: (1) таймер станций — Club Timer, PanCafe Pro, Hasansoft, Akinsoft; (2) блокировка PC — IZI/LANGAME; (3) время комнат, бронь и касса — Heselo (и console lounge SaaS: GameClub). Один продукт не заменяет всё.',
+            'В поиске таймеров упоминают Club Timer, PanCafe Pro, Hasansoft и Akinsoft — цену и функции уточняйте напрямую.',
           ],
           bullets: [
-            'Таймер станций (Club Timer / Hasansoft / Akinsoft) — малое кафе',
+            'Таймер станций (Club Timer / PanCafe / Hasansoft / Akinsoft) — малое кафе',
             'Управление PC-клубом (IZI / LANGAME) — блокировка; не время комнат',
             'Heselo / GameClub — бронь, сеанс, касса; не замена блокировки PC',
             'При росте: таймер + панель или переход на панель',
