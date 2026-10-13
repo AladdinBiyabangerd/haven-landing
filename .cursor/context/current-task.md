@@ -1,20 +1,23 @@
-# Current task — Home conversion (done)
+# Current task — AZ translation audit (heselo-landing)
 
 ## Completed
 
-1. Hero trust strip (4 verifiable lines; mobile 2×2)
-2. How workflow on home — mobile left timeline (dot + arrow, no numbers)
-3. TrustEeat on home after pricing (short copy; mobile-tight cards)
-4. Home FAQ teaser — pick what / POS / price / demo + `/faq` link
-5. CTA path: home `intent="demo"`; EN form-first aligned in `Cta.astro` / `CtaBanner`
-6. i18n az/en/ru synced; `astro check` clean; no pageHelp on this landing repo
-
-## Out of scope (kept)
-
-- Customer logos / named quotes / metrics
-- ProductGallery on home
-- Skynet cinematic / variants
+1. Glossary locked (rezervasiya/bron; anbar≠stok; sessiya≠seans; canlı zal≠mərtəbə)
+2. Critical meaning: messages CTAs, karaoke month claim, eeat, audiences/seo/about grammar, pain/demoPromise
+3. messages/az.ts medium pass (Custom→Fərdi, rezerv→bron/rezervasiya, SEO, founder, etc.)
+4. solutions/az.ts (hub h1, timer, oturur→ödəyir, moduldu, demo-su, Lounge→Launj, …)
+5. Legal AZ: privacyPolicy + termsOfUse (direktor/administrator, canlı zal, ~~strike~~)
+6. Guides template replace (~292 + polish) across alternative guides
+7. GameClub / CafeSynk / Hasansoft AZ rewrite polish
 
 ## Remaining
 
-1. Commit when user asks
+- Optional: deeper polish of remaining EN loanwords in other alternative guides (iiko template already mostly replaced)
+- space-booking-ui admin panel AZ audit — out of scope for this landing workspace
+
+## Relevant files
+
+- `src/i18n/messages/az.ts`
+- `src/data/solutions/az.ts`
+- `src/content/privacyPolicy.ts`, `termsOfUse.ts`
+- `src/data/guides/*AlternativeGuide.ts`, `az.ts`

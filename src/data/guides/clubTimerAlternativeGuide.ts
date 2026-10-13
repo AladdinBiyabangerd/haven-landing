@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Stansiya taymeri vs klub paneli — Club Timer alternativi',
       seoTitle: 'Club Timer alternativi — taymer vs Heselo klub paneli | Heselo',
       seoDescription:
-        'Club Timer internet və PlayStation klubları üçün stansiya vaxtı sayır; Heselo bron, sessiya və kassadır. Taymer yetəndə saxlayın — cədvəl, FAQ — AZ, EN, RU.',
+        'Club Timer internet və PlayStation klubları üçün stansiya vaxtı sayır; Heselo bron, sessiya və kassadır. Taymer kifayət edəndə saxlayın — cədvəl, FAQ — AZ, EN, RU.',
       keywords: [
         'club timer alternativ',
         'club timer alternativi',
@@ -30,7 +30,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'Bakıda Club Timer (Klub Taymer) axtarışı çox vaxt sadə stansiya vaxtı proqramına aparır: masa başlayır, qalan vaxt və ödəniş göstərilir. Kiçik PlayStation və internet klubunda bu kifayət edə bilər. Bron, növbə kassası, stok və otaq rezervasiyası artanda taymer boşluq buraxır. Bu bələdçi Club Timer kateqoriyasını Heselo ilə müqayisə edir — taymer yetəndə onu saxlamağı tövsiyə edirik.',
+        'Bakıda Club Timer (Klub Taymer) axtarışı çox vaxt sadə stansiya vaxtı proqramına aparır: masa başlayır, qalan vaxt və ödəniş göstərilir. Kiçik PlayStation və internet klubunda bu kifayət edə bilər. Bron, növbə kassası, anbar və otaq rezervasiyası artanda taymer boşluq buraxır. Bu bələdçi Club Timer kateqoriyasını Heselo ilə müqayisə edir — taymer kifayət edəndə onu saxlamağı tövsiyə edirik.',
       sections: [
         {
           id: 'decision',
@@ -53,8 +53,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Öncədən bron demək olar ki, yoxdur',
-            'Stok və kassa növbəsi sadədir',
-            'Uzadılma admin bir kliklə həll olunur',
+            'Anbar və kassa növbəsi sadədir',
+            'Uzadılmanı administratoristrator bir kliklə həll olunur',
             'Büdcə minimaldır və böyümə planı yoxdur',
           ],
         },
@@ -62,7 +62,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı stoku sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
+            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbar sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
             'Demo zamanı öz stansiya/otaq sayınız və həftəsonu pikini yoxlayın.',
           ],
           bullets: [
@@ -85,7 +85,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Rezervasiya', 'Adətən yox', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Taymer start/stop', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'Manual və ya minimal', 'Klub növbəsi + sessiya satışı'],
-              ['Stok', 'Adətən yox', 'Sessiyaya bağlı satış və stok izləmə'],
+              ['Anbar', 'Adətən yox', 'Sessiyaya bağlı satış və anbar izləmə'],
               ['Qiymət', 'Quraşdırma/lisenziya ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Tez-tez AZ', 'AZ, EN, RU'],
               [
@@ -98,7 +98,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'PlayStation / internet klub landşaftı',
+          title: 'PlayStation / internet klub bazar mənzərəsi',
           paragraphs: [
             'Azərbaycanda Club Timer və Akinsoft tipli həllər yerli elanlarda görünür; Hasansoft TR bazasından gəlir. PC kilidləmə üçün IZI/LANGAME; otaq-vaxt üçün Heselo.',
           ],
@@ -106,7 +106,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Club Timer — sadə stansiya taymeri',
             'Akinsoft / Hasansoft — oxşar taymer/kafe kateqoriyası',
             'IZI / LANGAME — PC stansiya idarəetməsi',
-            'Heselo — bron, sessiya, kassa, stok',
+            'Heselo — bron, sessiya, kassa, anbar',
           ],
         },
         {
@@ -122,7 +122,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Taymerdən panelə keçid checklisti',
+          title: 'Taymerdən panelə keçid yoxlama siyahısı',
           paragraphs: [
             'Club Timer yetmirsə, tam silmədən bir həftəsonu pilot paneli sınayın.',
           ],
@@ -138,11 +138,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       faq: [
         {
           q: 'Club Timer kifayət edirmi?',
-          a: 'Kiçik PlayStation və ya internet klubunda, bron olmadan və sadə kassada — çox vaxt bəli. Bron, növbə kassası və stok kritikdirsə — klub paneli baxın.',
+          a: 'Kiçik PlayStation və ya internet klubunda, bron olmadan və sadə kassada — çox vaxt bəli. Bron, növbə kassası və anbar kritikdirsə — klub panelinə baxın.',
         },
         {
           q: 'Heselo Club Timer-i əvəz edir?',
-          a: 'Eyni kateqoriya deyil. Club Timer vaxt sayır; Heselo bron, sessiya, kassa və stok konturunu aparır. Taymer yetəndə saxlayın.',
+          a: 'Eyni kateqoriya deyil. Club Timer vaxt sayır; Heselo bron, sessiya, kassa və anbar prosesini aparır. Taymer kifayət edəndə saxlayın.',
         },
         {
           q: 'Heselo PC stansiyasını kilidləyir?',
@@ -171,7 +171,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       ],
       ctaTitle: 'PlayStation klub axınınızı Heseloda yoxlayın',
       ctaBody:
-        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və stoku birlikdə sınayaq.',
+        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və anbar qalığını birlikdə sınayaq.',
     },
     en: {
       shortTitle: 'Club Timer alternative',

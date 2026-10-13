@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'PC klub idarəetməsi vs otaq-vaxt — IZI alternativi',
       seoTitle: 'IZI alternativi — PC kilidləmə vs Heselo otaq-vaxt | Heselo',
       seoDescription:
-        'IZI PC stansiya kilidləmə və klub idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo PC kilidləməni əvəz etmir — cədvəl, landşaft, FAQ — AZ, EN, RU.',
+        'IZI PC stansiya kilidləmə və klub idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo PC kilidləməni əvəz etmir — cədvəl, bazar mənzərəsi, FAQ — AZ, EN, RU.',
       keywords: [
         'izi alternativ',
         'izi alternativi klub',
@@ -49,7 +49,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'IZI (PC klub idarəetməsi) nə vaxt qalmalıdır?',
           paragraphs: [
             'PC internet klubunda stansiya kilidləmə, müştəri balansı, tətbiq/qayda profili və agent IZI kateqoriyasının mərkəzidir. Bu funksiya olmadan klub texniki cəhətdən işləmir.',
-            'Heselo bu konturu təqlid etmir və əvəz etməyə nəzərdə tutulmayıb. PC klubu IZI (və ya oxşar həll) saxlamalıdır; otaq-vaxt ehtiyacı ayrıca həll ola bilər.',
+            'Heselo bu prosesi təqlid etmir və əvəz etməyə nəzərdə tutulmayıb. PC klubu IZI (və ya oxşar həll) saxlamalıdır; otaq-vaxt ehtiyacı ayrıca həll ola bilər.',
           ],
           bullets: [
             'PC stansiyalarında login və vaxt/balans idarəetməsi',
@@ -68,7 +68,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           bullets: [
             'Otaq və ya stansiya saatı əsas gəlir',
             'Bron → sessiya → uzadılma → kassa axını',
-            'Bar/qəlyanaltı sessiyaya və stoka bağlıdır',
+            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
             'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
           ],
         },
@@ -85,7 +85,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Stansiya agenti', 'Mərkəzi funksiya', 'Əvəz etmir'],
               ['Rezervasiya', 'Adətən yox və ya zəif', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'PC balans/dəqiqə', 'Canlı sessiya, uzadılma, tarif'],
-              ['Kassa', 'Balans satışı konturu', 'Klub növbəsi + sessiya satışı'],
+              ['Kassa', 'Balans satışı prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Lisenziya/stansiya ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Tez-tez AZ/RU', 'AZ, EN, RU'],
               [
@@ -98,7 +98,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Oyun klubu landşaftı (qısa)',
+          title: 'Oyun klubu bazar mənzərəsi (qısa)',
           paragraphs: [
             'Azərbaycan PC klubunda IZI və LANGAME workstation nəzarətinə görə tanınır. Otaq-vaxt, karaoke və PlayStation otaqları üçün ayrıca klub paneli (Heselo) baxılır. Sadə stansiya taymeri (Club Timer, Hasansoft) üçüncü kiçik kateqoriyadır — yalnız vaxt sayğacı.',
             '«IZI alternativi» axtarışı bəzən otaq proqramı gözlədir; kateqoriyanı ayırmaq səhv alış-verişin qarşısını alır.',
@@ -123,7 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Qərar checklisti',
+          title: 'Qərar yoxlama siyahısı',
           paragraphs: [
             'Heselo alarkən PC agentini sökməyin — otaq-vaxt ehtiyacını ayrıca yoxlayın.',
           ],

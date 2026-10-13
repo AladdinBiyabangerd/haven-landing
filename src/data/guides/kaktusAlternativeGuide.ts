@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Salon randevusu vs otaq sessiyası — Kaktus alternativi',
       seoTitle: 'Kaktus alternativi — salon rezervasiya vs Heselo otaq-vaxt | Heselo',
       seoDescription:
-        'Kaktus salon/gözəllik randevusudur; Heselo otaq və launj sessiyasıdır. Heselo mütəxəssis cədvəlini əvəz etmir — müqayisə cədvəli, landşaft, FAQ — AZ, EN, RU.',
+        'Kaktus salon/gözəllik randevusudur; Heselo otaq və launj sessiyasıdır. Heselo mütəxəssis cədvəlini əvəz etmir — müqayisə cədvəli, bazar mənzərəsi, FAQ — AZ, EN, RU.',
       keywords: [
         'kaktus alternativ',
         'kaktus alternativi',
@@ -83,7 +83,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Əsas fokus', 'Mütəxəssis randevusu, xidmət', 'Otaq/masa vaxtı, klub sessiyası'],
               ['Rezervasiya', 'Usta/qəbul cədvəli', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Xidmət müddəti', 'Canlı sessiya, uzadılma, tarif'],
-              ['Müştəri kartı', 'Salon tarixçəsi, xidmətlər', 'Klub müştəri və sessiya konturu'],
+              ['Müştəri kartı', 'Salon tarixçəsi, xidmətlər', 'Klub müştəri və sessiya prosesi'],
               ['Kassa', 'Salon ödənişi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Salon paketi ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Tez-tez AZ', 'AZ, EN, RU'],
@@ -97,7 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Rezervasiya proqramları landşaftı (qısa)',
+          title: 'Rezervasiya proqramları bazar mənzərəsi (qısa)',
           paragraphs: [
             'Azərbaycanda «rezervasiya» axtarışı salon (Kaktus və oxşar), restoran masa (Clopos, iiko) və otaq-vaxt klubu (Heselo) kateqoriyalarına bölünür. Salon proqramı launj otaq saatını tam idarə etmir; klub paneli usta cədvəlini əvəz etmir.',
             'Antikafe və launj tez-tez salon proqramı ilə sınanır — otaq saatı mərkəzdədirsə kateqoriyanı düzgün seçin.',
@@ -122,7 +122,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Qərar checklisti',
+          title: 'Qərar yoxlama siyahısı',
           paragraphs: [
             'Kaktus-dan Heselo-ya «keçid» yalnız biznes modeli otaq-vaxta dəyişəndə məna kəsb edir — salon randevusunu köçürməyin.',
           ],

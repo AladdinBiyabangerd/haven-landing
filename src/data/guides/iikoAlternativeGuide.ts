@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaqlı əyləncə klubları üçün iiko alternativi',
       seoTitle: 'iiko alternativi klublar üçün — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'iiko restoran POS-udur; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli, Poster/Quick Resto landşaftı və keçid checklisti — Azərbaycan, EN, RU.',
+        'iiko restoran POS-udur; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli, Poster/Quick Resto bazar mənzərəsi və keçid yoxlama siyahısı — Azərbaycan, EN, RU.',
       keywords: [
         'iiko alternativ',
         'iiko alternativi klublar',
@@ -32,7 +32,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'iiko axtarışında çox vaxt restoran mətbəxi, KDS və çatdırılma gözlənilir. Əsas gəliriniz otaq, konsol və ya masa saatıdırsa, ehtiyac fərqlidir: rezervasiya, canlı sessiya, uzadılma və kassa növbəsi. Bu bələdçi iiko-nu klub/otaq-vaxt nishi ilə dürüst müqayisə edir — Heselo tam restoran POS əvəzi deyil.',
+        'iiko axtarışında çox vaxt restoran mətbəxi, KDS və çatdırılma gözlənilir. Əsas gəliriniz otaq, konsol və ya masa saatıdırsa, ehtiyac fərqlidir: rezervasiya, canlı sessiya, uzadılma və kassa növbəsi. Bu bələdçi iiko-nu klub/otaq-vaxt nişəsi ilə dürüst müqayisə edir — Heselo tam restoran POS əvəzi deyil.',
       sections: [
         {
           id: 'decision',
@@ -42,7 +42,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Əsas gəlir: yemək-içki sifarişi və çatdırılma, yoxsa otaq/stansiya/masa saatı?',
-            'Region və dəstək: MDB/Azərbaycan komandası, dil və fiscal/kassa tələbləri nədir?',
+            'Region və dəstək: MDB/Azərbaycan komandası, dil və fiskal / kassa tələbləri nədir?',
             'Kritik funksiyalar: mətbəx ekranı və reseptura, yoxsa bron → canlı sessiya → uzadılma → kassa?',
           ],
         },
@@ -50,7 +50,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-iiko-fits',
           title: 'iiko nə vaxt qalmalıdır?',
           paragraphs: [
-            'iiko restoran əməliyyatında güclüdür: zal, mətbəx ekranı, texkartalar, QR menyu və çatdırılma bir konturda işləyə bilər. Gündəlik iş məhz buna dayanırsa, iiko (və ya digər restoran POS) düzgün kateqoriyadır.',
+            'iiko restoran əməliyyatında güclüdür: zal, mətbəx ekranı, texkartalar, QR menyu və çatdırılma bir prosesdə işləyə bilər. Gündəlik iş məhz buna dayanırsa, iiko (və ya digər restoran POS) düzgün kateqoriyadır.',
             'Heselo mətbəx KDS-ini, resepturanı və çatdırılma agregatorlarını əvəz etmək üçün nəzərdə tutulmayıb. Mətbəx mərkəzdədirsə, klub paneli axtarmağa ehtiyac yoxdur.',
           ],
           bullets: [
@@ -64,7 +64,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'PlayStation stansiyası, karaoke otağı, bilyard masası, antikafe yeri və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və stoka bağlayır.',
+            'PlayStation stansiyası, karaoke otağı, bilyard masası, antikafe yeri və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və anbara bağlayır.',
             'Bar və qəlyanaltı satışı sessiyaya əlavə olunur; bu, restoran mətbəx axını ilə eyni şey deyil. Demo zamanı öz otaq və stansiyalarınızla eyni ssenarini yoxlayın.',
           ],
           bullets: [
@@ -86,7 +86,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Əsas fokus', 'Restoran, mətbəx, çatdırılma', 'Otaq / stansiya / masa vaxtı'],
               ['Rezervasiya', 'Masa və restoran axınına uyğun', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Sifariş və masa xidməti mərkəzdə', 'Canlı sessiya, uzadılma, tarif'],
-              ['Mətbəx / KDS', 'Güclü restoran konturu', 'Tam mətbəx POS əvəzi deyil'],
+              ['Mətbəx / KDS', 'Güclü restoran prosesi', 'Tam mətbəx POS əvəzi deyil'],
               ['Çatdırılma', 'Aqreqator və restoran inteqrasiyaları', 'Klub sessiyasına fokus'],
               ['Kassa', 'Restoran növbəsi və çeklər', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Modul və tərəfdaş təklifi ilə', 'Açıq: {low} AZN/aydan'],
@@ -101,7 +101,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Restoran axtarırsınızsa: qısa landşaft',
+          title: 'Restoran axtarırsınızsa: qısa baxış',
           paragraphs: [
             'Axtarışınız mətbəx, KDS və çatdırılmadırsa, klub paneli deyil, restoran POS kateqoriyasına baxın. Bazarda tez-tez müzakirə olunan seçimlər arasında Poster, Quick Resto, r_keeper və Saby var — onların modul və qiymətini birbaşa provayderdən öyrənin.',
             'Otaq və stansiya saatı satırsınızsa, bu siyahı sizin əsas alternativiniz deyil. Aşağıdakı klub ssenariləri Heselo-nun harada işlədiyini göstərir.',
@@ -127,9 +127,9 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Keçid checklisti',
+          title: 'Keçid yoxlama siyahısı',
           paragraphs: [
-            'Tam keçiddən əvvəl bir növbəlik sınaq səhvləri erkən göstərir. Mətbəx konturu qalırsa, onu köçürməyin — yalnız klub resurslarını gətirin.',
+            'Tam keçiddən əvvəl bir növbəlik sınaq səhvləri erkən göstərir. Mətbəx prosesi qalırsa, onu köçürməyin — yalnız klub resurslarını gətirin.',
           ],
           bullets: [
             'Otaq, konsol və masa siyahısını və cari tarifləri hazırlayın',
@@ -171,12 +171,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Klub üçün WhatsApp və Excel kifayət etmirmi?',
-          a: 'Kiçik həcmdə ola bilər, amma bron WhatsApp-da, vaxt taymerdə, ödəniş Excel-də qalanda üst-üstə rezervasiya, unudulmuş uzadılma və kassa fərqi yaranır. Heselo panelində bron, sessiya, kassa və stok bir yerdə görünür.',
+          a: 'Kiçik həcmdə ola bilər, amma bron WhatsApp-da, vaxt taymerdə, ödəniş Excel-də qalanda üst-üstə rezervasiya, unudulmuş uzadılma və kassa fərqi yaranır. Heselo panelində bron, sessiya, kassa və anbar bir yerdə görünür.',
         },
       ],
       ctaTitle: 'Heselonu öz iş gününüzlə yoxlayın',
       ctaBody:
-        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və stok izləməsini birlikdə yoxlayaq.',
+        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və anbar izləməsini birlikdə yoxlayaq.',
     },
     en: {
       shortTitle: 'iiko alternative for clubs',

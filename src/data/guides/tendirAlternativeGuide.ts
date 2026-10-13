@@ -48,7 +48,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Təndir nə vaxt qalmalıdır?',
           paragraphs: [
             'Restoran və kafenin yanında gaming zalı olan məkanlarda POS, anbar, KDS və ödəniş bir ekosistemdə lazımdırsa Təndir kateqoriyası məntiqli ola bilər.',
-            'Heselo mətbəx axınını əvəz etmir. Güclü HoReCa stack lazımdırsa Təndir (və ya restoran POS) saxlanıla bilər; otaq-vaxt ayrıca və ya Heselo ilə.',
+            'Heselo mətbəx axınını əvəz etmir. Güclü HoReCa sistem lazımdırsa Təndir (və ya restoran POS) saxlanıla bilər; otaq-vaxt ayrıca və ya Heselo ilə.',
           ],
           bullets: [
             'Mətbəx, KDS və restoran zalı mərkəzdədir',
@@ -66,7 +66,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           bullets: [
             'Otaq/stansiya saatı əsas gəlir',
             'Bron → sessiya → uzadılma → kassa',
-            'Bar/qəlyanaltı sessiyaya və stoka bağlıdır',
+            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
             'AZ / EN / RU, {low} AZN/aydan',
           ],
         },
@@ -83,7 +83,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Mətbəx / KDS', 'Ekosistemdə nəzərdə tutula bilər', 'Əvəz etmir'],
               ['Rezervasiya', 'Platformadan asılı', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Gaming alətləri (platforma)', 'Canlı sessiya, uzadılma, tarif'],
-              ['Kassa', 'POS / ödəniş konturu', 'Klub növbəsi + sessiya satışı'],
+              ['Kassa', 'POS / ödəniş prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Sorğu ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'AZ fokus', 'AZ, EN, RU'],
               [
@@ -96,14 +96,14 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Bakı oyun klubu landşaftı',
+          title: 'Bakı oyun klubu bazar mənzərəsi',
           paragraphs: [
             'GEO ölçmələrində Təndir, SmartApp, GameClub və Club Timer «PS klub proqramı» cavablarında çıxır. Kateqoriyanı ayırın: restoran ekosistemi vs taymer vs otaq paneli.',
           ],
           bullets: [
             'Təndir / SmartApp — yerli geniş platformalar',
             'Club Timer / Hasansoft — sadə taymer',
-            'GameClub — console lounge SaaS',
+            'GameClub — konsol launj SaaS',
             'Heselo — otaq-vaxt klub paneli',
           ],
         },
@@ -120,7 +120,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Qərar checklisti',
+          title: 'Qərar yoxlama siyahısı',
           paragraphs: ['Platformanı silməzdən əvvəl otaq axınını demoda yoxlayın.'],
           bullets: [
             'Gəlirin neçə faizi otaq saatındadır',
@@ -134,7 +134,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       faq: [
         {
           q: 'Heselo Təndiri əvəz edir?',
-          a: 'Tam əvəz deyil. Təndir geniş HoReCa+gaming ekosistemidir; Heselo otaq-vaxt və klub kassasına fokuslanır. Mətbəx lazımdırsa restoran stack saxlayın.',
+          a: 'Tam əvəz deyil. Təndir geniş HoReCa+gaming ekosistemidir; Heselo otaq-vaxt və klub kassasına fokuslanır. Mətbəx lazımdırsa restoran sistem saxlayın.',
         },
         {
           q: 'Təndir PS klub üçündürmü?',
@@ -154,7 +154,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Hər ikisi bir yerdə?',
-          a: 'Bəli: restoran stack + Heselo otaqlarda.',
+          a: 'Bəli: restoran sistem + Heselo otaqlarda.',
         },
         {
           q: 'SmartApp ilə fərqi?',
@@ -167,7 +167,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       ],
       ctaTitle: 'Otaq-vaxt fokusunu Heseloda yoxlayın',
       ctaBody:
-        'Demo istəyin: otaq və stansiyaları nümunə kimi qurub bron, sessiya və kassa növbəsini sınayaq — mətbəx stack-i ayrı qala bilər.',
+        'Demo istəyin: otaq və stansiyaları nümunə kimi qurub bron, sessiya və kassa növbəsini sınayaq — mətbəx sistemi ayrı qala bilər.',
     },
     en: {
       shortTitle: 'Tendir alternative for clubs',

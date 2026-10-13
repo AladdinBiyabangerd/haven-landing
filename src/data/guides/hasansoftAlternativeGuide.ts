@@ -15,25 +15,25 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
   {
     az: {
       shortTitle: 'Hasansoft alternativi',
-      h1: 'PlayStation cafe proqramı vs klub paneli — Hasansoft',
-      seoTitle: 'Hasansoft alternativi — PS cafe proqramı vs Heselo | Heselo',
+      h1: 'PlayStation kafe proqramı vs klub paneli — Hasansoft',
+      seoTitle: 'Hasansoft alternativi — PS kafe proqramı vs Heselo | Heselo',
       seoDescription:
         'Hasansoft ClubPlaystation PS4/PS5 vaxt, kassa və hesabatdır; Heselo bron, canlı sessiya və klub növbəsidir — cədvəl, FAQ — AZ, EN, RU.',
       keywords: [
         'hasansoft alternativ',
         'hasansoft alternativi',
         'clubplaystation alternativ',
-        'playstation cafe proqramı',
-        'ps cafe programı',
+        'playstation kafe proqramı',
+        'ps kafe proqramı',
         'oyun salonu proqramı',
         'Heselo',
       ],
       intro:
-        'Hasansoft ClubPlaystation axtarışında PS4/PS5 salonları üçün vaxt izləmə, hesab açma-bağlama, kassa və hesabat gözlənilir. Bu, sadə stansiya/kafe proqramı kateqoriyasıdır — kiçik həcmdə effektiv ola bilər. Bron təqvimi, çoxnövbəli kassa və stok sessiyaya bağlananda boşluq yaranır. Bu bələdçi Hasansoft-u Heselo ilə müqayisə edir; taymer yetəndə Hasansoft saxlamağı tövsiyə edirik. Kateqoriya bələdçisi: playstation-cafe-software-alternative.',
+        'Hasansoft ClubPlaystation axtarışında PS4/PS5 salonları üçün vaxt izləmə, hesab açma-bağlama, kassa və hesabat gözlənilir. Bu, sadə stansiya/kafe proqramı kateqoriyasıdır — kiçik həcmdə effektiv ola bilər. Bron təqvimi, çoxnövbəli kassa və anbar sessiyaya bağlananda boşluq yaranır. Bu bələdçi Hasansoft-u Heselo ilə müqayisə edir; taymer kifayət edəndə Hasansoft saxlamağı tövsiyə edirik. Kateqoriya bələdçisi: playstation-cafe-software-alternative.',
       sections: [
         {
           id: 'decision',
-          title: 'Əvvəlcə qərar: PS cafe proqramı, yoxsa klub paneli?',
+          title: 'Əvvəlcə qərar: PS kafe proqramı, yoxsa klub paneli?',
           paragraphs: [
             'Hasansoft stansiya vaxtı və salon kassasına fokuslanır; Heselo otaq/stansiya bronu və canlı sessiya axınıdır.',
           ],
@@ -61,12 +61,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Stansiya və otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı stoku sessiyaya bağlanırsa — Heselo uyğundur.',
+            'Stansiya və otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbar sessiyaya bağlanırsa — Heselo uyğundur.',
           ],
           bullets: [
             'Otaq/stansiya təqvimi və bron',
             'Canlı sessiya, uzadılma, tarif paketləri',
-            'Klub növbəsi + sessiya satışı + stok',
+            'Klub növbəsi + sessiya satışı + anbar',
             'AZ / EN / RU, {low} AZN/aydan',
           ],
         },
@@ -79,11 +79,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           table: {
             headers: ['Aspekt', 'Hasansoft ClubPlaystation', 'Heselo'],
             rows: [
-              ['Əsas fokus', 'PS cafe vaxt + salon kassa', 'Otaq/stansiya vaxtı + klub əməliyyatı'],
+              ['Əsas fokus', 'PS kafe vaxt + salon kassa', 'Otaq/stansiya vaxtı + klub əməliyyatı'],
               ['Rezervasiya', 'Adətən zəif / yox', 'Otaq və stansiya təqvimi'],
-              ['Vaxt hesabı', 'PS seans start/stop', 'Canlı sessiya, uzadılma, tarif'],
+              ['Vaxt hesabı', 'PS sessiya başlat/dayandır', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'Salon kassa və hesabat', 'Klub növbəsi + sessiya satışı'],
-              ['Stok', 'Sürətli satış (məhdud)', 'Sessiyaya bağlı satış və stok'],
+              ['Anbar', 'Sürətli satış (məhdud)', 'Sessiyaya bağlı satış və anbar'],
               ['Qiymət', 'Lisenziya/paket (sorğu)', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'TR fokus', 'AZ, EN, RU'],
               [
@@ -96,14 +96,14 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Landşaft (qısa)',
+          title: 'Qısa baxış',
           paragraphs: [
-            'Hasansoft, Club Timer və Akinsoft eyni geniş «PS cafe proqramı» axtarışında görünür. PC soft — IZI/LANGAME; otaq paneli — Heselo. GameClub konsol lounge SaaS-dir.',
+            'Hasansoft, Club Timer və Akinsoft eyni geniş «PS kafe proqramı» axtarışında görünür. PC proqram — IZI/LANGAME; otaq paneli — Heselo. GameClub konsol launj SaaS-dir.',
           ],
           bullets: [
-            'Hasansoft — TR PS cafe proqramı',
+            'Hasansoft — TR PS kafe proqramı',
             'Club Timer / Akinsoft — yerli/oxşar taymer-kafe',
-            'GameClub — console-first lounge SaaS',
+            'GameClub — konsola üstünlük verən launj SaaS',
             'Heselo — otaq-vaxt klub paneli (AZ)',
           ],
         },
@@ -112,15 +112,15 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Ssenarilər',
           paragraphs: ['PS salon ölçüsü qərarı dəyişir.'],
           bullets: [
-            'Kiçik PS cafe: Hasansoft kifayət edə bilər',
+            'Kiçik PS kafe: Hasansoft kifayət edə bilər',
             'WhatsApp bron + Hasansoft: üst-üstə rezervasiya riski',
-            'Otaqlı lounge: Heselo',
+            'Otaqlı launj: Heselo',
             'PC + PS: IZI/LANGAME + Heselo və ya Hasansoft (yalnız PS)',
           ],
         },
         {
           id: 'how-to-switch',
-          title: 'Keçid checklisti',
+          title: 'Keçid yoxlama siyahısı',
           paragraphs: ['Hasansoft-u dərhal silməyin — bir həftəsonu pilot.'],
           bullets: [
             'Stansiya/otaq və tarif siyahısı',
@@ -134,7 +134,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       faq: [
         {
           q: 'Heselo Hasansoft-u əvəz edir?',
-          a: 'Eyni kateqoriya deyil. Hasansoft PS cafe vaxt və salon kassasıdır; Heselo bron, sessiya və klub növbəsidir. Taymer yetəndə saxlayın.',
+          a: 'Eyni kateqoriya deyil. Hasansoft PS kafe vaxt və salon kassasıdır; Heselo bron, sessiya və klub növbəsidir. Taymer kifayət edəndə saxlayın.',
         },
         {
           q: 'ClubPlaystation nədir?',
@@ -165,9 +165,9 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           a: 'Stansiya və otaqlarınızı qurub həftəsonu axınını yoxlayın.',
         },
       ],
-      ctaTitle: 'PS klub axınınızı Heseloda yoxlayın',
+      ctaTitle: 'PS klub axınınızı Heselo-da yoxlayın',
       ctaBody:
-        'Demo istəyin: stansiya və otaqları nümunə kimi qurub bron, sessiya, kassa və stoku sınayaq.',
+        'Demo istəyin: stansiya və otaqları nümunə kimi qurub bron, sessiya, kassa və anbarı sınayaq.',
     },
     en: {
       shortTitle: 'Hasansoft alternative',

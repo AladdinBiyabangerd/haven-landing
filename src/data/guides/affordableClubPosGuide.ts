@@ -29,7 +29,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Bu bələdçi sərfəli klub POS seçimini otaq-vaxt nishi ilə izah edir — Heselo {low} AZN/aydan rezervasiya, canlı sessiya, kassa və stoku birləşdirir.',
+        'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Bu bələdçi sərfəli klub POS seçimini otaq-vaxt nişəsi ilə izah edir — Heselo {low} AZN/aydan rezervasiya, canlı sessiya, kassa və anbar qalığını birləşdirir.',
       sections: [
         {
           id: 'decision',
@@ -87,7 +87,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Qısa landşaft',
+          title: 'Qısa bazar mənzərəsi',
           paragraphs: [
             'Restoran istiqamətində Dine, Clopos, MinuPOS və oxşarlar müzakirə olunur. Klub vaxtı üçün isə Heselo ayrı kateqoriyadır.',
           ],
@@ -134,7 +134,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       ],
       ctaTitle: 'Heselonu öz iş gününüzlə yoxlayın',
       ctaBody:
-        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və stok izləməsini birlikdə yoxlayaq.',
+        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və anbar izləməsini birlikdə yoxlayaq.',
     },
     en: {
       shortTitle: 'Affordable club POS',

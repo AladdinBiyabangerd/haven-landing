@@ -18,7 +18,7 @@ const az: DocumentBlock[] = [
   {
     type: 'ol',
     items: [
-      'Bu şərtlər məkan sahibi, director, admin, resepsiya, ofisiant və digər işçi hesablarına aiddir.',
+      'Bu şərtlər məkan sahibi, direktor, administrator, resepsiya, ofisiant və digər işçi hesablarına aiddir.',
       'Müştəri (məkan) öz işçilərinin bu qaydalara riayət etməsinə cavabdehdir.',
       'Ziddiyyət yaranarsa, **Xidmət müqaviləsi** kommersiya/ödəniş məsələlərində, bu sənəd isə istifadə davranışı üzrə tətbiq olunur.'
     ],
@@ -29,7 +29,7 @@ const az: DocumentBlock[] = [
     items: [
       'Hər istifadəçi yalnız özünə verilmiş hesabla daxil olmalıdır. Hesabın başqasına ötürülməsi qadağandır (sahibkarın yazılı razılığı olmadan).',
       'Şifrə və giriş məlumatları məxfi saxlanmalıdır. Şübhəli giriş və ya sızma dərhal sahibkara və mümkün olduqda Heselo-ya bildirilməlidir.',
-      'Director e-poçtu və digər əlaqə məlumatları aktual saxlanmalıdır.'
+      'Direktor e-poçtu və digər əlaqə məlumatları aktual saxlanmalıdır.'
     ],
   },
   { type: 'h2', text: '3. İcazələr və qoruma kodu' },
@@ -58,7 +58,7 @@ const az: DocumentBlock[] = [
   {
     type: 'ol',
     items: [
-      'Sistemi sındırmaq, təhlükəsizliyi aşmaq, reverse engineering və ya zərərli proqram yerləşdirmək.',
+      'Sistemi sındırmaq, təhlükəsizliyi aşmaq, əks mühəndislik (reverse engineering) və ya zərərli proqram yerləşdirmək.',
       'Digər məkanların və ya istifadəçilərin məlumatına müdaxilə etmək.',
       'Saxta rezervasiya, saxta ödəniş, borcun gizlədilməsi və ya hesabatların bilərəkdən təhrif edilməsi.',
       'Avtomatik skript / bot ilə icazəsiz kütləvi sorğu və ya məlumat çıxarılması (Heselo-nun yazılı icazəsi olmadan).',
@@ -71,7 +71,7 @@ const az: DocumentBlock[] = [
     type: 'ol',
     items: [
       'Məkana aid əməliyyat məlumatlarının düzgünlüyünü yoxlamaq Müştərinin və istifadəçilərin borcudur.',
-      'Hesabatların müntəzəm Excel / export ilə yedəklənməsi tövsiyə olunur; ətraflı qaydalar Xidmət müqaviləsindədir.',
+      'Hesabatların müntəzəm Excel / ixrac ilə yedəklənməsi tövsiyə olunur; ətraflı qaydalar Xidmət müqaviləsindədir.',
       'Şəxsi məlumatlar (qonaq, işçi) yalnız qanuni əsas və məkan ehtiyacı çərçivəsində emal edilməlidir.'
     ],
   },
@@ -96,7 +96,7 @@ const az: DocumentBlock[] = [
   {
     type: 'ol',
     items: [
-      'Heselo bu İstifadə şərtlərini yeniləyə bilər. Yenilənmiş mətn Sistem → Sənədlər bölməsində dərc olunur; əhəmiyyətli dəyişiklikdə director e-poçtuna bildiriş göndərilə bilər.',
+      'Heselo bu İstifadə şərtlərini yeniləyə bilər. Yenilənmiş mətn Sistem → Sənədlər bölməsində dərc olunur; əhəmiyyətli dəyişiklikdə direktor e-poçtuna bildiriş göndərilə bilər.',
       'Dərcdən sonra Sistemdən istifadənin davamı qəbul sayılır.'
     ],
   },

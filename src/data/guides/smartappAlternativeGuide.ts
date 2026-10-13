@@ -66,7 +66,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           bullets: [
             'Otaq/stansiya saatı əsas gəlir',
             'Bron → sessiya → uzadılma → kassa',
-            'Bar sessiyaya və stoka bağlıdır',
+            'Bar sessiyaya və anbara bağlıdır',
             'AZ / EN / RU, {low} AZN/aydan',
           ],
         },
@@ -83,7 +83,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['QR / loyalty', 'Platformada güclü', 'Əsas fokus deyil'],
               ['Rezervasiya', 'Platforma asılı', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Gaming hall tarif/depozit', 'Canlı sessiya, uzadılma, tarif'],
-              ['Kassa', 'POS konturu', 'Klub növbəsi + sessiya satışı'],
+              ['Kassa', 'POS prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Paket abunə (sayt)', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'AZ fokus', 'AZ, EN, RU'],
               [
@@ -96,13 +96,13 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Landşaft (qısa)',
+          title: 'Qısa baxış',
           paragraphs: [
             'SmartApp və Təndir yerli geniş platformalardır. Taymerlər (Club Timer, Hasansoft) və console SaaS (GameClub) ayrı kateqoriyadır.',
           ],
           bullets: [
             'SmartApp.az / Təndir — AZ all-in-one',
-            'GameClub — console-first lounge',
+            'GameClub — konsola üstünlük verən lounge',
             'Club Timer — sadə taymer',
             'Heselo — otaq-vaxt paneli',
           ],
@@ -120,7 +120,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Qərar checklisti',
+          title: 'Qərar yoxlama siyahısı',
           paragraphs: ['Gaming modulunu otaq paneli ilə qarışdırmayın — ehtiyacı ölçün.'],
           bullets: [
             'Otaq saatı gəlirinin payı',

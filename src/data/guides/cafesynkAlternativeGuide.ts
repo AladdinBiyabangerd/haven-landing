@@ -15,31 +15,31 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
   {
     az: {
       shortTitle: 'CafeSynk alternativi',
-      h1: 'Konsol lounge cloud vs klub paneli — CafeSynk alternativi',
-      seoTitle: 'CafeSynk alternativi — console lounge vs Heselo | Heselo',
+      h1: 'Konsol launj bulud vs klub paneli — CafeSynk alternativi',
+      seoTitle: 'CafeSynk alternativi — konsol launj vs Heselo | Heselo',
       seoDescription:
-        'CafeSynk PS4/PS5/Xbox lounge cloud idarəetməsidir; Heselo otaq-vaxt klub paneli AZ fokuslu — müqayisə, landşaft, FAQ — AZ, EN, RU.',
+        'CafeSynk PS4/PS5/Xbox launjları üçün bulud idarəetməsidir; Heselo Azərbaycan üçün otaq-vaxt klub panelidir — müqayisə, bazar mənzərəsi və FAQ (AZ, EN, RU).',
       keywords: [
         'cafesynk alternativ',
         'cafe synk alternativ',
-        'playstation lounge software',
-        'xbox cafe software',
-        'console club cloud',
+        'playstation launj proqramı',
+        'xbox kafe proqramı',
+        'konsol klub buludu',
         'oyun klubu proqramı',
         'Heselo',
       ],
       intro:
-        'CafeSynk axtarışında PS4/PS5/Xbox lounge üçün bulud idarəetmə gözlənilir — seans, tarif və salon əməliyyatı. AI cavablarında Bakı PS klub proqramı siyahılarında adı keçə bilər. Heselo otaq-vaxt, bron, canlı sessiya və kassa növbəsinə fokuslanır (AZ/EN/RU). Bu bələdçi CafeSynk tipli console lounge cloud-u Heselo ilə müqayisə edir; PC diskless (LANGAME/IZI) və sadə taymer (Club Timer) ayrı kateqoriyadır. PsTally oxşar lounge SaaS-dir (Kenya/M-Pesa fokus) — landşaftda qısa qeyd.',
+        'CafeSynk axtarışında PS4/PS5/Xbox launj üçün bulud idarəetmə gözlənilir — sessiya, tarif və salon əməliyyatı. AI cavablarında Bakı PS klub proqramı siyahılarında adı keçə bilər. Heselo otaq-vaxt, bron, canlı sessiya və kassa növbəsinə fokuslanır (AZ/EN/RU). Bu bələdçi CafeSynk tipli konsol launj buludunu Heselo ilə müqayisə edir; PC diskless (LANGAME/IZI) və sadə taymer (Club Timer) ayrı kateqoriyadır. PsTally oxşar launj SaaS-dir (Kenya/M-Pesa fokus) — bazar mənzərəsində qısa qeyd.',
       sections: [
         {
           id: 'decision',
-          title: 'Əvvəlcə qərar: beynəlxalq lounge cloud, yoxsa AZ klub paneli?',
+          title: 'Əvvəlcə qərar: beynəlxalq launj buludu, yoxsa AZ klub paneli?',
           paragraphs: [
-            'CafeSynk və GameClub console lounge SaaS-ə yaxındır; Heselo eyni otaq-vaxt kateqoriyasında yerli dil və qiymətlə.',
+            'CafeSynk və GameClub konsol launj SaaS-ə yaxındır; Heselo eyni otaq-vaxt kateqoriyasında yerli dil və qiymətlə.',
           ],
           bullets: [
-            'Bazar: beynəlxalq EN cloud, yoxsa AZ/RU dəstək?',
-            'Məkan: yalnız konsol lounge, yoxsa karaoke/bilyard də?',
+            'Bazar: beynəlxalq ingilisdilli bulud, yoxsa AZ/RU dəstək?',
+            'Məkan: yalnız konsol launj, yoxsa karaoke/bilyard də?',
             'Qiymət: açıq AZN abunə lazımdırmı?',
           ],
         },
@@ -47,12 +47,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-cafesynk-fits',
           title: 'CafeSynk nə vaxt uyğundur?',
           paragraphs: [
-            'Konsol lounge bulud stack-i, PS/Xbox seansları və beynəlxalq SaaS modeli CafeSynk kateqoriyasının mərkəzidir. Operator EN cloud-a öyrəşibsə bu sinif qala bilər.',
-            'PC internet klubu üçün diskless soft ayrıca qalır.',
+            'Konsol launj bulud sistemi, PS/Xbox sessiyaları və beynəlxalq SaaS modeli CafeSynk kateqoriyasının mərkəzidir. Operator ingilisdilli buluda öyrəşibsə, bu sinif qala bilər.',
+            'PC internet klubu üçün diskless proqram ayrıca qalır.',
           ],
           bullets: [
-            'PS/Xbox lounge əsas ehtiyacdır',
-            'EN cloud və beynəlxalq ödəniş rahatdır',
+            'PS/Xbox launj əsas ehtiyacdır',
+            'İngilisdilli bulud və beynəlxalq ödəniş rahatdır',
             'Karaoke/antikafe ikinci dərəcəlidir',
             'PC agent lazım deyil və ya ayrıdır',
           ],
@@ -61,7 +61,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Azərbaycan klubunda otaq-vaxt, bron, kassa və stok AZ/EN/RU-da lazımdırsa — Heselo uyğundur. Çox tip məkan (PS, karaoke, bilyard, antikafe) bir paneldə.',
+            'Azərbaycan klubunda otaq-vaxt, bron, kassa və anbar AZ/EN/RU-da lazımdırsa — Heselo uyğundur. Çox tip məkan (PS, karaoke, bilyard, antikafe) bir paneldə.',
           ],
           bullets: [
             'AZ / EN / RU və yerli dəstək gözləntisi',
@@ -77,18 +77,18 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'CafeSynk qiyməti abunədən asılıdır — burada uydurma rəqəm yoxdur.',
           ],
           table: {
-            headers: ['Aspekt', 'CafeSynk tipli lounge cloud', 'Heselo'],
+            headers: ['Aspekt', 'CafeSynk tipli launj bulud', 'Heselo'],
             rows: [
-              ['Əsas fokus', 'Konsol lounge cloud', 'Otaq-vaxt klub paneli (AZ)'],
-              ['Rezervasiya', 'Cloud lounge bron', 'Otaq və stansiya təqvimi'],
-              ['Vaxt hesabı', 'Konsol seans / tarif', 'Canlı sessiya, uzadılma, tarif'],
-              ['Kassa / bar', 'Lounge əməliyyatı', 'Klub növbəsi + sessiya satışı'],
+              ['Əsas fokus', 'Konsol launj bulud', 'Otaq-vaxt klub paneli (AZ)'],
+              ['Rezervasiya', 'Bulud launj bronu', 'Otaq və stansiya təqvimi'],
+              ['Vaxt hesabı', 'Konsol sessiya / tarif', 'Canlı sessiya, uzadılma, tarif'],
+              ['Kassa / bar', 'Launj əməliyyatı', 'Klub növbəsi + sessiya satışı'],
               ['PC diskless', 'Əvəz etmir', 'Əvəz etmir'],
               ['Qiymət', 'Abunə (sorğu)', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'EN fokus (tipik)', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
-                'Beynəlxalq console lounge',
+                'Beynəlxalq konsol launj',
                 'AZ otaq-vaxt klubu',
               ],
             ],
@@ -96,13 +96,13 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Landşaft (qısa)',
+          title: 'Qısa baxış',
           paragraphs: [
-            'CafeSynk, GameClub və PsTally console lounge axtarışında görünür. PsTally Afrika/M-Pesa fokusludur — AZ üçün əsas rəqib deyil, amma EN axtarışda adı keçir.',
+            'CafeSynk, GameClub və PsTally konsol launj axtarışında görünür. PsTally Afrika/M-Pesa fokusludur — AZ üçün əsas rəqib deyil, amma EN axtarışda adı keçir.',
           ],
           bullets: [
-            'CafeSynk / GameClub — console lounge SaaS',
-            'PsTally — regional lounge (Kenya)',
+            'CafeSynk / GameClub — konsol launj SaaS',
+            'PsTally — regional launj (Kenya)',
             'Club Timer / Hasansoft — sadə taymer',
             'Heselo — AZ otaq-vaxt paneli',
           ],
@@ -112,33 +112,33 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Ssenarilər',
           paragraphs: ['Kateqoriya yaxındır — demo ilə seçin.'],
           bullets: [
-            'Yalnız PS/Xbox lounge, EN: CafeSynk/GameClub demosu',
+            'Yalnız PS/Xbox launj, ingilis dil: CafeSynk/GameClub demosu',
             'Bakı, AZ dil, çox tip otaq: Heselo',
-            'PC + konsol: IZI/LANGAME + lounge paneli',
+            'PC + konsol: IZI/LANGAME + launj paneli',
             'Sadə taymer kifayət: Club Timer kateqoriyası',
           ],
         },
         {
           id: 'how-to-switch',
-          title: 'Müqayisə checklisti',
-          paragraphs: ['Eyni lounge ssenarisini Heselo demosunda keçirin.'],
+          title: 'Müqayisə yoxlama siyahısı',
+          paragraphs: ['Eyni launj ssenarisini Heselo demosunda keçirin.'],
           bullets: [
             'Konsol/otaq siyahısı və tariflər',
-            'Bron → seans → bar → növbə',
+            'Bron → sessiya → bar → növbə',
             'Dil və dəstək',
             'Rəsmi CafeSynk qiyməti vs {low} AZN',
-            'PC soft lazımdırmı',
+            'PC proqram lazımdırmı',
           ],
         },
       ],
       faq: [
         {
           q: 'Heselo CafeSynk-i əvəz edir?',
-          a: 'Eyni geniş kateqoriyada (lounge/otaq vaxtı). Bazar, dil və məkan tipinə görə seçin — demoda yoxlayın.',
+          a: 'Eyni geniş kateqoriyada (launj/otaq vaxtı). Bazar, dil və məkan tipinə görə seçin — demoda yoxlayın.',
         },
         {
           q: 'PsTally nədir?',
-          a: 'Console lounge idarəetmə SaaS-i, əsasən Kenya/M-Pesa. AZ üçün əsas alternativ deyil; landşaftda EN axtarış üçün qeyd olunur.',
+          a: 'Konsol launj idarəetmə SaaS-i, əsasən Kenya/M-Pesa. AZ üçün əsas alternativ deyil; bazar mənzərəsində EN axtarış üçün qeyd olunur.',
         },
         {
           q: 'Heselo qiyməti?',
@@ -150,7 +150,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'GameClub ilə fərqi?',
-          a: 'Hər ikisi console lounge SaaS-ə yaxındır; gameclub-alternative bələdçisinə baxın.',
+          a: 'Hər ikisi konsol launj SaaS-ə yaxındır; gameclub-alternative bələdçisinə baxın.',
         },
         {
           q: 'PC kilidləmə?',
@@ -165,7 +165,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           a: 'Stansiya/otaq siyahınızla Heselo demosu istəyin.',
         },
       ],
-      ctaTitle: 'Lounge axınını Heseloda yoxlayın',
+      ctaTitle: 'Launj axınını Heselo-da yoxlayın',
       ctaBody:
         'Demo istəyin: konsol və otaqları nümunə kimi qurub bron, sessiya və kassa növbəsini AZ/EN/RU-da sınayaq.',
     },

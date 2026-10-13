@@ -36,15 +36,15 @@ export const az: Messages = {
     about: 'Haqqında',
     rights: 'Bütün hüquqlar qorunur.',
     tagline: 'Masa · Otaq · Canlı zal · Kassa',
-    credit: 'Yaradıcı',
+    credit: 'Qurucusu',
   },
   hero: {
     brandHint: 'Heselo',
     title: 'Oyun klubu, karaoke və otaqlı məkanlar üçün rezervasiya və kassa paneli.',
     subtitle:
       'Cədvəl, canlı sessiya və növbə bir ekranda — WhatsApp və Excel əvəzinə. Restoran POS və ya mətbəx sistemi deyil.',
-    ctaPrimary: 'WhatsApp ilə yazın',
-    ctaSecondary: 'Forma ilə yazın',
+    ctaPrimary: 'Demo istəyin',
+    ctaSecondary: 'WhatsApp ilə yazın',
   },
   trust: {
     items: [
@@ -65,11 +65,11 @@ export const az: Messages = {
       },
       {
         title: 'Canlı sessiya və kassa',
-        desc: 'Qonağın gəlişindən ödənişə qədər hər şey eyni ekranda: vaxt, əlavə satış və qalıq.',
+        desc: 'Qonağın gəlişindən ödənişə qədər hər şey eyni ekranda: vaxt, əlavə satış və ödəniləcək qalıq.',
       },
       {
         title: 'Növbənin bağlanışı',
-        desc: 'Günün sonunda kassa sayımı və hesabat — kimin nə yazdığı aydın görünür.',
+        desc: 'Günün sonunda kassa sayımı və hesabat — kimin nəyi dəyişdiyi aydın görünür.',
       },
     ],
   },
@@ -82,14 +82,14 @@ export const az: Messages = {
     withoutLabel: 'Əvvəl',
     withLabel: 'Heselo ilə',
     before: [
-      'Cədvəl və canlı zal bir-biri ilə əlaqəli deyil',
+      'Cədvəl ilə canlı zal tez sinxronu itirir',
       'Növbə bağlananda ödənişlər qarışır',
-      'Keçmiş günlərdə kimin nə dəyişdiyi bilinmir',
+      'Keçmişə düzəliş qorunmur — aydın qapı yoxdur',
     ],
     after: [
       'Rezervasiyadan canlı sessiyaya keçid',
       'Ödənişlər gün və növbə üzrə izlənilir',
-      'Vacib əməliyyatlar qoruma kodu ilə qorunur',
+      'Vacib əməliyyatlar üçün qoruma kodu tələb olunur',
     ],
   },
   pillars: {
@@ -119,7 +119,7 @@ export const az: Messages = {
     titleAccent: 'başlayır.',
     lead: '15 dəqiqəlik demo, kart tələb olunmur. Tariflər məkan tipinə görə açıqdır.',
     ctaPricing: 'Tariflərə baxın',
-    ctaDemo: 'WhatsApp ilə yazın',
+    ctaDemo: 'Demo istəyin',
   },
   how: {
     eyebrow: 'Necə başlanır',
@@ -132,7 +132,7 @@ export const az: Messages = {
       },
       {
         title: 'Növbəni idarə edin',
-        desc: 'Rezerv, canlı sessiya və kassa — eyni paneldə.',
+        desc: 'Rezervasiya, canlı sessiya və kassa — eyni paneldə.',
       },
       {
         title: 'Günü bağlayın',
@@ -159,7 +159,7 @@ export const az: Messages = {
       },
       {
         q: 'Heselo iiko və ya Clopos-u əvəz edir?',
-        a: 'Mətbəx, KDS və restoran zalı lazımdırsa — xeyr, iiko və ya Clopos seçin. Əsas iş otaq və PlayStation vaxtı, bron və kassa növbəsidirsə, Heselo bu məkanlar üçün daha sadə alternativdir.',
+        a: 'Mətbəx, KDS və restoran zalı lazımdırsa — xeyr, iiko və ya Clopos seçin. Əsas iş otaq və PlayStation vaxtı, rezervasiya və kassa növbəsidirsə, Heselo bu məkanlar üçün daha sadə alternativdir.',
         href: '/guides/iiko-alternative-clubs',
         linkLabel: 'Dürüst müqayisə bələdçisi',
       },
@@ -171,7 +171,7 @@ export const az: Messages = {
       },
       {
         q: 'Heselo ilə rezervasiyaları idarə etmək olar?',
-        a: 'Bəli. Cədvəl və rezervasiya modulunda masa və otaq bronu, köçürmə, ləğv və tarixçə var. Qonaq gələndə eyni bron canlı sessiyaya çevrilir.',
+        a: 'Bəli. Cədvəl və rezervasiya modulunda masa və otaq rezervasiyası, köçürmə, ləğv və tarixçə var. Qonaq gələndə eyni rezervasiya canlı sessiyaya çevrilir.',
         href: '/solutions/reservations',
         linkLabel: 'Rezervasiya imkanları',
       },
@@ -219,7 +219,7 @@ export const az: Messages = {
         q: '«Açılmış sessiya» nə deməkdir?',
         a: 'Tarif limitləri hesab üzrə aylıq açılmış sessiya sayına görədir — qonağın zalda başlayan canlı oyun və ya otaq sessiyası. Limitə daxil olan say plana yazılıb; artıq hər sessiya üçün əlavə haqq qiymətlər səhifəsində göstərilir.',
         href: '/pricing',
-        linkLabel: 'Limitləri cədvəldə görün',
+        linkLabel: 'Limitlərə cədvəldə baxın',
       },
       {
         q: 'Demo necə alınır?',
@@ -234,8 +234,8 @@ export const az: Messages = {
     title: 'Biznes idarəetmə proqramı',
     titleAccent: 'məkanınızın gündəlik işləri üçün.',
     paragraphs: [
-      'Heselo Azərbaycan üçün məkan idarəetmə proqramıdır: oyun klubu, karaoke, bilyard, antikafe və otaqlı launj rezervasiya, canlı zal, kassa və anbar üçün ondan istifadə edir — masa, otaq və ya stansiya vaxtı satan məkanlar (~{low} AZN/aydan).',
-      'iiko və ya Clopos kimi restoran POS-u axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, bron və kassa növbəsi üçün Heselo otaq və vaxt əsaslı məkanlar üçün daha sadə idarəetmə alternatividir.',
+      'Heselo Azərbaycan üçün məkan idarəetmə proqramıdır: oyun klubu, karaoke, bilyard, antikafe və otaqlı launjlar rezervasiya, canlı zal, kassa və anbar üçün ondan istifadə edir — masa, otaq və ya stansiya vaxtı satan məkanlar (~{low} AZN/aydan).',
+      'iiko və ya Clopos kimi restoran POS-u axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, rezervasiya və kassa növbəsi üçün Heselo otaq və vaxt əsaslı məkanlar üçün daha sadə idarəetmə alternatividir.',
       'Heselonu Bakıda Aladdin Biyabangerd təkbaşına yaradıb — ətraflı məlumat Haqqında səhifəsindədir.',
     ],
   },
@@ -243,7 +243,7 @@ export const az: Messages = {
     eyebrow: 'Kimlər üçündür',
     title: 'Məkanınızın tipinə',
     titleAccent: 'uyğun qurulub.',
-    intro: 'Məkan tipinizi seçin və Heselonun gündəlik işi necə sadələşdirdiyini görün.',
+    intro: 'Məkan tipinizi seçin — Heselo gündəlik işi necə sadələşdirir, görün.',
     items: [
       {
         slug: 'gaming',
@@ -290,7 +290,7 @@ export const az: Messages = {
   },
   productShot: {
     alts: {
-      'live-floor': 'Heselo canlı izləmə ekranı — aktiv otaq sessiyaları və ödəniş',
+      'live-floor': 'Heselo canlı zal — aktiv otaq sessiyaları və ödəniş',
       schedule: 'Heselo cədvəl ekranı — otaq və masa rezervasiyası cədvəli',
       sessions: 'Heselo sessiyalar siyahısı — günün aktiv və bağlanmış sessiyaları',
       cash: 'Heselo kassa ekranı — günün əməliyyatları və balans',
@@ -312,9 +312,9 @@ export const az: Messages = {
   eeat: {
     eyebrow: 'Etibar və şəffaflıq',
     title: 'Saxta rəy yox —',
-    titleAccent: 'yoxlanıla bilən faktlar.',
+    titleAccent: 'yoxlana bilən faktlar.',
     intro:
-      'Uydurma rəy və ulduz yoxdur. Qiymət, hesablar və hüquqi sənədləri özünüz yoxlaya bilərsiniz.',
+      'Uydurma rəy və ulduz yoxdur. Qiymət, pul hesablamaları və hüquqi səhifələri özünüz yoxlaya bilərsiniz.',
     items: [
       {
         title: 'Açıq qiymət',
@@ -358,7 +358,7 @@ export const az: Messages = {
     },
     stillLearning: {
       prompt: 'Əvvəl oxumaq istəyirsinizsə,',
-      label: 'qısa izaha baxın',
+      label: 'qısa bələdçiyə baxın',
     },
     howItLooks: {
       prompt: 'Heselo-da necə göründüyü',
@@ -374,7 +374,7 @@ export const az: Messages = {
     },
   },
   cta: {
-    title: 'Növbəti növbənizi Heselo ilə idarə edin.',
+    title: 'Növbəti növbəyə Heselo ilə başlayın.',
     subtitle: '15 dəqiqəlik demo — iş saatlarında adətən 2 saat ərzində cavab.',
     button: 'Forma ilə yazın',
     whatsapp: 'WhatsApp ilə yazın',
@@ -390,7 +390,7 @@ export const az: Messages = {
     eyebrow: 'Haqqında',
     title: 'Heselonu kim yaradıb?',
     intro:
-      'Heselo Bakıda, Azərbaycanda qurulmuş B2B məkan idarəetmə panelidir. Oyun klubu, karaoke, bilyard, antikafe və otaqlı launj rezervasiya, canlı sessiya, kassa və anbarı bir yerdə aparmaq üçün ondan istifadə edir — məhsulun arxasında tək yaradıcı durur.',
+      'Heselo Bakıda, Azərbaycanda qurulmuş B2B məkan idarəetmə panelidir. Oyun klubu, karaoke, bilyard, antikafe və otaqlı launjlar rezervasiya, canlı sessiya, kassa və anbarı bir yerdə aparmaq üçün ondan istifadə edir — məhsulun arxasında tək yaradıcı durur.',
     whatTitle: 'Heselo nədir?',
     whatBody: [
       'Heselo masa, otaq və ya PlayStation stansiyası vaxtı satan məkanlar üçün veb proqramdır. Operatorlar rezervasiya, canlı zal (indi kim oynayır), kassa növbəsi və anbarı bir paneldən aparır — mətbəx POS-u və ya restoran KDS-i deyil.',
@@ -398,14 +398,14 @@ export const az: Messages = {
     ],
     whoTitle: 'Heselo kimlər üçündür?',
     whoBody: [
-      'Vaxtla işləyən məkanlar üçündür: PlayStation və PC oyun klubları, ayrı otaqlı karaoke, bilyard klubları, zonali antikafe və saatla otaq icarəyə verən launjlar.',
+      'Vaxtla işləyən məkanlar üçündür: PlayStation və PC oyun klubları, ayrı otaqlı karaoke, bilyard klubları, zonalı antikafe və saatla otaq icarəyə verən launjlar.',
       'Gəlirinizin böyük hissəsi mətbəx çekindən yox, otaq və ya stansiya vaxtından gəlirsə, Heselo gündəlik zal işinə restoran POS-undan daha uyğundur.',
     ],
     founderSectionTitle: 'Heselonu kim qurub?',
     founderJobTitle: 'Yaradıcı və təsisçi',
     founderSchemaDescription:
       'Aladdin Biyabangerd — Heselo məkan idarəetmə platformasının tək yaradıcısı və təsisçisi. Bakı, Azərbaycan.',
-    founderLabel: 'Yaradıcı',
+    founderLabel: 'Təsisçi',
     paragraphs: [
       'Heselonu Aladdin Biyabangerd yaradıb. O, ideyanı, proqram təminatını və bulud infrastrukturunu sıfırdan qurub — məhsulun birgə yaradıcısı və ya ayrıca hüquqi şəxs adı altında gizlədilmiş başqa yaradıcısı yoxdur.',
       'Məqsəd sadədir: oyun klubu, karaoke, bilyard, antikafe və otaqlı launj kimi vaxtla işləyən məkanlarda rezervasiya, canlı sessiya, kassa və anbarı bir paneldə birləşdirmək.',
@@ -515,8 +515,8 @@ export const az: Messages = {
     },
     planPrev: 'Əvvəlki plan',
     planNext: 'Növbəti plan',
-    planFeaturesMore: 'Daha çox',
-    planFeaturesLess: 'Daha az',
+    planFeaturesMore: 'Ətraflı oxu',
+    planFeaturesLess: 'Daha az göstər',
     calculator: {
       eyebrow: 'Müqayisə',
       title: 'Açılmış sessiya sayına görə xərci hesablayın',
@@ -530,7 +530,7 @@ export const az: Messages = {
       baseFee: 'Baza haqqı',
       overageCost: 'Limitdən artıq',
       total: 'Cəmi',
-      cheapest: 'Ən aşağı qiymət',
+      cheapest: 'Ən sərfəli',
       crossoverTitle: 'Tarif keçidləri',
       crossoverHint: '{n} açılmış sessiyadan etibarən {to} tarifi {from} tarifindən daha aşağı qiymətə başa gəlir.',
       noCrossover: 'Bu məkan tipi üçün tarif keçidi yoxdur.',
@@ -585,14 +585,14 @@ export const az: Messages = {
     offers: {
       gaming: {
         name: 'Oyun klubu / PS',
-        intro: 'Club Timer yalnız vaxtı sayır — burada rezerv, sessiya və kassa bir yerdədir.',
+        intro: 'Club Timer yalnız vaxtı sayır — burada bron, sessiya və kassa bir yerdədir.',
         plans: {
           starter: {
             forWhom: 'Kiçik PS/PC klubu: bir məkan',
-            desc: 'Rezerv, canlı sessiya, kassa, anbar və müştəri kartı bir paneldə — növbə qaydası ilə bağlanır.',
+            desc: 'Bron, canlı sessiya, kassa, anbar və müştəri kartı bir paneldə — növbə qaydası ilə bağlanır.',
             features: [
               '{n} PS/PC stansiyasına qədər',
-              'Cədvəl: rezerv, köçürmə, ləğv',
+              'Cədvəl: bron, köçürmə, ləğv',
               'Canlı sessiya: vaxt, uzatma, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -607,7 +607,7 @@ export const az: Messages = {
             features: [
               '{n} stansiyaya qədər',
               'Bir neçə məkan eyni hesabda',
-              'Cədvəl: rezerv, köçürmə, ləğv',
+              'Cədvəl: bron, köçürmə, ləğv',
               'Canlı sessiya: vaxt, uzatma, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -622,28 +622,28 @@ export const az: Messages = {
             features: [
               '{n} stansiyaya qədər',
               'Bir neçə məkan, böyük həcm',
-              'Cədvəl: rezerv, köçürmə, ləğv',
+              'Cədvəl: bron, köçürmə, ləğv',
               'Canlı sessiya: vaxt, uzatma, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
               'Müştəri kartı və ziyarət tarixçəsi',
               'İşçi icazələri və qoruma kodu',
               'Tam analitika paketi (bütün kateqoriyalar)',
-              'Custom statistika: əlavə səhifə yaradıb fərdiləşdirmə',
+              'Fərdi statistika: əlavə səhifə yaradıb fərdiləşdirmə',
             ],
           },
         },
       },
       billiards: {
         name: 'Bilyard',
-        intro: 'Masa taymeri yox — rezerv, sessiya və kassa eyni paneldə.',
+        intro: 'Masa taymeri yox — bron, sessiya və kassa eyni paneldə.',
         plans: {
           starter: {
             forWhom: 'Kiçik bilyard zalı: bir məkan',
             desc: 'Masa cədvəli, canlı sessiya, kassa və anbar bir yerdə — uzatma və məhsul eyni qəbzdə qalır.',
             features: [
               '{n} masaya qədər',
-              'Masa rezervi, köçürmə və ləğv',
+              'Masa bronu, köçürmə və ləğv',
               'Canlı sessiya: vaxt, uzatma, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -658,7 +658,7 @@ export const az: Messages = {
             features: [
               '{n} masaya qədər',
               'Bir neçə məkan eyni hesabda',
-              'Masa rezervi, köçürmə və ləğv',
+              'Masa bronu, köçürmə və ləğv',
               'Canlı sessiya: vaxt, uzatma, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -673,28 +673,28 @@ export const az: Messages = {
             features: [
               '{n} masaya qədər',
               'Bir neçə məkan, böyük həcm',
-              'Masa rezervi, köçürmə və ləğv',
+              'Masa bronu, köçürmə və ləğv',
               'Canlı sessiya: vaxt, uzatma, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
               'Müştəri kartı və ziyarət tarixçəsi',
               'İşçi icazələri və qoruma kodu',
               'Tam analitika paketi (bütün kateqoriyalar)',
-              'Custom statistika: əlavə səhifə yaradıb fərdiləşdirmə',
+              'Fərdi statistika: əlavə səhifə yaradıb fərdiləşdirmə',
             ],
           },
         },
       },
       karaoke: {
         name: 'Karaoke',
-        intro: 'Otaq bronu itiriləndə bir axşamın gəliri gedə bilər — buna görə karaoke otaqları ayrıca tarif kateqoriyasındadır.',
+        intro: 'Otaq bronu itib getsə, bir aylıq gəlirdən çox itki ola bilər — ona görə karaoke otaqları ayrıca tarifdədir.',
         plans: {
           starter: {
             forWhom: 'Kiçik karaoke: bir məkan',
-            desc: 'Otaq rezervi mesajlarda itmir. Sessiya, məhsul, kassa və anbar eyni paneldə idarə olunur.',
+            desc: 'Otaq bronu mesajlarda itmir. Sessiya, məhsul, kassa və anbar eyni paneldə idarə olunur.',
             features: [
               '{n} karaoke otağına qədər',
-              'Otaq cədvəli: rezerv, köçürmə, ləğv',
+              'Otaq cədvəli: bron, köçürmə, ləğv',
               'Canlı otaq sessiyası: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -709,7 +709,7 @@ export const az: Messages = {
             features: [
               '{n} otağa qədər',
               'Bir neçə məkan eyni hesabda',
-              'Otaq cədvəli: rezerv, köçürmə, ləğv',
+              'Otaq cədvəli: bron, köçürmə, ləğv',
               'Canlı otaq sessiyası: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -724,14 +724,14 @@ export const az: Messages = {
             features: [
               '{n} otağa qədər',
               'Bir neçə məkan, böyük həcm',
-              'Otaq cədvəli: rezerv, köçürmə, ləğv',
+              'Otaq cədvəli: bron, köçürmə, ləğv',
               'Canlı otaq sessiyası: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
               'Müştəri kartı və ziyarət tarixçəsi',
               'İşçi icazələri və qoruma kodu',
               'Tam analitika paketi (bütün kateqoriyalar)',
-              'Custom statistika: əlavə səhifə yaradıb fərdiləşdirmə',
+              'Fərdi statistika: əlavə səhifə yaradıb fərdiləşdirmə',
             ],
           },
         },
@@ -742,10 +742,10 @@ export const az: Messages = {
         plans: {
           starter: {
             forWhom: 'Kiçik launj: bir məkan',
-            desc: 'VIP otaq rezervi və canlı sessiya bir paneldə; içki, kassa və anbar eyni axında qalır.',
+            desc: 'VIP otaq bronu və canlı sessiya bir paneldə; içki, kassa və anbar eyni axında qalır.',
             features: [
               '{n} VIP otağa qədər',
-              'Otaq rezervi, köçürmə və ləğv',
+              'Otaq bronu, köçürmə və ləğv',
               'Canlı otaq sessiyası: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -760,7 +760,7 @@ export const az: Messages = {
             features: [
               '{n} otağa qədər',
               'Bir neçə məkan eyni hesabda',
-              'Otaq rezervi, köçürmə və ləğv',
+              'Otaq bronu, köçürmə və ləğv',
               'Canlı otaq sessiyası: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -775,14 +775,14 @@ export const az: Messages = {
             features: [
               '{n} otağa qədər',
               'Bir neçə məkan, böyük həcm',
-              'Otaq rezervi, köçürmə və ləğv',
+              'Otaq bronu, köçürmə və ləğv',
               'Canlı otaq sessiyası: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
               'Müştəri kartı və ziyarət tarixçəsi',
               'İşçi icazələri və qoruma kodu',
               'Tam analitika paketi (bütün kateqoriyalar)',
-              'Custom statistika: əlavə səhifə yaradıb fərdiləşdirmə',
+              'Fərdi statistika: əlavə səhifə yaradıb fərdiləşdirmə',
             ],
           },
         },
@@ -793,10 +793,10 @@ export const az: Messages = {
         plans: {
           starter: {
             forWhom: 'Kiçik antikafe: bir məkan',
-            desc: 'Saatlıq sessiya, rezerv, kassa, anbar və müştəri kartı bir paneldə — çay/qəlyanaltı eyni qəbzdə satılır.',
+            desc: 'Saatlıq sessiya, bron, kassa, anbar və müştəri kartı bir paneldə — çay/qəlyanaltı eyni qəbzdə satılır.',
             features: [
               '{n} zonaya qədər',
-              'Masa və zona rezervi (köçürmə, ləğv)',
+              'Masa və zona bronu (köçürmə, ləğv)',
               'Saatlıq canlı sessiya: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -811,7 +811,7 @@ export const az: Messages = {
             features: [
               '{n} zonaya qədər',
               'Bir neçə məkan eyni hesabda',
-              'Masa və zona rezervi (köçürmə, ləğv)',
+              'Masa və zona bronu (köçürmə, ləğv)',
               'Saatlıq canlı sessiya: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
@@ -826,14 +826,14 @@ export const az: Messages = {
             features: [
               '{n} zonaya qədər',
               'Bir neçə məkan, böyük həcm',
-              'Masa və zona rezervi (köçürmə, ləğv)',
+              'Masa və zona bronu (köçürmə, ləğv)',
               'Saatlıq canlı sessiya: vaxt, məhsul, ödəniş',
               'Kassa növbəsi və günün bağlanışı',
               'Anbar qalığı və sayım',
               'Müştəri kartı və ziyarət tarixçəsi',
               'İşçi icazələri və qoruma kodu',
               'Tam analitika paketi (bütün kateqoriyalar)',
-              'Custom statistika: əlavə səhifə yaradıb fərdiləşdirmə',
+              'Fərdi statistika: əlavə səhifə yaradıb fərdiləşdirmə',
             ],
           },
         },
@@ -865,7 +865,7 @@ export const az: Messages = {
     ],
     customTitle: 'Fərdi qiymət üçün bizə yazın',
     customIntro:
-      'Məkan sayını, işçi sayını və aylıq rezerv həcmini qeyd edin — qiyməti bu göstəricilərə əsasən razılaşdırırıq.',
+      'Məkan sayını, işçi sayını və aylıq rezervasiya həcmini qeyd edin — qiyməti bu göstəricilərə əsasən razılaşdırırıq.',
     customNotice:
       'Aşağıdakı meyarlar mütləqdir — təklif bu göstəricilərə əsasən hazırlanır.',
     customSubmit: 'Qiymət sorğusu göndər',
@@ -892,7 +892,7 @@ export const az: Messages = {
     message: 'Mesaj',
     submit: 'Göndər',
     sending: 'Göndərilir…',
-    success: 'Mesajınız çatdı. Tezliklə sizinlə əlaqə saxlayacağıq.',
+    success: 'Mesajınızı aldıq. Tezliklə əlaqə saxlayacağıq.',
     error: 'Göndərmək alınmadı. WhatsApp-dan və ya e-poçtla yazın.',
     alt: 'Və ya birbaşa bizə yazın:',
     emailWrite: 'E-poçt ilə yazın',
@@ -989,7 +989,7 @@ export const az: Messages = {
       'Azərbaycan / İngilis / Rus',
     ],
     aggregateOfferDescription:
-        'Açıq aylıq abunə planları məkan tipinə görə {low} AZN-dən. Tam cədvəl /pricing səhifəsində. Fərdi təklif yalnız bir neçə filial və ya standart plana sığmayan həcm üçündür.',
+        'Açıq aylıq abunə planları məkan tipinə görə {low} AZN-dən. Tam cədvəl Qiymətlər səhifəsindədir. Fərdi təklif yalnız bir neçə filial və ya standart plana sığmayan həcm üçündür.',
     pages: {
       faq: {
         title: 'Tez-tez verilən suallar | Heselo',
@@ -1051,20 +1051,20 @@ export const az: Messages = {
           'Heselo yaradıcısı',
           'Aladdin Biyabangerd',
           'Heselo kim yaradıb',
-          'Heselo founder',
+          'Heselo təsisçisi',
           'Heselo Bakı',
         ],
       },
       privacy: {
         title: 'Məxfilik siyasəti — Heselo',
         description:
-            'Şəxsi məlumatların emalı, saxlanması, cookie və hüquqlar — Sistem → Sənədlərlə eyni mətn.',
+            'Şəxsi məlumatların emalı, saxlanması və qorunması — Sistem → Sənədlər ilə eyni mətn.',
         keywords: ['məxfilik', 'Heselo məxfilik', 'şəxsi məlumat'],
       },
       terms: {
         title: 'İstifadə şərtləri — Heselo',
         description:
-            'Hesab, icazələr, qoruma kodu və platformadan istifadə qaydaları — Sistem → Sənədlərlə eyni mətn.',
+            'Hesab, icazələr, qoruma kodu və platformadan istifadə qaydaları — Sistem → Sənədlər ilə eyni mətn.',
         keywords: ['şərtlər', 'Heselo şərtlər', 'istifadə şərtləri'],
       },
       solutions: {
@@ -1088,7 +1088,7 @@ export const az: Messages = {
           'iiko alternativ',
           'clopos alternativ',
           'dine alternativ',
-          'karaoke otaqları necə rezerv edilir',
+          'karaoke otaqları necə bron edilir',
         ],
       },
     },

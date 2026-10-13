@@ -18,10 +18,10 @@ const az: DocumentBlock[] = [
   {
     type: 'ol',
     items: [
-      'Bu siyasət məkan sahibi, director, admin, resepsiya, ofisiant və digər işçi hesablarına aiddir.',
+      'Bu siyasət məkan sahibi, direktor, administrator, resepsiya, ofisiant və digər işçi hesablarına aiddir.',
       '**Müştəri (məkan)** — Sistemə daxil etdiyi qonaq / müştəri məlumatlarının əsas məsul tərəfidir: nəyin yazılacağı və kimə göstəriləcəyi Müştərinin öhdəliyidir.',
       '**Heselo** — bu məlumatları Xidməti göstərmək üçün emal edir; mülkiyyət Xidmət müqaviləsinə uyğun olaraq Müştəriyə məxsusdur.',
-      'Heselo hesabı (email, ad, şifrə hash, giriş sessiyası) üçün Heselo öz emalını aparır.',
+      'Heselo hesabı (e-poçt, ad, şifrə hash, giriş sessiyası) üçün Heselo öz emalını aparır.',
       'Ziddiyyət yaranarsa: kommersiya — **Xidmət müqaviləsi**; davranış — **İstifadə şərtləri**; şəxsi məlumat — bu siyasət.'
     ],
   },
@@ -46,7 +46,7 @@ const az: DocumentBlock[] = [
   {
     type: 'ul',
     items: [
-      'tarix və saat, resurs (~~masa / zona / otaq~~ masa / otaq);',
+      'tarix və saat, resurs (masa / otaq);',
       'qeydlər və əvvəlcədən sifariş sətirləri;',
       'ödəniş məbləğləri, üsul (məs. nağd, bank, POS) və kassa / növbə əlaqəsi.'
     ],
@@ -67,7 +67,7 @@ const az: DocumentBlock[] = [
     type: 'ul',
     items: [
       'məkan adı, şəhər, ünvan, saat qurşağı;',
-      'director və əlaqə e-poçtu;',
+      'direktor və əlaqə e-poçtu;',
       'abunəlik / hesablaşma üçün Müştərinin verdiyi identifikasiya məlumatları (məs. VÖEN — müqavilə üzrə).'
     ],
   },
@@ -98,7 +98,7 @@ const az: DocumentBlock[] = [
   {
     type: 'ol',
     items: [
-      'Rezervasiya, canlı mərtəbə, kassa, anbar və hesabatların işləməsi.',
+      'Rezervasiya, canlı zal, kassa, anbar və hesabatların işləməsi.',
       'Hesab girişi, təhlükəsizlik, icazələr və qoruma kodu yoxlaması.',
       'Abunəlik, bildiriş və dəstək əlaqəsi.',
       'Məkanın öz statistikası (müştəri və ödəniş icmalları).',
@@ -133,7 +133,7 @@ const az: DocumentBlock[] = [
       'Məlumatlar aktiv abunəlik və Xidmətin göstərilməsi müddətində saxlanılır.',
       'Müqavilə bitdikdən sonra Heselo texniki və hüquqi ehtiyac həddində məhdud müddət saxlaya bilər; sonra silinmə və ya anonimləşdirmə tətbiq edilə bilər (qanunun məcburi saxlama qaydaları istisna).',
       'Giriş sessiyası və OTP kodları qısa müddətlidir.',
-      '**Tövsiyə:** hesabatları müntəzəm Excel / export ilə yedəkləyin (Xidmət müqaviləsi).'
+      '**Tövsiyə:** hesabatları müntəzəm Excel / ixrac ilə yedəkləyin (Xidmət müqaviləsi).'
     ],
   },
   { type: 'h2', text: '7. Təhlükəsizlik' },
@@ -143,7 +143,7 @@ const az: DocumentBlock[] = [
       'Şifrələr hash ilə saxlanılır; açıq şifrə verilmir.',
       'Həssas əməliyyatlar üçün məkan **qoruma kodu** və işçi icazələri tətbiq oluna bilər.',
       'Əməliyyat jurnallarında şifrə, token, OTP və oxşar sahələr maskalanır.',
-      'Heç bir onlayn sistem 100% riskdən azad deyil; şübhəli girişdə dərhal director və mümkün olduqda Heselo məlumatlandırılmalıdır.'
+      'Heç bir onlayn sistem 100% riskdən azad deyil; şübhəli girişdə dərhal direktor və mümkün olduqda Heselo məlumatlandırılmalıdır.'
     ],
   },
   { type: 'h2', text: '8. Hüquqlar və sorğular' },
@@ -151,7 +151,7 @@ const az: DocumentBlock[] = [
     type: 'ol',
     items: [
       '**Qonaq / müştəri** öz məlumatı barədə sorğunu əvvəlcə **məkana (Müştəriyə)** ünvanlamalıdır.',
-      '**İşçi hesabı** (email, ad) ilə bağlı sorğular director və ya Heselo dəstək kanalları vasitəsilə verilə bilər.',
+      '**İşçi hesabı** (e-poçt, ad) ilə bağlı sorğular direktor və ya Heselo dəstək kanalları vasitəsilə verilə bilər.',
       'Mümkün sorğular: məlumatla tanışlıq, düzəliş, silinmə və ya emalın məhdudlaşdırılması — qanunun və müqavilənin icazə verdiyi həddə.',
       'Silinmə əməliyyat və hesabat bütövlüyünə təsir edə bilər; bəzi qeydlər qanuni saxlama səbəbilə məhdud şəkildə qala bilər.'
     ],
@@ -186,7 +186,7 @@ const az: DocumentBlock[] = [
   {
     type: 'ol',
     items: [
-      'Heselo bu Məxfilik siyasətini yeniləyə bilər. Yenilənmiş mətn Sistem → Sənədlər bölməsində dərc olunur; əhəmiyyətli dəyişiklikdə director e-poçtuna bildiriş göndərilə bilər.',
+      'Heselo bu Məxfilik siyasətini yeniləyə bilər. Yenilənmiş mətn Sistem → Sənədlər bölməsində dərc olunur; əhəmiyyətli dəyişiklikdə direktor e-poçtuna bildiriş göndərilə bilər.',
       'Dərcdən sonra Sistemdən istifadənin davamı qəbul sayılır.'
     ],
   },

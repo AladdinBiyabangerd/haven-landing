@@ -49,7 +49,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Restoran və ümumi kassa POS nə vaxt düzgündür?',
           paragraphs: [
             'Gəlirin əsas hissəsi yemək-içki sifarişindən, mətbəxdən, çatdırılmadan və ya mağaza satışından gəlirsə, iiko, Clopos, Dine kimi restoran POS-ları və ya Fazilat POS, SmartPOS kimi ümumi kassa həlləri daha doğru seçimdir.',
-            'Heselo tam mətbəx, reseptura və pərakəndə marketplace konturunu əvəz etmir.',
+            'Heselo tam mətbəx, reseptura və pərakəndə marketplace prosesini əvəz etmir.',
           ],
           bullets: [
             'Mətbəx sifarişi, menyu və ofisiant axını mərkəzdədir',
@@ -61,12 +61,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və stoku bir paneldə birləşdirir — restoran POS-da bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
+            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və anbar qalığını bir paneldə birləşdirir — restoran POS-da bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
           ],
           bullets: [
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Bron → gəlişdə sessiya → uzadılma → kassa standart axındır',
-            'Sessiyaya məhsul satışı stokla bağlıdır',
+            'Sessiyaya məhsul satışı anbarla bağlıdır',
             'Açıq qiymət: {low} AZN/aydan; AZ / EN / RU',
           ],
         },
@@ -165,7 +165,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Azərbaycan bazarı — qısa landşaft',
+          title: 'Azərbaycan bazarı — qısa baxış',
           paragraphs: [
             'Restoran və kafe seqmentində iiko, Clopos, Dine, MinuPOS və robotPOS tez-tez müzakirə olunur. Pərakəndə və ümumi kassada Fazilat POS və SmartPOS adları görünür.',
             'Otaq-vaxt klubu axtarırsınızsa, yuxarıdakı siyahı əsas alternativiniz deyil — Heselo kimi klub panelinə baxın. Mətbəx güclüdürsə, restoran POS saxlanıb otaqlar üçün Heselo paralel istifadə oluna bilər.',
@@ -183,7 +183,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Bir məkan həm restoran, həm otaq satışı edə bilər. Satışların harada qeyd olunduğunu əvvəlcədən bölün.',
           ],
           bullets: [
-            'Yalnız oyun klubu: Heselo — bron, sessiya, kassa, stok',
+            'Yalnız oyun klubu: Heselo — bron, sessiya, kassa, anbar',
             'Güclü mətbəx + karaoke otaqları: restoran POS (mətbəx) + Heselo (otaqlar)',
             'Mağaza satışı + bilyard: Fazilat/SmartPOS (mağaza) + Heselo (masa vaxtı)',
           ],
@@ -238,7 +238,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       ],
       ctaTitle: 'Heselonu öz iş gününüzlə yoxlayın',
       ctaBody:
-        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və stok izləməsini birlikdə yoxlayaq.',
+        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və anbar izləməsini birlikdə yoxlayaq.',
     },
     en: {
       shortTitle: 'Local POS comparison',

@@ -30,7 +30,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'PlayStation kafe və oyun klubunda tez-tez sadə stansiya taymeri (Hasansoft tipli həllər) işləyir: vaxt başlayır, bitəndə xəbərdarlıq. Kiçik həcmdə bu kifayət edə bilər. Bron, bir neçə növbə kassası, stok və otaq rezervasiyası artanda taymer boşluq buraxır. Bu bələdçi sadə taymer kateqoriyasını Heselo ilə müqayisə edir — sadə taymer yetəndə onu saxlamağı tövsiyə edirik.',
+        'PlayStation kafe və oyun klubunda tez-tez sadə stansiya taymeri (Hasansoft tipli həllər) işləyir: vaxt başlayır, bitəndə xəbərdarlıq. Kiçik həcmdə bu kifayət edə bilər. Bron, bir neçə növbə kassası, anbar və otaq rezervasiyası artanda taymer boşluq buraxır. Bu bələdçi sadə taymer kateqoriyasını Heselo ilə müqayisə edir — sadə taymer kifayət edəndə onu saxlamağı tövsiyə edirik.',
       sections: [
         {
           id: 'decision',
@@ -53,8 +53,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Öncədən bron demək olar ki, yoxdur',
-            'Stok və kassa növbəsi sadədir',
-            'Uzadılma admin bir kliklə həll olunur',
+            'Anbar və kassa növbəsi sadədir',
+            'Uzadılmanı administratoristrator bir kliklə həll olunur',
             'Büdcə minimaldır və böyümə planı yoxdur',
           ],
         },
@@ -62,7 +62,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı stoku sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
+            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbar sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
             'Demo zamanı öz stansiya/otaq sayınız və həftəsonu pikini yoxlayın.',
           ],
           bullets: [
@@ -85,7 +85,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Rezervasiya', 'Adətən yox', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Taymer start/stop', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'Manual və ya minimal', 'Klub növbəsi + sessiya satışı'],
-              ['Stok', 'Adətən yox', 'Sessiyaya bağlı satış və stok izləmə'],
+              ['Anbar', 'Adətən yox', 'Sessiyaya bağlı satış və anbar izləmə'],
               ['Qiymət', 'Lisenziya/stansiya ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Tez-tez AZ', 'AZ, EN, RU'],
               [
@@ -98,9 +98,9 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'PlayStation kafe proqramı landşaftı (qısa)',
+          title: 'PlayStation kafe proqramı bazar mənzərəsi (qısa)',
           paragraphs: [
-            'Azərbaycan oyun klubunda tez-tez üç ayrı ehtiyac görünür: (1) stansiya taymeri — Club Timer, Hasansoft, Akinsoft; (2) PC kilidləmə — IZI/LANGAME; (3) otaq-vaxt, bron və kassa — Heselo (və console lounge SaaS: GameClub). Bir proqram hamısını əvəz etmir.',
+            'Azərbaycan oyun klubunda tez-tez üç ayrı ehtiyac görünür: (1) stansiya taymeri — Club Timer, Hasansoft, Akinsoft; (2) PC kilidləmə — IZI/LANGAME; (3) otaq-vaxt, bron və kassa — Heselo (və konsol launj SaaS: GameClub). Bir proqram hamısını əvəz etmir.',
             'Sadə taymer axtarışında Club Timer, Hasansoft və Akinsoft ad çəkilir; qiymət və funksiyanı birbaşa yoxlayın.',
           ],
           bullets: [
@@ -123,7 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Taymerdən panelə keçid checklisti',
+          title: 'Taymerdən panelə keçid yoxlama siyahısı',
           paragraphs: [
             'Taymer yetmirsə, tam silmədən bir həftəsonu pilot paneli sınayın.',
           ],
@@ -139,11 +139,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       faq: [
         {
           q: 'Sadə taymer kifayət edirmi?',
-          a: 'Kiçik PlayStation kafesində, bron olmadan və sadə kassada — çox vaxt bəli. Bron, növbə kassası və stok kritikdirsə — klub paneli baxın.',
+          a: 'Kiçik PlayStation kafesində, bron olmadan və sadə kassada — çox vaxt bəli. Bron, növbə kassası və anbar kritikdirsə — klub panelinə baxın.',
         },
         {
           q: 'Heselo Hasansoft-u əvəz edir?',
-          a: 'Eyni kateqoriya deyil. Hasansoft tipli taymer vaxt sayır; Heselo bron, sessiya, kassa və stok konturunu aparır. Taymer yetəndə saxlayın.',
+          a: 'Eyni kateqoriya deyil. Hasansoft tipli taymer vaxt sayır; Heselo bron, sessiya, kassa və anbar prosesini aparır. Taymer kifayət edəndə saxlayın.',
         },
         {
           q: 'Heselo PC stansiyasını kilidləyir?',
@@ -172,7 +172,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       ],
       ctaTitle: 'PlayStation klub axınınızı Heseloda yoxlayın',
       ctaBody:
-        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və stoku birlikdə sınayaq.',
+        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və anbar qalığını birlikdə sınayaq.',
     },
     en: {
       shortTitle: 'PlayStation café software alternative',

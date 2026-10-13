@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Restoran POS vs karaoke otaq sistemi — hansını seçmək olar?',
       seoTitle: 'Restoran POS vs karaoke sistemi — otaq, sessiya | Heselo',
       seoDescription:
-        'Karaoke klubu restoran kassası ilə idarə olunurmu? Restoran POS və otaq-vaxt/karaoke sistemi müqayisəsi, cədvəl, landşaft — AZ, EN, RU.',
+        'Karaoke klubu restoran kassası ilə idarə olunurmu? Restoran POS və otaq-vaxt/karaoke sistemi müqayisəsi, cədvəl, bazar mənzərəsi — AZ, EN, RU.',
       keywords: [
         'restoran POS karaoke',
         'karaoke rezervasiya sistemi',
@@ -54,7 +54,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           bullets: [
             'Mətbəx və zal sifarişi gündəlik işin əsas hissəsidir',
             'Karaoke otaqları sayı azdır və vaxt kağız/taymerlə idarə olunur',
-            'Fiscal çek və menyu restoran konturuna uyğun olmalıdır',
+            'Fiskal çek və menyu restoran prosesinə uyğun olmalıdır',
             'Otaq rezervasiyası ikinci dərəcəlidir',
           ],
         },
@@ -84,7 +84,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Əsas fokus', 'Zal, mətbəx, sifariş', 'Otaq saatı və sessiya'],
               ['Rezervasiya', 'Masa və restoran axını', 'Karaoke/launj otaq təqvimi'],
               ['Vaxt hesabı', 'Sifariş mərkəzdə', 'Canlı sessiya, uzadılma, tarif'],
-              ['Menyu / mətbəx', 'Güclü restoran konturu', 'Sessiyaya əlavə satış; tam mətbəx POS deyil'],
+              ['Menyu / mətbəx', 'Güclü restoran prosesi', 'Sessiyaya əlavə satış; tam mətbəx POS deyil'],
               ['Kassa', 'Restoran növbəsi', 'Klub növbəsi + otaq satışı'],
               ['Qiymət', 'Paket və təkliflə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Paketdən asılı', 'AZ, EN, RU'],
@@ -98,7 +98,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Qısa landşaft: restoran vs otaq-vaxt',
+          title: 'Qısa bazar mənzərəsi: restoran vs otaq-vaxt',
           paragraphs: [
             'Azərbaycanda karaoke biznesi tez-tez hər iki ehtiyacı daşıyır: zalda yemək-içki və ayrı otaqlarda saat. Restoran POS adları: Clopos, iiko, Dine, MinuPOS. Otaq-vaxt üçün ixtisaslaşmış klub paneli (məsələn Heselo) ayrı kateqoriyadır.',
             'Yalnız bir sistem seçmək məcburi deyil — paralel ssenari tez-tez ən təmiz həlldir; satışların harada qeyd olunduğunu yazılı bölün.',
@@ -123,7 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Seçim və keçid checklisti',
+          title: 'Seçim və keçid yoxlama siyahısı',
           paragraphs: [
             'Restoran POS-dan tam imtina etmədən otaq funksiyasını əlavə etmək — tipik karaoke yolu.',
           ],
@@ -139,7 +139,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       faq: [
         {
           q: 'Karaoke üçün restoran POS kifayət edirmi?',
-          a: 'Karaoke restoran formatında zal və mətbəx mərkəzdədirsə — bəli. Otaq saatı əsas gəlirdirsə və bron/sessiya kritikdirsə, restoran POS otaq-vaxt boşluqlarını buraxır; otaq sistemi və ya Heselo kimi klub paneli baxın.',
+          a: 'Karaoke restoran formatında zal və mətbəx mərkəzdədirsə — bəli. Otaq saatı əsas gəlirdirsə və bron/sessiya kritikdirsə, restoran POS otaq-vaxt boşluqlarını buraxır; otaq sistemi və ya Heselo kimi klub panelinə baxın.',
         },
         {
           q: 'Heselo karaoke restoranın mətbəxini əvəz edir?',
@@ -167,7 +167,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Launj və karaoke eyni sistemdə?',
-          a: 'Otaq saatı eyni modeldirsə — eyni otaq-vaxt paneli uyğundur. Launjda ağır restoran konturu varsa, restoran POS paralel qala bilər.',
+          a: 'Otaq saatı eyni modeldirsə — eyni otaq-vaxt paneli uyğundur. Launjda ağır restoran prosesi varsa, restoran POS paralel qala bilər.',
         },
       ],
       ctaTitle: 'Karaoke otaq axınınızı Heseloda yoxlayın',

@@ -323,7 +323,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Launj bar proqramı axtarıram. Bu həll uyğundur?',
-        a: 'Bu yazı otaqlı launj prosesini izah edir. Lounge bar idarəetmə proqramı (məhsul) axtarırsınızsa — otaqlı launj həll səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı və kassa bir paneldə; Kiçik plan {lounge} AZN/aydan.',
+        a: 'Bu yazı otaqlı launj prosesini izah edir. Launj bar idarəetmə proqramı (məhsul) axtarırsınızsa — otaqlı launj həll səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı və kassa bir paneldə; Kiçik plan {lounge} AZN/aydan.',
       },
       {
         q: 'Otaqdan kənar bar satışı da eyni kassadan keçə bilər?',
@@ -754,7 +754,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'not-erp',
         title: 'Bu, mütləq ağır ERP demək deyil',
         paragraphs: [
-          'Klubun ehtiyacı restoran və ya böyük şirkət ERP-si ilə eyni deyil. Əsas ehtiyaclar adətən rezervasiya, resursların canlı vəziyyəti, sessiya, satış və kassa olur.',
+          'Klubun ehtiyacı restoran və ya böyük şirkət ERP sistemi ilə eyni deyil. Əsas ehtiyaclar adətən rezervasiya, resursların canlı vəziyyəti, sessiya, satış və kassa olur.',
         ],
       },
       {

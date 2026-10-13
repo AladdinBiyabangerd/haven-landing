@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaq-vaxt klubları üçün Kassa.az brendi alternativi',
       seoTitle: 'Kassa.az alternativi — otaq-vaxt klubları | Heselo (Kassa.az deyil)',
       seoDescription:
-        'Kassa.az brendinin kassa həlli ilə Heselo müqayisəsi: ümumi satış proqramı yoxsa oyun klubları üçün rezervasiya və vaxt sessiyası. Cədvəl, landşaft, FAQ — AZ, EN, RU.',
+        'Kassa.az brendinin kassa həlli ilə Heselo müqayisəsi: ümumi satış proqramı yoxsa oyun klubları üçün rezervasiya və vaxt sessiyası. Cədvəl, bazar mənzərəsi, FAQ — AZ, EN, RU.',
       keywords: [
         'kassa.az alternativ',
         'kassa az alternativi',
@@ -39,7 +39,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Əsas gəlir: mağaza çeki və məhsul satışı, yoxsa otaq/stansiya/masa saatı?',
-            'Region və dəstək: Azərbaycan, dil və fiscal/kassa tələbləri nədir?',
+            'Region və dəstək: Azərbaycan, dil və fiskal / kassa tələbləri nədir?',
             'Kritik funksiyalar: gündəlik kassa hesabatı, yoxsa bron → canlı sessiya → uzadılma → növbə kassası?',
           ],
         },
@@ -47,7 +47,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-kassa-az-fits',
           title: 'Kassa.az brendi nə vaxt qalmalıdır?',
           paragraphs: [
-            'Kassa.az adı altında təqdim olunan həllər ümumi satış və kassa nöqtələri üçün uyğun ola bilər: məhsul satışı, çek və gündəlik kassa hesabatı bir konturda işləyir. Gündəlik iş məhz buna dayanırsa, bu kateqoriya düzgündür.',
+            'Kassa.az adı altında təqdim olunan həllər ümumi satış və kassa nöqtələri üçün uyğun ola bilər: məhsul satışı, çek və gündəlik kassa hesabatı bir prosesdə işləyir. Gündəlik iş məhz buna dayanırsa, bu kateqoriya düzgündür.',
             'Heselo ümumi mağaza kassasını və ya Kassa.az brendini əvəz etmək üçün nəzərdə tutulmayıb. Vaxt hesabı ayrıca cədvəl və ya taymerdə qalırsa, klub paneli axtarmağa ehtiyac yaranır.',
           ],
           bullets: [
@@ -61,7 +61,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və stoka bağlayır.',
+            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və anbara bağlayır.',
             'Sessiyaya əlavə olunan içki və qəlyanaltı satışı kassa növbəsi ilə bir yerdə görünür; bu, ümumi mağaza kassası ilə eyni biznes modeli deyil. Demo zamanı öz otaq və stansiyalarınızla eyni ssenarini yoxlayın.',
           ],
           bullets: [
@@ -97,7 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Qısa landşaft',
+          title: 'Qısa bazar mənzərəsi',
           paragraphs: [
             'Ümumi kassa və satış axtarırsınızsa, Kassa.az brendi ilə yanaşı Fazilat POS, SmartPOS və oxşar həllər müzakirə olunur — modul və qiyməti birbaşa provayderdən öyrənin.',
             'Otaq və stansiya saatı satırsınızsa, Heselo ayrı kateqoriyadır — Kassa.az brendinin birbaşa alternativi deyil, otaq-vaxt klubu üçün paneldir.',
@@ -122,7 +122,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Keçid checklisti',
+          title: 'Keçid yoxlama siyahısı',
           paragraphs: [
             'Mövcud kassa proqramınız çek və məhsul satışını yaxşı aparırsa, tələsik imtina etməyin. Yalnız klub resurslarını pilot edin.',
           ],
@@ -166,12 +166,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Klub üçün WhatsApp və Excel kifayət etmirmi?',
-          a: 'Kiçik həcmdə ola bilər, amma bron WhatsApp-da, vaxt taymerdə, ödəniş Excel-də qalanda üst-üstə rezervasiya, unudulmuş uzadılma və kassa fərqi yaranır. Heselo panelində bron, sessiya, kassa və stok bir yerdə görünür.',
+          a: 'Kiçik həcmdə ola bilər, amma bron WhatsApp-da, vaxt taymerdə, ödəniş Excel-də qalanda üst-üstə rezervasiya, unudulmuş uzadılma və kassa fərqi yaranır. Heselo panelində bron, sessiya, kassa və anbar bir yerdə görünür.',
         },
       ],
       ctaTitle: 'Heselonu öz iş gününüzlə yoxlayın',
       ctaBody:
-        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və stok izləməsini birlikdə yoxlayaq.',
+        'Demo istəyin: otaq, masa və stansiyalarınızı nümunə kimi qurub rezervasiya, canlı sessiya, kassa növbəsi və anbar izləməsini birlikdə yoxlayaq.',
     },
     en: {
       shortTitle: 'Kassa.az alternative',

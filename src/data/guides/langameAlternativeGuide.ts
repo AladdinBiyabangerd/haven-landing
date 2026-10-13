@@ -15,10 +15,10 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
   {
     az: {
       shortTitle: 'LANGAME alternativi klublar üçün',
-      h1: 'PC klub softu vs otaq-vaxt — LANGAME alternativi',
-      seoTitle: 'LANGAME alternativi — PC klub soft vs Heselo otaq-vaxt | Heselo',
+      h1: 'PC klub proqramı vs otaq-vaxt — LANGAME alternativi',
+      seoTitle: 'LANGAME alternativi — PC klub proqram vs Heselo otaq-vaxt | Heselo',
       seoDescription:
-        'LANGAME PC/oyun klubu stansiya idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo LANGAME-i əvəz etmir — cədvəl, landşaft, FAQ — AZ, EN, RU.',
+        'LANGAME PC/oyun klubu stansiya idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo LANGAME-i əvəz etmir — cədvəl, bazar mənzərəsi, FAQ — AZ, EN, RU.',
       keywords: [
         'langame alternativ',
         'langame alternativi',
@@ -30,13 +30,13 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'LANGAME (Lan Game) axtarışında PC və oyun klubu stansiya idarəetməsi gözlənilir: diskless/server, stansiya nəzarəti, tarif və şəbəkə bronu. Heselo otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir. Bu bələdçi LANGAME tipli PC klub softunu otaq-vaxt paneli ilə müqayisə edir — Heselo PC stansiya agentini və diskless konturunu əvəz etmir.',
+        'LANGAME (Lan Game) axtarışında PC və oyun klubu stansiya idarəetməsi gözlənilir: diskless/server, stansiya nəzarəti, tarif və şəbəkə bronu. Heselo otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir. Bu bələdçi LANGAME tipli PC klub proqramınu otaq-vaxt paneli ilə müqayisə edir — Heselo PC stansiya agentini və diskless prosesini əvəz etmir.',
       sections: [
         {
           id: 'decision',
-          title: 'Əvvəlcə qərar: PC stansiya softu, yoxsa otaq-vaxt?',
+          title: 'Əvvəlcə qərar: PC stansiya proqramı, yoxsa otaq-vaxt?',
           paragraphs: [
-            'Eyni «oyun klubu proqramı» axtarışı iki fərqli ehtiyaca aparır: PC zalında stansiya/nəzarət softu və ayrıca otaq/konsol saatı satışı.',
+            'Eyni «oyun klubu proqramı» axtarışı iki fərqli ehtiyaca aparır: PC zalında stansiya/nəzarət proqramı və ayrıca otaq/konsol saatı satışı.',
           ],
           bullets: [
             'Əsas problem: PC stansiya kilidi, diskless və balans, yoxsa otaq bronu və kassa?',
@@ -48,8 +48,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-langame-fits',
           title: 'LANGAME nə vaxt qalmalıdır?',
           paragraphs: [
-            'Böyük PC və esports klubunda stansiya idarəetməsi, diskless/hybrid boot, şəbəkə tarifləri və mobil bron LANGAME kateqoriyasının mərkəzidir. Rusiya və MDB bazarında bu stack geniş yayılıb.',
-            'Heselo bu konturu təqlid etmir. PC zalı LANGAME (və ya IZI tipli ekvivalent) saxlamalıdır; otaq-vaxt ehtiyacı ayrıca həll ola bilər.',
+            'Böyük PC və esports klubunda stansiya idarəetməsi, diskless/hybrid boot, şəbəkə tarifləri və mobil bron LANGAME kateqoriyasının mərkəzidir. Rusiya və MDB bazarında bu sistem geniş yayılıb.',
+            'Heselo bu prosesi təqlid etmir. PC zalı LANGAME (və ya IZI tipli ekvivalent) saxlamalıdır; otaq-vaxt ehtiyacı ayrıca həll ola bilər.',
           ],
           bullets: [
             'PC stansiyalarında agent, boot və vaxt/balans',
@@ -63,29 +63,29 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
             'PlayStation otağı, karaoke, bilyard və ya launj otağı vaxtla satılır, bron və kassa növbəsi lazımdırsa — Heselo uyğundur. PC zalı LANGAME-də qala bilər; otaq-vaxt Heselo-da.',
-            'Demo zamanı hansı resursların otaq modelində, hansılarının PC soft modelində qaldığını aydınlaşdırın.',
+            'Demo zamanı hansı resursların otaq modelində, hansılarının PC proqram modelində qaldığını aydınlaşdırın.',
           ],
           bullets: [
             'Otaq və ya konsol stansiyası saatı əsas gəlir',
             'Bron → sessiya → uzadılma → kassa axını',
-            'Bar/qəlyanaltı sessiyaya və stoka bağlıdır',
+            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
             'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
           ],
         },
         {
           id: 'comparison',
-          title: 'LANGAME tipli PC soft və Heselo — müqayisə',
+          title: 'LANGAME tipli PC proqram və Heselo — müqayisə',
           paragraphs: [
             'LANGAME qiyməti abunə və stansiya sayından asılıdır — burada uydurma rəqəm yoxdur.',
           ],
           table: {
-            headers: ['Aspekt', 'LANGAME tipli PC klub softu', 'Heselo'],
+            headers: ['Aspekt', 'LANGAME tipli PC klub proqramı', 'Heselo'],
             rows: [
               ['Əsas fokus', 'PC stansiya, diskless, şəbəkə', 'Otaq/stansiya vaxtı, bron, kassa'],
               ['Stansiya agenti / boot', 'Mərkəzi funksiya', 'Əvəz etmir'],
               ['Rezervasiya', 'Mobil/şəbəkə bron (PC fokus)', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'PC balans/dəqiqə', 'Canlı sessiya, uzadılma, tarif'],
-              ['Kassa', 'Klub balans və satış konturu', 'Klub növbəsi + sessiya satışı'],
+              ['Kassa', 'Klub balans və satış prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Abunə/stansiya ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Əsasən RU', 'AZ, EN, RU'],
               [
@@ -98,13 +98,13 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Oyun klubu landşaftı (qısa)',
+          title: 'Oyun klubu bazar mənzərəsi (qısa)',
           paragraphs: [
-            'PC klub softunda LANGAME və IZI eyni geniş kateqoriyadadır: stansiya nəzarəti. Otaq-vaxt üçün Heselo; sadə PS taymeri (Club Timer, Hasansoft) üçüncü kiçik kateqoriyadır.',
+            'PC klub proqramında LANGAME və IZI eyni geniş kateqoriyadadır: stansiya nəzarəti. Otaq-vaxt üçün Heselo; sadə PS taymeri (Club Timer, Hasansoft) üçüncü kiçik kateqoriyadır.',
             '«LANGAME alternativ» axtarışı bəzən otaq paneli gözlədir — kateqoriyanı ayırmaq səhv alışın qarşısını alır.',
           ],
           bullets: [
-            'LANGAME / IZI — PC stansiya və klub softu',
+            'LANGAME / IZI — PC stansiya və klub proqramı',
             'Heselo — otaq-vaxt, bron, sessiya, kassa; PC agent deyil',
             'Club Timer / Hasansoft — minimal stansiya taymeri',
             'Hibrid: LANGAME (PC zalı) + Heselo (otaqlar)',
@@ -117,15 +117,15 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           bullets: [
             'Yalnız PC klubu: LANGAME kifayət; Heselo lazım deyil',
             'PS otaqları + PC zalı: LANGAME PC-də, Heselo otaq saatında',
-            'Karaoke otaqları: Heselo; PC soft tələb olunmursa LANGAME yoxdur',
+            'Karaoke otaqları: Heselo; PC proqram tələb olunmursa LANGAME yoxdur',
             'Keçid: LANGAME-i saxlayın; yalnız otaq resurslarını Heselo-ya gətirin',
           ],
         },
         {
           id: 'how-to-switch',
-          title: 'Qərar checklisti',
+          title: 'Qərar yoxlama siyahısı',
           paragraphs: [
-            'Heselo alarkən PC softunu sökməyin — otaq-vaxt ehtiyacını ayrıca yoxlayın.',
+            'Heselo alarkən PC proqramınu sökməyin — otaq-vaxt ehtiyacını ayrıca yoxlayın.',
           ],
           bullets: [
             'Hansı gəlir PC balansında, hansı otaq sessiyasındadır — faizlə yazın',
@@ -139,7 +139,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       faq: [
         {
           q: 'Heselo LANGAME-i əvəz edir?',
-          a: 'Xeyr. LANGAME PC stansiya və klub softuna fokuslanır. Heselo otaq-vaxt, bron və kassadır. PC klubu LANGAME (və ya ekvivalent) saxlamalıdır.',
+          a: 'Xeyr. LANGAME PC stansiya və klub proqramına fokuslanır. Heselo otaq-vaxt, bron və kassadır. PC klubu LANGAME (və ya ekvivalent) saxlamalıdır.',
         },
         {
           q: 'Lan Game və LANGAME eyni şeydir?',
@@ -167,7 +167,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Demo necə keçirilir?',
-          a: 'Otaq resurslarınızı qurub sessiya axınını yoxlayın; PC soft demo mövzusu deyil.',
+          a: 'Otaq resurslarınızı qurub sessiya axınını yoxlayın; PC proqram demo mövzusu deyil.',
         },
       ],
       ctaTitle: 'Otaq-vaxt ehtiyacınızı Heseloda yoxlayın',

@@ -15,45 +15,45 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
   {
     az: {
       shortTitle: 'GameClub alternativi',
-      h1: 'Console lounge SaaS vs klub paneli — GameClub alternativi',
-      seoTitle: 'GameClub alternativi — PS/Xbox lounge vs Heselo | Heselo',
+      h1: 'Konsol launj SaaS vs klub paneli — GameClub alternativi',
+      seoTitle: 'GameClub alternativi — PS/Xbox launj vs Heselo | Heselo',
       seoDescription:
-        'GameClub console-first lounge SaaS-dir (seans, bron, bar, POS); Heselo otaq-vaxt klub paneli AZ fokuslu — dürüst müqayisə, FAQ — AZ, EN, RU.',
+        'GameClub konsola üstünlük verən launj SaaS-dir (sessiya, bron, bar, POS); Heselo Azərbaycan üçün otaq-vaxt klub panelidir — dürüst müqayisə və FAQ (AZ, EN, RU).',
       keywords: [
         'gameclub alternativ',
         'gameclub.work alternativ',
-        'playstation lounge proqramı',
+        'playstation launj proqramı',
         'xbox klub proqramı',
-        'console lounge software',
+        'konsol launj proqramı',
         'oyun klubu saas',
         'Heselo',
       ],
       intro:
-        'GameClub (gameclub.work) axtarışında console-first lounge SaaS gözlənilir: seanslar, bron, tariflər, bar, aksiyalar, növbə və POS — PlayStation/Xbox əsas ssenari. Heselo eyni otaq-vaxt kateqoriyasına yaxındır: bron, canlı sessiya, kassa və stok, Azərbaycan bazarı üçün AZ/EN/RU və açıq qiymət. Bu bələdçi iki yaxın rəqibi dürüst müqayisə edir; PC diskless softu (LANGAME/IZI) əvəzi deyil.',
+        'GameClub (gameclub.work) axtarışında konsola üstünlük verən launj SaaS gözlənilir: sessiyalar, bron, tariflər, bar, aksiyalar, növbə və POS — əsas ssenari PlayStation/Xbox. Heselo eyni otaq-vaxt kateqoriyasına yaxındır: bron, canlı sessiya, kassa və anbar; Azərbaycan bazarı üçün AZ/EN/RU və açıq qiymət. Bu bələdçi iki yaxın rəqibi dürüst müqayisə edir; PC diskless proqramını (LANGAME/IZI) əvəz etmir.',
       sections: [
         {
           id: 'decision',
-          title: 'Əvvəlcə qərar: console lounge SaaS hansı bazar üçün?',
+          title: 'Əvvəlcə qərar: konsol launj SaaS hansı bazar üçün?',
           paragraphs: [
             'GameClub və Heselo hər ikisi otaq/stansiya vaxtı satır — fərq dil, bazar dəstəyi və fokus dərinliyindədir.',
           ],
           bullets: [
-            'Komanda AZ/RU danışırmı, yoxsa yalnız EN?',
+            'Komanda AZ/RU danışırmı, yoxsa yalnız ingilis?',
             'Qiymət açıq AZN abunə lazımdırmı?',
-            'Yalnız konsol lounge, yoxsa karaoke/bilyard/antikafe də?',
+            'Yalnız konsol launj, yoxsa karaoke/bilyard/antikafe də?',
           ],
         },
         {
           id: 'when-gameclub-fits',
           title: 'GameClub nə vaxt uyğundur?',
           paragraphs: [
-            'Console-first UX, booth seansları, controller icarəsi və mixed PC+console (PC stack toxunulmaz) GameClub-un güclü tərəfidir. Beynəlxalq lounge operatorları üçün tanış SaaS modelidir.',
-            'PC diskless klub üçün GameClub özü də PC-first softu tövsiyə etmir — LANGAME/IZI kateqoriyasıdır.',
+            'Konsola üstünlük verən interfeys, kabin sessiyaları, pult icarəsi və qarışıq PC+konsol (PC infrastrukturuna toxunmur) GameClub-un güclü tərəfidir. Beynəlxalq launj operatorları üçün tanış SaaS modelidir.',
+            'PC diskless klub üçün GameClub özü də PC-ə üstünlük verən proqram tövsiyə etmir — bu LANGAME/IZI kateqoriyasıdır.',
           ],
           bullets: [
-            'PS/Xbox lounge əsas ssenaridir',
-            'EN SaaS və beynəlxalq ödəniş rahatdır',
-            'PC stack ayrı qalmalıdır',
+            'PS/Xbox launj əsas ssenaridir',
+            'İngilisdilli SaaS və beynəlxalq ödəniş rahatdır',
+            'PC infrastrukturu ayrı qalmalıdır',
             'Karaoke/antikafe ikinci dərəcəlidir',
           ],
         },
@@ -61,12 +61,12 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Azərbaycan (və AZ/RU) klubunda otaq-vaxt, bron, kassa növbəsi və stok bir paneldə lazımdırsa — Heselo uyğundur. Gaming, karaoke, bilyard, antikafe və launj eyni konturda.',
+            'Azərbaycan (və AZ/RU) klubunda otaq-vaxt, bron, kassa növbəsi və anbar bir paneldə lazımdırsa — Heselo uyğundur. Oyun, karaoke, bilyard, antikafe və launj eyni prosesdə.',
           ],
           bullets: [
             'AZ / EN / RU interfeys və dəstək gözləntisi',
             'Açıq qiymət: {low} AZN/aydan',
-            'Otaq-vaxt + bar/stok + növbə bir axında',
+            'Otaq-vaxt + bar/anbar + növbə bir axında',
             'Yalnız PS deyil — karaoke/bilyard/antikafe də',
           ],
         },
@@ -79,16 +79,16 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           table: {
             headers: ['Aspekt', 'GameClub', 'Heselo'],
             rows: [
-              ['Əsas fokus', 'Console-first lounge SaaS', 'Otaq-vaxt klub paneli (AZ)'],
+              ['Əsas fokus', 'Konsola üstünlük verən launj SaaS', 'Otaq-vaxt klub paneli (AZ)'],
               ['Rezervasiya', 'Onlayn bron / PWA', 'Otaq və stansiya təqvimi'],
-              ['Vaxt hesabı', 'Booth seans, tarif', 'Canlı sessiya, uzadılma, tarif'],
-              ['Bar / POS', 'Seansa bağlı sifariş', 'Sessiya satışı + stok'],
+              ['Vaxt hesabı', 'Kabin sessiyası, tarif', 'Canlı sessiya, uzadılma, tarif'],
+              ['Bar / POS', 'Sessiyaya bağlı sifariş', 'Sessiya satışı + anbar'],
               ['PC diskless', 'Əvəz etmir (özləri də deyir)', 'Əvəz etmir'],
               ['Qiymət', 'Abunə (sayt/sorğu)', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'EN fokus', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
-                'PS/Xbox lounge, beynəlxalq',
+                'PS/Xbox launj, beynəlxalq',
                 'AZ otaq-vaxt klubu, çox tip məkan',
               ],
             ],
@@ -96,14 +96,14 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Console lounge landşaftı',
+          title: 'Konsol launj bazar mənzərəsi',
           paragraphs: [
-            'GameClub, CafeSynk və PsTally console lounge SaaS-ə yaxındır (PsTally — Kenya/M-Pesa fokus). Yerli taymerlər və Təndir/SmartApp ayrı kateqoriyadır.',
+            'GameClub, CafeSynk və PsTally konsol launj SaaS-ə yaxındır (PsTally — Kenya/M-Pesa fokus). Yerli taymerlər və Təndir/SmartApp ayrı kateqoriyadır.',
           ],
           bullets: [
-            'GameClub — console-first SaaS',
-            'CafeSynk — konsol lounge cloud',
-            'PsTally — regional lounge (Afrika)',
+            'GameClub — konsola üstünlük verən SaaS',
+            'CafeSynk — konsol launj buludu',
+            'PsTally — regional launj (Afrika)',
             'Heselo — AZ otaq-vaxt paneli',
           ],
         },
@@ -112,33 +112,33 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Ssenarilər',
           paragraphs: ['Yaxın kateqoriya — demo ilə seçin.'],
           bullets: [
-            '3–12 PS5 booth lounge: GameClub və ya Heselo demosu',
+            '3–12 PS5 kabinli launj: GameClub və ya Heselo demosu',
             'PS + karaoke otaqları: Heselo (çox tip)',
-            '50+ PC diskless: LANGAME/IZI, GameClub/Heselo əlavə',
+            '50+ PC diskless: LANGAME/IZI; GameClub/Heselo əlavə',
             'Bakı klub, AZ dil: Heselo üstünlük',
           ],
         },
         {
           id: 'how-to-switch',
-          title: 'Müqayisə checklisti',
+          title: 'Müqayisə yoxlama siyahısı',
           paragraphs: ['Eyni ssenarini hər iki demoda keçirin.'],
           bullets: [
-            'Booth/otaq siyahısı və tariflər',
-            'Bron → seans → bar → növbə bağlanışı',
+            'Kabin/otaq siyahısı və tariflər',
+            'Bron → sessiya → bar → növbə bağlanışı',
             'Dil və dəstək kanalı',
             'Qiymət: rəsmi GameClub vs {low} AZN Heselo',
-            'PC soft lazımdırmı — ayrıca qərar',
+            'PC proqram lazımdırmı — ayrıca qərar',
           ],
         },
       ],
       faq: [
         {
           q: 'Heselo GameClub-u əvəz edir?',
-          a: 'Eyni geniş kateqoriyadadır (otaq/lounge vaxtı). Seçim bazar, dil və məkan tipindən asılıdır — hər ikisini demoda yoxlayın.',
+          a: 'Eyni geniş kateqoriyadadır (otaq/launj vaxtı). Seçim bazar, dil və məkan tipindən asılıdır — hər ikisini demoda yoxlayın.',
         },
         {
           q: 'GameClub PC klub üçündürmü?',
-          a: 'Console-first; böyük diskless PC üçün özləri ixtisaslaşmış PC soft tövsiyə edir (LANGAME/IZI sinfi).',
+          a: 'Əsasən konsola üstünlük verir; böyük diskless PC üçün özləri ixtisaslaşmış PC proqramı tövsiyə edir (LANGAME/IZI sinfi).',
         },
         {
           q: 'Heselo qiyməti?',
@@ -150,11 +150,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Karaoke və bilyard?',
-          a: 'Heselo bu tip otaqları eyni paneldə əhatə edir; GameClub console lounge-a fokuslanır.',
+          a: 'Heselo bu tip otaqları eyni paneldə əhatə edir; GameClub konsol launj-a fokuslanır.',
         },
         {
           q: 'CafeSynk / PsTally?',
-          a: 'Oxşar lounge SaaS landşaftı; cafesynk-alternative və landşaft qeydlərinə baxın.',
+          a: 'Oxşar launj SaaS bazar mənzərəsi; cafesynk-alternative və bazar mənzərəsi qeydlərinə baxın.',
         },
         {
           q: 'Hər ikisi bir yerdə?',
@@ -162,10 +162,10 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Demo necə keçirilir?',
-          a: 'Eyni booth siyahısı və həftəsonu axını ilə Heselo demosu istəyin.',
+          a: 'Eyni kabin siyahısı və həftəsonu axını ilə Heselo demosu istəyin.',
         },
       ],
-      ctaTitle: 'Console lounge axınını Heseloda yoxlayın',
+      ctaTitle: 'Konsol launj axınını Heselo-da yoxlayın',
       ctaBody:
         'Demo istəyin: stansiya/otaqları nümunə kimi qurub bron, sessiya, bar və kassa növbəsini AZ/EN/RU-da sınayaq.',
     },

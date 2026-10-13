@@ -29,7 +29,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'Akinsoft CafePlus axtarışında internet kafe, laboratoriya və PlayStation salonu üçün mərkəzi masa/konsol izləmə gözlənilir. Bakı elanlarında Akinsoft PlayStation klub proqramı kimi də adı çəkilir. Heselo otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir. Bu bələdçi CafePlus tipli kafe/PS serverini otaq-vaxt paneli ilə müqayisə edir — kiçik zalda Akinsoft yetəndə onu saxlamağı tövsiyə edirik.',
+        'Akinsoft CafePlus axtarışında internet kafe, laboratoriya və PlayStation salonu üçün mərkəzi masa/konsol izləmə gözlənilir. Bakı elanlarında Akinsoft PlayStation klub proqramı kimi də adı çəkilir. Heselo otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir. Bu bələdçi CafePlus tipli kafe/PS serverini otaq-vaxt paneli ilə müqayisə edir — kiçik zalda Akinsoft kifayət edəndə onu saxlamağı tövsiyə edirik.',
       sections: [
         {
           id: 'decision',
@@ -48,11 +48,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Akinsoft CafePlus nə vaxt qalmalıdır?',
           paragraphs: [
             'Internet kafe və PlayStation salonunda kompüter, konsol və masa izləmə, filtr və modul serverlər CafePlus kateqoriyasının mərkəzidir. TR lisenziya modeli və modul paketlərlə işləyənlər üçün tanış stackdır.',
-            'Heselo bu server/modul konturunu əvəz etmir. Sadə zal vaxtı kifayətdirsə Akinsoft qala bilər.',
+            'Heselo bu server/modul prosesini əvəz etmir. Sadə zal vaxtı kifayətdirsə Akinsoft qala bilər.',
           ],
           bullets: [
             'PC, masa və PS server izləmə lazımdır',
-            'Modul lisenziya (Vision, mutfak və s.) mövcuddur',
+            'Modul lisenziya (Vision, mətbəx və s.) mövcuddur',
             'Öncədən otaq bronu zəif və ya yoxdur',
             'TR/AZ quraşdırıcı dəstəyi artıq işləyir',
           ],
@@ -82,8 +82,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Əsas fokus', 'Kafe/PS masa və server izləmə', 'Otaq/stansiya vaxtı + klub əməliyyatı'],
               ['Rezervasiya', 'Zəif / modul asılı', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Masa/konsol server', 'Canlı sessiya, uzadılma, tarif'],
-              ['Kassa', 'Kafe/modul konturu', 'Klub növbəsi + sessiya satışı'],
-              ['Stok', 'Modul ilə mümkündür', 'Sessiyaya bağlı satış və stok'],
+              ['Kassa', 'Kafe/modul prosesi', 'Klub növbəsi + sessiya satışı'],
+              ['Anbar', 'Modul ilə mümkündür', 'Sessiyaya bağlı satış və anbar'],
               ['Qiymət', 'Modul/lisenziya (sorğu)', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'TR fokus', 'AZ, EN, RU'],
               [
@@ -96,21 +96,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'landscape',
-          title: 'Landşaft (qısa)',
+          title: 'Qısa baxış',
           paragraphs: [
-            'Akinsoft və Club Timer yerli axtarışlarda yan-yana çıxır; Hasansoft TR PS cafe proqramıdır. PC kilidləmə — IZI/LANGAME; otaq-vaxt — Heselo.',
+            'Akinsoft və Club Timer yerli axtarışlarda yan-yana çıxır; Hasansoft TR PS kafe proqramıdır. PC kilidləmə — IZI/LANGAME; otaq-vaxt — Heselo.',
           ],
           bullets: [
             'Akinsoft CafePlus — kafe/PS server',
             'Club Timer / Hasansoft — sadə taymer kateqoriyası',
-            'IZI / LANGAME — PC stansiya softu',
-            'Heselo — bron, sessiya, kassa, stok',
+            'IZI / LANGAME — PC stansiya proqramı',
+            'Heselo — bron, sessiya, kassa, anbar',
           ],
         },
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
-          paragraphs: ['Eyni «PS klub» adı fərqli stack tələb edir.'],
+          paragraphs: ['Eyni «PS klub» adı fərqli sistem tələb edir.'],
           bullets: [
             'Internet kafe + bir neçə PS: Akinsoft/CafePlus yetə bilər',
             'Otaqlı PS lounge + bron: Heselo',
@@ -120,7 +120,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           id: 'how-to-switch',
-          title: 'Qərar checklisti',
+          title: 'Qərar yoxlama siyahısı',
           paragraphs: ['Otaq-vaxt ehtiyacı ayrıca ölçülməlidir.'],
           bullets: [
             'Hansı gəlir masa/PS serverdə, hansı otaq sessiyasındadır',
@@ -134,7 +134,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       faq: [
         {
           q: 'Heselo Akinsoft-u əvəz edir?',
-          a: 'Eyni kateqoriya deyil. CafePlus kafe/PS server izləmədir; Heselo otaq-vaxt, bron və kassadır. Zal izləmə yetəndə Akinsoft saxlayın.',
+          a: 'Eyni kateqoriya deyil. CafePlus kafe/PS server izləmədir; Heselo otaq-vaxt, bron və kassadır. Zal izləmə kifayət edəndə Akinsoft saxlayın.',
         },
         {
           q: 'CafePlus nədir?',
