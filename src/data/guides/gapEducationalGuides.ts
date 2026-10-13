@@ -34,6 +34,19 @@ const catalog: CatalogEntry[] = [
           'PlayStation klubu kiçik kapitalla başlanan, amma nizam tələb edən biznesdir. Konsol almaq işin asan hissəsidir; çətini boş saatları doldurmaq, bronu itirməmək və gecə növbəsinin kassasını düzgün bağlamaqdır. Bu bələdçi açılışdan əvvəl və ilk ay üçün əsas addımları sıralayır.',
         sections: [
           {
+            id: 'heselo',
+            title: 'Heselo PS klub üçün nə verir?',
+            paragraphs: [
+              'Heselo stansiya bronunu canlı sessiyaya, uzatmanı və qəlyanaltı satışını eyni hesaba, ödənişi isə kassa növbəsinə bağlayır. Açılışdan belə quranda vərəq və taymeri sonradan köçürmək lazım gəlmir.',
+            ],
+            bullets: [
+              'Stansiya cədvəli və rezervasiya',
+              'Canlı sessiya, uzatma, əlavə satış',
+              'Kassa növbəsi və gün sonu hesabatı',
+              'Kiçik plan {gaming} AZN/aydan',
+            ],
+          },
+          {
             id: 'who-for',
             title: 'Bu bələdçi kimin üçündür?',
             paragraphs: [
@@ -174,6 +187,19 @@ const catalog: CatalogEntry[] = [
         intro:
           'A PlayStation club can start with modest capital, but it rewards discipline. Buying consoles is the easy part; the hard part is filling quiet hours, never losing a booking and closing the night-shift cash drawer correctly. This guide walks through the key steps before opening and during your first month.',
         sections: [
+          {
+            id: 'heselo',
+            title: 'What does Heselo give a PS club?',
+            paragraphs: [
+              'Heselo ties station bookings to live sessions, extensions and snack sales on the same bill, and payment to the cash shift. Starting this way means you do not migrate from paper and timers later.',
+            ],
+            bullets: [
+              'Station schedule and bookings',
+              'Live session, extensions, add-on sales',
+              'Cash shift and end-of-day report',
+              'Small plan from {gaming} AZN/month',
+            ],
+          },
           {
             id: 'who-for',
             title: 'Who is this guide for?',
@@ -316,6 +342,19 @@ const catalog: CatalogEntry[] = [
         intro:
           'Как открыть свой PS-клуб с небольшим капиталом — реально, но без порядка зал быстро теряет брони и кассу. Купить консоли проще всего; сложнее заполнить пустые часы и закрывать ночную смену. Ниже — шаги до открытия и чек-лист на первый месяц.',
         sections: [
+          {
+            id: 'heselo',
+            title: 'Что Heselo даёт PS-клубу?',
+            paragraphs: [
+              'Heselo связывает бронь станции с живым сеансом, продление и закуски — с одним счётом, оплату — с кассовой сменой. Если так начать с открытия, потом не придётся переносить записи с бумаги и таймеров.',
+            ],
+            bullets: [
+              'Расписание станций и бронирование',
+              'Живой сеанс, продление, доп. продажи',
+              'Кассовая смена и отчёт за день',
+              'Тариф «Малый» от {gaming} AZN/мес.',
+            ],
+          },
           {
             id: 'who-for',
             title: 'Для кого это руководство?',
@@ -464,6 +503,15 @@ const catalog: CatalogEntry[] = [
           'POS söhbəti çox vaxt iki fərqli şeyi qarışdırır: kart qəbul edən və çek çıxaran cihazı (terminal) və satışı, sessiyanı, növbəni idarə edən proqramı (panel). Klub üçün hər ikisi lazımdır, amma fərqli suallarla seçilir. Heselo proqram tərəfidir — cihaz satmır.',
         sections: [
           {
+            id: 'how-heselo-fits',
+            title: 'Heselo POS sxemində nə verir?',
+            paragraphs: [
+              'Heselo idarəetmə panelidir: rezervasiya, canlı sessiya, satış, endirim, kassa növbəsi və anbar. Ödəniləcək məbləği sistem hesablayır, işçi ödəniş üsulunu — nağd və ya kart — qeyd edir. Kart ödənişinin özü isə bankın terminalından keçir.',
+              'Heselo terminal, kassa aparatı və ya printer satmır. Mövcud avadanlığınızla necə birgə işləyəcəyini demoda öz cihazlarınız üzrə yoxlayın.',
+            ],
+          },
+
+          {
             id: 'terminal-vs-panel',
             title: 'Terminal və panel: fərq nədir?',
             paragraphs: [
@@ -471,6 +519,7 @@ const catalog: CatalogEntry[] = [
               'Panel işçinin gördüyü proqramdır: stansiya və otaq cədvəli, canlı sessiya, satış, endirim, növbə hesabatı. Heselo bu hissədir — veb paneldir və brauzerdə, kompüter, planşet və ya telefonda açılır.',
             ],
           },
+
           {
             id: 'club-vs-restaurant-scenario',
             title: 'Klub ssenarisi restorandan nə ilə fərqlənir?',
@@ -479,6 +528,7 @@ const catalog: CatalogEntry[] = [
               'Ona görə cihazı seçməzdən əvvəl panelin klub ssenarisini — bron, sessiya, uzatma, növbə — dəstəklədiyini yoxlayın. Terminal sonra bu prosesə qoşulur.',
             ],
           },
+
           {
             id: 'selection-criteria',
             title: 'Terminal seçərkən meyarlar',
@@ -495,14 +545,7 @@ const catalog: CatalogEntry[] = [
               'Ekran: resepsiya üçün planşet və ya noutbuk kifayətdirmi',
             ],
           },
-          {
-            id: 'how-heselo-fits',
-            title: 'Heselo bu sxemdə harada durur?',
-            paragraphs: [
-              'Heselo idarəetmə panelidir: rezervasiya, canlı sessiya, satış, endirim, kassa növbəsi və anbar. Ödəniləcək məbləği sistem hesablayır, işçi ödəniş üsulunu — nağd və ya kart — qeyd edir. Kart ödənişinin özü isə bankın terminalından keçir.',
-              'Heselo terminal, kassa aparatı və ya printer satmır. Mövcud avadanlığınızla necə birgə işləyəcəyini demoda öz cihazlarınız üzrə yoxlayın.',
-            ],
-          },
+
           {
             id: 'minimum-set-small-club',
             title: 'Kiçik klub üçün minimum dəst',
@@ -517,7 +560,7 @@ const catalog: CatalogEntry[] = [
               'İstəyə görə: pul qutusu və ayrıca çek printeri',
             ],
           },
-        ],
+            ],
         faq: [
           {
             q: 'POS terminal və POS proqramı eyni şeydir?',
@@ -566,6 +609,15 @@ const catalog: CatalogEntry[] = [
           'Conversations about POS often mix up two different things: the device that takes cards and prints receipts (the terminal) and the software that runs sales, sessions and shifts (the panel). A club needs both, but you choose them by asking different questions. Heselo is the software side and does not sell hardware.',
         sections: [
           {
+            id: 'how-heselo-fits',
+            title: 'What does Heselo give in this setup?',
+            paragraphs: [
+              'Heselo is the management panel: bookings, live sessions, sales, discounts, cash shifts and inventory. The system calculates the amount due, and staff record the payment method, cash or card. The card payment itself goes through your bank terminal.',
+              'Heselo does not sell terminals, cash registers or printers. Check how it works alongside your existing hardware during a demo with your actual devices.',
+            ],
+          },
+
+          {
             id: 'terminal-vs-panel',
             title: 'Terminal versus panel: what is the difference?',
             paragraphs: [
@@ -573,6 +625,7 @@ const catalog: CatalogEntry[] = [
               'The panel is the software your staff see: the station and room schedule, live sessions, sales, discounts and shift reports. Heselo is this part. It is a web panel that opens in a browser on a computer, tablet or phone.',
             ],
           },
+
           {
             id: 'club-vs-restaurant-scenario',
             title: 'How does a club differ from a restaurant?',
@@ -581,6 +634,7 @@ const catalog: CatalogEntry[] = [
               'So before choosing hardware, confirm that the panel supports the club flow: booking, session, extension and shift. The terminal then plugs into that process.',
             ],
           },
+
           {
             id: 'selection-criteria',
             title: 'Criteria for choosing a terminal',
@@ -597,14 +651,7 @@ const catalog: CatalogEntry[] = [
               'Screen: whether a tablet or laptop is enough for the front desk',
             ],
           },
-          {
-            id: 'how-heselo-fits',
-            title: 'Where does Heselo fit in this setup?',
-            paragraphs: [
-              'Heselo is the management panel: bookings, live sessions, sales, discounts, cash shifts and inventory. The system calculates the amount due, and staff record the payment method, cash or card. The card payment itself goes through your bank terminal.',
-              'Heselo does not sell terminals, cash registers or printers. Check how it works alongside your existing hardware during a demo with your actual devices.',
-            ],
-          },
+
           {
             id: 'minimum-set-small-club',
             title: 'Minimum setup for a small club',
@@ -619,7 +666,7 @@ const catalog: CatalogEntry[] = [
               'Optional: a cash drawer and a separate receipt printer',
             ],
           },
-        ],
+            ],
         faq: [
           {
             q: 'Are a POS terminal and POS software the same thing?',
@@ -668,6 +715,15 @@ const catalog: CatalogEntry[] = [
           'В разговорах о POS часто смешивают две разные вещи: устройство, которое принимает карты и печатает чеки (терминал), и программу, которая ведёт продажи, сеансы и смены (панель). Клубу нужно и то и другое, но выбирают их по разным критериям. Heselo — это программная часть, оборудование мы не продаём.',
         sections: [
           {
+            id: 'how-heselo-fits',
+            title: 'Что Heselo даёт в этой схеме?',
+            paragraphs: [
+              'Heselo — панель управления: бронирования, живые сеансы, продажи, скидки, кассовая смена и склад. Сумму к оплате считает система, а сотрудник отмечает способ оплаты — наличные или карта. Сама оплата картой проходит через терминал банка.',
+              'Heselo не продаёт терминалы, кассовые аппараты и принтеры. Как система работает вместе с вашим оборудованием, проверьте на демо на своих устройствах.',
+            ],
+          },
+
+          {
             id: 'terminal-vs-panel',
             title: 'Терминал и панель: в чём разница?',
             paragraphs: [
@@ -675,6 +731,7 @@ const catalog: CatalogEntry[] = [
               'Панель — программа, с которой работает персонал: расписание станций и комнат, живые сеансы, продажи, скидки, отчёт по смене. Heselo — именно эта часть: веб-панель, которая открывается в браузере на компьютере, планшете или телефоне.',
             ],
           },
+
           {
             id: 'club-vs-restaurant-scenario',
             title: 'Чем сценарий клуба отличается от ресторана?',
@@ -683,6 +740,7 @@ const catalog: CatalogEntry[] = [
               'Поэтому до выбора оборудования убедитесь, что панель поддерживает клубный сценарий: бронь, сеанс, продление, смену. Терминал потом просто встраивается в этот процесс.',
             ],
           },
+
           {
             id: 'selection-criteria',
             title: 'Критерии выбора терминала',
@@ -699,14 +757,7 @@ const catalog: CatalogEntry[] = [
               'Экран: хватит ли планшета или ноутбука для стойки администратора',
             ],
           },
-          {
-            id: 'how-heselo-fits',
-            title: 'Где в этой схеме Heselo?',
-            paragraphs: [
-              'Heselo — панель управления: бронирования, живые сеансы, продажи, скидки, кассовая смена и склад. Сумму к оплате считает система, а сотрудник отмечает способ оплаты — наличные или карта. Сама оплата картой проходит через терминал банка.',
-              'Heselo не продаёт терминалы, кассовые аппараты и принтеры. Как система работает вместе с вашим оборудованием, проверьте на демо на своих устройствах.',
-            ],
-          },
+
           {
             id: 'minimum-set-small-club',
             title: 'Минимальный комплект для небольшого клуба',
@@ -721,7 +772,7 @@ const catalog: CatalogEntry[] = [
               'По желанию: денежный ящик и отдельный чековый принтер',
             ],
           },
-        ],
+            ],
         faq: [
           {
             q: 'POS-терминал и POS-программа — одно и то же?',
@@ -775,6 +826,15 @@ const catalog: CatalogEntry[] = [
           'Oyun salonunu avtomatlaşdırmaq robot və ya bahalı avadanlıq demək deyil. Söhbət dörd təkrarlanan işdən gedir: bron, vaxt sayğacı, ödəniş və növbə bağlanışı. Bunlar bir qeyddə birləşəndə işçi daha az yazır, sahib isə gəliri daha dəqiq görür.',
         sections: [
           {
+            id: 'heselo',
+            title: 'Heselo oyun zalı üçün nə verir?',
+            paragraphs: [
+              'Heselo-da stansiya cədvəldə və canlı zalda eyni vahiddir: bron sessiyaya çevrilir, məbləği sistem hesablayır, satış eyni hesaba düşür, növbə hesabatı sonda hazır olur. PS və PC stansiyaları eyni paneldə ola bilər.',
+              'Oyun klubu üçün Kiçik plan {gaming} AZN/aydan başlayır. Keçidi bir növbədə sınayın: bronları paneldə aparın və gecə kassasını köhnə üsulla müqayisə edin.',
+            ],
+          },
+
+          {
             id: 'manual-pain',
             title: 'Əl ilə işləyəndə nə itir?',
             paragraphs: [
@@ -788,6 +848,7 @@ const catalog: CatalogEntry[] = [
               'Sahib gəliri yalnız ay sonunda, təxmini bilir',
             ],
           },
+
           {
             id: 'four-flows',
             title: 'Avtomatlaşdırılacaq dörd axın',
@@ -801,6 +862,7 @@ const catalog: CatalogEntry[] = [
               'Növbə: açılış və bağlanış, gözlənilən və faktiki kassa, işçi üzrə hesabat',
             ],
           },
+
           {
             id: 'tools-whatsapp-excel-vs-panel',
             title: 'WhatsApp və Excel, yoxsa panel?',
@@ -814,6 +876,7 @@ const catalog: CatalogEntry[] = [
               'Panel: bron, sessiya, kassa və anbar bir yerdə',
             ],
           },
+
           {
             id: 'metrics',
             title: 'Hansı göstəricilərə baxmaq lazımdır?',
@@ -829,15 +892,7 @@ const catalog: CatalogEntry[] = [
               'Təkrar gələn müştərilər',
             ],
           },
-          {
-            id: 'heselo',
-            title: 'Heselo bu işdə necə kömək edir?',
-            paragraphs: [
-              'Heselo-da stansiya cədvəldə və canlı zalda eyni vahiddir: bron sessiyaya çevrilir, məbləği sistem hesablayır, satış eyni hesaba düşür, növbə hesabatı sonda hazır olur. PS və PC stansiyaları eyni paneldə ola bilər.',
-              'Oyun klubu üçün Kiçik plan {gaming} AZN/aydan başlayır. Keçidi bir növbədə sınayın: bronları paneldə aparın və gecə kassasını köhnə üsulla müqayisə edin.',
             ],
-          },
-        ],
         faq: [
           {
             q: 'Oyun salonu avtomatlaşdırma nədir?',
@@ -885,6 +940,15 @@ const catalog: CatalogEntry[] = [
           'Automating a game hall does not mean robots or expensive hardware. It comes down to four repetitive jobs: bookings, the session timer, payments and closing the shift. When they share one record, staff write less and the owner sees revenue more accurately.',
         sections: [
           {
+            id: 'heselo',
+            title: 'What does Heselo give a game hall?',
+            paragraphs: [
+              'In Heselo, a station is the same unit on the schedule and in the live hall: a booking turns into a session, the system calculates the amount, sales land on the same bill, and the shift report is ready at close. PS and PC stations can share one panel.',
+              'The Small plan for gaming clubs starts from {gaming} AZN per month. Try the switch over a single shift: run bookings in the panel and compare the night cash count with your old method.',
+            ],
+          },
+
+          {
             id: 'manual-pain',
             title: 'What gets lost when you run things by hand?',
             paragraphs: [
@@ -898,6 +962,7 @@ const catalog: CatalogEntry[] = [
               'The owner only sees revenue at month end, and only roughly',
             ],
           },
+
           {
             id: 'four-flows',
             title: 'The four flows to automate',
@@ -909,6 +974,7 @@ const catalog: CatalogEntry[] = [
               'Shift: opening and closing, expected versus actual cash, a report per staff member',
             ],
           },
+
           {
             id: 'tools-whatsapp-excel-vs-panel',
             title: 'WhatsApp and Excel, or a panel?',
@@ -922,6 +988,7 @@ const catalog: CatalogEntry[] = [
               'Panel: bookings, sessions, cash and inventory in one place',
             ],
           },
+
           {
             id: 'metrics',
             title: 'Which metrics should you watch?',
@@ -935,15 +1002,7 @@ const catalog: CatalogEntry[] = [
               'Returning customers',
             ],
           },
-          {
-            id: 'heselo',
-            title: 'How does Heselo help?',
-            paragraphs: [
-              'In Heselo, a station is the same unit on the schedule and in the live hall: a booking turns into a session, the system calculates the amount, sales land on the same bill, and the shift report is ready at close. PS and PC stations can share one panel.',
-              'The Small plan for gaming clubs starts from {gaming} AZN per month. Try the switch over a single shift: run bookings in the panel and compare the night cash count with your old method.',
             ],
-          },
-        ],
         faq: [
           {
             q: 'What is game hall automation?',
@@ -991,6 +1050,15 @@ const catalog: CatalogEntry[] = [
           'Автоматизация игрового зала — это не роботы и не дорогое оборудование. Речь о четырёх повторяющихся задачах: бронь, таймер сеанса, оплата и закрытие смены. Когда они собраны в одной записи, сотрудник пишет меньше, а владелец точнее видит выручку.',
         sections: [
           {
+            id: 'heselo',
+            title: 'Что Heselo даёт игровому залу?',
+            paragraphs: [
+              'В Heselo станция — одна и та же единица в расписании и в живом зале: бронь превращается в сеанс, сумму считает система, продажи попадают в тот же счёт, отчёт по смене готов к закрытию. PS- и PC-станции могут быть в одной панели.',
+              'Тариф «Малый» для игровых клубов — от {low} AZN в месяц. Попробуйте переход за одну смену: ведите брони в панели и сравните ночную кассу с прежним способом.',
+            ],
+          },
+
+          {
             id: 'manual-pain',
             title: 'Что теряется при ручном учёте?',
             paragraphs: [
@@ -1004,6 +1072,7 @@ const catalog: CatalogEntry[] = [
               'Владелец узнаёт выручку только в конце месяца и приблизительно',
             ],
           },
+
           {
             id: 'four-flows',
             title: 'Четыре процесса для автоматизации',
@@ -1015,6 +1084,7 @@ const catalog: CatalogEntry[] = [
               'Смена: открытие и закрытие, ожидаемая и фактическая касса, отчёт по сотруднику',
             ],
           },
+
           {
             id: 'tools-whatsapp-excel-vs-panel',
             title: 'WhatsApp и Excel или панель?',
@@ -1028,6 +1098,7 @@ const catalog: CatalogEntry[] = [
               'Панель: бронь, сеанс, касса и склад в одном месте',
             ],
           },
+
           {
             id: 'metrics',
             title: 'Какие показатели отслеживать?',
@@ -1041,15 +1112,7 @@ const catalog: CatalogEntry[] = [
               'Повторные гости',
             ],
           },
-          {
-            id: 'heselo',
-            title: 'Как помогает Heselo?',
-            paragraphs: [
-              'В Heselo станция — одна и та же единица в расписании и в живом зале: бронь превращается в сеанс, сумму считает система, продажи попадают в тот же счёт, отчёт по смене готов к закрытию. PS- и PC-станции могут быть в одной панели.',
-              'Тариф «Малый» для игровых клубов — от {low} AZN в месяц. Попробуйте переход за одну смену: ведите брони в панели и сравните ночную кассу с прежним способом.',
             ],
-          },
-        ],
         faq: [
           {
             q: 'Что такое автоматизация игрового зала?',
@@ -1102,6 +1165,19 @@ const catalog: CatalogEntry[] = [
         intro:
           'Karaoke klubu otaq vaxtı satır, üstəlik içki və qəlyanaltı. Ona görə biznes planı əsas suala cavab verməlidir: neçə otaq, hansı doluluqla və hansı tariflə? Aşağıdakı rəqəmlər yalnız nümunədir, zəmanət deyil — öz şəhəriniz, məkanınız və qiymətlərinizlə yenidən hesablayın.',
         sections: [
+          {
+            id: 'heselo',
+            title: 'Heselo karaoke üçün nə verir?',
+            paragraphs: [
+              'Heselo otaq bronunu canlı sessiyaya çevirir, uzatma və bar satışını eyni otaq hesabında saxlayır, günü kassa növbəsi ilə bağlayır. Biznes plandakı doluluq və orta çek yalnız belə uçotla real ölçülür.',
+            ],
+            bullets: [
+              'Otaq cədvəli və rezervasiya',
+              'Canlı sessiya və uzatma',
+              'Sessiyaya bağlı bar satışı',
+              'Kiçik plan {karaoke} AZN/aydan',
+            ],
+          },
           {
             id: 'positioning',
             title: 'Mövqeləndirmə: kimə satırsınız?',
@@ -1229,6 +1305,19 @@ const catalog: CatalogEntry[] = [
           'A karaoke club sells room time, plus drinks and snacks. So the business plan has to answer one core question: how many rooms, at what occupancy and at what rate? The figures below are illustrative only, not guarantees. Recalculate them with your own city, venue and prices.',
         sections: [
           {
+            id: 'heselo',
+            title: 'What does Heselo give karaoke?',
+            paragraphs: [
+              'Heselo turns room bookings into live sessions, keeps extensions and bar sales on the same room bill, and closes the day with a cash shift. Occupancy and average check in a business plan only become real with that kind of ledger.',
+            ],
+            bullets: [
+              'Room schedule and bookings',
+              'Live session and extensions',
+              'Bar sales on the session',
+              'Small plan from {karaoke} AZN/month',
+            ],
+          },
+          {
             id: 'positioning',
             title: 'Positioning: who are you selling to?',
             paragraphs: [
@@ -1354,6 +1443,19 @@ const catalog: CatalogEntry[] = [
         intro:
           'Караоке-клуб продаёт время в комнате, а также напитки и закуски. Поэтому бизнес-план должен отвечать на главный вопрос: сколько комнат, с какой загрузкой и по какому тарифу? Цифры ниже — только пример, а не гарантия. Пересчитайте их для своего города, помещения и цен.',
         sections: [
+          {
+            id: 'heselo',
+            title: 'Что Heselo даёт караоке?',
+            paragraphs: [
+              'Heselo переводит бронь комнаты в живой сеанс, держит продление и бар в одном счёте комнаты и закрывает день кассовой сменой. Загрузка и средний чек из бизнес-плана становятся реальными только при таком учёте.',
+            ],
+            bullets: [
+              'Расписание комнат и бронирование',
+              'Живой сеанс и продление',
+              'Бар в счёте сеанса',
+              'Тариф «Малый» от {karaoke} AZN/мес.',
+            ],
+          },
           {
             id: 'positioning',
             title: 'Позиционирование: для кого вы работаете?',
@@ -1488,6 +1590,15 @@ const catalog: CatalogEntry[] = [
           'Antikafedə qonaq içkiyə yox, vaxta görə ödəyir. Deməli, saatlıq və ya dəqiqəlik haqq kirayəni, maaşı, kommunalı və “pulsuz” çay-peçenyeni örtməlidir. Bu bələdçi hesablamanı addım-addım göstərir. Maliyyə və ya hüquqi məsləhət deyil — rəqəmləri öz məkanınızla və mühasibinizlə yoxlayın.',
         sections: [
           {
+            id: 'heselo',
+            title: 'Heselo antikafe üçün nə verir?',
+            paragraphs: [
+              'Düstur yalnız real rəqəmlərlə işləyir. Dəftərlə uçotda satılan qonaq-saatı, endirimlərin təsirini və saatlar üzrə yükü bilmək çətindir.',
+              'Heselo antikafedə hər qonağın vaxtını sayır, məbləği tarif qaydalarına görə hesablayır, satışı eyni hesaba yazır və növbə hesabatını çıxarır. Antikafe üçün Kiçik plan {antikafe} AZN/aydan başlayır — bu da sabit xərclər siyahısına daxil edilməlidir.',
+            ],
+          },
+
+          {
             id: 'cost-stack',
             title: 'Xərcləri toplayın',
             paragraphs: [
@@ -1502,6 +1613,7 @@ const catalog: CatalogEntry[] = [
               'Amortizasiya: mebel, konsollar, stolüstü oyunlar',
             ],
           },
+
           {
             id: 'hourly-revenue-model',
             title: 'Saatlıq gəlir modeli',
@@ -1516,6 +1628,7 @@ const catalog: CatalogEntry[] = [
               'Gündüz, axşam və tələbə tarifləri ayrıca',
             ],
           },
+
           {
             id: 'break-even-simple-formula',
             title: 'Zərərsizlik nöqtəsi: sadə düstur',
@@ -1525,14 +1638,7 @@ const catalog: CatalogEntry[] = [
               'Rəqəm çox görünürsə, üç rıçaq var: kirayəni azaltmaq, orta saat gəlirini qaldırmaq və ya boş saatları doldurmaq.',
             ],
           },
-          {
-            id: 'role-of-software',
-            title: 'Proqramın rolu',
-            paragraphs: [
-              'Düstur yalnız real rəqəmlərlə işləyir. Dəftərlə uçotda satılan qonaq-saatı, endirimlərin təsirini və saatlar üzrə yükü bilmək çətindir.',
-              'Heselo antikafedə hər qonağın vaxtını sayır, məbləği tarif qaydalarına görə hesablayır, satışı eyni hesaba yazır və növbə hesabatını çıxarır. Antikafe üçün Kiçik plan {antikafe} AZN/aydan başlayır — bu da sabit xərclər siyahısına daxil edilməlidir.',
-            ],
-          },
+
           {
             id: 'next-steps',
             title: 'Növbəti addımlar',
@@ -1548,7 +1654,7 @@ const catalog: CatalogEntry[] = [
               'Rəqəmləri mühasibinizlə dəqiqləşdirin',
             ],
           },
-        ],
+            ],
         faq: [
           {
             q: 'Antikafe icarə haqqını necə hesablayım?',
@@ -1597,6 +1703,14 @@ const catalog: CatalogEntry[] = [
           'In an anticafe, guests pay for time, not for drinks. That means your per-minute or hourly fee has to cover rent, wages, utilities and the “free” tea and biscuits. This guide walks through the calculation step by step. It is not financial or legal advice; check the numbers against your own venue and with your accountant.',
         sections: [
           {
+            id: 'heselo',
+            title: 'What does Heselo give an anti-café?',
+            paragraphs: [
+              'The formula only works with real numbers. With paper records it is hard to know how many guest-hours you actually sold, how much discounts cost you and how busy each hour is.',
+              'In an anticafe, Heselo tracks each guest’s time, calculates the amount according to your rate rules, puts sales on the same bill and produces a shift report. The Small plan for anticafes starts from {antikafe} AZN per month, and that belongs on your fixed-cost list too.',
+            ],
+          },
+          {
             id: 'cost-stack',
             title: 'Add up your costs',
             paragraphs: [
@@ -1632,14 +1746,6 @@ const catalog: CatalogEntry[] = [
               'Formula: guest-hours needed = fixed monthly costs / (average revenue per guest-hour − variable cost per guest-hour).',
               'Example (not a guarantee): rent 1,500, wages 1,800, utilities 400, other 300, for a total of 4,000 AZN a month. Average revenue per hour is 4 AZN and variable cost 0.8 AZN. 4,000 / 3.2 = 1,250 guest-hours a month, or about 42 guest-hours a day. If you are open 10 hours a day, that means 4–5 guests in the room at any one time on average.',
               'If that looks like a lot, you have three levers: lower the rent, raise average revenue per hour, or fill the quiet hours.',
-            ],
-          },
-          {
-            id: 'role-of-software',
-            title: 'The role of software',
-            paragraphs: [
-              'The formula only works with real numbers. With paper records it is hard to know how many guest-hours you actually sold, how much discounts cost you and how busy each hour is.',
-              'In an anticafe, Heselo tracks each guest’s time, calculates the amount according to your rate rules, puts sales on the same bill and produces a shift report. The Small plan for anticafes starts from {antikafe} AZN per month, and that belongs on your fixed-cost list too.',
             ],
           },
           {
@@ -1706,6 +1812,15 @@ const catalog: CatalogEntry[] = [
           'В антикафе гость платит за время, а не за напитки. Значит, поминутная или почасовая плата должна покрывать аренду, зарплаты, коммунальные платежи и «бесплатные» чай с печеньем. Это руководство показывает расчёт по шагам. Это не финансовая и не юридическая консультация — проверьте цифры для своего помещения и с бухгалтером.',
         sections: [
           {
+            id: 'heselo',
+            title: 'Что Heselo даёт антикафе?',
+            paragraphs: [
+              'Формула работает только с реальными цифрами. При учёте в тетради трудно понять, сколько гостечасов продано, во что обходятся скидки и как распределяется загрузка по часам.',
+              'Heselo считает время каждого гостя в антикафе, рассчитывает сумму по правилам тарифа, записывает продажи в тот же счёт и формирует отчёт по смене. Тариф «Малый» для антикафе — от {antikafe} AZN в месяц; его тоже стоит включить в список постоянных расходов.',
+            ],
+          },
+
+          {
             id: 'cost-stack',
             title: 'Соберите расходы',
             paragraphs: [
@@ -1720,6 +1835,7 @@ const catalog: CatalogEntry[] = [
               'Амортизация: мебель, консоли, настольные игры',
             ],
           },
+
           {
             id: 'hourly-revenue-model',
             title: 'Модель почасовой выручки',
@@ -1734,6 +1850,7 @@ const catalog: CatalogEntry[] = [
               'Отдельные дневной, вечерний и студенческий тарифы',
             ],
           },
+
           {
             id: 'break-even-simple-formula',
             title: 'Точка безубыточности: простая формула',
@@ -1743,14 +1860,7 @@ const catalog: CatalogEntry[] = [
               'Если цифра кажется большой, есть три рычага: снизить аренду, поднять среднюю выручку с часа или заполнить пустые часы.',
             ],
           },
-          {
-            id: 'role-of-software',
-            title: 'Роль программы',
-            paragraphs: [
-              'Формула работает только с реальными цифрами. При учёте в тетради трудно понять, сколько гостечасов продано, во что обходятся скидки и как распределяется загрузка по часам.',
-              'Heselo считает время каждого гостя в антикафе, рассчитывает сумму по правилам тарифа, записывает продажи в тот же счёт и формирует отчёт по смене. Тариф «Малый» для антикафе — от {antikafe} AZN в месяц; его тоже стоит включить в список постоянных расходов.',
-            ],
-          },
+
           {
             id: 'next-steps',
             title: 'Следующие шаги',
@@ -1766,7 +1876,7 @@ const catalog: CatalogEntry[] = [
               'Уточните цифры у бухгалтера',
             ],
           },
-        ],
+            ],
         faq: [
           {
             q: 'Как рассчитать аренду для антикафе?',

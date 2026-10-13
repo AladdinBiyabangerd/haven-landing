@@ -33,6 +33,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Karaoke və otaqlı launj bəzən restoran POS ilə açılır — menyu, içki və çek eyni kassada. Əsas gəlir otaq saatı və sessiya uzadılmasıdırsa, restoran POS otaq təqvimi, canlı sessiya və saat tarifini tam əhatə etmir. Bu bələdçi restoran POS kateqoriyasını karaoke/otaq-vaxt sistemi ilə müqayisə edir; Heselo tam restoran mətbəx əvəzi deyil.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo karaoke üçün nə verir?',
+          paragraphs: [
+            'Otaqlar saatla satılır, öncədən bron tələb olunur və gəlişdə sessiya başlamalıdırsa, karaoke otaq sistemi restoran POS-dan fərqlidir. Heselo otaq təqvimini canlı sessiyaya, tarifə və kassa növbəsinə bağlayır.',
+            'İçki satışı sessiyaya əlavə olunur; ağır mətbəx axını Heselo-nun hədəfi deyil. Demo zamanı tipik cümə axşamı bron → sessiya → uzadılma ssenarisini yoxlayın.',
+          ],
+          bullets: [
+            'Əsas məhsul: karaoke/launj otağı saatı',
+            'Otaq təqvimi və üst-üstə bronun qarşısı vacibdir',
+            'Uzatma, tarif paketi və növbə kassası bir yerdə olmalıdır',
+            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: zal restoranı, yoxsa otaq saatı?',
           paragraphs: [
@@ -44,6 +59,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Kritik axın: ofisiant sifarişi, yoxsa bron → sessiya → uzadılma → kassa?',
           ],
         },
+
         {
           id: 'when-restaurant-pos-fits',
           title: 'Restoran POS nə vaxt kifayətdir?',
@@ -58,20 +74,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq rezervasiyası ikinci dərəcəlidir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Karaoke/otaq-vaxt paneli (Heselo) nə vaxt uyğundur?',
-          paragraphs: [
-            'Otaqlar saatla satılır, öncədən bron tələb olunur və gəlişdə sessiya başlamalıdırsa, karaoke otaq sistemi restoran POS-dan fərqlidir. Heselo otaq təqvimini canlı sessiyaya, tarifə və kassa növbəsinə bağlayır.',
-            'İçki satışı sessiyaya əlavə olunur; ağır mətbəx axını Heselo-nun hədəfi deyil. Demo zamanı tipik cümə axşamı bron → sessiya → uzadılma ssenarisini yoxlayın.',
-          ],
-          bullets: [
-            'Əsas məhsul: karaoke/launj otağı saatı',
-            'Otaq təqvimi və üst-üstə bronun qarşısı vacibdir',
-            'Uzatma, tarif paketi və növbə kassası bir yerdə olmalıdır',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Restoran POS və karaoke/otaq sistemi — müqayisə',
@@ -96,6 +99,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa bazar mənzərəsi: restoran vs otaq-vaxt',
@@ -110,6 +114,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hibrid karaoke: restoran POS + otaq paneli',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Karaoke ssenariləri',
@@ -121,6 +126,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Həftəsonu pik: otaq təqvimi olmadan restoran POS ilə üst-üstə bron riski',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Seçim və keçid yoxlama siyahısı',
@@ -135,7 +141,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Kassada: otaq ödənişi və bar satışının hansı sistemdə qeyd olunduğunu razılaşdırın',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Karaoke üçün restoran POS kifayət edirmi?',
@@ -194,6 +200,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Karaoke and room lounges are sometimes opened on restaurant POS — menus, drinks and receipts on one till. If main revenue is room hours and session extensions, restaurant POS does not fully cover room calendars, live sessions and hourly rates. This guide compares restaurant POS with karaoke/room-time systems; Heselo is not a full restaurant kitchen replacement.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give karaoke?',
+          paragraphs: [
+            'When rooms are sold by the hour, advance booking matters and sessions start on arrival, a karaoke room system differs from restaurant POS. Heselo links room calendars to live sessions, rates and cash shifts.',
+            'Drinks attach to a session; heavy kitchen flow is not Heselo’s target. In a demo, run a typical Friday book → session → extension flow.',
+          ],
+          bullets: [
+            'Core product: karaoke/lounge room hours',
+            'Room calendar and avoiding double bookings matter',
+            'Extensions, rate packages and shift cash in one place',
+            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: dining restaurant or room hours?',
           paragraphs: [
@@ -205,6 +226,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Critical flow: waiter orders, or book → session → extension → cash?',
           ],
         },
+
         {
           id: 'when-restaurant-pos-fits',
           title: 'When is restaurant POS enough?',
@@ -219,20 +241,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room booking is secondary',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does a karaoke/room-time panel (Heselo) fit?',
-          paragraphs: [
-            'When rooms are sold by the hour, advance booking matters and sessions start on arrival, a karaoke room system differs from restaurant POS. Heselo links room calendars to live sessions, rates and cash shifts.',
-            'Drinks attach to a session; heavy kitchen flow is not Heselo’s target. In a demo, run a typical Friday book → session → extension flow.',
-          ],
-          bullets: [
-            'Core product: karaoke/lounge room hours',
-            'Room calendar and avoiding double bookings matter',
-            'Extensions, rate packages and shift cash in one place',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Restaurant POS vs karaoke/room system — comparison',
@@ -257,6 +266,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Short landscape: restaurant vs room-time',
@@ -271,6 +281,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hybrid karaoke: restaurant POS + room panel',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Karaoke scenarios',
@@ -282,6 +293,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Weekend peak: double-booking risk without room calendar on restaurant POS alone',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Choice and switch checklist',
@@ -296,7 +308,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Agree whether room payment and bar sales land on which system',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Is restaurant POS enough for karaoke?',
@@ -355,6 +367,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Караоке и лаунж с комнатами иногда открывают на ресторанной POS — меню, напитки и чеки на одной кассе. Если основная выручка — часы комнат и продления сеансов, ресторанная POS не закрывает календарь комнат, живые сеансы и почасовые тарифы. Это руководство сравнивает ресторанную POS с системами караоке/времени комнат; Heselo не заменяет полноценную ресторанную кухню.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что Heselo даёт караоке?',
+          paragraphs: [
+            'Если комнаты продаются по часам, нужна предварительная бронь и сеанс стартует по приходу — это другая категория, не ресторанная POS. Heselo связывает календарь комнат с живым сеансом, тарифом и кассовой сменой.',
+            'Напитки добавляются к сеансу; тяжёлый кухонный поток — не цель Heselo. На демо прогоните типичную пятницу: бронь → сеанс → продление.',
+          ],
+          bullets: [
+            'Основной продукт: часы караоке/лаунж-комнаты',
+            'Календарь комнат и защита от двойных броней',
+            'Продления, пакеты тарифов и касса смены в одном месте',
+            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: ресторанный зал или часы комнат?',
           paragraphs: [
@@ -366,6 +393,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Критичный поток: заказы официантов или бронь → сеанс → продление → касса?',
           ],
         },
+
         {
           id: 'when-restaurant-pos-fits',
           title: 'Когда хватает ресторанной POS?',
@@ -380,20 +408,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Бронь комнат вторична',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит панель караоке/времени комнат (Heselo)?',
-          paragraphs: [
-            'Если комнаты продаются по часам, нужна предварительная бронь и сеанс стартует по приходу — это другая категория, не ресторанная POS. Heselo связывает календарь комнат с живым сеансом, тарифом и кассовой сменой.',
-            'Напитки добавляются к сеансу; тяжёлый кухонный поток — не цель Heselo. На демо прогоните типичную пятницу: бронь → сеанс → продление.',
-          ],
-          bullets: [
-            'Основной продукт: часы караоке/лаунж-комнаты',
-            'Календарь комнат и защита от двойных броней',
-            'Продления, пакеты тарифов и касса смены в одном месте',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Ресторанная POS и караоке/комнаты — сравнение',
@@ -418,6 +433,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Краткий ландшафт: ресторан vs время комнат',
@@ -432,6 +448,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Гибрид: ресторанная POS + панель комнат',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Сценарии караоке',
@@ -443,6 +460,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Пик выходных: риск двойных броней без календаря комнат на одной ресторанной POS',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист выбора и перехода',
@@ -457,7 +475,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Договоритесь, где учитывается оплата комнаты и бар',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Хватит ли ресторанной POS для караоке?',

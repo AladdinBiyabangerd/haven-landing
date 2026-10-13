@@ -103,18 +103,6 @@ const faqMessages = {
       }
 
       <div class="narrow">
-        <section aria-labelledby="who-title">
-          <h2 id="who-title" class="sub">{solution.whoTitle}</h2>
-          <p class="body">{solution.whoBody}</p>
-        </section>
-
-        <section aria-labelledby="problems-title">
-          <h2 id="problems-title" class="sub">{solution.problemsTitle}</h2>
-          <ul class="bullets">
-            {solution.problems.map((item) => <li>{item}</li>)}
-          </ul>
-        </section>
-
         <section aria-labelledby="how-title">
           <h2 id="how-title" class="sub">{solution.howTitle}</h2>
           <p class="body">{solution.howBody}</p>
@@ -146,6 +134,18 @@ const faqMessages = {
       }
 
       <div class="narrow">
+        <section aria-labelledby="who-title">
+          <h2 id="who-title" class="sub">{solution.whoTitle}</h2>
+          <p class="body">{solution.whoBody}</p>
+        </section>
+
+        <section aria-labelledby="problems-title">
+          <h2 id="problems-title" class="sub">{solution.problemsTitle}</h2>
+          <ul class="bullets">
+            {solution.problems.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+
         <section aria-labelledby="differ-title">
           <h2 id="differ-title" class="sub">{solution.differTitle}</h2>
           <p class="body">{solution.differBody}</p>

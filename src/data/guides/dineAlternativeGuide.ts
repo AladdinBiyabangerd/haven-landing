@@ -35,6 +35,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Dine axtarışında çox vaxt restoran sifarişi, masa xidməti və rəqəmsal menyu gözlənilir. Əsas gəliriniz otaq, konsol və ya masa saatıdırsa, ehtiyac fərqlidir: rezervasiya, canlı sessiya, uzadılma və kassa növbəsi. Bu bələdçi Dine-u klub/otaq-vaxt nişəsi ilə dürüst müqayisə edir — Heselo tam restoran POS əvəzi deyil.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'PlayStation stansiyası, karaoke otağı, bilyard masası, antikafe yeri və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və anbara bağlayır.',
+            'Bar və qəlyanaltı satışı sessiyaya əlavə olunur; bu, restoran mətbəx axını ilə eyni şey deyil. Demo zamanı öz otaq və stansiyalarınızla eyni ssenarini yoxlayın.',
+          ],
+          bullets: [
+            'Əsas məhsul: otaq, konsol və ya masa saatı',
+            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
+            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: restoran, yoxsa otaq-vaxt?',
           paragraphs: [
@@ -46,6 +61,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Kritik funksiyalar: mətbəx/menyu/kassa satışı, yoxsa bron → canlı sessiya → uzadılma → kassa?',
           ],
         },
+
         {
           id: 'when-dine-fits',
           title: 'Dine nə vaxt qalmalıdır?',
@@ -60,20 +76,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq vaxtı ikinci dərəcəlidir və ya ümumiyyətlə yoxdur',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'PlayStation stansiyası, karaoke otağı, bilyard masası, antikafe yeri və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və anbara bağlayır.',
-            'Bar və qəlyanaltı satışı sessiyaya əlavə olunur; bu, restoran mətbəx axını ilə eyni şey deyil. Demo zamanı öz otaq və stansiyalarınızla eyni ssenarini yoxlayın.',
-          ],
-          bullets: [
-            'Əsas məhsul: otaq, konsol və ya masa saatı',
-            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
-            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Dine və Heselo — qısa müqayisə',
@@ -102,6 +105,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Restoran/satış axtarırsınızsa: qısa baxış',
@@ -115,6 +119,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hər iki ehtiyac varsa: restoran/satış POS + Heselo',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -128,6 +133,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Paralel: güclü mətbəx/satış Dine-da qalır; otaq və stansiya vaxtı Heselo-da — hansı satışın harada yazıldığı əvvəlcədən bölünür',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Keçid yoxlama siyahısı',
@@ -141,8 +147,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Mətbəx/satış qalırsa, digər sistemi saxlayın və məsuliyyəti yazılı bölün',
             'Bir növbə paralel işlədin; sonra qərar verin',
           ],
-        }
-      ],
+        },
+          ],
       faq: [
         {
           q: 'Heselo Dine-u tam əvəz edir?',
@@ -199,6 +205,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for a Dine alternative often assume restaurant ordering, table service and digital menus. If your main revenue is room, console or table hours, the need is different: bookings, live sessions, extensions and cash shifts. This guide compares Dine honestly with the club / room-time niche — Heselo is not a full restaurant POS replacement.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When PlayStation stations, karaoke rooms, billiards tables, anticafe seats or lounge rooms are sold by time, Heselo connects bookings to live sessions, rates, cash shifts and stock.',
+            'Bar and snack sales attach to a session; that is not the same as a restaurant kitchen flow. In a demo, test the same scenario with your own rooms and stations.',
+          ],
+          bullets: [
+            'Core product: room, console or table hours',
+            'Advance booking and session start on arrival are required',
+            'Extensions, rates and shift cash should live in one panel',
+            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: restaurant or room-time?',
           paragraphs: [
@@ -210,6 +231,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Must-have functions: kitchen/menus/till sales, or booking → live session → extension → cash?',
           ],
         },
+
         {
           id: 'when-dine-fits',
           title: 'When should Dine stay?',
@@ -224,20 +246,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room time is secondary or absent',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When PlayStation stations, karaoke rooms, billiards tables, anticafe seats or lounge rooms are sold by time, Heselo connects bookings to live sessions, rates, cash shifts and stock.',
-            'Bar and snack sales attach to a session; that is not the same as a restaurant kitchen flow. In a demo, test the same scenario with your own rooms and stations.',
-          ],
-          bullets: [
-            'Core product: room, console or table hours',
-            'Advance booking and session start on arrival are required',
-            'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Dine vs Heselo — at a glance',
@@ -270,6 +279,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Looking for restaurant/sales? Short landscape',
@@ -283,6 +293,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Need both: restaurant/sales POS + Heselo',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -296,6 +307,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Parallel: strong kitchen/sales stay on Dine; room and station time on Heselo — agree which sales land where',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Switch checklist',
@@ -309,8 +321,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'If kitchen/sales remain, keep the other system and document ownership',
             'Run one shift in parallel, then decide',
           ],
-        }
-      ],
+        },
+          ],
       faq: [
         {
           q: 'Does Heselo fully replace Dine?',
@@ -367,6 +379,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск альтернативы Dine часто подразумевает ресторанные заказы, обслуживание столиков и цифровое меню. Если основная выручка — часы комнаты, консоли или стола, нужна другая модель: бронирования, живые сеансы, продления и кассовые смены. Это руководство честно сравнивает Dine с клубной / почасовой нишей — Heselo не заменяет полноценную ресторанную POS.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если PlayStation-станции, караоке-комнаты, бильярдные столы, места в антикафе или лаунж-комнаты продаются по времени, Heselo связывает бронь с живым сеансом, тарифом, кассовой сменой и складом.',
+            'Бар и закуски добавляются к сеансу — это не ресторанный кухонный поток. На демо проверьте тот же сценарий на своих комнатах и станциях.',
+          ],
+          bullets: [
+            'Основной продукт: часы комнаты, консоли или стола',
+            'Нужны предварительная бронь и запуск сеанса по приходу',
+            'Продления, тарифы и касса смены должны быть в одной панели',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: ресторан или время комнат?',
           paragraphs: [
@@ -378,6 +405,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Критичные функции: кухня/меню/кассовые продажи или бронь → живой сеанс → продление → касса?',
           ],
         },
+
         {
           id: 'when-dine-fits',
           title: 'Когда Dine стоит оставить?',
@@ -392,20 +420,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Время комнат вторично или отсутствует',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если PlayStation-станции, караоке-комнаты, бильярдные столы, места в антикафе или лаунж-комнаты продаются по времени, Heselo связывает бронь с живым сеансом, тарифом, кассовой сменой и складом.',
-            'Бар и закуски добавляются к сеансу — это не ресторанный кухонный поток. На демо проверьте тот же сценарий на своих комнатах и станциях.',
-          ],
-          bullets: [
-            'Основной продукт: часы комнаты, консоли или стола',
-            'Нужны предварительная бронь и запуск сеанса по приходу',
-            'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Dine и Heselo — краткое сравнение',
@@ -434,6 +449,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ищете ресторан/продажи? Короткий ландшафт',
@@ -447,6 +463,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужно оба: ресторанная/торговая POS + Heselo',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -460,6 +477,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Параллельно: сильная кухня/продажи остаются в Dine; время комнат и станций — в Heselo; заранее разделите, какие продажи где учитываются',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист перехода',
@@ -473,8 +491,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Если кухня/продажи остаются, оставьте другую систему и зафиксируйте зоны ответственности',
             'Одну смену ведите параллельно, затем решайте',
           ],
-        }
-      ],
+        },
+          ],
       faq: [
         {
           q: 'Heselo полностью заменяет Dine?',

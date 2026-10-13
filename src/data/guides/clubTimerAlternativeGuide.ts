@@ -33,6 +33,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Bakıda Club Timer (Klub Taymer) axtarışı çox vaxt sadə stansiya vaxtı proqramına aparır: masa başlayır, qalan vaxt və ödəniş göstərilir. Kiçik PlayStation və internet klubunda bu kifayət edə bilər. Bron, növbə kassası, anbar və otaq rezervasiyası artanda taymer boşluq buraxır. Bu bələdçi Club Timer kateqoriyasını Heselo ilə müqayisə edir — taymer kifayət edəndə onu saxlamağı tövsiyə edirik.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbarı sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
+            'Demo zamanı öz stansiya/otaq sayınız və həftəsonu pikini yoxlayın.',
+          ],
+          bullets: [
+            'Öncədən bron və otaq/stansiya təqvimi',
+            'Canlı sessiya, uzadılma və tarif paketləri',
+            'Klub növbəsi və sessiyaya məhsul satışı',
+            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: yalnız taymer, yoxsa klub axını?',
           paragraphs: [
@@ -44,6 +59,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq: yalnız açıq masa, yoxsa ayrıca otaq/stansiya təqvimi?',
           ],
         },
+
         {
           id: 'when-timer-fits',
           title: 'Club Timer nə vaxt qalmalıdır?',
@@ -58,20 +74,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Büdcə minimaldır və böyümə planı yoxdur',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbarı sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
-            'Demo zamanı öz stansiya/otaq sayınız və həftəsonu pikini yoxlayın.',
-          ],
-          bullets: [
-            'Öncədən bron və otaq/stansiya təqvimi',
-            'Canlı sessiya, uzadılma və tarif paketləri',
-            'Klub növbəsi və sessiyaya məhsul satışı',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Club Timer və Heselo — müqayisə',
@@ -96,6 +99,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'PlayStation / internet klub bazar mənzərəsi',
@@ -109,6 +113,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — bron, sessiya, kassa, anbar',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -120,6 +125,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC internet klubu: IZI/LANGAME qalır; otaq saatı ayrıca Heselo-da',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Taymerdən panelə keçid yoxlama siyahısı',
@@ -134,7 +140,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC kilidləmə ehtiyacı varsa, ayrıca IZI/LANGAME planlaşdırın',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Club Timer kifayət edirmi?',
@@ -193,6 +199,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'In Baku, Club Timer searches usually mean a simple station timer: a table starts, remaining time and payment show up. In a small PlayStation or internet club that can be enough. As bookings, shift cash, stock and room reservations grow, a timer leaves gaps. This guide compares the Club Timer category with Heselo — when the timer suffices, we recommend keeping it.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When station or room time is sold with booking, extensions are frequent, and shift cash plus snacks attach to sessions — you need a club panel. Heselo turns booking into live sessions, rates and cash shifts.',
+            'In a demo, check your station/room count and weekend peak.',
+          ],
+          bullets: [
+            'Advance booking and room/station calendar',
+            'Live session, extensions and rate packages',
+            'Club shift and product sales on sessions',
+            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: timer only or full club flow?',
           paragraphs: [
@@ -204,6 +225,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Rooms: open tables only, or a separate room/station calendar?',
           ],
         },
+
         {
           id: 'when-timer-fits',
           title: 'When should Club Timer stay?',
@@ -218,20 +240,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Budget is minimal and there is no growth plan',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When station or room time is sold with booking, extensions are frequent, and shift cash plus snacks attach to sessions — you need a club panel. Heselo turns booking into live sessions, rates and cash shifts.',
-            'In a demo, check your station/room count and weekend peak.',
-          ],
-          bullets: [
-            'Advance booking and room/station calendar',
-            'Live session, extensions and rate packages',
-            'Club shift and product sales on sessions',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Club Timer vs Heselo — comparison',
@@ -256,6 +265,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'PlayStation / internet club landscape',
@@ -269,6 +279,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — booking, session, cash, stock',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -280,6 +291,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC internet club: keep IZI/LANGAME; room hours on Heselo separately',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Timer-to-panel checklist',
@@ -294,7 +306,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'If you need PC lock, plan IZI/LANGAME separately',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Is Club Timer enough?',
@@ -352,6 +364,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'В Баку поиск Club Timer (Klub Taymer) обычно ведёт к простому таймеру станций: стол запущен, остаток времени и оплата на экране. В маленьком PlayStation или интернет-клубе этого может хватить. Когда растут брони, кассовые смены, склад и резерв комнат, таймер оставляет пробелы. Это руководство сравнивает категорию Club Timer с Heselo — когда таймера достаточно, мы советуем его оставить.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если время станций или комнат продаётся с бронью, продления частые, а кассовая смена и закуски привязаны к сеансу — нужна клубная панель. Heselo переводит бронь в живой сеанс, тариф и кассовую смену.',
+            'На демо проверьте число станций/комнат и пик выходных.',
+          ],
+          bullets: [
+            'Предварительная бронь и календарь комнат/станций',
+            'Живой сеанс, продление и пакеты тарифов',
+            'Клубная смена и продажи товаров к сеансу',
+            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: только таймер или клубной поток?',
           paragraphs: [
@@ -363,6 +390,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Комнаты: только открытые столы или отдельный календарь?',
           ],
         },
+
         {
           id: 'when-timer-fits',
           title: 'Когда оставить Club Timer?',
@@ -377,20 +405,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Минимальный бюджет без плана роста',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если время станций или комнат продаётся с бронью, продления частые, а кассовая смена и закуски привязаны к сеансу — нужна клубная панель. Heselo переводит бронь в живой сеанс, тариф и кассовую смену.',
-            'На демо проверьте число станций/комнат и пик выходных.',
-          ],
-          bullets: [
-            'Предварительная бронь и календарь комнат/станций',
-            'Живой сеанс, продление и пакеты тарифов',
-            'Клубная смена и продажи товаров к сеансу',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Club Timer и Heselo — сравнение',
@@ -415,6 +430,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт PlayStation / интернет-клуба',
@@ -428,6 +444,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — бронь, сеанс, касса, склад',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -439,6 +456,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC интернет-клуб: IZI/LANGAME остаются; часы комнат отдельно в Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист перехода с таймера на панель',
@@ -453,7 +471,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужна блокировка PC — отдельно планируйте IZI/LANGAME',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Хватает ли Club Timer?',

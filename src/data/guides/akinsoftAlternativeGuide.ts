@@ -32,6 +32,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Akinsoft CafePlus axtarışında internet kafe, laboratoriya və PlayStation salonu üçün mərkəzi masa/konsol izləmə gözlənilir. Bakı elanlarında Akinsoft PlayStation klub proqramı kimi də adı çəkilir. Heselo otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir. Bu bələdçi CafePlus tipli kafe/PS serverini otaq-vaxt paneli ilə müqayisə edir — kiçik zalda Akinsoft kifayət edəndə onu saxlamağı tövsiyə edirik.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Otaq və stansiya vaxtı bronla satılır, uzadılma və kassa növbəsi sessiyaya bağlanırsa — Heselo uyğundur. Açıq qiymət və AZ/EN/RU klub paneli üçün.',
+          ],
+          bullets: [
+            'Öncədən bron və otaq/stansiya təqvimi',
+            'Canlı sessiya, uzadılma, tarif paketləri',
+            'Klub növbəsi və sessiyaya məhsul satışı',
+            'Açıq: {low} AZN/aydan',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: kafe/PS server, yoxsa otaq paneli?',
           paragraphs: [
@@ -43,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Miqyas: bir zal, yoxsa otaqlı bron axını?',
           ],
         },
+
         {
           id: 'when-akinsoft-fits',
           title: 'Akinsoft CafePlus nə vaxt qalmalıdır?',
@@ -57,19 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'TR/AZ quraşdırıcı dəstəyi artıq işləyir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Otaq və stansiya vaxtı bronla satılır, uzadılma və kassa növbəsi sessiyaya bağlanırsa — Heselo uyğundur. Açıq qiymət və AZ/EN/RU klub paneli üçün.',
-          ],
-          bullets: [
-            'Öncədən bron və otaq/stansiya təqvimi',
-            'Canlı sessiya, uzadılma, tarif paketləri',
-            'Klub növbəsi və sessiyaya məhsul satışı',
-            'Açıq: {low} AZN/aydan',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Akinsoft CafePlus və Heselo — müqayisə',
@@ -94,6 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa baxış',
@@ -107,6 +111,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — bron, sessiya, kassa, anbar',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -118,6 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Keçid: Akinsoft-u dərhal silməyin — otaq axınını demoda yoxlayın',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Qərar yoxlama siyahısı',
@@ -130,7 +136,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC kilidləmə ayrıdırsa IZI/LANGAME saxlayın',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo Akinsoft-u əvəz edir?',
@@ -188,6 +194,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for Akinsoft CafePlus expect central table/console tracking for internet cafés, labs and PlayStation halls. Baku listings also name Akinsoft as PlayStation club software. Heselo manages room and station hours with booking, live sessions and cash shifts. This guide compares CafePlus-style café/PS servers with a room-time panel — when Akinsoft is enough for a simple hall, we recommend keeping it.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When room and station time is sold with booking, and extensions plus cash shifts attach to sessions — Heselo fits. Public pricing and AZ/EN/RU for a club panel.',
+          ],
+          bullets: [
+            'Advance booking and room/station calendar',
+            'Live session, extensions, rate packages',
+            'Club shift and product sales on sessions',
+            'Public: from {low} AZN/month',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: café/PS server or room panel?',
           paragraphs: [
@@ -199,6 +219,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Scale: one hall, or a room booking flow?',
           ],
         },
+
         {
           id: 'when-akinsoft-fits',
           title: 'When should Akinsoft CafePlus stay?',
@@ -213,19 +234,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'TR/AZ installer support already works',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When room and station time is sold with booking, and extensions plus cash shifts attach to sessions — Heselo fits. Public pricing and AZ/EN/RU for a club panel.',
-          ],
-          bullets: [
-            'Advance booking and room/station calendar',
-            'Live session, extensions, rate packages',
-            'Club shift and product sales on sessions',
-            'Public: from {low} AZN/month',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Akinsoft CafePlus vs Heselo — comparison',
@@ -250,6 +259,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Landscape (short)',
@@ -263,6 +273,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — booking, session, cash, stock',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -274,6 +285,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Migration: do not rip out Akinsoft immediately — demo the room flow',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Decision checklist',
@@ -286,7 +298,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Keep IZI/LANGAME if PC lock is separate',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace Akinsoft?',
@@ -343,6 +355,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск Akinsoft CafePlus подразумевает центральный учёт столов/консолей для интернет-кафе, лабораторий и PlayStation-залов. В бакинских объявлениях Akinsoft также называют ПО PlayStation-клуба. Heselo ведёт часы комнат и станций через бронь, живые сеансы и кассовые смены. Это руководство сравнивает сервер кафе/PS в духе CafePlus с панелью времени комнат — когда Akinsoft хватает для простого зала, мы советуем его оставить.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если время комнат и станций продаётся с бронью, а продления и кассовые смены привязаны к сеансу — Heselo подходит. Открытая цена и AZ/EN/RU для клубной панели.',
+          ],
+          bullets: [
+            'Предварительная бронь и календарь комнат/станций',
+            'Живой сеанс, продление, пакеты тарифов',
+            'Клубная смена и продажи к сеансу',
+            'Открыто: от {low} AZN/мес.',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: сервер кафе/PS или комнатная панель?',
           paragraphs: [
@@ -354,6 +380,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Масштаб: один зал или поток брони комнат?',
           ],
         },
+
         {
           id: 'when-akinsoft-fits',
           title: 'Когда оставить Akinsoft CafePlus?',
@@ -368,19 +395,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Уже работает поддержка установщика TR/AZ',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если время комнат и станций продаётся с бронью, а продления и кассовые смены привязаны к сеансу — Heselo подходит. Открытая цена и AZ/EN/RU для клубной панели.',
-          ],
-          bullets: [
-            'Предварительная бронь и календарь комнат/станций',
-            'Живой сеанс, продление, пакеты тарифов',
-            'Клубная смена и продажи к сеансу',
-            'Открыто: от {low} AZN/мес.',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Akinsoft CafePlus и Heselo — сравнение',
@@ -405,6 +420,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт (кратко)',
@@ -418,6 +434,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — бронь, сеанс, касса, склад',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -429,6 +446,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Переход: не снимайте Akinsoft сразу — проверьте комнатный поток на демо',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист решения',
@@ -441,7 +459,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Блокировка PC отдельно — оставьте IZI/LANGAME',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет Akinsoft?',

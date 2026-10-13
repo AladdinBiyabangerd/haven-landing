@@ -46,9 +46,9 @@ export const solutionsEn: SolutionCopy[] = [
       'Night shifts scramble cash',
       'VIP rooms and regular tables are not on one schedule',
     ],
-    howTitle: 'How it works for billiards',
+    howTitle: 'What does Heselo give billiards?',
     howBody:
-      'Book tables and rooms on the schedule. Start a live session when play begins; add products and take payment there. Pricing follows table type and duration rules. Cash closes the shift.',
+      'Heselo books tables and rooms on one schedule. When play starts, a live session opens; products and payment stay there. Pricing follows table type and duration. Cash closes the shift.',
     featuresTitle: 'Fit for billiards',
     features: [
       {
@@ -127,9 +127,9 @@ export const solutionsEn: SolutionCopy[] = [
       'Several rooms’ status collide at peak time',
       'Cash and room occupancy disagree at close',
     ],
-    howTitle: 'How Heselo helps karaoke venues',
+    howTitle: 'What does Heselo give karaoke?',
     howBody:
-      'Book rooms on the schedule. Open a live session on arrival; add products and take payment there. Several rooms appear on one board. Cash closes with shift and report.',
+      'Heselo books rooms on the schedule. On arrival a live session opens; products and payment stay there. Several rooms appear on one board — cash closes with shift and report.',
     featuresTitle: 'Karaoke essentials',
     features: [
       {
@@ -211,9 +211,9 @@ export const solutionsEn: SolutionCopy[] = [
       'Snacks and drinks do not match cash',
       'Night shifts stretch reconciliation',
     ],
-    howTitle: 'How Heselo works in a gaming club',
+    howTitle: 'What does Heselo give a gaming club?',
     howBody:
-      'Set up stations or tables. Book on the schedule; open a live session when play starts. Product sales and payments stay on the same record. Cash closes the shift; inventory tracks snack and drink stock levels.',
+      'Heselo keeps stations and tables on one schedule. Bookings sit on the schedule; when play starts, a live session opens. Product sales and payments stay on the same record — cash closes the shift, and inventory tracks snacks and drinks.',
     featuresTitle: 'Gaming club capabilities',
     features: [
       {
@@ -292,9 +292,9 @@ export const solutionsEn: SolutionCopy[] = [
       'Walk-ins clash with reservations on the same table or room',
       'Cash count does not match snack sales at day close',
     ],
-    howTitle: 'How Heselo works in an anti-café',
+    howTitle: 'What does Heselo give an anti-café?',
     howBody:
-      'Set up tables, rooms, or stations individually. Bookings live on the schedule; when guests arrive, a live session opens. Product add-ons and payment stay in the same session. Cash closes the shift; inventory tracks snacks and drinks.',
+      'Heselo sets up tables, rooms, and stations individually. Bookings live on the schedule; when guests arrive, a live session opens. Tea and snacks go on the same session — cash closes the shift, and inventory tracks stock.',
     featuresTitle: 'Features for anti-cafés',
     features: [
       {
@@ -378,9 +378,9 @@ export const solutionsEn: SolutionCopy[] = [
       'Several VIP rooms collide at peak time',
       'Cash and room occupancy disagree at close',
     ],
-    howTitle: 'How Heselo works in a room lounge',
+    howTitle: 'What does Heselo give a room lounge?',
     howBody:
-      'Book rooms on the schedule. Open a live session on arrival; add products and take payment there. Several rooms appear on one board. Cash closes with shift and report.',
+      'Heselo books rooms on the schedule. On arrival a live session opens; products and payment stay there. Several rooms appear on one board — cash closes with shift and report.',
     featuresTitle: 'Lounge essentials',
     features: [
       {
@@ -462,9 +462,9 @@ export const solutionsEn: SolutionCopy[] = [
       'Pre-order and deposits live elsewhere',
       'Past days are hard to audit',
     ],
-    howTitle: 'How reservations work in Heselo',
+    howTitle: 'What does Heselo give for reservations?',
     howBody:
-      'The schedule shows tables, rooms, and stations by day and week. The reservations list covers guest, time, labels, pre-order, payment collection, move, and cancel. When guests arrive, the same booking becomes a live session.',
+      'Heselo shows tables, rooms, and stations by day and week on the schedule. The reservations list covers guest, time, labels, pre-order, deposit, move, and cancel. When guests arrive, the same booking becomes a live session.',
     featuresTitle: 'Reservation features',
     features: [
       {
@@ -544,9 +544,9 @@ export const solutionsEn: SolutionCopy[] = [
       'It is hard to find which session was paid',
       'Counts stay on paper',
     ],
-    howTitle: 'How Heselo cash works',
+    howTitle: 'What does Heselo give for cash?',
     howBody:
-      'Open a shift, record transactions, review the cash report, and close with a count. Payments from live tracking follow the same day and shift rules. Closed-day history is kept.',
+      'Heselo opens the shift, records transactions, shows the cash report, and closes with a count. Payments from the live floor follow the same day and shift rules — closed-day history is kept.',
     featuresTitle: 'Cash capabilities',
     features: [
       {
@@ -624,9 +624,9 @@ export const solutionsEn: SolutionCopy[] = [
       'Prices and lists live in several places',
       'Walk-in sales never hit inventory',
     ],
-    howTitle: 'How inventory works in Heselo',
+    howTitle: 'What does Heselo give for inventory?',
     howBody:
-      'The product catalog holds prices. Stock levels and count journals share the same list. Adding products in live sessions or quick sale uses that catalog. Statistics show inventory cuts.',
+      'Heselo keeps the product catalog with prices. Stock levels and count journals share the same list. Live sessions and quick sale use that catalog — statistics show inventory figures.',
     featuresTitle: 'Inventory capabilities',
     features: [
       {

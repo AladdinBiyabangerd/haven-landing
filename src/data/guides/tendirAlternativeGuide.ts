@@ -32,6 +32,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Təndir (tendir.fun) axtarışında Azərbaycanda restoran, kafe və oyun klubları üçün geniş idarəetmə ekosistemi gözlənilir: POS, anbar, KDS, PlayStation alətləri və ödənişlər. Heselo isə otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir — mətbəx/KDS əvəzi deyil. Bu bələdçi Təndir tipli geniş platformanı otaq-vaxt paneli ilə müqayisə edir; güclü mətbəx və restoran zalı lazımdırsa Təndir kateqoriyası qala bilər.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Oyun, karaoke, bilyard və ya launj otağı vaxtla satılır, bron və kassa növbəsi əsasdırsa — Heselo uyğundur. Restoran POS paralel qala bilər.',
+          ],
+          bullets: [
+            'Otaq/stansiya saatı əsas gəlir',
+            'Bron → sessiya → uzadılma → kassa',
+            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
+            'AZ / EN / RU, {low} AZN/aydan',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: geniş ekosistem, yoxsa otaq-vaxt paneli?',
           paragraphs: [
@@ -43,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Komanda: bir platforma hər şeyə, yoxsa fokuslu klub paneli?',
           ],
         },
+
         {
           id: 'when-tendir-fits',
           title: 'Təndir nə vaxt qalmalıdır?',
@@ -57,19 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq-vaxt ikinci dərəcəlidir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Oyun, karaoke, bilyard və ya launj otağı vaxtla satılır, bron və kassa növbəsi əsasdırsa — Heselo uyğundur. Restoran POS paralel qala bilər.',
-          ],
-          bullets: [
-            'Otaq/stansiya saatı əsas gəlir',
-            'Bron → sessiya → uzadılma → kassa',
-            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
-            'AZ / EN / RU, {low} AZN/aydan',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Təndir və Heselo — müqayisə',
@@ -94,6 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Bakı oyun klubu bazar mənzərəsi',
@@ -107,6 +111,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — otaq-vaxt klub paneli',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Ssenarilər',
@@ -118,6 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Yalnız taymer axtarışı: Club Timer kateqoriyası',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Qərar yoxlama siyahısı',
@@ -130,7 +136,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'İşçilərə fokus dəyişikliyini izah edin',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo Təndiri əvəz edir?',
@@ -187,6 +193,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for Tendir (tendir.fun) expect a broad Azerbaijan management ecosystem for restaurants, cafés and gaming clubs: POS, inventory, KDS, PlayStation tools and payments. Heselo manages room and station hours with booking, live sessions and cash shifts — it is not a kitchen/KDS replacement. This guide compares a Tendir-style broad platform with a room-time panel; keep a Tendir-class stack when strong kitchen and restaurant floor matter.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When gaming, karaoke, billiards or lounge rooms are sold by time with booking and shift cash central — Heselo fits. Restaurant POS can stay in parallel.',
+          ],
+          bullets: [
+            'Room/station hours are main revenue',
+            'Book → session → extension → cash',
+            'Bar/snacks tied to session and stock',
+            'AZ / EN / RU, from {low} AZN/month',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: broad ecosystem or room-time panel?',
           paragraphs: [
@@ -198,6 +218,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Team: one platform for everything, or a focused club panel?',
           ],
         },
+
         {
           id: 'when-tendir-fits',
           title: 'When should Tendir stay?',
@@ -212,19 +233,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room-time is secondary',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When gaming, karaoke, billiards or lounge rooms are sold by time with booking and shift cash central — Heselo fits. Restaurant POS can stay in parallel.',
-          ],
-          bullets: [
-            'Room/station hours are main revenue',
-            'Book → session → extension → cash',
-            'Bar/snacks tied to session and stock',
-            'AZ / EN / RU, from {low} AZN/month',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Tendir vs Heselo — comparison',
@@ -249,6 +258,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Baku gaming club landscape',
@@ -262,6 +272,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — room-time club panel',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Scenarios',
@@ -273,6 +284,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Timer-only search: Club Timer category',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Decision checklist',
@@ -285,7 +297,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Explain the focus shift to staff',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace Tendir?',
@@ -342,6 +354,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск Təndir (tendir.fun) подразумевает широкую экосистему управления в Азербайджане для ресторанов, кафе и игровых клубов: POS, склад, KDS, инструменты PlayStation и платежи. Heselo ведёт часы комнат и станций через бронь, живые сеансы и кассовые смены — это не замена кухни/KDS. Это руководство сравнивает широкую платформу в духе Təndir с панелью времени комнат; если нужна сильная кухня и ресторанный зал, стек категории Təndir можно оставить.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если игровые, караоке, бильярдные или лаунж-комнаты продаются по времени с бронью и кассовой сменой в центре — Heselo подходит. Ресторанный POS может остаться параллельно.',
+          ],
+          bullets: [
+            'Часы комнаты/станции — основная выручка',
+            'Бронь → сеанс → продление → касса',
+            'Бар/закуски к сеансу и складу',
+            'AZ / EN / RU, от {low} AZN/мес.',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: широкая экосистема или панель времени комнат?',
           paragraphs: [
@@ -353,6 +379,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Команда: одна платформа на всё или сфокусированная клубная панель?',
           ],
         },
+
         {
           id: 'when-tendir-fits',
           title: 'Когда оставить Təndir?',
@@ -367,19 +394,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Время комнат вторично',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если игровые, караоке, бильярдные или лаунж-комнаты продаются по времени с бронью и кассовой сменой в центре — Heselo подходит. Ресторанный POS может остаться параллельно.',
-          ],
-          bullets: [
-            'Часы комнаты/станции — основная выручка',
-            'Бронь → сеанс → продление → касса',
-            'Бар/закуски к сеансу и складу',
-            'AZ / EN / RU, от {low} AZN/мес.',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Təndir и Heselo — сравнение',
@@ -404,6 +419,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт игрового клуба Баку',
@@ -417,6 +433,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — клубная панель времени комнат',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Сценарии',
@@ -428,6 +445,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Поиск только таймера: категория Club Timer',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист решения',
@@ -440,7 +458,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Объясните смену фокуса персоналу',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет Təndir?',

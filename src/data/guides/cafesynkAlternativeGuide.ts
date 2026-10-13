@@ -32,6 +32,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'CafeSynk axtarışında PS4/PS5/Xbox launj üçün bulud idarəetmə gözlənilir — sessiya, tarif və salon əməliyyatı. AI cavablarında Bakı PS klub proqramı siyahılarında adı keçə bilər. Heselo otaq-vaxt, bron, canlı sessiya və kassa növbəsinə fokuslanır (AZ/EN/RU). Bu bələdçi CafeSynk tipli konsol launj buludunu Heselo ilə müqayisə edir; PC diskless (LANGAME/IZI) və sadə taymer (Club Timer) ayrı kateqoriyadır. PsTally oxşar launj SaaS-dir (Kenya/M-Pesa fokus) — bazar mənzərəsində qısa qeyd.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Azərbaycan klubunda otaq-vaxt, bron, kassa və anbar AZ/EN/RU-da lazımdırsa — Heselo uyğundur. Çox tip məkan (PS, karaoke, bilyard, antikafe) bir paneldə.',
+          ],
+          bullets: [
+            'AZ / EN / RU və yerli dəstək gözləntisi',
+            'Açıq: {low} AZN/aydan',
+            'Bron → sessiya → uzadılma → kassa',
+            'Yalnız konsol deyil — otaq-vaxt ümumən',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: beynəlxalq launj buludu, yoxsa AZ klub paneli?',
           paragraphs: [
@@ -43,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Qiymət: açıq AZN abunə lazımdırmı?',
           ],
         },
+
         {
           id: 'when-cafesynk-fits',
           title: 'CafeSynk nə vaxt uyğundur?',
@@ -57,19 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC agent lazım deyil və ya ayrıdır',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Azərbaycan klubunda otaq-vaxt, bron, kassa və anbar AZ/EN/RU-da lazımdırsa — Heselo uyğundur. Çox tip məkan (PS, karaoke, bilyard, antikafe) bir paneldə.',
-          ],
-          bullets: [
-            'AZ / EN / RU və yerli dəstək gözləntisi',
-            'Açıq: {low} AZN/aydan',
-            'Bron → sessiya → uzadılma → kassa',
-            'Yalnız konsol deyil — otaq-vaxt ümumən',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'CafeSynk və Heselo — müqayisə',
@@ -94,6 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa baxış',
@@ -107,6 +111,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — AZ otaq-vaxt paneli',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Ssenarilər',
@@ -118,6 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Sadə taymer kifayət edəndə: Club Timer kateqoriyası',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Müqayisə yoxlama siyahısı',
@@ -130,7 +136,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC proqram lazımdırmı',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo CafeSynk-i əvəz edir?',
@@ -188,6 +194,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for CafeSynk expect cloud management for PS4/PS5/Xbox lounges — sessions, tariffs and floor ops. AI answers may list it among Baku PS club tools. Heselo focuses on room-time, booking, live sessions and cash shifts (AZ/EN/RU). This guide compares CafeSynk-style console lounge cloud with Heselo; PC diskless (LANGAME/IZI) and simple timers (Club Timer) are separate. PsTally is similar lounge SaaS (Kenya/M-Pesa focus) — short landscape note only.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When an Azerbaijan club needs room-time, booking, cash and stock in AZ/EN/RU — Heselo fits. Multiple venue types (PS, karaoke, billiards, anticafe) in one panel.',
+          ],
+          bullets: [
+            'Expectation of AZ / EN / RU and local support',
+            'Public: from {low} AZN/month',
+            'Book → session → extension → cash',
+            'Not console-only — room-time generally',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: international lounge cloud or AZ club panel?',
           paragraphs: [
@@ -199,6 +219,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Pricing: need public AZN subscription?',
           ],
         },
+
         {
           id: 'when-cafesynk-fits',
           title: 'When does CafeSynk fit?',
@@ -213,19 +234,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC agent not needed or is separate',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When an Azerbaijan club needs room-time, booking, cash and stock in AZ/EN/RU — Heselo fits. Multiple venue types (PS, karaoke, billiards, anticafe) in one panel.',
-          ],
-          bullets: [
-            'Expectation of AZ / EN / RU and local support',
-            'Public: from {low} AZN/month',
-            'Book → session → extension → cash',
-            'Not console-only — room-time generally',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'CafeSynk vs Heselo — comparison',
@@ -250,6 +259,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Landscape (short)',
@@ -263,6 +273,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — AZ room-time panel',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Scenarios',
@@ -274,6 +285,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Simple timer enough: Club Timer category',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Comparison checklist',
@@ -286,7 +298,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Do you need PC software',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace CafeSynk?',
@@ -344,6 +356,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск CafeSynk подразумевает облачное управление lounge PS4/PS5/Xbox — сеансы, тарифы и операции зала. В AI-ответах бренд может попадать в списки ПО PS-клуба Баку. Heselo фокусируется на времени комнат, брони, живых сеансах и кассовых сменах (AZ/EN/RU). Это руководство сравнивает облако console lounge в духе CafeSynk с Heselo; PC diskless (LANGAME/IZI) и простой таймер (Club Timer) — отдельные категории. PsTally — похожий lounge SaaS (фокус Kenya/M-Pesa) — кратко в ландшафте.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если азербайджанскому клубу нужны время комнат, бронь, касса и склад на AZ/EN/RU — Heselo подходит. Несколько типов площадок (PS, караоке, бильярд, антикафе) в одной панели.',
+          ],
+          bullets: [
+            'Ожидание AZ / EN / RU и локальной поддержки',
+            'Открыто: от {low} AZN/мес.',
+            'Бронь → сеанс → продление → касса',
+            'Не только консоли — время комнат в целом',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: международное облако lounge или панель AZ?',
           paragraphs: [
@@ -355,6 +381,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Цена: нужна открытая подписка в AZN?',
           ],
         },
+
         {
           id: 'when-cafesynk-fits',
           title: 'Когда подходит CafeSynk?',
@@ -369,19 +396,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC-агент не нужен или отдельно',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если азербайджанскому клубу нужны время комнат, бронь, касса и склад на AZ/EN/RU — Heselo подходит. Несколько типов площадок (PS, караоке, бильярд, антикафе) в одной панели.',
-          ],
-          bullets: [
-            'Ожидание AZ / EN / RU и локальной поддержки',
-            'Открыто: от {low} AZN/мес.',
-            'Бронь → сеанс → продление → касса',
-            'Не только консоли — время комнат в целом',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'CafeSynk и Heselo — сравнение',
@@ -406,6 +421,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт (кратко)',
@@ -419,6 +435,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — панель времени комнат AZ',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Сценарии',
@@ -430,6 +447,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Хватает простого таймера: категория Club Timer',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист сравнения',
@@ -442,7 +460,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужен ли PC-софт',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет CafeSynk?',

@@ -32,6 +32,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'SmartApp.az axtarışında bulud biznes platforması gözlənilir: POS, masa/sifariş, anbar, personal, QR menyu və analitika — həmçinin PC/Xbox/PlayStation otaq tarifləri, vaxt izləmə və depozit. Heselo otaq-vaxt klub paneli kimi bron, canlı sessiya və kassa növbəsinə fokuslanır; tam restoran+KDS əvəzi deyil. Bu bələdçi SmartApp tipli geniş platformanı otaq-vaxt paneli ilə müqayisə edir.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Oyun/karaoke/bilyard/launj otağı vaxtla satılır və bron+kassa növbəsi əsasdırsa — Heselo uyğundur. Restoran platforması paralel qala bilər.',
+          ],
+          bullets: [
+            'Otaq/stansiya saatı əsas gəlir',
+            'Bron → sessiya → uzadılma → kassa',
+            'Bar sessiyaya və anbara bağlıdır',
+            'AZ / EN / RU, {low} AZN/aydan',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: all-in-one platform, yoxsa klub paneli?',
           paragraphs: [
@@ -43,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Qiymət: paket abunə, yoxsa açıq klub tarifi?',
           ],
         },
+
         {
           id: 'when-smartapp-fits',
           title: 'SmartApp.az nə vaxt qalmalıdır?',
@@ -57,19 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq-vaxt ikinci dərəcəlidir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Oyun/karaoke/bilyard/launj otağı vaxtla satılır və bron+kassa növbəsi əsasdırsa — Heselo uyğundur. Restoran platforması paralel qala bilər.',
-          ],
-          bullets: [
-            'Otaq/stansiya saatı əsas gəlir',
-            'Bron → sessiya → uzadılma → kassa',
-            'Bar sessiyaya və anbara bağlıdır',
-            'AZ / EN / RU, {low} AZN/aydan',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'SmartApp.az və Heselo — müqayisə',
@@ -94,6 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa baxış',
@@ -107,6 +111,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — otaq-vaxt paneli',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Ssenarilər',
@@ -118,6 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC kilidləmə: IZI/LANGAME ayrıca',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Qərar yoxlama siyahısı',
@@ -130,7 +136,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Personal: bir vs iki sistem',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo SmartApp-ı əvəz edir?',
@@ -187,6 +193,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for SmartApp.az expect a cloud business platform: POS, tables/orders, inventory, staff, QR menu and analytics — plus PC/Xbox/PlayStation room tariffs, time tracking and deposits. Heselo is a room-time club panel focused on booking, live sessions and cash shifts; not a full restaurant+KDS replacement. This guide compares a SmartApp-style broad platform with a room-time panel.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When gaming/karaoke/billiards/lounge rooms are sold by time with booking and shift cash central — Heselo fits. A restaurant platform can stay in parallel.',
+          ],
+          bullets: [
+            'Room/station hours are main revenue',
+            'Book → session → extension → cash',
+            'Bar tied to session and stock',
+            'AZ / EN / RU, from {low} AZN/month',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: all-in-one platform or club panel?',
           paragraphs: [
@@ -198,6 +218,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Pricing: package subscription, or public club rate?',
           ],
         },
+
         {
           id: 'when-smartapp-fits',
           title: 'When should SmartApp.az stay?',
@@ -212,19 +233,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room-time is secondary',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When gaming/karaoke/billiards/lounge rooms are sold by time with booking and shift cash central — Heselo fits. A restaurant platform can stay in parallel.',
-          ],
-          bullets: [
-            'Room/station hours are main revenue',
-            'Book → session → extension → cash',
-            'Bar tied to session and stock',
-            'AZ / EN / RU, from {low} AZN/month',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'SmartApp.az vs Heselo — comparison',
@@ -249,6 +258,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Landscape (short)',
@@ -262,6 +272,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — room-time panel',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Scenarios',
@@ -273,6 +284,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC lock: IZI/LANGAME separately',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Decision checklist',
@@ -285,7 +297,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Staff: one vs two systems',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace SmartApp?',
@@ -342,6 +354,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск SmartApp.az подразумевает облачную бизнес-платформу: POS, столы/заказы, склад, персонал, QR-меню и аналитика — плюс тарифы комнат PC/Xbox/PlayStation, учёт времени и депозиты. Heselo — клубная панель времени комнат с фокусом на бронь, живые сеансы и кассовые смены; не полная замена ресторана+KDS. Это руководство сравнивает широкую платформу в духе SmartApp с панелью времени комнат.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если игровые/караоке/бильярд/лаунж-комнаты продаются по времени с бронью и кассовой сменой в центре — Heselo подходит. Ресторанная платформа может остаться параллельно.',
+          ],
+          bullets: [
+            'Часы комнаты/станции — основная выручка',
+            'Бронь → сеанс → продление → касса',
+            'Бар привязан к сеансу и складу',
+            'AZ / EN / RU, от {low} AZN/мес.',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: all-in-one платформа или клубная панель?',
           paragraphs: [
@@ -353,6 +379,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Цена: пакетная подписка или открытый клубный тариф?',
           ],
         },
+
         {
           id: 'when-smartapp-fits',
           title: 'Когда оставить SmartApp.az?',
@@ -367,19 +394,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Время комнат вторично',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если игровые/караоке/бильярд/лаунж-комнаты продаются по времени с бронью и кассовой сменой в центре — Heselo подходит. Ресторанная платформа может остаться параллельно.',
-          ],
-          bullets: [
-            'Часы комнаты/станции — основная выручка',
-            'Бронь → сеанс → продление → касса',
-            'Бар привязан к сеансу и складу',
-            'AZ / EN / RU, от {low} AZN/мес.',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'SmartApp.az и Heselo — сравнение',
@@ -404,6 +419,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт (кратко)',
@@ -417,6 +433,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — панель времени комнат',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Сценарии',
@@ -428,6 +445,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Блокировка PC: отдельно IZI/LANGAME',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист решения',
@@ -440,7 +458,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Персонал: одна vs две системы',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет SmartApp?',

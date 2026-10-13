@@ -40,10 +40,18 @@ export const guidesEn: GuideCopy[] = [
       'how to run a console club',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'Running a gaming club is not just about counting time. Which station is free, which booking is arriving, when a session started, and how extra sales and payment are closed are all part of the same workflow.',
+      'Running a gaming club is not just about counting time. Which station is free, which booking is arriving, when a session started, and how extra sales and payment are closed are all part of the same workflow. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'How does Heselo work in a gaming club?',
+        paragraphs: [
+          'In Heselo, PS, console, and PC stations can sit on the same schedule. A booking turns into an active session, time can be extended, extra sales are added to the session, and the final amount shows up in the cash shift.',
+        ],
+      },
+
       {
         id: 'why',
         title: 'Why does a gaming club need its own system?',
@@ -52,6 +60,7 @@ export const guidesEn: GuideCopy[] = [
           'In a centralised system, stations, bookings, and live sessions are linked. Staff see from one place which station is active, free, or booked right now.',
         ],
       },
+
       {
         id: 'modules',
         title: 'What features should gaming club software have?',
@@ -67,6 +76,7 @@ export const guidesEn: GuideCopy[] = [
           'Customer history and staff permissions',
         ],
       },
+
       {
         id: 'timer',
         title: 'How is it different from a simple timer app?',
@@ -75,14 +85,7 @@ export const guidesEn: GuideCopy[] = [
           'As a club grows, it becomes easier to keep this in one process instead of collecting it from different places.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'How does Heselo work in a gaming club?',
-        paragraphs: [
-          'In Heselo, PS, console, and PC stations can sit on the same schedule. A booking turns into an active session, time can be extended, extra sales are added to the session, and the final amount shows up in the cash shift.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Is it only for PS clubs, or does it work for PCs too?',
@@ -124,10 +127,18 @@ export const guidesEn: GuideCopy[] = [
       'karaoke software',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'In a karaoke venue, a booking doesn’t end with marking a free slot for a room. Once guests arrive, the booking becomes a live session, and extra time and orders continue on the same bill.',
+      'In a karaoke venue, a booking doesn’t end with marking a free slot for a room. Once guests arrive, the booking becomes a live session, and extra time and orders continue on the same bill. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'What does Heselo offer for karaoke?',
+        paragraphs: [
+          'In Heselo, each room is set up on the schedule, and active sessions are visible live. Because bookings, sessions, and cash sit in one panel, reception doesn’t have to jump between sources during the day.',
+        ],
+      },
+
       {
         id: 'why',
         title: 'Why do room bookings get mixed up?',
@@ -135,6 +146,7 @@ export const guidesEn: GuideCopy[] = [
           'When phone, WhatsApp, and a paper schedule are used in parallel, not everyone sees the same room status at the same time. Especially when several rooms fill up at once, reception ends up double-checking.',
         ],
       },
+
       {
         id: 'flow',
         title: 'What does a sound karaoke booking flow look like?',
@@ -149,6 +161,7 @@ export const guidesEn: GuideCopy[] = [
           'Cash shift',
         ],
       },
+
       {
         id: 'form',
         title: 'Is an online booking form enough?',
@@ -156,14 +169,7 @@ export const guidesEn: GuideCopy[] = [
           'A booking form is useful for collecting requests, but it doesn’t run what happens inside the venue. Starting the session when a room opens, adding orders, and taking the final payment need a separate process.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'What does Heselo offer for karaoke?',
-        paragraphs: [
-          'Each room is set up on the schedule, and active sessions are visible live. Because bookings, sessions, and cash sit in one panel, reception doesn’t have to jump between sources during the day.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Can several rooms be shown on one schedule?',
@@ -205,10 +211,18 @@ export const guidesEn: GuideCopy[] = [
       'billiards table timer',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'In a billiards club, the basic unit of work is the table. Whether a table is free or booked, when a game started, how long it runs, and which bill extra orders belong to all need to be tracked together through the day.',
+      'In a billiards club, the basic unit of work is the table. Whether a table is free or booked, when a game started, how long it runs, and which bill extra orders belong to all need to be tracked together through the day. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'How does Heselo work for billiards?',
+        paragraphs: [
+          'In Heselo, tables and rooms are set up individually. Bookings, live games, and cash continue in one workflow. Separate rates can also be set for different table types.',
+        ],
+      },
+
       {
         id: 'why',
         title: 'Why do a whiteboard and a phone cause trouble?',
@@ -216,6 +230,7 @@ export const guidesEn: GuideCopy[] = [
           'A whiteboard can fall behind, and a booking taken by phone may not be visible to other staff straight away. When VIP rooms and regular tables are kept on separate lists, checking the current status gets even harder.',
         ],
       },
+
       {
         id: 'time',
         title: 'How are time and payment linked?',
@@ -223,6 +238,7 @@ export const guidesEn: GuideCopy[] = [
           'When a game starts, a session opens. Pauses, extensions, and extra products are tied to that session. The rate is calculated from the table type and time rules, and the final amount goes into the cash shift.',
         ],
       },
+
       {
         id: 'mix',
         title: 'Can billiards, karaoke, and a lounge run together?',
@@ -230,14 +246,7 @@ export const guidesEn: GuideCopy[] = [
           'Yes. Mixed venues can keep different table and room types in the same management panel. That way you don’t have to pull booking and sales data together from different systems.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'How does Heselo work for billiards?',
-        paragraphs: [
-          'Tables and rooms are set up individually. Bookings, live games, and cash continue in one workflow. Separate rates can also be set for different table types.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Can VIP rooms and regular tables coexist?',
@@ -279,10 +288,18 @@ export const guidesEn: GuideCopy[] = [
       'lounge management system',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'In a room lounge, guests take a room for a set time. When the booking, session start, extra time, and orders are recorded separately, reconciling the bills at the end of the day gets hard.',
+      'In a room lounge, guests take a room for a set time. When the booking, session start, extra time, and orders are recorded separately, reconciling the bills at the end of the day gets hard. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'What does Heselo do for a room lounge?',
+        paragraphs: [
+          'In Heselo, rooms are set up as separate resources. Bookings, live sessions, sales, and cash continue in one panel. The workflow can be set up much like karaoke rooms.',
+        ],
+      },
+
       {
         id: 'unit',
         title: 'Why is the room the basic unit?',
@@ -290,6 +307,7 @@ export const guidesEn: GuideCopy[] = [
           'In a room-based venue, the main resource is the room itself. The schedule should show clearly when a room is free, which guest it is held for, and whether a session is active right now.',
         ],
       },
+
       {
         id: 'flow',
         title: 'How is the daily workflow set up?',
@@ -297,6 +315,7 @@ export const guidesEn: GuideCopy[] = [
           'The booking is assigned to a room. When guests arrive, the session starts. Extra time and products are added to that session. Once payment is closed, it shows up in the cash shift.',
         ],
       },
+
       {
         id: 'mix',
         title: 'Can a lounge, karaoke, and billiards share one venue?',
@@ -304,14 +323,7 @@ export const guidesEn: GuideCopy[] = [
           'Mixed venues can manage rooms, tables, and other resources in one system. The main benefit is that all bookings and sales are visible in a single workflow.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'What does Heselo do for a room lounge?',
-        paragraphs: [
-          'Rooms are set up as separate resources. Bookings, live sessions, sales, and cash continue in one panel. The workflow can be set up much like karaoke rooms.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Can an open hall be in the same system?',
@@ -353,10 +365,18 @@ export const guidesEn: GuideCopy[] = [
       'hourly billing system',
     ],
     datePublished: '2026-08-12',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'In an anti-café, guests mainly pay for the time they spend. On top of that come table and room bookings, drink and snack sales, cash, and sometimes stock. That’s why software that only counts time may not cover the whole process.',
+      'In an anti-café, guests mainly pay for the time they spend. On top of that come table and room bookings, drink and snack sales, cash, and sometimes stock. That’s why software that only counts time may not cover the whole process. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'How is Heselo used in an anti-café?',
+        paragraphs: [
+          'In Heselo, tables and rooms, live sessions, products, and cash can be managed in one panel. You can create resources and rates that match your venue’s layout.',
+        ],
+      },
+
       {
         id: 'what',
         title: 'How does the anti-café model work?',
@@ -365,6 +385,7 @@ export const guidesEn: GuideCopy[] = [
           'The key is to manage time, space, and extra sales without splitting them apart.',
         ],
       },
+
       {
         id: 'modules',
         title: 'Which features matter in anti-café software?',
@@ -381,6 +402,7 @@ export const guidesEn: GuideCopy[] = [
           'Staff permissions',
         ],
       },
+
       {
         id: 'hourly',
         title: 'How is hourly billing calculated?',
@@ -388,6 +410,7 @@ export const guidesEn: GuideCopy[] = [
           'A booking or walk-in turns into a live session. When the session is extended, the extra time is added to the bill. Product sales can sit on the same bill. That way staff don’t have to add up time and products separately.',
         ],
       },
+
       {
         id: 'vs-gaming',
         title: 'How is an anti-café different from a gaming club?',
@@ -395,6 +418,7 @@ export const guidesEn: GuideCopy[] = [
           'In a gaming club, the main resource is usually a PS, console, or PC station. In an anti-café, tables, rooms, and other zones come first. Even so, both share similar processes: bookings, live sessions, and cash.',
         ],
       },
+
       {
         id: 'choose',
         title: 'What to look for when choosing anti-café software',
@@ -403,14 +427,7 @@ export const guidesEn: GuideCopy[] = [
           'The best test is to replay a real working day in the system: booking, check-in, extension, sale, and end-of-day close.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'How is Heselo used in an anti-café?',
-        paragraphs: [
-          'In Heselo, tables and rooms, live sessions, products, and cash can be managed in one panel. You can create resources and rates that match your venue’s layout.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Is a simple timer app enough for an anti-café?',
@@ -452,10 +469,18 @@ export const guidesEn: GuideCopy[] = [
       'playstation club management system',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'PlayStation club software is more than a timer. When choosing, look at how bookings, station status, live sessions, extra sales, and cash connect to each other.',
+      'PlayStation club software is more than a timer. When choosing, look at how bookings, station status, live sessions, extra sales, and cash connect to each other. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'How does Heselo fit this process?',
+        paragraphs: [
+          'In Heselo, pS, console, and PC stations can sit on the same schedule. Active sessions, extra sales, and cash data continue in the same workflow.',
+        ],
+      },
+
       {
         id: 'why',
         title: 'What should PS club software solve?',
@@ -464,6 +489,7 @@ export const guidesEn: GuideCopy[] = [
           'In software, each station’s status and its session can be seen in one place.',
         ],
       },
+
       {
         id: 'must-have',
         title: 'Which features are the minimum?',
@@ -477,6 +503,7 @@ export const guidesEn: GuideCopy[] = [
           'Different permissions for staff and owner',
         ],
       },
+
       {
         id: 'console',
         title: 'Is there a difference between a PS club and a console club?',
@@ -484,6 +511,7 @@ export const guidesEn: GuideCopy[] = [
           'People search with different words, but the need is usually the same: booking console stations and managing active sessions. What matters is less the specific device and more how the software handles different stations.',
         ],
       },
+
       {
         id: 'timer',
         title: 'Is a timer alone enough?',
@@ -491,14 +519,7 @@ export const guidesEn: GuideCopy[] = [
           'If the goal is only to track play time, yes. But if you also need bookings, sales, customer history, and cash, a timer won’t handle those for you.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'How does Heselo fit this process?',
-        paragraphs: [
-          'PS, console, and PC stations can sit on the same schedule. Active sessions, extra sales, and cash data continue in the same workflow.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Can it be used for PlayStation only?',
@@ -541,10 +562,18 @@ export const guidesEn: GuideCopy[] = [
       'billiards scheduling',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'Booking a billiards table is more than writing down a name and a time. The table, time, duration, and customer details later need to connect to the live game and the payment.',
+      'Booking a billiards table is more than writing down a name and a time. The table, time, duration, and customer details later need to connect to the live game and the payment. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'How does table booking work in Heselo?',
+        paragraphs: [
+          'In Heselo, tables and rooms are set up as separate resources. Bookings appear on the schedule, turn into a live session when guests arrive, and the final payment shows up in the cash shift.',
+        ],
+      },
+
       {
         id: 'booking',
         title: 'What details should a table booking include?',
@@ -552,6 +581,7 @@ export const guidesEn: GuideCopy[] = [
           'The essentials are date, time, table or VIP room, duration, and contact details. If a booking is changed or cancelled, it also helps to keep a history of the change.',
         ],
       },
+
       {
         id: 'schedule',
         title: 'Why shouldn’t the schedule be separate from bookings?',
@@ -559,6 +589,7 @@ export const guidesEn: GuideCopy[] = [
           'The schedule shows the status of every table. If bookings are kept in one place and active games in another, staff have to combine the data just to find a free table.',
         ],
       },
+
       {
         id: 'online',
         title: 'How can a billiards table be booked online?',
@@ -567,6 +598,7 @@ export const guidesEn: GuideCopy[] = [
           'The key is that online requests don’t sit apart from phone bookings. Otherwise an online booking can cause the same confusion as any other scattered note.',
         ],
       },
+
       {
         id: 'live',
         title: 'How does a booking turn into a live game?',
@@ -574,6 +606,7 @@ export const guidesEn: GuideCopy[] = [
           'When guests arrive, the booking becomes an active session. Pauses and extensions are recorded on that session, and extra orders can be added to the same bill.',
         ],
       },
+
       {
         id: 'mistakes',
         title: 'The most common problems',
@@ -585,14 +618,7 @@ export const guidesEn: GuideCopy[] = [
           'Play time and payment recorded separately',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'How does table booking work in Heselo?',
-        paragraphs: [
-          'Tables and rooms are set up as separate resources. Bookings appear on the schedule, turn into a live session when guests arrive, and the final payment shows up in the cash shift.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Are a booking and a schedule the same thing?',
@@ -638,10 +664,18 @@ export const guidesEn: GuideCopy[] = [
       'choosing karaoke management software',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'When choosing a karaoke booking system, looking only at the online booking form isn’t enough. Check how a room is handled from booking to session, and from session to payment.',
+      'When choosing a karaoke booking system, looking only at the online booking form isn’t enough. Check how a room is handled from booking to session, and from session to payment. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'What does Heselo offer for karaoke?',
+        paragraphs: [
+          'In Heselo, rooms are managed on the schedule and in a live view. A booking becomes an active session, extra products are added to the bill, and the final amount shows up in the cash shift.',
+        ],
+      },
+
       {
         id: 'form-vs-system',
         title: 'What is the difference between a booking form and a management system?',
@@ -649,6 +683,7 @@ export const guidesEn: GuideCopy[] = [
           'A booking form collects the guest’s request. A management system links that booking to the room’s daily work: the session starts, orders are added, and payment is closed.',
         ],
       },
+
       {
         id: 'checklist',
         title: 'What should you check when choosing?',
@@ -661,6 +696,7 @@ export const guidesEn: GuideCopy[] = [
           'Can different room and venue types work in the same panel?',
         ],
       },
+
       {
         id: 'peak',
         title: 'What should be tested at peak hours?',
@@ -668,14 +704,7 @@ export const guidesEn: GuideCopy[] = [
           'It helps to test a Friday or Saturday evening scenario where several rooms change at once: moving a room, cancelling a booking, a late group, and extending a session.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'What does Heselo offer for karaoke?',
-        paragraphs: [
-          'Rooms are managed on the schedule and in a live view. A booking becomes an active session, extra products are added to the bill, and the final amount shows up in the cash shift.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Is a booking website alone enough?',
@@ -720,10 +749,18 @@ export const guidesEn: GuideCopy[] = [
       'venue management panel',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
-      'Excel, WhatsApp, and a notebook can work in a small club for a while. The trouble usually starts as the venue grows: with more bookings, more staff, and more sales, keeping the same information in several places gets hard.',
+      'Excel, WhatsApp, and a notebook can work in a small club for a while. The trouble usually starts as the venue grows: with more bookings, more staff, and more sales, keeping the same information in several places gets hard. Heselo keeps that flow in one panel.',
     sections: [
+      {
+        id: 'heselo',
+        title: 'How does Heselo set this up?',
+        paragraphs: [
+          'Heselo brings bookings, the live floor, sales, cash, and inventory together in one panel. You can pick a plan that matches the size of your venue.',
+        ],
+      },
+
       {
         id: 'pain',
         title: 'Where do Excel and WhatsApp cause trouble?',
@@ -732,6 +769,7 @@ export const guidesEn: GuideCopy[] = [
           'WhatsApp is convenient for taking bookings, but it doesn’t put them on a shared schedule, and it doesn’t manage sessions or cash.',
         ],
       },
+
       {
         id: 'signals',
         title: 'What signals suggest it’s time to consider a panel?',
@@ -743,6 +781,7 @@ export const guidesEn: GuideCopy[] = [
           'The owner builds the end-of-day report separately in Excel',
         ],
       },
+
       {
         id: 'panel',
         title: 'What does a management panel bring together?',
@@ -750,6 +789,7 @@ export const guidesEn: GuideCopy[] = [
           'Bookings, live sessions, sales, and cash are kept in one workflow. The goal isn’t to turn everything into a heavy ERP; it’s to gather daily operational data in one place.',
         ],
       },
+
       {
         id: 'not-erp',
         title: 'This doesn’t have to mean a heavy ERP',
@@ -757,14 +797,7 @@ export const guidesEn: GuideCopy[] = [
           'A club’s needs are not the same as a restaurant’s or a large company’s ERP. The core needs are usually bookings, live resource status, sessions, sales, and cash.',
         ],
       },
-      {
-        id: 'heselo',
-        title: 'How does Heselo set this up?',
-        paragraphs: [
-          'Heselo brings bookings, the live floor, sales, cash, and inventory together in one panel. You can pick a plan that matches the size of your venue.',
         ],
-      },
-    ],
     faq: [
       {
         q: 'Do we have to stop using Excel entirely?',
@@ -809,7 +842,7 @@ export const guidesEn: GuideCopy[] = [
       'club software free demo',
     ],
     datePublished: '2026-09-19',
-    dateModified: '2026-09-23',
+    dateModified: '2026-10-13',
     intro:
       'Heselo’s standard plans are published openly. The starting price depends on the venue type and how that venue works. This guide briefly explains how the plans are structured.',
     sections: [

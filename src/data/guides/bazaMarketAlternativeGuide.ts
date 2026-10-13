@@ -31,6 +31,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Baza Market adı ilə tanınan həllər daha çox məhsul satışı, kataloq, mağaza və ya marketplace istiqamətində işləyir. Heselo marketplace deyil: bu, məkanın öz otaqlarını, rezervasiyalarını, canlı sessiyalarını, kassa növbəsini və anbar qalığını idarə edən daxili klub panelidir.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Karaoke otağı, PlayStation stansiyası, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı sessiyaya çevirir, vaxt tarifini hesablayır və sessiyaya əlavə olunan içki-qəlyanaltını anbardan silir.',
+            'Bar satışı sessiyaya bağlanır; bu, e-ticarət kataloqu ilə eyni şey deyil. Demo zamanı yalnız klub otaqlarını və tarifləri qurub bir növbəni sınayın.',
+          ],
+          bullets: [
+            'Əsas məhsul: otaq, konsol və ya masa saatı',
+            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
+            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: ticarət platforması, yoxsa klub paneli?',
           paragraphs: [
@@ -42,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Kritik funksiyalar: kataloq və satış kanalları, yoxsa bron → canlı sessiya → kassa?',
           ],
         },
+
         {
           id: 'when-baza-market-fits',
           title: 'Baza Market nə vaxt qalmalıdır?',
@@ -56,20 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Klub yalnız məhsul satışı aparmır',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Karaoke otağı, PlayStation stansiyası, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı sessiyaya çevirir, vaxt tarifini hesablayır və sessiyaya əlavə olunan içki-qəlyanaltını anbardan silir.',
-            'Bar satışı sessiyaya bağlanır; bu, e-ticarət kataloqu ilə eyni şey deyil. Demo zamanı yalnız klub otaqlarını və tarifləri qurub bir növbəni sınayın.',
-          ],
-          bullets: [
-            'Əsas məhsul: otaq, konsol və ya masa saatı',
-            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
-            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Baza Market və Heselo — qısa müqayisə',
@@ -95,6 +98,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa bazar mənzərəsi',
@@ -108,6 +112,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — otaq-vaxt klubları (daxili panel)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -120,6 +125,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Paralel: onlayn/mağaza satışı ticarət həllində qalır; otaq vaxtı Heselo-da',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Keçid yoxlama siyahısı',
@@ -134,7 +140,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Bir növbə paralel işlədin; sonra qərar verin',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo Baza Market-in marketplace-i əvəz edirmi?',
@@ -192,6 +198,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Solutions known as Baza Market lean towards product sales, catalogues, retail or marketplace use. Heselo is not a marketplace: it is an internal panel for a venue’s own rooms, bookings, live sessions, cash shifts and stock.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When karaoke rooms, PlayStation stations, billiards tables or lounge rooms are sold by time, Heselo turns bookings into sessions, bills the time and deducts drinks and snacks added to a session from stock.',
+            'Bar sales attach to a session; that is not the same as an e-commerce catalogue. In the demo, set up only club rooms and rates and test one shift.',
+          ],
+          bullets: [
+            'Core product: room, console or table hours',
+            'Advance booking and session start on arrival are required',
+            'Extensions, rates and shift cash should live in one panel',
+            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: commerce platform or club panel?',
           paragraphs: [
@@ -203,6 +224,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Must-have: catalogues and sales channels, or booking → live session → cash?',
           ],
         },
+
         {
           id: 'when-baza-market-fits',
           title: 'When should Baza Market stay?',
@@ -217,20 +239,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'The venue is not mainly selling room hours',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When karaoke rooms, PlayStation stations, billiards tables or lounge rooms are sold by time, Heselo turns bookings into sessions, bills the time and deducts drinks and snacks added to a session from stock.',
-            'Bar sales attach to a session; that is not the same as an e-commerce catalogue. In the demo, set up only club rooms and rates and test one shift.',
-          ],
-          bullets: [
-            'Core product: room, console or table hours',
-            'Advance booking and session start on arrival are required',
-            'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Baza Market vs Heselo — at a glance',
@@ -256,6 +265,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Short landscape',
@@ -269,6 +279,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — room-time clubs (internal panel)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -281,6 +292,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Parallel: online/shop sales stay in the commerce tool; room time on Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Switch checklist',
@@ -295,7 +307,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Run one shift in parallel, then decide',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace Baza Market’s marketplace?',
@@ -353,6 +365,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Решения под названием Baza Market ориентированы скорее на продажу товаров, каталог, розницу или маркетплейс. Heselo — не маркетплейс, а внутренняя панель заведения для собственных комнат, бронирований, живых сеансов, кассовых смен и склада.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если караоке-комнаты, PlayStation-станции, бильярдные столы или лаунж-комнаты продаются по времени, Heselo превращает бронь в сеанс, считает время и списывает со склада напитки и закуски, добавленные в счёт.',
+            'Продажи в баре привязаны к сеансу; это не e-commerce каталог. В демо настройте только клубные комнаты и тарифы и проверьте одну смену.',
+          ],
+          bullets: [
+            'Основной продукт: часы комнаты, консоли или стола',
+            'Нужны предварительная бронь и запуск сеанса по приходу',
+            'Продления, тарифы и касса смены должны быть в одной панели',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: торговая платформа или клубная панель?',
           paragraphs: [
@@ -364,6 +391,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Что нужно: каталог и каналы продаж или бронь → живой сеанс → касса?',
           ],
         },
+
         {
           id: 'when-baza-market-fits',
           title: 'Когда Baza Market стоит оставить?',
@@ -378,20 +406,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Заведение не продаёт в основном часы комнат',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если караоке-комнаты, PlayStation-станции, бильярдные столы или лаунж-комнаты продаются по времени, Heselo превращает бронь в сеанс, считает время и списывает со склада напитки и закуски, добавленные в счёт.',
-            'Продажи в баре привязаны к сеансу; это не e-commerce каталог. В демо настройте только клубные комнаты и тарифы и проверьте одну смену.',
-          ],
-          bullets: [
-            'Основной продукт: часы комнаты, консоли или стола',
-            'Нужны предварительная бронь и запуск сеанса по приходу',
-            'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Baza Market и Heselo — краткое сравнение',
@@ -417,6 +432,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Короткий ландшафт',
@@ -430,6 +446,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — клубы с оплатой времени (внутренняя панель)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -442,6 +459,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Параллельно: онлайн/магазин в торговом решении; время комнат — в Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист перехода',
@@ -456,7 +474,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Одну смену ведите параллельно, затем решайте',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет маркетплейс Baza Market?',

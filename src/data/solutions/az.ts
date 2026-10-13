@@ -45,9 +45,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Gecə növbəsində kassa qarışır',
       'VIP otaq və adi masa eyni cədvəldə görünmür',
     ],
-    howTitle: 'Bilyard klubunda necə işləyir?',
+    howTitle: 'Heselo bilyard üçün nə verir?',
     howBody:
-      'Masaları və otaqları cədvəldə bron edirsiniz. Oyun başlayanda canlı zalda sessiya açılır; məhsul və ödəniş eyni yerdədir. Qiymət hesablaması masa növü və müddət qaydalarına görə işləyir. Kassa növbəni bağlayır.',
+      'Heselo masaları və otaqları eyni cədvəldə bron edir. Oyun başlayanda canlı zalda sessiya açılır; məhsul və ödəniş eyni yerdədir. Qiymət masa növü və müddətə görə hesablanır, kassa növbəni bağlayır.',
     featuresTitle: 'Bilyard üçün uyğun funksiyalar',
     features: [
       {
@@ -126,9 +126,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Bir neçə otağın eyni vaxtda statusu qarışır',
       'Günün sonunda kassa ilə otaq doluluğu uyğun gəlmir',
     ],
-    howTitle: 'Heselo karaoke məkanında necə kömək edir?',
+    howTitle: 'Heselo karaoke üçün nə verir?',
     howBody:
-      'Otaqları cədvəldə bron edirsiniz. Qonaq gələndə sessiya canlı zalda açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür. Kassa növbə və hesabat ilə günü bağlayır.',
+      'Heselo otaqları cədvəldə bron edir. Qonaq gələndə sessiya canlı zalda açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür — kassa növbə və hesabat ilə günü bağlayır.',
     featuresTitle: 'Karaoke üçün əsas funksiyalar',
     features: [
       {
@@ -208,9 +208,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Qəlyanaltı və içki satışı kassa ilə uyğun gəlmir',
       'Gecə növbəsində hesab-kitab uzanır',
     ],
-    howTitle: 'Heselo oyun klubunda necə işləyir?',
+    howTitle: 'Heselo oyun klubu üçün nə verir?',
     howBody:
-      'Stansiya və ya masaları qurursunuz. Bron cədvəldədir; oyun başlayanda canlı sessiya açılır. Məhsul satışı və ödəniş eyni qeyddədir. Kassa növbəni bağlayır; anbarda qəlyanaltı və içki qalıqları izlənir.',
+      'Heselo stansiya və masaları eyni cədvəldə saxlayır. Bron cədvəldədir; oyun başlayanda canlı sessiya açılır. Məhsul satışı və ödəniş eyni qeyddədir — kassa növbəni bağlayır, anbar qəlyanaltı və içkini izləyir.',
     featuresTitle: 'Oyun klubu üçün funksiyalar',
     features: [
       {
@@ -289,9 +289,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Bronsuz gələn qonaq ilə bron olunmuş yer eyni masada və ya otaqda toqquşur',
       'Günün sonunda kassa ilə satış uyğun gəlmir',
     ],
-    howTitle: 'Heselo antikafedə necə işləyir?',
+    howTitle: 'Heselo antikafe üçün nə verir?',
     howBody:
-      'Masa, otaq və ya stansiyaları ayrıca qurursunuz. Bron cədvəldədir; qonaq gələndə canlı sessiya açılır. Məhsul (çay, qəlyanaltı) əlavəsi və ödəniş eyni sessiyadadır. Kassa növbəni bağlayır; anbar qalıqları izlənir.',
+      'Heselo masa, otaq və stansiyaları ayrıca qurur. Bron cədvəldədir; qonaq gələndə canlı sessiya açılır. Çay və qəlyanaltı eyni sessiyaya yazılır — kassa növbəni bağlayır, anbar qalıqları izlənir.',
     featuresTitle: 'Antikafe üçün funksiyalar',
     features: [
       {
@@ -375,9 +375,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Bir neçə VIP otağın eyni vaxtda statusu qarışır',
       'Günün sonunda kassa ilə otaq doluluğu uyğun gəlmir',
     ],
-    howTitle: 'Heselo otaqlı launjda necə işləyir?',
+    howTitle: 'Heselo otaqlı launj üçün nə verir?',
     howBody:
-      'Otaqları cədvəldə bron edirsiniz. Qonaq gələndə sessiya canlı zalda açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür. Kassa növbə və hesabat ilə günü bağlayır.',
+      'Heselo otaqları cədvəldə bron edir. Qonaq gələndə sessiya canlı zalda açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür — kassa növbə və hesabat ilə günü bağlayır.',
     featuresTitle: 'Otaqlı launj üçün əsas funksiyalar',
     features: [
       {
@@ -459,9 +459,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Əvvəlcədən sifariş və depozit ayrı yerdə qalır',
       'Keçmiş günlərdə kim nə dəyişib — bilinmir',
     ],
-    howTitle: 'Heselo-da rezervasiya necə idarə olunur?',
+    howTitle: 'Heselo rezervasiya üçün nə verir?',
     howBody:
-      'Cədvəl modulunda gün və həftə üzrə masaları, otaqları və stansiyaları görürsünüz. Rezervasiyalar siyahısında müştəri, vaxt, etiket, əvvəlcədən sifariş, depozit və ödəniş qəbulu, köçürmə və ləğv var. Qonaq gələndə eyni bron canlı sessiyaya keçir.',
+      'Heselo cədvəldə gün və həftə üzrə masa, otaq və stansiyaları göstərir. Rezervasiya siyahısında müştəri, vaxt, etiket, əvvəlcədən sifariş, depozit, köçürmə və ləğv var. Qonaq gələndə eyni bron canlı sessiyaya keçir.',
     featuresTitle: 'Rezervasiya funksiyaları',
     features: [
       {
@@ -541,9 +541,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Hansı sessiya ödənilib — axtarmaq lazım gəlir',
       'Sayım ayrıca kağızda qalır',
     ],
-    howTitle: 'Heselo-da kassa necə işləyir?',
+    howTitle: 'Heselo kassa üçün nə verir?',
     howBody:
-      'Növbəni açırsınız, əməliyyatları yazırsınız, kassa hesabatına baxırsınız və kassa sayımı ilə bağlayırsınız. Canlı zaldakı ödənişlər eyni gün və növbə qaydaları ilə gedir. Bağlanmış günlərin tarixçəsi saxlanılır.',
+      'Heselo növbəni açır, əməliyyatları yazır, hesabatı göstərir və sayımla bağlayır. Canlı zaldakı ödənişlər eyni gün və növbə qaydaları ilə gedir — bağlanmış günlərin tarixçəsi saxlanılır.',
     featuresTitle: 'Kassa funksiyaları',
     features: [
       {
@@ -621,9 +621,9 @@ export const solutionsAz: SolutionCopy[] = [
       'Qiymət və məhsul siyahısı bir neçə yerdədir',
       'Bronsuz satış anbara düşmür',
     ],
-    howTitle: 'Heselo-da anbar necə idarə olunur?',
+    howTitle: 'Heselo anbar üçün nə verir?',
     howBody:
-      'Məhsul kataloqu qiymətləri saxlayır. Anbar qalıqları və sayım jurnalları eyni siyahıdadır. Canlı sessiyada və sürətli satışda məhsul əlavə olunanda eyni kataloq işləyir. Statistika anbar üzrə göstəriciləri göstərir.',
+      'Heselo məhsul kataloqunu qiymətlə saxlayır. Anbar qalıqları və sayım jurnalları eyni siyahıdadır. Canlı sessiya və sürətli satışda məhsul əlavə olunanda eyni kataloq işləyir — statistika anbar göstəricilərini göstərir.',
     featuresTitle: 'Anbar funksiyaları',
     features: [
       {

@@ -32,6 +32,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Kaktus axtarışında salon, gözəllik və mütəxəssis randevusu gözlənilir: xidmət müddəti, usta cədvəli, müştəri kartı. Heselo otaq, launj və antikafe yerini vaxtla satır — bron, canlı sessiya və kassa növbəsi. Bu bələdçi Kaktus tipli salon planlaşdırmasını otaq-vaxt sistemi ilə müqayisə edir — Heselo mütəxəssis/qəbul cədvəlini əvəz etmir.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Antikafe yeri, launj otağı, karaoke otağı və ya oxşar məkan vaxtla satılır, sessiya uzadılır və kassa növbəsi lazımdırsa — Heselo uyğundur. Salon randevusu ehtiyacı varsa Kaktus (və ya salon kateqoriyası) ayrıca qalmalıdır.',
+            'Eyni brend həm salon, həm otaqlı launj idarə edirsə — iki sistem paralel ola bilər; satış və rezervasiya harada aparılır, yazılı bölün.',
+          ],
+          bullets: [
+            'Əsas məhsul: otaq, masa və ya antikafe yeri saatı',
+            'Bron → canlı sessiya → tarif və uzadılma',
+            'İçki/qəlyanaltı sessiyaya və klub kassasına',
+            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: salon randevusu, yoxsa otaq saatı?',
           paragraphs: [
@@ -43,6 +58,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Axın: randevu → xidmət → ödəniş, yoxsa bron → sessiya → uzadılma → kassa?',
           ],
         },
+
         {
           id: 'when-kaktus-fits',
           title: 'Kaktus (salon randevusu) nə vaxt qalmalıdır?',
@@ -57,20 +73,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Launj/karaoke otaq saatı biznesi deyil',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Antikafe yeri, launj otağı, karaoke otağı və ya oxşar məkan vaxtla satılır, sessiya uzadılır və kassa növbəsi lazımdırsa — Heselo uyğundur. Salon randevusu ehtiyacı varsa Kaktus (və ya salon kateqoriyası) ayrıca qalmalıdır.',
-            'Eyni brend həm salon, həm otaqlı launj idarə edirsə — iki sistem paralel ola bilər; satış və rezervasiya harada aparılır, yazılı bölün.',
-          ],
-          bullets: [
-            'Əsas məhsul: otaq, masa və ya antikafe yeri saatı',
-            'Bron → canlı sessiya → tarif və uzadılma',
-            'İçki/qəlyanaltı sessiyaya və klub kassasına',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Kaktus tipli salon və Heselo — müqayisə',
@@ -95,6 +98,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Rezervasiya proqramları bazar mənzərəsi (qısa)',
@@ -109,6 +113,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hibrid biznes: salon + otaqlı zona — iki kateqoriya',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Ssenarilər',
@@ -120,6 +125,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Salon + launj otaqları: Kaktus salon zonasında, Heselo otaq saatında',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Qərar yoxlama siyahısı',
@@ -134,7 +140,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Front desk: hansı sistemdə hansı rezervasiya açılır — təlim verin',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo Kaktus-u əvəz edir?',
@@ -193,6 +199,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for Kaktus expect salon, beauty and specialist appointments: service duration, staff calendar, client card. Heselo sells anticafe seats, lounge and karaoke rooms by time — booking, live session and cash shifts. This guide compares Kaktus-style salon planning with room-time systems — Heselo does not replace specialist/reception scheduling.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When anticafe seats, lounge rooms, karaoke rooms or similar are sold by time with extensions and shift cash — Heselo fits. If salon appointments are needed, Kaktus (or salon category) stays separate.',
+            'One brand running salon plus room lounge can use both systems in parallel — document where each booking lives.',
+          ],
+          bullets: [
+            'Core product: room, table or anticafe seat hours',
+            'Book → live session → rates and extensions',
+            'Drinks/snacks on session and club till',
+            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: salon appointment or room hours?',
           paragraphs: [
@@ -204,6 +225,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Flow: appointment → service → pay, or book → session → extension → cash?',
           ],
         },
+
         {
           id: 'when-kaktus-fits',
           title: 'When should Kaktus (salon booking) stay?',
@@ -218,20 +240,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Not a lounge/karaoke hourly business',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When anticafe seats, lounge rooms, karaoke rooms or similar are sold by time with extensions and shift cash — Heselo fits. If salon appointments are needed, Kaktus (or salon category) stays separate.',
-            'One brand running salon plus room lounge can use both systems in parallel — document where each booking lives.',
-          ],
-          bullets: [
-            'Core product: room, table or anticafe seat hours',
-            'Book → live session → rates and extensions',
-            'Drinks/snacks on session and club till',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Kaktus-style salon vs Heselo — comparison',
@@ -254,6 +263,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Booking software landscape (short)',
@@ -268,6 +278,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hybrid business: salon + room zone — two categories',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Scenarios',
@@ -279,6 +290,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Salon + lounge rooms: Kaktus in salon area, Heselo on room hours',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Decision checklist',
@@ -293,7 +305,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Front desk: which system opens which booking — train staff',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace Kaktus?',
@@ -352,6 +364,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск Kaktus подразумевает салон, бьюти и запись к специалисту: длительность услуги, календарь мастера, карта клиента. Heselo продаёт места в антикафе, лаунж- и караоке-комнаты по времени — бронь, живой сеанс и кассовые смены. Это руководство сравнивает планирование салона в духе Kaktus с системами времени комнат — Heselo не заменяет расписание специалистов/ресепшена.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если места антикафе, лаунж-комнаты, караоке и т.п. продаются по времени с продлениями и кассовой сменой — Heselo подходит. Если нужна запись в салон, Kaktus (или салонная категория) остаётся отдельно.',
+            'Один бренд с салоном и комнатным лаунжем может использовать обе системы параллельно — зафиксируйте, где какая бронь.',
+          ],
+          bullets: [
+            'Основной продукт: часы комнаты, стола или места в антикафе',
+            'Бронь → живой сеанс → тариф и продления',
+            'Напитки/закуски к сеансу и клубной кассе',
+            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: запись в салон или часы комнаты?',
           paragraphs: [
@@ -363,6 +390,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Поток: запись → услуга → оплата или бронь → сеанс → продление → касса?',
           ],
         },
+
         {
           id: 'when-kaktus-fits',
           title: 'Когда оставить Kaktus (запись в салон)?',
@@ -377,20 +405,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Не бизнес лаунж/караоке по часам',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если места антикафе, лаунж-комнаты, караоке и т.п. продаются по времени с продлениями и кассовой сменой — Heselo подходит. Если нужна запись в салон, Kaktus (или салонная категория) остаётся отдельно.',
-            'Один бренд с салоном и комнатным лаунжем может использовать обе системы параллельно — зафиксируйте, где какая бронь.',
-          ],
-          bullets: [
-            'Основной продукт: часы комнаты, стола или места в антикафе',
-            'Бронь → живой сеанс → тариф и продления',
-            'Напитки/закуски к сеансу и клубной кассе',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Салон в духе Kaktus и Heselo — сравнение',
@@ -413,6 +428,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт программ бронирования (кратко)',
@@ -427,6 +443,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Гибрид: салон + комнатная зона — две категории',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Сценарии',
@@ -438,6 +455,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Салон + лаунж-комнаты: Kaktus в салоне, Heselo на часы комнат',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист решения',
@@ -452,7 +470,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Ресепшен: в какой системе какая бронь — обучите персонал',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет Kaktus?',

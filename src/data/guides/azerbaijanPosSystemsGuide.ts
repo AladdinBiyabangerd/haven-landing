@@ -33,6 +33,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Azərbaycanda POS bazarının böyük hissəsi restoran, kafe və pərakəndə satışa yönəlib: iiko, Clopos və Dine sifariş, menyu və mətbəx prosesində güclüdür; Fazilat POS və SmartPOS kimi həllər ümumi satış və kassaya fokuslanır. Heselo fərqli kateqoriyadadır — otaq, konsol və masa vaxtını satan klublar üçün daxili panel. Bu bələdçi restoran vs otaq-vaxt seçimini dürüst müqayisə edir; rəqib qiymətləri burada uydurulmur.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və anbarı bir paneldə birləşdirir — restoran POS-da bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
+          ],
+          bullets: [
+            'Əsas məhsul: otaq, konsol və ya masa saatı',
+            'Bron → gəlişdə sessiya → uzadılma → kassa standart axındır',
+            'Sessiyaya məhsul satışı anbarla bağlıdır',
+            'Açıq qiymət: {low} AZN/aydan; AZ / EN / RU',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: restoran, pərakəndə, yoxsa otaq-vaxt?',
           paragraphs: [
@@ -44,6 +58,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hər ikisi varsa: restoran/pərakəndə POS + klub paneli (paralel ssenari)',
           ],
         },
+
         {
           id: 'when-restaurant-pos-fits',
           title: 'Restoran və ümumi kassa POS nə vaxt düzgündür?',
@@ -57,19 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq vaxtı ikinci dərəcəlidir və ya ayrıca cədvəldə qalır',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və anbarı bir paneldə birləşdirir — restoran POS-da bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
-          ],
-          bullets: [
-            'Əsas məhsul: otaq, konsol və ya masa saatı',
-            'Bron → gəlişdə sessiya → uzadılma → kassa standart axındır',
-            'Sessiyaya məhsul satışı anbarla bağlıdır',
-            'Açıq qiymət: {low} AZN/aydan; AZ / EN / RU',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Yerli POS — çoxsütunlu müqayisə',
@@ -163,6 +166,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Azərbaycan bazarı — qısa baxış',
@@ -176,6 +180,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — otaq-vaxt klubları (fərqli kateqoriya)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -188,6 +193,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Mağaza satışı + bilyard: Fazilat/SmartPOS (mağaza) + Heselo (masa vaxtı)',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Seçimi necə yoxlamalı?',
@@ -201,7 +207,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Bir növbə paralel işlədin; sonra qərar verin',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo iiko və ya Clopos-u əvəz edirmi?',
@@ -260,6 +266,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Most of the POS market in Azerbaijan targets restaurants, cafés and retail: iiko, Clopos and Dine are strong in ordering, menus and kitchen workflows; Fazilat POS and SmartPOS focus on general sales and tills. Heselo sits in a different category — a panel for clubs that sell room, console and table time. This guide compares restaurant vs room-time honestly; competitor prices are not invented here.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When PlayStation stations, karaoke rooms, billiards tables or anticafe seats are sold by time, Heselo combines bookings, live sessions, extensions, cash shifts and stock in one panel — something restaurant POS usually needs a spreadsheet or timer to cover.',
+          ],
+          bullets: [
+            'Core product: room, console or table hours',
+            'Booking → session on arrival → extension → cash is the standard flow',
+            'Item sales attach to sessions and stock',
+            'Public pricing from {low} AZN/month; AZ / EN / RU',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: restaurant, retail or room-time?',
           paragraphs: [
@@ -271,6 +291,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Need both: restaurant/retail POS + club panel (parallel scenario)',
           ],
         },
+
         {
           id: 'when-restaurant-pos-fits',
           title: 'When is restaurant or general till POS the right fit?',
@@ -284,19 +305,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room time is secondary or tracked separately',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When PlayStation stations, karaoke rooms, billiards tables or anticafe seats are sold by time, Heselo combines bookings, live sessions, extensions, cash shifts and stock in one panel — something restaurant POS usually needs a spreadsheet or timer to cover.',
-          ],
-          bullets: [
-            'Core product: room, console or table hours',
-            'Booking → session on arrival → extension → cash is the standard flow',
-            'Item sales attach to sessions and stock',
-            'Public pricing from {low} AZN/month; AZ / EN / RU',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Local POS — multi-column comparison',
@@ -390,6 +399,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Azerbaijan market — short landscape',
@@ -403,6 +413,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — room-time clubs (different category)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -415,6 +426,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Shop sales + billiards: Fazilat/SmartPOS (shop) + Heselo (table time)',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'How to test your choice',
@@ -428,7 +440,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Run one shift in parallel, then decide',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace iiko or Clopos?',
@@ -487,6 +499,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Большая часть рынка POS в Азербайджане ориентирована на рестораны, кафе и розницу: iiko, Clopos и Dine сильны в заказах, меню и кухонных процессах; Fazilat POS и SmartPOS сосредоточены на общих продажах и кассе. Heselo относится к другой категории — панель для клубов, которые продают время комнат, консолей и столов. Это руководство честно сравнивает ресторан и почасовую оплату; цены конкурентов здесь не выдумываются.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если PlayStation-станции, караоке-комнаты, бильярдные столы или места в антикафе продаются по времени, Heselo объединяет бронь, живые сеансы, продления, кассовые смены и склад в одной панели — ресторанную POS для этого обычно дополняют таблицей или таймером.',
+          ],
+          bullets: [
+            'Основной продукт: часы комнаты, консоли или стола',
+            'Бронь → сеанс по приходу → продление → касса — стандартный поток',
+            'Продажи товаров привязаны к сеансу и складу',
+            'Открытая цена: от {low} AZN/мес.; AZ / EN / RU',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: ресторан, розница или время комнат?',
           paragraphs: [
@@ -498,6 +524,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужны оба: ресторанная/розничная POS + клубная панель (параллельно)',
           ],
         },
+
         {
           id: 'when-restaurant-pos-fits',
           title: 'Когда подходит ресторанная или общая касса?',
@@ -511,19 +538,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Время комнат вторично или учитывается отдельно',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если PlayStation-станции, караоке-комнаты, бильярдные столы или места в антикафе продаются по времени, Heselo объединяет бронь, живые сеансы, продления, кассовые смены и склад в одной панели — ресторанную POS для этого обычно дополняют таблицей или таймером.',
-          ],
-          bullets: [
-            'Основной продукт: часы комнаты, консоли или стола',
-            'Бронь → сеанс по приходу → продление → касса — стандартный поток',
-            'Продажи товаров привязаны к сеансу и складу',
-            'Открытая цена: от {low} AZN/мес.; AZ / EN / RU',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Местные POS — многоколоночное сравнение',
@@ -617,6 +632,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Рынок Азербайджана — короткий ландшафт',
@@ -630,6 +646,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — клубы с оплатой времени (другая категория)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -642,6 +659,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Магазин + бильярд: Fazilat/SmartPOS (магазин) + Heselo (время стола)',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Как проверить выбор',
@@ -655,7 +673,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Одну смену ведите параллельно, затем решайте',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет iiko или Clopos?',

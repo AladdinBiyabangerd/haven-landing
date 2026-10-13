@@ -33,6 +33,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'LANGAME (Lan Game) axtarışında PC və oyun klubu stansiya idarəetməsi gözlənilir: diskless/server, stansiya nəzarəti, tarif və şəbəkə bronu. Heselo otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir. Bu bələdçi LANGAME tipli PC klub proqramınu otaq-vaxt paneli ilə müqayisə edir — Heselo PC stansiya agentini və diskless prosesini əvəz etmir.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'PlayStation otağı, karaoke, bilyard və ya launj otağı vaxtla satılır, bron və kassa növbəsi lazımdırsa — Heselo uyğundur. PC zalı LANGAME-də qala bilər; otaq-vaxt Heselo-da.',
+            'Demo zamanı hansı resursların otaq modelində, hansılarının PC proqram modelində qaldığını aydınlaşdırın.',
+          ],
+          bullets: [
+            'Otaq və ya konsol stansiyası saatı əsas gəlir',
+            'Bron → sessiya → uzadılma → kassa axını',
+            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
+            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: PC stansiya proqramı, yoxsa otaq-vaxt?',
           paragraphs: [
@@ -44,6 +59,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Resurs: açıq PC zalı, yoxsa PlayStation/karaoke otaqları?',
           ],
         },
+
         {
           id: 'when-langame-fits',
           title: 'LANGAME nə vaxt qalmalıdır?',
@@ -58,20 +74,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq saatı yoxdur və ya ikinci dərəcəlidir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'PlayStation otağı, karaoke, bilyard və ya launj otağı vaxtla satılır, bron və kassa növbəsi lazımdırsa — Heselo uyğundur. PC zalı LANGAME-də qala bilər; otaq-vaxt Heselo-da.',
-            'Demo zamanı hansı resursların otaq modelində, hansılarının PC proqram modelində qaldığını aydınlaşdırın.',
-          ],
-          bullets: [
-            'Otaq və ya konsol stansiyası saatı əsas gəlir',
-            'Bron → sessiya → uzadılma → kassa axını',
-            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'LANGAME tipli PC proqram və Heselo — müqayisə',
@@ -96,6 +99,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Oyun klubu bazar mənzərəsi (qısa)',
@@ -110,6 +114,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hibrid: LANGAME (PC zalı) + Heselo (otaqlar)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -121,6 +126,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Keçid: LANGAME-i saxlayın; yalnız otaq resurslarını Heselo-ya gətirin',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Qərar yoxlama siyahısı',
@@ -135,7 +141,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'İşçilərə iki sistem rolunu izah edin',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo LANGAME-i əvəz edir?',
@@ -194,6 +200,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for LANGAME (Lan Game) expect PC and gaming club station software: diskless/server, station control, tariffs and network booking. Heselo manages room and station hours with booking, live sessions and cash shifts. This guide compares LANGAME-style PC club software with a room-time panel — Heselo does not replace the PC station agent or diskless stack.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When PlayStation rooms, karaoke, billiards or lounge rooms are sold by time with booking and shift cash — Heselo fits. The PC hall can stay on LANGAME; room-time on Heselo.',
+            'In a demo, clarify which resources use a room model vs a PC software model.',
+          ],
+          bullets: [
+            'Room or console station hours are main revenue',
+            'Book → session → extension → cash flow',
+            'Bar/snacks tied to session and stock',
+            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: PC station software or room-time?',
           paragraphs: [
@@ -205,6 +226,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Resources: open PC hall, or PlayStation/karaoke rooms?',
           ],
         },
+
         {
           id: 'when-langame-fits',
           title: 'When should LANGAME stay?',
@@ -219,20 +241,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room hours absent or secondary',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When PlayStation rooms, karaoke, billiards or lounge rooms are sold by time with booking and shift cash — Heselo fits. The PC hall can stay on LANGAME; room-time on Heselo.',
-            'In a demo, clarify which resources use a room model vs a PC software model.',
-          ],
-          bullets: [
-            'Room or console station hours are main revenue',
-            'Book → session → extension → cash flow',
-            'Bar/snacks tied to session and stock',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'LANGAME-style PC software vs Heselo — comparison',
@@ -257,6 +266,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Gaming club landscape (short)',
@@ -271,6 +281,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hybrid: LANGAME (PC hall) + Heselo (rooms)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -282,6 +293,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Migration: keep LANGAME; move only room resources to Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Decision checklist',
@@ -296,7 +308,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Train staff on two-system roles',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace LANGAME?',
@@ -355,6 +367,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск LANGAME (Lan Game) подразумевает ПО станций PC и игрового клуба: diskless/сервер, контроль станций, тарифы и сетевое бронирование. Heselo ведёт часы комнат и станций через бронь, живые сеансы и кассовые смены. Это руководство сравнивает ПО PC-клуба в духе LANGAME с панелью времени комнат — Heselo не заменяет агент станций и diskless-контур.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если комнаты PlayStation, караоке, бильярд или лаунж продаются по времени с бронью и кассовой сменой — Heselo подходит. PC-зал может остаться на LANGAME; время комнат — в Heselo.',
+            'На демо разделите, какие ресурсы в модели комнаты, какие — в модели PC-софта.',
+          ],
+          bullets: [
+            'Часы комнаты или консольной станции — основная выручка',
+            'Поток бронь → сеанс → продление → касса',
+            'Бар/закуски к сеансу и складу',
+            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: ПО PC-станций или время комнат?',
           paragraphs: [
@@ -366,6 +393,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Ресурсы: открытый PC-зал или комнаты PlayStation/караоке?',
           ],
         },
+
         {
           id: 'when-langame-fits',
           title: 'Когда оставить LANGAME?',
@@ -380,20 +408,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Часов комнат нет или они вторичны',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если комнаты PlayStation, караоке, бильярд или лаунж продаются по времени с бронью и кассовой сменой — Heselo подходит. PC-зал может остаться на LANGAME; время комнат — в Heselo.',
-            'На демо разделите, какие ресурсы в модели комнаты, какие — в модели PC-софта.',
-          ],
-          bullets: [
-            'Часы комнаты или консольной станции — основная выручка',
-            'Поток бронь → сеанс → продление → касса',
-            'Бар/закуски к сеансу и складу',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'ПО PC в духе LANGAME и Heselo — сравнение',
@@ -418,6 +433,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт игрового клуба (кратко)',
@@ -432,6 +448,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Гибрид: LANGAME (PC-зал) + Heselo (комнаты)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -443,6 +460,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Переход: оставьте LANGAME; перенесите только комнатные ресурсы в Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист решения',
@@ -457,7 +475,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Обучите персонал двум системам',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет LANGAME?',

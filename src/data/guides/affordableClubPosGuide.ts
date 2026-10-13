@@ -32,6 +32,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Bu bələdçi sərfəli klub POS seçimini otaq-vaxt nişəsi ilə izah edir — Heselo {low} AZN/aydan rezervasiya, canlı sessiya, kassa və anbarı birləşdirir.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo klub üçün nə verir?',
+          paragraphs: [
+            'Otaq, konsol və masa vaxtı satırsınızsa, bir məqsədli sistem işçilərin rezervasiya ilə faktiki sessiyanı qarışdırmasının qarşısını alır və ayrıca cədvəl xərcini azaldır.',
+          ],
+          bullets: [
+            'Əsas məhsul: otaq, konsol və ya masa saatı',
+            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
+            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: ucuz restoran POS, yoxsa klub paneli?',
           paragraphs: [
@@ -43,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Aylıq abunə + quraşdırma + istifadə olunmayan modullar = real TCO',
           ],
         },
+
         {
           id: 'when-cheap-restaurant-fits',
           title: 'Ucuz restoran POS nə vaxt kifayətdir?',
@@ -55,19 +70,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Yalnız çek və məhsul satışı lazımdır',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt daha sərfəlidir?',
-          paragraphs: [
-            'Otaq, konsol və masa vaxtı satırsınızsa, bir məqsədli sistem işçilərin rezervasiya ilə faktiki sessiyanı qarışdırmasının qarşısını alır və ayrıca cədvəl xərcini azaldır.',
-          ],
-          bullets: [
-            'Əsas məhsul: otaq, konsol və ya masa saatı',
-            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
-            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Ucuz restoran POS vs Heselo',
@@ -85,6 +88,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa bazar mənzərəsi',
@@ -97,6 +101,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hər ikisi lazımdırsa paralel istifadə',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Seçimi necə yoxlamalı?',
@@ -108,8 +113,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Quraşdırma, terminal və istifadə olunmayan modulları TCO-ya daxil edin',
             'Demo nəticəsinə əsasən seçin',
           ],
-        }
-      ],
+        },
+          ],
       faq: [
         {
           q: 'Ən ucuz POS həmişə sərfəlidirmi?',
@@ -155,6 +160,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'The cheapest POS is not always the lowest-cost option if club time still lives in a spreadsheet. This guide explains affordable club POS choice for the room-time niche — Heselo from {low} AZN/month combines bookings, live sessions, cash and stock.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give a club?',
+          paragraphs: [
+            'When you sell room, console or table time, one purpose-built system helps staff keep bookings and sessions distinct and reduces spreadsheet overhead.',
+          ],
+          bullets: [
+            'Core product: room, console or table hours',
+            'Advance booking and session start on arrival are required',
+            'Extensions, rates and shift cash should live in one panel',
+            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: cheap restaurant POS or club panel?',
           paragraphs: [
@@ -166,6 +185,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Monthly fee + setup + unused modules = real TCO',
           ],
         },
+
         {
           id: 'when-cheap-restaurant-fits',
           title: 'When is a cheap restaurant POS enough?',
@@ -178,19 +198,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'You only need receipts and product sales',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When is Heselo more affordable in practice?',
-          paragraphs: [
-            'When you sell room, console or table time, one purpose-built system helps staff keep bookings and sessions distinct and reduces spreadsheet overhead.',
-          ],
-          bullets: [
-            'Core product: room, console or table hours',
-            'Advance booking and session start on arrival are required',
-            'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Cheap restaurant POS vs Heselo',
@@ -212,6 +220,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Short landscape',
@@ -224,6 +233,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Need both: run in parallel',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'How to test the choice',
@@ -235,8 +245,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Include setup, terminals and unused modules in TCO',
             'Choose after the demo',
           ],
-        }
-      ],
+        },
+          ],
       faq: [
         {
           q: 'Is the cheapest POS always the most affordable?',
@@ -281,6 +291,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Самая дешёвая POS не всегда обходится дешевле, если клубное время ведётся в таблице. Это руководство объясняет выбор доступной клубной POS для почасовой ниши — Heselo от {low} AZN в месяц объединяет бронь, живые сеансы, кассу и склад.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что Heselo даёт клубу?',
+          paragraphs: [
+            'При продаже времени комнаты, консоли или стола специализированная система снижает путаницу брони и сеанса и затраты на отдельные таблицы.',
+          ],
+          bullets: [
+            'Основной продукт: часы комнаты, консоли или стола',
+            'Нужны предварительная бронь и запуск сеанса по приходу',
+            'Продления, тарифы и касса смены должны быть в одной панели',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: дешёвая ресторанная POS или клубная панель?',
           paragraphs: [
@@ -292,6 +316,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Абонплата + внедрение + ненужные модули = реальный TCO',
           ],
         },
+
         {
           id: 'when-cheap-restaurant-fits',
           title: 'Когда достаточно дешёвой ресторанной POS?',
@@ -304,19 +329,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужны только чеки и продажа товаров',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда Heselo выгоднее на практике?',
-          paragraphs: [
-            'При продаже времени комнаты, консоли или стола специализированная система снижает путаницу брони и сеанса и затраты на отдельные таблицы.',
-          ],
-          bullets: [
-            'Основной продукт: часы комнаты, консоли или стола',
-            'Нужны предварительная бронь и запуск сеанса по приходу',
-            'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Дешёвая ресторанная POS и Heselo',
@@ -338,6 +351,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Короткий ландшафт',
@@ -350,6 +364,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужны оба — параллельно',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Как проверить выбор',
@@ -361,8 +376,8 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Учтите внедрение, терминалы и ненужные модули в TCO',
             'Решайте после демо',
           ],
-        }
-      ],
+        },
+          ],
       faq: [
         {
           q: 'Самая дешёвая POS всегда выгоднее?',

@@ -32,6 +32,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         '“Kassa.az alternativi” axtarışında ad tez-tez ümumi kassa və məhsul satışı proqramı ilə qarışır. Bu bələdçi Kassa.az brendinin həllini klub kontekstində Heselo ilə müqayisə edir. Heselo Kassa.az deyil və Kassa.az ilə əlaqəli deyil; Heselo-da kassa növbəsi klub panelinin funksiyalarından biridir — əsas fokus otaq vaxtı, rezervasiya və canlı sessiyadır.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və anbara bağlayır.',
+            'Sessiyaya əlavə olunan içki və qəlyanaltı satışı kassa növbəsi ilə bir yerdə görünür; bu, ümumi mağaza kassası ilə eyni biznes modeli deyil. Demo zamanı öz otaq və stansiyalarınızla eyni ssenarini yoxlayın.',
+          ],
+          bullets: [
+            'Əsas məhsul: otaq, konsol və ya masa saatı',
+            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
+            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: ümumi kassa, yoxsa otaq-vaxt?',
           paragraphs: [
@@ -43,6 +58,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Kritik funksiyalar: gündəlik kassa hesabatı, yoxsa bron → canlı sessiya → uzadılma → növbə kassası?',
           ],
         },
+
         {
           id: 'when-kassa-az-fits',
           title: 'Kassa.az brendi nə vaxt qalmalıdır?',
@@ -57,20 +73,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Vaxt üçün ayrıca Excel/taymer kifayət edəndə edir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı canlı sessiyaya, tarifi, kassa növbəsinə və anbara bağlayır.',
-            'Sessiyaya əlavə olunan içki və qəlyanaltı satışı kassa növbəsi ilə bir yerdə görünür; bu, ümumi mağaza kassası ilə eyni biznes modeli deyil. Demo zamanı öz otaq və stansiyalarınızla eyni ssenarini yoxlayın.',
-          ],
-          bullets: [
-            'Əsas məhsul: otaq, konsol və ya masa saatı',
-            'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
-            'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Kassa.az brendi və Heselo — qısa müqayisə',
@@ -95,6 +98,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa bazar mənzərəsi',
@@ -108,6 +112,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hər ikisi lazımdırsa: ümumi kassa + Heselo (paralel ssenari)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -120,6 +125,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Paralel: mağaza/çek satışı mövcud kassada qalır; otaq vaxtı Heselo-da — satışların harada yazıldığını bölün',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Keçid yoxlama siyahısı',
@@ -134,7 +140,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Bir növbə paralel işlədin; sonra qərar verin',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo Kassa.az-dır?',
@@ -193,6 +199,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for a “Kassa.az alternative” often mix the brand name with any general till and product sales tool. This guide compares the Kassa.az brand’s solution with Heselo in a club context. Heselo is not Kassa.az and is not affiliated with it; in Heselo, cash shifts are one feature of the club panel — the core focus is room time, bookings and live sessions.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When PlayStation stations, karaoke rooms, billiards tables or lounge rooms are sold by time, Heselo connects bookings to live sessions, rates, cash shifts and stock.',
+            'Drinks and snacks sold into a session appear on the same shift cash flow; that is not the same operating model as a general shop till. In a demo, test the same scenario with your own rooms and stations.',
+          ],
+          bullets: [
+            'Core product: room, console or table hours',
+            'Advance booking and session start on arrival are required',
+            'Extensions, rates and shift cash should live in one panel',
+            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: general till or room-time?',
           paragraphs: [
@@ -204,6 +225,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Must-have: daily till reporting, or booking → live session → extension → shift cash?',
           ],
         },
+
         {
           id: 'when-kassa-az-fits',
           title: 'When should the Kassa.az brand stay?',
@@ -218,20 +240,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'A separate Excel/timer is enough for time',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When PlayStation stations, karaoke rooms, billiards tables or lounge rooms are sold by time, Heselo connects bookings to live sessions, rates, cash shifts and stock.',
-            'Drinks and snacks sold into a session appear on the same shift cash flow; that is not the same operating model as a general shop till. In a demo, test the same scenario with your own rooms and stations.',
-          ],
-          bullets: [
-            'Core product: room, console or table hours',
-            'Advance booking and session start on arrival are required',
-            'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Kassa.az brand vs Heselo — at a glance',
@@ -256,6 +265,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Short landscape',
@@ -269,6 +279,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Need both: general till + Heselo (parallel scenario)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -281,6 +292,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Parallel: shop/receipt sales stay on the existing till; room time on Heselo — agree which sales land where',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Switch checklist',
@@ -295,7 +307,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Run one shift in parallel, then decide',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Is Heselo the same as Kassa.az?',
@@ -354,6 +366,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск «альтернативы Kassa.az» часто смешивает бренд с любой общей кассовой программой. В этом руководстве решение бренда Kassa.az сравнивается с Heselo в клубном контексте. Heselo — это не Kassa.az и не связана с этим брендом; в Heselo кассовая смена — одна из функций клубной панели, а основной фокус — время комнат, бронирования и живые сеансы.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если PlayStation-станции, караоке-комнаты, бильярдные столы или лаунж-комнаты продаются по времени, Heselo связывает бронь с живым сеансом, тарифом, кассовой сменой и складом.',
+            'Напитки и закуски, добавленные в сеанс, видны в той же кассовой смене; это другая модель, чем общая магазинная касса. На демо проверьте тот же сценарий на своих комнатах и станциях.',
+          ],
+          bullets: [
+            'Основной продукт: часы комнаты, консоли или стола',
+            'Нужны предварительная бронь и запуск сеанса по приходу',
+            'Продления, тарифы и касса смены должны быть в одной панели',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: общая касса или время комнат?',
           paragraphs: [
@@ -365,6 +392,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Критично: ежедневная кассовая отчётность или бронь → живой сеанс → продление → касса смены?',
           ],
         },
+
         {
           id: 'when-kassa-az-fits',
           title: 'Когда стоит оставить бренд Kassa.az?',
@@ -379,20 +407,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Для времени достаточно отдельной таблицы/таймера',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если PlayStation-станции, караоке-комнаты, бильярдные столы или лаунж-комнаты продаются по времени, Heselo связывает бронь с живым сеансом, тарифом, кассовой сменой и складом.',
-            'Напитки и закуски, добавленные в сеанс, видны в той же кассовой смене; это другая модель, чем общая магазинная касса. На демо проверьте тот же сценарий на своих комнатах и станциях.',
-          ],
-          bullets: [
-            'Основной продукт: часы комнаты, консоли или стола',
-            'Нужны предварительная бронь и запуск сеанса по приходу',
-            'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Бренд Kassa.az и Heselo — краткое сравнение',
@@ -417,6 +432,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Короткий ландшафт',
@@ -430,6 +446,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужны оба — общая касса + Heselo (параллельный сценарий)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -442,6 +459,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Параллельно: чеки/магазин остаются в текущей кассе; время комнат — в Heselo; разделите продажи',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист перехода',
@@ -456,7 +474,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Одну смену ведите параллельно, затем решайте',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo — это Kassa.az?',

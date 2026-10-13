@@ -32,6 +32,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'GameClub (gameclub.work) axtarışında konsola üstünlük verən launj SaaS gözlənilir: sessiyalar, bron, tariflər, bar, aksiyalar, növbə və POS — əsas ssenari PlayStation/Xbox. Heselo eyni otaq-vaxt kateqoriyasına yaxındır: bron, canlı sessiya, kassa və anbar; Azərbaycan bazarı üçün AZ/EN/RU və açıq qiymət. Bu bələdçi iki yaxın rəqibi dürüst müqayisə edir; PC diskless proqramını (LANGAME/IZI) əvəz etmir.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Azərbaycan (və AZ/RU) klubunda otaq-vaxt, bron, kassa növbəsi və anbar bir paneldə lazımdırsa — Heselo uyğundur. Oyun, karaoke, bilyard, antikafe və launj eyni prosesdə.',
+          ],
+          bullets: [
+            'AZ / EN / RU interfeys və dəstək gözləntisi',
+            'Açıq qiymət: {low} AZN/aydan',
+            'Otaq-vaxt + bar/anbar + növbə bir axında',
+            'Yalnız PS deyil — karaoke/bilyard/antikafe də',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: konsol launj SaaS hansı bazar üçün?',
           paragraphs: [
@@ -43,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Yalnız konsol launj, yoxsa karaoke/bilyard/antikafe də?',
           ],
         },
+
         {
           id: 'when-gameclub-fits',
           title: 'GameClub nə vaxt uyğundur?',
@@ -57,19 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Karaoke/antikafe ikinci dərəcəlidir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Azərbaycan (və AZ/RU) klubunda otaq-vaxt, bron, kassa növbəsi və anbar bir paneldə lazımdırsa — Heselo uyğundur. Oyun, karaoke, bilyard, antikafe və launj eyni prosesdə.',
-          ],
-          bullets: [
-            'AZ / EN / RU interfeys və dəstək gözləntisi',
-            'Açıq qiymət: {low} AZN/aydan',
-            'Otaq-vaxt + bar/anbar + növbə bir axında',
-            'Yalnız PS deyil — karaoke/bilyard/antikafe də',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'GameClub və Heselo — müqayisə',
@@ -94,6 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Konsol launj bazar mənzərəsi',
@@ -107,6 +111,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — AZ otaq-vaxt paneli',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Ssenarilər',
@@ -118,6 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Bakı klubu, AZ dildə: Heselo üstünlükdür',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Müqayisə yoxlama siyahısı',
@@ -130,7 +136,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC proqram lazımdırmı — ayrıca qərar',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo GameClub-u əvəz edir?',
@@ -188,6 +194,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for GameClub (gameclub.work) expect console-first lounge SaaS: sessions, booking, tariffs, bar, promotions, shifts and POS — PlayStation/Xbox as the primary scenario. Heselo sits in the same room-time category: booking, live sessions, cash and stock, with AZ/EN/RU and public pricing for Azerbaijan. This guide compares two close peers honestly; neither replaces PC diskless software (LANGAME/IZI).',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When an Azerbaijan (and AZ/RU) club needs room-time, booking, cash shifts and stock in one panel — Heselo fits. Gaming, karaoke, billiards, anticafe and lounge share one contour.',
+          ],
+          bullets: [
+            'Expectation of AZ / EN / RU UI and support',
+            'Public pricing from {low} AZN/month',
+            'Room-time + bar/stock + shift in one flow',
+            'Not PS-only — karaoke/billiards/anticafe too',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: which market is the console lounge SaaS for?',
           paragraphs: [
@@ -199,6 +219,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Console lounge only, or karaoke/billiards/anticafe too?',
           ],
         },
+
         {
           id: 'when-gameclub-fits',
           title: 'When does GameClub fit?',
@@ -213,19 +234,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Karaoke/anticafe is secondary',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When an Azerbaijan (and AZ/RU) club needs room-time, booking, cash shifts and stock in one panel — Heselo fits. Gaming, karaoke, billiards, anticafe and lounge share one contour.',
-          ],
-          bullets: [
-            'Expectation of AZ / EN / RU UI and support',
-            'Public pricing from {low} AZN/month',
-            'Room-time + bar/stock + shift in one flow',
-            'Not PS-only — karaoke/billiards/anticafe too',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'GameClub vs Heselo — comparison',
@@ -250,6 +259,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Console lounge landscape',
@@ -263,6 +273,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — AZ room-time panel',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Scenarios',
@@ -274,6 +285,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Baku club, AZ language: Heselo preferred',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Comparison checklist',
@@ -286,7 +298,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Do you need PC software — separate decision',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace GameClub?',
@@ -344,6 +356,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск GameClub (gameclub.work) подразумевает console-first lounge SaaS: сеансы, бронь, тарифы, бар, акции, смены и POS — PlayStation/Xbox как основной сценарий. Heselo близок к той же категории времени комнат: бронь, живые сеансы, касса и склад, с AZ/EN/RU и открытой ценой для Азербайджана. Это руководство честно сравнивает двух близких конкурентов; ни один не заменяет PC diskless (LANGAME/IZI).',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если азербайджанскому (и AZ/RU) клубу нужны время комнат, бронь, кассовые смены и склад в одной панели — Heselo подходит. Гейминг, караоке, бильярд, антикафе и лаунж — один контур.',
+          ],
+          bullets: [
+            'Ожидание UI и поддержки AZ / EN / RU',
+            'Открытая цена от {low} AZN/мес.',
+            'Время комнат + бар/склад + смена в одном потоке',
+            'Не только PS — также караоке/бильярд/антикафе',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: для какого рынка console lounge SaaS?',
           paragraphs: [
@@ -355,6 +381,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Только console lounge или ещё караоке/бильярд/антикафе?',
           ],
         },
+
         {
           id: 'when-gameclub-fits',
           title: 'Когда подходит GameClub?',
@@ -369,19 +396,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Караоке/антикафе вторичны',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если азербайджанскому (и AZ/RU) клубу нужны время комнат, бронь, кассовые смены и склад в одной панели — Heselo подходит. Гейминг, караоке, бильярд, антикафе и лаунж — один контур.',
-          ],
-          bullets: [
-            'Ожидание UI и поддержки AZ / EN / RU',
-            'Открытая цена от {low} AZN/мес.',
-            'Время комнат + бар/склад + смена в одном потоке',
-            'Не только PS — также караоке/бильярд/антикафе',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'GameClub и Heselo — сравнение',
@@ -406,6 +421,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт console lounge',
@@ -419,6 +435,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — панель времени комнат AZ',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Сценарии',
@@ -430,6 +447,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Клуб в Баку, язык AZ: предпочтителен Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист сравнения',
@@ -442,7 +460,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужен ли PC-софт — отдельное решение',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет GameClub?',

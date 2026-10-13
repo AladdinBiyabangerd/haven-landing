@@ -33,6 +33,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'IZI axtarışında PC internet klubu və stansiya kilidləmə gözlənilir: istifadəçi girişi, vaxt balansı, oyun profili. Heselo isə otaq və stansiya saatını bron, canlı sessiya və kassa növbəsi ilə idarə edir. Bu bələdçi IZI tipli workstation idarəetməsini otaq-vaxt paneli ilə müqayisə edir — Heselo PC kilidləmə və stansiya agentini əvəz etmir.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'PlayStation otağı, karaoke, bilyard masası və ya launj otağı vaxtla satılır, bron və kassa növbəsi lazımdırsa — Heselo uyğundur. Açıq zaldakı PC stansiyaları IZI-də qala bilər; otaq-vaxt Heselo-da.',
+            'Demo zamanı hansı resursların otaq modelində, hansılarının PC agent modelində qaldığını aydınlaşdırın.',
+          ],
+          bullets: [
+            'Otaq və ya stansiya saatı əsas gəlir',
+            'Bron → sessiya → uzadılma → kassa axını',
+            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
+            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: PC kilidləmə, yoxsa otaq-vaxt?',
           paragraphs: [
@@ -44,6 +59,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Resurs: açıq stansiya zalı, yoxsa ayrı otaqlar və PlayStation stansiyaları?',
           ],
         },
+
         {
           id: 'when-izi-fits',
           title: 'IZI (PC klub idarəetməsi) nə vaxt qalmalıdır?',
@@ -58,20 +74,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq saatı yoxdur və ya ikinci dərəcəlidir',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'PlayStation otağı, karaoke, bilyard masası və ya launj otağı vaxtla satılır, bron və kassa növbəsi lazımdırsa — Heselo uyğundur. Açıq zaldakı PC stansiyaları IZI-də qala bilər; otaq-vaxt Heselo-da.',
-            'Demo zamanı hansı resursların otaq modelində, hansılarının PC agent modelində qaldığını aydınlaşdırın.',
-          ],
-          bullets: [
-            'Otaq və ya stansiya saatı əsas gəlir',
-            'Bron → sessiya → uzadılma → kassa axını',
-            'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'IZI tipli PC idarəetmə və Heselo — müqayisə',
@@ -96,6 +99,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Oyun klubu bazar mənzərəsi (qısa)',
@@ -110,6 +114,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hibrid klub: IZI/LANGAME (PC zalı) + Heselo (otaqlar)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Klub ssenariləri',
@@ -121,6 +126,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Keçid: IZI-ni saxlayın; yalnız otaq resurslarını Heselo-ya gətirin',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Qərar yoxlama siyahısı',
@@ -135,7 +141,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'İşçilərə iki sistem rolunu izah edin',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo IZI-ni əvəz edir?',
@@ -194,6 +200,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for IZI expect PC internet café control: user login, time balance, game profiles. Heselo manages room and station hours with booking, live sessions and cash shifts. This guide compares IZI-style workstation control with a room-time panel — Heselo does not replace PC lock and station agents.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When PlayStation rooms, karaoke, billiards or lounge rooms are sold by time with booking and shift cash — Heselo fits. Open-hall PCs can stay on IZI; room-time on Heselo.',
+            'In a demo, clarify which resources use room model vs PC agent model.',
+          ],
+          bullets: [
+            'Room or station hours are main revenue',
+            'Book → session → extension → cash flow',
+            'Bar/snacks tied to session and stock',
+            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: PC lock or room-time?',
           paragraphs: [
@@ -205,6 +226,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Resources: open station hall, or separate rooms and PlayStation stations?',
           ],
         },
+
         {
           id: 'when-izi-fits',
           title: 'When should IZI (PC club control) stay?',
@@ -219,20 +241,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room hours absent or secondary',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When PlayStation rooms, karaoke, billiards or lounge rooms are sold by time with booking and shift cash — Heselo fits. Open-hall PCs can stay on IZI; room-time on Heselo.',
-            'In a demo, clarify which resources use room model vs PC agent model.',
-          ],
-          bullets: [
-            'Room or station hours are main revenue',
-            'Book → session → extension → cash flow',
-            'Bar/snacks tied to session and stock',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'IZI-style PC control vs Heselo — comparison',
@@ -255,6 +264,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Gaming club landscape (short)',
@@ -269,6 +279,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Hybrid club: IZI/LANGAME (PC hall) + Heselo (rooms)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Club scenarios',
@@ -280,6 +291,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Migration: keep IZI; move only room resources to Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Decision checklist',
@@ -292,7 +304,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Train staff on two-system roles',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace IZI?',
@@ -351,6 +363,21 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск IZI подразумевает управление PC-клубом: вход пользователя, баланс времени, игровые профили. Heselo ведёт часы комнат и станций через бронь, живые сеансы и кассовые смены. Это руководство сравнивает управление рабочими местами в духе IZI с панелью времени комнат — Heselo не заменяет блокировку PC и агент на станциях.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если комнаты PlayStation, караоке, бильярд или лаунж продаются по времени с бронью и кассовой сменой — Heselo подходит. PC в зале могут остаться на IZI; время комнат — в Heselo.',
+            'На демо разделите, какие ресурсы в модели комнаты, какие — в модели PC-агента.',
+          ],
+          bullets: [
+            'Часы комнаты или станции — основная выручка',
+            'Поток бронь → сеанс → продление → касса',
+            'Бар/закуски к сеансу и складу',
+            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: блокировка PC или время комнат?',
           paragraphs: [
@@ -362,6 +389,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Ресурсы: открытый зал станций или отдельные комнаты и PlayStation?',
           ],
         },
+
         {
           id: 'when-izi-fits',
           title: 'Когда оставить IZI (управление PC-клубом)?',
@@ -376,20 +404,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Часов комнат нет или они вторичны',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если комнаты PlayStation, караоке, бильярд или лаунж продаются по времени с бронью и кассовой сменой — Heselo подходит. PC в зале могут остаться на IZI; время комнат — в Heselo.',
-            'На демо разделите, какие ресурсы в модели комнаты, какие — в модели PC-агента.',
-          ],
-          bullets: [
-            'Часы комнаты или станции — основная выручка',
-            'Поток бронь → сеанс → продление → касса',
-            'Бар/закуски к сеансу и складу',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Управление PC в духе IZI и Heselo — сравнение',
@@ -414,6 +429,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт игрового клуба (кратко)',
@@ -428,6 +444,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Гибрид: IZI/LANGAME (PC-зал) + Heselo (комнаты)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Клубные сценарии',
@@ -439,6 +456,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Переход: оставьте IZI; перенесите только комнатные ресурсы в Heselo',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист решения',
@@ -453,7 +471,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Обучите персонал двум системам',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет IZI?',

@@ -32,6 +32,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Hasansoft ClubPlaystation axtarışında PS4/PS5 salonları üçün vaxt izləmə, hesab açma-bağlama, kassa və hesabat gözlənilir. Bu, sadə stansiya/kafe proqramı kateqoriyasıdır — kiçik həcmdə effektiv ola bilər. Bron təqvimi, çoxnövbəli kassa və anbar sessiyaya bağlananda boşluq yaranır. Bu bələdçi Hasansoft-u Heselo ilə müqayisə edir; taymer kifayət edəndə Hasansoft saxlamağı tövsiyə edirik. Kateqoriya bələdçisi: PlayStation kafe proqramı bələdçisi.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Heselo sizə nə verir?',
+          paragraphs: [
+            'Stansiya və otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbarı sessiyaya bağlanırsa — Heselo uyğundur.',
+          ],
+          bullets: [
+            'Otaq/stansiya təqvimi və bron',
+            'Canlı sessiya, uzadılma, tarif paketləri',
+            'Klub növbəsi + sessiya satışı + anbar',
+            'AZ / EN / RU, {low} AZN/aydan',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Əvvəlcə qərar: PS kafe proqramı, yoxsa klub paneli?',
           paragraphs: [
@@ -43,6 +57,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Yalnız açıq zal, yoxsa otaqlı təqvim?',
           ],
         },
+
         {
           id: 'when-hasansoft-fits',
           title: 'Hasansoft nə vaxt qalmalıdır?',
@@ -57,19 +72,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Büdcə lisenziya modelinə uyğundur',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Heselo nə vaxt uyğundur?',
-          paragraphs: [
-            'Stansiya və otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbarı sessiyaya bağlanırsa — Heselo uyğundur.',
-          ],
-          bullets: [
-            'Otaq/stansiya təqvimi və bron',
-            'Canlı sessiya, uzadılma, tarif paketləri',
-            'Klub növbəsi + sessiya satışı + anbar',
-            'AZ / EN / RU, {low} AZN/aydan',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Hasansoft və Heselo — müqayisə',
@@ -94,6 +97,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Qısa baxış',
@@ -107,6 +111,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — otaq-vaxt klub paneli (AZ)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Ssenarilər',
@@ -118,6 +123,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC + PS: IZI/LANGAME + Heselo və ya Hasansoft (yalnız PS)',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Keçid yoxlama siyahısı',
@@ -130,7 +136,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC ehtiyacı varsa IZI/LANGAME ayrı planlaşdırın',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo Hasansoft-u əvəz edir?',
@@ -187,6 +193,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Searches for Hasansoft ClubPlaystation expect time tracking, open/close accounts, cash and reports for PS4/PS5 halls. That is a simple station/café software category — effective at small scale. Gaps appear when booking calendars, multi-shift cash and stock attach to sessions. This guide compares Hasansoft with Heselo; keep Hasansoft when a timer is enough. Category guide: playstation-cafe-software-alternative.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'What does Heselo give you?',
+          paragraphs: [
+            'When station and room time is sold with booking, extensions are frequent, and shift cash plus snacks attach to sessions — Heselo fits.',
+          ],
+          bullets: [
+            'Room/station calendar and booking',
+            'Live session, extensions, rate packages',
+            'Club shift + session sales + stock',
+            'AZ / EN / RU, from {low} AZN/month',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Decide first: PS café software or club panel?',
           paragraphs: [
@@ -198,6 +218,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Open hall only, or a room calendar?',
           ],
         },
+
         {
           id: 'when-hasansoft-fits',
           title: 'When should Hasansoft stay?',
@@ -212,19 +233,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Budget fits a licence model',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'When does Heselo fit?',
-          paragraphs: [
-            'When station and room time is sold with booking, extensions are frequent, and shift cash plus snacks attach to sessions — Heselo fits.',
-          ],
-          bullets: [
-            'Room/station calendar and booking',
-            'Live session, extensions, rate packages',
-            'Club shift + session sales + stock',
-            'AZ / EN / RU, from {low} AZN/month',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Hasansoft vs Heselo — comparison',
@@ -249,6 +258,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Landscape (short)',
@@ -262,6 +272,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — room-time club panel (AZ)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Scenarios',
@@ -273,6 +284,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC + PS: IZI/LANGAME + Heselo, or Hasansoft for PS only',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Migration checklist',
@@ -285,7 +297,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Plan IZI/LANGAME separately if you need PC lock',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Does Heselo replace Hasansoft?',
@@ -342,6 +354,20 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Поиск Hasansoft ClubPlaystation подразумевает учёт времени, открытие/закрытие счетов, кассу и отчёты для залов PS4/PS5. Это категория простого ПО станций/кафе — на малом масштабе эффективна. Пробелы появляются, когда календарь брони, многосменная касса и склад привязаны к сеансам. Это руководство сравнивает Hasansoft с Heselo; оставьте Hasansoft, если хватает таймера. Категорийный гид: playstation-cafe-software-alternative.',
       sections: [
         {
+          id: 'when-heselo-fits',
+          title: 'Что даёт вам Heselo?',
+          paragraphs: [
+            'Если время станций и комнат продаётся с бронью, продления частые, а кассовая смена и закуски привязаны к сеансу — Heselo подходит.',
+          ],
+          bullets: [
+            'Календарь и бронь комнат/станций',
+            'Живой сеанс, продление, пакеты тарифов',
+            'Клубная смена + продажи в сеансе + склад',
+            'AZ / EN / RU, от {low} AZN/мес.',
+          ],
+        },
+
+        {
           id: 'decision',
           title: 'Сначала решение: ПО PS-кафе или клубная панель?',
           paragraphs: [
@@ -353,6 +379,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Только открытый зал или календарь комнат?',
           ],
         },
+
         {
           id: 'when-hasansoft-fits',
           title: 'Когда оставить Hasansoft?',
@@ -367,19 +394,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Бюджет подходит под лицензионную модель',
           ],
         },
-        {
-          id: 'when-heselo-fits',
-          title: 'Когда подходит Heselo?',
-          paragraphs: [
-            'Если время станций и комнат продаётся с бронью, продления частые, а кассовая смена и закуски привязаны к сеансу — Heselo подходит.',
-          ],
-          bullets: [
-            'Календарь и бронь комнат/станций',
-            'Живой сеанс, продление, пакеты тарифов',
-            'Клубная смена + продажи в сеансе + склад',
-            'AZ / EN / RU, от {low} AZN/мес.',
-          ],
-        },
+
         {
           id: 'comparison',
           title: 'Hasansoft и Heselo — сравнение',
@@ -404,6 +419,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             ],
           },
         },
+
         {
           id: 'landscape',
           title: 'Ландшафт (кратко)',
@@ -417,6 +433,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Heselo — клубная панель времени комнат (AZ)',
           ],
         },
+
         {
           id: 'scenarios',
           title: 'Сценарии',
@@ -428,6 +445,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'PC + PS: IZI/LANGAME + Heselo, или Hasansoft только для PS',
           ],
         },
+
         {
           id: 'how-to-switch',
           title: 'Чеклист перехода',
@@ -440,7 +458,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Нужна блокировка PC — отдельно IZI/LANGAME',
           ],
         },
-      ],
+          ],
       faq: [
         {
           q: 'Heselo заменяет Hasansoft?',
