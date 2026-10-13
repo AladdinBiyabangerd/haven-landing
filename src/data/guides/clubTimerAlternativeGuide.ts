@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Stansiya taymeri vs klub paneli — Club Timer alternativi',
       seoTitle: 'Club Timer alternativi — taymer vs Heselo klub paneli | Heselo',
       seoDescription:
-        'Club Timer internet və PlayStation klubları üçün stansiya vaxtı sayır; Heselo bron, sessiya və kassadır. Taymer kifayət edəndə saxlayın — cədvəl, FAQ — AZ, EN, RU.',
+        'Club Timer internet və PlayStation klubları üçün stansiya vaxtı sayır; Heselo bron, sessiya və kassadır. Taymer kifayət edəndə saxlayın Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'club timer alternativ',
         'club timer alternativi',
@@ -62,7 +62,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbar sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
+            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbarı sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
             'Demo zamanı öz stansiya/otaq sayınız və həftəsonu pikini yoxlayın.',
           ],
           bullets: [
@@ -90,7 +90,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Dillər', 'Tez-tez AZ', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
-                'Kiçik PS / internet kafe, taymer kifayət',
+                'Kiçik PS / internet kafe, taymer kifayət edəndə',
                 'Böyüyən klub, bron və kassa ehtiyacı',
               ],
             ],
@@ -169,9 +169,9 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           a: 'Bəli — elanlarda hər iki yazı eyni kateqoriya proqramı bildirir.',
         },
       ],
-      ctaTitle: 'PlayStation klub axınınızı Heseloda yoxlayın',
+      ctaTitle: 'PlayStation klub axınınızı Heselo-da yoxlayın',
       ctaBody:
-        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və anbar qalığını birlikdə sınayaq.',
+        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və anbarı birlikdə sınayaq.',
     },
     en: {
       shortTitle: 'Club Timer alternative',

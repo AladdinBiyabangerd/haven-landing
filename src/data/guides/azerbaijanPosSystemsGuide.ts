@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Azərbaycanda yerli POS sistemləri müqayisəsi — klub baxışı',
       seoTitle: 'Yerli POS sistemləri müqayisəsi (klublar üçün) | Heselo',
       seoDescription:
-        'iiko, Clopos, Dine, Fazilat POS, SmartPOS və Heselo: restoran, pərakəndə və otaq-vaxt klubları üçün dürüst müqayisə cədvəli — AZ, EN, RU.',
+        'iiko, Clopos, Dine, Fazilat POS, SmartPOS və Heselo: restoran, pərakəndə və otaq-vaxt klubları üçün dürüst müqayisə cədvəli Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'azerbaycan pos sistemleri',
         'yerli pos müqayisə',
@@ -61,7 +61,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və anbar qalığını bir paneldə birləşdirir — restoran POS-da bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
+            'PlayStation stansiyası, karaoke otağı, bilyard masası və ya antikafe yeri vaxtla satılırsa, Heselo rezervasiya, canlı sessiya, uzadılma, kassa növbəsi və anbarı bir paneldə birləşdirir — restoran POS-da bunu adətən əlavə cədvəl və ya taymerlə tamamlamaq lazım gəlir.',
           ],
           bullets: [
             'Əsas məhsul: otaq, konsol və ya masa saatı',

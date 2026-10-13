@@ -34,7 +34,7 @@ export const solutionsAz: SolutionCopy[] = [
       'bilyard idarəetmə sistemi',
     ],
     intro:
-      'Bilyard klubunda masa saatla işləyir: bron, cədvəl, canlı oyun, pauza və ödəniş bir-birinə bağlıdır. Bilyard idarəetmə sistemi cədvəli və canlı sessiyanı ayırmamalıdır — Heselo hər masanı ayrıca qurub eyni paneldə idarə edir.',
+      'Bilyard klubunda masa saatla işləyir: bron, cədvəl, canlı oyun, fasilə və ödəniş bir-birinə bağlıdır. Bilyard idarəetmə sistemi cədvəli və canlı sessiyanı ayırmamalıdır — Heselo hər masanı ayrıca qurub eyni paneldə idarə edir.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
       'Bilyard salonları, qarışıq launj + bilyard məkanları və masa/otaq rezervasiyası ilə vaxt üzrə ödəniş aparan klublar üçün.',
@@ -47,7 +47,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     howTitle: 'Bilyard klubunda necə işləyir?',
     howBody:
-      'Masaları və otaqları cədvəldə bron edirsiniz. Oyun başlayanda canlı izləmədə sessiya açılır; məhsul və ödəniş eyni yerdədir. Qiymət hesablaması masa növü və müddət qaydalarına görə işləyir. Kassa növbəni bağlayır.',
+      'Masaları və otaqları cədvəldə bron edirsiniz. Oyun başlayanda canlı zalda sessiya açılır; məhsul və ödəniş eyni yerdədir. Qiymət hesablaması masa növü və müddət qaydalarına görə işləyir. Kassa növbəni bağlayır.',
     featuresTitle: 'Bilyard üçün uyğun funksiyalar',
     features: [
       {
@@ -69,11 +69,11 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     differTitle: 'Sadəcə “saat sayğacı” deyil',
     differBody:
-      'Yalnız vaxt sayan alətlər rezervasiya, anbar və kassa sayımını həll etmir. Heselo bilyard satışlarını və hesablaşmalarını məkanın digər satışları ilə eyni növbə üzrə birləşdirir.',
+      'Yalnız vaxt sayan alətlər rezervasiya tarixçəsini, anbarı və kassa sayımını həll etmir. Heselo bilyard satışlarını və hesablaşmalarını məkanın digər satışları ilə eyni növbə üzrə birləşdirir — mətbəx/restoran POS-u deyil.',
     faq: [
       {
         q: 'Bilyard masaları ayrıca qurulur?',
-        a: 'Bəli. Hər masa və ya otaq ayrıca təyin olunur; cədvəl və canlı izləmə eyni məlumatı paylaşır.',
+        a: 'Bəli. Hər masa və ya otaq ayrıca təyin olunur; cədvəl və canlı zal eyni məlumatı paylaşır.',
       },
       {
         q: 'Otaq və masa eyni sistemdə ola bilər?',
@@ -115,7 +115,7 @@ export const solutionsAz: SolutionCopy[] = [
       'karaoke üçün dine alternativası',
     ],
     intro:
-      'Karaoke məkanında əsas vahid otaqdır: rezervasiya, sessiya müddəti, əlavə içki/yemək və ödəniş. Karaoke idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir. Restoran POS (Dine, Clopos) masa/QR üçündür — otaq-vaxt üçün bu iş prosesi daha uyğundur.',
+      'Karaoke məkanında əsas vahid otaqdır: rezervasiya, sessiya müddəti, əlavə içki və yemək və ödəniş. Karaoke idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir. Restoran POS (Dine, Clopos) masa və QR üçündür. Otaq-vaxt satan məkanlar üçün isə Heselo-nun iş prosesi daha uyğundur.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
       'Otaq əsaslı karaoke klubları, launj + karaoke və bir neçə otağı eyni cədvəldə idarə edən məkanlar üçün.',
@@ -128,7 +128,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     howTitle: 'Heselo karaoke məkanında necə kömək edir?',
     howBody:
-      'Otaqları cədvəldə bron edirsiniz. Qonaq gələndə sessiya canlı izləmədə açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür. Kassa növbə və hesabat ilə günü bağlayır.',
+      'Otaqları cədvəldə bron edirsiniz. Qonaq gələndə sessiya canlı zalda açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür. Kassa növbə və hesabat ilə günü bağlayır.',
     featuresTitle: 'Karaoke üçün əsas funksiyalar',
     features: [
       {
@@ -150,11 +150,11 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     differTitle: 'Yalnız bron forması kifayət etmir',
     differBody:
-      'Onlayn bron səhifəsi otaqda gedən işi idarə etmir. Heselo brondan ödənişə qədər eyni paneldə saxlayır — ofisiant və kassa eyni növbə və kassa qaydaları ilə işləyir.',
+      'Onlayn bron səhifəsi otaqda gedən işi idarə etmir. Heselo brondan ödənişə qədər bütün axını eyni paneldə saxlayır — zal komandası və kassa eyni növbə qaydaları ilə işləyir.',
     faq: [
       {
         q: 'Karaoke otaqları masa kimi qurulur?',
-        a: 'Otaqlar ayrıca qurulur; cədvəl və canlı izləmə otaq statusunu göstərir.',
+        a: 'Otaqlar ayrıca qurulur; cədvəl və canlı zal otaq statusunu göstərir.',
       },
       {
         q: 'Əvvəlcədən sifariş dəstəklənirmi?',
@@ -174,7 +174,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Karaoke, bilyard və launj eyni paneldə ola bilər?',
-        a: 'Bəli. Karaoke otaqları, bilyard masaları və launj otaqları eyni məkanda ayrıca qurulur, amma eyni cədvəli, canlı izləməni və kassa növbəsini paylaşır. Günün sonunda bütün zonaların satışı bir hesabatda görünür — ayrı proqramlar arasında məbləğ tutuşdurmaq lazım gəlmir.',
+        a: 'Bəli. Karaoke otaqları, bilyard masaları və launj otaqları eyni məkanda ayrıca qurulur, amma eyni cədvəli, canlı zalı və kassa növbəsini paylaşır. Günün sonunda bütün zonaların satışı bir hesabatda görünür — ayrı proqramlar arasında məbləğ tutuşdurmaq lazım gəlmir.',
       },
     ],
     related: ['reservations', 'lounge', 'gaming', 'pos'],
@@ -197,7 +197,7 @@ export const solutionsAz: SolutionCopy[] = [
       'playstation kafe proqramı',
     ],
     intro:
-      'Oyun və PS klublarında stansiya və ya masa saatla dolur; bron, canlı oyun və kassa eyni vaxtda işləyir. Oyun klubu idarəetmə sistemi stansiya cədvəlini canlı sessiya ilə birləşdirməlidir — lövhə və taymer kifayət etmir. iiko axtaranlar üçün qeyd: Heselo mətbəx POS-u deyil. Sadə PS taymer axtaranlar üçün isə otaq və stansiya vaxtı satışı burada bir yerdədir.',
+      'Oyun və PS klublarında stansiya və ya masa saatla işləyir; bron, canlı oyun və kassa eyni vaxtda gedir. Oyun klubu idarəetmə sistemi stansiya cədvəlini canlı sessiya ilə birləşdirməlidir — lövhə və taymer kifayət etmir. iiko axtaranlar üçün qeyd: Heselo mətbəx POS-u deyil. Sadə PS taymer axtaranlar üçün isə stansiya vaxtının satışı burada bir yerdədir.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
       'PlayStation klubları, konsol launjları, PC klubları və qarışıq oyun məkanları — stansiya/masa rezervasiyası, canlı sessiya və kassa lazım olan yerlər üçün.',
@@ -230,7 +230,7 @@ export const solutionsAz: SolutionCopy[] = [
         desc: 'Növbə, hesabat və qalıq izləmə.',
       },
     ],
-    differTitle: 'Yalnız sadə taymer proqramından fərqi',
+    differTitle: 'Sadə taymer proqramından fərqi',
     differBody:
       'Sadə taymer rezervasiya tarixçəsi, müştəri kartı, anbar və kassa sayımını vermir. Heselo klubun gündəlik rezervasiya, satış və kassa işlərini bir paneldə aparır.',
     faq: [
@@ -252,7 +252,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Excel və WhatsApp ilə müqayisədə nə dəyişir?',
-        a: 'Excel-də stansiya vaxtı sonradan yazılır, WhatsApp-da bron mesajlar arasında itir. Heselo-da bron cədvəldədir, oyun başlayanda canlı sessiya açılır, uzatma və qəlyanaltı eyni qeydə düşür. Növbə bağlananda kassa məbləği hazır olur — axşam cədvəlləri tutuşdurmaq lazım gəlmir.',
+        a: 'Excel-də stansiya vaxtı sonradan yazılır, WhatsApp-da bron mesajlar arasında itir. Heselo-da bron cədvəldədir, oyun başlayanda canlı sessiya açılır, uzatma və qəlyanaltı eyni qeydə düşür. Növbə bağlananda kassa məbləği hazır olur — axşam Excel cədvəllərini tutuşdurmaq lazım gəlmir.',
       },
       {
         q: 'PS klubu üçün qiymət nə qədərdir?',
@@ -269,7 +269,7 @@ export const solutionsAz: SolutionCopy[] = [
     h1: 'Antikafe idarəetmə sistemi',
     seoTitle: 'Antikafe idarəetmə sistemi və antikafe proqramı | Heselo',
     seoDescription:
-      'Antikafe proqramı: masa/otaq rezervasiyası, saatla ödəniş, canlı sessiya, kassa və anbar. Saat əsaslı məkanlar üçün — pulsuz demo.',
+      'Antikafe proqramı: masa və otaq rezervasiyası, saatla ödəniş, canlı sessiya, kassa və anbar. Saatla ödənişli məkanlar üçün — pulsuz demo.',
     keywords: [
       'antikafe idarəetmə sistemi',
       'antikafe proqramı',
@@ -286,7 +286,7 @@ export const solutionsAz: SolutionCopy[] = [
     problems: [
       'Hansı masa/otaq boşdur — resepsiya gecikir',
       'Saat bitəndə uzatma və ödəniş ayrı qeyd olunur',
-      'Bronsuz qonaq ilə bron eyni masada və ya otaqda toqquşur',
+      'Bronsuz gələn qonaq ilə bron olunmuş yer eyni masada və ya otaqda toqquşur',
       'Günün sonunda kassa ilə satış uyğun gəlmir',
     ],
     howTitle: 'Heselo antikafedə necə işləyir?',
@@ -367,7 +367,7 @@ export const solutionsAz: SolutionCopy[] = [
       'Otaqlı launjda əsas vahid otaqdır: rezervasiya, sessiya müddəti, içki/qəlyanaltı və ödəniş. Launj idarəetmə sistemi otaq cədvəlini canlı sessiya və kassa ilə birləşdirməlidir — telefon qeydləri və lövhə kifayət etmir.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'VIP otaqlı launjlar, saatla otaq satan klub-launjlar və karaoke/bilyard ilə qarışıq otaq məkanları üçün. Açıq zal yox, otaqla işləyən məkanlar üçün.',
+      'VIP otaqlı launjlar, saatla otaq satan klub-launjlar və karaoke/bilyard ilə qarışıq otaq məkanları üçündür. Açıq zal deyil, otaqla işləyən məkanlar üçündür.',
     problemsTitle: 'Otaqlı launjlarda tipik problemlər',
     problems: [
       'Otaq bronları mesajlarda itir',
@@ -377,7 +377,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     howTitle: 'Heselo otaqlı launjda necə işləyir?',
     howBody:
-      'Otaqları cədvəldə bron edirsiniz. Qonaq gələndə sessiya canlı izləmədə açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür. Kassa növbə və hesabat ilə günü bağlayır.',
+      'Otaqları cədvəldə bron edirsiniz. Qonaq gələndə sessiya canlı zalda açılır; məhsul və ödəniş eyni sessiyadadır. Bir neçə otaq eyni paneldə görünür. Kassa növbə və hesabat ilə günü bağlayır.',
     featuresTitle: 'Otaqlı launj üçün əsas funksiyalar',
     features: [
       {
@@ -403,7 +403,7 @@ export const solutionsAz: SolutionCopy[] = [
     faq: [
       {
         q: 'Launj otaqları karaoke otağı kimi qurulur?',
-        a: 'Bəli. Hər otaq ayrıca qurulur; cədvəl və canlı izləmə otaq statusunu göstərir.',
+        a: 'Bəli. Hər otaq ayrıca qurulur; cədvəl və canlı zal otaq statusunu göstərir.',
       },
       {
         q: 'Açıq zal və otaq eyni sistemdə ola bilər?',
@@ -415,7 +415,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Hansı launjlar üçün uyğun deyil?',
-        a: 'Otaq və ya masa vaxtı satmayan, yalnız açıq zalda ofisiant sifarişi ilə işləyən bar-restoran üçün restoran POS daha uyğundur. Heselo VIP otaqlı launjlar, saatla otaq satan klub-launjlar və karaoke/bilyard ilə qarışıq məkanlar üçündür — əsas olan otaq və vaxt olanda.',
+        a: 'Otaq və ya masa vaxtı satmayan, yalnız açıq zalda ofisiant sifarişi ilə işləyən bar-restoran üçün restoran POS daha uyğundur. Heselo VIP otaqlı launjlar, saatla otaq satan klub-launjlar və karaoke/bilyard ilə qarışıq məkanlar üçündür — otaq və vaxt əsas olanda.',
       },
       {
         q: 'Mətbəx üçün iiko-nu nə vaxt saxlamaq lazımdır?',
@@ -461,7 +461,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     howTitle: 'Heselo-da rezervasiya necə idarə olunur?',
     howBody:
-      'Cədvəl modulunda gün və həftə üzrə masaları, otaqları və stansiyaları görürsünüz. Rezervasiyalar siyahısında müştəri, vaxt, etiket, əvvəlcədən sifariş, ödəniş toplama, köçürmə və ləğv var. Qonaq gələndə eyni bron canlı sessiyaya keçir.',
+      'Cədvəl modulunda gün və həftə üzrə masaları, otaqları və stansiyaları görürsünüz. Rezervasiyalar siyahısında müştəri, vaxt, etiket, əvvəlcədən sifariş, depozit və ödəniş qəbulu, köçürmə və ləğv var. Qonaq gələndə eyni bron canlı sessiyaya keçir.',
     featuresTitle: 'Rezervasiya funksiyaları',
     features: [
       {
@@ -483,7 +483,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     differTitle: 'Niyə “sadəcə bron” kifayət etmir?',
     differBody:
-      'Bron aləti kassa və anbarı həll etmir. Heselo rezervasiyanı məkanın gündəlik işinə bağlayır — ona görə “rezervasiya sistemi” axtarışı ilə “məkan idarəetməsi” eyni məhsulda qarşılanır.',
+      'Bron aləti kassa və anbarı həll etmir. Heselo rezervasiyanı məkanın gündəlik işinə bağlayır — ona görə “rezervasiya sistemi” axtarışı ilə “məkan idarəetməsi” eyni məhsulda birləşir.',
     faq: [
       {
         q: 'Masa və otaq eyni rezervasiya sistemindədir?',
@@ -494,8 +494,8 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'Bəli. Keçmiş günə aid dəyişikliklər məkan qaydalarına görə qorunur.',
       },
       {
-        q: 'Onlayn bron vidcetindən nə ilə fərqlənir?',
-        a: 'Onlayn bron formu yalnız boş vaxtı seçdirir; qonaq gələndən sonra nə baş verdiyini bilmir. Heselo-da eyni bron canlı sessiyaya keçir, ödəniş, əvvəlcədən sifariş və müştəri tarixçəsi ilə bağlanır. Beləliklə cədvəl, zal və kassa eyni məlumatı görür — bron bir yerdə, ödəniş başqa yerdə qalmır.',
+        q: 'Onlayn bron formasından nə ilə fərqlənir?',
+        a: 'Onlayn bron forması yalnız boş vaxtı seçdirir; qonaq gələndən sonra nə baş verdiyini bilmir. Heselo-da eyni bron canlı sessiyaya keçir, ödəniş, əvvəlcədən sifariş və müştəri tarixçəsi ilə bağlanır. Beləliklə cədvəl, zal və kassa eyni məlumatı görür — bron bir yerdə, ödəniş başqa yerdə qalmır.',
       },
       {
         q: 'Telefon və WhatsApp bronları necə aparılır?',
@@ -543,7 +543,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     howTitle: 'Heselo-da kassa necə işləyir?',
     howBody:
-      'Növbəni açırsınız, əməliyyatları yazırsınız, kassa hesabatına baxırsınız və kassa sayımı ilə bağlayırsınız. Canlı izləmədəki ödənişlər eyni gün və növbə qaydaları ilə gedir. Bağlanmış günlərin tarixçəsi saxlanılır.',
+      'Növbəni açırsınız, əməliyyatları yazırsınız, kassa hesabatına baxırsınız və kassa sayımı ilə bağlayırsınız. Canlı zaldakı ödənişlər eyni gün və növbə qaydaları ilə gedir. Bağlanmış günlərin tarixçəsi saxlanılır.',
     featuresTitle: 'Kassa funksiyaları',
     features: [
       {
@@ -623,7 +623,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     howTitle: 'Heselo-da anbar necə idarə olunur?',
     howBody:
-      'Məhsul kataloqu qiymətləri saxlayır. Anbar qalıqları və sayım jurnalları eyni siyahıdadır. Canlı sessiyada və sürətli satışda məhsul əlavə olunanda eyni kataloq işləyir. Statistika anbar kəsmlərini göstərir.',
+      'Məhsul kataloqu qiymətləri saxlayır. Anbar qalıqları və sayım jurnalları eyni siyahıdadır. Canlı sessiyada və sürətli satışda məhsul əlavə olunanda eyni kataloq işləyir. Statistika anbar üzrə göstəriciləri göstərir.',
     featuresTitle: 'Anbar funksiyaları',
     features: [
       {
@@ -643,7 +643,7 @@ export const solutionsAz: SolutionCopy[] = [
         desc: 'Bron olmadan satış — eyni məhsul siyahısı.',
       },
     ],
-    differTitle: 'Ayrı anbar Excel-indən fərqi',
+    differTitle: 'Ayrıca Excel anbarından fərqi',
     differBody:
       'Excel günün axşamı doldurulur; Heselo satış anında eyni məlumatı istifadə edir. Anbar rezervasiya və kassadan ayrılmır.',
     faq: [
@@ -653,7 +653,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Statistikada anbar varmı?',
-        a: 'Bəli. Anbar statistikası icmal və kəsmlər üçün mövcuddur.',
+        a: 'Bəli. Anbar statistikası icmal və göstəricilər üçün mövcuddur.',
       },
       {
         q: 'Hansı məkanlar üçün uyğundur, hansılar üçün yox?',
@@ -665,7 +665,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Bronsuz satış da anbardan çıxılır?',
-        a: 'Bəli. Sürətli satış bron olmadan aparılır, amma canlı sessiya ilə eyni məhsul kataloqunu istifadə edir. Qonaq yalnız içki və ya qəlyanaltı alanda da satış kassaya yazılır və qalıq yenilənir — “satış var, anbarda yoxdur” vəziyyəti yaranmır.',
+        a: 'Bəli. Sürətli satış bron olmadan aparılır, amma canlı sessiya ilə eyni məhsul kataloqunu istifadə edir. Qonaq yalnız içki və ya qəlyanaltı alanda da satış kassaya yazılır və qalıq yenilənir — “satış var, qalıq yenilənmir” vəziyyəti yaranmır.',
       },
       {
         q: 'Qiymət harada göstərilib?',

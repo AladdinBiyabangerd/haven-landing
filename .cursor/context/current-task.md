@@ -1,23 +1,19 @@
-# Current task — AZ translation audit (heselo-landing)
+# Current task — AZ broken sentence pass 2
 
 ## Completed
 
-1. Glossary locked (rezervasiya/bron; anbar≠stok; sessiya≠seans; canlı zal≠mərtəbə)
-2. Critical meaning: messages CTAs, karaoke month claim, eeat, audiences/seo/about grammar, pain/demoPromise
-3. messages/az.ts medium pass (Custom→Fərdi, rezerv→bron/rezervasiya, SEO, founder, etc.)
-4. solutions/az.ts (hub h1, timer, oturur→ödəyir, moduldu, demo-su, Lounge→Launj, …)
-5. Legal AZ: privacyPolicy + termsOfUse (direktor/administrator, canlı zal, ~~strike~~)
-6. Guides template replace (~292 + polish) across alternative guides
-7. GameClub / CafeSynk / Hasansoft AZ rewrite polish
+1. Critical: bazaMarket (`qalığınınu`, `stokdan`, table cell), pain.before, Timer, karaoke differBody
+2. Batch: `Heseloda`→`Heselo-da`, `canlı izləmə`→`canlı zal`, Fərdi statistika verbs
+3. Messages + solutions medium (grammar, SEO fragments, vidcet/formu, Excel sense, etc.)
+4. Guides polish: EN leftovers, SEO telegraphic, slug prose; fixed `edəndə edəndə` and lounge slug regressions
 
 ## Remaining
 
-- Optional: deeper polish of remaining EN loanwords in other alternative guides (iiko template already mostly replaced)
-- space-booking-ui admin panel AZ audit — out of scope for this landing workspace
+- Optional deeper SEO sentence rewrite for remaining template-ish AZ descriptions
+- space-booking-ui AZ audit still out of scope
 
 ## Relevant files
 
 - `src/i18n/messages/az.ts`
 - `src/data/solutions/az.ts`
-- `src/content/privacyPolicy.ts`, `termsOfUse.ts`
-- `src/data/guides/*AlternativeGuide.ts`, `az.ts`
+- `src/data/guides/*` (AZ blocks)

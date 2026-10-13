@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Restoran POS vs karaoke otaq sistemi — hansını seçmək olar?',
       seoTitle: 'Restoran POS vs karaoke sistemi — otaq, sessiya | Heselo',
       seoDescription:
-        'Karaoke klubu restoran kassası ilə idarə olunurmu? Restoran POS və otaq-vaxt/karaoke sistemi müqayisəsi, cədvəl, bazar mənzərəsi — AZ, EN, RU.',
+        'Karaoke klubu restoran kassası ilə idarə olunurmu? Restoran POS və otaq-vaxt/karaoke sistemi müqayisəsi, cədvəl, bazar mənzərəsi Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'restoran POS karaoke',
         'karaoke rezervasiya sistemi',
@@ -170,7 +170,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           a: 'Otaq saatı eyni modeldirsə — eyni otaq-vaxt paneli uyğundur. Launjda ağır restoran prosesi varsa, restoran POS paralel qala bilər.',
         },
       ],
-      ctaTitle: 'Karaoke otaq axınınızı Heseloda yoxlayın',
+      ctaTitle: 'Karaoke otaq axınınızı Heselo-da yoxlayın',
       ctaBody:
         'Demo istəyin: otaqlarınızı və tariflərinizi nümunə kimi qurub rezervasiya, canlı sessiya və kassa növbəsini birlikdə sınayaq.',
     },

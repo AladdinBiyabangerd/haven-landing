@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Sadə taymer vs klub paneli — PlayStation kafe proqramı',
       seoTitle: 'PlayStation kafe proqramı alternativi — taymer vs Heselo | Heselo',
       seoDescription:
-        'Hasansoft tipli stansiya taymeri vs Heselo klub paneli. Sadə taymer nə vaxt kifayətdir, nə vaxt bron və kassa lazımdır — cədvəl, FAQ — AZ, EN, RU.',
+        'Hasansoft tipli stansiya taymeri vs Heselo klub paneli. Sadə taymer nə vaxt kifayətdir, nə vaxt bron və kassa lazımdır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'playstation kafe proqramı',
         'playstation klub proqramı',
@@ -62,7 +62,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbar sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
+            'Stansiya və ya otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbarı sessiyaya bağlanırsa, klub paneli lazımdır. Heselo rezervasiyanı canlı sessiyaya, tarifə və kassa növbəsinə gətirir.',
             'Demo zamanı öz stansiya/otaq sayınız və həftəsonu pikini yoxlayın.',
           ],
           bullets: [
@@ -90,7 +90,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Dillər', 'Tez-tez AZ', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
-                'Kiçik PS kafe, taymer kifayət',
+                'Kiçik PS kafe, taymer kifayət edəndə',
                 'Böyüyən klub, bron və kassa ehtiyacı',
               ],
             ],
@@ -138,7 +138,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       ],
       faq: [
         {
-          q: 'Sadə taymer kifayət edirmi?',
+          q: 'Sadə taymer kifayət edəndə edirmi?',
           a: 'Kiçik PlayStation kafesində, bron olmadan və sadə kassada — çox vaxt bəli. Bron, növbə kassası və anbar kritikdirsə — klub panelinə baxın.',
         },
         {
@@ -170,9 +170,9 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           a: 'Otaq saatı və bron mərkəzdədirsə Heselo uyğundur; açıq zal stansiyaları üçün taymer paralel qala bilər.',
         },
       ],
-      ctaTitle: 'PlayStation klub axınınızı Heseloda yoxlayın',
+      ctaTitle: 'PlayStation klub axınınızı Heselo-da yoxlayın',
       ctaBody:
-        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və anbar qalığını birlikdə sınayaq.',
+        'Demo istəyin: stansiya və otaqlarınızı nümunə kimi qurub rezervasiya, sessiya, kassa və anbarı birlikdə sınayaq.',
     },
     en: {
       shortTitle: 'PlayStation café software alternative',

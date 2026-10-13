@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Klub əməliyyatları üçün Baza Market alternativi',
       seoTitle: 'Baza Market alternativi — klub paneli Heselo (marketplace deyil)',
       seoDescription:
-        'Baza Market ticarət/kataloq yönümlüdür; Heselo daxili klub panelidir. Müqayisə cədvəli, bazar mənzərəsi, FAQ — karaoke, oyun klubları — AZ, EN, RU.',
+        'Baza Market ticarət/kataloq yönümlüdür; Heselo daxili klub panelidir. Müqayisə cədvəli, bazar mənzərəsi, FAQ — karaoke, oyun klubları Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'baza market alternativ',
         'baza market müqayisə',
@@ -28,7 +28,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'Baza Market adı ilə tanınan həllər daha çox məhsul satışı, kataloq, mağaza və ya marketplace istiqamətində işləyir. Heselo marketplace deyil: bu, məkanın öz otaqlarını, rezervasiyalarını, canlı sessiyalarını, kassa növbəsini və anbar qalığınınu idarə edən daxili klub panelidir.',
+        'Baza Market adı ilə tanınan həllər daha çox məhsul satışı, kataloq, mağaza və ya marketplace istiqamətində işləyir. Heselo marketplace deyil: bu, məkanın öz otaqlarını, rezervasiyalarını, canlı sessiyalarını, kassa növbəsini və anbar qalığını idarə edən daxili klub panelidir.',
       sections: [
         {
           id: 'decision',
@@ -47,7 +47,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Baza Market nə vaxt qalmalıdır?',
           paragraphs: [
             'Məqsədiniz məhsul kataloqu yaratmaq, onlayn və ya mağazada mal satmaq, anbar və təchizatçı ilə işləməkdirsə, Baza Market kimi ticarət yönümlü həll daha uyğun ola bilər.',
-            'Heselo bu ssenari üçün qurulmayıb — o, daxili klub əməliyyatlarına fokuslanır, açıq marketplace və ya multi-satıcı model deyil.',
+            'Heselo bu ssenari üçün qurulmayıb — o, daxili klub əməliyyatlarına fokuslanır, açıq marketplace və ya çoxsatıcılı model deyil.',
           ],
           bullets: [
             'Kataloq, qiymət və satış kanalları mərkəzdədir',
@@ -60,7 +60,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Karaoke otağı, PlayStation stansiyası, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı sessiyaya çevirir, vaxt tarifini hesablayır və sessiyaya əlavə olunan içki-qəlyanaltını stokdan silir.',
+            'Karaoke otağı, PlayStation stansiyası, bilyard masası və ya launj otağı vaxtla satılırsa, Heselo rezervasiyanı sessiyaya çevirir, vaxt tarifini hesablayır və sessiyaya əlavə olunan içki-qəlyanaltını anbardan silir.',
             'Bar satışı sessiyaya bağlanır; bu, e-ticarət kataloqu ilə eyni şey deyil. Demo zamanı yalnız klub otaqlarını və tarifləri qurub bir növbəni sınayın.',
           ],
           bullets: [
@@ -83,7 +83,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Marketplace', 'Ticarət/marketplace yönü', 'Daxili klub paneli, marketplace deyil'],
               ['Rezervasiya', 'Satış/kataloq axınına uyğun', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Adətən tətbiq olunmur', 'Canlı sessiya, uzadılma, tarif'],
-              ['Anbar', 'Ticarət anbarı və təchizat', 'Klub anbar qalığını, sessiyaya satış'],
+              ['Anbar', 'Ticarət anbarı və təchizat', 'Klub anbar qalığı və sessiyaya satış'],
               ['Kassa', 'Satış və komissiya prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Brenddən aktual təklif', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'Provayderdən asılı', 'AZ, EN, RU'],

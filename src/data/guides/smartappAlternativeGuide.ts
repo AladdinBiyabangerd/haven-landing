@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Restoran+gaming platform vs otaq-vaxt — SmartApp alternativi',
       seoTitle: 'SmartApp.az alternativi — platform vs Heselo klub paneli | Heselo',
       seoDescription:
-        'SmartApp.az restoran POS, QR menyu və gaming hall tarifləridir; Heselo otaq-vaxt, bron və kassaya fokuslanır — cədvəl, FAQ — AZ, EN, RU.',
+        'SmartApp.az restoran POS, QR menyu və gaming hall tarifləridir; Heselo otaq-vaxt, bron və kassaya fokuslanır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'smartapp alternativ',
         'smartapp.az alternativ',
@@ -39,7 +39,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Əsas ehtiyac: restoran POS + QR, yoxsa otaq bronu və sessiya?',
-            'Gaming: modul, yoxsa əsas biznes modeli?',
+            'Oyun: modul, yoxsa əsas biznes modeli?',
             'Qiymət: paket abunə, yoxsa açıq klub tarifi?',
           ],
         },
@@ -52,7 +52,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'POS, QR menyu və restoran axını əsasdır',
-            'Gaming hall tarifləri əlavə modul kimi işləyir',
+            'Oyun zalı tarifləri əlavə modul kimi işləyir',
             'Çoxfilial və loyalty lazımdır',
             'Otaq-vaxt ikinci dərəcəlidir',
           ],
@@ -82,7 +82,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Əsas fokus', 'Restoran platforması + gaming hall', 'Otaq/stansiya vaxtı + klub əməliyyatı'],
               ['QR / loyalty', 'Platformada güclü', 'Əsas fokus deyil'],
               ['Rezervasiya', 'Platforma asılı', 'Otaq və stansiya təqvimi'],
-              ['Vaxt hesabı', 'Gaming hall tarif/depozit', 'Canlı sessiya, uzadılma, tarif'],
+              ['Vaxt hesabı', 'Oyun zalı tarif/depozit', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'POS prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Paket abunə (sayt)', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'AZ fokus', 'AZ, EN, RU'],
@@ -98,11 +98,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'landscape',
           title: 'Qısa baxış',
           paragraphs: [
-            'SmartApp və Təndir yerli geniş platformalardır. Taymerlər (Club Timer, Hasansoft) və console SaaS (GameClub) ayrı kateqoriyadır.',
+            'SmartApp və Təndir yerli geniş platformalardır. Taymerlər (Club Timer, Hasansoft) və konsol SaaS (GameClub) ayrı kateqoriyadır.',
           ],
           bullets: [
             'SmartApp.az / Təndir — AZ all-in-one',
-            'GameClub — konsola üstünlük verən lounge',
+            'GameClub — konsola üstünlük verən launj',
             'Club Timer — sadə taymer',
             'Heselo — otaq-vaxt paneli',
           ],
@@ -121,7 +121,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         {
           id: 'how-to-switch',
           title: 'Qərar yoxlama siyahısı',
-          paragraphs: ['Gaming modulunu otaq paneli ilə qarışdırmayın — ehtiyacı ölçün.'],
+          paragraphs: ['Oyun modulunu otaq paneli ilə qarışdırmayın — ehtiyacı ölçün.'],
           bullets: [
             'Otaq saatı gəlirinin payı',
             'QR/loyalty olmadan işləyə bilərsinizmi',
@@ -165,7 +165,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           a: 'Otaq resurslarını qurub sessiya axınını yoxlayın.',
         },
       ],
-      ctaTitle: 'Otaq-vaxt fokusunu Heseloda yoxlayın',
+      ctaTitle: 'Otaq-vaxt fokusunu Heselo-da yoxlayın',
       ctaBody:
         'Demo istəyin: otaq və stansiyaları nümunə kimi qurub bron, sessiya və kassa növbəsini sınayaq.',
     },

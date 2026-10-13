@@ -115,7 +115,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             '3–12 PS5 kabinli launj: GameClub və ya Heselo demosu',
             'PS + karaoke otaqları: Heselo (çox tip)',
             '50+ PC diskless: LANGAME/IZI; GameClub/Heselo əlavə',
-            'Bakı klub, AZ dil: Heselo üstünlük',
+            'Bakı klubu, AZ dildə: Heselo üstünlükdür',
           ],
         },
         {
@@ -154,7 +154,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'CafeSynk / PsTally?',
-          a: 'Oxşar launj SaaS bazar mənzərəsi; cafesynk-alternative və bazar mənzərəsi qeydlərinə baxın.',
+          a: 'Oxşar launj SaaS bazar mənzərəsi; CafeSynk alternativ bələdçisi və bazar mənzərəsi qeydlərinə baxın.',
         },
         {
           q: 'Hər ikisi bir yerdə?',

@@ -112,10 +112,10 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           title: 'Ssenarilər',
           paragraphs: ['Kateqoriya yaxındır — demo ilə seçin.'],
           bullets: [
-            'Yalnız PS/Xbox launj, ingilis dil: CafeSynk/GameClub demosu',
-            'Bakı, AZ dil, çox tip otaq: Heselo',
+            'Yalnız PS/Xbox launj, ingilis dildə: CafeSynk/GameClub demosu',
+            'Bakı, AZ dildə, çox tip otaq: Heselo',
             'PC + konsol: IZI/LANGAME + launj paneli',
-            'Sadə taymer kifayət: Club Timer kateqoriyası',
+            'Sadə taymer kifayət edəndə: Club Timer kateqoriyası',
           ],
         },
         {
@@ -150,7 +150,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'GameClub ilə fərqi?',
-          a: 'Hər ikisi konsol launj SaaS-ə yaxındır; gameclub-alternative bələdçisinə baxın.',
+          a: 'Hər ikisi konsol launj SaaS-ə yaxındır; GameClub alternativ bələdçisi bələdçisinə baxın.',
         },
         {
           q: 'PC kilidləmə?',

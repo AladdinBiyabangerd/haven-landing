@@ -244,8 +244,8 @@ export const guidesAz: GuideCopy[] = [
         a: 'Bəli. Hər ikisi ayrıca resurs kimi qurulur və eyni cədvəldə idarə edilə bilər.',
       },
       {
-        q: 'Yalnız taymer kifayətdirmi?',
-        a: 'Əgər yalnız vaxtı izləmək lazımdırsa, taymer kifayət edə bilər. Rezervasiya, satış və kassa da eyni prosesdə lazımdırsa, daha geniş idarəetmə sistemi tələb olunur.',
+        q: 'Yalnız taymer kifayət edəndədirmi?',
+        a: 'Əgər yalnız vaxtı izləmək lazımdırsa, taymer kifayət edəndə edə bilər. Rezervasiya, satış və kassa da eyni prosesdə lazımdırsa, daha geniş idarəetmə sistemi tələb olunur.',
       },
       {
         q: 'Fərqli masaların fərqli qiyməti ola bilər?',
@@ -323,7 +323,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Launj bar proqramı axtarıram. Bu həll uyğundur?',
-        a: 'Bu yazı otaqlı launj prosesini izah edir. Launj bar idarəetmə proqramı (məhsul) axtarırsınızsa — otaqlı launj həll səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı və kassa bir paneldə; Kiçik plan {lounge} AZN/aydan.',
+        a: 'Bu yazı otaqlı launj prosesini izah edir. Launj bar idarəetmə proqramı (məhsul) axtarırsınızsa — otaqlı launj həll səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı və kassa bir paneldə; Kiçik plan {launj} AZN/aydan.',
       },
       {
         q: 'Otaqdan kənar bar satışı da eyni kassadan keçə bilər?',
@@ -479,14 +479,14 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         id: 'console',
-        title: 'PS klub və console club arasında fərq varmı?',
+        title: 'PS klub və konsol klubu arasında fərq varmı?',
         paragraphs: [
           'Axtarış baxımından fərqli ifadələr işlədilsə də, ehtiyac çox vaxt eynidir: konsol stansiyalarını rezervasiya etmək və aktiv sessiyaları idarə etmək. Proqramın konkret cihaz növündən çox, müxtəlif stansiyaları necə idarə etdiyi vacibdir.',
         ],
       },
       {
         id: 'timer',
-        title: 'Yalnız taymer kifayət edirmi?',
+        title: 'Yalnız taymer kifayət edəndə edirmi?',
         paragraphs: [
           'Əgər məqsəd yalnız oyun vaxtını izləməkdirsə, bəli. Amma bron, satış, müştəri tarixçəsi və kassa da lazımdırsa, taymer bunları ayrıca həll etməyəcək.',
         ],

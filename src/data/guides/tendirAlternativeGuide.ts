@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'HoReCa+gaming ekosistem vs otaq-vaxt paneli — Təndir',
       seoTitle: 'Təndir alternativi — restoran/gaming vs Heselo klub paneli | Heselo',
       seoDescription:
-        'Təndir restoran, kafe və oyun klubları üçün geniş idarəetmə ekosistemidir; Heselo otaq-vaxt, bron və kassaya fokuslanır — cədvəl, FAQ — AZ, EN, RU.',
+        'Təndir restoran, kafe və oyun klubları üçün geniş idarəetmə ekosistemidir; Heselo otaq-vaxt, bron və kassaya fokuslanır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'təndir alternativ',
         'tendir alternativ',
@@ -52,7 +52,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Mətbəx, KDS və restoran zalı mərkəzdədir',
-            'Gaming əlavə və ya qarışıq gəlirdir',
+            'Oyun əlavə və ya qarışıq gəlirdir',
             'Geniş platforma və ödəniş inteqrasiyası lazımdır',
             'Otaq-vaxt ikinci dərəcəlidir',
           ],
@@ -82,7 +82,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Əsas fokus', 'Restoran/kafe + gaming ekosistem', 'Otaq/stansiya vaxtı + klub əməliyyatı'],
               ['Mətbəx / KDS', 'Ekosistemdə nəzərdə tutula bilər', 'Əvəz etmir'],
               ['Rezervasiya', 'Platformadan asılı', 'Otaq və stansiya təqvimi'],
-              ['Vaxt hesabı', 'Gaming alətləri (platforma)', 'Canlı sessiya, uzadılma, tarif'],
+              ['Vaxt hesabı', 'Oyun alətləri (platforma)', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'POS / ödəniş prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Qiymət', 'Sorğu ilə', 'Açıq: {low} AZN/aydan'],
               ['Dillər', 'AZ fokus', 'AZ, EN, RU'],
@@ -138,7 +138,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Təndir PS klub üçündürmü?',
-          a: 'Gaming alətləri reklam olunur; məhsul restoran/kafe genişliyindədir. Otaq-vaxt əsasdırsa ayrıca paneli yoxlayın.',
+          a: 'Oyun alətləri reklam olunur; məhsul restoran/kafe genişliyindədir. Otaq-vaxt əsasdırsa ayrıca paneli yoxlayın.',
         },
         {
           q: 'Heselo qiyməti?',
@@ -158,14 +158,14 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'SmartApp ilə fərqi?',
-          a: 'Hər ikisi yerli geniş platformadır; ayrı bələdçi: smartapp-alternative.',
+          a: 'Hər ikisi yerli geniş platformadır; ayrı bələdçi: SmartApp alternativ bələdçisi.',
         },
         {
           q: 'Demo necə keçirilir?',
           a: 'Otaq resurslarınızı qurub sessiya axınını yoxlayın.',
         },
       ],
-      ctaTitle: 'Otaq-vaxt fokusunu Heseloda yoxlayın',
+      ctaTitle: 'Otaq-vaxt fokusunu Heselo-da yoxlayın',
       ctaBody:
         'Demo istəyin: otaq və stansiyaları nümunə kimi qurub bron, sessiya və kassa növbəsini sınayaq — mətbəx sistemi ayrı qala bilər.',
     },

@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaq-vaxt klubları üçün Kassa.az brendi alternativi',
       seoTitle: 'Kassa.az alternativi — otaq-vaxt klubları | Heselo (Kassa.az deyil)',
       seoDescription:
-        'Kassa.az brendinin kassa həlli ilə Heselo müqayisəsi: ümumi satış proqramı yoxsa oyun klubları üçün rezervasiya və vaxt sessiyası. Cədvəl, bazar mənzərəsi, FAQ — AZ, EN, RU.',
+        'Kassa.az brendinin kassa həlli ilə Heselo müqayisəsi: ümumi satış proqramı yoxsa oyun klubları üçün rezervasiya və vaxt sessiyası. Cədvəl, bazar mənzərəsi, FAQ Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'kassa.az alternativ',
         'kassa az alternativi',
@@ -54,7 +54,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Mağaza və ya xidmət nöqtəsində çek və məhsul satışı əsas axındır',
             'Gündəlik kassa hesabatı və satış qeydləri mərkəzdədir',
             'Otaq vaxtı ikinci dərəcəlidir və ya ümumiyyətlə yoxdur',
-            'Vaxt üçün ayrıca Excel/taymer kifayət edir',
+            'Vaxt üçün ayrıca Excel/taymer kifayət edəndə edir',
           ],
         },
         {

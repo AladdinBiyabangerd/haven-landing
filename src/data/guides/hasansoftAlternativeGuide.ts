@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'PlayStation kafe proqramı vs klub paneli — Hasansoft',
       seoTitle: 'Hasansoft alternativi — PS kafe proqramı vs Heselo | Heselo',
       seoDescription:
-        'Hasansoft ClubPlaystation PS4/PS5 vaxt, kassa və hesabatdır; Heselo bron, canlı sessiya və klub növbəsidir — cədvəl, FAQ — AZ, EN, RU.',
+        'Hasansoft ClubPlaystation PS4/PS5 vaxt, kassa və hesabatdır; Heselo bron, canlı sessiya və klub növbəsidir Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'hasansoft alternativ',
         'hasansoft alternativi',
@@ -29,7 +29,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'Hasansoft ClubPlaystation axtarışında PS4/PS5 salonları üçün vaxt izləmə, hesab açma-bağlama, kassa və hesabat gözlənilir. Bu, sadə stansiya/kafe proqramı kateqoriyasıdır — kiçik həcmdə effektiv ola bilər. Bron təqvimi, çoxnövbəli kassa və anbar sessiyaya bağlananda boşluq yaranır. Bu bələdçi Hasansoft-u Heselo ilə müqayisə edir; taymer kifayət edəndə Hasansoft saxlamağı tövsiyə edirik. Kateqoriya bələdçisi: playstation-cafe-software-alternative.',
+        'Hasansoft ClubPlaystation axtarışında PS4/PS5 salonları üçün vaxt izləmə, hesab açma-bağlama, kassa və hesabat gözlənilir. Bu, sadə stansiya/kafe proqramı kateqoriyasıdır — kiçik həcmdə effektiv ola bilər. Bron təqvimi, çoxnövbəli kassa və anbar sessiyaya bağlananda boşluq yaranır. Bu bələdçi Hasansoft-u Heselo ilə müqayisə edir; taymer kifayət edəndə Hasansoft saxlamağı tövsiyə edirik. Kateqoriya bələdçisi: PlayStation kafe proqramı bələdçisi.',
       sections: [
         {
           id: 'decision',
@@ -61,7 +61,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'when-heselo-fits',
           title: 'Heselo nə vaxt uyğundur?',
           paragraphs: [
-            'Stansiya və otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbar sessiyaya bağlanırsa — Heselo uyğundur.',
+            'Stansiya və otaq vaxtı bronla satılır, uzadılma tez-tez olur, kassa növbəsi və qəlyanaltı anbarı sessiyaya bağlanırsa — Heselo uyğundur.',
           ],
           bullets: [
             'Otaq/stansiya təqvimi və bron',
@@ -154,7 +154,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Kateqoriya bələdçisi haradadır?',
-          a: 'Ümumi taymer vs panel: playstation-cafe-software-alternative səhifəsi.',
+          a: 'Ümumi taymer vs panel: PlayStation kafe proqramı bələdçisi səhifəsi.',
         },
         {
           q: 'Hər ikisi bir yerdə?',

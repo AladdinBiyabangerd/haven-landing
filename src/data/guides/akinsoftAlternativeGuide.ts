@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Kafe/PS server vs otaq-vaxt — Akinsoft alternativi',
       seoTitle: 'Akinsoft alternativi — CafePlus vs Heselo klub paneli | Heselo',
       seoDescription:
-        'Akinsoft CafePlus internet kafe və PlayStation salonu üçün masa/konsol izləmədir; Heselo otaq-vaxt, bron və kassadır — cədvəl, FAQ — AZ, EN, RU.',
+        'Akinsoft CafePlus internet kafe və PlayStation salonu üçün masa/konsol izləmədir; Heselo otaq-vaxt, bron və kassadır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'akinsoft alternativ',
         'akinsoft cafeplus alternativ',
@@ -113,7 +113,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           paragraphs: ['Eyni «PS klub» adı fərqli sistem tələb edir.'],
           bullets: [
             'Internet kafe + bir neçə PS: Akinsoft/CafePlus yetə bilər',
-            'Otaqlı PS lounge + bron: Heselo',
+            'Otaqlı PS launj + bron: Heselo',
             'PC zalı + otaqlar: IZI/LANGAME + Heselo hibrid',
             'Keçid: Akinsoft-u dərhal silməyin — otaq axınını demoda yoxlayın',
           ],
@@ -165,7 +165,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           a: 'Otaq/stansiya siyahınızı qurub sessiya və kassa axınını yoxlayın.',
         },
       ],
-      ctaTitle: 'Otaq-vaxt ehtiyacınızı Heseloda yoxlayın',
+      ctaTitle: 'Otaq-vaxt ehtiyacınızı Heselo-da yoxlayın',
       ctaBody:
         'Demo istəyin: otaq və stansiyaları nümunə kimi qurub bron, sessiya və kassa növbəsini sınayaq.',
     },
