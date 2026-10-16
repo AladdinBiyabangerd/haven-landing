@@ -10,6 +10,13 @@ interface ImportMetaEnv {
   readonly PUBLIC_HESELO_GA4_ID?: string
   /** Microsoft Clarity project id; set empty string to disable */
   readonly PUBLIC_HESELO_CLARITY_ID?: string
+  /** Yandex Metrica counter id; empty = disable */
+  readonly PUBLIC_HESELO_YANDEX_METRICA_ID?: string
+  readonly PUBLIC_YANDEX_METRICA_ID?: string
+  /** Telegram username without @; empty string hides link */
+  readonly PUBLIC_HESELO_TELEGRAM?: string
+  /** Override displayed contact email when domain mailbox is live */
+  readonly PUBLIC_HESELO_CONTACT_EMAIL?: string
   readonly PUBLIC_HESELO_SOCIAL_INSTAGRAM?: string
   readonly PUBLIC_HESELO_SOCIAL_FACEBOOK?: string
   readonly PUBLIC_HESELO_SOCIAL_LINKEDIN?: string

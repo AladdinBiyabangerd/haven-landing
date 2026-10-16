@@ -102,6 +102,30 @@ export const SEO_CONTENT_PLAN = {
       status: 'live',
       note: 'C3b — antikafe menzil/icarə hesablama',
     },
+    {
+      id: 'how-to-open-billiards-club',
+      path: '/guides/how-to-open-billiards-club/',
+      status: 'live',
+      note: 'RU/CIS 2026-10 — как открыть бильярдный клуб',
+    },
+    {
+      id: 'club-revenue-control',
+      path: '/guides/club-revenue-control/',
+      status: 'live',
+      note: 'RU/CIS 2026-10 — контроль выручки и смены',
+    },
+    {
+      id: 'ps-club-tariffs',
+      path: '/guides/ps-club-tariffs/',
+      status: 'live',
+      note: 'RU/CIS 2026-10 — тарифы PS-клуба',
+    },
+    {
+      id: 'how-to-open-anticafe',
+      path: '/guides/how-to-open-anticafe/',
+      status: 'live',
+      note: 'RU/CIS 2026-10 — как открыть антикафе',
+    },
   ],
   comparison: [
     {
@@ -259,6 +283,12 @@ export const SEO_CONTENT_PLAN = {
       path: '/guides/azerbaijan-pos-systems-comparison/',
       status: 'live',
       note: 'C4c — yerli POS müqayisəsi',
+    },
+    {
+      id: 'ps-club-software-comparison',
+      path: '/guides/ps-club-software-comparison/',
+      status: 'live',
+      note: 'RU/CIS 2026-10 — сравнение программ для PS-клуба',
     },
   ],
 } as const

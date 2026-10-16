@@ -4,11 +4,12 @@
  * on production builds without requiring env; override via PUBLIC_HESELO_GA4_ID.
  *
  * Microsoft Clarity runs alongside GA4/Plausible for session replay + heatmaps.
- * Project ID is public; override via PUBLIC_HESELO_CLARITY_ID (empty = disable).
+ * Loaded after idle / first interaction to protect mobile INP.
+ *
+ * Yandex Metrica: set PUBLIC_HESELO_YANDEX_METRICA_ID (empty = disable).
+ * Also deferred like Clarity.
  *
  * Lead CTAs emit `generate_lead` (mark as a key event in GA4 Admin → Events).
- * Funnel: `cta_click` (contact links), `pricing_select` (plan → contact).
- * Events include first-touch UTM params from sessionStorage (`heselo.campaign`).
  */
 const DEFAULT_GA4_ID = 'G-HKT0YR5W38'
 const DEFAULT_CLARITY_ID = 'yqenuclqam'
@@ -27,6 +28,9 @@ const clarityId =
   clarityIdRaw === undefined || clarityIdRaw === null
     ? DEFAULT_CLARITY_ID
     : String(clarityIdRaw).trim()
+const metricaId = String(
+  import.meta.env.PUBLIC_HESELO_YANDEX_METRICA_ID || import.meta.env.PUBLIC_YANDEX_METRICA_ID || '',
+).trim()
 const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
 ---
 
@@ -48,7 +52,6 @@ const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
         gtag('js', new Date())
         gtag('config', ga4Id)
 
-        /** Shared helper for contact form + other modules. */
         window.heseloTrack = function heseloTrack(name, params) {
           if (typeof gtag === 'function') gtag('event', name, params || {})
         }
@@ -82,6 +85,10 @@ const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
         return /wa\.me\/|whatsapp\.com\//i.test(href)
       }
 
+      function isTelegramHref(href: string): boolean {
+        return /t\.me\//i.test(href)
+      }
+
       function isContactPath(pathname: string): boolean {
         return /\/contact\/?$/i.test(pathname) || /\/(az|en|ru)\/contact\/?/i.test(pathname)
       }
@@ -102,10 +109,11 @@ const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
           const placement = leadPlacement(a)
 
           if (isWhatsAppHref(href)) {
-            track('generate_lead', {
-              method: 'whatsapp',
-              placement,
-            })
+            track('generate_lead', { method: 'whatsapp', placement })
+            return
+          }
+          if (isTelegramHref(href)) {
+            track('generate_lead', { method: 'telegram', placement })
             return
           }
 
@@ -139,20 +147,67 @@ const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
   ) : null
 }
 {
-  clarityId ? (
-    <script is:inline define:vars={{ clarityId }}>
-      ;(function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            ;(c[a].q = c[a].q || []).push(arguments)
-          }
-        t = l.createElement(r)
-        t.async = 1
-        t.src = 'https://www.clarity.ms/tag/' + i
-        y = l.getElementsByTagName(r)[0]
-        y.parentNode.insertBefore(t, y)
-      })(window, document, 'clarity', 'script', clarityId)
+  clarityId || metricaId ? (
+    <script is:inline define:vars={{ clarityId, metricaId }}>
+      ;(function () {
+        var loaded = false
+        function loadClarity() {
+          if (!clarityId || loaded) return
+          loaded = true
+          ;(function (c, l, a, r, i, t, y) {
+            c[a] =
+              c[a] ||
+              function () {
+                ;(c[a].q = c[a].q || []).push(arguments)
+              }
+            t = l.createElement(r)
+            t.async = 1
+            t.src = 'https://www.clarity.ms/tag/' + i
+            y = l.getElementsByTagName(r)[0]
+            y.parentNode.insertBefore(t, y)
+          })(window, document, 'clarity', 'script', clarityId)
+        }
+        function loadMetrica() {
+          if (!metricaId) return
+          ;(function (m, e, t, r, i, k, a) {
+            m[i] =
+              m[i] ||
+              function () {
+                ;(m[i].a = m[i].a || []).push(arguments)
+              }
+            m[i].l = 1 * new Date()
+            for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) return
+            }
+            k = e.createElement(t)
+            a = e.getElementsByTagName(t)[0]
+            k.async = 1
+            k.src = r
+            a.parentNode.insertBefore(k, a)
+          })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym')
+          window.ym(Number(metricaId), 'init', {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+          })
+        }
+        function boot() {
+          loadClarity()
+          loadMetrica()
+          window.removeEventListener('pointerdown', boot)
+          window.removeEventListener('keydown', boot)
+          window.removeEventListener('scroll', boot)
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(boot, { timeout: 4000 })
+        } else {
+          setTimeout(boot, 2500)
+        }
+        window.addEventListener('pointerdown', boot, { once: true, passive: true })
+        window.addEventListener('keydown', boot, { once: true })
+        window.addEventListener('scroll', boot, { once: true, passive: true })
+      })()
     </script>
   ) : null
 }

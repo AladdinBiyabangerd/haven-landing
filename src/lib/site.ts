@@ -5,6 +5,8 @@ export const SITE = {
   contactPhone: '0777381803',
   /** Inbox that receives demo / contact lead alerts. */
   notifyEmail: 'aladdinbiyabangerd@gmail.com',
+  /** Telegram username without @. Empty = hide. Override PUBLIC_HESELO_TELEGRAM. */
+  telegram: 'heselo_online',
   twitterHandle: '@heselo',
   themeColor: '#0f766e',
   ogImage: {
@@ -15,6 +17,16 @@ export const SITE = {
   },
   logoPath: '/icon-512.png',
 } as const
+
+export function telegramUrl(username: string = SITE.telegram): string | undefined {
+  const env =
+    typeof import.meta !== 'undefined'
+      ? (import.meta.env?.PUBLIC_HESELO_TELEGRAM as string | undefined)
+      : undefined
+  const handle = (env !== undefined ? String(env) : username).replace(/^@/, '').trim()
+  if (!handle) return undefined
+  return `https://t.me/${handle}`
+}
 
 /** Sole founder / creator of Heselo — used in footer, About page, and JSON-LD Person. */
 export const FOUNDER = {
@@ -165,4 +177,17 @@ export function whatsappUrl(text?: string, local: string = SITE.contactPhone): s
   const base = `https://wa.me/${phoneDigitsE164(local)}`
   if (!text?.trim()) return base
   return `${base}?text=${encodeURIComponent(text.trim())}`
+}
+
+/**
+ * Email shown in footer/contact.
+ * Override with PUBLIC_HESELO_CONTACT_EMAIL only when that mailbox actually exists.
+ */
+export function publicContactEmail(): string {
+  const env =
+    typeof import.meta !== 'undefined'
+      ? (import.meta.env?.PUBLIC_HESELO_CONTACT_EMAIL as string | undefined)
+      : undefined
+  if (env && env.includes('@')) return env.trim()
+  return SITE.contactEmail
 }

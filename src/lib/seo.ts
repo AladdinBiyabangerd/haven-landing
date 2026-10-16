@@ -143,6 +143,17 @@ function isCommercialSurface(slug: string): boolean {
   )
 }
 
+/** Schema.org eligibleRegion / areaServed — RU targets AZ + Russia; others stay single-country. */
+function eligibleRegions(locale: Locale, countryName: string) {
+  if (locale === 'ru') {
+    return [
+      { '@type': 'Country', name: 'Азербайджан' },
+      { '@type': 'Country', name: 'Россия' },
+    ]
+  }
+  return { '@type': 'Country', name: countryName }
+}
+
 export function buildJsonLdGraph(
   locale: Locale,
   messages: Messages,
@@ -221,10 +232,16 @@ export function buildJsonLdGraph(
       founder: { '@id': founderId },
       ...(siteSameAs().length > 0 ? { sameAs: siteSameAs() } : {}),
       knowsAbout: messages.seo.knowsAbout,
-      areaServed: {
-        '@type': 'Country',
-        name: messages.seo.countryName,
-      },
+      areaServed:
+        locale === 'ru'
+          ? [
+              { '@type': 'Country', name: 'Азербайджан' },
+              { '@type': 'Country', name: 'Россия' },
+            ]
+          : {
+              '@type': 'Country',
+              name: messages.seo.countryName,
+            },
       contactPoint: {
         '@type': 'ContactPoint',
         email: SITE.contactEmail,
@@ -375,7 +392,7 @@ export function buildJsonLdGraph(
         availability: 'https://schema.org/InStock',
         url: `${pageUrl}#${offer.slug}`,
         offeredBy: { '@id': `${siteUrl()}/#organization` },
-        eligibleRegion: { '@type': 'Country', name: messages.seo.countryName },
+        eligibleRegion: eligibleRegions(locale, messages.seo.countryName),
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           price: String(plan.monthlyFee),
@@ -412,7 +429,7 @@ export function buildJsonLdGraph(
           availability: 'https://schema.org/InStock',
           url: `${pageUrl}#${offer.slug}`,
           offeredBy: { '@id': `${siteUrl()}/#organization` },
-          eligibleRegion: { '@type': 'Country', name: messages.seo.countryName },
+          eligibleRegion: eligibleRegions(locale, messages.seo.countryName),
           ...(offer.model === 'monthly'
             ? {
                 priceSpecification: {

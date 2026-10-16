@@ -1,7 +1,16 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { FOUNDER, founderPortfolioUrl, localePath, SITE, telUrl, whatsappUrl } from '@/lib/site'
+import {
+  FOUNDER,
+  founderPortfolioUrl,
+  localePath,
+  SITE,
+  telUrl,
+  telegramUrl,
+  whatsappUrl,
+  publicContactEmail,
+} from '@/lib/site'
 import { formatPhone } from '@/lib/format'
 import { FOOTER_SOLUTION_SLUGS, getSolutionsBySlugs } from '@/data/solutions'
 import BrandMark from '@/components/BrandMark.astro'
@@ -20,6 +29,8 @@ const footerSolutions = getSolutionsBySlugs(locale, FOOTER_SOLUTION_SLUGS).map((
 
 const phoneDisplay = formatPhone(SITE.contactPhone)
 const waHref = whatsappUrl(messages.contact.whatsappPrefill)
+const tgHref = telegramUrl()
+const displayEmail = publicContactEmail()
 ---
 
 <footer class="footer">
@@ -30,12 +41,19 @@ const waHref = whatsappUrl(messages.contact.whatsappPrefill)
         <span class="type-brand">Heselo</span>
       </a>
       <p class="type-meta">{messages.footer.tagline}</p>
-      <a class="mail" href={`mailto:${SITE.contactEmail}`}>
-        {messages.contact.emailWrite} · {SITE.contactEmail}
+      <a class="mail" href={`mailto:${displayEmail}`}>
+        {messages.contact.emailWrite} · {displayEmail}
       </a>
       <a class="mail" href={waHref} target="_blank" rel="noopener noreferrer" data-wa-typed>
         {messages.contact.whatsapp}
       </a>
+      {
+        tgHref ? (
+          <a class="mail" href={tgHref} target="_blank" rel="noopener noreferrer" aria-label={messages.contact.telegramAria}>
+            {messages.contact.telegram}
+          </a>
+        ) : null
+      }
       <a class="mail tel" href={telUrl()}>{phoneDisplay}</a>
     </div>
     <div class="footer__product">

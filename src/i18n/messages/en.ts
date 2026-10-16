@@ -906,6 +906,8 @@ export const en: Messages = {
     whatsapp: 'Message on WhatsApp',
     whatsappAria: 'Contact Heselo on WhatsApp',
     whatsappPrefill: "Hello, I'd like to learn more about Heselo for a PlayStation club / karaoke / billiards venue.",
+    telegram: 'Message on Telegram',
+    telegramAria: 'Contact Heselo on Telegram',
     whatsappPrefills: {
       gaming: "Hello, I'd like a Heselo demo for a gaming / PlayStation club.",
       karaoke: "Hello, I'd like a Heselo demo for a karaoke venue.",

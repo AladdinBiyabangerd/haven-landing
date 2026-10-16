@@ -1,26 +1,28 @@
-# Current task — PanCafe alternative guide
+# Current task — /ru SEO deploy + Phase 0
 
 ## Completed
 
-1. New comparison guide `pancafe-alternative` (az/en/ru) — PanCafe Pro vs Heselo (honest: free local café software vs cloud club panel).
-2. Wired: `types.ts`, `comparisonGuides.ts`, `COMPARISON_GUIDE_SLUGS`, `RELATED_COMPARISON`, `SOLUTION_ALT_GUIDES.gaming`, `seoContentPlan`.
-3. Site FAQ (az/en/ru): “Heselo PanCafe / PanCafe Pro-nu əvəz edir?” → guide link.
-4. Social hooks in `docs/social-guide-hooks.md` (no competitor name in hook line).
-5. Landscape mentions: Club Timer, Hasansoft, Akinsoft, playstation-cafe-software guides + geo-ai note.
+1. Phase 0–6 docs/checklists + `ru-seo-native-copy.mdc`.
+2. Full /ru SEO code batch (tech, quick fixes, cannibalization, solutions, guides, tools) — local build green.
+3. Phase 0 lab CWV (Lighthouse, pre-deploy) written into `docs/seo-ru-phase0-baseline.md`.
+4. GSC/Yandex snapshot tables stubbed; real numbers **blocked** (no account/CSV).
 
 ## Current state
 
-- URL: `/az/guides/pancafe-alternative/` (and en/ru).
-- Homepage hero unchanged (intentional).
+- Uncommitted /ru SEO work ready to ship; live `heselo.online/ru` still old copy (сессия, AZN-only vibes, no tools).
+- Lab: `/ru/` LCP ~6.2s (bad); gaming ~2.7s; how-to-open-PS ~1.0s. Pricing Lighthouse flaky.
+- PSI API quota exhausted today.
 
 ## Remaining
 
-- Deploy / verify live page after merge.
-- Optional: DM sales script paste into month-1-sales or CRM notes.
+1. **Commit + push** → Vercel deploy `/ru` (user asked deploy).
+2. User: fill GSC + Yandex numbers in phase0 (export CSV → `docs/gsc-baseline-ru-2026-10-16/`).
+3. Post-deploy: IndexNow + GSC Request indexing priority URLs; recheck CWV.
+4. **Week-2 GSC CTR pass** — only after 7–14 days + real GSC rows (checklist in phase0).
 
 ## Relevant files
 
-- `src/data/guides/pancafeAlternativeGuide.ts`
-- `src/data/guides/{types,index,comparisonGuides}.ts`
-- `src/i18n/messages/{az,en,ru}.ts`
-- `docs/social-guide-hooks.md`
+- `docs/seo-ru-phase0-baseline.md`
+- `docs/seo-ru-kpi-filters.md`, `docs/seo-ru-research-2026-10.md`
+- `src/data/guides/ruCisGuides.ts`, `src/data/solutions/ru.ts`, `src/i18n/messages/ru.ts`
+- `src/pages/[locale]/tools/*`

@@ -1,0 +1,176 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { resolveLocale } from '@/i18n/config'
+import { loadPricedMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const messages = await loadPricedMessages(locale)
+
+const copy =
+  locale === 'ru'
+    ? {
+        title: 'Калькулятор тарифов PS-клуба | Heselo',
+        description:
+          'Оцените выручку: число кабинок, цена часа и загрузка. Примерный расчёт — не оферта.',
+        h1: 'Калькулятор тарифов клуба',
+        lead: 'Введите свои цифры. Считаем на устройстве — данные никуда не отправляются.',
+        booths: 'Число кабинок / станций',
+        hourly: 'Цена часа',
+        hours: 'Часов загрузки на кабинку в день',
+        days: 'Рабочих дней в месяц',
+        revenue: 'Ориентировочная выручка в месяц',
+        cta: 'Запросить демо Heselo',
+        note: 'Это модель выручки зала, не цена подписки Heselo. Контроллеры ТВ и онлайн-касса (ККТ) в расчёт не входят.',
+      }
+    : locale === 'en'
+      ? {
+          title: 'Club tariff calculator | Heselo',
+          description: 'Estimate monthly revenue from booths, hourly rate and utilisation.',
+          h1: 'Club tariff calculator',
+          lead: 'Enter your numbers. Calculation stays in the browser.',
+          booths: 'Booths / stations',
+          hourly: 'Hourly rate',
+          hours: 'Hours per booth per day',
+          days: 'Working days per month',
+          revenue: 'Estimated monthly revenue',
+          cta: 'Request a Heselo demo',
+          note: 'Venue revenue model — not Heselo subscription pricing. TV controllers and fiscal cash registers are out of scope.',
+        }
+      : {
+          title: 'Klub tarif kalkulyatoru | Heselo',
+          description: 'Kabinka sayı, saat qiyməti və yüklənməyə görə aylıq gəlir təxmini.',
+          h1: 'Klub tarif kalkulyatoru',
+          lead: 'Öz rəqəmlərinizi daxil edin. Hesablama brauzerdə qalır.',
+          booths: 'Kabinka / stansiya sayı',
+          hourly: 'Saat qiyməti',
+          hours: 'Kabinka başına gündəlik saat',
+          days: 'Aylıq iş günü',
+          revenue: 'Təxmini aylıq gəlir',
+          cta: 'Heselo demo istəyin',
+          note: 'Zalın gəlir modeli — Heselo abunə qiyməti deyil. TV kontroller və fiskal kassa hesabda yoxdur.',
+        }
+---
+
+<BaseLayout
+  locale={locale}
+  messages={messages}
+  page="guides"
+  seo={{
+    title: copy.title,
+    description: copy.description,
+    slug: '/tools/tariff-calculator',
+    breadcrumbName: copy.h1,
+    keywords: locale === 'ru' ? ['тарифы PS клуба', 'калькулятор выручки клуба'] : [],
+  }}
+>
+  <section class="section">
+    <div class="container tool">
+      <p class="eyebrow">{locale === 'ru' ? 'Инструмент' : locale === 'en' ? 'Tool' : 'Alət'}</p>
+      <h1 class="type-page-title">{copy.h1}</h1>
+      <p class="lead">{copy.lead}</p>
+
+      <form class="tool__form" data-tariff-calc>
+        <label>
+          <span>{copy.booths}</span>
+          <input name="booths" type="number" min="1" max="200" value="6" required />
+        </label>
+        <label>
+          <span>{copy.hourly}</span>
+          <input name="hourly" type="number" min="0" step="1" value="1500" required />
+        </label>
+        <label>
+          <span>{copy.hours}</span>
+          <input name="hours" type="number" min="0" max="24" step="0.5" value="6" required />
+        </label>
+        <label>
+          <span>{copy.days}</span>
+          <input name="days" type="number" min="1" max="31" value="26" required />
+        </label>
+        <p class="tool__result">
+          <span>{copy.revenue}</span>
+          <strong data-revenue>0</strong>
+        </p>
+      </form>
+
+      <p class="tool__note">{copy.note}</p>
+      <a class="btn btn-primary" href={localePath(locale, '/contact')} data-track-placement="tool">
+        {copy.cta}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.querySelector('[data-tariff-calc]')
+  const out = document.querySelector('[data-revenue]')
+  if (form instanceof HTMLFormElement && out instanceof HTMLElement) {
+    const calc = () => {
+      const d = new FormData(form)
+      const booths = Number(d.get('booths')) || 0
+      const hourly = Number(d.get('hourly')) || 0
+      const hours = Number(d.get('hours')) || 0
+      const days = Number(d.get('days')) || 0
+      const total = booths * hourly * hours * days
+      out.textContent = new Intl.NumberFormat(undefined, {
+        maximumFractionDigits: 0,
+      }).format(total)
+    }
+    form.addEventListener('input', calc)
+    calc()
+  }
+</script>
+
+<style>
+  .tool {
+    max-width: 36rem;
+  }
+  .lead {
+    margin: 0.75rem 0 1.5rem;
+    color: var(--ink-muted);
+  }
+  .tool__form {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .tool__form label {
+    display: grid;
+    gap: 0.35rem;
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .tool__form input {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font: inherit;
+    color: var(--ink);
+    background: var(--bg-elevated);
+  }
+  .tool__result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0;
+    padding: 1rem;
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+    font-size: var(--text-sm);
+  }
+  .tool__result strong {
+    font-size: var(--text-xl);
+    color: var(--accent-deep);
+  }
+  .tool__note {
+    margin: 0 0 1.25rem;
+    font-size: var(--text-sm);
+    color: var(--ink-subtle);
+  }
+</style>

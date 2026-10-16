@@ -12,16 +12,28 @@ const { messages, id, priority = false, class: className = '' } = Astro.props
 
 const base = PRODUCT_SHOT_PATHS[id]
 const alt = productShotAlt(messages, id)
+/** Mobile-first sizes: hero shot is capped ~22rem on small screens. */
+const sizes = priority
+  ? '(max-width: 959px) 22rem, (max-width: 1120px) 45vw, 560px'
+  : '(max-width: 759px) 100vw, 36rem'
 ---
 
 <figure class:list={['shot', className]}>
-  {/* Product shots ship as WebP (photoreal marketing). Optional PNG source kept for legacy if present. */}
   <picture>
-    <source srcset={`${base}@2x.webp 2x, ${base}.webp 1x`} type="image/webp" />
-    <source srcset={`${base}@2x.png 2x, ${base}.png 1x`} type="image/png" />
+    <source
+      srcset={`${base}.webp 1256w, ${base}@2x.webp 2512w`}
+      sizes={sizes}
+      type="image/webp"
+    />
+    <source
+      srcset={`${base}.png 1256w, ${base}@2x.png 2512w`}
+      sizes={sizes}
+      type="image/png"
+    />
     <img
       src={`${base}.webp`}
-      srcset={`${base}@2x.webp 2x, ${base}.webp 1x`}
+      srcset={`${base}.webp 1256w, ${base}@2x.webp 2512w`}
+      sizes={sizes}
       alt={alt}
       width="1256"
       height="788"
@@ -38,10 +50,14 @@ const alt = productShotAlt(messages, id)
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
     overflow: hidden;
+    aspect-ratio: 1256 / 788;
   }
   img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: top left;
+    background: var(--bg-soft);
   }
 </style>

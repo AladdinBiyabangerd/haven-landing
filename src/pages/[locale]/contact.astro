@@ -6,7 +6,7 @@ import Faq from '@/components/Faq.astro'
 import NextThought from '@/components/NextThought.astro'
 import { resolveLocale } from '@/i18n/config'
 import { loadPricedMessages } from '@/i18n'
-import { SITE, localePath } from '@/lib/site'
+import { localePath, publicContactEmail, telegramUrl } from '@/lib/site'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -25,6 +25,8 @@ const faqMessages = {
     items: page.faq,
   },
 }
+const displayEmail = publicContactEmail()
+const tgHref = telegramUrl()
 ---
 
 <BaseLayout locale={locale} messages={messages} page="contact">
@@ -54,7 +56,17 @@ const faqMessages = {
         <h2 id="contact-reach" class="type-card-title">{page.reachTitle}</h2>
         {page.reachBody.map((p) => <p class="reach__body">{p}</p>)}
         <p class="reach__email">
-          <a class="link-inline" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+          <a class="link-inline" href={`mailto:${displayEmail}`}>{displayEmail}</a>
+          {
+            tgHref ? (
+              <>
+                {' · '}
+                <a class="link-inline" href={tgHref} target="_blank" rel="noopener noreferrer">
+                  {page.telegram}
+                </a>
+              </>
+            ) : null
+          }
         </p>
       </section>
 
@@ -87,6 +99,8 @@ const faqMessages = {
 <style>
   .contact {
     max-width: 720px;
+    /* Room for floating WhatsApp FAB above the submit button on mobile. */
+    padding-bottom: 5.5rem;
   }
   .lead {
     margin: 0.75rem 0 0;

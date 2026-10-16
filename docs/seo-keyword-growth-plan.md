@@ -236,14 +236,19 @@ Həftəlik minimum:
 
 ## Phase RU (AZ/EN qorunur)
 
-Şəxsi sayt `phase-ru-overview` kimi:
+**Kanonik plan:** [`docs/seo-ru-research-2026-10.md`](./seo-ru-research-2026-10.md)  
+**Keyword map:** [`docs/seo-ru-keyword-map.md`](./seo-ru-keyword-map.md)  
+**Baseline ops:** [`docs/seo-ru-phase0-baseline.md`](./seo-ru-phase0-baseline.md)  
+**Copy rule:** `.cursor/rules/ru-seo-native-copy.mdc`
 
-1. Yalnız `ru.ts` / `guides/ru.ts` / `solutions/ru.ts` copy cila
-2. CIS intent: не только «Баку» — клуб / бильярд / караоке / антикафе
-3. Paylaşımda bəzən `/ru/` URL
-4. Diff check: `az`/`en` 0 sətir
+Dual audience: AZ rusdillilər + Rusiya/CIS remote. Məhsul AZ mənşəli; `/ru`-da RUB display; saxta RF NAP/ККТ yox.
 
-Sıra: RU meta → RU guide intro → distribution.
+1. Yalnız `ru` copy + locale-aware helpers (geo, teasers, schema)
+2. CIS intent + SERP leksikon (сеанс, тарификация, программа для…)
+3. Paylaşımda `/ru/` + UTM `ru_cis`
+4. Diff check: `az`/`en` title kökünə toxunma
+
+Sıra: rule + keyword map → RUB/geo → quick fixes → content/tools → off-site.
 
 ---
 

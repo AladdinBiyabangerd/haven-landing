@@ -696,18 +696,32 @@ const PLAN_FEATURE_PREVIEW = 5
     gap: 0.45rem;
   }
   .plans-dots button {
-    width: 0.55rem;
-    height: 0.55rem;
+    width: 2.75rem;
+    height: 2.75rem;
     padding: 0;
     border: 0;
     border-radius: 999px;
-    background: var(--line-strong);
+    background: transparent;
     cursor: pointer;
+    position: relative;
     transition:
       background 0.25s var(--ease),
       transform 0.25s var(--ease);
   }
-  .plans-dots button[aria-selected='true'] {
+  .plans-dots button::after {
+    content: '';
+    position: absolute;
+    inset: 50%;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin: -0.275rem 0 0 -0.275rem;
+    border-radius: 999px;
+    background: var(--line-strong);
+    transition:
+      background 0.25s var(--ease),
+      transform 0.25s var(--ease);
+  }
+  .plans-dots button[aria-selected='true']::after {
     background: var(--accent);
     transform: scale(1.2);
   }

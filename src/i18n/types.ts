@@ -402,6 +402,8 @@ export type Messages = {
     whatsappAria: string
     whatsappPrefill: string
     whatsappPrefills: Record<'gaming' | 'karaoke' | 'billiards' | 'antikafe' | 'lounge', string>
+    telegram: string
+    telegramAria: string
     planConfirm: string
     heardFrom: string
     heardFromPlaceholder: string

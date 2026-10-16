@@ -906,6 +906,8 @@ export const az: Messages = {
     whatsapp: 'WhatsApp ilə yazın',
     whatsappAria: 'WhatsApp-da Heselo ilə əlaqə saxlayın',
     whatsappPrefill: 'Salam, PS klub / karaoke / bilyard üçün Heselo haqqında məlumat almaq istəyirəm.',
+    telegram: 'Telegram ilə yazın',
+    telegramAria: 'Telegram-da Heselo ilə əlaqə saxlayın',
     whatsappPrefills: {
       gaming: 'Salam, oyun klubu / PS üçün Heselo demo istəyirəm.',
       karaoke: 'Salam, karaoke məkanı üçün Heselo demo istəyirəm.',

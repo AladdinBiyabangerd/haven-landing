@@ -1,0 +1,175 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { resolveLocale } from '@/i18n/config'
+import { loadPricedMessages } from '@/i18n'
+import { localePath } from '@/lib/site'
+import { catalogPriceVars } from '@/lib/catalogCopy'
+import { loadVenueOffers } from '@/lib/venueOffers'
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
+}
+
+const locale = resolveLocale(Astro.params.locale)
+const messages = await loadPricedMessages(locale)
+await loadVenueOffers()
+const prices = catalogPriceVars(locale)
+
+const copy =
+  locale === 'ru'
+    ? {
+        title: 'Цена за консоль или за клуб — сравнение моделей | Heselo',
+        description:
+          'Сравните оплату за каждое устройство и фиксированную цену за заведение. Публичные ориентиры с датой.',
+        h1: 'За консоль или за клуб?',
+        lead: 'На 5 и 10 консолях посчитайте сами. Цены конкурентов — публичные ориентиры на октябрь 2026; проверяйте на сайтах вендоров.',
+        consoles: 'Число консолей',
+        perDevice: 'Оплата за устройство (пример GameClub / LANGAME Basic)',
+        perClub: `Heselo — от ${prices.gaming} ${prices.currency}/мес за клуб`,
+        resultDevice: 'Ориентир «за устройство» в месяц',
+        resultClub: 'Heselo (фиксировано за клуб)',
+        cta: 'Смотреть тарифы Heselo',
+        note: 'GameClub/LANGAME цифры — примеры из открытых источников; не оферта. Heselo не является ККТ и не управляет ТВ-контроллерами.',
+        sources: 'Источники: gmclb.ru, langame.ru/software (проверьте актуальные цены).',
+      }
+    : locale === 'en'
+      ? {
+          title: 'Per-console vs per-club pricing | Heselo',
+          description: 'Compare device-based SaaS fees with a fixed venue fee.',
+          h1: 'Per console or per club?',
+          lead: 'Model 5 and 10 consoles. Competitor figures are public Oct 2026 snapshots — verify on vendor sites.',
+          consoles: 'Consoles',
+          perDevice: 'Per-device fee example (GameClub / LANGAME Basic)',
+          perClub: `Heselo — from ${prices.gaming} ${prices.currency}/mo per venue`,
+          resultDevice: 'Per-device estimate / month',
+          resultClub: 'Heselo (fixed per venue)',
+          cta: 'See Heselo pricing',
+          note: 'Competitor numbers are illustrative public snapshots, not offers. Heselo is not a fiscal cash register and does not drive TV relays.',
+          sources: 'Sources: gmclb.ru, langame.ru/software — re-check current prices.',
+        }
+      : {
+          title: 'Konsol başına vs klub başına qiymət | Heselo',
+          description: 'Cihaz əsaslı abunə ilə sabit klub haqqını müqayisə edin.',
+          h1: 'Konsol başına, yoxsa klub?',
+          lead: '5 və 10 konsol üçün model. Rəqib rəqəmləri 2026-10 açıq mənbə — vendor saytında yoxlayın.',
+          consoles: 'Konsol sayı',
+          perDevice: 'Cihaz haqqı nümunəsi (GameClub / LANGAME Basic)',
+          perClub: `Heselo — klub üçün ${prices.gaming} ${prices.currency}/aydan`,
+          resultDevice: 'Cihaz modeli / ay',
+          resultClub: 'Heselo (klub üzrə sabit)',
+          cta: 'Heselo tariflərinə baxın',
+          note: 'Rəqib rəqəmləri illüstrativdir. Heselo ККТ deyil və TV rele idarə etmir.',
+          sources: 'Mənbə: gmclb.ru, langame.ru/software — aktual qiyməti yoxlayın.',
+        }
+---
+
+<BaseLayout
+  locale={locale}
+  messages={messages}
+  page="pricing"
+  seo={{
+    title: copy.title,
+    description: copy.description,
+    slug: '/tools/pricing-model',
+    breadcrumbName: copy.h1,
+    keywords: locale === 'ru' ? ['цена за консоль', 'тариф игрового клуба'] : [],
+  }}
+>
+  <section class="section">
+    <div class="container tool">
+      <h1 class="type-page-title">{copy.h1}</h1>
+      <p class="lead">{copy.lead}</p>
+
+      <form class="tool__form" data-price-model>
+        <label>
+          <span>{copy.consoles}</span>
+          <input name="consoles" type="number" min="1" max="100" value="5" required />
+        </label>
+        <label>
+          <span>{copy.perDevice}</span>
+          <input name="perDevice" type="number" min="0" step="1" value="800" required />
+        </label>
+        <p class="tool__hint">{copy.perClub}</p>
+        <p class="tool__result">
+          <span>{copy.resultDevice}</span>
+          <strong data-device-total>0</strong>
+        </p>
+        <p class="tool__result">
+          <span>{copy.resultClub}</span>
+          <strong data-club-total>{prices.gaming}</strong>
+        </p>
+      </form>
+
+      <p class="tool__note">{copy.note}</p>
+      <p class="tool__note">{copy.sources}</p>
+      <a class="btn btn-primary" href={localePath(locale, '/pricing')} data-track-placement="tool">
+        {copy.cta}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ clubFee: prices.gaming }}>
+  const form = document.querySelector('[data-price-model]')
+  const deviceOut = document.querySelector('[data-device-total]')
+  const clubOut = document.querySelector('[data-club-total]')
+  if (form instanceof HTMLFormElement && deviceOut && clubOut) {
+    const calc = () => {
+      const d = new FormData(form)
+      const n = Number(d.get('consoles')) || 0
+      const per = Number(d.get('perDevice')) || 0
+      deviceOut.textContent = String(n * per)
+      clubOut.textContent = String(clubFee)
+    }
+    form.addEventListener('input', calc)
+    calc()
+  }
+</script>
+
+<style>
+  .tool {
+    max-width: 36rem;
+  }
+  .lead {
+    margin: 0.75rem 0 1.5rem;
+    color: var(--ink-muted);
+  }
+  .tool__form {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .tool__form label {
+    display: grid;
+    gap: 0.35rem;
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .tool__form input {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font: inherit;
+  }
+  .tool__hint {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--accent-deep);
+  }
+  .tool__result {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+    font-size: var(--text-sm);
+  }
+  .tool__note {
+    margin: 0 0 0.75rem;
+    font-size: var(--text-sm);
+    color: var(--ink-subtle);
+  }
+</style>

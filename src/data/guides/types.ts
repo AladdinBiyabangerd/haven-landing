@@ -16,6 +16,12 @@ export const GUIDE_SLUGS = [
   'game-hall-automation',
   'karaoke-club-business-plan',
   'anticafe-rent-cost-calculation',
+  // RU/CIS educational + comparison (2026-10)
+  'ps-club-software-comparison',
+  'how-to-open-billiards-club',
+  'club-revenue-control',
+  'ps-club-tariffs',
+  'how-to-open-anticafe',
   // Phase C comparison / alternative intent
   'iiko-alternative-clubs',
   'clopos-alternative',
@@ -47,6 +53,7 @@ export const GUIDE_SLUGS = [
   'heselo-pricing',
 ] as const
 
+/** Default (AZ/EN) teaser order — AZ POS landscape OK. */
 export const TEASER_GUIDE_SLUGS = [
   'gaming-club-management',
   'karaoke-room-booking',
@@ -56,6 +63,18 @@ export const TEASER_GUIDE_SLUGS = [
   'iiko-alternative-clubs',
   'azerbaijan-pos-systems-comparison',
   'affordable-club-pos',
+] as const
+
+/** CIS-first teasers for /ru — no AZ-only POS hub links. */
+export const TEASER_GUIDE_SLUGS_RU = [
+  'ps-club-software-comparison',
+  'how-to-open-playstation-club',
+  'club-revenue-control',
+  'playstation-club-software',
+  'langame-alternative',
+  'gameclub-alternative',
+  'club-pos-vs-excel',
+  'karaoke-booking-system',
 ] as const
 
 export type GuideSlug = (typeof GUIDE_SLUGS)[number]

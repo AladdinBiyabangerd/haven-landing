@@ -1,6 +1,7 @@
 import type { GuideCopy, GuidesHubCopy } from './types'
 import { comparisonGuides } from './comparisonGuides'
 import { gapEducationalGuides } from './gapEducationalGuides'
+import { ruCisGuides } from './ruCisGuides'
 
 export const guidesHubEn: GuidesHubCopy = {
   eyebrow: 'Guides',
@@ -908,5 +909,6 @@ export const guidesEn: GuideCopy[] = [
   },
 
   ...gapEducationalGuides('en'),
+  ...ruCisGuides('en'),
   ...comparisonGuides('en'),
 ]

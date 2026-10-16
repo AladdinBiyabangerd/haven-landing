@@ -2,7 +2,7 @@
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import LinkCard from '@/components/LinkCard.astro'
-import { TEASER_GUIDE_SLUGS, getGuides } from '@/data/guides'
+import { teaserGuideSlugs, getGuides } from '@/data/guides'
 import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { localePath } from '@/lib/site'
 import { truncateText } from '@/lib/format'
@@ -15,8 +15,9 @@ interface Props {
 const { locale, messages } = Astro.props
 await loadVenueOffers()
 const g = messages.guidesTeaser
+const teaserSlugs = new Set<string>(teaserGuideSlugs(locale))
 const guides = applyCatalogPricesDeep(
-  getGuides(locale).filter((item) => (TEASER_GUIDE_SLUGS as readonly string[]).includes(item.slug)),
+  getGuides(locale).filter((item) => teaserSlugs.has(item.slug)),
   locale,
 )
 ---

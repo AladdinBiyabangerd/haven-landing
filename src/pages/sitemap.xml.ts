@@ -33,6 +33,8 @@ const ROUTES: RouteEntry[] = [
     }
   }),
   { path: 'pricing/', priority: '0.8', changefreq: 'monthly' },
+  { path: 'tools/tariff-calculator/', priority: '0.6', changefreq: 'monthly' },
+  { path: 'tools/pricing-model/', priority: '0.6', changefreq: 'monthly' },
   { path: 'about/', priority: '0.7', changefreq: 'monthly' },
   { path: 'faq/', priority: '0.7', changefreq: 'monthly' },
   { path: 'contact/', priority: '0.8', changefreq: 'monthly' },

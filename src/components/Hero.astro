@@ -25,9 +25,9 @@ const secondaryIsWhatsApp = formFirst
   <div class="container hero__grid">
     <div class="hero__copy">
       <p class="eyebrow reveal">{h.brandHint}</p>
-      <h1 class="type-hero reveal reveal-delay-1">{h.title}</h1>
-      <p class="lead reveal reveal-delay-2">{h.subtitle}</p>
-      <div class="hero__cta reveal reveal-delay-3">
+      <h1 class="type-hero">{h.title}</h1>
+      <p class="lead reveal">{h.subtitle}</p>
+      <div class="hero__cta reveal">
         <a
           class="btn btn-primary hero__cta-primary"
           href={primaryHref}
@@ -51,7 +51,7 @@ const secondaryIsWhatsApp = formFirst
         {messages.trust.items.map((item) => <li>{item}</li>)}
       </ul>
     </div>
-    <div class="hero__visual reveal reveal-delay-2">
+    <div class="hero__visual">
       <ProductShot messages={messages} id="live-floor" priority />
     </div>
   </div>
@@ -148,12 +148,6 @@ const secondaryIsWhatsApp = formFirst
       max-width: 22rem;
       margin-inline: auto;
     }
-    .hero__visual :global(img) {
-      max-height: 9.5rem;
-      width: 100%;
-      object-fit: cover;
-      object-position: top left;
-    }
   }
   @media (min-width: 560px) {
     .hero__cta {
@@ -186,19 +180,6 @@ const secondaryIsWhatsApp = formFirst
     }
     .hero__visual {
       max-width: none;
-    }
-    .hero__visual.reveal {
-      animation-name: settle;
-      animation-duration: 0.9s;
-      transform-origin: center center;
-    }
-    .hero__visual :global(img) {
-      max-height: none;
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero__visual.reveal {
-      animation: none;
     }
   }
 </style>

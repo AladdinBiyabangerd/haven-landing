@@ -75,7 +75,7 @@ const breadcrumbs =
     <meta name="theme-color" content={SITE.themeColor} />
     <meta name="application-name" content={SITE.name} />
     <meta name="apple-mobile-web-app-title" content={SITE.name} />
-    <meta name="geo.region" content="AZ" />
+    {locale !== 'ru' ? <meta name="geo.region" content="AZ" /> : null}
     <meta name="geo.placename" content={messages.seo.geoPlacename} />
     <link rel="canonical" href={seo.canonical} />
 

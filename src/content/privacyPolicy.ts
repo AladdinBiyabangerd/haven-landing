@@ -163,7 +163,7 @@ const az: DocumentBlock[] = [
       'Sistem giriş sessiyasını saxlamaq üçün **zəruri** cookie istifadə edir (`refresh_token`).',
       'Bu cookie girişin yenilənməsi üçündür; reklam izləməsi üçün deyil.',
       'Brauzerdə sessiya / dil kimi texniki məlumat saxlanıla bilər — yalnız Sistemin işləməsi üçün.',
-      'Marketinq saytı (heselo.online) trafik və istifadə təcrübəsini ölçmək üçün **Google Analytics (GA4)** və **Microsoft Clarity** (session replay / heatmaps) istifadə edə bilər — reklam retargeting üçün deyil.'
+      'Marketinq saytı (heselo.online) trafik və istifadə təcrübəsini ölçmək üçün **Google Analytics (GA4)**, **Microsoft Clarity** (session replay / heatmaps) və (əgər aktivdirsə) **Yandex Metrica** istifadə edə bilər — reklam retargeting üçün deyil.'
     ],
   },
   { type: 'h2', text: '10. Uşaqlar və həssas kateqoriyalar' },
@@ -362,7 +362,7 @@ const en: DocumentBlock[] = [
       'The System uses a **necessary** cookie for the sign-in session (`refresh_token`).',
       'This cookie renews sign-in; it is not for advertising tracking.',
       'The browser may store technical data (session / language) only for the System to work.',
-      'The marketing site (heselo.online) may use **Google Analytics (GA4)** and **Microsoft Clarity** (session replay / heatmaps) to measure traffic and UX — not for ad retargeting.'
+      'The marketing site (heselo.online) may use **Google Analytics (GA4)**, **Microsoft Clarity** (session replay / heatmaps), and (when enabled) **Yandex Metrica** to measure traffic and UX — not for ad retargeting.'
     ],
   },
   { type: 'h2', text: '10. Children and special categories' },
@@ -561,7 +561,7 @@ const ru: DocumentBlock[] = [
       'Система использует **необходимые** cookie для сессии входа (`refresh_token`).',
       'Cookie нужен для обновления входа, а не для рекламного трекинга.',
       'В браузере могут храниться технические данные (сессия / язык) — только для работы Системы.',
-      'Маркетинговый сайт (heselo.online) может использовать **Google Analytics (GA4)** и **Microsoft Clarity** (session replay / heatmaps) для измерения трафика и UX — не для рекламного ретаргетинга.'
+      'Маркетинговый сайт (heselo.online) может использовать **Google Analytics (GA4)**, **Microsoft Clarity** (session replay / heatmaps) и (если включена) **Яндекс Метрику** для измерения трафика и UX — не для рекламного ретаргетинга.'
     ],
   },
   { type: 'h2', text: '10. Дети и особые категории' },

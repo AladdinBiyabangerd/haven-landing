@@ -6,6 +6,7 @@ import { guidesRu, guidesHubRu } from './ru'
 import {
   GUIDE_SLUGS,
   TEASER_GUIDE_SLUGS,
+  TEASER_GUIDE_SLUGS_RU,
   type GuideCopy,
   type GuideSlug,
   type GuidesHubCopy,
@@ -46,8 +47,30 @@ export const SOLUTION_ALT_GUIDES: Partial<Record<SolutionSlug, GuideSlug[]>> = {
   inventory: ['club-pos-vs-excel', 'kassa-az-alternative'],
 }
 
+/** CIS-first alt guides for /ru solution pages. */
+export const SOLUTION_ALT_GUIDES_RU: Partial<Record<SolutionSlug, GuideSlug[]>> = {
+  gaming: ['ps-club-software-comparison', 'langame-alternative', 'gameclub-alternative'],
+  karaoke: ['restaurant-pos-vs-karaoke-system', 'iiko-alternative-clubs', 'karaoke-booking-system'],
+  billiards: ['club-pos-vs-excel', 'affordable-club-pos', 'billiards-table-booking'],
+  lounge: ['restaurant-pos-vs-karaoke-system', 'iiko-alternative-clubs', 'club-pos-vs-excel'],
+  antikafe: ['club-pos-vs-excel', 'affordable-club-pos', 'anticafe-rent-cost-calculation'],
+  pos: ['club-pos-vs-excel', 'affordable-club-pos', 'iiko-alternative-clubs'],
+  reservations: ['club-pos-vs-excel', 'karaoke-booking-system', 'billiards-table-booking'],
+  inventory: ['club-pos-vs-excel', 'affordable-club-pos'],
+}
+
+export function teaserGuideSlugs(locale: Locale): readonly GuideSlug[] {
+  return (locale === 'ru' ? TEASER_GUIDE_SLUGS_RU : TEASER_GUIDE_SLUGS) as readonly GuideSlug[]
+}
+
+export function altGuidesForSolution(locale: Locale, solutionSlug: SolutionSlug): GuideSlug[] {
+  const map = locale === 'ru' ? SOLUTION_ALT_GUIDES_RU : SOLUTION_ALT_GUIDES
+  return map[solutionSlug] ?? []
+}
+
 /** Named / category comparison guides (Phase C competitor track). */
 export const COMPARISON_GUIDE_SLUGS = [
+  'ps-club-software-comparison',
   'club-pos-vs-excel',
   'iiko-alternative-clubs',
   'clopos-alternative',
@@ -87,16 +110,20 @@ const RELATED_COMPARISON: Partial<Record<GuideSlug, GuideSlug[]>> = {
   'robotpos-alternative': ['affordable-club-pos', 'iiko-alternative-clubs'],
   'affordable-club-pos': ['azerbaijan-pos-systems-comparison', 'club-pos-vs-excel'],
   'restaurant-pos-vs-karaoke-system': ['dine-alternative', 'iiko-alternative-clubs'],
-  'playstation-cafe-software-alternative': ['pancafe-alternative', 'club-timer-alternative'],
+  'playstation-cafe-software-alternative': [
+    'ps-club-software-comparison',
+    'pancafe-alternative',
+    'club-timer-alternative',
+  ],
   'izi-alternative': ['langame-alternative', 'playstation-cafe-software-alternative'],
-  'langame-alternative': ['izi-alternative', 'gameclub-alternative'],
-  'club-timer-alternative': ['pancafe-alternative', 'hasansoft-alternative'],
+  'langame-alternative': ['izi-alternative', 'gameclub-alternative', 'ps-club-software-comparison'],
+  'club-timer-alternative': ['pancafe-alternative', 'ps-club-software-comparison'],
   'pancafe-alternative': ['club-timer-alternative', 'hasansoft-alternative'],
   'akinsoft-alternative': ['club-timer-alternative', 'pancafe-alternative'],
   'hasansoft-alternative': ['pancafe-alternative', 'club-timer-alternative'],
   'tendir-alternative': ['smartapp-alternative', 'gameclub-alternative'],
   'smartapp-alternative': ['tendir-alternative', 'gameclub-alternative'],
-  'gameclub-alternative': ['cafesynk-alternative', 'langame-alternative'],
+  'gameclub-alternative': ['cafesynk-alternative', 'ps-club-software-comparison'],
   'cafesynk-alternative': ['gameclub-alternative', 'club-timer-alternative'],
   'kaktus-alternative': ['club-pos-vs-excel', 'affordable-club-pos'],
   'resto-az-alternative': ['clopos-alternative', 'baza-market-alternative'],
@@ -106,6 +133,15 @@ const RELATED_COMPARISON: Partial<Record<GuideSlug, GuideSlug[]>> = {
   'baza-market-alternative': ['resto-az-alternative', 'affordable-club-pos'],
   'azerbaijan-pos-systems-comparison': ['iiko-alternative-clubs', 'fazilat-pos-alternative'],
   'heselo-pricing': ['affordable-club-pos', 'club-pos-vs-excel'],
+  'ps-club-software-comparison': [
+    'gameclub-alternative',
+    'club-timer-alternative',
+    'langame-alternative',
+  ],
+  'how-to-open-billiards-club': ['club-revenue-control', 'ps-club-tariffs'],
+  'club-revenue-control': ['ps-club-software-comparison', 'ps-club-tariffs'],
+  'ps-club-tariffs': ['ps-club-software-comparison', 'club-revenue-control'],
+  'how-to-open-anticafe': ['club-revenue-control', 'ps-club-tariffs'],
 }
 
 const byLocale: Record<Locale, { hub: GuidesHubCopy; items: GuideCopy[] }> = {
@@ -114,7 +150,14 @@ const byLocale: Record<Locale, { hub: GuidesHubCopy; items: GuideCopy[] }> = {
   ru: { hub: guidesHubRu, items: guidesRu },
 }
 
-export { GUIDE_SLUGS, TEASER_GUIDE_SLUGS, type GuideSlug, type GuideCopy, type GuidesHubCopy }
+export {
+  GUIDE_SLUGS,
+  TEASER_GUIDE_SLUGS,
+  TEASER_GUIDE_SLUGS_RU,
+  type GuideSlug,
+  type GuideCopy,
+  type GuidesHubCopy,
+}
 
 export function getGuides(locale: Locale): GuideCopy[] {
   const items = byLocale[locale].items
@@ -148,7 +191,7 @@ export function getGuideForSolution(locale: Locale, solutionSlug: string): Guide
 }
 
 export function getAltGuidesForSolution(locale: Locale, solutionSlug: string): GuideCopy[] {
-  const slugs = SOLUTION_ALT_GUIDES[solutionSlug as SolutionSlug] ?? []
+  const slugs = altGuidesForSolution(locale, solutionSlug as SolutionSlug)
   return slugs.map((slug) => getGuide(locale, slug)).filter((item): item is GuideCopy => Boolean(item))
 }
 

@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import Cta from '@/components/Cta.astro'
 import { resolveLocale } from '@/i18n/config'
 import { loadPricedMessages } from '@/i18n'
-import { getGuide, getGuides, getGuidesHub, TEASER_GUIDE_SLUGS } from '@/data/guides'
+import { getGuide, getGuides, getGuidesHub, teaserGuideSlugs } from '@/data/guides'
 import LinkCard from '@/components/LinkCard.astro'
 import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { localePath } from '@/lib/site'
@@ -20,13 +20,14 @@ await loadVenueOffers()
 const hub = applyCatalogPricesDeep(getGuidesHub(locale), locale)
 const cardCta = `${hub.cardCta}${messages.common.linkArrow}`
 
+const teaserSlugs = teaserGuideSlugs(locale)
 const featured = applyCatalogPricesDeep(
-  TEASER_GUIDE_SLUGS.map((slug) => getGuide(locale, slug)).filter(
+  teaserSlugs.map((slug) => getGuide(locale, slug)).filter(
     (item): item is NonNullable<typeof item> => Boolean(item),
   ),
   locale,
 )
-const featuredSlugs = new Set<string>(TEASER_GUIDE_SLUGS)
+const featuredSlugs = new Set<string>(teaserSlugs)
 const more = applyCatalogPricesDeep(
   getGuides(locale).filter((item) => !featuredSlugs.has(item.slug)),
   locale,

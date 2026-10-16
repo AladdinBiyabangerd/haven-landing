@@ -348,11 +348,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Request a demo. We can model rooms and stations and walk booking, session and cash shifts — PC control can stay on LANGAME.',
     },
     ru: {
-      shortTitle: 'Альтернатива LANGAME для клубов',
-      h1: 'ПО PC-клуба vs время комнат — гид по альтернативе LANGAME',
-      seoTitle: 'Альтернатива LANGAME — ПО PC-клуба vs Heselo | Heselo',
+      shortTitle: 'Аналоги LANGAME',
+      h1: 'Аналоги LANGAME: что выбрать для PS и смешанного клуба',
+      seoTitle: 'Аналоги LANGAME: что выбрать для PS и смешанного клуба | Heselo',
       seoDescription:
-        'LANGAME — ПО станций PC/игрового клуба; Heselo — время комнат, бронь и касса. Heselo не заменяет LANGAME — таблица, ландшафт, FAQ — AZ, EN, RU.',
+        'LANGAME, SmartShell, SENET, IZI и Heselo: модель цены, ПК или консоли, бронь. Когда нужна ПО для компьютерного клуба, а когда — панель сеансов.',
       keywords: [
         'альтернатива langame',
         'альтернатива lan game',
