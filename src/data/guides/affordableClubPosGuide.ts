@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Sərfəli klub POS alternativi necə seçilir?',
       seoTitle: 'Sərfəli klub POS alternativi — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'Oyun, karaoke, bilyard, antikafe və launj üçün sərfəli POS: qərar meyarları, müqayisə cədvəli və {low} AZN/aydan Heselo Azərbaycan, ingilis və rus dillərindədir.',
+        'Oyun, karaoke, bilyard, antikafe və launj üçün sərfəli POS: qərar meyarları, müqayisə cədvəli və {low} {currency}/aydan Heselo Azərbaycan, ingilis və rus dillərindədir.',
       keywords: [
         'sərfəli klub POS',
         'ucuz klub POS',
@@ -29,7 +29,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Bu bələdçi sərfəli klub POS seçimini otaq-vaxt nişəsi ilə izah edir — Heselo {low} AZN/aydan rezervasiya, canlı sessiya, kassa və anbarı birləşdirir.',
+        'Ən ucuz POS həmişə ən sərfəli seçim deyil: klub vaxtını ayrıca cədvəldə izləmək əlavə iş yarada bilər. Bu bələdçi sərfəli klub POS seçimini otaq-vaxt nişəsi ilə izah edir — Heselo {low} {currency}/aydan rezervasiya, canlı sessiya, kassa və anbarı birləşdirir.',
       sections: [
         {
           id: 'when-heselo-fits',
@@ -41,7 +41,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
             'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} {currency}/aydan) vacibdir',
           ],
         },
 
@@ -83,7 +83,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Əsas fokus', 'Sifariş, menyu, çek', 'Otaq / stansiya / masa vaxtı'],
               ['Vaxt hesabı', 'Əlavə cədvəl və ya taymer', 'Canlı sessiya, uzadılma, tarif'],
               ['Rezervasiya', 'Masa/restoran axını', 'Otaq və stansiya təqvimi'],
-              ['Gizli xərc', 'İstifadə olunmayan modul + əl işi', 'Açıq paket: {low} AZN/aydan'],
+              ['Gizli xərc', 'İstifadə olunmayan modul + əl işi', 'Açıq paket: {low} {currency}/aydan'],
               ['Ən yaxşı uyğunluq', 'Kiçik restoran/kafe', 'Oyun, karaoke, bilyard, antikafe, launj'],
             ],
           },
@@ -122,7 +122,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo neçədən başlayır?',
-          a: 'Paketlər {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'Paketlər {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Heselo hansı məkanlar üçündür?',
@@ -146,7 +146,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'How to choose an affordable club POS alternative',
       seoTitle: 'Affordable Club POS Alternative — Rooms, Sessions | Heselo',
       seoDescription:
-        'Choose affordable POS for gaming, karaoke, billiards, anticafe and lounges: decision criteria, comparison table, Heselo from {low} AZN/month — AZ, EN, RU.',
+        'Choose affordable POS for gaming, karaoke, billiards, anticafe and lounges: decision criteria, comparison table, Heselo from {low} {currency}/month — AZ, EN, RU.',
       keywords: [
         'affordable club POS',
         'cheap club POS',
@@ -157,7 +157,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'The cheapest POS is not always the lowest-cost option if club time still lives in a spreadsheet. This guide explains affordable club POS choice for the room-time niche — Heselo from {low} AZN/month combines bookings, live sessions, cash and stock.',
+        'The cheapest POS is not always the lowest-cost option if club time still lives in a spreadsheet. This guide explains affordable club POS choice for the room-time niche — Heselo from {low} {currency}/month combines bookings, live sessions, cash and stock.',
       sections: [
         {
           id: 'when-heselo-fits',
@@ -169,7 +169,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, console or table hours',
             'Advance booking and session start on arrival are required',
             'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+            'AZ / EN / RU UI and public pricing (from {low} {currency}/month) matter',
           ],
         },
 
@@ -211,7 +211,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Primary focus', 'Orders, menus, receipts', 'Room / station / table time'],
               ['Time billing', 'Extra spreadsheet or timer', 'Live session, extension, rates'],
               ['Bookings', 'Table/restaurant flow', 'Room and station calendar'],
-              ['Hidden cost', 'Unused modules + manual work', 'Public plan: from {low} AZN/month'],
+              ['Hidden cost', 'Unused modules + manual work', 'Public plan: from {low} {currency}/month'],
               [
                 'Best fit',
                 'Small restaurant/café',
@@ -254,7 +254,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'What does Heselo cost?',
-          a: 'Plans start from {low} AZN per month and are listed publicly.',
+          a: 'Plans start from {low} {currency} per month and are listed publicly.',
         },
         {
           q: 'Which venues is Heselo for?',
@@ -278,7 +278,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Как выбрать доступную альтернативу POS-системе для клуба',
       seoTitle: 'Доступная клубная POS — комнаты, сеансы | Heselo',
       seoDescription:
-        'Выбор доступной POS для игровых, караоке-, бильярдных, антикафе- и лаунж-заведений: критерии, таблица, Heselo от {low} AZN/мес. — AZ, EN, RU.',
+        'Выбор доступной POS для игровых, караоке-, бильярдных, антикафе- и лаунж-заведений: критерии, таблица, Heselo от {low} {currency}/мес. — AZ, EN, RU.',
       keywords: [
         'доступная клубная POS',
         'дешёвая клубная POS',
@@ -288,7 +288,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         'Heselo',
       ],
       intro:
-        'Самая дешёвая POS не всегда обходится дешевле, если клубное время ведётся в таблице. Это руководство объясняет выбор доступной клубной POS для почасовой ниши — Heselo от {low} AZN в месяц объединяет бронь, живые сеансы, кассу и склад.',
+        'Самая дешёвая POS не всегда обходится дешевле, если клубное время ведётся в таблице. Это руководство объясняет выбор доступной клубной POS для почасовой ниши — Heselo от {low} {currency} в месяц объединяет бронь, живые сеансы, кассу и склад.',
       sections: [
         {
           id: 'when-heselo-fits',
@@ -300,7 +300,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, консоли или стола',
             'Нужны предварительная бронь и запуск сеанса по приходу',
             'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -342,7 +342,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Основной фокус', 'Заказы, меню, чеки', 'Время комнаты / станции / стола'],
               ['Учёт времени', 'Отдельная таблица или таймер', 'Живой сеанс, продление, тариф'],
               ['Бронирование', 'Поток зала/ресторана', 'Календарь комнат и станций'],
-              ['Скрытые затраты', 'Ненужные модули + ручная работа', 'Открытый тариф: от {low} AZN/мес.'],
+              ['Скрытые затраты', 'Ненужные модули + ручная работа', 'Открытый тариф: от {low} {currency}/мес.'],
               [
                 'Лучшее соответствие',
                 'Небольшой ресторан/кафе',
@@ -385,7 +385,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Сколько стоит Heselo?',
-          a: 'Тарифы от {low} AZN в месяц и открыто указаны на сайте.',
+          a: 'Тарифы от {low} {currency} в месяц и открыто указаны на сайте.',
         },
         {
           q: 'Для каких заведений Heselo?',

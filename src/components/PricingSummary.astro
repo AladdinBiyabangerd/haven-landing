@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { fillTemplate, formatMoney } from '@/lib/format'
 import { localePath } from '@/lib/site'
-import { getActiveOffers, loadVenueOffers } from '@/lib/venueOffers'
+import { loadVenueOffers, offersForLocale } from '@/lib/venueOffers'
 
 interface Props {
   locale: Locale
@@ -13,7 +13,7 @@ interface Props {
 const { locale, messages } = Astro.props
 const page = messages.pricing
 await loadVenueOffers()
-const offers = getActiveOffers()
+const offers = offersForLocale(locale)
 ---
 
 <section class="pricing-summary" aria-labelledby="pricing-summary-title">
@@ -24,12 +24,13 @@ const offers = getActiveOffers()
     {
       offers.map((offer) => {
         const from = offer.plans[0].monthlyFee
+        const currency = offer.plans[0].currency
         return (
           <li>
             <a href={`#${offer.slug}`}>
               <span class="name">{page.offers[offer.slug].name}</span>
               <span class="fee">
-                {fillTemplate(page.fromMonthly, { price: formatMoney(from, locale) })}
+                {fillTemplate(page.fromMonthly, { price: formatMoney(from, locale, currency) })}
               </span>
             </a>
           </li>

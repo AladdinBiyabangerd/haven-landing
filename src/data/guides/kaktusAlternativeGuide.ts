@@ -42,7 +42,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, masa və ya antikafe yeri saatı',
             'Bron → canlı sessiya → tarif və uzadılma',
             'İçki/qəlyanaltı sessiyaya və klub kassasına',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+            'AZ / EN / RU və açıq qiymət ({low} {currency}/aydan)',
           ],
         },
 
@@ -88,7 +88,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Xidmət müddəti', 'Canlı sessiya, uzadılma, tarif'],
               ['Müştəri kartı', 'Salon tarixçəsi, xidmətlər', 'Klub müştəri və sessiya prosesi'],
               ['Kassa', 'Salon ödənişi', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Salon paketi ilə', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Salon paketi ilə', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Tez-tez AZ', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -156,7 +156,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, AZ / EN / RU.',
+          a: '{low} {currency}/aydan, AZ / EN / RU.',
         },
         {
           q: 'Kaktus qiymətini necə müqayisə etməliyəm?',
@@ -209,7 +209,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, table or anticafe seat hours',
             'Book → live session → rates and extensions',
             'Drinks/snacks on session and club till',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+            'AZ / EN / RU and public pricing (from {low} {currency}/month)',
           ],
         },
 
@@ -253,7 +253,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Service duration', 'Live session, extension, rates'],
               ['Client card', 'Salon history, services', 'Club client and session contour'],
               ['Cash', 'Salon payment', 'Club shift + session sales'],
-              ['Pricing', 'Salon package', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Salon package', 'Public: from {low} {currency}/month'],
               ['Languages', 'Often AZ', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -321,7 +321,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, AZ / EN / RU.',
+          a: 'From {low} {currency}/month, AZ / EN / RU.',
         },
         {
           q: 'How to compare Kaktus pricing?',
@@ -374,7 +374,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, стола или места в антикафе',
             'Бронь → живой сеанс → тариф и продления',
             'Напитки/закуски к сеансу и клубной кассе',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -418,7 +418,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Длительность услуги', 'Живой сеанс, продление, тариф'],
               ['Карта клиента', 'История салона, услуги', 'Клубный клиент и сеанс'],
               ['Касса', 'Оплата в салоне', 'Клубная смена + продажи в сеансе'],
-              ['Цена', 'Салонный пакет', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Салонный пакет', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Часто AZ', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -486,7 +486,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU.',
         },
         {
           q: 'Как сравнить цену Kaktus?',

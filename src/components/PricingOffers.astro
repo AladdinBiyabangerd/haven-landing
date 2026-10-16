@@ -5,8 +5,8 @@ import { localePath } from '@/lib/site'
 import { fillTemplate, formatMoney } from '@/lib/format'
 import {
   crossoverPoints,
-  getActiveOffers,
   loadVenueOffers,
+  offersForLocale,
   resolvePlanMarketing,
   VENUE_STORAGE_KEY,
 } from '@/lib/venueOffers'
@@ -19,7 +19,8 @@ interface Props {
 const { locale, messages } = Astro.props
 const page = messages.pricing
 await loadVenueOffers()
-const offers = getActiveOffers()
+const offers = offersForLocale(locale)
+const displayCurrency = offers[0]?.plans[0]?.currency ?? 'AZN'
 const slugs = offers.map((offer) => offer.slug)
 const calculatorData = Object.fromEntries(
   offers.map((offer) => [
@@ -103,7 +104,7 @@ const PLAN_FEATURE_PREVIEW = 5
                     n: plan.includedReservations,
                   }),
                   fillTemplate(page.overage, {
-                    price: formatMoney(plan.overagePerReservation, locale),
+                    price: formatMoney(plan.overagePerReservation, locale, plan.currency),
                   }),
                   fillTemplate(page.oneVenue, {
                     n: plan.includedVenues,
@@ -123,21 +124,21 @@ const PLAN_FEATURE_PREVIEW = 5
                       {featured ? <span class="badge">{page.popular}</span> : null}
                     </header>
                     <p class="price">
-                      <span data-plan-price>{formatMoney(plan.monthlyFee, locale)}</span>
+                      <span data-plan-price>{formatMoney(plan.monthlyFee, locale, plan.currency)}</span>
                       <span data-plan-period>{page.periodMonthly}</span>
                     </p>
                     <p
                       class="price-alternative"
                       data-plan-alternative
                       data-monthly={fillTemplate(page.monthlyAlternative, {
-                        price: formatMoney(plan.monthlyFee, locale),
+                        price: formatMoney(plan.monthlyFee, locale, plan.currency),
                       })}
                       data-annual={fillTemplate(page.annualAlternative, {
-                        price: formatMoney(plan.annualFee, locale),
+                        price: formatMoney(plan.annualFee, locale, plan.currency),
                       })}
                     >
                       {fillTemplate(page.annualAlternative, {
-                        price: formatMoney(plan.annualFee, locale),
+                        price: formatMoney(plan.annualFee, locale, plan.currency),
                       })}
                     </p>
                     <p class="for-whom">{planCopy.forWhom}</p>
@@ -249,9 +250,9 @@ const PLAN_FEATURE_PREVIEW = 5
                           {page.planNames[plan.id]}
                           <span class="cheapest" data-cheapest hidden>{page.calculator.cheapest}</span>
                         </th>
-                        <td data-base-fee>{formatMoney(plan.monthlyFee, locale)}</td>
-                        <td data-overage-cost>{formatMoney(0, locale)}</td>
-                        <td data-total>{formatMoney(plan.monthlyFee, locale)}</td>
+                        <td data-base-fee>{formatMoney(plan.monthlyFee, locale, plan.currency)}</td>
+                        <td data-overage-cost>{formatMoney(0, locale, plan.currency)}</td>
+                        <td data-total>{formatMoney(plan.monthlyFee, locale, plan.currency)}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -298,7 +299,7 @@ const PLAN_FEATURE_PREVIEW = 5
   }
 </div>
 
-<script is:inline define:vars={{ calculatorData, locale, slugs, storageKey: VENUE_STORAGE_KEY }}>
+<script is:inline define:vars={{ calculatorData, locale, displayCurrency, slugs, storageKey: VENUE_STORAGE_KEY }}>
   const root = document.querySelector('[data-pricing-offers]')
   if (root instanceof HTMLElement) {
     const tabs = [...root.querySelectorAll('[data-type]')]
@@ -472,7 +473,7 @@ const PLAN_FEATURE_PREVIEW = 5
     const intlLocale = { az: 'az-AZ', en: 'en-GB', ru: 'ru-RU' }
     const money = new Intl.NumberFormat(intlLocale[locale] || 'az-AZ', {
       style: 'currency',
-      currency: 'AZN',
+      currency: displayCurrency || 'AZN',
       minimumFractionDigits: 0,
       maximumFractionDigits: 2,
     })

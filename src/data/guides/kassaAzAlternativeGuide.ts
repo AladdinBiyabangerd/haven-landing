@@ -42,7 +42,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
             'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} {currency}/aydan) vacibdir',
           ],
         },
 
@@ -88,7 +88,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Adətən ayrı proses', 'Canlı sessiya, uzadılma, tarif'],
               ['Mətbəx / menyu', 'Restoran modulundan asılı', 'Tam mətbəx POS əvəzi deyil'],
               ['Kassa növbəsi', 'Gündəlik satış növbəsi', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Brenddən aktual təklif', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Brenddən aktual təklif', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Provayderdən asılı', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -156,7 +156,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Kassa.az qiyməti ilə necə müqayisə etməliyəm?',
-          a: 'Kassa.az üzrə tarif, avadanlıq və inteqrasiya şərtlərini brendin özündən öyrənin — burada uydurma rəqəm yoxdur. Vaxt hesabı üçün ayrıca cədvəl saxlamağın xərcini də nəzərə alın. Heselo paketləri {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'Kassa.az üzrə tarif, avadanlıq və inteqrasiya şərtlərini brendin özündən öyrənin — burada uydurma rəqəm yoxdur. Vaxt hesabı üçün ayrıca cədvəl saxlamağın xərcini də nəzərə alın. Heselo paketləri {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Həm Kassa.az, həm Heselo saxlamaq olarmı?',
@@ -164,7 +164,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo neçə dildədir və qiyməti nədir?',
-          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Keçməzdən əvvəl necə yoxlaya bilərəm?',
@@ -209,7 +209,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, console or table hours',
             'Advance booking and session start on arrival are required',
             'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+            'AZ / EN / RU UI and public pricing (from {low} {currency}/month) matter',
           ],
         },
 
@@ -255,7 +255,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Usually a separate process', 'Live session, extension, rates'],
               ['Kitchen / menus', 'Depends on restaurant modules', 'Not a full kitchen POS'],
               ['Cash shift', 'Daily sales shift', 'Club shift + session sales'],
-              ['Pricing', 'Current quote from brand', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Current quote from brand', 'Public: from {low} {currency}/month'],
               ['Languages', 'Provider-dependent', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -323,7 +323,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'How should I compare Kassa.az pricing?',
-          a: 'Get current Kassa.az plan, hardware and integration terms from the brand itself — no invented figures here. Include the cost of keeping a separate time spreadsheet. Heselo plans start from {low} AZN per month and are listed publicly.',
+          a: 'Get current Kassa.az plan, hardware and integration terms from the brand itself — no invented figures here. Include the cost of keeping a separate time spreadsheet. Heselo plans start from {low} {currency} per month and are listed publicly.',
         },
         {
           q: 'Can we keep both Kassa.az and Heselo?',
@@ -331,7 +331,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Which languages does Heselo support and what does it cost?',
-          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} AZN per month and are listed publicly on this site.',
+          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} {currency} per month and are listed publicly on this site.',
         },
         {
           q: 'How can I check the fit before switching?',
@@ -376,7 +376,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, консоли или стола',
             'Нужны предварительная бронь и запуск сеанса по приходу',
             'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -422,7 +422,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Обычно отдельный процесс', 'Живой сеанс, продление, тариф'],
               ['Кухня / меню', 'Зависит от модулей', 'Не полноценная кухонная POS'],
               ['Кассовая смена', 'Смена продаж', 'Клубная смена + продажи в сеансе'],
-              ['Цена', 'Актуальное предложение бренда', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Актуальное предложение бренда', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Зависит от поставщика', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -490,7 +490,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Как сравнивать цену Kassa.az?',
-          a: 'Актуальные тарифы, оборудование и интеграцию Kassa.az уточняйте у самого бренда — без выдуманных цифр. Учтите затраты на отдельную таблицу учёта времени. Тарифы Heselo от {low} AZN в месяц и открыто на сайте.',
+          a: 'Актуальные тарифы, оборудование и интеграцию Kassa.az уточняйте у самого бренда — без выдуманных цифр. Учтите затраты на отдельную таблицу учёта времени. Тарифы Heselo от {low} {currency} в месяц и открыто на сайте.',
         },
         {
           q: 'Можно оставить и Kassa.az, и Heselo?',
@@ -498,7 +498,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Какие языки поддерживает Heselo и сколько она стоит?',
-          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} AZN в месяц и открыто указаны на сайте.',
+          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} {currency} в месяц и открыто указаны на сайте.',
         },
         {
           q: 'Как проверить систему до перехода?',

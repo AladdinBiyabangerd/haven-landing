@@ -45,7 +45,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
             'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} {currency}/aydan) vacibdir',
           ],
         },
 
@@ -92,7 +92,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Mətbəx / menyu', 'Restoran prosesinə uyğun', 'Tam mətbəx POS əvəzi deyil'],
               ['Çatdırılma', 'Restoran/POS ssenarilərinə bağlı', 'Klub sessiyasına fokus'],
               ['Kassa', 'Restoran növbəsi və çeklər', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Paket və təkliflə dəqiqləşdirin', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Paket və təkliflə dəqiqləşdirin', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Region və paketdən asılı', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -165,11 +165,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Clopos qiyməti ilə necə müqayisə etməliyəm?',
-          a: 'Clopos üzrə paket, avadanlıq və dəstək xərclərini rəsmi təkliflə dəqiqləşdirin — burada uydurma rəqəm yoxdur. Heselo paketləri {low} AZN/aydan başlayır və saytda açıq göstərilir; yalnız istifadə edəcəyiniz funksiyaları müqayisə edin.',
+          a: 'Clopos üzrə paket, avadanlıq və dəstək xərclərini rəsmi təkliflə dəqiqləşdirin — burada uydurma rəqəm yoxdur. Heselo paketləri {low} {currency}/aydan başlayır və saytda açıq göstərilir; yalnız istifadə edəcəyiniz funksiyaları müqayisə edin.',
         },
         {
           q: 'Heselo neçə dildədir və qiyməti nədir?',
-          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Keçməzdən əvvəl necə yoxlaya bilərəm?',
@@ -216,7 +216,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, console or table hours',
             'Advance booking and session start on arrival are required',
             'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+            'AZ / EN / RU UI and public pricing (from {low} {currency}/month) matter',
           ],
         },
 
@@ -263,7 +263,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Kitchen / menus', 'Built for restaurant workflows', 'Not a full kitchen POS'],
               ['Delivery', 'Tied to restaurant / POS scenarios', 'Club session focus'],
               ['Cash', 'Restaurant shifts and receipts', 'Club shifts + session sales'],
-              ['Pricing', 'Confirm via package and quote', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Confirm via package and quote', 'Public: from {low} {currency}/month'],
               ['Languages', 'Depends on region and package', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -336,11 +336,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'How should I compare Clopos pricing?',
-          a: 'Confirm Clopos package, hardware and support costs with an official quote — no invented figures here. Heselo plans start from {low} AZN per month and are listed publicly; compare only the capabilities you will actually use.',
+          a: 'Confirm Clopos package, hardware and support costs with an official quote — no invented figures here. Heselo plans start from {low} {currency} per month and are listed publicly; compare only the capabilities you will actually use.',
         },
         {
           q: 'Which languages does Heselo support and what does it cost?',
-          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} AZN per month and are listed publicly on this site.',
+          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} {currency} per month and are listed publicly on this site.',
         },
         {
           q: 'How can I check the fit before switching?',
@@ -387,7 +387,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, консоли или стола',
             'Нужны предварительная бронь и запуск сеанса по приходу',
             'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -434,7 +434,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Кухня / меню', 'Под ресторанные процессы', 'Не полноценная кухонная POS'],
               ['Доставка', 'Связана с ресторанными / POS-сценариями', 'Фокус на клубном сеансе'],
               ['Касса', 'Ресторанные смены и чеки', 'Клубные смены + продажи в сеансе'],
-              ['Цена', 'Уточняйте по пакету и предложению', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Уточняйте по пакету и предложению', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Зависит от региона и пакета', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -507,11 +507,11 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Как сравнивать цену Clopos?',
-          a: 'Уточните пакет, оборудование и поддержку Clopos по официальному предложению — выдуманных цифр здесь нет. Тарифы Heselo от {low} AZN в месяц и открыто указаны на сайте; сравнивайте только нужные вам функции.',
+          a: 'Уточните пакет, оборудование и поддержку Clopos по официальному предложению — выдуманных цифр здесь нет. Тарифы Heselo от {low} {currency} в месяц и открыто указаны на сайте; сравнивайте только нужные вам функции.',
         },
         {
           q: 'Какие языки поддерживает Heselo и сколько она стоит?',
-          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} AZN в месяц и открыто указаны на сайте.',
+          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} {currency} в месяц и открыто указаны на сайте.',
         },
         {
           q: 'Как проверить систему до перехода?',

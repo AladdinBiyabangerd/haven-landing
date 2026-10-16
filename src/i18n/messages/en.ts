@@ -49,7 +49,7 @@ export const en: Messages = {
   trust: {
     items: [
       '15-min demo, no card',
-      'From {low} AZN/mo',
+      'From {low} {currency}/mo',
       'Panel AZ / EN / RU',
       'Open pricing',
     ],
@@ -115,7 +115,7 @@ export const en: Messages = {
   },
   homePricing: {
     eyebrow: 'Pricing',
-    title: 'From {low} AZN',
+    title: 'From {low} {currency}',
     titleAccent: 'a month.',
     lead: '15-minute demo, no card required. Published rates by venue type.',
     ctaPricing: 'See plans',
@@ -165,7 +165,7 @@ export const en: Messages = {
       },
       {
         q: 'How much does it cost?',
-        a: 'Plans are published. Small-plan monthly starts at: gaming / PS {gaming} AZN, billiards {billiards} AZN, karaoke and lounges {karaoke} AZN, anti-café {antikafe} AZN. Medium, Large, and annual (two months free) are on the pricing page. Multi-branch venues can ask for a custom quote.',
+        a: 'Plans are published. Small-plan monthly starts at: gaming / PS {gaming} {currency}, billiards {billiards} {currency}, karaoke and lounges {karaoke} {currency}, anti-café {antikafe} {currency}. Medium, Large, and annual (two months free) are on the pricing page. Multi-branch venues can ask for a custom quote.',
         href: '/pricing',
         linkLabel: 'Open plans by venue type',
       },
@@ -240,7 +240,7 @@ export const en: Messages = {
     title: 'Business management software',
     titleAccent: 'for your venue’s daily work.',
     paragraphs: [
-      'Heselo is venue management software for Azerbaijan: gaming clubs, karaoke, billiards, anti-cafés, and room lounges use it for booking, live floor, cash, and inventory — for places that sell table, room, or station time (from ~{low} AZN/month).',
+      'Heselo is venue management software for Azerbaijan: gaming clubs, karaoke, billiards, anti-cafés, and room lounges use it for booking, live floor, cash, and inventory — for places that sell table, room, or station time (from ~{low} {currency}/month).',
       'If you are comparing restaurant POS tools like iiko or Clopos — kitchen and KDS are their strength. For room/PS time, bookings and cash shifts, Heselo is a simpler management alternative for room- and time-based venues.',
       'Heselo was created solely by Aladdin Biyabangerd in Baku — more on the About page.',
     ],
@@ -287,7 +287,7 @@ export const en: Messages = {
   },
   guidesPage: {
     updatedLabel: 'Last updated:',
-    pricingCta: 'Club plans — from {low} AZN/month',
+    pricingCta: 'Club plans — from {low} {currency}/month',
     demoCta: 'Request a 15-minute demo',
     relatedComparisonsTitle: 'More comparisons',
     altSeekingTitle: 'Looking at iiko, Clopos or Excel?',
@@ -400,7 +400,7 @@ export const en: Messages = {
     whatTitle: 'What is Heselo?',
     whatBody: [
       'Heselo is web software for venues that sell table, room, or PlayStation station time. Operators run reservations, the live floor (who is playing now), cash shifts, and inventory from one panel — not a kitchen POS or restaurant KDS.',
-      'Published plans start from about {low} AZN per month depending on venue type. The panel ships in Azerbaijani, English, and Russian so staff can work in the language they already use on shift.',
+      'Published plans start from about {low} {currency} per month depending on venue type. The panel ships in Azerbaijani, English, and Russian so staff can work in the language they already use on shift.',
     ],
     whoTitle: 'Who is Heselo for?',
     whoBody: [
@@ -544,7 +544,7 @@ export const en: Messages = {
     faq: [
       {
         q: 'How much does Heselo cost?',
-        a: 'Plans are published. Small-plan monthly starts at: gaming / PS {gaming} AZN, billiards {billiards} AZN, karaoke and room lounges {karaoke} AZN, anti-café {antikafe} AZN. Medium, Large, annual billing, and limits are in the table on this page. Multi-branch or out-of-plan volume can get a custom quote.',
+        a: 'Plans are published. Small-plan monthly starts at: gaming / PS {gaming} {currency}, billiards {billiards} {currency}, karaoke and room lounges {karaoke} {currency}, anti-café {antikafe} {currency}. Medium, Large, annual billing, and limits are in the table on this page. Multi-branch or out-of-plan volume can get a custom quote.',
         href: '/pricing',
         linkLabel: 'Full pricing table is here',
       },
@@ -554,11 +554,11 @@ export const en: Messages = {
       },
       {
         q: 'Why is karaoke more than PlayStation?',
-        a: 'PlayStation starts at {gaming} AZN because station schedules are simpler. Billiards starts at {billiards} AZN; karaoke and lounges start at {karaoke} AZN for room schedules, extensions, and cash shifts.',
+        a: 'PlayStation starts at {gaming} {currency} because station schedules are simpler. Billiards starts at {billiards} {currency}; karaoke and lounges start at {karaoke} {currency} for room schedules, extensions, and cash shifts.',
       },
       {
         q: 'Cheaper than Dine or MinuPOS?',
-        a: 'Those tools are mainly restaurant table and QR POS. Heselo is for room-time, live sessions, and club cash — from {low} AZN/month. Need kitchen and KDS? Keep a restaurant POS. For club and karaoke rooms, Heselo fits better.',
+        a: 'Those tools are mainly restaurant table and QR POS. Heselo is for room-time, live sessions, and club cash — from {low} {currency}/month. Need kitchen and KDS? Keep a restaurant POS. For club and karaoke rooms, Heselo fits better.',
       },
       {
         q: 'What is included in a plan?',
@@ -995,18 +995,18 @@ export const en: Messages = {
       'Azerbaijani / English / Russian',
     ],
     aggregateOfferDescription:
-      'Published monthly subscription plans by venue type from {low} AZN. Full table on the /pricing page. Custom quotes only for multi-venue or out-of-plan volume.',
+      'Published monthly subscription plans by venue type from {low} {currency}. Full table on the /pricing page. Custom quotes only for multi-venue or out-of-plan volume.',
     pages: {
       faq: {
         title: 'FAQ — Heselo pricing, features, demo | Heselo',
         description:
-          'Answers about Heselo: who it is for, pricing from {low} AZN/month, reservations, cash, inventory, the founder, and how to get a free demo.',
+          'Answers about Heselo: who it is for, pricing from {low} {currency}/month, reservations, cash, inventory, the founder, and how to get a free demo.',
         keywords: ['Heselo FAQ', 'Heselo questions', 'Heselo pricing', 'gaming club software FAQ', 'venue management system FAQ'],
       },
       home: {
         title: 'Heselo — booking & cash panel for gaming clubs and room venues',
         description:
-          'Heselo is a booking and cash panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges. Schedule, live session, and shift in one place — instead of WhatsApp/spreadsheets, not restaurant POS. From {low} AZN/month. Free demo.',
+          'Heselo is a booking and cash panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges. Schedule, live session, and shift in one place — instead of WhatsApp/spreadsheets, not restaurant POS. From {low} {currency}/month. Free demo.',
         keywords: [
           'Heselo',
           'venue management system',
@@ -1030,14 +1030,14 @@ export const en: Messages = {
         ],
       },
       pricing: {
-        title: 'Published pricing — from {low} AZN club panel | Heselo',
+        title: 'Published pricing — from {low} {currency} club panel | Heselo',
         description:
-          'Heselo prices are public: PS from {gaming}, billiards {billiards}, karaoke/lounge {karaoke}, anti-café {antikafe} AZN/month. Different plans by venue type; custom quote only as an add-on for multi-branch. Full table on the pricing page.',
+          'Heselo prices are public: PS from {gaming}, billiards {billiards}, karaoke/lounge {karaoke}, anti-café {antikafe} {currency}/month. Different plans by venue type; custom quote only as an add-on for multi-branch. Full table on the pricing page.',
         keywords: [
           'Heselo pricing',
           'Heselo price',
           'published club panel pricing',
-          'venue software from {low} AZN',
+          'venue software from {low} {currency}',
           'cheaper than minupos',
           'dine alternative pricing',
           'subscription plans',

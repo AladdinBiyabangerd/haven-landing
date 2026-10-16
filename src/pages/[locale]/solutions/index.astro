@@ -22,9 +22,9 @@ export function getStaticPaths() {
 const locale = resolveLocale(Astro.params.locale)
 const messages = await loadPricedMessages(locale)
 await loadVenueOffers()
-const hub = applyCatalogPricesDeep(getSolutionsHub(locale))
-const primary = applyCatalogPricesDeep(getSolutionsBySlugs(locale, PRIMARY_SOLUTION_SLUGS))
-const features = applyCatalogPricesDeep(getSolutionsBySlugs(locale, FEATURE_SOLUTION_SLUGS))
+const hub = applyCatalogPricesDeep(getSolutionsHub(locale), locale)
+const primary = applyCatalogPricesDeep(getSolutionsBySlugs(locale, PRIMARY_SOLUTION_SLUGS), locale)
+const features = applyCatalogPricesDeep(getSolutionsBySlugs(locale, FEATURE_SOLUTION_SLUGS), locale)
 const cardCta = `${hub.cardCta}${messages.common.linkArrow}`
 ---
 

@@ -49,7 +49,7 @@ export const az: Messages = {
   trust: {
     items: [
       '15 dəq demo — kart lazım deyil',
-      'Ayda {low} AZN-dən',
+      'Ayda {low} {currency}-dən',
       'Panel AZ / EN / RU',
       'Açıq tariflər',
     ],
@@ -115,7 +115,7 @@ export const az: Messages = {
   },
   homePricing: {
     eyebrow: 'Qiymət',
-    title: 'Ayda {low} AZN-dən',
+    title: 'Ayda {low} {currency}-dən',
     titleAccent: 'başlayır.',
     lead: '15 dəqiqəlik demo, kart tələb olunmur. Tariflər məkan tipinə görə açıqdır.',
     ctaPricing: 'Tariflərə baxın',
@@ -165,7 +165,7 @@ export const az: Messages = {
       },
       {
         q: 'Qiymət nə qədərdir?',
-        a: 'Tariflər açıqdır. Kiçik plan ayda belə başlayır: oyun klubu / PS {gaming} AZN, bilyard {billiards} AZN, karaoke və launj {karaoke} AZN, antikafe {antikafe} AZN. Orta, Böyük və illik (2 ay hədiyyə) qiymətlər səhifəsindədir. Bir neçə filial üçün fərdi təklif də mümkündür.',
+        a: 'Tariflər açıqdır. Kiçik plan ayda belə başlayır: oyun klubu / PS {gaming} {currency}, bilyard {billiards} {currency}, karaoke və launj {karaoke} {currency}, antikafe {antikafe} {currency}. Orta, Böyük və illik (2 ay hədiyyə) qiymətlər səhifəsindədir. Bir neçə filial üçün fərdi təklif də mümkündür.',
         href: '/pricing',
         linkLabel: 'Tarifləri tipə görə açın',
       },
@@ -240,7 +240,7 @@ export const az: Messages = {
     title: 'Biznes idarəetmə proqramı',
     titleAccent: 'məkanınızın gündəlik işləri üçün.',
     paragraphs: [
-      'Heselo Azərbaycan üçün məkan idarəetmə proqramıdır: oyun klubu, karaoke, bilyard, antikafe və otaqlı launjlar rezervasiya, canlı zal, kassa və anbar üçün ondan istifadə edir — masa, otaq və ya stansiya vaxtı satan məkanlar (~{low} AZN/aydan).',
+      'Heselo Azərbaycan üçün məkan idarəetmə proqramıdır: oyun klubu, karaoke, bilyard, antikafe və otaqlı launjlar rezervasiya, canlı zal, kassa və anbar üçün ondan istifadə edir — masa, otaq və ya stansiya vaxtı satan məkanlar (~{low} {currency}/aydan).',
       'iiko və ya Clopos kimi restoran POS-u axtarırsınızsa — mətbəx və KDS onlar üçündür. Otaq/PS vaxtı, rezervasiya və kassa növbəsi üçün Heselo otaq və vaxt əsaslı məkanlar üçün daha sadə idarəetmə alternatividir.',
       'Heselonu Bakıda Aladdin Biyabangerd tək başına yaradıb — ətraflı məlumat Haqqında səhifəsindədir.',
     ],
@@ -287,7 +287,7 @@ export const az: Messages = {
   },
   guidesPage: {
     updatedLabel: 'Son yeniləmə:',
-    pricingCta: 'Klub tarifləri — {low} AZN/aydan',
+    pricingCta: 'Klub tarifləri — {low} {currency}/aydan',
     demoCta: '15 dəqiqəlik demo istəyin',
     relatedComparisonsTitle: 'Digər müqayisələr',
     altSeekingTitle: 'iiko, Clopos və ya Excel axtarırsınız?',
@@ -400,7 +400,7 @@ export const az: Messages = {
     whatTitle: 'Heselo nədir?',
     whatBody: [
       'Heselo masa, otaq və ya PlayStation stansiyası vaxtı satan məkanlar üçün veb proqramdır. Operatorlar rezervasiya, canlı zal (indi kim oynayır), kassa növbəsi və anbarı bir paneldən aparır — mətbəx POS-u və ya restoran KDS-i deyil.',
-      'Açıq planlar məkan tipindən asılı olaraq ayda təxminən {low} AZN-dən başlayır. Panel Azərbaycan, İngilis və Rus dillərindədir ki, növbədəki heyət artıq işlədiyi dildə qalsın.',
+      'Açıq planlar məkan tipindən asılı olaraq ayda təxminən {low} {currency}-dən başlayır. Panel Azərbaycan, İngilis və Rus dillərindədir ki, növbədəki heyət artıq işlədiyi dildə qalsın.',
     ],
     whoTitle: 'Heselo kimlər üçündür?',
     whoBody: [
@@ -544,7 +544,7 @@ export const az: Messages = {
     faq: [
       {
         q: 'Heselonun qiyməti nədir?',
-        a: 'Tariflər açıqdır. Məkan tipinə görə Kiçik plan ayda belə başlayır: oyun klubu / PS {gaming} AZN, bilyard {billiards} AZN, karaoke və otaqlı launj {karaoke} AZN, antikafe {antikafe} AZN. Orta, Böyük, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Bir neçə filial və ya plana sığmayan həcm üçün fərdi təklif mümkündür.',
+        a: 'Tariflər açıqdır. Məkan tipinə görə Kiçik plan ayda belə başlayır: oyun klubu / PS {gaming} {currency}, bilyard {billiards} {currency}, karaoke və otaqlı launj {karaoke} {currency}, antikafe {antikafe} {currency}. Orta, Böyük, illik ödəniş və limitlər bu səhifənin cədvəlindədir. Bir neçə filial və ya plana sığmayan həcm üçün fərdi təklif mümkündür.',
         href: '/pricing',
         linkLabel: 'Tam tarif cədvəli burada',
       },
@@ -554,11 +554,11 @@ export const az: Messages = {
       },
       {
         q: 'Niyə karaoke PlayStation-dan bahadır?',
-        a: 'PlayStation {gaming} AZN-dən başlayır — stansiya cədvəli daha sadədir. Bilyard {billiards} AZN-dən başlayır; karaoke və launj isə otaq cədvəli, uzatma və kassa növbəsinə görə {karaoke} AZN-dən başlayır.',
+        a: 'PlayStation {gaming} {currency}-dən başlayır — stansiya cədvəli daha sadədir. Bilyard {billiards} {currency}-dən başlayır; karaoke və launj isə otaq cədvəli, uzatma və kassa növbəsinə görə {karaoke} {currency}-dən başlayır.',
       },
       {
         q: 'Dine və ya MinuPOS-dan sərfəlidirmi?',
-        a: 'Onlar əsasən restoran masa və QR POS sistemləridir. Heselo otaq-vaxt, canlı sessiya və klub kassası üçündür — ayda {low} AZN-dən. Mətbəx və KDS lazımdırsa restoran POS-u seçin; klub və karaoke otağı üçün Heselo daha uyğundur.',
+        a: 'Onlar əsasən restoran masa və QR POS sistemləridir. Heselo otaq-vaxt, canlı sessiya və klub kassası üçündür — ayda {low} {currency}-dən. Mətbəx və KDS lazımdırsa restoran POS-u seçin; klub və karaoke otağı üçün Heselo daha uyğundur.',
       },
       {
         q: 'Plana nə daxildir?',
@@ -995,18 +995,18 @@ export const az: Messages = {
       'Azərbaycan / İngilis / Rus',
     ],
     aggregateOfferDescription:
-        'Açıq aylıq abunə planları məkan tipinə görə {low} AZN-dən. Tam cədvəl Qiymətlər səhifəsindədir. Fərdi təklif yalnız bir neçə filial və ya standart plana sığmayan həcm üçündür.',
+        'Açıq aylıq abunə planları məkan tipinə görə {low} {currency}-dən. Tam cədvəl Qiymətlər səhifəsindədir. Fərdi təklif yalnız bir neçə filial və ya standart plana sığmayan həcm üçündür.',
     pages: {
       faq: {
         title: 'Tez-tez verilən suallar | Heselo',
         description:
-          'Heselo haqqında cavablar: kimlər üçündür, qiymət {low} AZN-dən, rezervasiya, kassa, anbar, təsisçi və pulsuz demo necə alınır.',
+          'Heselo haqqında cavablar: kimlər üçündür, qiymət {low} {currency}-dən, rezervasiya, kassa, anbar, təsisçi və pulsuz demo necə alınır.',
         keywords: ['Heselo FAQ', 'Heselo suallar', 'Heselo qiymət', 'oyun klubu proqramı suallar', 'klub idarəetmə sistemi'],
       },
       home: {
         title: 'Heselo — rezervasiya və kassa paneli | oyun klubu, karaoke, otaqlı məkan',
         description:
-          'Heselo oyun klubu, karaoke, bilyard, antikafe və otaqlı məkanlar üçün rezervasiya və kassa panelidir. Cədvəl, canlı sessiya və növbə bir yerdə — WhatsApp/Excel əvəzinə, restoran POS deyil. {low} AZN/aydan; pulsuz demo.',
+          'Heselo oyun klubu, karaoke, bilyard, antikafe və otaqlı məkanlar üçün rezervasiya və kassa panelidir. Cədvəl, canlı sessiya və növbə bir yerdə — WhatsApp/Excel əvəzinə, restoran POS deyil. {low} {currency}/aydan; pulsuz demo.',
         keywords: [
           'Heselo',
           'məkan idarəetmə sistemi',
@@ -1030,14 +1030,14 @@ export const az: Messages = {
         ],
       },
       pricing: {
-        title: 'Açıq tariflər — {low} AZN-dən klub paneli | Heselo',
+        title: 'Açıq tariflər — {low} {currency}-dən klub paneli | Heselo',
         description:
-            'Heselo qiymətləri açıqdır: PS {gaming}, bilyard {billiards}, karaoke/launj {karaoke}, antikafe {antikafe} AZN/aydan. Məkan tipinə görə fərqli planlar; bir neçə filial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
+            'Heselo qiymətləri açıqdır: PS {gaming}, bilyard {billiards}, karaoke/launj {karaoke}, antikafe {antikafe} {currency}/aydan. Məkan tipinə görə fərqli planlar; bir neçə filial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
         keywords: [
           'Heselo qiymət',
           'Heselo tarif',
           'açıq klub paneli qiyməti',
-          '{low} AZN məkan proqramı',
+          '{low} {currency} məkan proqramı',
           'minupos-dan sərfəli',
           'dine-dən sərfəli klub',
           'abunə planı',

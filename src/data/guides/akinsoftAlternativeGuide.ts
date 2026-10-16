@@ -41,7 +41,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Öncədən bron və otaq/stansiya təqvimi',
             'Canlı sessiya, uzadılma, tarif paketləri',
             'Klub növbəsi və sessiyaya məhsul satışı',
-            'Açıq: {low} AZN/aydan',
+            'Açıq: {low} {currency}/aydan',
           ],
         },
 
@@ -87,7 +87,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Masa/konsol server', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'Kafe/modul prosesi', 'Klub növbəsi + sessiya satışı'],
               ['Anbar', 'Modul ilə mümkündür', 'Sessiyaya bağlı satış və anbar'],
-              ['Qiymət', 'Modul/lisenziya (sorğu)', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Modul/lisenziya (sorğu)', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'TR fokus', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -148,7 +148,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, AZ / EN / RU.',
+          a: '{low} {currency}/aydan, AZ / EN / RU.',
         },
         {
           q: 'Akinsoft qiymətini necə müqayisə etməliyəm?',
@@ -203,7 +203,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Advance booking and room/station calendar',
             'Live session, extensions, rate packages',
             'Club shift and product sales on sessions',
-            'Public: from {low} AZN/month',
+            'Public: from {low} {currency}/month',
           ],
         },
 
@@ -249,7 +249,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Table/console server', 'Live session, extension, rates'],
               ['Cash', 'Café/module contour', 'Club shift + session sales'],
               ['Stock', 'Possible via modules', 'Session sales and stock'],
-              ['Pricing', 'Modules/licence (quote)', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Modules/licence (quote)', 'Public: from {low} {currency}/month'],
               ['Languages', 'TR focus', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -310,7 +310,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, AZ / EN / RU.',
+          a: 'From {low} {currency}/month, AZ / EN / RU.',
         },
         {
           q: 'How to compare Akinsoft pricing?',
@@ -364,7 +364,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Предварительная бронь и календарь комнат/станций',
             'Живой сеанс, продление, пакеты тарифов',
             'Клубная смена и продажи к сеансу',
-            'Открыто: от {low} AZN/мес.',
+            'Открыто: от {low} {currency}/мес.',
           ],
         },
 
@@ -410,7 +410,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Сервер столов/консолей', 'Живой сеанс, продление, тариф'],
               ['Касса', 'Контур кафе/модулей', 'Клубная смена + продажи в сеансе'],
               ['Склад', 'Возможен через модули', 'Продажи к сеансу и склад'],
-              ['Цена', 'Модули/лицензия (запрос)', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Модули/лицензия (запрос)', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Фокус TR', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -471,7 +471,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU.',
         },
         {
           q: 'Как сравнить цену Akinsoft?',

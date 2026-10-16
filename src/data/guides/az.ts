@@ -335,7 +335,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Launj bar proqramı axtarıram. Bu həll uyğundur?',
-        a: 'Bu yazı otaqlı launj prosesini izah edir. Launj bar idarəetmə proqramı (məhsul) axtarırsınızsa — otaqlı launj həll səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı və kassa bir paneldə; Kiçik plan {launj} AZN/aydan.',
+        a: 'Bu yazı otaqlı launj prosesini izah edir. Launj bar idarəetmə proqramı (məhsul) axtarırsınızsa — otaqlı launj həll səhifəsinə keçin: VIP otaq bronu, canlı sessiya, bar satışı və kassa bir paneldə; Kiçik plan {launj} {currency}/aydan.',
       },
       {
         q: 'Otaqdan kənar bar satışı da eyni kassadan keçə bilər?',
@@ -443,7 +443,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Antikafe proqramı neçəyə başa gəlir?',
-        a: 'Heselo-da antikafe üçün Kiçik plan {antikafe} AZN/aydan başlayır. Digər planlar və illik ödəniş variantları qiymətlər səhifəsində göstərilir.',
+        a: 'Heselo-da antikafe üçün Kiçik plan {antikafe} {currency}/aydan başlayır. Digər planlar və illik ödəniş variantları qiymətlər səhifəsində göstərilir.',
       },
       {
         q: 'Demo necə əldə edilir?',
@@ -531,7 +531,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'PS klub proqramı neçəyədir?',
-        a: 'Heselo-da oyun klubu üçün Kiçik plan {gaming} AZN/aydan başlayır. Daha çox stansiya üçün Orta və Böyük planlar mövcuddur.',
+        a: 'Heselo-da oyun klubu üçün Kiçik plan {gaming} {currency}/aydan başlayır. Daha çox stansiya üçün Orta və Böyük planlar mövcuddur.',
       },
       {
         q: 'Demo zamanı nəyi yoxlamaq lazımdır?',
@@ -716,7 +716,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Karaoke rezervasiya sistemi neçəyə başa gəlir?',
-        a: 'Heselo-da karaoke üçün Kiçik plan {karaoke} AZN/aydan başlayır. Digər planların qiymətləri də açıq şəkildə göstərilir.',
+        a: 'Heselo-da karaoke üçün Kiçik plan {karaoke} {currency}/aydan başlayır. Digər planların qiymətləri də açıq şəkildə göstərilir.',
       },
       {
         q: 'İçkiləri əvvəlcədən bronla əlaqələndirmək olar?',
@@ -831,13 +831,13 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Heselo qiyməti nədir? Açıq tariflər izahı',
     seoTitle: 'Heselo qiyməti — məkan tipinə görə açıq tariflər',
     seoDescription:
-      'Heselo planları: PS {gaming}, bilyard {billiards}, antikafe {antikafe}, karaoke və launj {karaoke} AZN/aydan. Planlar, illik ödəniş, fərdi təklif və pulsuz sınaq/demo.',
+      'Heselo planları: PS {gaming}, bilyard {billiards}, antikafe {antikafe}, karaoke və launj {karaoke} {currency}/aydan. Planlar, illik ödəniş, fərdi təklif və pulsuz sınaq/demo.',
     keywords: [
       'Heselo qiymət',
       'Heselo tarif',
       'Heselo neçəyə',
       'klub paneli qiyməti',
-      '{low} AZN məkan proqramı',
+      '{low} {currency} məkan proqramı',
       'klub proqramı pulsuz sınaq',
     ],
     datePublished: '2026-09-19',
@@ -849,7 +849,7 @@ export const guidesAz: GuideCopy[] = [
         id: 'published',
         title: 'Başlanğıc qiymətlər hansılardır?',
         paragraphs: [
-          'Kiçik plan üçün başlanğıc aylıq tariflər belədir: oyun klubu / PS — {gaming} AZN, bilyard — {billiards} AZN, antikafe — {antikafe} AZN, karaoke və otaqlı launj — {karaoke} AZN.',
+          'Kiçik plan üçün başlanğıc aylıq tariflər belədir: oyun klubu / PS — {gaming} {currency}, bilyard — {billiards} {currency}, antikafe — {antikafe} {currency}, karaoke və otaqlı launj — {karaoke} {currency}.',
           'Orta və Böyük planların qiyməti, limitləri və illik ödəniş variantları qiymətlər səhifəsindəki cədvəldə göstərilir.',
         ],
       },
@@ -886,15 +886,15 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'PS klub üçün minimum tarif nə qədərdir?',
-        a: 'Kiçik plan {gaming} AZN/aydan başlayır.',
+        a: 'Kiçik plan {gaming} {currency}/aydan başlayır.',
       },
       {
         q: 'Karaoke üçün minimum tarif nə qədərdir?',
-        a: 'Kiçik plan {karaoke} AZN/aydan başlayır.',
+        a: 'Kiçik plan {karaoke} {currency}/aydan başlayır.',
       },
       {
         q: 'Antikafe üçün tarif nə qədərdir?',
-        a: 'Kiçik plan {antikafe} AZN/aydan başlayır.',
+        a: 'Kiçik plan {antikafe} {currency}/aydan başlayır.',
       },
       {
         q: 'Klub proqramı üçün pulsuz sınaq / demo varmı?',

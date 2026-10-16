@@ -12,8 +12,8 @@ export function getMessages(locale: Locale): Messages {
   return catalogs[locale]
 }
 
-/** Warm subscription catalog, then fill {low}/{gaming}/… in copy. */
+/** Warm subscription catalog, then fill {low}/{gaming}/{currency}/… in copy. */
 export async function loadPricedMessages(locale: Locale): Promise<Messages> {
   await loadVenueOffers()
-  return applyCatalogPricesDeep(getMessages(locale))
+  return applyCatalogPricesDeep(getMessages(locale), locale)
 }

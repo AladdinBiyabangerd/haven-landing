@@ -17,6 +17,7 @@ await loadVenueOffers()
 const g = messages.guidesTeaser
 const guides = applyCatalogPricesDeep(
   getGuides(locale).filter((item) => (TEASER_GUIDE_SLUGS as readonly string[]).includes(item.slug)),
+  locale,
 )
 ---
 

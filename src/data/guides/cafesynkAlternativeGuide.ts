@@ -39,7 +39,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'AZ / EN / RU və yerli dəstək gözləntisi',
-            'Açıq: {low} AZN/aydan',
+            'Açıq: {low} {currency}/aydan',
             'Bron → sessiya → uzadılma → kassa',
             'Yalnız konsol deyil — otaq-vaxt ümumən',
           ],
@@ -87,7 +87,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Konsol sessiya / tarif', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa / bar', 'Launj əməliyyatı', 'Klub növbəsi + sessiya satışı'],
               ['PC diskless', 'Əvəz etmir', 'Əvəz etmir'],
-              ['Qiymət', 'Abunə (sorğu)', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Abunə (sorğu)', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'EN fokus (tipik)', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -132,7 +132,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Konsol/otaq siyahısı və tariflər',
             'Bron → sessiya → bar → növbə',
             'Dil və dəstək',
-            'Rəsmi CafeSynk qiyməti vs {low} AZN',
+            'Rəsmi CafeSynk qiyməti vs {low} {currency}',
             'PC proqram lazımdırmı',
           ],
         },
@@ -148,7 +148,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, AZ / EN / RU.',
+          a: '{low} {currency}/aydan, AZ / EN / RU.',
         },
         {
           q: 'CafeSynk qiymətini necə müqayisə etməliyəm?',
@@ -201,7 +201,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Expectation of AZ / EN / RU and local support',
-            'Public: from {low} AZN/month',
+            'Public: from {low} {currency}/month',
             'Book → session → extension → cash',
             'Not console-only — room-time generally',
           ],
@@ -249,7 +249,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Console session / tariff', 'Live session, extension, rates'],
               ['Cash / bar', 'Lounge operations', 'Club shift + session sales'],
               ['PC diskless', 'Does not replace', 'Does not replace'],
-              ['Pricing', 'Subscription (quote)', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Subscription (quote)', 'Public: from {low} {currency}/month'],
               ['Languages', 'EN focus (typical)', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -294,7 +294,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Console/room list and rates',
             'Book → session → bar → shift',
             'Language and support',
-            'Official CafeSynk price vs {low} AZN',
+            'Official CafeSynk price vs {low} {currency}',
             'Do you need PC software',
           ],
         },
@@ -310,7 +310,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, AZ / EN / RU.',
+          a: 'From {low} {currency}/month, AZ / EN / RU.',
         },
         {
           q: 'How to compare CafeSynk pricing?',
@@ -363,7 +363,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Ожидание AZ / EN / RU и локальной поддержки',
-            'Открыто: от {low} AZN/мес.',
+            'Открыто: от {low} {currency}/мес.',
             'Бронь → сеанс → продление → касса',
             'Не только консоли — время комнат в целом',
           ],
@@ -411,7 +411,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Консольный сеанс / тариф', 'Живой сеанс, продление, тариф'],
               ['Касса / бар', 'Операции lounge', 'Клубная смена + продажи в сеансе'],
               ['PC diskless', 'Не заменяет', 'Не заменяет'],
-              ['Цена', 'Подписка (запрос)', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Подписка (запрос)', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Фокус EN (типично)', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -456,7 +456,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Список консолей/комнат и тарифов',
             'Бронь → сеанс → бар → смена',
             'Язык и поддержка',
-            'Официальная цена CafeSynk vs {low} AZN',
+            'Официальная цена CafeSynk vs {low} {currency}',
             'Нужен ли PC-софт',
           ],
         },
@@ -472,7 +472,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU.',
         },
         {
           q: 'Как сравнить цену CafeSynk?',

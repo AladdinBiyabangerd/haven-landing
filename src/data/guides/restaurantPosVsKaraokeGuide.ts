@@ -43,7 +43,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: karaoke/launj otağı saatı',
             'Otaq təqvimi və üst-üstə bronun qarşısı vacibdir',
             'Uzatma, tarif paketi və növbə kassası bir yerdə olmalıdır',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+            'AZ / EN / RU və açıq qiymət ({low} {currency}/aydan)',
           ],
         },
 
@@ -89,7 +89,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Sifariş mərkəzdə', 'Canlı sessiya, uzadılma, tarif'],
               ['Menyu / mətbəx', 'Güclü restoran prosesi', 'Sessiyaya əlavə satış; tam mətbəx POS deyil'],
               ['Kassa', 'Restoran növbəsi', 'Klub növbəsi + otaq satışı'],
-              ['Qiymət', 'Paket və təkliflə', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Paket və təkliflə', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Paketdən asılı', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -157,7 +157,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti və dilləri?',
-          a: '{low} AZN/aydan, AZ / EN / RU, saytda açıq.',
+          a: '{low} {currency}/aydan, AZ / EN / RU, saytda açıq.',
         },
         {
           q: 'Restoran POS qiymətini necə müqayisə etməliyəm?',
@@ -210,7 +210,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: karaoke/lounge room hours',
             'Room calendar and avoiding double bookings matter',
             'Extensions, rate packages and shift cash in one place',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+            'AZ / EN / RU and public pricing (from {low} {currency}/month)',
           ],
         },
 
@@ -256,7 +256,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Orders centred', 'Live session, extension, rates'],
               ['Menus / kitchen', 'Strong restaurant stack', 'Session add-on sales; not full kitchen POS'],
               ['Cash', 'Restaurant shifts', 'Club shift + room sales'],
-              ['Pricing', 'Via package and quote', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Via package and quote', 'Public: from {low} {currency}/month'],
               ['Languages', 'Package-dependent', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -324,7 +324,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing and languages?',
-          a: 'From {low} AZN/month, AZ / EN / RU, listed publicly.',
+          a: 'From {low} {currency}/month, AZ / EN / RU, listed publicly.',
         },
         {
           q: 'How to compare restaurant POS pricing?',
@@ -377,7 +377,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы караоке/лаунж-комнаты',
             'Календарь комнат и защита от двойных броней',
             'Продления, пакеты тарифов и касса смены в одном месте',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -423,7 +423,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Заказы в центре', 'Живой сеанс, продление, тариф'],
               ['Меню / кухня', 'Сильный ресторанный стек', 'Допродажи к сеансу; не полная кухонная POS'],
               ['Касса', 'Ресторанные смены', 'Клубная смена + продажи комнат'],
-              ['Цена', 'По пакету и предложению', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'По пакету и предложению', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Зависит от пакета', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -491,7 +491,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена и языки Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU, открыто на сайте.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU, открыто на сайте.',
         },
         {
           q: 'Как сравнивать цену ресторанной POS?',

@@ -17,17 +17,19 @@ export function getStaticPaths() {
 const locale = resolveLocale(Astro.params.locale)
 const messages = await loadPricedMessages(locale)
 await loadVenueOffers()
-const hub = applyCatalogPricesDeep(getGuidesHub(locale))
+const hub = applyCatalogPricesDeep(getGuidesHub(locale), locale)
 const cardCta = `${hub.cardCta}${messages.common.linkArrow}`
 
 const featured = applyCatalogPricesDeep(
   TEASER_GUIDE_SLUGS.map((slug) => getGuide(locale, slug)).filter(
     (item): item is NonNullable<typeof item> => Boolean(item),
   ),
+  locale,
 )
 const featuredSlugs = new Set<string>(TEASER_GUIDE_SLUGS)
 const more = applyCatalogPricesDeep(
   getGuides(locale).filter((item) => !featuredSlugs.has(item.slug)),
+  locale,
 )
 ---
 

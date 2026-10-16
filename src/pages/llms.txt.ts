@@ -16,26 +16,26 @@ import {
 
 export const GET: APIRoute = async () => {
   await loadVenueOffers()
-  const p = catalogPriceVars()
+  const p = catalogPriceVars('az')
 
   const body = `# Heselo — https://heselo.online
 
 > Heselo — Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün rezervasiya, canlı zal, kassa və anbar paneli (mətbəx POS deyil).
 > Venue management SaaS: room/table/station timed sessions — booking, live floor, cash shift, inventory.
-> Languages: az (default), en, ru. Currency: AZN. Market: Azerbaijan.
+> Languages: az (default), en, ru. Currencies: AZN (az), RUB (ru), USD (en). Primary market: Azerbaijan.
 > Not a restaurant kitchen POS — lighter club panel vs iiko, Clopos, Dine, Restomas, MinuPOS when the product is room-time, not kitchen/KDS.
 
 ## One-line entity
 
-Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan: schedule + live sessions + cash drawer + inventory in one web panel. Published pricing from ${p.low} AZN/month by venue type (see Pricing section). Free demo via contact form or WhatsApp. Sole founder: Aladdin Biyabangerd (https://heselo.online/az/about/).
+Heselo is SaaS for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges in Azerbaijan: schedule + live sessions + cash drawer + inventory in one web panel. Published pricing from ${p.low} ${p.currency}/month by venue type (see Pricing section). Free demo via contact form or WhatsApp. Sole founder: Aladdin Biyabangerd (https://heselo.online/az/about/).
 
 ## Pricing (published)
 
 Prices are **public** on the pricing page — not quote-only B2B. Different starting fees by venue category so plans fit each kind of business. Custom quotes are an **add-on** for multi-branch or out-of-plan volume only.
 
-Starting monthly AZN (Small / Kiçik plan) — live from public subscription catalog API:
+Starting monthly ${p.currency} (Small / Kiçik plan) — live from public subscription catalog API:
 
-| Venue type | From (AZN/month) |
+| Venue type | From (${p.currency}/month) |
 |------------|------------------|
 | Gaming / PlayStation club | ${p.gaming} |
 | Billiards | ${p.billiards} |

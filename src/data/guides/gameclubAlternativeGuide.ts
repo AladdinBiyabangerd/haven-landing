@@ -39,7 +39,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'AZ / EN / RU interfeys və dəstək gözləntisi',
-            'Açıq qiymət: {low} AZN/aydan',
+            'Açıq qiymət: {low} {currency}/aydan',
             'Otaq-vaxt + bar/anbar + növbə bir axında',
             'Yalnız PS deyil — karaoke/bilyard/antikafe də',
           ],
@@ -87,7 +87,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Kabin sessiyası, tarif', 'Canlı sessiya, uzadılma, tarif'],
               ['Bar / POS', 'Sessiyaya bağlı sifariş', 'Sessiya satışı + anbar'],
               ['PC diskless', 'Əvəz etmir (özləri də deyir)', 'Əvəz etmir'],
-              ['Qiymət', 'Abunə (sayt/sorğu)', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Abunə (sayt/sorğu)', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'EN fokus', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -132,7 +132,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Kabin/otaq siyahısı və tariflər',
             'Bron → sessiya → bar → növbə bağlanışı',
             'Dil və dəstək kanalı',
-            'Qiymət: rəsmi GameClub vs {low} AZN Heselo',
+            'Qiymət: rəsmi GameClub vs {low} {currency} Heselo',
             'PC proqram lazımdırmı — ayrıca qərar',
           ],
         },
@@ -148,7 +148,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, AZ / EN / RU.',
+          a: '{low} {currency}/aydan, AZ / EN / RU.',
         },
         {
           q: 'GameClub qiymətini necə müqayisə etməliyəm?',
@@ -201,7 +201,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Expectation of AZ / EN / RU UI and support',
-            'Public pricing from {low} AZN/month',
+            'Public pricing from {low} {currency}/month',
             'Room-time + bar/stock + shift in one flow',
             'Not PS-only — karaoke/billiards/anticafe too',
           ],
@@ -249,7 +249,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Booth session, tariffs', 'Live session, extension, rates'],
               ['Bar / POS', 'Orders on sessions', 'Session sales + stock'],
               ['PC diskless', 'Does not replace (they say so)', 'Does not replace'],
-              ['Pricing', 'Subscription (site/quote)', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Subscription (site/quote)', 'Public: from {low} {currency}/month'],
               ['Languages', 'EN focus', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -294,7 +294,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Booth/room list and rates',
             'Book → session → bar → shift close',
             'Language and support channel',
-            'Price: official GameClub vs {low} AZN Heselo',
+            'Price: official GameClub vs {low} {currency} Heselo',
             'Do you need PC software — separate decision',
           ],
         },
@@ -310,7 +310,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, AZ / EN / RU.',
+          a: 'From {low} {currency}/month, AZ / EN / RU.',
         },
         {
           q: 'How to compare GameClub pricing?',
@@ -363,7 +363,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           ],
           bullets: [
             'Ожидание UI и поддержки AZ / EN / RU',
-            'Открытая цена от {low} AZN/мес.',
+            'Открытая цена от {low} {currency}/мес.',
             'Время комнат + бар/склад + смена в одном потоке',
             'Не только PS — также караоке/бильярд/антикафе',
           ],
@@ -411,7 +411,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Booth-сеанс, тарифы', 'Живой сеанс, продление, тариф'],
               ['Бар / POS', 'Заказы к сеансу', 'Продажи в сеансе + склад'],
               ['PC diskless', 'Не заменяет (сами так пишут)', 'Не заменяет'],
-              ['Цена', 'Подписка (сайт/КП)', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Подписка (сайт/КП)', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Фокус EN', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -456,7 +456,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Список booth/комнат и тарифов',
             'Бронь → сеанс → бар → закрытие смены',
             'Язык и канал поддержки',
-            'Цена: официальный GameClub vs {low} AZN Heselo',
+            'Цена: официальный GameClub vs {low} {currency} Heselo',
             'Нужен ли PC-софт — отдельное решение',
           ],
         },
@@ -472,7 +472,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU.',
         },
         {
           q: 'Как сравнить цену GameClub?',

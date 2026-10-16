@@ -45,7 +45,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
             'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} {currency}/aydan) vacibdir',
           ],
         },
 
@@ -95,7 +95,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Sifariş və ya satış mərkəzdə', 'Canlı sessiya, uzadılma, tarif'],
               ['Mətbəx / satış', 'Restoran və ya satış prosesinə uyğun', 'Tam mətbəx/pərakəndə POS əvəzi deyil'],
               ['Kassa', 'Restoran/satış növbəsi və çeklər', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Paket və təkliflə dəqiqləşdirin', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Paket və təkliflə dəqiqləşdirin', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Region və paketdən asılı', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -160,7 +160,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Restomas qiyməti ilə necə müqayisə etməliyəm?',
-          a: 'Restomas üzrə paket, avadanlıq və dəstək xərclərini rəsmi təkliflə dəqiqləşdirin. Heselo paketləri {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'Restomas üzrə paket, avadanlıq və dəstək xərclərini rəsmi təkliflə dəqiqləşdirin. Heselo paketləri {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Barda mətbəx, otaqlarda isə saat satırıq — nə etmək olar?',
@@ -168,7 +168,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo neçə dildədir və qiyməti nədir?',
-          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Keçməzdən əvvəl necə yoxlaya bilərəm?',
@@ -215,7 +215,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, console or table hours',
             'Advance booking and session start on arrival are required',
             'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+            'AZ / EN / RU UI and public pricing (from {low} {currency}/month) matter',
           ],
         },
 
@@ -269,7 +269,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Orders or sales centred', 'Live session, extension, rates'],
               ['Kitchen / sales', 'Built for restaurant or sales workflows', 'Not a full kitchen/retail POS'],
               ['Cash', 'Restaurant/sales shifts and receipts', 'Club shifts + session sales'],
-              ['Pricing', 'Confirm via package and quote', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Confirm via package and quote', 'Public: from {low} {currency}/month'],
               ['Languages', 'Depends on region and package', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -334,7 +334,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'How should I compare Restomas pricing?',
-          a: 'Confirm Restomas package, hardware and support costs with an official quote. Heselo plans start from {low} AZN per month and are listed publicly.',
+          a: 'Confirm Restomas package, hardware and support costs with an official quote. Heselo plans start from {low} {currency} per month and are listed publicly.',
         },
         {
           q: 'We have a kitchen bar and rooms sold by the hour — what then?',
@@ -342,7 +342,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Which languages does Heselo support and what does it cost?',
-          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} AZN per month and are listed publicly on this site.',
+          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} {currency} per month and are listed publicly on this site.',
         },
         {
           q: 'How can I check the fit before switching?',
@@ -389,7 +389,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, консоли или стола',
             'Нужны предварительная бронь и запуск сеанса по приходу',
             'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -439,7 +439,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Заказы или продажи в центре', 'Живой сеанс, продление, тариф'],
               ['Кухня / продажи', 'Под ресторанные или торговые процессы', 'Не полноценная кухонная/розничная POS'],
               ['Касса', 'Ресторанные/торговые смены и чеки', 'Клубные смены + продажи в сеансе'],
-              ['Цена', 'Уточняйте по пакету и предложению', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Уточняйте по пакету и предложению', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Зависит от региона и пакета', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -504,7 +504,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Как сравнивать цену Restomas?',
-          a: 'Уточните пакет, оборудование и поддержку Restomas по официальному предложению. Тарифы Heselo от {low} AZN в месяц и открыто указаны на сайте.',
+          a: 'Уточните пакет, оборудование и поддержку Restomas по официальному предложению. Тарифы Heselo от {low} {currency} в месяц и открыто указаны на сайте.',
         },
         {
           q: 'Есть бар с кухней и комнаты с почасовой оплатой — что делать?',
@@ -512,7 +512,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Какие языки поддерживает Heselo и сколько она стоит?',
-          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} AZN в месяц и открыто указаны на сайте.',
+          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} {currency} в месяц и открыто указаны на сайте.',
         },
         {
           q: 'Как проверить систему до перехода?',

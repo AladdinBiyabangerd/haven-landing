@@ -43,7 +43,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Öncədən bron və otaq/stansiya təqvimi',
             'Canlı sessiya, uzadılma və tarif paketləri',
             'Klub növbəsi və sessiyaya məhsul satışı',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+            'AZ / EN / RU və açıq qiymət ({low} {currency}/aydan)',
           ],
         },
 
@@ -89,7 +89,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Taymer start/stop', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'Manual və ya minimal', 'Klub növbəsi + sessiya satışı'],
               ['Anbar', 'Adətən yox', 'Sessiyaya bağlı satış və anbar izləmə'],
-              ['Qiymət', 'Lisenziya/stansiya ilə', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Lisenziya/stansiya ilə', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Tez-tez AZ', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -157,7 +157,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, saytda açıq; AZ, EN, RU.',
+          a: '{low} {currency}/aydan, saytda açıq; AZ, EN, RU.',
         },
         {
           q: 'Hasansoft qiymətini necə müqayisə etməliyəm?',
@@ -210,7 +210,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Advance booking and room/station calendar',
             'Live session, extensions and rate packages',
             'Club shifts and product sales on sessions',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+            'AZ / EN / RU and public pricing (from {low} {currency}/month)',
           ],
         },
 
@@ -254,7 +254,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Timer start/stop', 'Live session, extension, rates'],
               ['Cash', 'Manual or minimal', 'Club shift + session sales'],
               ['Stock', 'Usually none', 'Session-linked sales and inventory'],
-              ['Pricing', 'Licence/stations', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Licence/stations', 'Public: from {low} {currency}/month'],
               ['Languages', 'Often AZ only', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -320,7 +320,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, public on this site; AZ, EN, RU.',
+          a: 'From {low} {currency}/month, public on this site; AZ, EN, RU.',
         },
         {
           q: 'How to compare Hasansoft pricing?',
@@ -373,7 +373,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Предварительная бронь и календарь комнат/станций',
             'Живой сеанс, продления и пакеты тарифов',
             'Клубные смены и продажи товаров к сеансу',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -417,7 +417,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Старт/стоп таймера', 'Живой сеанс, продление, тариф'],
               ['Касса', 'Вручную или минимально', 'Клубная смена + продажи в сеансе'],
               ['Склад', 'Обычно нет', 'Продажи к сеансу и учёт склада'],
-              ['Цена', 'Лицензия/станции', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Лицензия/станции', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Часто только AZ', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -485,7 +485,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., открыто на сайте; AZ, EN, RU.',
+          a: 'От {low} {currency}/мес., открыто на сайте; AZ, EN, RU.',
         },
         {
           q: 'Как сравнить цену Hasansoft?',

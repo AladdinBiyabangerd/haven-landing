@@ -41,7 +41,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq/stansiya saatı əsas gəlir',
             'Bron → sessiya → uzadılma → kassa',
             'Bar sessiyaya və anbara bağlıdır',
-            'AZ / EN / RU, {low} AZN/aydan',
+            'AZ / EN / RU, {low} {currency}/aydan',
           ],
         },
 
@@ -87,7 +87,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Rezervasiya', 'Platforma asılı', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Oyun zalı tarif/depozit', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'POS prosesi', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Paket abunə (sayt)', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Paket abunə (sayt)', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'AZ fokus', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -148,7 +148,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, AZ / EN / RU.',
+          a: '{low} {currency}/aydan, AZ / EN / RU.',
         },
         {
           q: 'SmartApp qiymətini necə müqayisə etməliyəm?',
@@ -202,7 +202,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room/station hours are main revenue',
             'Book → session → extension → cash',
             'Bar tied to session and stock',
-            'AZ / EN / RU, from {low} AZN/month',
+            'AZ / EN / RU, from {low} {currency}/month',
           ],
         },
 
@@ -248,7 +248,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Bookings', 'Platform-dependent', 'Room and station calendar'],
               ['Time billing', 'Gaming-hall tariff/deposit', 'Live session, extension, rates'],
               ['Cash', 'POS contour', 'Club shift + session sales'],
-              ['Pricing', 'Package subscription (site)', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Package subscription (site)', 'Public: from {low} {currency}/month'],
               ['Languages', 'AZ focus', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -309,7 +309,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, AZ / EN / RU.',
+          a: 'From {low} {currency}/month, AZ / EN / RU.',
         },
         {
           q: 'How to compare SmartApp pricing?',
@@ -363,7 +363,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Часы комнаты/станции — основная выручка',
             'Бронь → сеанс → продление → касса',
             'Бар привязан к сеансу и складу',
-            'AZ / EN / RU, от {low} AZN/мес.',
+            'AZ / EN / RU, от {low} {currency}/мес.',
           ],
         },
 
@@ -409,7 +409,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Бронирование', 'Зависит от платформы', 'Календарь комнат и станций'],
               ['Учёт времени', 'Тариф/депозит gaming-зала', 'Живой сеанс, продление, тариф'],
               ['Касса', 'Контур POS', 'Клубная смена + продажи в сеансе'],
-              ['Цена', 'Пакетная подписка (сайт)', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Пакетная подписка (сайт)', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Фокус AZ', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -470,7 +470,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU.',
         },
         {
           q: 'Как сравнить цену SmartApp?',

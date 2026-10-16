@@ -43,7 +43,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq və ya konsol stansiyası saatı əsas gəlir',
             'Bron → sessiya → uzadılma → kassa axını',
             'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
-            'AZ / EN / RU və açıq qiymət ({low} AZN/aydan)',
+            'AZ / EN / RU və açıq qiymət ({low} {currency}/aydan)',
           ],
         },
 
@@ -89,7 +89,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Rezervasiya', 'Mobil/şəbəkə bron (PC fokus)', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'PC balans/dəqiqə', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'Klub balans və satış prosesi', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Abunə/stansiya ilə', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Abunə/stansiya ilə', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Əsasən RU', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -161,7 +161,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, AZ / EN / RU.',
+          a: '{low} {currency}/aydan, AZ / EN / RU.',
         },
         {
           q: 'LANGAME qiymətini necə müqayisə etməliyəm?',
@@ -210,7 +210,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room or console station hours are main revenue',
             'Book → session → extension → cash flow',
             'Bar/snacks tied to session and stock',
-            'AZ / EN / RU and public pricing (from {low} AZN/month)',
+            'AZ / EN / RU and public pricing (from {low} {currency}/month)',
           ],
         },
 
@@ -256,7 +256,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Bookings', 'Mobile/network booking (PC focus)', 'Room and station calendar'],
               ['Time billing', 'PC balance/minutes', 'Live session, extension, rates'],
               ['Cash', 'Club balance and sales contour', 'Club shift + session sales'],
-              ['Pricing', 'Subscription/stations', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Subscription/stations', 'Public: from {low} {currency}/month'],
               ['Languages', 'Primarily RU', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -328,7 +328,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, AZ / EN / RU.',
+          a: 'From {low} {currency}/month, AZ / EN / RU.',
         },
         {
           q: 'How to compare LANGAME pricing?',
@@ -377,7 +377,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Часы комнаты или консольной станции — основная выручка',
             'Поток бронь → сеанс → продление → касса',
             'Бар/закуски к сеансу и складу',
-            'AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -423,7 +423,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Бронирование', 'Мобильная/сетевая бронь (PC)', 'Календарь комнат и станций'],
               ['Учёт времени', 'Баланс/минуты на PC', 'Живой сеанс, продление, тариф'],
               ['Касса', 'Баланс и продажи клуба', 'Клубная смена + продажи в сеансе'],
-              ['Цена', 'Подписка/станции', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Подписка/станции', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'В основном RU', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -495,7 +495,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU.',
         },
         {
           q: 'Как сравнить цену LANGAME?',

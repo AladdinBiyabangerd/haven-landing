@@ -4,7 +4,12 @@ import type { Messages } from '@/i18n/types'
 import { fillTemplate } from '@/lib/format'
 import { getAllFaqItems } from '@/lib/faqPage'
 import { applyCatalogPricesDeep, withCatalogPrices } from '@/lib/catalogCopy'
-import { allVenuePlans, getActiveOffers, monthlyFeeRange } from '@/lib/venueOffers'
+import {
+  allVenuePlans,
+  catalogDisplayCurrency,
+  monthlyFeeRange,
+  offersForLocale,
+} from '@/lib/venueOffers'
 import {
   absoluteUrl,
   FOUNDER,
@@ -121,8 +126,10 @@ export function pageSlug(key: Exclude<PageKey, 'solution' | 'guide'>): string {
   return PAGE_SLUGS[key]
 }
 
-function pricesAz(): { low: number; high: number } {
-  return monthlyFeeRange()
+function pricesForLocale(locale: Locale): { low: number; high: number; currency: string } {
+  const catalog = offersForLocale(locale)
+  const { low, high } = monthlyFeeRange(catalog)
+  return { low, high, currency: catalogDisplayCurrency(locale, catalog) }
 }
 
 function isCommercialSurface(slug: string): boolean {
@@ -141,7 +148,8 @@ export function buildJsonLdGraph(
   messages: Messages,
   input: SeoPageInput,
 ): Record<string, unknown>[] {
-  const { low, high } = pricesAz()
+  const { low, high, currency } = pricesForLocale(locale)
+  const catalog = offersForLocale(locale)
   const pageUrl = localeUrl(locale, input.slug)
   const includeOffers = isCommercialSurface(input.slug) && !input.slug.startsWith('/guides')
 
@@ -161,13 +169,13 @@ export function buildJsonLdGraph(
   if (includeOffers) {
     software.offers = {
       '@type': 'AggregateOffer',
-      priceCurrency: 'AZN',
+      priceCurrency: currency,
       lowPrice: String(low),
       highPrice: String(high),
-      offerCount: String(allVenuePlans().length),
+      offerCount: String(allVenuePlans(catalog).length),
       availability: 'https://schema.org/InStock',
       url: localeUrl(locale, '/pricing'),
-      description: fillTemplate(messages.seo.aggregateOfferDescription, { low }),
+      description: fillTemplate(messages.seo.aggregateOfferDescription, { low, currency }),
     }
   }
 
@@ -332,8 +340,8 @@ export function buildJsonLdGraph(
       '@type': 'FAQPage',
       mainEntity: input.faq.map((f) => ({
         '@type': 'Question',
-        name: withCatalogPrices(f.q),
-        acceptedAnswer: { '@type': 'Answer', text: withCatalogPrices(f.a) },
+        name: withCatalogPrices(f.q, locale),
+        acceptedAnswer: { '@type': 'Answer', text: withCatalogPrices(f.a, locale) },
       })),
     })
   }
@@ -351,18 +359,19 @@ export function buildJsonLdGraph(
   }
 
   if (input.slug === '/pricing' || input.slug === '/pricing/') {
-    const startingOffers = getActiveOffers().map((offer) => {
+    const startingOffers = catalog.map((offer) => {
       const plan = offer.plans[0]
       const copy = messages.pricing.offers[offer.slug]
+      const planCurrency = plan.currency
       return {
         '@type': 'Offer',
         '@id': `${pageUrl}#offer-${offer.slug}-start`,
         name: `${copy.name} — ${messages.pricing.planNames.starter}`,
         description: fillTemplate(messages.pricing.fromMonthly, {
-          price: `${plan.monthlyFee} AZN`,
+          price: `${plan.monthlyFee} ${planCurrency}`,
         }),
         price: String(plan.monthlyFee),
-        priceCurrency: 'AZN',
+        priceCurrency: planCurrency,
         availability: 'https://schema.org/InStock',
         url: `${pageUrl}#${offer.slug}`,
         offeredBy: { '@id': `${siteUrl()}/#organization` },
@@ -370,7 +379,7 @@ export function buildJsonLdGraph(
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           price: String(plan.monthlyFee),
-          priceCurrency: 'AZN',
+          priceCurrency: planCurrency,
           unitText: 'MONTH',
         },
       }
@@ -380,7 +389,7 @@ export function buildJsonLdGraph(
       '@type': 'OfferCatalog',
       '@id': `${siteUrl()}/#offer-catalog`,
       name: messages.pricing.summaryTitle,
-      description: fillTemplate(messages.seo.aggregateOfferDescription, { low }),
+      description: fillTemplate(messages.seo.aggregateOfferDescription, { low, currency }),
       url: pageUrl,
       itemListElement: startingOffers.map((offer, index) => ({
         '@type': 'ListItem',
@@ -390,15 +399,16 @@ export function buildJsonLdGraph(
     })
 
     graph.push(
-      ...allVenuePlans().map(({ offer, plan }) => {
+      ...allVenuePlans(catalog).map(({ offer, plan }) => {
         const copy = messages.pricing.offers[offer.slug]
+        const planCurrency = plan.currency
         return {
           '@type': 'Offer',
           '@id': `${pageUrl}#offer-${offer.slug}-${plan.id}`,
           name: `${copy.name} — ${messages.pricing.planNames[plan.id]}`,
-          description: `${copy.intro} ${fillTemplate(messages.pricing.fromMonthly, { price: `${plan.monthlyFee} AZN` })}`,
+          description: `${copy.intro} ${fillTemplate(messages.pricing.fromMonthly, { price: `${plan.monthlyFee} ${planCurrency}` })}`,
           price: String(plan.monthlyFee),
-          priceCurrency: 'AZN',
+          priceCurrency: planCurrency,
           availability: 'https://schema.org/InStock',
           url: `${pageUrl}#${offer.slug}`,
           offeredBy: { '@id': `${siteUrl()}/#organization` },
@@ -408,7 +418,7 @@ export function buildJsonLdGraph(
                 priceSpecification: {
                   '@type': 'UnitPriceSpecification',
                   price: String(plan.monthlyFee),
-                  priceCurrency: 'AZN',
+                  priceCurrency: planCurrency,
                   unitText: 'MONTH',
                 },
               }
@@ -496,20 +506,20 @@ export function seoMeta(
     ? 'noindex, nofollow'
     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 
-  const title = withCatalogPrices(input.title)
-  const description = withCatalogPrices(input.description)
-  const keywords = (input.keywords || []).map((k) => withCatalogPrices(k))
+  const title = withCatalogPrices(input.title, locale)
+  const description = withCatalogPrices(input.description, locale)
+  const keywords = (input.keywords || []).map((k) => withCatalogPrices(k, locale))
   const pricedInput: SeoPageInput = {
     ...input,
     title,
     description,
     keywords,
-    faq: input.faq ? applyCatalogPricesDeep(input.faq) : undefined,
+    faq: input.faq ? applyCatalogPricesDeep(input.faq, locale) : undefined,
     article: input.article
       ? {
           ...input.article,
-          headline: withCatalogPrices(input.article.headline),
-          description: withCatalogPrices(input.article.description),
+          headline: withCatalogPrices(input.article.headline, locale),
+          description: withCatalogPrices(input.article.description, locale),
         }
       : undefined,
   }

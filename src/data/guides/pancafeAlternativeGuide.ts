@@ -42,7 +42,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq/stansiya təqvimi və öncədən bron',
             'Canlı sessiya, uzadılma, tarif paketləri',
             'Klub növbəsi + sessiya satışı + anbar',
-            'AZ / EN / RU, açıq: {low} AZN/aydan',
+            'AZ / EN / RU, açıq: {low} {currency}/aydan',
           ],
         },
 
@@ -88,7 +88,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Rezervasiya', 'Adətən zəif / yox', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Sessiya / tarif stansiyada', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa / anbar', 'Salon kassa + qəlyanaltı', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Proqram pulsuz (quraşdırma ayrı)', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Proqram pulsuz (quraşdırma ayrı)', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Çoxdil (TR/EN/AR…); AZ quraşdırma elanları', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -155,7 +155,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, saytda açıq; AZ, EN, RU.',
+          a: '{low} {currency}/aydan, saytda açıq; AZ, EN, RU.',
         },
         {
           q: 'Heselo PC stansiyasını kilidləyir?',
@@ -206,7 +206,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room/station calendar and advance booking',
             'Live sessions, extensions, tariff packages',
             'Club shift + session sales + inventory',
-            'AZ / EN / RU, open from {low} AZN/month',
+            'AZ / EN / RU, open from {low} {currency}/month',
           ],
         },
 
@@ -252,7 +252,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Booking', 'Usually weak / none', 'Room and station calendar'],
               ['Time billing', 'Session / tariff on station', 'Live session, extension, tariff'],
               ['Cash / stock', 'Floor cash + cafeteria', 'Club shift + session sales'],
-              ['Price', 'Software free (install may be paid)', 'Open from {low} AZN/month'],
+              ['Price', 'Software free (install may be paid)', 'Open from {low} {currency}/month'],
               ['Languages', 'Multilingual (TR/EN/AR…); AZ install ads', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -319,7 +319,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, open on the site; AZ, EN, RU.',
+          a: 'From {low} {currency}/month, open on the site; AZ, EN, RU.',
         },
         {
           q: 'Does Heselo lock PC stations?',
@@ -370,7 +370,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Календарь комнат/станций и предварительная бронь',
             'Живые сеансы, продление, тарифные пакеты',
             'Смена клуба + продажи в сеансе + склад',
-            'AZ / EN / RU, открыто от {low} AZN/мес.',
+            'AZ / EN / RU, открыто от {low} {currency}/мес.',
           ],
         },
 
@@ -416,7 +416,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Бронь', 'Обычно слабо / нет', 'Календарь комнат и станций'],
               ['Учёт времени', 'Сеанс / тариф на станции', 'Живой сеанс, продление, тариф'],
               ['Касса / склад', 'Касса зала + кафетерий', 'Смена клуба + продажи в сеансе'],
-              ['Цена', 'ПО бесплатно (установка отдельно)', 'Открыто от {low} AZN/мес.'],
+              ['Цена', 'ПО бесплатно (установка отдельно)', 'Открыто от {low} {currency}/мес.'],
               ['Языки', 'Многоязычие (TR/EN/AR…); объявления AZ', 'AZ, EN, RU'],
               [
                 'Лучше всего',
@@ -483,7 +483,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., открыто на сайте; AZ, EN, RU.',
+          a: 'От {low} {currency}/мес., открыто на сайте; AZ, EN, RU.',
         },
         {
           q: 'Heselo блокирует PC-станции?',

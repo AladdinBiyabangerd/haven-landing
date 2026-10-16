@@ -335,7 +335,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'I’m looking for lounge bar software. Does this fit?',
-        a: 'This guide explains how a room lounge operates. If you’re looking for lounge bar management software itself, see the room lounge solution page: VIP room bookings, live sessions, bar sales, and cash in one panel, with the Small plan from {lounge} AZN/month.',
+        a: 'This guide explains how a room lounge operates. If you’re looking for lounge bar management software itself, see the room lounge solution page: VIP room bookings, live sessions, bar sales, and cash in one panel, with the Small plan from {lounge} {currency}/month.',
       },
       {
         q: 'Can bar sales outside the rooms go through the same cash register?',
@@ -443,7 +443,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'How much does anti-café software cost?',
-        a: 'In Heselo, the Small plan for anti-cafés starts at {antikafe} AZN/month. Other plans and annual billing options are listed on the pricing page.',
+        a: 'In Heselo, the Small plan for anti-cafés starts at {antikafe} {currency}/month. Other plans and annual billing options are listed on the pricing page.',
       },
       {
         q: 'How do I get a demo?',
@@ -531,7 +531,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'How much does PS club software cost?',
-        a: 'In Heselo, the Small plan for gaming clubs starts at {gaming} AZN/month. Medium and Large plans are available for more stations.',
+        a: 'In Heselo, the Small plan for gaming clubs starts at {gaming} {currency}/month. Medium and Large plans are available for more stations.',
       },
       {
         q: 'What should I check during a demo?',
@@ -716,7 +716,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'How much does a karaoke booking system cost?',
-        a: 'In Heselo, the Small plan for karaoke starts at {karaoke} AZN/month. Prices for the other plans are published too.',
+        a: 'In Heselo, the Small plan for karaoke starts at {karaoke} {currency}/month. Prices for the other plans are published too.',
       },
       {
         q: 'Can drinks be linked to a booking in advance?',
@@ -831,13 +831,13 @@ export const guidesEn: GuideCopy[] = [
     h1: 'How much does Heselo cost? Published plans explained',
     seoTitle: 'Heselo pricing — published plans by venue type',
     seoDescription:
-      'Heselo plans: PS {gaming}, billiards {billiards}, anti-café {antikafe}, karaoke and lounge {karaoke} AZN/month. Plans, annual billing, custom quotes, and a free trial/demo.',
+      'Heselo plans: PS {gaming}, billiards {billiards}, anti-café {antikafe}, karaoke and lounge {karaoke} {currency}/month. Plans, annual billing, custom quotes, and a free trial/demo.',
     keywords: [
       'Heselo pricing',
       'Heselo plans',
       'how much is Heselo',
       'club panel pricing',
-      '{low} AZN venue software',
+      '{low} {currency} venue software',
       'free club software trial',
       'club software free demo',
     ],
@@ -850,7 +850,7 @@ export const guidesEn: GuideCopy[] = [
         id: 'published',
         title: 'What are the starting prices?',
         paragraphs: [
-          'Starting monthly fees for the Small plan are: gaming club / PS — {gaming} AZN, billiards — {billiards} AZN, anti-café — {antikafe} AZN, karaoke and room lounge — {karaoke} AZN.',
+          'Starting monthly fees for the Small plan are: gaming club / PS — {gaming} {currency}, billiards — {billiards} {currency}, anti-café — {antikafe} {currency}, karaoke and room lounge — {karaoke} {currency}.',
           'Prices, limits, and annual billing options for the Medium and Large plans are in the table on the pricing page.',
         ],
       },
@@ -887,15 +887,15 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'What is the minimum plan for a PS club?',
-        a: 'The Small plan starts at {gaming} AZN/month.',
+        a: 'The Small plan starts at {gaming} {currency}/month.',
       },
       {
         q: 'What is the minimum plan for karaoke?',
-        a: 'The Small plan starts at {karaoke} AZN/month.',
+        a: 'The Small plan starts at {karaoke} {currency}/month.',
       },
       {
         q: 'What does it cost for an anti-café?',
-        a: 'The Small plan starts at {antikafe} AZN/month.',
+        a: 'The Small plan starts at {antikafe} {currency}/month.',
       },
       {
         q: 'Is there a free trial or demo of the club software?',

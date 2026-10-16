@@ -43,7 +43,7 @@ const catalog: CatalogEntry[] = [
               'Stansiya cədvəli və rezervasiya',
               'Canlı sessiya, uzatma, əlavə satış',
               'Kassa növbəsi və gün sonu hesabatı',
-              'Kiçik plan {gaming} AZN/aydan',
+              'Kiçik plan {gaming} {currency}/aydan',
             ],
           },
           {
@@ -120,7 +120,7 @@ const catalog: CatalogEntry[] = [
             title: 'Proqram nə vaxt lazımdır?',
             paragraphs: [
               '2 konsol və tək sahibkarla dəftər də işləyir. Proqram ehtiyacı adətən bu hallarda yaranır: 4-dən çox stansiya, növbəli işçilər, axşam pik saatları və “kassa niyə tutmur?” sualı.',
-              'Açılışdan sistemlə başlamaq daha asandır: sonradan vərəqləri köçürmək və işçiləri yenidən öyrətmək lazım olmur. Heselo-da oyun klubu / PS üçün Kiçik plan {gaming} AZN/aydan başlayır.',
+              'Açılışdan sistemlə başlamaq daha asandır: sonradan vərəqləri köçürmək və işçiləri yenidən öyrətmək lazım olmur. Heselo-da oyun klubu / PS üçün Kiçik plan {gaming} {currency}/aydan başlayır.',
             ],
           },
           {
@@ -163,7 +163,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Heselo PS klub üçün neçəyədir?',
-            a: 'Oyun klubu / PS üçün Kiçik plan {gaming} AZN/aydan başlayır. Stansiya və rezervasiya sayı artanda Orta və Böyük plan açılır; illik ödənişdə 2 ay hədiyyədir. Tam cədvəl qiymətlər səhifəsindədir, demoda isə öz stansiyalarınızla sınaya bilərsiniz.',
+            a: 'Oyun klubu / PS üçün Kiçik plan {gaming} {currency}/aydan başlayır. Stansiya və rezervasiya sayı artanda Orta və Böyük plan açılır; illik ödənişdə 2 ay hədiyyədir. Tam cədvəl qiymətlər səhifəsindədir, demoda isə öz stansiyalarınızla sınaya bilərsiniz.',
           },
         ],
         ctaTitle: 'PS klub üçün demo',
@@ -197,7 +197,7 @@ const catalog: CatalogEntry[] = [
               'Station schedule and bookings',
               'Live session, extensions, add-on sales',
               'Cash shift and end-of-day report',
-              'Small plan from {gaming} AZN/month',
+              'Small plan from {gaming} {currency}/month',
             ],
           },
           {
@@ -274,7 +274,7 @@ const catalog: CatalogEntry[] = [
             title: 'When do you need software?',
             paragraphs: [
               'With two consoles and the owner behind the desk, a notebook works. The need for software usually appears with more than four stations, shift staff, evening peaks and the recurring question of why the cash drawer is short.',
-              'Starting with a system from day one is easier than migrating later: no spreadsheets to transfer and no staff to retrain. Heselo’s Small plan for gaming / PS clubs starts from {gaming} AZN per month.',
+              'Starting with a system from day one is easier than migrating later: no spreadsheets to transfer and no staff to retrain. Heselo’s Small plan for gaming / PS clubs starts from {gaming} {currency} per month.',
             ],
           },
           {
@@ -317,7 +317,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'How much does Heselo cost for a PS club?',
-            a: 'The Small plan for gaming / PS clubs starts from {gaming} AZN per month. Medium and Large plans unlock as your station and booking volume grows, and annual billing includes two months free. The full table is on the pricing page, and a demo lets you test with your own stations.',
+            a: 'The Small plan for gaming / PS clubs starts from {gaming} {currency} per month. Medium and Large plans unlock as your station and booking volume grows, and annual billing includes two months free. The full table is on the pricing page, and a demo lets you test with your own stations.',
           },
         ],
         ctaTitle: 'Demo for your PS club',
@@ -352,7 +352,7 @@ const catalog: CatalogEntry[] = [
               'Расписание станций и бронирование',
               'Живой сеанс, продление, доп. продажи',
               'Кассовая смена и отчёт за день',
-              'Тариф «Малый» от {gaming} AZN/мес.',
+              'Тариф «Малый» от {gaming} {currency}/мес.',
             ],
           },
           {
@@ -429,7 +429,7 @@ const catalog: CatalogEntry[] = [
             title: 'Когда нужна программа?',
             paragraphs: [
               'С двумя консолями и владельцем за стойкой тетрадь справляется. Потребность в программе обычно появляется, когда станций больше четырёх, работают сменные сотрудники, вечером пик и регулярно звучит вопрос «почему касса не сходится?».',
-              'Начать с системой сразу проще, чем переходить потом: не нужно переносить таблицы и переучивать персонал. В Heselo тариф «Малый» для игровых / PS-клубов стоит от {gaming} AZN в месяц.',
+              'Начать с системой сразу проще, чем переходить потом: не нужно переносить таблицы и переучивать персонал. В Heselo тариф «Малый» для игровых / PS-клубов стоит от {gaming} {currency} в месяц.',
             ],
           },
           {
@@ -472,7 +472,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Сколько стоит Heselo для PS-клуба?',
-            a: 'Тариф «Малый» для игровых / PS-клубов — от {gaming} AZN в месяц. «Средний» и «Большой» открываются по мере роста числа станций и бронирований, а при оплате за год два месяца в подарок. Полная таблица — на странице цен, а на демо можно проверить систему на своих станциях.',
+            a: 'Тариф «Малый» для игровых / PS-клубов — от {gaming} {currency} в месяц. «Средний» и «Большой» открываются по мере роста числа станций и бронирований, а при оплате за год два месяца в подарок. Полная таблица — на странице цен, а на демо можно проверить систему на своих станциях.',
           },
         ],
         ctaTitle: 'Демо для PS-клуба',
@@ -584,7 +584,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Kiçik klub üçün minimum nə lazımdır?',
-            a: 'Resepsiya üçün noutbuk və ya planşet, bankın kart terminalı, tələblərə uyğun kassa həlli və ehtiyatlı internet. Printer və pul qutusunu sonra əlavə etmək olar. Heselo paneli bu dəstlə işləyir; PS klub üçün {gaming}, karaoke üçün {karaoke} AZN/aydan başlayır.',
+            a: 'Resepsiya üçün noutbuk və ya planşet, bankın kart terminalı, tələblərə uyğun kassa həlli və ehtiyatlı internet. Printer və pul qutusunu sonra əlavə etmək olar. Heselo paneli bu dəstlə işləyir; PS klub üçün {gaming}, karaoke üçün {karaoke} {currency}/aydan başlayır.',
           },
         ],
         ctaTitle: 'Kassa axınını demoda yoxlayın',
@@ -690,7 +690,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'What is the minimum a small club needs?',
-            a: 'A laptop or tablet for the front desk, a bank card terminal, a compliant cash register solution and internet with a backup. A printer and cash drawer can come later. Heselo works with this setup and starts from {gaming} AZN per month for PS clubs and {karaoke} AZN for karaoke.',
+            a: 'A laptop or tablet for the front desk, a bank card terminal, a compliant cash register solution and internet with a backup. A printer and cash drawer can come later. Heselo works with this setup and starts from {gaming} {currency} per month for PS clubs and {karaoke} {currency} for karaoke.',
           },
         ],
         ctaTitle: 'Test the checkout flow in a demo',
@@ -796,7 +796,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Что минимально нужно небольшому клубу?',
-            a: 'Ноутбук или планшет для стойки, банковский терминал, кассовое решение по требованиям и интернет с резервом. Принтер и денежный ящик можно добавить позже. Heselo работает с таким комплектом и стоит от {gaming} AZN в месяц для PS-клуба и от {karaoke} AZN для караоке.',
+            a: 'Ноутбук или планшет для стойки, банковский терминал, кассовое решение по требованиям и интернет с резервом. Принтер и денежный ящик можно добавить позже. Heselo работает с таким комплектом и стоит от {gaming} {currency} в месяц для PS-клуба и от {karaoke} {currency} для караоке.',
           },
         ],
         ctaTitle: 'Проверьте кассовый сценарий на демо',
@@ -830,7 +830,7 @@ const catalog: CatalogEntry[] = [
             title: 'Heselo oyun zalı üçün nə verir?',
             paragraphs: [
               'Heselo-da stansiya cədvəldə və canlı zalda eyni vahiddir: bron sessiyaya çevrilir, məbləği sistem hesablayır, satış eyni hesaba düşür, növbə hesabatı sonda hazır olur. PS və PC stansiyaları eyni paneldə ola bilər.',
-              'Oyun klubu üçün Kiçik plan {gaming} AZN/aydan başlayır. Keçidi bir növbədə sınayın: bronları paneldə aparın və gecə kassasını köhnə üsulla müqayisə edin.',
+              'Oyun klubu üçün Kiçik plan {gaming} {currency}/aydan başlayır. Keçidi bir növbədə sınayın: bronları paneldə aparın və gecə kassasını köhnə üsulla müqayisə edin.',
             ],
           },
 
@@ -916,7 +916,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Heselo neçəyədir?',
-            a: 'Oyun klubu / PS üçün Kiçik plan {gaming} AZN/aydan başlayır. Stansiya və rezervasiya sayı artanda Orta və Böyük plan açılır; illik ödənişdə 2 ay hədiyyədir. Demoda dörd axını öz stansiyalarınızla sınaya bilərsiniz.',
+            a: 'Oyun klubu / PS üçün Kiçik plan {gaming} {currency}/aydan başlayır. Stansiya və rezervasiya sayı artanda Orta və Böyük plan açılır; illik ödənişdə 2 ay hədiyyədir. Demoda dörd axını öz stansiyalarınızla sınaya bilərsiniz.',
           },
         ],
         ctaTitle: 'Oyun salonu üçün demo',
@@ -944,7 +944,7 @@ const catalog: CatalogEntry[] = [
             title: 'What does Heselo give a game hall?',
             paragraphs: [
               'In Heselo, a station is the same unit on the schedule and in the live hall: a booking turns into a session, the system calculates the amount, sales land on the same bill, and the shift report is ready at close. PS and PC stations can share one panel.',
-              'The Small plan for gaming clubs starts from {gaming} AZN per month. Try the switch over a single shift: run bookings in the panel and compare the night cash count with your old method.',
+              'The Small plan for gaming clubs starts from {gaming} {currency} per month. Try the switch over a single shift: run bookings in the panel and compare the night cash count with your old method.',
             ],
           },
 
@@ -1026,7 +1026,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'How much does Heselo cost?',
-            a: 'The Small plan for gaming / PS clubs starts from {gaming} AZN per month. Medium and Large plans unlock as station and booking volume grows, and annual billing includes two months free. In a demo you can test all four flows with your own stations.',
+            a: 'The Small plan for gaming / PS clubs starts from {gaming} {currency} per month. Medium and Large plans unlock as station and booking volume grows, and annual billing includes two months free. In a demo you can test all four flows with your own stations.',
           },
         ],
         ctaTitle: 'Demo for your game hall',
@@ -1054,7 +1054,7 @@ const catalog: CatalogEntry[] = [
             title: 'Что Heselo даёт игровому залу?',
             paragraphs: [
               'В Heselo станция — одна и та же единица в расписании и в живом зале: бронь превращается в сеанс, сумму считает система, продажи попадают в тот же счёт, отчёт по смене готов к закрытию. PS- и PC-станции могут быть в одной панели.',
-              'Тариф «Малый» для игровых клубов — от {low} AZN в месяц. Попробуйте переход за одну смену: ведите брони в панели и сравните ночную кассу с прежним способом.',
+              'Тариф «Малый» для игровых клубов — от {low} {currency} в месяц. Попробуйте переход за одну смену: ведите брони в панели и сравните ночную кассу с прежним способом.',
             ],
           },
 
@@ -1136,7 +1136,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Сколько стоит Heselo?',
-            a: 'Тариф «Малый» для игровых / PS-клубов — от {gaming} AZN в месяц. «Средний» и «Большой» открываются по мере роста числа станций и бронирований, а при оплате за год два месяца в подарок. На демо можно проверить все четыре процесса на своих станциях.',
+            a: 'Тариф «Малый» для игровых / PS-клубов — от {gaming} {currency} в месяц. «Средний» и «Большой» открываются по мере роста числа станций и бронирований, а при оплате за год два месяца в подарок. На демо можно проверить все четыре процесса на своих станциях.',
           },
         ],
         ctaTitle: 'Демо для игрового зала',
@@ -1175,7 +1175,7 @@ const catalog: CatalogEntry[] = [
               'Otaq cədvəli və rezervasiya',
               'Canlı sessiya və uzatma',
               'Sessiyaya bağlı bar satışı',
-              'Kiçik plan {karaoke} AZN/aydan',
+              'Kiçik plan {karaoke} {currency}/aydan',
             ],
           },
           {
@@ -1254,7 +1254,7 @@ const catalog: CatalogEntry[] = [
             id: 'soft-cta',
             title: 'Növbəti addım',
             paragraphs: [
-              'Planı otaq sayı və tariflərlə hazırlayandan sonra gündəlik işi necə aparacağınızı da sınayın. Heselo-da karaoke üçün Kiçik plan {karaoke} AZN/aydan başlayır: otaq cədvəli, sessiya, bar satışı və növbə bir paneldə.',
+              'Planı otaq sayı və tariflərlə hazırlayandan sonra gündəlik işi necə aparacağınızı da sınayın. Heselo-da karaoke üçün Kiçik plan {karaoke} {currency}/aydan başlayır: otaq cədvəli, sessiya, bar satışı və növbə bir paneldə.',
             ],
           },
         ],
@@ -1281,7 +1281,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Heselo karaoke üçün neçəyədir?',
-            a: 'Karaoke üçün Kiçik plan {karaoke} AZN/aydan başlayır — otaq cədvəli və sessiya işinə görə PS planından yüksəkdir. Orta və Böyük plan, illik ödəniş (2 ay hədiyyə) qiymətlər səhifəsindədir. Demoda öz otaqlarınızla sınaya bilərsiniz.',
+            a: 'Karaoke üçün Kiçik plan {karaoke} {currency}/aydan başlayır — otaq cədvəli və sessiya işinə görə PS planından yüksəkdir. Orta və Böyük plan, illik ödəniş (2 ay hədiyyə) qiymətlər səhifəsindədir. Demoda öz otaqlarınızla sınaya bilərsiniz.',
           },
         ],
         ctaTitle: 'Karaoke klubu üçün demo',
@@ -1314,7 +1314,7 @@ const catalog: CatalogEntry[] = [
               'Room schedule and bookings',
               'Live session and extensions',
               'Bar sales on the session',
-              'Small plan from {karaoke} AZN/month',
+              'Small plan from {karaoke} {currency}/month',
             ],
           },
           {
@@ -1393,7 +1393,7 @@ const catalog: CatalogEntry[] = [
             id: 'soft-cta',
             title: 'Next step',
             paragraphs: [
-              'Once your plan has room counts and rates, test how you will run the day-to-day. Heselo’s Small plan for karaoke starts from {karaoke} AZN per month, with the room schedule, sessions, bar sales and shifts in one panel.',
+              'Once your plan has room counts and rates, test how you will run the day-to-day. Heselo’s Small plan for karaoke starts from {karaoke} {currency} per month, with the room schedule, sessions, bar sales and shifts in one panel.',
             ],
           },
         ],
@@ -1420,7 +1420,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'How much does Heselo cost for karaoke?',
-            a: 'The Small plan for karaoke starts from {karaoke} AZN per month. It is higher than the PS plan because of the room schedule and session workload. Medium and Large plans and annual billing (two months free) are on the pricing page, and a demo lets you test with your own rooms.',
+            a: 'The Small plan for karaoke starts from {karaoke} {currency} per month. It is higher than the PS plan because of the room schedule and session workload. Medium and Large plans and annual billing (two months free) are on the pricing page, and a demo lets you test with your own rooms.',
           },
         ],
         ctaTitle: 'Demo for your karaoke club',
@@ -1453,7 +1453,7 @@ const catalog: CatalogEntry[] = [
               'Расписание комнат и бронирование',
               'Живой сеанс и продление',
               'Бар в счёте сеанса',
-              'Тариф «Малый» от {karaoke} AZN/мес.',
+              'Тариф «Малый» от {karaoke} {currency}/мес.',
             ],
           },
           {
@@ -1532,7 +1532,7 @@ const catalog: CatalogEntry[] = [
             id: 'soft-cta',
             title: 'Следующий шаг',
             paragraphs: [
-              'Когда в плане уже есть число комнат и тарифы, проверьте, как вы будете вести ежедневную работу. В Heselo тариф «Малый» для караоке — от {karaoke} AZN в месяц: расписание комнат, сеансы, продажи бара и смены в одной панели.',
+              'Когда в плане уже есть число комнат и тарифы, проверьте, как вы будете вести ежедневную работу. В Heselo тариф «Малый» для караоке — от {karaoke} {currency} в месяц: расписание комнат, сеансы, продажи бара и смены в одной панели.',
             ],
           },
         ],
@@ -1559,7 +1559,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Сколько стоит Heselo для караоке?',
-            a: 'Тариф «Малый» для караоке — от {karaoke} AZN в месяц; он выше PS-тарифа из-за расписания комнат и работы с сеансами. «Средний» и «Большой» тарифы и оплата за год (два месяца в подарок) — на странице цен. На демо можно проверить систему на своих комнатах.',
+            a: 'Тариф «Малый» для караоке — от {karaoke} {currency} в месяц; он выше PS-тарифа из-за расписания комнат и работы с сеансами. «Средний» и «Большой» тарифы и оплата за год (два месяца в подарок) — на странице цен. На демо можно проверить систему на своих комнатах.',
           },
         ],
         ctaTitle: 'Демо для караоке-клуба',
@@ -1594,7 +1594,7 @@ const catalog: CatalogEntry[] = [
             title: 'Heselo antikafe üçün nə verir?',
             paragraphs: [
               'Düstur yalnız real rəqəmlərlə işləyir. Dəftərlə uçotda satılan qonaq-saatı, endirimlərin təsirini və saatlar üzrə yükü bilmək çətindir.',
-              'Heselo antikafedə hər qonağın vaxtını sayır, məbləği tarif qaydalarına görə hesablayır, satışı eyni hesaba yazır və növbə hesabatını çıxarır. Antikafe üçün Kiçik plan {antikafe} AZN/aydan başlayır — bu da sabit xərclər siyahısına daxil edilməlidir.',
+              'Heselo antikafedə hər qonağın vaxtını sayır, məbləği tarif qaydalarına görə hesablayır, satışı eyni hesaba yazır və növbə hesabatını çıxarır. Antikafe üçün Kiçik plan {antikafe} {currency}/aydan başlayır — bu da sabit xərclər siyahısına daxil edilməlidir.',
             ],
           },
 
@@ -1678,7 +1678,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Heselo antikafe üçün neçəyədir?',
-            a: 'Antikafe üçün Kiçik plan {antikafe} AZN/aydan başlayır. Sistem qonaq vaxtını sayır, məbləği tarif qaydalarına görə hesablayır və növbə hesabatını verir — zərərsizlik hesabı üçün lazım olan qonaq-saatı real görürsünüz. Orta və Böyük plan qiymətlər səhifəsindədir.',
+            a: 'Antikafe üçün Kiçik plan {antikafe} {currency}/aydan başlayır. Sistem qonaq vaxtını sayır, məbləği tarif qaydalarına görə hesablayır və növbə hesabatını verir — zərərsizlik hesabı üçün lazım olan qonaq-saatı real görürsünüz. Orta və Böyük plan qiymətlər səhifəsindədir.',
           },
         ],
         ctaTitle: 'Antikafe üçün demo',
@@ -1707,7 +1707,7 @@ const catalog: CatalogEntry[] = [
             title: 'What does Heselo give an anti-café?',
             paragraphs: [
               'The formula only works with real numbers. With paper records it is hard to know how many guest-hours you actually sold, how much discounts cost you and how busy each hour is.',
-              'In an anticafe, Heselo tracks each guest’s time, calculates the amount according to your rate rules, puts sales on the same bill and produces a shift report. The Small plan for anticafes starts from {antikafe} AZN per month, and that belongs on your fixed-cost list too.',
+              'In an anticafe, Heselo tracks each guest’s time, calculates the amount according to your rate rules, puts sales on the same bill and produces a shift report. The Small plan for anticafes starts from {antikafe} {currency} per month, and that belongs on your fixed-cost list too.',
             ],
           },
           {
@@ -1787,7 +1787,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'How much does Heselo cost for an anticafe?',
-            a: 'The Small plan for anticafes starts from {antikafe} AZN per month. The system tracks guest time, calculates the amount according to your rate rules and produces a shift report, so you see the real guest-hours your break-even depends on. Medium and Large plans are on the pricing page.',
+            a: 'The Small plan for anticafes starts from {antikafe} {currency} per month. The system tracks guest time, calculates the amount according to your rate rules and produces a shift report, so you see the real guest-hours your break-even depends on. Medium and Large plans are on the pricing page.',
           },
         ],
         ctaTitle: 'Demo for your anticafe',
@@ -1816,7 +1816,7 @@ const catalog: CatalogEntry[] = [
             title: 'Что Heselo даёт антикафе?',
             paragraphs: [
               'Формула работает только с реальными цифрами. При учёте в тетради трудно понять, сколько гостечасов продано, во что обходятся скидки и как распределяется загрузка по часам.',
-              'Heselo считает время каждого гостя в антикафе, рассчитывает сумму по правилам тарифа, записывает продажи в тот же счёт и формирует отчёт по смене. Тариф «Малый» для антикафе — от {antikafe} AZN в месяц; его тоже стоит включить в список постоянных расходов.',
+              'Heselo считает время каждого гостя в антикафе, рассчитывает сумму по правилам тарифа, записывает продажи в тот же счёт и формирует отчёт по смене. Тариф «Малый» для антикафе — от {antikafe} {currency} в месяц; его тоже стоит включить в список постоянных расходов.',
             ],
           },
 
@@ -1900,7 +1900,7 @@ const catalog: CatalogEntry[] = [
           },
           {
             q: 'Сколько стоит Heselo для антикафе?',
-            a: 'Тариф «Малый» для антикафе — от {antikafe} AZN в месяц. Система считает время гостей, рассчитывает сумму по правилам тарифа и формирует отчёт по смене, поэтому вы видите реальные гостечасы для расчёта безубыточности. «Средний» и «Большой» тарифы — на странице цен.',
+            a: 'Тариф «Малый» для антикафе — от {antikafe} {currency} в месяц. Система считает время гостей, рассчитывает сумму по правилам тарифа и формирует отчёт по смене, поэтому вы видите реальные гостечасы для расчёта безубыточности. «Средний» и «Большой» тарифы — на странице цен.',
           },
         ],
         ctaTitle: 'Демо для антикафе',

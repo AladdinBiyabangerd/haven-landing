@@ -42,7 +42,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Bron → gəlişdə sessiya → uzadılma → kassa standart axındır',
             'Sessiyaya məhsul satışı anbarla bağlıdır',
-            'Açıq qiymət: {low} AZN/aydan; AZ / EN / RU',
+            'Açıq qiymət: {low} {currency}/aydan; AZ / EN / RU',
           ],
         },
 
@@ -77,7 +77,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'comparison',
           title: 'Yerli POS — çoxsütunlu müqayisə',
           paragraphs: [
-            'Cədvəl əsas istiqaməti göstərir. Modul, avadanlıq və yekun xərci hər provayderdən eyni ssenari üzrə aktual təkliflə dəqiqləşdirin. Yalnız Heselo üçün qiymət saytda açıq göstərilir ({low} AZN/aydan).',
+            'Cədvəl əsas istiqaməti göstərir. Modul, avadanlıq və yekun xərci hər provayderdən eyni ssenari üzrə aktual təkliflə dəqiqləşdirin. Yalnız Heselo üçün qiymət saytda açıq göstərilir ({low} {currency}/aydan).',
           ],
           table: {
             headers: ['Aspekt', 'iiko', 'Clopos', 'Dine', 'Fazilat POS', 'SmartPOS', 'Heselo'],
@@ -143,7 +143,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
                 'Təkliflə dəqiqləşdirin',
                 'Təkliflə dəqiqləşdirin',
                 'Təkliflə dəqiqləşdirin',
-                'Açıq: {low} AZN/aydan',
+                'Açıq: {low} {currency}/aydan',
               ],
               [
                 'Dillər',
@@ -223,7 +223,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Rəqib POS qiymətlərini haradan müqayisə etməliyəm?',
-          a: 'Hər provayderdən eyni istifadəçi, terminal və modul ssenarisi üzrə rəsmi təklif alın — bu bələdçidə rəqib qiymətləri uydurulmur. Heselo {low} AZN/aydan başlayır və saytda açıqdır.',
+          a: 'Hər provayderdən eyni istifadəçi, terminal və modul ssenarisi üzrə rəsmi təklif alın — bu bələdçidə rəqib qiymətləri uydurulmur. Heselo {low} {currency}/aydan başlayır və saytda açıqdır.',
         },
         {
           q: 'Həm restoran POS, həm Heselo lazımdır?',
@@ -275,7 +275,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, console or table hours',
             'Booking → session on arrival → extension → cash is the standard flow',
             'Item sales attach to sessions and stock',
-            'Public pricing from {low} AZN/month; AZ / EN / RU',
+            'Public pricing from {low} {currency}/month; AZ / EN / RU',
           ],
         },
 
@@ -310,7 +310,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'comparison',
           title: 'Local POS — multi-column comparison',
           paragraphs: [
-            'The table shows primary direction. Confirm modules, hardware and total cost with each provider for the same scenario. Only Heselo pricing is public on this site (from {low} AZN/month).',
+            'The table shows primary direction. Confirm modules, hardware and total cost with each provider for the same scenario. Only Heselo pricing is public on this site (from {low} {currency}/month).',
           ],
           table: {
             headers: ['Aspect', 'iiko', 'Clopos', 'Dine', 'Fazilat POS', 'SmartPOS', 'Heselo'],
@@ -376,7 +376,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
                 'Confirm via quote',
                 'Confirm via quote',
                 'Confirm via quote',
-                'Public: from {low} AZN/month',
+                'Public: from {low} {currency}/month',
               ],
               [
                 'Languages',
@@ -456,7 +456,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'How should I compare competitor POS pricing?',
-          a: 'Get official quotes from each provider for the same users, terminals and modules — this guide does not invent competitor prices. Heselo starts from {low} AZN per month and is public on this site.',
+          a: 'Get official quotes from each provider for the same users, terminals and modules — this guide does not invent competitor prices. Heselo starts from {low} {currency} per month and is public on this site.',
         },
         {
           q: 'Do we need both restaurant POS and Heselo?',
@@ -508,7 +508,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, консоли или стола',
             'Бронь → сеанс по приходу → продление → касса — стандартный поток',
             'Продажи товаров привязаны к сеансу и складу',
-            'Открытая цена: от {low} AZN/мес.; AZ / EN / RU',
+            'Открытая цена: от {low} {currency}/мес.; AZ / EN / RU',
           ],
         },
 
@@ -543,7 +543,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
           id: 'comparison',
           title: 'Местные POS — многоколоночное сравнение',
           paragraphs: [
-            'Таблица показывает основную направленность. Модули, оборудование и итоговую стоимость уточняйте у каждого поставщика на одинаковом сценарии. Только цена Heselo открыта на сайте (от {low} AZN/мес.).',
+            'Таблица показывает основную направленность. Модули, оборудование и итоговую стоимость уточняйте у каждого поставщика на одинаковом сценарии. Только цена Heselo открыта на сайте (от {low} {currency}/мес.).',
           ],
           table: {
             headers: ['Аспект', 'iiko', 'Clopos', 'Dine', 'Fazilat POS', 'SmartPOS', 'Heselo'],
@@ -609,7 +609,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
                 'Уточняйте по предложению',
                 'Уточняйте по предложению',
                 'Уточняйте по предложению',
-                'Открыто: от {low} AZN/мес.',
+                'Открыто: от {low} {currency}/мес.',
               ],
               [
                 'Языки',
@@ -689,7 +689,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Как сравнивать цены конкурентов?',
-          a: 'Получите официальные предложения от каждого поставщика на тех же пользователей, терминалах и модулях — в этом руководстве цены конкурентов не выдумываются. Heselo от {low} AZN в месяц и открыта на сайте.',
+          a: 'Получите официальные предложения от каждого поставщика на тех же пользователей, терминалах и модулях — в этом руководстве цены конкурентов не выдумываются. Heselo от {low} {currency} в месяц и открыта на сайте.',
         },
         {
           q: 'Нужны ли и ресторанная POS, и Heselo?',

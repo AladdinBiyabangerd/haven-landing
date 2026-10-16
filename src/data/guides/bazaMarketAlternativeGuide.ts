@@ -41,7 +41,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Əsas məhsul: otaq, konsol və ya masa saatı',
             'Öncədən bron və gəlişdə sessiya başlaması lazımdır',
             'Uzatma, tarif və növbə kassası bir paneldə olmalıdır',
-            'AZ / EN / RU interfeys və açıq qiymət ({low} AZN/aydan) vacibdir',
+            'AZ / EN / RU interfeys və açıq qiymət ({low} {currency}/aydan) vacibdir',
           ],
         },
 
@@ -88,7 +88,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Vaxt hesabı', 'Adətən tətbiq olunmur', 'Canlı sessiya, uzadılma, tarif'],
               ['Anbar', 'Ticarət anbarı və təchizat', 'Klub anbar qalığı və sessiyaya satış'],
               ['Kassa', 'Satış və komissiya prosesi', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Brenddən aktual təklif', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Brenddən aktual təklif', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'Provayderdən asılı', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -156,7 +156,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Baza Market qiyməti ilə necə müqayisə etməliyəm?',
-          a: 'Baza Market-in aktual qiymət və komissiya şərtlərini birbaşa dəqiqləşdirin — burada uydurma rəqəm yoxdur. Eyni əməliyyat ssenarisi üzrə ticarət platforması ilə klub panelini müqayisə edin. Heselo paketləri {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'Baza Market-in aktual qiymət və komissiya şərtlərini birbaşa dəqiqləşdirin — burada uydurma rəqəm yoxdur. Eyni əməliyyat ssenarisi üzrə ticarət platforması ilə klub panelini müqayisə edin. Heselo paketləri {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Həm Baza Market, həm Heselo saxlamaq olarmı?',
@@ -164,7 +164,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo neçə dildədir və qiyməti nədir?',
-          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} AZN/aydan başlayır və saytda açıq göstərilir.',
+          a: 'İnterfeys Azərbaycan, ingilis və rus dillərindədir. Paketlər {low} {currency}/aydan başlayır və saytda açıq göstərilir.',
         },
         {
           q: 'Keçməzdən əvvəl necə yoxlaya bilərəm?',
@@ -208,7 +208,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Core product: room, console or table hours',
             'Advance booking and session start on arrival are required',
             'Extensions, rates and shift cash should live in one panel',
-            'AZ / EN / RU UI and public pricing (from {low} AZN/month) matter',
+            'AZ / EN / RU UI and public pricing (from {low} {currency}/month) matter',
           ],
         },
 
@@ -255,7 +255,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Time billing', 'Usually not applicable', 'Live session, extension, rates'],
               ['Inventory', 'Trade warehouse and suppliers', 'Club stock, session add-ons'],
               ['Cash', 'Sales and commission stack', 'Club shifts + session sales'],
-              ['Pricing', 'Current quote from provider', 'Public: from {low} AZN/month'],
+              ['Pricing', 'Current quote from provider', 'Public: from {low} {currency}/month'],
               ['Languages', 'Provider-dependent', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -323,7 +323,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'How should I compare Baza Market pricing?',
-          a: 'Confirm current Baza Market pricing and commission terms directly — no invented figures here. Compare commerce platform and club panel on the same operating scenario. Heselo plans start from {low} AZN per month and are listed publicly.',
+          a: 'Confirm current Baza Market pricing and commission terms directly — no invented figures here. Compare commerce platform and club panel on the same operating scenario. Heselo plans start from {low} {currency} per month and are listed publicly.',
         },
         {
           q: 'Can we keep both Baza Market and Heselo?',
@@ -331,7 +331,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Which languages does Heselo support and what does it cost?',
-          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} AZN per month and are listed publicly on this site.',
+          a: 'The interface is in Azerbaijani, English and Russian. Plans start from {low} {currency} per month and are listed publicly on this site.',
         },
         {
           q: 'How can I check the fit before switching?',
@@ -375,7 +375,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Основной продукт: часы комнаты, консоли или стола',
             'Нужны предварительная бронь и запуск сеанса по приходу',
             'Продления, тарифы и касса смены должны быть в одной панели',
-            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} AZN/мес.)',
+            'Важны интерфейс AZ / EN / RU и открытая цена (от {low} {currency}/мес.)',
           ],
         },
 
@@ -422,7 +422,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Учёт времени', 'Обычно не применяется', 'Живой сеанс, продление, тариф'],
               ['Склад', 'Торговый склад и поставщики', 'Клубный склад, допы к сеансу'],
               ['Касса', 'Продажи и комиссии', 'Клубные смены + продажи в сеансе'],
-              ['Цена', 'Актуальное предложение', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'Актуальное предложение', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Зависит от поставщика', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -490,7 +490,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Как сравнивать цену Baza Market?',
-          a: 'Актуальные цены и комиссии Baza Market уточняйте напрямую — без выдуманных цифр. Сравнивайте торговую платформу и клубную панель на одном сценарии. Тарифы Heselo от {low} AZN в месяц и открыто на сайте.',
+          a: 'Актуальные цены и комиссии Baza Market уточняйте напрямую — без выдуманных цифр. Сравнивайте торговую платформу и клубную панель на одном сценарии. Тарифы Heselo от {low} {currency} в месяц и открыто на сайте.',
         },
         {
           q: 'Можно оставить и Baza Market, и Heselo?',
@@ -498,7 +498,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Какие языки поддерживает Heselo и сколько она стоит?',
-          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} AZN в месяц и открыто указаны на сайте.',
+          a: 'Интерфейс на азербайджанском, английском и русском. Тарифы от {low} {currency} в месяц и открыто указаны на сайте.',
         },
         {
           q: 'Как проверить систему до перехода?',

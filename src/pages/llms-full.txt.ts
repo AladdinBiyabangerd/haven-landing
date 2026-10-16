@@ -21,21 +21,21 @@ import {
 export const GET: APIRoute = async () => {
   await loadVenueOffers()
   const origin = siteUrl()
-  const p = catalogPriceVars()
-
+  const p = catalogPriceVars('az')
   const perLocale = LOCALES.map((locale) => {
     const m = getMessages(locale)
+    const localePrices = catalogPriceVars(locale)
     return `# ${LOCALE_NAMES[locale]}
 
 ## Summary
 
-${withCatalogPrices(m.site.description)}
+${withCatalogPrices(m.site.description, locale)}
 
 ## Modules
 
 ${modulesText(locale)}
 
-## Pricing (AZN)
+## Pricing (${localePrices.currency})
 
 ${pricingTable(locale)}
 
@@ -63,14 +63,14 @@ ${formatLinks(educationalGuideLinks(locale))}`
   const body = `# Heselo — full context (${origin})
 
 > Heselo is a web panel (SaaS) for gaming / PlayStation clubs, karaoke rooms, billiards halls, anti-cafés and room lounges in Azerbaijan: booking, live floor sessions, cash shift and inventory in one place. It is not a kitchen / restaurant POS.
-> Languages: az (default), en, ru. Currency: AZN. Short version: ${origin}/llms.txt
+> Languages: az (default), en, ru. Currencies: AZN / RUB / USD by locale. Short version: ${origin}/llms.txt
 
 ## Facts
 
 - Product type: SaaS web panel, operating system: Web (any modern browser, works on mobile).
 - Venue types: gaming / PlayStation club, karaoke, billiards, anti-café, room lounge.
 - Founder: ${FOUNDER.name} (${localeUrl('az', '/about')}).
-- Pricing is public and differs by venue type; published starting monthly fee (Small plan): gaming ${p.gaming} AZN, billiards ${p.billiards} AZN, karaoke ${p.karaoke} AZN, room lounge ${p.lounge} AZN, anti-café ${p.antikafe} AZN. Lowest: ${p.low} AZN/month.
+- Pricing is public and differs by venue type; published starting monthly fee (Small plan, ${p.currency}): gaming ${p.gaming}, billiards ${p.billiards}, karaoke ${p.karaoke}, room lounge ${p.lounge}, anti-café ${p.antikafe}. Lowest: ${p.low} ${p.currency}/month.
 - Free demo: contact form or WhatsApp.
 
 ## Contact

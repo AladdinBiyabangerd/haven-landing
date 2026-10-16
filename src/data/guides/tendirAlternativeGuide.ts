@@ -41,7 +41,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Otaq/stansiya saatı əsas gəlir',
             'Bron → sessiya → uzadılma → kassa',
             'Bar/qəlyanaltı sessiyaya və anbara bağlıdır',
-            'AZ / EN / RU, {low} AZN/aydan',
+            'AZ / EN / RU, {low} {currency}/aydan',
           ],
         },
 
@@ -87,7 +87,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Rezervasiya', 'Platformadan asılı', 'Otaq və stansiya təqvimi'],
               ['Vaxt hesabı', 'Oyun alətləri (platforma)', 'Canlı sessiya, uzadılma, tarif'],
               ['Kassa', 'POS / ödəniş prosesi', 'Klub növbəsi + sessiya satışı'],
-              ['Qiymət', 'Sorğu ilə', 'Açıq: {low} AZN/aydan'],
+              ['Qiymət', 'Sorğu ilə', 'Açıq: {low} {currency}/aydan'],
               ['Dillər', 'AZ fokus', 'AZ, EN, RU'],
               [
                 'Ən yaxşı uyğunluq',
@@ -148,7 +148,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo qiyməti?',
-          a: '{low} AZN/aydan, AZ / EN / RU.',
+          a: '{low} {currency}/aydan, AZ / EN / RU.',
         },
         {
           q: 'Təndir qiymətini necə müqayisə etməliyəm?',
@@ -202,7 +202,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Room/station hours are main revenue',
             'Book → session → extension → cash',
             'Bar/snacks tied to session and stock',
-            'AZ / EN / RU, from {low} AZN/month',
+            'AZ / EN / RU, from {low} {currency}/month',
           ],
         },
 
@@ -248,7 +248,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Bookings', 'Platform-dependent', 'Room and station calendar'],
               ['Time billing', 'Gaming tools (platform)', 'Live session, extension, rates'],
               ['Cash', 'POS / payments contour', 'Club shift + session sales'],
-              ['Pricing', 'On request', 'Public: from {low} AZN/month'],
+              ['Pricing', 'On request', 'Public: from {low} {currency}/month'],
               ['Languages', 'AZ focus', 'AZ, EN, RU'],
               [
                 'Best fit',
@@ -309,7 +309,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Heselo pricing?',
-          a: 'From {low} AZN/month, AZ / EN / RU.',
+          a: 'From {low} {currency}/month, AZ / EN / RU.',
         },
         {
           q: 'How to compare Tendir pricing?',
@@ -363,7 +363,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
             'Часы комнаты/станции — основная выручка',
             'Бронь → сеанс → продление → касса',
             'Бар/закуски к сеансу и складу',
-            'AZ / EN / RU, от {low} AZN/мес.',
+            'AZ / EN / RU, от {low} {currency}/мес.',
           ],
         },
 
@@ -409,7 +409,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
               ['Бронирование', 'Зависит от платформы', 'Календарь комнат и станций'],
               ['Учёт времени', 'Gaming-инструменты платформы', 'Живой сеанс, продление, тариф'],
               ['Касса', 'Контур POS / платежей', 'Клубная смена + продажи в сеансе'],
-              ['Цена', 'По запросу', 'Открыто: от {low} AZN/мес.'],
+              ['Цена', 'По запросу', 'Открыто: от {low} {currency}/мес.'],
               ['Языки', 'Фокус AZ', 'AZ, EN, RU'],
               [
                 'Лучшее соответствие',
@@ -470,7 +470,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
         },
         {
           q: 'Цена Heselo?',
-          a: 'От {low} AZN/мес., AZ / EN / RU.',
+          a: 'От {low} {currency}/мес., AZ / EN / RU.',
         },
         {
           q: 'Как сравнить цену Təndir?',

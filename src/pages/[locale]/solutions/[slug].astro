@@ -12,7 +12,13 @@ import NextThought from '@/components/NextThought.astro'
 import { localePath } from '@/lib/site'
 import { contactPath, pricingPath } from '@/lib/journey'
 import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
-import { VENUE_STORAGE_KEY, getVenueOffer, isVenueOfferSlug, loadVenueOffers } from '@/lib/venueOffers'
+import {
+  VENUE_STORAGE_KEY,
+  getVenueOffer,
+  isVenueOfferSlug,
+  loadVenueOffers,
+  offersForLocale,
+} from '@/lib/venueOffers'
 import { fillTemplate, formatMoney } from '@/lib/format'
 
 export function getStaticPaths() {
@@ -32,19 +38,20 @@ const solutionRaw = getSolution(locale, slug)
 if (!solutionRaw) {
   return Astro.redirect(localePath(locale, '/solutions'))
 }
-const solution = applyCatalogPricesDeep(solutionRaw)
+const solution = applyCatalogPricesDeep(solutionRaw, locale)
 
 const related = getSolutions(locale).filter((item) => solution.related.includes(item.slug))
 const relatedGuide = getGuideForSolution(locale, solution.slug)
 const altGuides = getAltGuidesForSolution(locale, solution.slug)
 const productShotId = SOLUTION_SHOT_MAP[solution.slug]
 const extraShotId = SOLUTION_EXTRA_SHOT_MAP[solution.slug]
-const venueOffer = getVenueOffer(solution.slug)
+const venueOffer = getVenueOffer(solution.slug, offersForLocale(locale))
 const fromFee = venueOffer?.plans[0].monthlyFee
+const fromCurrency = venueOffer?.plans[0].currency
 const offerPrice = fromFee != null
   ? {
       label: fillTemplate(messages.pricing.fromMonthly, {
-        price: formatMoney(fromFee, locale),
+        price: formatMoney(fromFee, locale, fromCurrency),
       }),
     }
   : null

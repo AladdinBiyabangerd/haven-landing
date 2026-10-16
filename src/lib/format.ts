@@ -1,4 +1,8 @@
 import type { Locale } from '@/i18n/config'
+import {
+  currencyForLocale,
+  type PlatformCurrency,
+} from '@/lib/platformCurrency'
 
 const intlLocale: Record<Locale, string> = {
   az: 'az-AZ',
@@ -6,23 +10,32 @@ const intlLocale: Record<Locale, string> = {
   ru: 'ru-RU',
 }
 
-export function formatMoney(amount: number, locale: Locale): string {
-  // Plans are whole manats — "9 ₼" reads as a price, "9,00 ₼" reads as a receipt.
+export function formatMoney(
+  amount: number,
+  locale: Locale,
+  currency: PlatformCurrency = currencyForLocale(locale),
+): string {
+  // Whole amounts — "9 ₼" reads as a price, "9,00 ₼" reads as a receipt.
   const whole = Number.isInteger(amount)
   return new Intl.NumberFormat(intlLocale[locale], {
     style: 'currency',
-    currency: 'AZN',
+    currency,
     minimumFractionDigits: whole ? 0 : 2,
     maximumFractionDigits: 2,
   }).format(amount)
 }
 
 /** "19–39 ₼" rather than "19 ₼–39 ₼". */
-export function formatMoneyRange(low: number, high: number, locale: Locale): string {
+export function formatMoneyRange(
+  low: number,
+  high: number,
+  locale: Locale,
+  currency: PlatformCurrency = currencyForLocale(locale),
+): string {
   const whole = Number.isInteger(low) && Number.isInteger(high)
   const nf = new Intl.NumberFormat(intlLocale[locale], {
     style: 'currency',
-    currency: 'AZN',
+    currency,
     minimumFractionDigits: whole ? 0 : 2,
     maximumFractionDigits: 2,
   })

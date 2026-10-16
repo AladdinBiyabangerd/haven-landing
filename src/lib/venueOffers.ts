@@ -7,12 +7,20 @@
  * Set PUBLIC_HESELO_API_BASE_URL= (empty) to force offline fallback.
  */
 import { PRIMARY_SOLUTION_SLUGS, type PrimarySolutionSlug } from '@/data/solutions/types'
+import {
+  currencyForLocale,
+  parseFeesByCurrency,
+  resolvePlanFees,
+  type FeesByCurrency,
+  type PlatformCurrency,
+} from '@/lib/platformCurrency'
 
 export type VenueOfferModel = 'oneTime' | 'monthly'
 export type VenuePlanId = 'starter' | 'plus' | 'pro'
 export type VenueCapacityUnit = 'stations' | 'tables' | 'rooms' | 'zones'
 export type BillingPeriod = 'monthly' | 'annual'
 export type MarketingLocale = 'az' | 'en' | 'ru'
+export type { PlatformCurrency, FeesByCurrency }
 
 export type PlanMarketingLocaleCopy = {
   forWhom: string
@@ -24,8 +32,13 @@ export type PlanMarketingCopy = Partial<Record<MarketingLocale, PlanMarketingLoc
 
 export type VenuePlan = {
   id: VenuePlanId
+  /** Fees resolved for the active landing locale/currency. */
   monthlyFee: number
   annualFee: number
+  /** Display currency for monthlyFee / annualFee. */
+  currency: PlatformCurrency
+  /** Raw multi-currency map from API (AZN always present after normalize). */
+  feesByCurrency: FeesByCurrency
   upTo: number
   includedVenues: number
   includedReservations: number
@@ -80,10 +93,16 @@ const PLAN_QUOTA: Record<
 
 function plan(id: VenuePlanId, monthlyFee: number, upTo: number): VenuePlan {
   const quota = PLAN_QUOTA[id]
+  const annualFee = monthlyFee * 10
+  const feesByCurrency: FeesByCurrency = {
+    AZN: { monthly: monthlyFee, annual: annualFee },
+  }
   return {
     id,
     monthlyFee,
-    annualFee: monthlyFee * 10,
+    annualFee,
+    currency: 'AZN',
+    feesByCurrency,
     amount: monthlyFee,
     upTo,
     includedVenues: quota.includedVenues,
@@ -212,11 +231,17 @@ function mapApiOffers(payload: unknown): VenueOffer[] | null {
       const id = normalizePlanId(String(planRow.id || 'starter'))
       const monthlyFee = Number(planRow.monthlyFee) || 0
       const annualFee = Number(planRow.annualFee) || monthlyFee * 10
+      const feesByCurrency = parseFeesByCurrency(planRow.feesByCurrency)
+      if (!feesByCurrency.AZN) {
+        feesByCurrency.AZN = { monthly: monthlyFee, annual: annualFee }
+      }
       const fallbackQuota = PLAN_QUOTA[id]
       return {
         id,
         monthlyFee,
         annualFee,
+        currency: 'AZN' as const,
+        feesByCurrency,
         amount: monthlyFee,
         upTo: Math.floor(Number(planRow.upTo) || 0),
         includedVenues: Math.floor(
@@ -273,8 +298,41 @@ export async function loadVenueOffers(): Promise<readonly VenueOffer[]> {
   return cachedOffers
 }
 
+/** Raw catalog (AZN-canonical fees). Prefer `offersForLocale` for display. */
 export function getActiveOffers(): readonly VenueOffer[] {
   return cachedOffers ?? FALLBACK_VENUE_OFFERS
+}
+
+function localizePlan(plan: VenuePlan, locale: MarketingLocale): VenuePlan {
+  const preferred = currencyForLocale(locale)
+  const resolved = resolvePlanFees(
+    plan.feesByCurrency,
+    plan.monthlyFee,
+    plan.annualFee,
+    preferred,
+  )
+  return {
+    ...plan,
+    monthlyFee: resolved.monthly,
+    annualFee: resolved.annual,
+    currency: resolved.currency,
+    amount: resolved.monthly,
+  }
+}
+
+/** Catalog with monthly/annual resolved for the landing locale’s currency. */
+export function offersForLocale(locale: MarketingLocale): readonly VenueOffer[] {
+  return getActiveOffers().map((offer) => {
+    const [starter, plus, pro] = offer.plans
+    return {
+      ...offer,
+      plans: [
+        localizePlan(starter, locale),
+        localizePlan(plus, locale),
+        localizePlan(pro, locale),
+      ] as const,
+    }
+  })
 }
 
 export function isVenuePlanId(value: string): value is VenuePlanId {
@@ -294,6 +352,14 @@ export function getVenueOffer(
   catalog: readonly VenueOffer[] = getActiveOffers(),
 ): VenueOffer | undefined {
   return catalog.find((offer) => offer.slug === slug)
+}
+
+/** Display currency actually used after RUB/USD fallback rules. */
+export function catalogDisplayCurrency(
+  locale: MarketingLocale,
+  catalog: readonly VenueOffer[] = offersForLocale(locale),
+): PlatformCurrency {
+  return catalog[0]?.plans[0]?.currency ?? currencyForLocale(locale)
 }
 
 export function venuePriceRange(

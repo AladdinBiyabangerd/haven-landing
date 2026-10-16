@@ -35,7 +35,7 @@ const guideRaw = getGuide(locale, slug)
 if (!guideRaw) {
   return Astro.redirect(localePath(locale, '/guides'))
 }
-const guide = applyCatalogPricesDeep(guideRaw)
+const guide = applyCatalogPricesDeep(guideRaw, locale)
 
 const related = guide.relatedSolutions
   .map((s) => getSolution(locale, s))

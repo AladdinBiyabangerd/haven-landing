@@ -9,7 +9,7 @@ import {
 } from '@/data/guides'
 import { getSolutions } from '@/data/solutions'
 import { SITE, localeUrl, phoneE164, siteUrl } from '@/lib/site'
-import { getActiveOffers } from '@/lib/venueOffers'
+import { offersForLocale } from '@/lib/venueOffers'
 
 export const LOCALE_NAMES: Record<Locale, string> = {
   az: 'Azərbaycan (az, default)',
@@ -73,8 +73,10 @@ export function allLinkedPaths(): string[] {
 
 export function pricingTable(locale: Locale): string {
   const m = getMessages(locale)
+  const catalog = offersForLocale(locale)
+  const currency = catalog[0]?.plans[0]?.currency ?? 'AZN'
   const rows: string[] = []
-  for (const offer of getActiveOffers()) {
+  for (const offer of catalog) {
     const copy = m.pricing.offers[offer.slug]
     for (const plan of offer.plans) {
       const capacity = fillTemplate(m.pricing.capacity[offer.unit], { n: plan.upTo })
@@ -84,7 +86,7 @@ export function pricingTable(locale: Locale): string {
     }
   }
   return [
-    '| Venue type | Plan | Capacity | AZN / month | AZN / year |',
+    `| Venue type | Plan | Capacity | ${currency} / month | ${currency} / year |`,
     '|------------|------|----------|-------------|------------|',
     ...rows,
   ].join('\n')
@@ -95,9 +97,12 @@ export function faqText(locale: Locale): string {
   return getFaqGroups(m)
     .map((group) => {
       const qa = group.items
-        .map((item) => `Q: ${withCatalogPrices(item.q)}\nA: ${withCatalogPrices(item.a)}`)
+        .map(
+          (item) =>
+            `Q: ${withCatalogPrices(item.q, locale)}\nA: ${withCatalogPrices(item.a, locale)}`,
+        )
         .join('\n\n')
-      return `### ${withCatalogPrices(group.title)}\n\n${qa}`
+      return `### ${withCatalogPrices(group.title, locale)}\n\n${qa}`
     })
     .join('\n\n')
 }
@@ -105,7 +110,10 @@ export function faqText(locale: Locale): string {
 export function modulesText(locale: Locale): string {
   const m = getMessages(locale)
   return m.featuresPage.modules
-    .map((mod) => `- ${withCatalogPrices(mod.title)}: ${withCatalogPrices(mod.desc)}`)
+    .map(
+      (mod) =>
+        `- ${withCatalogPrices(mod.title, locale)}: ${withCatalogPrices(mod.desc, locale)}`,
+    )
     .join('\n')
 }
 
