@@ -64,14 +64,14 @@ Lab = Lighthouse 12.2 mobile (headless Chrome), **pre-deploy** canlı `heselo.on
 
 | URL | Tool | LCP | CLS | INP | Perf | Date |
 |-----|------|-----|-----|-----|------|------|
-| /ru/ | Lighthouse mobile | 6197 ms | 0 | n/a | 74 | 2026-10-16 |
+| /ru/ | Lighthouse mobile | 6197 ms → **3168 ms** post | 0 | n/a | 74 → **91** | 2026-10-16 |
 | /ru/pricing/ | Lighthouse mobile | fail / no score | 0 | n/a | — | 2026-10-16 (retry failed) |
-| /ru/solutions/gaming/ | Lighthouse mobile | 2666 ms | 0 | n/a | 97 | 2026-10-16 |
-| /ru/guides/how-to-open-playstation-club/ | Lighthouse mobile | 999 ms | 0 | n/a | 100 | 2026-10-16 |
+| /ru/solutions/gaming/ | Lighthouse mobile | 2666 ms | 0 | n/a | 97 | 2026-10-16 pre |
+| /ru/guides/how-to-open-playstation-club/ | Lighthouse mobile | 999 ms | 0 | n/a | 100 | 2026-10-16 pre |
 
 CrUX (Search Console / CrUX API) qeyd: _______ (GSC → Core Web Vitals; agent oxuya bilmədi)
 
-**Post-deploy:** eyni 4 URL-i yenidən ölç (hero/LCP + Metrica defer gözlənilir). Home LCP 6s+ — prioritet.
+**Deploy:** `4582e99` live 2026-10-16 — `живой сеанс`, tools 200, IndexNow 198 URLs OK.
 
 ## Week-2 GSC CTR pass (deploy + 7–14 gün)
 
@@ -91,11 +91,11 @@ CrUX (Search Console / CrUX API) qeyd: _______ (GSC → Core Web Vitals; agent o
 
 ## Keçid
 
-- [x] Lab CWV cədvəli (pre-deploy)
+- [x] Lab CWV cədvəli (pre + home post-deploy)
 - [ ] GSC CSV + ölkə snapshot
 - [ ] Yandex snapshot
-- [ ] Deploy live + Request indexing / Переобход
-- [ ] Post-deploy CWV recheck
+- [x] Deploy live + IndexNow (GSC Request indexing / Yandex Переобход — istifadəçi)
+- [x] Post-deploy CWV home recheck (LCP 6.2s → 3.2s)
 - [ ] Week-2 CTR pass (7–14g sonra)
 
 Indexed hub-lar + CSV + PSI/Lighthouse cədvəli doldurulanda Phase 0 bağlanır.

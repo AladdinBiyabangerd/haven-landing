@@ -2,27 +2,24 @@
 
 ## Completed
 
-1. Phase 0–6 docs/checklists + `ru-seo-native-copy.mdc`.
-2. Full /ru SEO code batch (tech, quick fixes, cannibalization, solutions, guides, tools) — local build green.
-3. Phase 0 lab CWV (Lighthouse, pre-deploy) written into `docs/seo-ru-phase0-baseline.md`.
-4. GSC/Yandex snapshot tables stubbed; real numbers **blocked** (no account/CSV).
+1. Full /ru SEO code shipped: commit `4582e99` → `origin/main` → live.
+2. Verified live: `живой сеанс`; `/ru/tools/tariff-calculator/`, `/ru/tools/pricing-model/`, `/ru/guides/ps-club-software-comparison/` → 200.
+3. IndexNow: 198 URLs submitted OK.
+4. Lab CWV in `docs/seo-ru-phase0-baseline.md`: home LCP 6197→3168 ms (perf 74→91).
 
 ## Current state
 
-- Uncommitted /ru SEO work ready to ship; live `heselo.online/ru` still old copy (сессия, AZN-only vibes, no tools).
-- Lab: `/ru/` LCP ~6.2s (bad); gaming ~2.7s; how-to-open-PS ~1.0s. Pricing Lighthouse flaky.
-- PSI API quota exhausted today.
+- **GSC + Yandex real numbers still empty** — no account/CSV in workspace.
+- Week-2 CTR pass **cannot run yet** (needs 7–14g impressions after deploy).
 
-## Remaining
+## Remaining (user)
 
-1. **Commit + push** → Vercel deploy `/ru` (user asked deploy).
-2. User: fill GSC + Yandex numbers in phase0 (export CSV → `docs/gsc-baseline-ru-2026-10-16/`).
-3. Post-deploy: IndexNow + GSC Request indexing priority URLs; recheck CWV.
-4. **Week-2 GSC CTR pass** — only after 7–14 days + real GSC rows (checklist in phase0).
+1. Export GSC Queries+Pages (28g, `/ru/`, countries AZ/RU/KZ/UZ/BY) → paste or `docs/gsc-baseline-ru-2026-10-16/`.
+2. Yandex Webmaster: region, indexed count, IndexNow status, Переобход.
+3. GSC URL Inspection → Request indexing (priority list in phase0).
+4. **~2026-10-23…30:** Week-2 GSC CTR pass (checklist + log table in phase0).
 
 ## Relevant files
 
 - `docs/seo-ru-phase0-baseline.md`
-- `docs/seo-ru-kpi-filters.md`, `docs/seo-ru-research-2026-10.md`
-- `src/data/guides/ruCisGuides.ts`, `src/data/solutions/ru.ts`, `src/i18n/messages/ru.ts`
-- `src/pages/[locale]/tools/*`
+- `docs/seo-ru-kpi-filters.md`
