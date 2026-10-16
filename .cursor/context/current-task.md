@@ -1,25 +1,28 @@
-# Current task — /ru SEO deploy + Phase 0
+# Current task — /ru SEO audit fixes (2026-10-16)
 
 ## Completed
 
-1. Full /ru SEO code shipped: commit `4582e99` → `origin/main` → live.
-2. Verified live: `живой сеанс`; `/ru/tools/tariff-calculator/`, `/ru/tools/pricing-model/`, `/ru/guides/ps-club-software-comparison/` → 200.
-3. IndexNow: 198 URLs submitted OK.
-4. Lab CWV in `docs/seo-ru-phase0-baseline.md`: home LCP 6197→3168 ms (perf 74→91).
+1. P0: `yandex-verification` meta; IndexNow/email ops notes in phase0 + README.
+2. P1: RU titles ≤65; descriptions 120–160 (privacy/terms/tools/billiards/pricing).
+3. P2: gaming ↔ playstation-club-software + comparison links; product «сессия» → «сеанс».
+4. P3: Expanded RU features, solutions hub, tariff-calculator, pricing-model.
+5. P4: `public/og-image.jpg` (~181 KB); home FAQPage = visible pick only; build OK.
 
 ## Current state
 
-- **GSC + Yandex real numbers still empty** — no account/CSV in workspace.
-- Week-2 CTR pass **cannot run yet** (needs 7–14g impressions after deploy).
+Code ready to deploy. Audit file `docs/seo-ru-audit-2026-10-16.md` may still be uncommitted.
 
-## Remaining (user)
+## Remaining (user / ops)
 
-1. Export GSC Queries+Pages (28g, `/ru/`, countries AZ/RU/KZ/UZ/BY) → paste or `docs/gsc-baseline-ru-2026-10-16/`.
-2. Yandex Webmaster: region, indexed count, IndexNow status, Переобход.
-3. GSC URL Inspection → Request indexing (priority list in phase0).
-4. **~2026-10-23…30:** Week-2 GSC CTR pass (checklist + log table in phase0).
+1. Deploy → confirm `yandex-verification` + `/{HESELO_INDEXNOW_KEY}.txt` 200 → `npm run indexnow`.
+2. Yandex Webmaster: verify site, submit sitemap, Переобход.
+3. Rich Results Test + Yandex Validator: `/ru/`, gaming, one guide, `/ru/faq/`.
+4. Domain email: set `PUBLIC_HESELO_CONTACT_EMAIL` only when mailbox exists.
+5. GSC CSV / Week-2 CTR (phase0).
 
 ## Relevant files
 
-- `docs/seo-ru-phase0-baseline.md`
-- `docs/seo-ru-kpi-filters.md`
+- `src/layouts/BaseLayout.astro`, `src/lib/site.ts`, `src/pages/[locale]/index.astro`
+- `src/i18n/messages/ru.ts`, `src/data/solutions/ru.ts`, `src/data/guides/*`
+- `src/pages/[locale]/features.astro`, `solutions/index.astro`, `tools/*`
+- `public/og-image.jpg`, `docs/seo-ru-phase0-baseline.md`

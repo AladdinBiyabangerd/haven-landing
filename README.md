@@ -17,7 +17,7 @@ StayBoard landing ilə eyni məqsəd (lokalizə, prerender, meta/JSON-LD/sitemap
 ## SEO / GEO
 
 - Canonical + `hreflang` (az/en/ru + x-default)
-- Open Graph / Twitter cards (`/og-image.png`)
+- Open Graph / Twitter cards (`/og-image.jpg`)
 - JSON-LD: Organization, SoftwareApplication, WebSite, BreadcrumbList, FAQPage, Article (guides)
 - `/sitemap.xml` (xhtml alternate links)
 - `/robots.txt` — marketing pages open; `/api/` closed; explicit allow for GPTBot, OAI-SearchBot, PerplexityBot, Google-Extended, ClaudeBot, …
@@ -67,7 +67,8 @@ Output depends on target:
 | `PUBLIC_HESELO_ANALYTICS` | `ga4` (default) or `plausible` |
 | `PUBLIC_HESELO_GA4_ID` | GA4 Measurement ID (default: `G-HKT0YR5W38`) |
 | `PUBLIC_HESELO_CLARITY_ID` | Microsoft Clarity project ID (default: `yqenuclqam`; empty disables) |
-| `HESELO_INDEXNOW_KEY` | IndexNow API key (file served at `/{key}.txt`; run `npm run indexnow` after deploy) |
+| `HESELO_INDEXNOW_KEY` | IndexNow API key (file served at `/{key}.txt`, not `/indexnow.txt`; run `npm run indexnow` after deploy) |
+| `PUBLIC_HESELO_CONTACT_EMAIL` | Public contact email override (default: Gmail). Set only when a real `@heselo.online` mailbox exists |
 
 Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
 

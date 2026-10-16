@@ -22,12 +22,25 @@ const messages = await loadPricedMessages(locale)
 /** Conversion-critical home FAQ: what / POS fit / price / demo (full list on /faq). */
 const demoFaqIndex = messages.faq.items.findIndex((item) => item.href === '/contact')
 const homeFaqPick = [0, 2, 3, demoFaqIndex >= 0 ? demoFaqIndex : messages.faq.items.length - 1]
+const homeFaqItems = homeFaqPick
+  .map((i) => messages.faq.items[i])
+  .filter((item): item is (typeof messages.faq.items)[number] => Boolean(item))
+const homeSeo = {
+  title: messages.seo.pages.home.title,
+  description: messages.seo.pages.home.description,
+  keywords: messages.seo.pages.home.keywords,
+  slug: '/',
+  breadcrumbName: messages.nav.home,
+  /** Only questions visible on this page — matches FAQPage rich results rules */
+  faq: homeFaqItems,
+}
 ---
 
 <BaseLayout
   locale={locale}
   messages={messages}
   page="home"
+  seo={homeSeo}
   preloadImages={[
     {
       href: '/images/product/live-floor.webp',

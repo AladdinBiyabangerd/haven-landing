@@ -57,6 +57,10 @@ export type SolutionsHubCopy = {
   eyebrow: string
   h1: string
   intro: string
+  /** Optional prose blocks for SEO depth (e.g. /ru/solutions/) */
+  body?: string[]
+  howTitle?: string
+  howBody?: string
   seoTitle: string
   seoDescription: string
   keywords: string[]

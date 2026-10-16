@@ -38,13 +38,18 @@ Köhnə site-wide kontekst (Aug 11 – Sep 5 2026, bütün dillər): ~14 impress
 
 ## Yandex Webmaster
 
-**Status: BLOK — hesab məlumatı yoxdur.**
+**Status: BLOK — hesab məlumatı yoxdur.** Kod tərəfi (2026-10-16 audit fix):
 
-- [ ] Sayt verify (DNS və ya meta `yandex-verification`)
+- Meta `yandex-verification` = `0d90f5775e306c28` (eyni kod: `public/yandex_0d90f5775e306c28.html`)
+- IndexNow: protokol `https://heselo.online/{HESELO_INDEXNOW_KEY}.txt` — **`/indexnow.txt` deyil**. Deploy-da env boşdursa fayl yaranmır.
+- Contact email: Gmail default; domen mailbox açıldıqda `PUBLIC_HESELO_CONTACT_EMAIL=hello@heselo.online` (və ya seçdiyin ünvan)
+- FAQPage: home yalnız görünən pick; digər emit-lər Faq UI ilə uyğundur. Ops: Rich Results Test + Yandex Validator — `/ru/`, `/ru/solutions/gaming/`, bir guide, `/ru/faq/`
+
+- [ ] Sayt verify (meta artıq kodda; Webmaster UI-da təsdiqlə)
 - [ ] Sitemap: `https://heselo.online/sitemap.xml`
 - [ ] Региональность: **Азербайджан** və ya boş — saxta RF şəhəri **yox**
 - [ ] Важные страницы: home, pricing, gaming, karaoke, billiards, antikafe, lounge, contact
-- [ ] IndexNow statusu yoxla (açar env: `HESELO_INDEXNOW_KEY`)
+- [ ] IndexNow: Vercel `HESELO_INDEXNOW_KEY` → `/{key}.txt` 200 → `npm run indexnow`
 - [ ] Переобход after deploy
 
 ### Snapshot (Yandex) — doldurulmayıb

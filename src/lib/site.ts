@@ -10,10 +10,10 @@ export const SITE = {
   twitterHandle: '@heselo',
   themeColor: '#0f766e',
   ogImage: {
-    path: '/og-image.png',
+    path: '/og-image.jpg',
     width: 1200,
     height: 630,
-    type: 'image/png',
+    type: 'image/jpeg',
   },
   logoPath: '/icon-512.png',
 } as const

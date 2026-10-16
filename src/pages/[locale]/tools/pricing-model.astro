@@ -15,14 +15,17 @@ const messages = await loadPricedMessages(locale)
 await loadVenueOffers()
 const prices = catalogPriceVars(locale)
 
+type ToolSection = { id: string; title: string; paragraphs: string[] }
+
 const copy =
   locale === 'ru'
     ? {
         title: 'Цена за консоль или за клуб — сравнение моделей | Heselo',
         description:
-          'Сравните оплату за каждое устройство и фиксированную цену за заведение. Публичные ориентиры с датой.',
+          'Сравните оплату за каждое устройство и фиксированную цену за заведение: ориентиры GameClub/LANGAME и тариф Heselo за клуб. Публичные цифры на октябрь 2026.',
         h1: 'За консоль или за клуб?',
-        lead: 'На 5 и 10 консолях посчитайте сами. Цены конкурентов — публичные ориентиры на октябрь 2026; проверяйте на сайтах вендоров.',
+        lead:
+          'На 5 и 10 консолях посчитайте сами. Цены конкурентов — публичные ориентиры на октябрь 2026; всегда перепроверяйте на сайтах вендоров. Heselo показывает фиксированный тариф за клуб.',
         consoles: 'Число консолей',
         perDevice: 'Оплата за устройство (пример GameClub / LANGAME Basic)',
         perClub: `Heselo — от ${prices.gaming} ${prices.currency}/мес за клуб`,
@@ -31,6 +34,36 @@ const copy =
         cta: 'Смотреть тарифы Heselo',
         note: 'GameClub/LANGAME цифры — примеры из открытых источников; не оферта. Heselo не является ККТ и не управляет ТВ-контроллерами.',
         sources: 'Источники: gmclb.ru, langame.ru/software (проверьте актуальные цены).',
+        sections: [
+          {
+            id: 'why',
+            title: 'Зачем сравнивать модели',
+            paragraphs: [
+              'Оплата «за каждую консоль» растёт линейно с числом станций: зал из десяти PS платит заметно больше, чем зал из пяти, даже если загрузка одинаковая. Фиксированная цена за заведение предсказуемее для бюджета — апгрейд тарифа нужен только при выходе за лимит станций плана.',
+              'Калькулятор умножает число консолей на выбранную плату за устройство и рядом показывает стартовый ориентир Heselo за клуб. Это иллюстрация для выбора модели, а не коммерческое предложение конкурентов.',
+            ],
+          },
+          {
+            id: 'when',
+            title: 'Когда уместна какая модель',
+            paragraphs: [
+              'Модель за устройство удобна, если состав зала часто меняется и вендор даёт прозрачный прайс на консоль. Пакет на клуб удобнее, когда число станций стабильно и важна фиксированная статья расходов в месяц.',
+              'Heselo не продаёт TV-пульты и не является онлайн-кассой по 54-ФЗ: в расчёт софта не входят железо и фискализация. Для сценария брони, сеанса и бара смотрите страницу игрового клуба; полный прайс — на странице тарифов.',
+            ],
+          },
+          {
+            id: 'sources-detail',
+            title: 'Источники и оговорки',
+            paragraphs: [
+              'Цифры GameClub и LANGAME Basic взяты как публичные ориентиры на октябрь 2026. Перед договором запросите актуальный расчёт у вендора. Сравнение программ для PS-клуба (функции, бронь, бар) — в отдельной статье; здесь только модель абонентской платы.',
+            ],
+          },
+        ] satisfies ToolSection[],
+        links: [
+          { href: '/pricing', label: 'Открытые тарифы Heselo' },
+          { href: '/solutions/gaming', label: 'Программа для игрового клуба' },
+          { href: '/guides/ps-club-software-comparison', label: 'Сравнение программ PS 2026' },
+        ],
       }
     : locale === 'en'
       ? {
@@ -46,6 +79,8 @@ const copy =
           cta: 'See Heselo pricing',
           note: 'Competitor numbers are illustrative public snapshots, not offers. Heselo is not a fiscal cash register and does not drive TV relays.',
           sources: 'Sources: gmclb.ru, langame.ru/software — re-check current prices.',
+          sections: [] as ToolSection[],
+          links: [] as Array<{ href: string; label: string }>,
         }
       : {
           title: 'Konsol başına vs klub başına qiymət | Heselo',
@@ -60,6 +95,8 @@ const copy =
           cta: 'Heselo tariflərinə baxın',
           note: 'Rəqib rəqəmləri illüstrativdir. Heselo ККТ deyil və TV rele idarə etmir.',
           sources: 'Mənbə: gmclb.ru, langame.ru/software — aktual qiyməti yoxlayın.',
+          sections: [] as ToolSection[],
+          links: [] as Array<{ href: string; label: string }>,
         }
 ---
 
@@ -105,6 +142,35 @@ const copy =
       <a class="btn btn-primary" href={localePath(locale, '/pricing')} data-track-placement="tool">
         {copy.cta}
       </a>
+
+      {
+        copy.sections.length > 0 ? (
+          <div class="tool__prose">
+            {copy.sections.map((section) => (
+              <section aria-labelledby={`pm-${section.id}`}>
+                <h2 class="tool__h2" id={`pm-${section.id}`}>
+                  {section.title}
+                </h2>
+                {section.paragraphs.map((p) => (
+                  <p>{p}</p>
+                ))}
+              </section>
+            ))}
+            {copy.links.length > 0 ? (
+              <ul class="tool__links">
+                {copy.links.map((link) => (
+                  <li>
+                    <a class="link-inline" href={localePath(locale, link.href)}>
+                      {link.label}
+                      {messages.common.linkArrow}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        ) : null
+      }
     </div>
   </section>
 </BaseLayout>
@@ -171,5 +237,28 @@ const copy =
     margin: 0 0 0.75rem;
     font-size: var(--text-sm);
     color: var(--ink-subtle);
+  }
+  .tool__prose {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  .tool__h2 {
+    margin: 0 0 0.65rem;
+    font-size: var(--text-lg);
+    font-weight: 700;
+  }
+  .tool__prose p {
+    margin: 0 0 0.65rem;
+    color: var(--ink-muted);
+    font-size: var(--text-md);
+    line-height: 1.65;
+  }
+  .tool__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
   }
 </style>

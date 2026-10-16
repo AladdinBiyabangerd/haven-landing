@@ -11,14 +11,17 @@ export function getStaticPaths() {
 const locale = resolveLocale(Astro.params.locale)
 const messages = await loadPricedMessages(locale)
 
+type ToolSection = { id: string; title: string; paragraphs: string[] }
+
 const copy =
   locale === 'ru'
     ? {
         title: 'Калькулятор тарифов PS-клуба | Heselo',
         description:
-          'Оцените выручку: число кабинок, цена часа и загрузка. Примерный расчёт — не оферта.',
+          'Оцените месячную выручку PS-клуба: число кабинок, цена часа и загрузка. Примерный расчёт на устройстве — не оферта и не цена подписки Heselo.',
         h1: 'Калькулятор тарифов клуба',
-        lead: 'Введите свои цифры. Считаем на устройстве — данные никуда не отправляются.',
+        lead:
+          'Введите число кабинок, цену часа и загрузку. Считаем на устройстве — данные никуда не отправляются. Это модель выручки зала, а не прайс подписки Heselo.',
         booths: 'Число кабинок / станций',
         hourly: 'Цена часа',
         hours: 'Часов загрузки на кабинку в день',
@@ -26,6 +29,36 @@ const copy =
         revenue: 'Ориентировочная выручка в месяц',
         cta: 'Запросить демо Heselo',
         note: 'Это модель выручки зала, не цена подписки Heselo. Контроллеры ТВ и онлайн-касса (ККТ) в расчёт не входят.',
+        sections: [
+          {
+            id: 'formula',
+            title: 'Что считает формула',
+            paragraphs: [
+              'Итог = число кабинок × цена часа × часов загрузки в день × рабочих дней в месяц. Так вы видите порядок выручки от продажи времени станций, без бара и без пакетов.',
+              'Если часть дня идёт по ночному тарифу или пакетам «2 часа», подставьте среднюю эффективную цену часа — калькулятор не заменяет полный прайс-лист, а помогает сравнить сценарии «6 кабин × 5 часов» и «10 кабин × 4 часа».',
+            ],
+          },
+          {
+            id: 'assumptions',
+            title: 'Какие допущения заложены',
+            paragraphs: [
+              'Загрузка на кабинку — среднее по залу, а не пик пятницы. Пустые утренние часы снижают среднее; вечерний пик его поднимает. Не закладывайте 100 % занятости без запаса на мойку, простои и отмены.',
+              'Бар, депозиты и предоплата в формулу не входят. Онлайн-касса (ККТ) и реле ТВ — тоже: Heselo ведёт бронь, сеансы и смену в браузере и не заменяет фискальное оборудование.',
+            ],
+          },
+          {
+            id: 'next',
+            title: 'Дальше: панель и тарифы Heselo',
+            paragraphs: [
+              'Когда ориентир по выручке ясен, имеет смысл проверить, как бронь переходит в активный сеанс и как бар попадает в тот же счёт — это страница решения для игрового клуба. Открытые цены подписки Heselo (фиксировано за клуб, не за консоль) — на странице тарифов; сравнение моделей «за устройство» и «за клуб» — в соседнем инструменте.',
+            ],
+          },
+        ] satisfies ToolSection[],
+        links: [
+          { href: '/solutions/gaming', label: 'Программа для игрового клуба' },
+          { href: '/pricing', label: 'Тарифы Heselo' },
+          { href: '/tools/pricing-model', label: 'Модель цены: консоль vs клуб' },
+        ],
       }
     : locale === 'en'
       ? {
@@ -40,6 +73,8 @@ const copy =
           revenue: 'Estimated monthly revenue',
           cta: 'Request a Heselo demo',
           note: 'Venue revenue model — not Heselo subscription pricing. TV controllers and fiscal cash registers are out of scope.',
+          sections: [] as ToolSection[],
+          links: [] as Array<{ href: string; label: string }>,
         }
       : {
           title: 'Klub tarif kalkulyatoru | Heselo',
@@ -53,6 +88,8 @@ const copy =
           revenue: 'Təxmini aylıq gəlir',
           cta: 'Heselo demo istəyin',
           note: 'Zalın gəlir modeli — Heselo abunə qiyməti deyil. TV kontroller və fiskal kassa hesabda yoxdur.',
+          sections: [] as ToolSection[],
+          links: [] as Array<{ href: string; label: string }>,
         }
 ---
 
@@ -101,6 +138,35 @@ const copy =
       <a class="btn btn-primary" href={localePath(locale, '/contact')} data-track-placement="tool">
         {copy.cta}
       </a>
+
+      {
+        copy.sections.length > 0 ? (
+          <div class="tool__prose">
+            {copy.sections.map((section) => (
+              <section aria-labelledby={`tool-${section.id}`}>
+                <h2 class="tool__h2" id={`tool-${section.id}`}>
+                  {section.title}
+                </h2>
+                {section.paragraphs.map((p) => (
+                  <p>{p}</p>
+                ))}
+              </section>
+            ))}
+            {copy.links.length > 0 ? (
+              <ul class="tool__links">
+                {copy.links.map((link) => (
+                  <li>
+                    <a class="link-inline" href={localePath(locale, link.href)}>
+                      {link.label}
+                      {messages.common.linkArrow}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        ) : null
+      }
     </div>
   </section>
 </BaseLayout>
@@ -172,5 +238,28 @@ const copy =
     margin: 0 0 1.25rem;
     font-size: var(--text-sm);
     color: var(--ink-subtle);
+  }
+  .tool__prose {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  .tool__h2 {
+    margin: 0 0 0.65rem;
+    font-size: var(--text-lg);
+    font-weight: 700;
+  }
+  .tool__prose p {
+    margin: 0 0 0.65rem;
+    color: var(--ink-muted);
+    font-size: var(--text-md);
+    line-height: 1.65;
+  }
+  .tool__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
   }
 </style>

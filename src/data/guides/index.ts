@@ -49,7 +49,12 @@ export const SOLUTION_ALT_GUIDES: Partial<Record<SolutionSlug, GuideSlug[]>> = {
 
 /** CIS-first alt guides for /ru solution pages. */
 export const SOLUTION_ALT_GUIDES_RU: Partial<Record<SolutionSlug, GuideSlug[]>> = {
-  gaming: ['ps-club-software-comparison', 'langame-alternative', 'gameclub-alternative'],
+  gaming: [
+    'playstation-club-software',
+    'ps-club-software-comparison',
+    'langame-alternative',
+    'gameclub-alternative',
+  ],
   karaoke: ['restaurant-pos-vs-karaoke-system', 'iiko-alternative-clubs', 'karaoke-booking-system'],
   billiards: ['club-pos-vs-excel', 'affordable-club-pos', 'billiards-table-booking'],
   lounge: ['restaurant-pos-vs-karaoke-system', 'iiko-alternative-clubs', 'club-pos-vs-excel'],
@@ -134,9 +139,9 @@ const RELATED_COMPARISON: Partial<Record<GuideSlug, GuideSlug[]>> = {
   'azerbaijan-pos-systems-comparison': ['iiko-alternative-clubs', 'fazilat-pos-alternative'],
   'heselo-pricing': ['affordable-club-pos', 'club-pos-vs-excel'],
   'ps-club-software-comparison': [
+    'playstation-club-software',
     'gameclub-alternative',
     'club-timer-alternative',
-    'langame-alternative',
   ],
   'how-to-open-billiards-club': ['club-revenue-control', 'ps-club-tariffs'],
   'club-revenue-control': ['ps-club-software-comparison', 'ps-club-tariffs'],

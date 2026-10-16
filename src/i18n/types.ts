@@ -214,10 +214,14 @@ export type Messages = {
     eyebrow: string
     title: string
     intro: string
+    /** Optional prose below intro (SEO depth; omit on thin locales) */
+    body?: string[]
     solutionLinkLabel: string
     modules: Array<{
       title: string
       desc: string
+      /** Extra paragraph under the card (RU SEO); omit elsewhere */
+      detail?: string
       /** Link to a feature-focused solution page */
       solutionSlug?: 'reservations' | 'pos' | 'inventory'
     }>
