@@ -1,28 +1,25 @@
-# Current task — /ru SEO audit v2 remaining fixes (2026-10-16)
+# Current task — /ru SEO audit v3 (2026-10-16)
 
-## Completed (this pass)
+## Completed
 
-1. `localePath`: hash before trailing slash (`/ru/pricing/#gaming`); no trailing slash on `*.webmanifest`.
-2. Pricing feature bullets: «Живой сеанс» → «Активный сеанс» (15); playstation-club-software checklist + meta.
-3. Shortened long RU descriptions: ps-club-software-comparison, club-pos-terminal-selection, clopos-alternative; lengthened short pos/inventory/lounge/room-lounge.
-4. Public email left as `heselo.online@gmail.com` (only real mailbox; audit Gmail note stays).
-5. IndexNow: agent runs `npm run indexnow` after push/deploy (GH workflow dropped — PAT lacks `workflow` scope).
-6. Expanded RU copy toward 400+ words: features, solutions hub, pricing-model, tariff-calculator, ps-club-tariffs, how-to-open-anticafe, karaoke-booking-system.
+1. Heselo `plan_marketing_seed.json`: RU «сессия» → «сеанс» / «Активный сеанс» (matches landing lexicon).
+2. Alembic `0070_sync_plan_marketing_seans`: force-overwrites DB `marketing_copy` from seed on migrate (empty-only ensure would not fix live).
+3. Pushed Heselo `main` @ `470bb52`.
 
 ## Current state
 
-Pushed / pushing to main. Agent pings IndexNow after Production is live.
+After Heselo backend deploy + migrate, public catalog returns «Активный сеанс». Landing `/ru/pricing/` picks that up on next build/fetch — redeploy landing if catalog is build-time.
 
-## Remaining / ops
+## Remaining (landing audit v3)
 
-1. PSI/CWV when quota available (Performance still 3/10).
-2. Optional: more «живой сеанс» → «активный сеанс» site-wide (outside pricing/PS guide).
-3. Domain email only if/when a real `@heselo.online` mailbox exists.
+1. Domain email `info@heselo.online` — only when mailbox exists (still Gmail).
+2. Thin pages &lt;400 words (6 pages).
+3. playstation-cafe-software-alternative desc 166 → ≤160.
+4. IndexNow ping after landing deploy.
+5. PSI when quota available.
 
 ## Relevant files
 
-- `src/lib/site.ts`, `src/layouts/BaseLayout.astro` (manifest via localePath)
-- `src/i18n/messages/ru.ts`, `src/data/solutions/ru.ts`, `src/data/guides/{ru,ruCisGuides,gapEducational,cloposAlternativeGuide}.ts`
-- `src/pages/[locale]/tools/{pricing-model,tariff-calculator}.astro`
-- `.github/workflows/indexnow-on-deploy.yml`
-- `docs/seo-ru-audit-2026-10-16-v2.md`
+- `Heselo/backend/app/services/plan_marketing_seed.json`
+- `Heselo/backend/alembic/versions/0070_sync_plan_marketing_seans.py`
+- `heselo-landing/docs/seo-ru-audit-2026-10-16-v3.md`
