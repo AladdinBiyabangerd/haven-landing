@@ -67,7 +67,7 @@ Output depends on target:
 | `PUBLIC_HESELO_ANALYTICS` | `ga4` (default) or `plausible` |
 | `PUBLIC_HESELO_GA4_ID` | GA4 Measurement ID (default: `G-HKT0YR5W38`) |
 | `PUBLIC_HESELO_CLARITY_ID` | Microsoft Clarity project ID (default: `yqenuclqam`; empty disables) |
-| `HESELO_INDEXNOW_KEY` | IndexNow API key (file at `/{key}.txt`). Also add the same value as GitHub secret `HESELO_INDEXNOW_KEY` so `.github/workflows/indexnow-on-deploy.yml` pings after Vercel Production |
+| `HESELO_INDEXNOW_KEY` | IndexNow API key (file served at `/{key}.txt`, not `/indexnow.txt`; run `npm run indexnow` after deploy) |
 | `PUBLIC_HESELO_CONTACT_EMAIL` | Public contact email override (default: Gmail). Set only when a real `@heselo.online` mailbox exists |
 
 Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
@@ -92,5 +92,5 @@ Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
 2. Submit `https://heselo.online/sitemap.xml` in Google Search Console
 3. Verify OG image and canonical URLs on a live page
 4. Optional: `PUBLIC_ANALYTICS`, `PUBLIC_SOCIAL_*` — see `.env.example`
-5. IndexNow: set `HESELO_INDEXNOW_KEY` on Vercel + GitHub secret; confirm `https://heselo.online/{key}.txt`; workflow pings after Production deploy (or `npm run indexnow` manually)
+5. IndexNow: set `HESELO_INDEXNOW_KEY` on Vercel; confirm `https://heselo.online/{key}.txt`; then `npm run indexnow`
 6. Off-site backlinks: [docs/off-site-seo-az.md](docs/off-site-seo-az.md)
