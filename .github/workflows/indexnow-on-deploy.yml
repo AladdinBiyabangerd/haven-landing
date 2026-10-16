@@ -1,0 +1,23 @@
+# Ping IndexNow after a successful Vercel Production deployment.
+# Requires repo secret HESELO_INDEXNOW_KEY (same value as Vercel env).
+name: IndexNow after deploy
+
+on:
+  deployment_status:
+
+jobs:
+  ping:
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      (github.event.deployment.environment == 'Production' ||
+       github.event.deployment_status.environment == 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Submit sitemap to IndexNow
+        run: npm run indexnow
+        env:
+          HESELO_INDEXNOW_KEY: ${{ secrets.HESELO_INDEXNOW_KEY }}

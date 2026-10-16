@@ -77,6 +77,120 @@ https://heselo.online/az/guides/iiko-alternative-clubs/
 
 ---
 
+## Batch 2 — əlavələr (əvvəlkilər istifadə olunubsa)
+
+```
+Ödəyirsən. Amma nəyə?
+https://heselo.online/az/guides/club-timer-alternative/
+```
+
+```
+İşləyir. Yetərli deyil.
+https://heselo.online/az/guides/pancafe-alternative/
+```
+
+```
+Panel var. Zal yox.
+https://heselo.online/az/guides/iiko-alternative-clubs/
+```
+
+```
+Bağlanır. Açılmır.
+https://heselo.online/az/guides/izi-alternative/
+```
+
+```
+Eyni düymə. Başqa iş.
+https://heselo.online/az/guides/kaktus-alternative/
+```
+
+```
+Çox funksiya. Az nəticə.
+https://heselo.online/az/guides/tendir-alternative/
+```
+
+```
+Gündüz sakit. Axşam dağılır.
+https://heselo.online/az/guides/clopos-alternative/
+```
+
+```
+Oyun gedir. Hesab dayanır.
+https://heselo.online/az/guides/hasansoft-alternative/
+```
+
+```
+Qurulub. Boşdur.
+https://heselo.online/az/guides/akinsoft-alternative/
+```
+
+```
+Orada işləyir. Burada sualdır.
+https://heselo.online/az/guides/gameclub-alternative/
+```
+
+```
+Adı tanışdır. Mənası yox.
+https://heselo.online/az/guides/kassa-az-alternative/
+```
+
+```
+Stok var. Sətir yox.
+https://heselo.online/az/guides/baza-market-alternative/
+```
+
+```
+Buludda. Zalda yox.
+https://heselo.online/az/guides/cafesynk-alternative/
+```
+
+```
+Kassir basır. Otaq gözləyir.
+https://heselo.online/az/guides/minupos-alternative/
+```
+
+```
+Satış üçün. Saat üçün deyil.
+https://heselo.online/az/guides/smartpos-alternative/
+```
+
+```
+Çek çıxır. Bron qalmır.
+https://heselo.online/az/guides/robotpos-alternative/
+```
+
+```
+Restoran dili. Klub məhsulu.
+https://heselo.online/az/guides/resto-az-alternative/
+```
+
+```
+POS doludur. Cədvəl boşdur.
+https://heselo.online/az/guides/fazilat-pos-alternative/
+```
+
+```
+Ekran yaşıl. Telefon qırmızı.
+https://heselo.online/az/guides/langame-alternative/
+```
+
+```
+Platforma böyükdür. Boşluq kiçik deyil.
+https://heselo.online/az/guides/smartapp-alternative/
+```
+
+```
+Bir alət. İki dünya.
+https://heselo.online/az/guides/dine-alternative/
+```
+
+```
+Sifariş gedir. Otaq qalmır.
+https://heselo.online/az/guides/restomas-alternative/
+```
+
+---
+
 ## Daha çox variant (copy-paste)
 
 ### Timer / “kiçik alət”
@@ -222,6 +336,36 @@ Amma nəyi?
 ```
 Bu sualı verməyənlər
 sonra ödəyir.
+↓
+```
+
+```
+Ödəyirsən.
+Amma nəyə?
+↓
+```
+
+```
+Gündüz sakit.
+Axşam dağılır.
+↓
+```
+
+```
+Çek çıxır.
+Bron qalmır.
+↓
+```
+
+```
+Oyun gedir.
+Hesab dayanır.
+↓
+```
+
+```
+Panel var.
+Zal yox.
 ↓
 ```
 

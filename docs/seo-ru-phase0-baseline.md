@@ -38,19 +38,23 @@ Köhnə site-wide kontekst (Aug 11 – Sep 5 2026, bütün dillər): ~14 impress
 
 ## Yandex Webmaster
 
-**Status: BLOK — hesab məlumatı yoxdur.** Kod tərəfi (2026-10-16 audit fix):
+**Status 2026-10-16 (brauzer yoxlaması):** sayt artıq əlavə olunub — `https://heselo.online` Summary açıqdır. Canlı: `yandex-verification` meta + `yandex_0d90f5775e306c28.html` 200. **Yandex özündə outage:** Summary/Sitemap/Reindex/Crawl tools read-only və ya “temporarily unavailable” — indi sitemap əlavə və переобход UI-dan mümkün deyil.
+
+Kod tərəfi (audit fix):
 
 - Meta `yandex-verification` = `0d90f5775e306c28` (eyni kod: `public/yandex_0d90f5775e306c28.html`)
 - IndexNow: protokol `https://heselo.online/{HESELO_INDEXNOW_KEY}.txt` — **`/indexnow.txt` deyil**. Deploy-da env boşdursa fayl yaranmır.
 - Contact email: Gmail default; domen mailbox açıldıqda `PUBLIC_HESELO_CONTACT_EMAIL=hello@heselo.online` (və ya seçdiyin ünvan)
 - FAQPage: home yalnız görünən pick; digər emit-lər Faq UI ilə uyğundur. Ops: Rich Results Test + Yandex Validator — `/ru/`, `/ru/solutions/gaming/`, bir guide, `/ru/faq/`
 
-- [ ] Sayt verify (meta artıq kodda; Webmaster UI-da təsdiqlə)
-- [ ] Sitemap: `https://heselo.online/sitemap.xml`
-- [ ] Региональность: **Азербайджан** və ya boş — saxta RF şəhəri **yox**
-- [ ] Важные страницы: home, pricing, gaming, karaoke, billiards, antikafe, lounge, contact
-- [ ] IndexNow: Vercel `HESELO_INDEXNOW_KEY` → `/{key}.txt` 200 → `npm run indexnow`
-- [ ] Переобход after deploy
+**Yandex bərpa olanda (sol menyu → Indexing):**
+
+1. [x] Sayt verify / əlavə — artıq var
+2. [ ] Sitemap files → Add: `https://heselo.online/sitemap.xml` → Submit
+3. [ ] Reindex pages → prioritet URL-lər (home, pricing, gaming, karaoke, billiards, antikafe, lounge, contact + yeni guides/tools)
+4. [ ] Region / regionality: **Азербайджан** və ya boş — saxta RF şəhəri **yox**
+5. [ ] IndexNow: Vercel `HESELO_INDEXNOW_KEY` → `/{key}.txt` 200 → `npm run indexnow` (+ Webmaster-də status)
+6. [ ] Snapshot cədvəlini doldur (indexed, ИКС, sitemap status)
 
 ### Snapshot (Yandex) — doldurulmayıb
 

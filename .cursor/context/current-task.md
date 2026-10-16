@@ -1,28 +1,29 @@
-# Current task — /ru SEO audit fixes (2026-10-16)
+# Current task — /ru SEO audit v2 remaining fixes (2026-10-16)
 
-## Completed
+## Completed (this pass)
 
-1. P0: `yandex-verification` meta; IndexNow/email ops notes in phase0 + README.
-2. P1: RU titles ≤65; descriptions 120–160 (privacy/terms/tools/billiards/pricing).
-3. P2: gaming ↔ playstation-club-software + comparison links; product «сессия» → «сеанс».
-4. P3: Expanded RU features, solutions hub, tariff-calculator, pricing-model.
-5. P4: `public/og-image.jpg` (~181 KB); home FAQPage = visible pick only; build OK.
+1. `localePath`: hash before trailing slash (`/ru/pricing/#gaming`); no trailing slash on `*.webmanifest`.
+2. Pricing feature bullets: «Живой сеанс» → «Активный сеанс» (15); playstation-club-software checklist + meta.
+3. Shortened long RU descriptions: ps-club-software-comparison, club-pos-terminal-selection, clopos-alternative; lengthened short pos/inventory/lounge/room-lounge.
+4. Public email left as `heselo.online@gmail.com` (only real mailbox; audit Gmail note stays).
+5. IndexNow: `.github/workflows/indexnow-on-deploy.yml` + README note (needs GitHub secret).
+6. Expanded RU copy toward 400+ words: features, solutions hub, pricing-model, tariff-calculator, ps-club-tariffs, how-to-open-anticafe, karaoke-booking-system.
 
 ## Current state
 
-Code ready to deploy. Audit file `docs/seo-ru-audit-2026-10-16.md` may still be uncommitted.
+Code changes uncommitted (plus audit docs). Deploy + re-measure for real score.
 
-## Remaining (user / ops)
+## Remaining / ops
 
-1. Deploy → confirm `yandex-verification` + `/{HESELO_INDEXNOW_KEY}.txt` 200 → `npm run indexnow`.
-2. Yandex Webmaster: verify site, submit sitemap, Переобход.
-3. Rich Results Test + Yandex Validator: `/ru/`, gaming, one guide, `/ru/faq/`.
-4. Domain email: set `PUBLIC_HESELO_CONTACT_EMAIL` only when mailbox exists.
-5. GSC CSV / Week-2 CTR (phase0).
+1. Add GitHub secret `HESELO_INDEXNOW_KEY`; deploy; verify workflow + no 308 on pricing chips / manifest.
+2. PSI/CWV when quota available (Performance still 3/10).
+3. Optional: more «живой сеанс» → «активный сеанс» site-wide (outside pricing/PS guide).
+4. Domain email only if/when a real `@heselo.online` mailbox exists.
 
 ## Relevant files
 
-- `src/layouts/BaseLayout.astro`, `src/lib/site.ts`, `src/pages/[locale]/index.astro`
-- `src/i18n/messages/ru.ts`, `src/data/solutions/ru.ts`, `src/data/guides/*`
-- `src/pages/[locale]/features.astro`, `solutions/index.astro`, `tools/*`
-- `public/og-image.jpg`, `docs/seo-ru-phase0-baseline.md`
+- `src/lib/site.ts`, `src/layouts/BaseLayout.astro` (manifest via localePath)
+- `src/i18n/messages/ru.ts`, `src/data/solutions/ru.ts`, `src/data/guides/{ru,ruCisGuides,gapEducational,cloposAlternativeGuide}.ts`
+- `src/pages/[locale]/tools/{pricing-model,tariff-calculator}.astro`
+- `.github/workflows/indexnow-on-deploy.yml`
+- `docs/seo-ru-audit-2026-10-16-v2.md`

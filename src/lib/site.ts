@@ -148,8 +148,16 @@ export function absoluteUrl(path: string): string {
 
 export function localePath(locale: string, slug = '/'): string {
   if (slug === '/' || slug === '') return `/${locale}/`
-  const normalized = slug.startsWith('/') ? slug : `/${slug}`
-  return `/${locale}${normalized.endsWith('/') ? normalized : `${normalized}/`}`
+
+  const hashIdx = slug.indexOf('#')
+  const hash = hashIdx >= 0 ? slug.slice(hashIdx) : ''
+  const pathOnly = hashIdx >= 0 ? slug.slice(0, hashIdx) : slug
+  const normalized = pathOnly.startsWith('/') ? pathOnly : `/${pathOnly}`
+  // Keep extension paths without a forced trailing slash (e.g. site.webmanifest).
+  const isFile = /\.[a-z0-9]{2,16}$/i.test(normalized)
+  const withSlash = isFile || normalized.endsWith('/') ? normalized : `${normalized}/`
+  // Hash after the trailing slash: /ru/pricing/#gaming (not /ru/pricing#gaming/).
+  return `/${locale}${withSlash}${hash}`
 }
 
 export function localeUrl(locale: string, slug = '/'): string {
