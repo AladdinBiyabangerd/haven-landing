@@ -76,6 +76,7 @@ const secondaryIsWhatsApp = formFirst
     display: grid;
     gap: 1.75rem;
     align-items: center;
+    min-width: 0;
   }
   .hero__cta {
     display: flex;
@@ -120,8 +121,14 @@ const secondaryIsWhatsApp = formFirst
       font-size: var(--text-sm);
     }
   }
+  .hero__copy,
+  .hero__visual {
+    min-width: 0;
+  }
   .hero__visual {
     position: relative;
+    width: 100%;
+    max-width: 100%;
   }
   /* Desktop: soft scale settle (mobile keeps shared fade-up). */
   @keyframes settle {

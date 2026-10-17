@@ -65,14 +65,21 @@ function formatHms(totalSeconds: number): string {
     container-type: inline-size;
     container-name: sm;
     margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
     background: var(--bg-soft);
+    overflow: hidden;
   }
   .sm__panel {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
     padding: 0.9rem 0.85rem 0.8rem;
     background: linear-gradient(165deg, #eef3f6 0%, #e4ecf1 100%);
     box-sizing: border-box;
@@ -139,8 +146,9 @@ function formatHms(totalSeconds: number): string {
   }
   .sm__stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.65rem;
+    min-width: 0;
   }
   .sm__stat {
     display: flex;

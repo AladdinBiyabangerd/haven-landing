@@ -85,14 +85,21 @@ function payLabel(method: 'cash' | 'card'): string {
     container-type: inline-size;
     container-name: cm;
     margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
     background: var(--bg-soft);
+    overflow: hidden;
   }
   .cm__panel {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
     padding: 0.9rem 0.85rem 0.8rem;
     background: linear-gradient(165deg, #eef3f6 0%, #e4ecf1 100%);
     box-sizing: border-box;
@@ -258,7 +265,7 @@ function payLabel(method: 'cash' | 'card'): string {
   }
   @container cm (min-width: 22rem) {
     .cm__metrics {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0.55rem;
     }
     .cm__metric-value {

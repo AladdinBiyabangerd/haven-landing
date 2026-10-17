@@ -84,8 +84,8 @@ const faqMessages = {
 >
   <article class="section">
     <div class="container">
-      <div class="narrow">
-        <header class="section-head">
+      <div class:list={['sol-hero', productShotId && 'sol-hero--with-visual']}>
+        <header class="sol-hero__copy section-head">
           <p class="eyebrow">{messages.nav.solutions}</p>
           <h1 class="type-page-title">{solution.h1}</h1>
           {
@@ -99,15 +99,14 @@ const faqMessages = {
           }
           <p class="lead">{solution.intro}</p>
         </header>
+        {
+          productShotId ? (
+            <div class="sol-hero__visual">
+              <ProductShot messages={messages} id={productShotId} />
+            </div>
+          ) : null
+        }
       </div>
-
-      {
-        productShotId ? (
-          <div class="shot-wrap">
-            <ProductShot messages={messages} id={productShotId} />
-          </div>
-        ) : null
-      }
 
       <div class="narrow">
         <section aria-labelledby="how-title">
@@ -275,6 +274,40 @@ const faqMessages = {
     font-size: var(--text-sm);
     font-weight: 600;
     color: var(--ink-subtle);
+  }
+  /* Homepage-style: copy left, product mock/shot right. */
+  .sol-hero {
+    display: grid;
+    gap: 1.75rem;
+    align-items: center;
+    min-width: 0;
+    margin-bottom: 2.25rem;
+  }
+  .sol-hero:not(.sol-hero--with-visual) {
+    max-width: 40rem;
+  }
+  .sol-hero__copy {
+    min-width: 0;
+    margin: 0;
+  }
+  .sol-hero__copy .lead {
+    margin-top: 0.85rem;
+  }
+  .sol-hero__visual {
+    min-width: 0;
+    width: 100%;
+  }
+  @media (max-width: 959px) {
+    .sol-hero__visual {
+      max-width: 26rem;
+      margin-inline: auto;
+    }
+  }
+  @media (min-width: 960px) {
+    .sol-hero--with-visual {
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3rem;
+    }
   }
   /* Cap below container width so shots stay sharp (assets are ~1256px @1x). */
   .shot-wrap {

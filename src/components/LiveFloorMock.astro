@@ -90,14 +90,21 @@ function formatHms(totalSeconds: number): string {
     container-type: inline-size;
     container-name: lfm;
     margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
     background: var(--bg-soft);
+    overflow: hidden;
   }
   .lfm__panel {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
     padding: 0.9rem 0.85rem 0.8rem;
     background: linear-gradient(165deg, #eef3f6 0%, #e4ecf1 100%);
     box-sizing: border-box;
@@ -107,9 +114,11 @@ function formatHms(totalSeconds: number): string {
     align-items: flex-start;
     justify-content: space-between;
     gap: 0.75rem;
+    min-width: 0;
   }
   .lfm__title-row {
     min-width: 0;
+    flex: 1;
   }
   .lfm__title {
     margin: 0;
@@ -158,18 +167,21 @@ function formatHms(totalSeconds: number): string {
     margin: 0;
     padding: 0;
     display: grid;
-    /* 2 cols until the mock itself is wide enough — avoids 3 skinny cards in hero. */
-    grid-template-columns: 1fr 1fr;
+    /* minmax(0,1fr) — default 1fr keeps min-content and overflows the hero on mobile. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
+    min-width: 0;
   }
   .lfm__card {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    min-width: 0;
     padding: 0.6rem 0.65rem 0.55rem;
     background: #fff;
     border: 1px solid rgba(21, 32, 51, 0.08);
     border-radius: var(--radius);
+    overflow: hidden;
   }
   .lfm__card--on {
     border-color: rgba(20, 184, 166, 0.35);
@@ -177,9 +189,11 @@ function formatHms(totalSeconds: number): string {
   }
   .lfm__card-top {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 0.35rem;
+    gap: 0.3rem;
+    min-width: 0;
   }
   .lfm__name {
     font-family: var(--font-body);
@@ -189,6 +203,7 @@ function formatHms(totalSeconds: number): string {
     letter-spacing: -0.01em;
     line-height: 1.25;
     min-width: 0;
+    overflow-wrap: anywhere;
   }
   .lfm__badge {
     display: inline-flex;
@@ -228,8 +243,9 @@ function formatHms(totalSeconds: number): string {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 0.2rem 0.35rem;
+    gap: 0.15rem 0.3rem;
     margin: 0;
+    min-width: 0;
     font-family: var(--font-body);
     font-size: 0.7rem;
     line-height: 1.35;
@@ -266,6 +282,36 @@ function formatHms(totalSeconds: number): string {
       opacity: 0.35;
     }
   }
+  /* Narrow mobile: tighter cards so 2 cols fit inside the hero gutter. */
+  @container lfm (max-width: 22rem) {
+    .lfm__panel {
+      padding: 0.7rem 0.65rem 0.65rem;
+      gap: 0.55rem;
+    }
+    .lfm__grid {
+      gap: 0.4rem;
+    }
+    .lfm__card {
+      padding: 0.5rem 0.5rem 0.45rem;
+      gap: 0.4rem;
+    }
+    .lfm__title {
+      font-size: var(--text-md);
+    }
+    .lfm__name {
+      font-size: 0.75rem;
+    }
+    .lfm__badge {
+      padding: 0.1rem 0.35rem;
+      font-size: 0.6rem;
+    }
+    .lfm__meta-line {
+      font-size: 0.625rem;
+    }
+    .lfm__legend {
+      display: none;
+    }
+  }
   /* 3 columns only when the mock panel is wide enough for readable cards */
   @container lfm (min-width: 28rem) {
     .lfm__panel {
@@ -273,7 +319,7 @@ function formatHms(totalSeconds: number): string {
       gap: 0.85rem;
     }
     .lfm__grid {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0.6rem;
     }
     .lfm__title {
@@ -284,11 +330,6 @@ function formatHms(totalSeconds: number): string {
     }
     .lfm__meta-line {
       font-size: var(--text-xs);
-    }
-  }
-  @media (max-width: 359px) {
-    .lfm__legend {
-      display: none;
     }
   }
 </style>
