@@ -146,11 +146,9 @@ Qovluq: `docs/marketing-raw/producthunt/`
 |------|-----|-------------|
 | `thumbnail-240x240.png` | Listing **icon** (PH ~240×240) | 240×240 |
 | `thumbnail-1270x760.png` | Geniş sosial / gallery fallback | ~1270×760 |
-| `gallery-01-schedule.png` | Booking / cədvəl | 1270×760 |
 | `gallery-02-live-floor.png` | Live floor | |
-| `gallery-03-cash.png` | Cash / shift | |
-| `gallery-04-sessions.png` | Sessions | |
-| `gallery-05-room-analytics.png` | Analytics (opsional 5-ci) | |
+
+> Digər AI product gallery faylları silinib — saytda HTML mock-lar var (`CashMock`, `SessionsMock`, …).
 
 Brauzer file-upload avtomatlaşdırıla bilməyəndə: PH-də **Select an image** ilə əl ilə bu qovluqdan seçin. Bu mərhələdə GIF/video **yox**.
 

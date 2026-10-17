@@ -2,9 +2,11 @@
 
 Bu sənəd **kod deyil**. Məqsəd: product marketing vizuallarını eyni promptla təkrarlamamaq; stil etalonunu və statusu saxlamaq.
 
+> **2026-10-17 cleanup:** AI product shot-lar (sessions/cash/inventory/products/room-analytics/audit/schedule) + köhnə draft/linkedin/OG prev faylları silinib. Saytda raster yalnız `public/images/product/live-floor*`; digərləri HTML mock. Aşağıdakı tarixi qeydlər arxivdir.
+
 **Stil etalon:** prompt tipi **2** — sol chaos → teal particle keçid → sağda device + sadələşdirilmiş İngilis UI.
 
-**Referans kompozisiya:** `docs/marketing-raw/live-floor-ref.jpg` (istifadəçi bəyəndi; overlay typo-lu draft). Sayt üçün təmiz variant: `docs/marketing-raw/live-floor-clean.png`.
+**Canlı raster:** `public/images/product/live-floor*`.
 
 ---
 

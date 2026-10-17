@@ -272,22 +272,12 @@ Hər biri üçün **Upload by URL** (PNG, &lt; 3MB). Sıra:
 https://heselo.online/images/product/live-floor.webp
 ```
 
-2. Schedule / bookings  
+2. Live floor (yalnız raster product shot qalıb)  
 ```
-https://heselo.online/images/product/schedule.webp
-```
-
-3. Cash shift  
-```
-https://heselo.online/images/product/cash.webp
+https://heselo.online/images/product/live-floor.webp
 ```
 
-İstəyə görə 4-cü:  
-```
-https://heselo.online/images/product/sessions.webp
-```
-
-URL açılmırsa: faylı lokal `dist` / `public` build-dən yükləyin (Drag & drop).
+Digər UI vizualları HTML mock-dur (screenshot URL yoxdur). URL açılmırsa: `public/images/product/live-floor.webp` yükləyin.
 
 ---
 
