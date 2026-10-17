@@ -1,7 +1,7 @@
 # Heselo /ru — vahid SEO planı (2026-10-16)
 
-**Kanonik sənəd.** Bütün RU SEO araşdırması, icra fazaları, keyword map, rəqib teardown, məqalə briefləri və todo-lar buradadır.
-Cursor plan (`~/.cursor/plans/ru_cis_full_seo_21f3e553.plan.md`) yalnız bu fayla işarə edir — ikinci mənbə saxlanılmır.
+**Kanonik RU research.** Keyword map, rəqib teardown və native-copy qaydaları buradadır.
+Cari icra planı: `docs/heselo-seo-growth-plan-2026-10-17.md` (audit: `docs/heselo-seo-deep-audit-2026-10-17.md`).
 
 > **Doğrulanma:** ✅ = WebFetch/curl (2026-10-16) · 🔎 = axtarış snippeti · ❔ = təxmin.
 > **Həcmlər:** Wordstat/GKP rəqəmləri uydurulmayıb. Yeganə mənbəli Wordstat: «как открыть компьютерный клуб» ≈ 2400/ay (Topvizor). Qalan prioritetlər SERP sıxlığına görə ❔.
@@ -732,8 +732,8 @@ Konversiya: GA4/Metrica məqsədləri `/ru` path ilə; lead formundakı «Отк
 | **Bu plan (kanonik)** | `docs/seo-ru-research-2026-10.md` |
 | Keyword extract (yaradılacaq) | `docs/seo-ru-keyword-map.md` |
 | Context rule (yaradılacaq) | `.cursor/rules/ru-seo-native-copy.mdc` |
-| AZ growth (link) | `docs/seo-keyword-growth-plan.md` — Phase RU buraya link |
-| Cursor pointer | `~/.cursor/plans/ru_cis_full_seo_21f3e553.plan.md` |
+| AZ/global growth (current) | `docs/heselo-seo-growth-plan-2026-10-17.md` |
+| Deep audit (current) | `docs/heselo-seo-deep-audit-2026-10-17.md` |
 | Copy | `src/i18n/messages/ru.ts`, `src/data/solutions/ru.ts`, `src/data/guides/**` |
 | SEO | `src/lib/seo.ts`, `src/layouts/BaseLayout.astro`, `src/lib/format.ts` |
 | Hub | `src/data/guides/types.ts`, `src/data/solutions/index.ts` |
