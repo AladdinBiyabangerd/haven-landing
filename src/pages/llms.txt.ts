@@ -59,6 +59,16 @@ Starting monthly ${p.currency} (Small / Kiçik plan) — live from public subscr
 - For: PS/console clubs, karaoke rooms, billiards halls, anti-cafés, VIP room lounges that need reservation + live session + cash.
 - Not for: full restaurant kitchen POS, KDS, delivery stacks, generic coworking desk booking.
 
+## Billiards entity card
+
+- Product: Heselo billiards club management — cloud web panel for table booking, live play sessions (pause/extend), day/night/weekend rates, bar on the session bill, cash shift, staff permissions.
+- Price: Small plan from ${p.billiards} ${p.currency}/month; Medium/Large and annual on https://heselo.online/az/pricing/ (also /en/, /ru/).
+- Platform: Web / cloud (tablet or computer). Languages: az, en, ru.
+- Not supported today: QR membership check-in/out; light-relay / automatic table lamps (separate hardware).
+- Canonical: https://heselo.online/az/solutions/billiards/ · EN /en/solutions/billiards/ · RU /ru/solutions/billiards/
+- Comparisons: /guides/billiards-software-comparison-2026/ · CueDesk · BilliardPOS · BCMS · Biliardo.kz alternatives (az/en/ru).
+- Rates guide: /guides/billiards-hourly-rates/
+
 ## Key pages
 
 ${LOCALES.map(

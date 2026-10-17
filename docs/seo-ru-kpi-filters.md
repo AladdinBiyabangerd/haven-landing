@@ -10,6 +10,7 @@ Baseline: fill [`seo-ru-phase0-baseline.md`](./seo-ru-phase0-baseline.md) first.
 | PC/LANGAME | `(?i)(langame\|smartshell\|senet\|компьютерн)` |
 | Karaoke | `(?i)караоке` |
 | Bilyard | `(?i)бильярд` |
+| Bilyard AZ (bütün dillər) | `(?i)(bilyard\|бильярд\|billiard\|snooker)` — ətraflı: [`seo-billiards-baseline-2026-10-17.md`](./seo-billiards-baseline-2026-10-17.md) |
 | Antikafe | `(?i)(антикафе\|тайм-?кафе\|учет времени\|учёт времени)` |
 | Lounge | `(?i)(кальян\|лаунж\|vip)` |
 | Ağrı | `(?i)(ворует\|кража\|контрол)` |

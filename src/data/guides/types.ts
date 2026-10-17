@@ -22,6 +22,13 @@ export const GUIDE_SLUGS = [
   'club-revenue-control',
   'ps-club-tariffs',
   'how-to-open-anticafe',
+  'billiards-hourly-rates',
+  // Billiards-native competitors (2026-10)
+  'cuedesk-alternative',
+  'billiardpos-alternative',
+  'bcms-alternative',
+  'biliardo-kz-alternative',
+  'billiards-software-comparison-2026',
   // Phase C comparison / alternative intent
   'iiko-alternative-clubs',
   'clopos-alternative',

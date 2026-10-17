@@ -34,7 +34,11 @@ export const SOLUTION_ALT_GUIDES: Partial<Record<SolutionSlug, GuideSlug[]>> = {
     'pancafe-alternative',
   ],
   karaoke: ['restaurant-pos-vs-karaoke-system', 'dine-alternative', 'fazilat-pos-alternative'],
-  billiards: ['affordable-club-pos', 'club-pos-vs-excel', 'smartpos-alternative'],
+  billiards: [
+    'billiards-software-comparison-2026',
+    'cuedesk-alternative',
+    'billiardpos-alternative',
+  ],
   lounge: ['kaktus-alternative', 'affordable-club-pos', 'azerbaijan-pos-systems-comparison'],
   antikafe: ['affordable-club-pos', 'dine-alternative', 'baza-market-alternative'],
   pos: [
@@ -56,7 +60,11 @@ export const SOLUTION_ALT_GUIDES_RU: Partial<Record<SolutionSlug, GuideSlug[]>> 
     'gameclub-alternative',
   ],
   karaoke: ['restaurant-pos-vs-karaoke-system', 'iiko-alternative-clubs', 'karaoke-booking-system'],
-  billiards: ['club-pos-vs-excel', 'affordable-club-pos', 'billiards-table-booking'],
+  billiards: [
+    'billiards-software-comparison-2026',
+    'cuedesk-alternative',
+    'biliardo-kz-alternative',
+  ],
   lounge: ['restaurant-pos-vs-karaoke-system', 'iiko-alternative-clubs', 'club-pos-vs-excel'],
   antikafe: ['club-pos-vs-excel', 'affordable-club-pos', 'anticafe-rent-cost-calculation'],
   pos: ['club-pos-vs-excel', 'affordable-club-pos', 'iiko-alternative-clubs'],
@@ -75,6 +83,11 @@ export function altGuidesForSolution(locale: Locale, solutionSlug: SolutionSlug)
 
 /** Named / category comparison guides (Phase C competitor track). */
 export const COMPARISON_GUIDE_SLUGS = [
+  'cuedesk-alternative',
+  'billiardpos-alternative',
+  'bcms-alternative',
+  'biliardo-kz-alternative',
+  'billiards-software-comparison-2026',
   'ps-club-software-comparison',
   'club-pos-vs-excel',
   'iiko-alternative-clubs',
@@ -143,10 +156,20 @@ const RELATED_COMPARISON: Partial<Record<GuideSlug, GuideSlug[]>> = {
     'gameclub-alternative',
     'club-timer-alternative',
   ],
-  'how-to-open-billiards-club': ['club-revenue-control', 'ps-club-tariffs'],
+  'how-to-open-billiards-club': ['billiards-hourly-rates', 'billiards-software-comparison-2026'],
   'club-revenue-control': ['ps-club-software-comparison', 'ps-club-tariffs'],
   'ps-club-tariffs': ['ps-club-software-comparison', 'club-revenue-control'],
   'how-to-open-anticafe': ['club-revenue-control', 'ps-club-tariffs'],
+  'cuedesk-alternative': ['billiards-software-comparison-2026', 'billiardpos-alternative'],
+  'billiardpos-alternative': ['billiards-software-comparison-2026', 'cuedesk-alternative'],
+  'bcms-alternative': ['billiards-software-comparison-2026', 'biliardo-kz-alternative'],
+  'biliardo-kz-alternative': ['billiards-software-comparison-2026', 'cuedesk-alternative'],
+  'billiards-software-comparison-2026': [
+    'cuedesk-alternative',
+    'billiardpos-alternative',
+    'bcms-alternative',
+  ],
+  'billiards-hourly-rates': ['billiards-table-booking', 'billiards-club-management'],
 }
 
 const byLocale: Record<Locale, { hub: GuidesHubCopy; items: GuideCopy[] }> = {

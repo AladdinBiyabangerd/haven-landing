@@ -1,4 +1,5 @@
 import type { GuideCopy, GuidesHubCopy } from './types'
+import { billiardsHourlyRatesGuide } from './billiardsHourlyRatesGuide'
 import { comparisonGuides } from './comparisonGuides'
 import { gapEducationalGuides } from './gapEducationalGuides'
 import { ruCisGuides } from './ruCisGuides'
@@ -212,7 +213,7 @@ export const guidesEn: GuideCopy[] = [
       'billiards table timer',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-17',
     intro:
       'In a billiards club, the basic unit of work is the table. Whether a table is free or booked, when a game started, how long it runs, and which bill extra orders belong to all need to be tracked together through the day. Heselo keeps that flow in one panel.',
     sections: [
@@ -223,7 +224,6 @@ export const guidesEn: GuideCopy[] = [
           'In Heselo, tables and rooms are set up individually. Bookings, live games, and cash continue in one workflow. Separate rates can also be set for different table types.',
         ],
       },
-
       {
         id: 'why',
         title: 'Why do a whiteboard and a phone cause trouble?',
@@ -231,7 +231,6 @@ export const guidesEn: GuideCopy[] = [
           'A whiteboard can fall behind, and a booking taken by phone may not be visible to other staff straight away. When VIP rooms and regular tables are kept on separate lists, checking the current status gets even harder.',
         ],
       },
-
       {
         id: 'time',
         title: 'How are time and payment linked?',
@@ -239,15 +238,42 @@ export const guidesEn: GuideCopy[] = [
           'When a game starts, a session opens. Pauses, extensions, and extra products are tied to that session. The rate is calculated from the table type and time rules, and the final amount goes into the cash shift.',
         ],
       },
-
+      {
+        id: 'choose',
+        title: 'What to check when you pick billiards software',
+        paragraphs: [
+          'The market mixes table timers, cloud panels, Windows apps, and light-relay systems. Write down what is mandatory for your floor first — then match vendor claims to that list.',
+        ],
+        bullets: [
+          'Do you need night and weekend rates in the panel?',
+          'Should operators open tables while the owner keeps shift reports separate?',
+          'Must bar sales land on the table bill?',
+          'Is a light relay mandatory, or is a tablet timer enough?',
+          'Do you need QR membership check-in?',
+        ],
+      },
+      {
+        id: 'relay-honesty',
+        title: 'An honest note on light relays',
+        paragraphs: [
+          'Some systems switch table lamps on through a relay when play starts. That can reduce unofficial table time. Heselo does not offer that hardware integration today — you use the panel on a tablet or computer for timers, booking, and cash. If a relay is mandatory, look at hardware-focused products.',
+        ],
+      },
       {
         id: 'mix',
         title: 'Can billiards, karaoke, and a lounge run together?',
         paragraphs: [
-          'Yes. Mixed venues can keep different table and room types in the same management panel. That way you don’t have to pull booking and sales data together from different systems.',
+          'Yes. Mixed venues can keep different table and room types in the same management panel. That way you do not have to pull booking and sales data together from different systems.',
         ],
       },
+      {
+        id: 'compare-links',
+        title: 'Competitor comparisons',
+        paragraphs: [
+          'See our guides for honest comparisons with CueDesk, BilliardPOS, BCMS, and Biliardo.kz, plus the 2026 overview table. For rate rules, read the billiards hourly rates guide.',
         ],
+      },
+    ],
     faq: [
       {
         q: 'Can VIP rooms and regular tables coexist?',
@@ -259,7 +285,15 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'Can different tables have different prices?',
-        a: 'Yes. Table types are set up separately, and each can have its own rate.',
+        a: 'Yes. Table types are set up separately, and each can have its own rate. Night and weekend rules can stay in the panel too.',
+      },
+      {
+        q: 'How are staff permissions split?',
+        a: 'Operator rights to open tables and add sales can be separated from owner shift and revenue reports. We show the matrix on the demo.',
+      },
+      {
+        q: 'Do you support light relays?',
+        a: 'No. Heselo is a tablet or computer panel; lamp automation is separate hardware.',
       },
       {
         q: 'Can a game be paused?',
@@ -272,7 +306,7 @@ export const guidesEn: GuideCopy[] = [
     ],
     relatedSolutions: ['billiards', 'gaming', 'karaoke', 'pos'],
     ctaTitle: 'Demo for billiards',
-    ctaBody: 'Tell us your table count — we’ll show bookings, live games, and cash.',
+    ctaBody: 'Tell us your table count — we will show bookings, live games, and cash.',
   },
 
   {
@@ -563,7 +597,7 @@ export const guidesEn: GuideCopy[] = [
       'billiards scheduling',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-17',
     intro:
       'Booking a billiards table is more than writing down a name and a time. The table, time, duration, and customer details later need to connect to the live game and the payment. Heselo keeps that flow in one panel.',
     sections: [
@@ -574,7 +608,6 @@ export const guidesEn: GuideCopy[] = [
           'In Heselo, tables and rooms are set up as separate resources. Bookings appear on the schedule, turn into a live session when guests arrive, and the final payment shows up in the cash shift.',
         ],
       },
-
       {
         id: 'booking',
         title: 'What details should a table booking include?',
@@ -582,7 +615,20 @@ export const guidesEn: GuideCopy[] = [
           'The essentials are date, time, table or VIP room, duration, and contact details. If a booking is changed or cancelled, it also helps to keep a history of the change.',
         ],
       },
-
+      {
+        id: 'whatsapp',
+        title: 'WhatsApp and whiteboard vs a system',
+        paragraphs: [
+          'Many clubs still keep bookings in a WhatsApp group or on a board. That can work in a small hall on one shift. At peak hours two staff can promise the same table, and a no-show may never appear on the schedule. In a system, bookings, free tables, and live games stay in one place — chat is only an extra channel, not the source of truth.',
+        ],
+      },
+      {
+        id: 'noshow',
+        title: 'No-shows and peak hours',
+        paragraphs: [
+          'When weekend evenings stack bookings, a waitlist and a deposit rule help. Tell guests the rule up front and keep the same wording in the panel. At peak, the live floor should show a free table at a glance — otherwise reception falls back to WhatsApp.',
+        ],
+      },
       {
         id: 'schedule',
         title: 'Why shouldn’t the schedule be separate from bookings?',
@@ -590,16 +636,14 @@ export const guidesEn: GuideCopy[] = [
           'The schedule shows the status of every table. If bookings are kept in one place and active games in another, staff have to combine the data just to find a free table.',
         ],
       },
-
       {
         id: 'online',
         title: 'How can a billiards table be booked online?',
         paragraphs: [
           'A guest can choose a date, time, and table type and send their contact details. Once the request lands on reception’s shared schedule, staff can confirm, change, or decline it.',
-          'The key is that online requests don’t sit apart from phone bookings. Otherwise an online booking can cause the same confusion as any other scattered note.',
+          'The key is that online requests do not sit apart from phone bookings. Otherwise an online booking can cause the same confusion as any other scattered note.',
         ],
       },
-
       {
         id: 'live',
         title: 'How does a booking turn into a live game?',
@@ -607,7 +651,6 @@ export const guidesEn: GuideCopy[] = [
           'When guests arrive, the booking becomes an active session. Pauses and extensions are recorded on that session, and extra orders can be added to the same bill.',
         ],
       },
-
       {
         id: 'mistakes',
         title: 'The most common problems',
@@ -617,9 +660,10 @@ export const guidesEn: GuideCopy[] = [
           'Relying on a timer alone',
           'VIP rooms kept on a separate list',
           'Play time and payment recorded separately',
+          'No-show rules that exist only as spoken policy',
         ],
       },
-        ],
+    ],
     faq: [
       {
         q: 'Are a booking and a schedule the same thing?',
@@ -632,6 +676,10 @@ export const guidesEn: GuideCopy[] = [
       {
         q: 'Does online booking replace phone booking?',
         a: 'Not necessarily. Both channels can be used. What matters is that all bookings appear on the same schedule.',
+      },
+      {
+        q: 'Can we keep WhatsApp bookings?',
+        a: 'As a contact channel, yes. The schedule must stay the source of truth — otherwise peak hours still risk double bookings.',
       },
       {
         q: 'Can same-day bookings be accepted?',
@@ -909,6 +957,7 @@ export const guidesEn: GuideCopy[] = [
   },
 
   ...gapEducationalGuides('en'),
+  billiardsHourlyRatesGuide('en'),
   ...ruCisGuides('en'),
   ...comparisonGuides('en'),
 ]

@@ -67,6 +67,8 @@ Bu sənəd **kod deyil** — `https://heselo.online` üçün backlink və katalo
 - Ana: https://heselo.online/az/
 - Oyun klubu: https://heselo.online/az/solutions/gaming/
 - Karaoke: https://heselo.online/az/solutions/karaoke/
+- Bilyard: https://heselo.online/az/solutions/billiards/
+- Bilyard müqayisə 2026: https://heselo.online/az/guides/billiards-software-comparison-2026/
 - Antikafe: https://heselo.online/az/solutions/antikafe/
 - Əlaqə: https://heselo.online/az/contact/
 

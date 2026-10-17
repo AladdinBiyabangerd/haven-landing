@@ -109,6 +109,18 @@ Engine: **ChatGPT** + **Perplexity**. Promptlar: 1, 4, 5, 9, 18 (eyni baseline s
 7. Bilyard klubu proqramı Bakı
 8. Oyun klubu canlı sessiya və kassa paneli
 
+### B2 — Bilyard (kateqoriya + müqayisə)
+
+B1. Bilyard klubu proqramı Bakı *(= #7)*
+B2. Bilyard klub idarə etmə proqramı
+B3. CueDesk vs Heselo
+B4. BilliardPOS alternativ Azərbaycan
+B5. Программа для бильярдного клуба
+B6. BCMS bilyard proqramı bulud alternativ
+B7. Biliardo.kz və ya Heselo — hansı uyğundur?
+
+Baseline cədvəl və KPI: [`seo-billiards-baseline-2026-10-17.md`](./seo-billiards-baseline-2026-10-17.md).
+
 ### C — Alternativ / müqayisə
 
 9. iiko antikafe / karaoke otaq üçün uyğundurmu? Alternativlər

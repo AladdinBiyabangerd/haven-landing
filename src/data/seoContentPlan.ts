@@ -109,6 +109,12 @@ export const SEO_CONTENT_PLAN = {
       note: 'RU/CIS 2026-10 — как открыть бильярдный клуб',
     },
     {
+      id: 'billiards-hourly-rates',
+      path: '/guides/billiards-hourly-rates/',
+      status: 'live',
+      note: 'Billiards SEO 2026-10 — hour/night/weekend rates',
+    },
+    {
       id: 'club-revenue-control',
       path: '/guides/club-revenue-control/',
       status: 'live',
@@ -128,6 +134,36 @@ export const SEO_CONTENT_PLAN = {
     },
   ],
   comparison: [
+    {
+      id: 'billiards-software-comparison-2026',
+      path: '/guides/billiards-software-comparison-2026/',
+      status: 'live',
+      note: 'Billiards SEO 2026-10 hub',
+    },
+    {
+      id: 'cuedesk-alternative',
+      path: '/guides/cuedesk-alternative/',
+      status: 'live',
+      note: 'Billiards-native competitor',
+    },
+    {
+      id: 'billiardpos-alternative',
+      path: '/guides/billiardpos-alternative/',
+      status: 'live',
+      note: 'Billiards-native competitor',
+    },
+    {
+      id: 'bcms-alternative',
+      path: '/guides/bcms-alternative/',
+      status: 'live',
+      note: 'Billiards Windows vs cloud',
+    },
+    {
+      id: 'biliardo-kz-alternative',
+      path: '/guides/biliardo-kz-alternative/',
+      status: 'live',
+      note: 'Regional billiards (KZ)',
+    },
     {
       id: 'iiko-alternative-clubs',
       path: '/guides/iiko-alternative-clubs/',

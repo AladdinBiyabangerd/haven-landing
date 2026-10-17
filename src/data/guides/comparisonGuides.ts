@@ -26,10 +26,20 @@ import { robotposAlternativeGuide } from './robotposAlternativeGuide'
 import { smartappAlternativeGuide } from './smartappAlternativeGuide'
 import { smartposAlternativeGuide } from './smartposAlternativeGuide'
 import { tendirAlternativeGuide } from './tendirAlternativeGuide'
+import { bcmsAlternativeGuide } from './bcmsAlternativeGuide'
+import { biliardoKzAlternativeGuide } from './biliardoKzAlternativeGuide'
+import { billiardposAlternativeGuide } from './billiardposAlternativeGuide'
+import { billiardsSoftwareComparisonGuide } from './billiardsSoftwareComparisonGuide'
+import { cuedeskAlternativeGuide } from './cuedeskAlternativeGuide'
 
 /** Rich comparison / alternative guides (one dedicated file each). */
 export function comparisonGuides(locale: Locale): GuideCopy[] {
   return [
+    cuedeskAlternativeGuide(locale),
+    billiardposAlternativeGuide(locale),
+    bcmsAlternativeGuide(locale),
+    biliardoKzAlternativeGuide(locale),
+    billiardsSoftwareComparisonGuide(locale),
     iikoAlternativeGuide(locale),
     cloposAlternativeGuide(locale),
     dineAlternativeGuide(locale),

@@ -28,64 +28,105 @@ export const solutionsAz: SolutionCopy[] = [
     slug: 'billiards',
     shortTitle: 'Bilyard',
     h1: 'Bilyard klubu idarəetmə sistemi',
-    seoTitle: 'Bilyard klubu proqramı — masa rezervasiyası və cədvəl | Heselo',
+    seoTitle: 'Bilyard klubu idarəetmə proqramı — masa, tarif, kassa | Heselo',
     seoDescription:
-      'Bilyard masa və otaq rezervasiyası, cədvəl, canlı oyun sessiyası və kassa bir paneldə. Bilyard klubu proqramı — demo istəyin.',
+      'Bilyard klubu proqramı: masa taymeri, rezerv, pauza, gecə-gündüz tarif və kassa bir paneldə. {billiards} AZN/aydan — pulsuz demo.',
     keywords: [
       'bilyard klubu proqramı',
-      'bilyard masa rezervasiya',
-      'bilyard cədvəl sistemi',
+      'bilyard klub idarəetmə proqramı',
       'bilyard idarəetmə sistemi',
+      'bilyard masa rezervasiya',
+      'bilyard masa taymeri',
+      'bilyard cədvəl sistemi',
     ],
     intro:
-      'Bilyard klubunda masa saatla işləyir: bron, cədvəl, canlı oyun, fasilə və ödəniş bir-birinə bağlıdır. Bilyard idarəetmə sistemi cədvəli və canlı sessiyanı ayırmamalıdır — Heselo hər masanı ayrıca qurub eyni paneldə idarə edir.',
+      'Bilyard klubunda masa saatla və dəqiqə ilə işləyir: bron, cədvəl, canlı oyun, fasilə və ödəniş bir-birinə bağlı olmalıdır. Heselo hər masanı ayrıca qurur, eyni paneldə rezervasiyanı canlı sessiyaya çevirir və növbəni kassada bağlayır — bu, mətbəx restoran POS-u deyil.',
+    body: [
+      'Kiçik zalda iki masa, böyük salonda onlarla masa — axın eynidir. Qonaq bron edir və ya gəlib boş masa seçir; oyun başlayanda sessiya açılır; bar və qəlyanaltı eyni hesaba yazılır; ödəniş növbə hesabatında görünür.',
+      'Gecə və həftəsonu tarifləri, pauza, VIP otaq və adi masa eyni cədvəldə idarə olunur. İşıq relye bloku və QR üzvlük check-in hazırda dəstəklənmir — bunlar ayrıca avadanlıq və ya digər proqramların sahəsidir. Heselo planşet və ya kompüterdə işləyən bulud paneldən ibarətdir.',
+      'Qiymət açıqdır: bilyard üçün Kiçik plan ayda {billiards} AZN-dən başlayır; Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində yazılıb. CueDesk, BilliardPOS, BCMS və Biliardo.kz ilə dürüst müqayisə üçün bələdçilərimizi oxuyun.',
+    ],
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'Bilyard salonları, qarışıq launj + bilyard məkanları və masa/otaq rezervasiyası ilə vaxt üzrə ödəniş aparan klublar üçün.',
+      'Bilyard salonları, qarışıq launj + bilyard məkanları və masa və ya otaq rezervasiyası ilə vaxt üzrə ödəniş aparan klublar üçün. Bakıda və regionda bulud panellə işləmək istəyənlər üçün uyğundur.',
     problemsTitle: 'Bilyard klublarında tez rast gəlinən problemlər',
     problems: [
       'Hansı masa boşdur — lövhə və telefon uyğun gəlmir',
       'Oyun vaxtı və əlavə məhsul ayrı qeyd olunur',
       'Gecə növbəsində kassa qarışır',
       'VIP otaq və adi masa eyni cədvəldə görünmür',
+      'Operator hər şeyi görür, sahibkar isə növbə yekununu ayıra bilmir',
     ],
     howTitle: 'Heselo bilyard üçün nə verir?',
     howBody:
-      'Heselo masaları və otaqları eyni cədvəldə bron edir. Oyun başlayanda canlı zalda sessiya açılır; məhsul və ödəniş eyni yerdədir. Qiymət masa növü və müddətə görə hesablanır, kassa növbəni bağlayır.',
+      'Heselo masaları və otaqları eyni cədvəldə bron edir. Oyun başlayanda canlı zalda sessiya açılır; məhsul və ödəniş eyni yerdə qalır. Qiymət masa növü, müddət və təyin etdiyiniz gecə və ya həftəsonu tarifinə görə hesablanır; kassa növbəni bağlayır.',
     featuresTitle: 'Bilyard üçün uyğun funksiyalar',
     features: [
       {
         title: 'Masa və otaq cədvəli',
-        desc: 'Bütün masalar eyni cədvəldə — bron, köçürmə və ləğv.',
+        desc: 'Bütün masalar eyni cədvəldə — bron, köçürmə və ləğv bir yerdən görünür.',
       },
       {
         title: 'Canlı oyun sessiyası',
-        desc: 'Aktiv masa statusu, əlavə satış və ödəniş.',
+        desc: 'Aktiv masa statusu, pauza, uzatma, əlavə satış və ödəniş eyni sessiya üzərindədir.',
       },
       {
         title: 'Vaxta uyğun qiymət',
-        desc: 'Qiymət masa növünə və istifadə müddətinə əsasən avtomatik hesablanır.',
+        desc: 'Saatlıq və ya dəqiqəlik tarif; gecə və həftəsonu qaydalarını özünüz təyin edirsiniz.',
       },
       {
-        title: 'Kassa və müştərilər',
-        desc: 'Növbə, hesabat və müştəri tarixçəsi.',
+        title: 'Kassa, səlahiyyət və müştərilər',
+        desc: 'Növbə, hesabat, müştəri tarixçəsi; operator və admin hüquqlarını ayıra bilərsiniz.',
       },
     ],
     differTitle: 'Sadəcə “saat sayğacı” deyil',
     differBody:
-      'Yalnız vaxt sayan alətlər rezervasiya tarixçəsini, anbarı və kassa sayımını həll etmir. Heselo bilyard satışlarını və hesablaşmalarını məkanın digər satışları ilə eyni növbə üzrə birləşdirir — mətbəx/restoran POS-u deyil.',
+      'Yalnız vaxt sayan alətlər rezervasiya tarixçəsini, anbarı və kassa sayımını həll etmir. Heselo bilyard satışlarını və hesablaşmalarını məkanın digər satışları ilə eyni növbə üzrə birləşdirir. Mətbəx və ofisiant sifarişi əsas işinizdirsə, restoran POS seçin; masa vaxtı satırsınızsa, klub paneli lazımdır.',
+    compare: {
+      title: 'Bilyard proqramı seçərkən nəyə baxmaq lazımdır?',
+      intro:
+        'Bazarda masa taymeri, bulud panel, Windows proqramı və işıq relyeli sistemlər var. Aşağıdakı cədvəl Heselo-nun nəyi dəstəklədiyini açıq göstərir — güclü tərəfləri və boşluqları gizlətmirik.',
+      headers: ['Xüsusiyyət', 'Heselo'],
+      rows: [
+        ['Masa taymeri və tariflər', 'Bəli — saat/dəqiqə, pauza, uzatma'],
+        ['Gecə / gündüz və həftəsonu tarif', 'Bəli — qaydaları özünüz qurursunuz'],
+        ['Rezervasiya və cədvəl', 'Bəli — masa və otaq bir cədvəldə'],
+        ['Bar / kafe satış (sessiya hesabına)', 'Bəli — növbə ilə birlikdə'],
+        ['Platforma', 'Web / bulud (planşet və ya kompüter)'],
+        ['QR ilə üzvlük check-in', 'Xeyr'],
+        ['İşıq relye / avtomatik lampa', 'Xeyr — ayrıca avadanlıq sahəsidir'],
+        ['Qiymət', '{billiards}–59 AZN/ay (açıq planlar)'],
+        ['Dillər', 'AZ, EN, RU'],
+      ],
+    },
     faq: [
       {
         q: 'Bilyard masaları ayrıca qurulur?',
-        a: 'Bəli. Hər masa və ya otaq ayrıca təyin olunur; cədvəl və canlı zal eyni məlumatı paylaşır.',
+        a: 'Bəli. Hər masa və ya otaq ayrıca təyin olunur; cədvəl və canlı zal eyni məlumatı paylaşır. Rus, pul və snuker masaları üçün fərqli tarif qoya bilərsiniz.',
       },
       {
         q: 'Otaq və masa eyni sistemdə ola bilər?',
-        a: 'Bəli. VIP otaq və adi masa eyni cədvəl, sessiya və kassa qaydaları ilə işləyir.',
+        a: 'Bəli. VIP otaq və adi masa eyni cədvəl, sessiya və kassa qaydaları ilə işləyir. Qarışıq launj + bilyard məkanlarda da eyni panel kifayət edir.',
+      },
+      {
+        q: 'Gecə və həftəsonu tarifləri təyin etmək olur?',
+        a: 'Bəli. Masa növünə və vaxt qaydasına görə tarif qurursunuz: gündüz, gecə və ya həftəsonu fərqi paneldə saxlanır. Demo zamanı öz saatlarınızla yoxlaya bilərsiniz.',
+      },
+      {
+        q: 'İşçi yalnız masa aça bilərmi, kassanı görməsin?',
+        a: 'Səlahiyyətləri ayırmaq olar. Operatorun gündəlik işi (masa açmaq, bağlamaq, satış yazmaq) ilə sahibkarın növbə və gəlir hesabatları fərqli hüquqlarla idarə olunur. Dəqiq matris demoda göstərilir.',
+      },
+      {
+        q: 'İşıq relye və ya masa lampasını avtomatik idarə edir?',
+        a: 'Xeyr. Heselo planşet və ya kompüterdə taymer, rezervasiya və kassa paneli kimi işləyir. Masa üstü lampanı avtomatik yandıran relye bloku ayrıca avadanlıqdır; belə inteqrasiyanı hazırda təklif etmirik.',
+      },
+      {
+        q: 'CueDesk və ya BilliardPOS-dan nə fərqi var?',
+        a: 'CueDesk çoxvaxt QR üzvlük və mobil idarəetməyə fokuslanır; BilliardPOS anbar və printer inteqrasiyası ilə tanınır. Heselo Azərbaycanda açıq qiymətli bulud paneldır: masa bronu, canlı sessiya, bar satışı və kassa bir yerdə, AZ/EN/RU dillərində. Ətraflı müqayisə bələdçilərdədir.',
       },
       {
         q: 'Heselo hansı bilyard klubları üçün uyğun deyil?',
-        a: 'Əsas işiniz mətbəx, menyu və ofisiant sifarişidirsə, restoran POS daha uyğundur. Heselo masa və otaq vaxtını satan klublar üçündür: bron, canlı oyun, məhsul satışı və kassa növbəsi bir yerdədir. İki masalı kiçik zalda da, böyük bilyard salonunda da eyni qaydada işləyir.',
+        a: 'Əsas işiniz mətbəx, menyu və ofisiant sifarişidirsə, restoran POS daha uyğundur. Relye ilə işıq kilidi mütləq tələbdirsə, xüsusi avadanlıq həllərinə baxın. Heselo masa və otaq vaxtını satan klublar üçündür.',
       },
       {
         q: 'Lövhə, WhatsApp və Excel ilə işləməkdən nə fərqi var?',

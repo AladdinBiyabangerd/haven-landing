@@ -37,6 +37,8 @@ export type SolutionCopy = {
   seoDescription: string
   keywords: string[]
   intro: string
+  /** Optional SEO depth paragraphs after intro / how */
+  body?: string[]
   whoTitle: string
   whoBody: string
   problemsTitle: string
@@ -47,6 +49,13 @@ export type SolutionCopy = {
   features: Array<{ title: string; desc: string }>
   differTitle: string
   differBody: string
+  /** Optional feature comparison (e.g. billiards vs market claims) */
+  compare?: {
+    title: string
+    intro: string
+    headers: string[]
+    rows: string[][]
+  }
   faq: Array<{ q: string; a: string }>
   related: SolutionSlug[]
   ctaTitle: string

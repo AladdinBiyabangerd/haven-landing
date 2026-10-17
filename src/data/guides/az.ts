@@ -1,4 +1,5 @@
 import type { GuideCopy, GuidesHubCopy } from './types'
+import { billiardsHourlyRatesGuide } from './billiardsHourlyRatesGuide'
 import { comparisonGuides } from './comparisonGuides'
 import { gapEducationalGuides } from './gapEducationalGuides'
 import { ruCisGuides } from './ruCisGuides'
@@ -212,7 +213,7 @@ export const guidesAz: GuideCopy[] = [
       'bilyard vaxt sayğacı',
     ],
     datePublished: '2026-08-13',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-17',
     intro:
       'Bilyard klubunda əsas iş vahidi masadır. Masanın boş və ya bronlu olması, oyunun nə vaxt başlaması, nə qədər davam etməsi və əlavə sifarişlərin hansı hesaba aid olması gün ərzində birlikdə izlənməlidir. Heselo bu axını bir paneldə saxlayır.',
     sections: [
@@ -223,7 +224,6 @@ export const guidesAz: GuideCopy[] = [
           'Heselo-da masa və otaqlar ayrıca qurulur. Rezervasiya, canlı oyun və kassa eyni iş axınında davam edir. Fərqli masa tipləri üçün ayrıca tariflər də təyin edilə bilər.',
         ],
       },
-
       {
         id: 'why',
         title: 'Sadə lövhə və telefon niyə çətinlik yaradır?',
@@ -231,7 +231,6 @@ export const guidesAz: GuideCopy[] = [
           'Lövhədəki məlumat gec yenilənə bilər, telefonla alınan bron isə digər işçilər tərəfindən dərhal görünməyə bilər. VIP otaq və adi masalar ayrı siyahılarda saxlananda vəziyyəti yoxlamaq daha da çətinləşir.',
         ],
       },
-
       {
         id: 'time',
         title: 'Vaxt və ödəniş necə əlaqələndirilir?',
@@ -239,7 +238,27 @@ export const guidesAz: GuideCopy[] = [
           'Oyun başladıqda sessiya açılır. Fasilə, uzatma və əlavə məhsullar həmin sessiya ilə əlaqələndirilir. Tarif masa növünə və vaxt qaydasına əsasən hesablanır, yekun məbləğ isə kassa növbəsinə düşür.',
         ],
       },
-
+      {
+        id: 'choose',
+        title: 'Bilyard proqramı seçərkən nələrə diqqət edin',
+        paragraphs: [
+          'Bazarda masa taymeri, bulud panel, Windows proqramı və işıq relyeli sistemlər qarışıq görünür. Seçimdən əvvəl öz zalınız üçün mütləq olanları yazın — sonra vendor iddialarını həmin siyahıya uyğun yoxlayın.',
+        ],
+        bullets: [
+          'Gecə və həftəsonu tarifini paneldə saxlamaq lazımdırmı?',
+          'Operator masa aça bilsin, sahibkar isə növbə hesabatını ayrı görsün?',
+          'Bar satışı masa hesabına düşməlidir?',
+          'İşıq relye mütləqdir, yoxsa planşet taymeri kifayətdir?',
+          'QR üzvlük check-in lazımdırmı?',
+        ],
+      },
+      {
+        id: 'relay-honesty',
+        title: 'İşıq relye haqqında dürüst qeyd',
+        paragraphs: [
+          'Bəzi sistemlər masa işə düşəndə lampanı relye ilə avtomatik yandırır. Bu, işçinin masanı gizlicə işlətməsinin qarşısını almağa kömək edə bilər. Heselo hazırda belə avadanlıq inteqrasiyası təklif etmir — paneli planşet və ya kompüterdə taymer, rezervasiya və kassa kimi istifadə edirsiniz. Relye mütləqdirsə, xüsusi avadanlıq həllərinə baxın.',
+        ],
+      },
       {
         id: 'mix',
         title: 'Bilyard, karaoke və launj birlikdə işləyə bilər?',
@@ -247,7 +266,14 @@ export const guidesAz: GuideCopy[] = [
           'Bəli. Qarışıq məkanlarda fərqli masa və otaq növlərini eyni idarəetmə panelində saxlamaq mümkündür. Belə olduqda rezervasiya və satış məlumatlarını müxtəlif sistemlərdən toplamaq lazım gəlmir.',
         ],
       },
+      {
+        id: 'compare-links',
+        title: 'Rəqib müqayisələri',
+        paragraphs: [
+          'CueDesk, BilliardPOS, BCMS və Biliardo.kz ilə dürüst müqayisə və 2026 ümumi cədvəl üçün bələdçilərimizə baxın. Tarif qaydaları üçün ayrıca «bilyard saatlıq tariflər» yazısı var.',
         ],
+      },
+    ],
     faq: [
       {
         q: 'VIP otaq və adi masa birlikdə ola bilər?',
@@ -255,11 +281,19 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Yalnız taymer kifayət edəndədirmi?',
-        a: 'Əgər yalnız vaxtı izləmək lazımdırsa, taymer kifayət edəndə edə bilər. Rezervasiya, satış və kassa da eyni prosesdə lazımdırsa, daha geniş idarəetmə sistemi tələb olunur.',
+        a: 'Əgər yalnız vaxtı izləmək lazımdırsa, taymer kifayət edə bilər. Rezervasiya, satış və kassa da eyni prosesdə lazımdırsa, daha geniş idarəetmə sistemi tələb olunur.',
       },
       {
         q: 'Fərqli masaların fərqli qiyməti ola bilər?',
-        a: 'Bəli. Masa tipləri ayrıca qurularaq hər birinə fərqli tarif tətbiq etmək mümkündür.',
+        a: 'Bəli. Masa tipləri ayrıca qurularaq hər birinə fərqli tarif tətbiq etmək mümkündür. Gecə və həftəsonu qaydaları da paneldə saxlanıla bilər.',
+      },
+      {
+        q: 'İşçi səlahiyyətləri necə bölünür?',
+        a: 'Operatorun masa açmaq və satış yazmaq hüququ ilə sahibkarın növbə və gəlir hesabatları ayrıla bilər. Dəqiq matris demoda göstərilir.',
+      },
+      {
+        q: 'İşıq relye dəstəklənir?',
+        a: 'Xeyr. Heselo planşet və ya kompüter paneli kimidir; lampa avtomatlaşdırması ayrıca avadanlıqdır.',
       },
       {
         q: 'Oyun zamanı fasilə verilə bilər?',
@@ -563,7 +597,7 @@ export const guidesAz: GuideCopy[] = [
       'billiards scheduling',
     ],
     datePublished: '2026-09-07',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-17',
     intro:
       'Bilyard masa bronu sadəcə ad və saat yazmaqdan ibarət deyil. Masa, vaxt, müddət və müştəri məlumatı sonradan canlı oyun və ödənişlə əlaqələndirilməlidir. Heselo bu axını bir paneldə saxlayır.',
     sections: [
@@ -574,7 +608,6 @@ export const guidesAz: GuideCopy[] = [
           'Heselo-da masa və otaqlar ayrıca resurs kimi qurulur. Rezervasiya cədvəldə görünür, qonaq gəldikdə canlı sessiyaya çevrilir və yekun ödəniş kassa növbəsində əks olunur.',
         ],
       },
-
       {
         id: 'booking',
         title: 'Masa rezervasiyasında hansı məlumatlar olmalıdır?',
@@ -582,7 +615,20 @@ export const guidesAz: GuideCopy[] = [
           'Əsas məlumatlar tarix, saat, masa və ya VIP otaq, müddət və əlaqə məlumatlarıdır. Rezervasiya dəyişdirilərsə və ya ləğv olunarsa, dəyişiklik tarixçəsinin qalması da faydalıdır.',
         ],
       },
-
+      {
+        id: 'whatsapp',
+        title: 'WhatsApp və lövhə vs sistem',
+        paragraphs: [
+          'Bir çox klub hələ də bronları WhatsApp qrupunda və ya lövhədə aparır. Bu, kiçik zalda bir növbədə işləyə bilər. Pik saatda isə iki işçi eyni masanı vəd edə, no-show isə cədvəldə görünməyə bilər. Sistemdə bron, boş masa və aktiv oyun eyni yerdə qalır — telefon mesajı yalnız əlavə kanal ola bilər, əsas mənbə yox.',
+        ],
+      },
+      {
+        id: 'noshow',
+        title: 'No-show və pik saat',
+        paragraphs: [
+          'Həftəsonu axşamı bronlar üst-üstə düşəndə gözləmə siyahısı və depozit qaydası kömək edir. Qaydanı qonağa əvvəlcədən deyin və paneldə eyni dildə saxlayın. Pik saatda canlı zal boş masanı bir baxışda göstərməlidir — əks halda resepsiya yenidən WhatsApp-a qayıdır.',
+        ],
+      },
       {
         id: 'schedule',
         title: 'Cədvəl niyə rezervasiyadan ayrı olmamalıdır?',
@@ -590,7 +636,6 @@ export const guidesAz: GuideCopy[] = [
           'Cədvəl bütün masaların vəziyyətini göstərir. Rezervasiyalar başqa yerdə, aktiv oyunlar isə ayrıca saxlanılırsa, işçi boş masanı müəyyən etmək üçün məlumatları birləşdirməli olur.',
         ],
       },
-
       {
         id: 'online',
         title: 'Bilyard masasını onlayn necə bron etmək olar?',
@@ -599,7 +644,6 @@ export const guidesAz: GuideCopy[] = [
           'Əsas məsələ onlayn sorğunun telefonla alınan bronlardan ayrı qalmamasıdır. Əks halda internetdən gələn bron da digər qeydlər kimi qarışıqlıq yarada bilər.',
         ],
       },
-
       {
         id: 'live',
         title: 'Bron canlı oyuna necə keçir?',
@@ -607,7 +651,6 @@ export const guidesAz: GuideCopy[] = [
           'Qonaq gəldikdə rezervasiya aktiv sessiyaya çevrilir. Oyun zamanı fasilə və uzatma həmin sessiyada qeyd olunur, əlavə sifarişlər də eyni hesaba əlavə edilə bilər.',
         ],
       },
-
       {
         id: 'mistakes',
         title: 'Ən çox rast gəlinən problemlər',
@@ -617,9 +660,10 @@ export const guidesAz: GuideCopy[] = [
           'Yalnız taymerdən istifadə etmək',
           'VIP otaqların ayrıca siyahıda saxlanması',
           'Oyun vaxtı ilə ödənişin ayrı qeyd olunması',
+          'No-show qaydasının yalnız şifahi olması',
         ],
       },
-        ],
+    ],
     faq: [
       {
         q: 'Bron və cədvəl eyni şeydir?',
@@ -632,6 +676,10 @@ export const guidesAz: GuideCopy[] = [
       {
         q: 'Onlayn bron telefon bronunu əvəz edir?',
         a: 'Mütləq deyil. Hər iki kanal istifadə oluna bilər. Vacib olan bütün bronların eyni cədvəldə görünməsidir.',
+      },
+      {
+        q: 'WhatsApp bronu saxlamaq olarmı?',
+        a: 'Əlaqə kanalı kimi bəli. Amma əsas mənbə cədvəl olmalıdır — əks halda pik saatda üst-üstə rezervasiya riski qalır.',
       },
       {
         q: 'Eyni gün üçün bron qəbul etmək olar?',
@@ -908,6 +956,7 @@ export const guidesAz: GuideCopy[] = [
   },
 
   ...gapEducationalGuides('az'),
+  billiardsHourlyRatesGuide('az'),
   ...ruCisGuides('az'),
   ...comparisonGuides('az'),
 ]
