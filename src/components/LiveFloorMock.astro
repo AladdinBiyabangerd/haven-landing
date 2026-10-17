@@ -11,23 +11,34 @@ interface Props {
 const { messages, class: className = '' } = Astro.props
 const m = messages.liveFloorMock
 
-/** Demo stations — names are proper nouns; status/time/amount illustrate the product.
- *  Both active/empty DOM stay in the tree so Astro-scoped styles survive toggles.
- *  `startSeconds` resets on every page load; client tick only advances while open. */
-const stations = [
-  { name: 'VIP 1', status: 'active' as const, startSeconds: 1 * 3600 + 24 * 60, amount: '24.00 AZN' },
-  { name: 'PS-3', status: 'active' as const, startSeconds: 47 * 60, amount: '12.00 AZN' },
-  { name: 'Karaoke 2', status: 'active' as const, startSeconds: 2 * 3600 + 10 * 60, amount: '45.00 AZN' },
-  { name: 'Bilyard 1', status: 'empty' as const, startSeconds: 12 * 60, amount: '10.00 AZN' },
-  { name: 'VIP 2', status: 'empty' as const, startSeconds: 35 * 60, amount: '24.00 AZN' },
-  { name: 'PS-5', status: 'active' as const, startSeconds: 18 * 60, amount: '8.00 AZN' },
+type Status = 'active' | 'empty' | 'overdue'
+type TimerMode = 'elapsed' | 'remaining'
+
+/** Demo stations — both active/empty/overdue DOM stay in the tree so scoped styles survive toggles. */
+const stations: Array<{
+  name: string
+  status: Status
+  timer: TimerMode
+  seconds: number
+  amount: string
+}> = [
+  { name: 'VIP 1', status: 'active', timer: 'elapsed', seconds: 1 * 3600 + 24 * 60, amount: '24.00 AZN' },
+  { name: 'PS-3', status: 'active', timer: 'remaining', seconds: 1 * 60 + 45, amount: '12.00 AZN' },
+  { name: 'Karaoke 2', status: 'active', timer: 'elapsed', seconds: 2 * 3600 + 10 * 60, amount: '45.00 AZN' },
+  { name: 'Bilyard 1', status: 'empty', timer: 'elapsed', seconds: 12 * 60, amount: '10.00 AZN' },
+  { name: 'VIP 2', status: 'empty', timer: 'elapsed', seconds: 35 * 60, amount: '24.00 AZN' },
+  { name: 'PS-5', status: 'overdue', timer: 'elapsed', seconds: 8 * 60, amount: '18.00 AZN' },
 ]
 
-/** HH:MM:SS so the live tick is visible every second. */
-function formatHms(totalSeconds: number): string {
-  const h = Math.floor(totalSeconds / 3600)
-  const m = Math.floor((totalSeconds % 3600) / 60)
-  const s = totalSeconds % 60
+/** Compact MM:SS under 1h for countdowns; else HH:MM:SS. */
+function formatClock(totalSeconds: number, compact: boolean): string {
+  const sec = Math.max(0, Math.floor(totalSeconds))
+  const h = Math.floor(sec / 3600)
+  const m = Math.floor((sec % 3600) / 60)
+  const s = sec % 60
+  if (compact && h === 0) {
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+  }
   return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
 }
 ---
@@ -41,6 +52,8 @@ function formatHms(totalSeconds: number): string {
           <span class="lfm__leg"><i class="lfm__dot lfm__dot--on" aria-hidden="true"></i>{m.legendActive}</span>
           <span class="lfm__leg-sep" aria-hidden="true">·</span>
           <span class="lfm__leg"><i class="lfm__dot lfm__dot--off" aria-hidden="true"></i>{m.legendEmpty}</span>
+          <span class="lfm__leg-sep" aria-hidden="true">·</span>
+          <span class="lfm__leg"><i class="lfm__dot lfm__dot--overdue" aria-hidden="true"></i>{m.legendOverdue}</span>
         </p>
       </div>
       <BrandMark size={28} />
@@ -49,37 +62,78 @@ function formatHms(totalSeconds: number): string {
     <ul class="lfm__grid">
       {
         stations.map((s) => {
-          const active = s.status === 'active'
+          const occupied = s.status !== 'empty'
+          const isRemaining = s.timer === 'remaining'
           return (
             <li>
               <button
                 type="button"
-                class:list={['lfm__card', active && 'lfm__card--on']}
-                data-active={active ? 'true' : 'false'}
-                aria-pressed={active ? 'true' : 'false'}
+                class:list={[
+                  'lfm__card',
+                  s.status === 'active' && 'lfm__card--on',
+                  s.status === 'overdue' && 'lfm__card--overdue',
+                ]}
+                data-status={s.status}
+                data-timer={s.timer}
+                aria-pressed={occupied ? 'true' : 'false'}
                 aria-label={fillTemplate(m.toggleStation, { name: s.name })}
               >
                 <div class="lfm__card-top">
                   <span class="lfm__name">{s.name}</span>
-                  <span class:list={['lfm__badge', 'lfm__badge--on']} data-lfm-badge-on hidden={!active}>
+                  <span class="lfm__badge lfm__badge--on" data-lfm-badge-on hidden={s.status !== 'active'}>
                     <i class="lfm__pulse" aria-hidden="true" />
                     {m.badgeActive}
                   </span>
-                  <span class:list={['lfm__badge', 'lfm__badge--off']} data-lfm-badge-off hidden={active}>
+                  <span class="lfm__badge lfm__badge--off" data-lfm-badge-off hidden={s.status !== 'empty'}>
                     {m.badgeEmpty}
+                  </span>
+                  <span
+                    class="lfm__badge lfm__badge--overdue"
+                    data-lfm-badge-overdue
+                    hidden={s.status !== 'overdue'}
+                  >
+                    <i class="lfm__pulse lfm__pulse--overdue" aria-hidden="true" />
+                    {m.badgeOverdue}
                   </span>
                 </div>
                 <div class="lfm__card-meta">
-                  <p class="lfm__meta-line" data-lfm-meta-on hidden={!active}>
-                    <span class="lfm__time" data-start-seconds={s.startSeconds} data-lfm-tick={active ? '1' : '0'}>
-                      {formatHms(s.startSeconds)}
+                  <p class="lfm__meta-line" data-lfm-meta-active hidden={s.status !== 'active'}>
+                    <span
+                      class:list={['lfm__time', isRemaining && 'lfm__time--remain']}
+                      data-seconds={s.seconds}
+                      data-lfm-tick={s.status === 'active' ? '1' : '0'}
+                      data-timer={s.timer}
+                    >
+                      {formatClock(s.seconds, isRemaining)}
+                    </span>
+                    {
+                      isRemaining ? (
+                        <span class="lfm__remain">{m.remainingLabel}</span>
+                      ) : (
+                        <>
+                          <span class="lfm__meta-sep" aria-hidden="true">
+                            ·
+                          </span>
+                          <span class="lfm__amount">{s.amount}</span>
+                        </>
+                      )
+                    }
+                  </p>
+                  <p class="lfm__meta-line lfm__meta-line--overdue" data-lfm-meta-overdue hidden={s.status !== 'overdue'}>
+                    <span
+                      class="lfm__time lfm__time--overdue"
+                      data-seconds={s.seconds}
+                      data-lfm-tick={s.status === 'overdue' ? '1' : '0'}
+                      data-timer="elapsed"
+                    >
+                      {formatClock(s.seconds, false)}
                     </span>
                     <span class="lfm__meta-sep" aria-hidden="true">
                       ·
                     </span>
                     <span class="lfm__amount">{s.amount}</span>
                   </p>
-                  <span class="lfm__dash" data-lfm-meta-off hidden={active}>
+                  <span class="lfm__dash" data-lfm-meta-empty hidden={s.status !== 'empty'}>
                     —
                   </span>
                 </div>
@@ -171,12 +225,14 @@ function formatHms(totalSeconds: number): string {
     border: 1.5px solid #94a3b8;
     box-sizing: border-box;
   }
+  .lfm__dot--overdue {
+    background: #dc2626;
+  }
   .lfm__grid {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    /* minmax(0,1fr) — default 1fr keeps min-content and overflows the hero on mobile. */
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
     min-width: 0;
@@ -210,6 +266,9 @@ function formatHms(totalSeconds: number): string {
   .lfm__card:hover {
     border-color: rgba(20, 184, 166, 0.4);
   }
+  .lfm__card--overdue:hover {
+    border-color: rgba(220, 38, 38, 0.45);
+  }
   .lfm__card:active {
     transform: scale(0.98);
   }
@@ -217,9 +276,17 @@ function formatHms(totalSeconds: number): string {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
+  .lfm__card--overdue:focus-visible {
+    outline-color: #dc2626;
+  }
   .lfm__card--on {
     border-color: rgba(20, 184, 166, 0.35);
     box-shadow: inset 0 2px 0 0 var(--accent);
+  }
+  .lfm__card--overdue {
+    border-color: rgba(220, 38, 38, 0.4);
+    box-shadow: inset 0 2px 0 0 #dc2626;
+    background: linear-gradient(165deg, #fff 55%, #fef2f2);
   }
   .lfm__card-top {
     display: flex;
@@ -251,7 +318,6 @@ function formatHms(totalSeconds: number): string {
     font-weight: 600;
     line-height: 1.2;
   }
-  /* `display` on badges/meta beats the UA [hidden] rule — keep toggles invisible. */
   .lfm__badge[hidden],
   .lfm__meta-line[hidden],
   .lfm__dash[hidden] {
@@ -267,12 +333,21 @@ function formatHms(totalSeconds: number): string {
     background: rgba(21, 32, 51, 0.04);
     border: 1px solid rgba(21, 32, 51, 0.08);
   }
+  .lfm__badge--overdue {
+    color: #b91c1c;
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.35);
+  }
   .lfm__pulse {
     width: 0.35rem;
     height: 0.35rem;
     border-radius: 999px;
     background: var(--accent);
     animation: lfm-pulse 2s ease-in-out infinite;
+  }
+  .lfm__pulse--overdue {
+    background: #dc2626;
+    animation: lfm-pulse-overdue 1.1s ease-in-out infinite;
   }
   .lfm__card-meta {
     margin-top: auto;
@@ -294,6 +369,18 @@ function formatHms(totalSeconds: number): string {
   .lfm__time {
     font-weight: 600;
     color: var(--ink-muted);
+  }
+  .lfm__time--remain {
+    color: var(--accent-deep);
+    font-weight: 700;
+  }
+  .lfm__time--overdue {
+    color: #b91c1c;
+    font-weight: 700;
+  }
+  .lfm__remain {
+    font-weight: 600;
+    color: var(--accent-deep);
   }
   .lfm__meta-sep {
     color: #cbd5e1;
@@ -322,7 +409,17 @@ function formatHms(totalSeconds: number): string {
       opacity: 0.35;
     }
   }
-  /* Narrow mobile: tighter cards so 2 cols fit inside the hero gutter. */
+  @keyframes lfm-pulse-overdue {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.25;
+      transform: scale(0.85);
+    }
+  }
   @container lfm (max-width: 22rem) {
     .lfm__panel {
       padding: 0.7rem 0.65rem 0.65rem;
@@ -352,7 +449,6 @@ function formatHms(totalSeconds: number): string {
       display: none;
     }
   }
-  /* 3 columns only when the mock panel is wide enough for readable cards */
   @container lfm (min-width: 28rem) {
     .lfm__panel {
       padding: 1.1rem 1.15rem 1rem;
@@ -375,10 +471,16 @@ function formatHms(totalSeconds: number): string {
 </style>
 
 <script>
-  function formatHms(totalSeconds: number): string {
-    const h = Math.floor(totalSeconds / 3600)
-    const m = Math.floor((totalSeconds % 3600) / 60)
-    const s = totalSeconds % 60
+  type Status = 'active' | 'empty' | 'overdue'
+
+  function formatClock(totalSeconds: number, compact: boolean): string {
+    const sec = Math.max(0, Math.floor(totalSeconds))
+    const h = Math.floor(sec / 3600)
+    const m = Math.floor((sec % 3600) / 60)
+    const s = sec % 60
+    if (compact && h === 0) {
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+    }
     return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
   }
 
@@ -388,22 +490,55 @@ function formatHms(totalSeconds: number): string {
     }
   }
 
-  function setCardActive(card: HTMLButtonElement, active: boolean) {
-    card.dataset.active = active ? 'true' : 'false'
-    card.setAttribute('aria-pressed', active ? 'true' : 'false')
-    card.classList.toggle('lfm__card--on', active)
+  function syncOverdueClock(card: HTMLButtonElement, seconds: number) {
+    const overdueTime = card.querySelector<HTMLElement>('[data-lfm-meta-overdue] [data-seconds]')
+    if (!overdueTime) return
+    overdueTime.dataset.seconds = String(seconds)
+    overdueTime.dataset.timer = 'elapsed'
+    overdueTime.textContent = formatClock(seconds, false)
+  }
+
+  function setCardStatus(card: HTMLButtonElement, status: Status) {
+    const prev = (card.dataset.status as Status) || 'empty'
+    card.dataset.status = status
+    card.setAttribute('aria-pressed', status === 'empty' ? 'false' : 'true')
+    card.classList.toggle('lfm__card--on', status === 'active')
+    card.classList.toggle('lfm__card--overdue', status === 'overdue')
 
     const badgeOn = card.querySelector<HTMLElement>('[data-lfm-badge-on]')
     const badgeOff = card.querySelector<HTMLElement>('[data-lfm-badge-off]')
-    const metaOn = card.querySelector<HTMLElement>('[data-lfm-meta-on]')
-    const metaOff = card.querySelector<HTMLElement>('[data-lfm-meta-off]')
-    const time = card.querySelector<HTMLElement>('.lfm__time')
+    const badgeOverdue = card.querySelector<HTMLElement>('[data-lfm-badge-overdue]')
+    const metaActive = card.querySelector<HTMLElement>('[data-lfm-meta-active]')
+    const metaOverdue = card.querySelector<HTMLElement>('[data-lfm-meta-overdue]')
+    const metaEmpty = card.querySelector<HTMLElement>('[data-lfm-meta-empty]')
+    const activeTime = card.querySelector<HTMLElement>('[data-lfm-meta-active] [data-seconds]')
 
-    if (badgeOn) badgeOn.hidden = !active
-    if (badgeOff) badgeOff.hidden = active
-    if (metaOn) metaOn.hidden = !active
-    if (metaOff) metaOff.hidden = active
-    if (time) time.dataset.lfmTick = active ? '1' : '0'
+    if (status === 'overdue' && prev !== 'overdue' && activeTime) {
+      const fromRemaining = activeTime.dataset.timer === 'remaining'
+      const sec = fromRemaining ? 0 : Number(activeTime.dataset.seconds) || 0
+      syncOverdueClock(card, sec)
+    }
+
+    if (badgeOn) badgeOn.hidden = status !== 'active'
+    if (badgeOff) badgeOff.hidden = status !== 'empty'
+    if (badgeOverdue) badgeOverdue.hidden = status !== 'overdue'
+    if (metaActive) metaActive.hidden = status !== 'active'
+    if (metaOverdue) metaOverdue.hidden = status !== 'overdue'
+    if (metaEmpty) metaEmpty.hidden = status !== 'empty'
+
+    for (const time of card.querySelectorAll<HTMLElement>('[data-seconds]')) {
+      const inActive = Boolean(time.closest('[data-lfm-meta-active]'))
+      const inOverdue = Boolean(time.closest('[data-lfm-meta-overdue]'))
+      const ticking =
+        (status === 'active' && inActive) || (status === 'overdue' && inOverdue)
+      time.dataset.lfmTick = ticking ? '1' : '0'
+    }
+  }
+
+  function nextStatus(current: Status): Status {
+    if (current === 'empty') return 'active'
+    if (current === 'active') return 'overdue'
+    return 'empty'
   }
 
   function startLiveFloorTimers() {
@@ -415,25 +550,35 @@ function formatHms(totalSeconds: number): string {
       return
     }
 
-    const nodes = document.querySelectorAll<HTMLElement>('.lfm__time[data-start-seconds]')
+    const nodes = document.querySelectorAll<HTMLElement>('.lfm [data-seconds]')
     if (window.__heseloLfmTimer) {
       window.clearInterval(window.__heseloLfmTimer)
       window.__heseloLfmTimer = undefined
     }
     if (!nodes.length) return
 
-    const timers = Array.from(nodes).map((el) => {
-      const seconds = Number(el.dataset.startSeconds) || 0
-      el.textContent = formatHms(seconds)
-      return { el, seconds }
-    })
+    for (const el of nodes) {
+      const seconds = Number(el.dataset.seconds) || 0
+      el.textContent = formatClock(seconds, el.dataset.timer === 'remaining')
+    }
 
     window.__heseloLfmTimer = window.setInterval(() => {
-      for (const t of timers) {
-        if (!t.el.isConnected || t.el.dataset.lfmTick !== '1') continue
-        t.seconds += 1
-        t.el.dataset.startSeconds = String(t.seconds)
-        t.el.textContent = formatHms(t.seconds)
+      for (const el of document.querySelectorAll<HTMLElement>('.lfm [data-seconds]')) {
+        if (!el.isConnected || el.dataset.lfmTick !== '1') continue
+        const remaining = el.dataset.timer === 'remaining'
+        let seconds = Number(el.dataset.seconds) || 0
+        if (remaining) {
+          if (seconds <= 0) {
+            const card = el.closest<HTMLButtonElement>('.lfm__card')
+            if (card && card.dataset.status === 'active') setCardStatus(card, 'overdue')
+            continue
+          }
+          seconds -= 1
+        } else {
+          seconds += 1
+        }
+        el.dataset.seconds = String(seconds)
+        el.textContent = formatClock(seconds, remaining)
       }
     }, 1000)
   }
@@ -447,8 +592,8 @@ function formatHms(totalSeconds: number): string {
         const target = event.target as HTMLElement | null
         const card = target?.closest<HTMLButtonElement>('.lfm__card')
         if (!card || !root.contains(card)) return
-        setCardActive(card, card.dataset.active !== 'true')
-        // Keep demo focus ring off after mouse toggle.
+        const current = (card.dataset.status as Status) || 'empty'
+        setCardStatus(card, nextStatus(current))
         card.blur()
       })
     }

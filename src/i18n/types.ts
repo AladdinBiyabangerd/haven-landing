@@ -75,8 +75,12 @@ export type Messages = {
     title: string
     legendActive: string
     legendEmpty: string
+    legendOverdue: string
     badgeActive: string
     badgeEmpty: string
+    badgeOverdue: string
+    /** Short label after a countdown, e.g. “left” / “qalıb”. */
+    remainingLabel: string
     hint: string
     /** Accessible name for the mock panel. */
     ariaLabel: string
