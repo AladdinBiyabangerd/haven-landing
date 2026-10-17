@@ -1,6 +1,7 @@
 ---
 import type { Messages } from '@/i18n/types'
 import BrandMark from '@/components/BrandMark.astro'
+import { fillTemplate } from '@/lib/format'
 
 interface Props {
   messages: Messages
@@ -35,7 +36,12 @@ const rows = [
 ]
 ---
 
-<figure class:list={['sch', className]} aria-label={m.ariaLabel}>
+<figure
+  class:list={['sch', className]}
+  aria-label={m.ariaLabel}
+  data-status-booked={m.statusBooked}
+  data-status-free={m.statusFree}
+>
   <header class="sch__header">
     <div class="sch__heading">
       <p class="sch__title">{m.title}</p>
@@ -47,7 +53,16 @@ const rows = [
   <div class="sch__list" role="list">
     {
       rows.map((row) => (
-        <div class="sch__row" role="listitem">
+        <button
+          type="button"
+          class="sch__row"
+          role="listitem"
+          data-booked={row.booked ? 'true' : 'false'}
+          data-slot={row.slot}
+          data-guest={row.guest}
+          aria-pressed="false"
+          aria-label={fillTemplate(m.selectRow, { name: row.room })}
+        >
           <div class="sch__room-wrap">
             <span class="sch__room">{row.room}</span>
             <span class:list={['sch__status', row.booked ? 'sch__status--booked' : 'sch__status--free']}>
@@ -60,14 +75,18 @@ const rows = [
               {row.booked ? row.guest : '—'}
             </span>
           </div>
-        </div>
+        </button>
       ))
     }
   </div>
 
-  <div class="sch__actions" aria-hidden="true">
-    <span class="sch__chip sch__chip--move">{m.moveChip}</span>
-    <span class="sch__chip sch__chip--cancel">{m.cancelChip}</span>
+  <div class="sch__actions">
+    <button type="button" class="sch__chip sch__chip--move" data-sch-action="move">
+      {m.moveChip}
+    </button>
+    <button type="button" class="sch__chip sch__chip--cancel" data-sch-action="cancel">
+      {m.cancelChip}
+    </button>
   </div>
 
   <p class="sch__hint">{m.hint}</p>
@@ -153,9 +172,49 @@ const rows = [
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.65rem;
+    width: 100%;
     min-height: 3.5rem;
-    padding: 0.65rem 0;
+    margin: 0;
+    padding: 0.65rem 0.35rem;
+    border: 0;
     border-bottom: 1px solid rgba(68, 88, 101, 0.13);
+    border-radius: 8px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition:
+      background 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .sch__row:hover {
+    background: rgba(20, 184, 166, 0.06);
+  }
+
+  .sch__row:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  .sch__row--selected {
+    background: rgba(20, 184, 166, 0.12);
+    box-shadow: inset 3px 0 0 0 var(--accent);
+  }
+
+  .sch__row--flash {
+    animation: sch-flash 0.45s ease;
+  }
+
+  @keyframes sch-flash {
+    0%,
+    100% {
+      background: rgba(20, 184, 166, 0.12);
+    }
+    40% {
+      background: rgba(20, 184, 166, 0.28);
+    }
   }
 
   .sch__room-wrap {
@@ -242,10 +301,29 @@ const rows = [
     padding: 0.3rem 0.65rem;
     border: 1px solid transparent;
     border-radius: 7px;
+    font: inherit;
     font-size: 0.75rem;
     font-weight: 650;
     line-height: 1.2;
     white-space: nowrap;
+    cursor: pointer;
+    transition:
+      opacity 0.15s ease,
+      transform 0.12s ease;
+  }
+
+  .sch__chip:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .sch__chip:not(:disabled):active {
+    transform: scale(0.97);
+  }
+
+  .sch__chip:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
 
   .sch__chip--move {
@@ -288,3 +366,96 @@ const rows = [
     }
   }
 </style>
+
+<script>
+  function paintRow(row: HTMLButtonElement, booked: boolean, slot: string, guest: string, root: HTMLElement) {
+    const statusBooked = root.dataset.statusBooked || ''
+    const statusFree = root.dataset.statusFree || ''
+    const status = row.querySelector('.sch__status')
+    const slotEl = row.querySelector('.sch__slot')
+    const guestEl = row.querySelector('.sch__guest')
+    if (!status || !slotEl || !guestEl) return
+
+    row.dataset.booked = booked ? 'true' : 'false'
+    row.dataset.slot = slot
+    row.dataset.guest = guest
+    status.className = `sch__status ${booked ? 'sch__status--booked' : 'sch__status--free'}`
+    status.textContent = booked ? statusBooked : statusFree
+    slotEl.textContent = slot
+    slotEl.classList.toggle('sch__slot--empty', !booked)
+    guestEl.textContent = booked && guest ? guest : '—'
+    guestEl.classList.toggle('sch__guest--empty', !booked)
+  }
+
+  function selectedRow(root: HTMLElement): HTMLButtonElement | null {
+    return root.querySelector<HTMLButtonElement>('.sch__row--selected')
+  }
+
+  function syncChips(root: HTMLElement) {
+    const selected = selectedRow(root)
+    const booked = selected?.dataset.booked === 'true'
+    for (const chip of root.querySelectorAll<HTMLButtonElement>('.sch__chip')) {
+      chip.disabled = !selected || !booked
+    }
+  }
+
+  function bindScheduleMock() {
+    for (const root of document.querySelectorAll<HTMLElement>('.sch')) {
+      if (root.dataset.mockScheduleBound === '1') continue
+      root.dataset.mockScheduleBound = '1'
+      syncChips(root)
+
+      root.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement | null
+        const row = target?.closest<HTMLButtonElement>('.sch__row')
+        if (row && root.contains(row)) {
+          for (const el of root.querySelectorAll<HTMLButtonElement>('.sch__row')) {
+            const on = el === row
+            el.classList.toggle('sch__row--selected', on)
+            el.setAttribute('aria-pressed', on ? 'true' : 'false')
+          }
+          syncChips(root)
+          return
+        }
+
+        const actionBtn = target?.closest<HTMLButtonElement>('[data-sch-action]')
+        if (!actionBtn || actionBtn.disabled) return
+        const selected = selectedRow(root)
+        if (!selected || selected.dataset.booked !== 'true') return
+        const action = actionBtn.dataset.schAction
+
+        if (action === 'cancel') {
+          paintRow(selected, false, '—', '', root)
+          selected.classList.add('sch__row--flash')
+          window.setTimeout(() => selected.classList.remove('sch__row--flash'), 450)
+          syncChips(root)
+          return
+        }
+
+        if (action === 'move') {
+          const free = root.querySelector<HTMLButtonElement>('.sch__row[data-booked="false"]')
+          if (!free || free === selected) {
+            selected.classList.add('sch__row--flash')
+            window.setTimeout(() => selected.classList.remove('sch__row--flash'), 450)
+            return
+          }
+          const slot = selected.dataset.slot || '—'
+          const guest = selected.dataset.guest || ''
+          paintRow(free, true, slot, guest, root)
+          paintRow(selected, false, '—', '', root)
+          for (const el of root.querySelectorAll<HTMLButtonElement>('.sch__row')) {
+            const on = el === free
+            el.classList.toggle('sch__row--selected', on)
+            el.setAttribute('aria-pressed', on ? 'true' : 'false')
+          }
+          free.classList.add('sch__row--flash')
+          window.setTimeout(() => free.classList.remove('sch__row--flash'), 450)
+          syncChips(root)
+        }
+      })
+    }
+  }
+
+  bindScheduleMock()
+  document.addEventListener('astro:page-load', bindScheduleMock)
+</script>

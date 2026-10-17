@@ -1,6 +1,7 @@
 ---
 import type { Messages } from '@/i18n/types'
 import BrandMark from '@/components/BrandMark.astro'
+import { fillTemplate } from '@/lib/format'
 
 interface Props {
   messages: Messages
@@ -11,13 +12,14 @@ const { messages, class: className = '' } = Astro.props
 const m = messages.liveFloorMock
 
 /** Demo stations — names are proper nouns; status/time/amount illustrate the product.
- *  `startSeconds` resets on every page load; client tick only advances while the tab is open. */
+ *  Both active/empty DOM stay in the tree so Astro-scoped styles survive toggles.
+ *  `startSeconds` resets on every page load; client tick only advances while open. */
 const stations = [
   { name: 'VIP 1', status: 'active' as const, startSeconds: 1 * 3600 + 24 * 60, amount: '24.00 AZN' },
   { name: 'PS-3', status: 'active' as const, startSeconds: 47 * 60, amount: '12.00 AZN' },
   { name: 'Karaoke 2', status: 'active' as const, startSeconds: 2 * 3600 + 10 * 60, amount: '45.00 AZN' },
-  { name: 'Bilyard 1', status: 'empty' as const },
-  { name: 'VIP 2', status: 'empty' as const },
+  { name: 'Bilyard 1', status: 'empty' as const, startSeconds: 12 * 60, amount: '10.00 AZN' },
+  { name: 'VIP 2', status: 'empty' as const, startSeconds: 35 * 60, amount: '24.00 AZN' },
   { name: 'PS-5', status: 'active' as const, startSeconds: 18 * 60, amount: '8.00 AZN' },
 ]
 
@@ -46,38 +48,45 @@ function formatHms(totalSeconds: number): string {
 
     <ul class="lfm__grid">
       {
-        stations.map((s) => (
-          <li class:list={['lfm__card', s.status === 'active' && 'lfm__card--on']}>
-            <div class="lfm__card-top">
-              <span class="lfm__name">{s.name}</span>
-              <span class:list={['lfm__badge', s.status === 'active' ? 'lfm__badge--on' : 'lfm__badge--off']}>
-                {s.status === 'active' ? (
-                  <>
+        stations.map((s) => {
+          const active = s.status === 'active'
+          return (
+            <li>
+              <button
+                type="button"
+                class:list={['lfm__card', active && 'lfm__card--on']}
+                data-active={active ? 'true' : 'false'}
+                aria-pressed={active ? 'true' : 'false'}
+                aria-label={fillTemplate(m.toggleStation, { name: s.name })}
+              >
+                <div class="lfm__card-top">
+                  <span class="lfm__name">{s.name}</span>
+                  <span class:list={['lfm__badge', 'lfm__badge--on']} data-lfm-badge-on hidden={!active}>
                     <i class="lfm__pulse" aria-hidden="true" />
                     {m.badgeActive}
-                  </>
-                ) : (
-                  m.badgeEmpty
-                )}
-              </span>
-            </div>
-            <div class="lfm__card-meta">
-              {s.status === 'active' ? (
-                <p class="lfm__meta-line">
-                  <span class="lfm__time" data-start-seconds={s.startSeconds}>
-                    {formatHms(s.startSeconds)}
                   </span>
-                  <span class="lfm__meta-sep" aria-hidden="true">
-                    ·
+                  <span class:list={['lfm__badge', 'lfm__badge--off']} data-lfm-badge-off hidden={active}>
+                    {m.badgeEmpty}
                   </span>
-                  <span class="lfm__amount">{s.amount}</span>
-                </p>
-              ) : (
-                <span class="lfm__dash">—</span>
-              )}
-            </div>
-          </li>
-        ))
+                </div>
+                <div class="lfm__card-meta">
+                  <p class="lfm__meta-line" data-lfm-meta-on hidden={!active}>
+                    <span class="lfm__time" data-start-seconds={s.startSeconds} data-lfm-tick={active ? '1' : '0'}>
+                      {formatHms(s.startSeconds)}
+                    </span>
+                    <span class="lfm__meta-sep" aria-hidden="true">
+                      ·
+                    </span>
+                    <span class="lfm__amount">{s.amount}</span>
+                  </p>
+                  <span class="lfm__dash" data-lfm-meta-off hidden={active}>
+                    —
+                  </span>
+                </div>
+              </button>
+            </li>
+          )
+        })
       }
     </ul>
 
@@ -172,16 +181,41 @@ function formatHms(totalSeconds: number): string {
     gap: 0.5rem;
     min-width: 0;
   }
+  .lfm__grid > li {
+    min-width: 0;
+    display: flex;
+  }
   .lfm__card {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    flex: 1;
     min-width: 0;
+    margin: 0;
     padding: 0.6rem 0.65rem 0.55rem;
     background: #fff;
     border: 1px solid rgba(21, 32, 51, 0.08);
     border-radius: var(--radius);
     overflow: hidden;
+    appearance: none;
+    font: inherit;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease,
+      transform 0.12s ease;
+  }
+  .lfm__card:hover {
+    border-color: rgba(20, 184, 166, 0.4);
+  }
+  .lfm__card:active {
+    transform: scale(0.98);
+  }
+  .lfm__card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
   .lfm__card--on {
     border-color: rgba(20, 184, 166, 0.35);
@@ -216,6 +250,12 @@ function formatHms(totalSeconds: number): string {
     font-size: 0.65rem;
     font-weight: 600;
     line-height: 1.2;
+  }
+  /* `display` on badges/meta beats the UA [hidden] rule — keep toggles invisible. */
+  .lfm__badge[hidden],
+  .lfm__meta-line[hidden],
+  .lfm__dash[hidden] {
+    display: none;
   }
   .lfm__badge--on {
     color: var(--accent-deep);
@@ -348,17 +388,39 @@ function formatHms(totalSeconds: number): string {
     }
   }
 
+  function setCardActive(card: HTMLButtonElement, active: boolean) {
+    card.dataset.active = active ? 'true' : 'false'
+    card.setAttribute('aria-pressed', active ? 'true' : 'false')
+    card.classList.toggle('lfm__card--on', active)
+
+    const badgeOn = card.querySelector<HTMLElement>('[data-lfm-badge-on]')
+    const badgeOff = card.querySelector<HTMLElement>('[data-lfm-badge-off]')
+    const metaOn = card.querySelector<HTMLElement>('[data-lfm-meta-on]')
+    const metaOff = card.querySelector<HTMLElement>('[data-lfm-meta-off]')
+    const time = card.querySelector<HTMLElement>('.lfm__time')
+
+    if (badgeOn) badgeOn.hidden = !active
+    if (badgeOff) badgeOff.hidden = active
+    if (metaOn) metaOn.hidden = !active
+    if (metaOff) metaOff.hidden = active
+    if (time) time.dataset.lfmTick = active ? '1' : '0'
+  }
+
   function startLiveFloorTimers() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (window.__heseloLfmTimer) {
+        window.clearInterval(window.__heseloLfmTimer)
+        window.__heseloLfmTimer = undefined
+      }
+      return
+    }
 
     const nodes = document.querySelectorAll<HTMLElement>('.lfm__time[data-start-seconds]')
-    if (!nodes.length) return
-
-    // Always re-read data-start-seconds from HTML (SSR values) — never persist across refresh.
     if (window.__heseloLfmTimer) {
       window.clearInterval(window.__heseloLfmTimer)
       window.__heseloLfmTimer = undefined
     }
+    if (!nodes.length) return
 
     const timers = Array.from(nodes).map((el) => {
       const seconds = Number(el.dataset.startSeconds) || 0
@@ -368,12 +430,35 @@ function formatHms(totalSeconds: number): string {
 
     window.__heseloLfmTimer = window.setInterval(() => {
       for (const t of timers) {
+        if (!t.el.isConnected || t.el.dataset.lfmTick !== '1') continue
         t.seconds += 1
+        t.el.dataset.startSeconds = String(t.seconds)
         t.el.textContent = formatHms(t.seconds)
       }
     }, 1000)
   }
 
-  startLiveFloorTimers()
-  document.addEventListener('astro:page-load', startLiveFloorTimers)
+  function bindLiveFloorCards() {
+    for (const root of document.querySelectorAll<HTMLElement>('.lfm')) {
+      if (root.dataset.mockToggleBound === '1') continue
+      root.dataset.mockToggleBound = '1'
+
+      root.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement | null
+        const card = target?.closest<HTMLButtonElement>('.lfm__card')
+        if (!card || !root.contains(card)) return
+        setCardActive(card, card.dataset.active !== 'true')
+        // Keep demo focus ring off after mouse toggle.
+        card.blur()
+      })
+    }
+  }
+
+  function bootLiveFloor() {
+    bindLiveFloorCards()
+    startLiveFloorTimers()
+  }
+
+  bootLiveFloor()
+  document.addEventListener('astro:page-load', bootLiveFloor)
 </script>

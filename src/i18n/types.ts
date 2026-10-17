@@ -80,6 +80,8 @@ export type Messages = {
     hint: string
     /** Accessible name for the mock panel. */
     ariaLabel: string
+    /** Accessible name template for a station card button; `{name}` = station. */
+    toggleStation: string
   }
   /** Sparse HTML vignette replacing the cash product marketing image. */
   cashMock: {
@@ -100,10 +102,13 @@ export type Messages = {
     title: string
     roomLabel: string
     statusActive: string
+    statusPaused: string
+    statusEnded: string
     elapsedLabel: string
     dueLabel: string
     extendChip: string
     pauseChip: string
+    resumeChip: string
     stopChip: string
     hint: string
     ariaLabel: string
@@ -201,6 +206,7 @@ export type Messages = {
     }
     moveChip: string
     cancelChip: string
+    selectRow: string
     hint: string
     ariaLabel: string
   }

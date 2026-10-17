@@ -66,10 +66,12 @@ function payLabel(method: 'cash' | 'card'): string {
       <ul class="cm__tx-list">
         {
           transactions.map((tx) => (
-            <li class="cm__tx-row">
-              <span class="cm__tx-time">{tx.time}</span>
-              <span class="cm__tx-name">{payLabel(tx.method)}</span>
-              <span class="cm__tx-amount">{tx.amount}</span>
+            <li>
+              <button type="button" class="cm__tx-row" aria-pressed="false">
+                <span class="cm__tx-time">{tx.time}</span>
+                <span class="cm__tx-name">{payLabel(tx.method)}</span>
+                <span class="cm__tx-amount">{tx.amount}</span>
+              </button>
             </li>
           ))
         }
@@ -221,16 +223,38 @@ function payLabel(method: 'cash' | 'card'): string {
     margin: 0;
     padding: 0;
   }
+  .cm__tx-list > li {
+    border-top: 1px solid rgba(21, 32, 51, 0.06);
+  }
   .cm__tx-row {
     display: grid;
     grid-template-columns: 2.75rem minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.45rem 0;
-    border-top: 1px solid rgba(21, 32, 51, 0.06);
+    width: 100%;
+    margin: 0;
+    padding: 0.45rem 0.35rem;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
     font-family: var(--font-body);
     font-size: 0.7rem;
     line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .cm__tx-row:hover {
+    background: rgba(20, 184, 166, 0.06);
+  }
+  .cm__tx-row:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  .cm__tx-row--selected {
+    background: rgba(20, 184, 166, 0.12);
+    box-shadow: inset 3px 0 0 0 var(--accent);
   }
   .cm__tx-time {
     color: var(--ink-subtle);
@@ -292,3 +316,16 @@ function payLabel(method: 'cash' | 'card'): string {
     }
   }
 </style>
+
+<script>
+  import { bindMockSelect } from '@/lib/mockInteract'
+
+  function bindCashMock() {
+    for (const root of document.querySelectorAll('.cm')) {
+      bindMockSelect(root, '.cm__tx-row', 'cm__tx-row--selected')
+    }
+  }
+
+  bindCashMock()
+  document.addEventListener('astro:page-load', bindCashMock)
+</script>

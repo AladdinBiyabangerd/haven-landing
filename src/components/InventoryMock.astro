@@ -53,22 +53,24 @@ const rows = [
       <ul class="im__list">
         {
           rows.map((row) => (
-            <li class="im__row">
-              <div class="im__product">
-                <span class="im__icon" aria-hidden="true">
-                  {row.mark}
-                </span>
-                <div class="im__product-text">
-                  <span class="im__name">{row.name}</span>
-                  <span class="im__type">{row.type}</span>
+            <li>
+              <button type="button" class="im__row" aria-pressed="false" aria-label={row.name}>
+                <div class="im__product">
+                  <span class="im__icon" aria-hidden="true">
+                    {row.mark}
+                  </span>
+                  <div class="im__product-text">
+                    <span class="im__name">{row.name}</span>
+                    <span class="im__type">{row.type}</span>
+                  </div>
                 </div>
-              </div>
-              <span class="im__qty">
-                {row.qty} {m.unit}
-              </span>
-              <span class:list={['im__status', row.status === 'ok' ? 'im__status--ok' : 'im__status--low']}>
-                {row.status === 'ok' ? m.statusOk : m.statusLow}
-              </span>
+                <span class="im__qty">
+                  {row.qty} {m.unit}
+                </span>
+                <span class:list={['im__status', row.status === 'ok' ? 'im__status--ok' : 'im__status--low']}>
+                  {row.status === 'ok' ? m.statusOk : m.statusLow}
+                </span>
+              </button>
             </li>
           ))
         }
@@ -215,16 +217,39 @@ const rows = [
     margin: 0;
     padding: 0;
   }
+  .im__list > li {
+    border-bottom: 1px solid #e2e9ec;
+  }
+  .im__list > li:last-child {
+    border-bottom: 0;
+  }
   .im__row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
     align-items: center;
     gap: 0.85rem;
+    width: 100%;
+    margin: 0;
     padding: 0.75rem 0.6rem;
-    border-bottom: 1px solid #e2e9ec;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
   }
-  .im__row:last-child {
-    border-bottom: 0;
+  .im__row:hover {
+    background: rgba(20, 184, 166, 0.06);
+  }
+  .im__row:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  .im__row--selected {
+    background: rgba(20, 184, 166, 0.12);
+    box-shadow: inset 3px 0 0 0 var(--accent);
   }
   .im__product {
     display: flex;
@@ -344,10 +369,10 @@ const rows = [
       grid-template-columns: repeat(2, minmax(0, 1fr));
       column-gap: 0.75rem;
     }
-    .im__row {
+    .im__list > li {
       border-bottom: 1px solid #e2e9ec;
     }
-    .im__row:nth-last-child(-n + 2) {
+    .im__list > li:nth-last-child(-n + 2) {
       border-bottom: 0;
     }
     .im__cols {
@@ -387,3 +412,16 @@ const rows = [
     }
   }
 </style>
+
+<script>
+  import { bindMockSelect } from '@/lib/mockInteract'
+
+  function bindInventoryMock() {
+    for (const root of document.querySelectorAll('.im')) {
+      bindMockSelect(root, '.im__row', 'im__row--selected')
+    }
+  }
+
+  bindInventoryMock()
+  document.addEventListener('astro:page-load', bindInventoryMock)
+</script>

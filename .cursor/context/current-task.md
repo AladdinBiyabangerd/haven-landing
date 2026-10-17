@@ -1,20 +1,23 @@
-# Current task — product HTML mocks
+# Current task — interactive product HTML mocks
 
 ## Completed
-- All ProductShot HTML mocks: cash, sessions, schedule, inventory, products, room-analytics, audit
-- Hero still uses LiveFloorMock; solution `live-floor` image path may still be WebP
-- Solution layout: hero copy+mock; extra shot beside who/problems on desktop
-- ScheduleMock wired: karaoke / lounge / reservations hero; features gallery after live-floor
+- HTML mocks clickable for demo feel (not link wrappers)
+- LiveFloor: tap card → toggle active/empty + timer
+- Schedule: select row → Move / Cancel chips
+- Sessions: Extend / Pause·Resume / End
+- Cash, Inventory, Products, RoomAnalytics, Audit: single-select highlight
+- Shared helper: `src/lib/mockInteract.ts`
+- az/en/ru hint + a11y strings updated
 
 ## Current state
-- `ProductShot` HTML: cash, sessions, schedule, inventory, products, room-analytics, audit
-- Raster: only `public/images/product/live-floor*` (+ PH live-floor/thumbs, brand, og-final, tiktok)
+- ProductShot still routes to HTML mocks; live-floor raster path optional
+- Interactivity is client-side only; refresh restores demo data
 
 ## Remaining (optional)
-- Wire LiveFloorMock on solution pages that use `live-floor`
-- Commit ScheduleMock + prior mock/asset cleanup when asked
+- Wire LiveFloorMock on solution pages that still use `live-floor` WebP
+- Commit when asked
 
 ## Relevant files
-- `src/components/{ScheduleMock,AuditMock,RoomAnalyticsMock,ProductsMock,InventoryMock,CashMock,SessionsMock,LiveFloorMock,ProductShot}.astro`
-- `src/lib/productShots.ts`
+- `src/components/{LiveFloor,Schedule,Sessions,Cash,Inventory,Products,RoomAnalytics,Audit}Mock.astro`
+- `src/lib/mockInteract.ts`
 - `src/i18n/messages/{az,en,ru}.ts`, `src/i18n/types.ts`

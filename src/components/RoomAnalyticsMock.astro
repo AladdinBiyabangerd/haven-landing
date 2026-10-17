@@ -57,18 +57,21 @@ const rooms = [
       <ul class="ra__list">
         {
           rooms.map((room) => (
-            <li class="ra__room">
-              <div class="ra__room-line">
-                <span class="ra__room-name">{room.name}</span>
-                <span class="ra__room-amount">{room.amount}</span>
-              </div>
-              <div
-                class="ra__track"
-                role="img"
+            <li>
+              <button
+                type="button"
+                class="ra__room"
+                aria-pressed="false"
                 aria-label={fillTemplate(m.shareLabel, { pct: room.pct })}
               >
-                <div class="ra__fill" style={`width:${room.pct}%`} />
-              </div>
+                <div class="ra__room-line">
+                  <span class="ra__room-name">{room.name}</span>
+                  <span class="ra__room-amount">{room.amount}</span>
+                </div>
+                <div class="ra__track" aria-hidden="true">
+                  <div class="ra__fill" style={`width:${room.pct}%`} />
+                </div>
+              </button>
             </li>
           ))
         }
@@ -225,12 +228,36 @@ const rooms = [
     margin: 0;
     padding: 0;
   }
-  .ra__room {
-    padding: 0.65rem 0 0.55rem;
+  .ra__list > li {
     border-top: 1px solid rgba(21, 32, 51, 0.06);
   }
-  .ra__room:first-child {
+  .ra__list > li:first-child {
     border-top: 0;
+  }
+  .ra__room {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.65rem 0.35rem 0.55rem;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .ra__room:hover {
+    background: rgba(20, 184, 166, 0.06);
+  }
+  .ra__room:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  .ra__room--selected {
+    background: rgba(20, 184, 166, 0.12);
+    box-shadow: inset 3px 0 0 0 var(--accent);
   }
   .ra__room-line {
     display: flex;
@@ -313,3 +340,16 @@ const rooms = [
     }
   }
 </style>
+
+<script>
+  import { bindMockSelect } from '@/lib/mockInteract'
+
+  function bindRoomAnalyticsMock() {
+    for (const root of document.querySelectorAll('.ra')) {
+      bindMockSelect(root, '.ra__room', 'ra__room--selected')
+    }
+  }
+
+  bindRoomAnalyticsMock()
+  document.addEventListener('astro:page-load', bindRoomAnalyticsMock)
+</script>
