@@ -149,6 +149,30 @@ export const ru: Messages = {
     hint: 'Кто · что · когда',
     ariaLabel: 'Журнал аудита Heselo — история операций',
   },
+  scheduleMock: {
+    title: 'Расписание',
+    dayPill: 'Сегодня',
+    statusBooked: 'Бронь',
+    statusFree: 'Свободно',
+    rooms: {
+      vip1: 'VIP 1',
+      karaoke2: 'Karaoke 2',
+      vip2: 'VIP 2',
+    },
+    slots: {
+      vip1: '18:00–20:00',
+      karaoke2: '19:30–21:00',
+      vip2: '—',
+    },
+    guests: {
+      aysel: 'Айсель',
+      rashad: 'Рашад',
+    },
+    moveChip: 'Перенести',
+    cancelChip: 'Отменить',
+    hint: 'Бронь · перенос · отмена',
+    ariaLabel: 'Панель расписания Heselo — брони комнат и свободные слоты',
+  },
   trust: {
     items: [
       'Демо 15 мин — без карты',
@@ -401,6 +425,7 @@ export const ru: Messages = {
     alts: {
       'live-floor': 'Heselo живой зал — активные сеансы комнат и оплата',
       sessions: 'Heselo список сеансов — активные и закрытые',
+      schedule: 'Heselo расписание — брони комнат, перенос и свободные слоты',
       cash: 'Heselo касса — операции дня и баланс',
       inventory: 'Heselo склад — остатки и подсчёт',
       products: 'Heselo каталог товаров — цены продажи',

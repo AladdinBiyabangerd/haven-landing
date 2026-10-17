@@ -14,6 +14,7 @@ export type JourneyDoorCopy = {
 export type ProductShotAltKey =
   | 'live-floor'
   | 'sessions'
+  | 'schedule'
   | 'cash'
   | 'inventory'
   | 'products'
@@ -175,6 +176,31 @@ export type Messages = {
       rashad: string
       admin: string
     }
+    hint: string
+    ariaLabel: string
+  }
+  /** Sparse HTML vignette for the booking schedule marketing shot. */
+  scheduleMock: {
+    title: string
+    dayPill: string
+    statusBooked: string
+    statusFree: string
+    rooms: {
+      vip1: string
+      karaoke2: string
+      vip2: string
+    }
+    slots: {
+      vip1: string
+      karaoke2: string
+      vip2: string
+    }
+    guests: {
+      aysel: string
+      rashad: string
+    }
+    moveChip: string
+    cancelChip: string
     hint: string
     ariaLabel: string
   }

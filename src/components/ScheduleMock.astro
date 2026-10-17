@@ -1,0 +1,290 @@
+---
+import type { Messages } from '@/i18n/types'
+import BrandMark from '@/components/BrandMark.astro'
+
+interface Props {
+  messages: Messages
+  class?: string
+}
+
+const { messages, class: className = '' } = Astro.props
+const m = messages.scheduleMock
+
+const rows = [
+  {
+    room: m.rooms.vip1,
+    status: m.statusBooked,
+    booked: true,
+    slot: m.slots.vip1,
+    guest: m.guests.aysel,
+  },
+  {
+    room: m.rooms.karaoke2,
+    status: m.statusBooked,
+    booked: true,
+    slot: m.slots.karaoke2,
+    guest: m.guests.rashad,
+  },
+  {
+    room: m.rooms.vip2,
+    status: m.statusFree,
+    booked: false,
+    slot: m.slots.vip2,
+    guest: '',
+  },
+]
+---
+
+<figure class:list={['sch', className]} aria-label={m.ariaLabel}>
+  <header class="sch__header">
+    <div class="sch__heading">
+      <p class="sch__title">{m.title}</p>
+      <span class="sch__day">{m.dayPill}</span>
+    </div>
+    <BrandMark size={28} />
+  </header>
+
+  <div class="sch__list" role="list">
+    {
+      rows.map((row) => (
+        <div class="sch__row" role="listitem">
+          <div class="sch__room-wrap">
+            <span class="sch__room">{row.room}</span>
+            <span class:list={['sch__status', row.booked ? 'sch__status--booked' : 'sch__status--free']}>
+              {row.status}
+            </span>
+          </div>
+          <div class="sch__details">
+            <span class:list={['sch__slot', !row.booked && 'sch__slot--empty']}>{row.slot}</span>
+            <span class:list={['sch__guest', !row.booked && 'sch__guest--empty']}>
+              {row.booked ? row.guest : '—'}
+            </span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="sch__actions" aria-hidden="true">
+    <span class="sch__chip sch__chip--move">{m.moveChip}</span>
+    <span class="sch__chip sch__chip--cancel">{m.cancelChip}</span>
+  </div>
+
+  <p class="sch__hint">{m.hint}</p>
+</figure>
+
+<style>
+  .sch {
+    container-type: inline-size;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.9rem 0.85rem 0.8rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    color: #202b32;
+    background: linear-gradient(165deg, #eef3f6 0%, #e4ecf1 100%);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sch *,
+  .sch *::before,
+  .sch *::after {
+    box-sizing: border-box;
+  }
+
+  .sch__header,
+  .sch__heading,
+  .sch__room-wrap,
+  .sch__details,
+  .sch__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .sch__header {
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    min-width: 0;
+  }
+
+  .sch__heading {
+    flex-wrap: wrap;
+    gap: 0.5rem 0.65rem;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .sch__title {
+    margin: 0;
+    color: #202b32;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .sch__day {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.55rem;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid rgba(20, 184, 166, 0.2);
+    border-radius: 7px;
+    background: rgba(20, 184, 166, 0.1);
+    color: #087f75;
+    font-size: 0.75rem;
+    font-weight: 650;
+    white-space: nowrap;
+  }
+
+  .sch__list {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid rgba(68, 88, 101, 0.13);
+  }
+
+  .sch__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 3.5rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(68, 88, 101, 0.13);
+  }
+
+  .sch__room-wrap {
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .sch__room {
+    min-width: 0;
+    color: #26343c;
+    font-size: 0.8125rem;
+    font-weight: 650;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .sch__status {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-height: 1.35rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 650;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .sch__status--booked {
+    border: 1px solid rgba(20, 184, 166, 0.24);
+    background: rgba(20, 184, 166, 0.13);
+    color: #087f75;
+  }
+
+  .sch__status--free {
+    border: 1px solid rgba(84, 101, 113, 0.13);
+    background: rgba(84, 101, 113, 0.08);
+    color: #66747d;
+  }
+
+  .sch__details {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.65rem;
+    min-width: 0;
+    text-align: right;
+  }
+
+  .sch__slot,
+  .sch__guest {
+    color: #34434b;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .sch__slot {
+    font-weight: 650;
+  }
+
+  .sch__guest {
+    color: #65747c;
+    font-weight: 500;
+  }
+
+  .sch__slot--empty,
+  .sch__guest--empty {
+    color: #89959c;
+  }
+
+  .sch__actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+  }
+
+  .sch__chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.8rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 0.75rem;
+    font-weight: 650;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .sch__chip--move {
+    border-color: rgba(20, 184, 166, 0.28);
+    background: #14b8a6;
+    color: #073c39;
+  }
+
+  .sch__chip--cancel {
+    border-color: rgba(84, 101, 113, 0.18);
+    background: rgba(255, 255, 255, 0.35);
+    color: #596870;
+  }
+
+  .sch__hint {
+    margin: 0.75rem 0 0;
+    color: #718089;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  @container (max-width: 26rem) {
+    .sch {
+      padding: 0.75rem;
+    }
+
+    .sch__row {
+      grid-template-columns: minmax(0, 1fr) minmax(0, auto);
+      gap: 0.45rem;
+    }
+
+    .sch__room-wrap {
+      gap: 0.3rem;
+    }
+
+    .sch__details {
+      display: grid;
+      justify-items: end;
+      gap: 0.1rem;
+    }
+  }
+</style>

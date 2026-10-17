@@ -149,6 +149,30 @@ export const en: Messages = {
     hint: 'Who · what · when',
     ariaLabel: 'Heselo audit log — operation history',
   },
+  scheduleMock: {
+    title: 'Schedule',
+    dayPill: 'Today',
+    statusBooked: 'Booked',
+    statusFree: 'Free',
+    rooms: {
+      vip1: 'VIP 1',
+      karaoke2: 'Karaoke 2',
+      vip2: 'VIP 2',
+    },
+    slots: {
+      vip1: '18:00–20:00',
+      karaoke2: '19:30–21:00',
+      vip2: '—',
+    },
+    guests: {
+      aysel: 'Aysel',
+      rashad: 'Rashad',
+    },
+    moveChip: 'Move',
+    cancelChip: 'Cancel',
+    hint: 'Book · move · cancel',
+    ariaLabel: 'Heselo schedule panel — room bookings and free slots',
+  },
   trust: {
     items: [
       '15-min demo, no card',
@@ -401,6 +425,7 @@ export const en: Messages = {
     alts: {
       'live-floor': 'Heselo live floor — active room sessions and payment',
       sessions: 'Heselo sessions list — active and closed sessions',
+      schedule: 'Heselo schedule — room bookings, moves, and free slots',
       cash: 'Heselo cash desk — daily transactions and balance',
       inventory: 'Heselo inventory — stock levels and counts',
       products: 'Heselo product catalog — sale prices',

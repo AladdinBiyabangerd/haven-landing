@@ -149,6 +149,30 @@ export const az: Messages = {
     hint: 'Kim · nə · nə vaxt',
     ariaLabel: 'Heselo audit jurnalı — əməliyyat tarixçəsi',
   },
+  scheduleMock: {
+    title: 'Cədvəl',
+    dayPill: 'Bu gün',
+    statusBooked: 'Bron',
+    statusFree: 'Boş',
+    rooms: {
+      vip1: 'VIP 1',
+      karaoke2: 'Karaoke 2',
+      vip2: 'VIP 2',
+    },
+    slots: {
+      vip1: '18:00–20:00',
+      karaoke2: '19:30–21:00',
+      vip2: '—',
+    },
+    guests: {
+      aysel: 'Aysel',
+      rashad: 'Rəşad',
+    },
+    moveChip: 'Köçür',
+    cancelChip: 'Ləğv',
+    hint: 'Bron · köçürmə · ləğv',
+    ariaLabel: 'Heselo cədvəl paneli — otaq bronları və boş saatlar',
+  },
   trust: {
     items: [
       '15 dəq demo — kart lazım deyil',
@@ -401,6 +425,7 @@ export const az: Messages = {
     alts: {
       'live-floor': 'Heselo canlı zal — aktiv otaq sessiyaları və ödəniş',
       sessions: 'Heselo sessiyalar siyahısı — günün aktiv və bağlanmış sessiyaları',
+      schedule: 'Heselo cədvəl — otaq bronları, köçürmə və boş saatlar',
       cash: 'Heselo kassa ekranı — günün əməliyyatları və balans',
       inventory: 'Heselo anbar ekranı — məhsul qalıqları və sayım',
       products: 'Heselo məhsul kataloqu — satış qiymətləri',
