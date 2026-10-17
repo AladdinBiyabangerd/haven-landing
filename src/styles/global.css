@@ -370,13 +370,36 @@ h3 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 45%, #0f766e 100%);
+  position: relative;
+  overflow: hidden;
   color: var(--on-accent);
   box-shadow: 0 10px 28px rgba(15, 118, 110, 0.22);
+  /* Sheen as a background layer so label text always paints above it. */
+  background-image:
+    linear-gradient(
+      105deg,
+      transparent 35%,
+      rgba(255, 255, 255, 0.28) 48%,
+      rgba(255, 255, 255, 0.1) 54%,
+      transparent 68%
+    ),
+    linear-gradient(135deg, #2dd4bf 0%, #14b8a6 45%, #0f766e 100%);
+  background-size: 220% 100%, 100% 100%;
+  background-position: 120% 0, 0 0;
+  background-repeat: no-repeat;
+  transition:
+    transform 0.25s var(--ease),
+    background 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    color 0.25s var(--ease),
+    background-position 0.55s var(--ease),
+    filter 0.25s var(--ease);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
   filter: brightness(1.04);
+  background-position: -120% 0, 0 0;
 }
 
 .btn-ghost {
@@ -454,14 +477,44 @@ h3 {
 /* Below-fold sections: one-shot scroll reveal (see ScrollReveal.astro). */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(14px);
   transition:
-    opacity 0.7s var(--ease),
-    transform 0.7s var(--ease);
+    opacity 0.65s var(--ease),
+    transform 0.65s var(--ease);
 }
 .reveal-on-scroll.is-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.reveal-on-scroll .reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.55s var(--ease),
+    transform 0.55s var(--ease);
+}
+.reveal-on-scroll.is-in .reveal-stagger > * {
+  opacity: 1;
+  transform: none;
+}
+.reveal-on-scroll.is-in .reveal-stagger > *:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.reveal-on-scroll.is-in .reveal-stagger > *:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.reveal-on-scroll.is-in .reveal-stagger > *:nth-child(3) {
+  transition-delay: 0.19s;
+}
+.reveal-on-scroll.is-in .reveal-stagger > *:nth-child(4) {
+  transition-delay: 0.26s;
+}
+.reveal-on-scroll.is-in .reveal-stagger > *:nth-child(5) {
+  transition-delay: 0.33s;
+}
+.reveal-on-scroll.is-in .reveal-stagger > *:nth-child(6) {
+  transition-delay: 0.4s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -478,5 +531,24 @@ h3 {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .reveal-on-scroll .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .btn-primary {
+    background-image: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 45%, #0f766e 100%);
+    background-size: 100% 100%;
+    background-position: 0 0;
+    transition:
+      background 0.25s var(--ease),
+      border-color 0.25s var(--ease),
+      color 0.25s var(--ease);
+  }
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    filter: none;
+    background-position: 0 0;
   }
 }
