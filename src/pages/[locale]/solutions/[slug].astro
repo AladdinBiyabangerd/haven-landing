@@ -133,25 +133,52 @@ const faqMessages = {
 
       {
         extraShotId && extraShotId !== productShotId ? (
-          <div class="shot-wrap">
-            <ProductShot messages={messages} id={extraShotId} />
+          <div class="sol-mid">
+            <div class="sol-mid__copy">
+              <section aria-labelledby="who-title">
+                <h2 id="who-title" class="sub">
+                  {solution.whoTitle}
+                </h2>
+                <p class="body">{solution.whoBody}</p>
+              </section>
+              <section aria-labelledby="problems-title">
+                <h2 id="problems-title" class="sub">
+                  {solution.problemsTitle}
+                </h2>
+                <ul class="bullets">
+                  {solution.problems.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+            <div class="sol-mid__visual">
+              <ProductShot messages={messages} id={extraShotId} />
+            </div>
           </div>
-        ) : null
+        ) : (
+          <div class="narrow">
+            <section aria-labelledby="who-title">
+              <h2 id="who-title" class="sub">
+                {solution.whoTitle}
+              </h2>
+              <p class="body">{solution.whoBody}</p>
+            </section>
+            <section aria-labelledby="problems-title">
+              <h2 id="problems-title" class="sub">
+                {solution.problemsTitle}
+              </h2>
+              <ul class="bullets">
+                {solution.problems.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </section>
+          </div>
+        )
       }
 
       <div class="narrow">
-        <section aria-labelledby="who-title">
-          <h2 id="who-title" class="sub">{solution.whoTitle}</h2>
-          <p class="body">{solution.whoBody}</p>
-        </section>
-
-        <section aria-labelledby="problems-title">
-          <h2 id="problems-title" class="sub">{solution.problemsTitle}</h2>
-          <ul class="bullets">
-            {solution.problems.map((item) => <li>{item}</li>)}
-          </ul>
-        </section>
-
         <section aria-labelledby="differ-title">
           <h2 id="differ-title" class="sub">{solution.differTitle}</h2>
           <p class="body">{solution.differBody}</p>
@@ -309,11 +336,36 @@ const faqMessages = {
       gap: 3rem;
     }
   }
-  /* Cap below container width so shots stay sharp (assets are ~1256px @1x). */
-  .shot-wrap {
+  /* Extra shot + who/problems: copy left, mock right on large screens. */
+  .sol-mid {
+    display: grid;
+    gap: 1.75rem;
+    align-items: start;
+    min-width: 0;
+    margin: 2.25rem 0;
+  }
+  .sol-mid__copy {
+    min-width: 0;
+    display: grid;
+    gap: 2.25rem;
+  }
+  .sol-mid__visual {
+    min-width: 0;
     width: 100%;
-    max-width: 48rem;
-    margin: 1.5rem auto 2.25rem;
+  }
+  @media (max-width: 959px) {
+    .sol-mid__visual {
+      order: -1;
+      max-width: 26rem;
+      margin-inline: auto;
+    }
+  }
+  @media (min-width: 960px) {
+    .sol-mid {
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3rem;
+      margin: 2.75rem 0;
+    }
   }
   .features-block {
     margin-top: 2.25rem;
