@@ -12,45 +12,13 @@ const docs = join(root, 'docs')
 const outDir = join(root, 'public', 'images', 'product')
 
 /** @type {Array<{ id: string; source: string; cropBottom?: number; blurs?: Array<{ left: number; top: number; width: number; height: number }> }>} */
+/** Only live-floor remains as a raster ProductShot; other ids are HTML mocks. */
 const SHOTS = [
   {
     id: 'live-floor',
     source: 'Screenshot 2026-08-12 at 13.21.35.png',
     cropBottom: 72,
     blurs: [{ left: 120, top: 200, width: 260, height: 1180 }],
-  },
-  {
-    id: 'sessions',
-    source: 'Screenshot 2026-08-12 at 13.21.02.png',
-    cropBottom: 105,
-    blurs: [{ left: 300, top: 320, width: 340, height: 520 }],
-  },
-  {
-    id: 'cash',
-    source: 'Screenshot 2026-08-12 at 13.21.18.png',
-    cropBottom: 105,
-    blurs: [{ left: 1180, top: 520, width: 420, height: 700 }],
-  },
-  {
-    id: 'inventory',
-    source: 'Screenshot 2026-08-12 at 13.25.06.png',
-    cropBottom: 105,
-  },
-  {
-    id: 'products',
-    source: 'Screenshot 2026-08-12 at 13.24.42.png',
-    cropBottom: 105,
-  },
-  {
-    id: 'room-analytics',
-    source: 'Screenshot 2026-08-12 at 13.26.55.png',
-    cropBottom: 105,
-  },
-  {
-    id: 'audit',
-    source: 'Screenshot 2026-08-12 at 13.25.53.png',
-    cropBottom: 105,
-    blurs: [{ left: 2280, top: 320, width: 280, height: 1100 }],
   },
 ]
 

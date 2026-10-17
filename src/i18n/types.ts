@@ -160,6 +160,24 @@ export type Messages = {
     hint: string
     ariaLabel: string
   }
+  /** Sparse HTML vignette replacing the audit log marketing image. */
+  auditMock: {
+    title: string
+    journalPill: string
+    actions: {
+      tariff: string
+      discount: string
+      shiftClose: string
+      stockFix: string
+    }
+    actors: {
+      aysel: string
+      rashad: string
+      admin: string
+    }
+    hint: string
+    ariaLabel: string
+  }
   trust: {
     items: string[]
   }

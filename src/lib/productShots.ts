@@ -10,14 +10,9 @@ export type ProductShotId =
   | 'room-analytics'
   | 'audit'
 
-export const PRODUCT_SHOT_PATHS: Record<ProductShotId, string> = {
+/** Raster assets on disk — only live-floor remains; other ids are HTML mocks. */
+export const PRODUCT_SHOT_PATHS: Partial<Record<ProductShotId, string>> = {
   'live-floor': '/images/product/live-floor',
-  sessions: '/images/product/sessions',
-  cash: '/images/product/cash',
-  inventory: '/images/product/inventory',
-  products: '/images/product/products',
-  'room-analytics': '/images/product/room-analytics',
-  audit: '/images/product/audit',
 }
 
 /** Solution slug → primary product screenshot */

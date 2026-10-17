@@ -132,6 +132,23 @@ export const en: Messages = {
     hint: 'Revenue · occupancy · peak hours',
     ariaLabel: 'Heselo analytics panel — revenue, occupancy, and rooms',
   },
+  auditMock: {
+    title: 'Audit',
+    journalPill: 'Log',
+    actions: {
+      tariff: 'VIP 1 rate changed',
+      discount: 'Discount applied',
+      shiftClose: 'Shift closed',
+      stockFix: 'Coca-Cola stock corrected',
+    },
+    actors: {
+      aysel: 'Aysel',
+      rashad: 'Rashad',
+      admin: 'Admin',
+    },
+    hint: 'Who · what · when',
+    ariaLabel: 'Heselo audit log — operation history',
+  },
   trust: {
     items: [
       '15-min demo, no card',

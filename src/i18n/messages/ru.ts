@@ -132,6 +132,23 @@ export const ru: Messages = {
     hint: 'Выручка · загрузка · часы пик',
     ariaLabel: 'Панель аналитики Heselo — выручка, загрузка и комнаты',
   },
+  auditMock: {
+    title: 'Аудит',
+    journalPill: 'Журнал',
+    actions: {
+      tariff: 'Тариф VIP 1 изменён',
+      discount: 'Применена скидка',
+      shiftClose: 'Смена закрыта',
+      stockFix: 'Остаток Coca-Cola исправлен',
+    },
+    actors: {
+      aysel: 'Айсель',
+      rashad: 'Рашад',
+      admin: 'Админ',
+    },
+    hint: 'Кто · что · когда',
+    ariaLabel: 'Журнал аудита Heselo — история операций',
+  },
   trust: {
     items: [
       'Демо 15 мин — без карты',

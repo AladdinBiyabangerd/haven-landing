@@ -132,6 +132,23 @@ export const az: Messages = {
     hint: 'Gəlir · doluluq · pik saat',
     ariaLabel: 'Heselo analitika paneli — gəlir, doluluq və otaqlar',
   },
+  auditMock: {
+    title: 'Audit',
+    journalPill: 'Jurnal',
+    actions: {
+      tariff: 'VIP 1 tarif dəyişildi',
+      discount: 'Endirim tətbiq olundu',
+      shiftClose: 'Növbə bağlandı',
+      stockFix: 'Coca-Cola qalığı düzəldildi',
+    },
+    actors: {
+      aysel: 'Aysel',
+      rashad: 'Rəşad',
+      admin: 'Admin',
+    },
+    hint: 'Kim · nə · nə vaxt',
+    ariaLabel: 'Heselo audit jurnalı — əməliyyat tarixçəsi',
+  },
   trust: {
     items: [
       '15 dəq demo — kart lazım deyil',

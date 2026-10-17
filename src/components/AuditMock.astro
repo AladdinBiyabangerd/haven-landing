@@ -1,0 +1,223 @@
+---
+import type { Messages } from '@/i18n/types'
+import BrandMark from '@/components/BrandMark.astro'
+
+interface Props {
+  messages: Messages
+  class?: string
+}
+
+const { messages, class: className = '' } = Astro.props
+const m = messages.auditMock
+
+/** Demo log — times illustrate order; copy is localized. */
+const rows = [
+  { time: '14:32', action: m.actions.tariff, actor: m.actors.aysel },
+  { time: '13:10', action: m.actions.discount, actor: m.actors.rashad },
+  { time: '12:05', action: m.actions.shiftClose, actor: m.actors.admin },
+  { time: '11:48', action: m.actions.stockFix, actor: m.actors.aysel },
+]
+---
+
+<figure class:list={['am', className]} aria-label={m.ariaLabel}>
+  <div class="am__panel">
+    <header class="am__head">
+      <div class="am__title-row">
+        <p class="am__title">{m.title}</p>
+        <span class="am__pill">
+          <i class="am__pill-dot" aria-hidden="true"></i>
+          {m.journalPill}
+        </span>
+      </div>
+      <BrandMark size={28} />
+    </header>
+
+    <ul class="am__list">
+      {
+        rows.map((row) => (
+          <li class="am__row">
+            <span class="am__time">{row.time}</span>
+            <span class="am__action">{row.action}</span>
+            <span class="am__actor">{row.actor}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="am__hint">{m.hint}</p>
+  </div>
+</figure>
+
+<style>
+  .am {
+    container-type: inline-size;
+    container-name: am;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--bg-soft);
+    overflow: hidden;
+  }
+  .am__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
+    padding: 0.9rem 0.85rem 0.8rem;
+    background: linear-gradient(165deg, #eef3f6 0%, #e4ecf1 100%);
+    box-sizing: border-box;
+  }
+  .am__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+  .am__title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem 0.6rem;
+    min-width: 0;
+    flex: 1;
+  }
+  .am__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .am__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    background: rgba(20, 184, 166, 0.12);
+    border: 1px solid rgba(20, 184, 166, 0.28);
+  }
+  .am__pill-dot {
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  .am__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+  .am__row {
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem 0.65rem;
+    min-width: 0;
+    padding: 0.6rem 0.7rem;
+    background: #fff;
+    border: 1px solid rgba(21, 32, 51, 0.08);
+    border-radius: var(--radius);
+  }
+  .am__time {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-subtle);
+    white-space: nowrap;
+  }
+  .am__action {
+    min-width: 0;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 550;
+    line-height: 1.3;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .am__actor {
+    justify-self: end;
+    max-width: 100%;
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.4rem;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 650;
+    color: var(--accent-deep);
+    background: rgba(20, 184, 166, 0.12);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .am__hint {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--ink-subtle);
+    text-align: center;
+  }
+
+  @container am (max-width: 22rem) {
+    .am__panel {
+      padding: 0.7rem 0.65rem 0.65rem;
+      gap: 0.55rem;
+    }
+    .am__title {
+      font-size: var(--text-md);
+    }
+    .am__row {
+      grid-template-columns: 2.5rem minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 0.45rem;
+      row-gap: 0.25rem;
+      padding: 0.55rem 0.55rem;
+    }
+    .am__time {
+      grid-row: 1;
+    }
+    .am__action {
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 0.75rem;
+    }
+    .am__actor {
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: start;
+    }
+  }
+
+  @container am (min-width: 28rem) {
+    .am__panel {
+      padding: 1.1rem 1.15rem 1rem;
+      gap: 0.85rem;
+    }
+    .am__title {
+      font-size: var(--text-xl);
+    }
+    .am__row {
+      padding: 0.7rem 0.8rem;
+      gap: 0.55rem 0.75rem;
+    }
+    .am__hint {
+      text-align: left;
+    }
+  }
+</style>
