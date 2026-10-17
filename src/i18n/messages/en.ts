@@ -105,6 +105,21 @@ export const en: Messages = {
     hint: 'Session · sale · stock',
     ariaLabel: 'Heselo inventory panel — stock levels and status',
   },
+  productsMock: {
+    title: 'Products',
+    subtitle: 'Sale prices',
+    catalogPill: 'Catalog',
+    typeDrink: 'Drink',
+    typeSnack: 'Snack',
+    products: {
+      cola: 'Coca-Cola 0.5',
+      chips: 'Chips',
+      water: 'Water 0.5',
+      energy: 'Energy drink',
+    },
+    hint: 'Catalog · price · quick sale',
+    ariaLabel: 'Heselo product catalog — sale prices',
+  },
   trust: {
     items: [
       '15-min demo, no card',

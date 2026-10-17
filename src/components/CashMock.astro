@@ -109,6 +109,7 @@ function payLabel(method: 'cash' | 'card'): string {
     align-items: flex-start;
     justify-content: space-between;
     gap: 0.75rem;
+    min-width: 0;
   }
   .cm__title-row {
     display: flex;
@@ -116,6 +117,7 @@ function payLabel(method: 'cash' | 'card'): string {
     align-items: center;
     gap: 0.5rem 0.65rem;
     min-width: 0;
+    flex: 1;
   }
   .cm__title {
     margin: 0;
@@ -158,6 +160,7 @@ function payLabel(method: 'cash' | 'card'): string {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    min-width: 0;
     padding: 0.65rem 0.7rem;
     background: #fff;
     border: 1px solid rgba(21, 32, 51, 0.08);
@@ -182,6 +185,7 @@ function payLabel(method: 'cash' | 'card'): string {
     color: var(--ink);
     font-variant-numeric: tabular-nums;
     letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
   }
   .cm__metric--total .cm__metric-value {
     color: var(--accent-deep);

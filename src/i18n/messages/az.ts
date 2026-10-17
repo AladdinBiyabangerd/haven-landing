@@ -105,6 +105,21 @@ export const az: Messages = {
     hint: 'Sessiya · satış · qalıq',
     ariaLabel: 'Heselo anbar paneli — məhsul qalıqları və status',
   },
+  productsMock: {
+    title: 'Məhsullar',
+    subtitle: 'Satış qiymətləri',
+    catalogPill: 'Kataloq',
+    typeDrink: 'İçki',
+    typeSnack: 'Qəlyanaltı',
+    products: {
+      cola: 'Coca-Cola 0.5',
+      chips: 'Çips',
+      water: 'Su 0.5',
+      energy: 'Enerji içkisi',
+    },
+    hint: 'Kataloq · qiymət · sürətli satış',
+    ariaLabel: 'Heselo məhsul kataloqu — satış qiymətləri',
+  },
   trust: {
     items: [
       '15 dəq demo — kart lazım deyil',

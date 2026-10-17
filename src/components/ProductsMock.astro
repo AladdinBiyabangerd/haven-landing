@@ -1,0 +1,254 @@
+---
+import type { Messages } from '@/i18n/types'
+import BrandMark from '@/components/BrandMark.astro'
+
+interface Props {
+  messages: Messages
+  class?: string
+}
+
+const { messages, class: className = '' } = Astro.props
+const m = messages.productsMock
+
+/** Demo catalog — names localized; prices illustrate sale amounts (AZN). */
+const items = [
+  { name: m.products.cola, type: m.typeDrink, price: '1.50 AZN', mark: 'C' },
+  { name: m.products.chips, type: m.typeSnack, price: '2.00 AZN', mark: 'Ç' },
+  { name: m.products.water, type: m.typeDrink, price: '1.00 AZN', mark: 'S' },
+  { name: m.products.energy, type: m.typeDrink, price: '2.50 AZN', mark: 'E' },
+]
+---
+
+<figure class:list={['pm', className]} aria-label={m.ariaLabel}>
+  <div class="pm__panel">
+    <header class="pm__head">
+      <div class="pm__titles">
+        <div class="pm__title-row">
+          <p class="pm__title">{m.title}</p>
+          <span class="pm__pill">
+            <i class="pm__pill-dot" aria-hidden="true"></i>
+            {m.catalogPill}
+          </span>
+        </div>
+        <p class="pm__subtitle">{m.subtitle}</p>
+      </div>
+      <BrandMark size={28} />
+    </header>
+
+    <ul class="pm__grid">
+      {
+        items.map((item) => (
+          <li class="pm__card">
+            <span class="pm__icon" aria-hidden="true">
+              {item.mark}
+            </span>
+            <div class="pm__copy">
+              <span class="pm__name">{item.name}</span>
+              <span class="pm__type">{item.type}</span>
+            </div>
+            <span class="pm__price">{item.price}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="pm__hint">{m.hint}</p>
+  </div>
+</figure>
+
+<style>
+  .pm {
+    container-type: inline-size;
+    container-name: pm;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--bg-soft);
+    overflow: hidden;
+  }
+  .pm__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
+    padding: 0.9rem 0.85rem 0.8rem;
+    background: linear-gradient(165deg, #eef3f6 0%, #e4ecf1 100%);
+    box-sizing: border-box;
+  }
+  .pm__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+  .pm__titles {
+    min-width: 0;
+    flex: 1;
+  }
+  .pm__title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem 0.6rem;
+    min-width: 0;
+  }
+  .pm__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .pm__subtitle {
+    margin: 0.3rem 0 0;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--ink-subtle);
+  }
+  .pm__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    background: rgba(20, 184, 166, 0.12);
+    border: 1px solid rgba(20, 184, 166, 0.28);
+  }
+  .pm__pill-dot {
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  .pm__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .pm__card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 0.55rem;
+    row-gap: 0.35rem;
+    align-items: start;
+    min-width: 0;
+    padding: 0.65rem 0.7rem 0.6rem;
+    background: #fff;
+    border: 1px solid rgba(21, 32, 51, 0.08);
+    border-radius: var(--radius);
+  }
+  .pm__icon {
+    grid-row: 1 / span 2;
+    align-self: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 0.55rem;
+    background: #f0f5f6;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 750;
+    color: #0d9488;
+  }
+  .pm__copy {
+    min-width: 0;
+  }
+  .pm__name {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 650;
+    line-height: 1.3;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .pm__type {
+    display: block;
+    margin-top: 0.1rem;
+    font-family: var(--font-body);
+    font-size: 0.625rem;
+    color: var(--ink-subtle);
+  }
+  .pm__price {
+    grid-column: 2;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    color: var(--accent-deep);
+    white-space: nowrap;
+  }
+  .pm__hint {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--ink-subtle);
+    text-align: center;
+  }
+
+  @container pm (max-width: 22rem) {
+    .pm__panel {
+      padding: 0.7rem 0.65rem 0.65rem;
+      gap: 0.55rem;
+    }
+    .pm__grid {
+      gap: 0.4rem;
+    }
+    .pm__card {
+      padding: 0.55rem 0.55rem 0.5rem;
+      column-gap: 0.4rem;
+    }
+    .pm__title {
+      font-size: var(--text-md);
+    }
+    .pm__icon {
+      width: 1.85rem;
+      height: 1.85rem;
+      font-size: 0.7rem;
+    }
+    .pm__name,
+    .pm__price {
+      font-size: 0.75rem;
+    }
+  }
+
+  @container pm (min-width: 28rem) {
+    .pm__panel {
+      padding: 1.1rem 1.15rem 1rem;
+      gap: 0.85rem;
+    }
+    .pm__grid {
+      gap: 0.65rem;
+    }
+    .pm__title {
+      font-size: var(--text-xl);
+    }
+    .pm__card {
+      padding: 0.75rem 0.8rem 0.7rem;
+    }
+    .pm__hint {
+      text-align: left;
+    }
+  }
+</style>

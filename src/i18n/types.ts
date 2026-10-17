@@ -131,6 +131,22 @@ export type Messages = {
     hint: string
     ariaLabel: string
   }
+  /** Sparse HTML vignette replacing the products catalog marketing image. */
+  productsMock: {
+    title: string
+    subtitle: string
+    catalogPill: string
+    typeDrink: string
+    typeSnack: string
+    products: {
+      cola: string
+      chips: string
+      water: string
+      energy: string
+    }
+    hint: string
+    ariaLabel: string
+  }
   trust: {
     items: string[]
   }

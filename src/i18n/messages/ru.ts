@@ -105,6 +105,21 @@ export const ru: Messages = {
     hint: 'Сеанс · продажа · остаток',
     ariaLabel: 'Панель склада Heselo — остатки и статус',
   },
+  productsMock: {
+    title: 'Товары',
+    subtitle: 'Цены продажи',
+    catalogPill: 'Каталог',
+    typeDrink: 'Напиток',
+    typeSnack: 'Закуска',
+    products: {
+      cola: 'Coca-Cola 0.5',
+      chips: 'Чипсы',
+      water: 'Вода 0.5',
+      energy: 'Энергетик',
+    },
+    hint: 'Каталог · цена · быстрая продажа',
+    ariaLabel: 'Каталог товаров Heselo — цены продажи',
+  },
   trust: {
     items: [
       'Демо 15 мин — без карты',

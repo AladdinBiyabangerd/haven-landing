@@ -4,6 +4,7 @@ import { PRODUCT_SHOT_PATHS, productShotAlt, type ProductShotId } from '@/lib/pr
 import CashMock from '@/components/CashMock.astro'
 import SessionsMock from '@/components/SessionsMock.astro'
 import InventoryMock from '@/components/InventoryMock.astro'
+import ProductsMock from '@/components/ProductsMock.astro'
 
 interface Props {
   messages: Messages
@@ -16,6 +17,7 @@ const { messages, id, priority = false, class: className = '' } = Astro.props
 const useCashMock = id === 'cash'
 const useSessionsMock = id === 'sessions'
 const useInventoryMock = id === 'inventory'
+const useProductsMock = id === 'products'
 const base = PRODUCT_SHOT_PATHS[id]
 const alt = productShotAlt(messages, id)
 /** Mobile-first sizes: hero shot is capped ~22rem on small screens. */
@@ -41,6 +43,8 @@ const srcsetPng = priority
     <SessionsMock messages={messages} class={className} />
   ) : useInventoryMock ? (
     <InventoryMock messages={messages} class={className} />
+  ) : useProductsMock ? (
+    <ProductsMock messages={messages} class={className} />
   ) : (
     <figure class:list={['shot', className]}>
       <picture>
