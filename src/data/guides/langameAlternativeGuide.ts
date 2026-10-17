@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'PC klub proqramı vs otaq-vaxt — LANGAME alternativi',
       seoTitle: 'LANGAME alternativi — PC klub proqram vs Heselo otaq-vaxt | Heselo',
       seoDescription:
-        'LANGAME PC/oyun klubu stansiya idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo LANGAME-i əvəz etmir — cədvəl, bazar mənzərəsi, FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'LANGAME PC/oyun klubu stansiya idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo LANGAME-i əvəz etmir — cədvəl, bazar mənzərəsi, FAQ — AZ, EN, RU.',
       keywords: [
         'langame alternativ',
         'langame alternativi',

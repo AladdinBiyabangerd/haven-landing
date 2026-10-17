@@ -24,43 +24,16 @@ const copy =
         description:
           'Сравните оплату за каждое устройство и фиксированную цену за заведение: ориентиры GameClub/LANGAME и тариф Heselo за клуб. Публичные цифры на октябрь 2026.',
         h1: 'За консоль или за клуб?',
-        lead:
-          'На 5 и 10 консолях посчитайте сами. Цены конкурентов — публичные ориентиры на октябрь 2026; всегда перепроверяйте на сайтах вендоров. Heselo показывает фиксированный тариф за клуб.',
+        lead: 'Укажите число консолей. Сразу видно: дешевле платить за каждую консоль или фиксированно за клуб.',
         consoles: 'Число консолей',
         perDevice: 'Оплата за устройство (пример GameClub / LANGAME Basic)',
         perClub: `Heselo — от ${prices.gaming} ${prices.currency}/мес за клуб`,
         resultDevice: 'Ориентир «за устройство» в месяц',
         resultClub: 'Heselo (фиксировано за клуб)',
         cta: 'Смотреть тарифы Heselo',
-        note: 'GameClub/LANGAME цифры — примеры из открытых источников; не оферта. Heselo не является ККТ и не управляет ТВ-контроллерами.',
-        sources: 'Источники: gmclb.ru, langame.ru/software (проверьте актуальные цены).',
-        sections: [
-          {
-            id: 'why',
-            title: 'Зачем сравнивать модели',
-            paragraphs: [
-              'Оплата «за каждую консоль» растёт линейно с числом станций: зал из десяти PS платит заметно больше, чем зал из пяти, даже если загрузка одинаковая. Фиксированная цена за заведение предсказуемее для бюджета — апгрейд тарифа нужен только при выходе за лимит станций плана.',
-              'Калькулятор умножает число консолей на выбранную плату за устройство и рядом показывает стартовый ориентир Heselo за клуб. Это иллюстрация для выбора модели, а не коммерческое предложение конкурентов.',
-            ],
-          },
-          {
-            id: 'when',
-            title: 'Когда уместна какая модель',
-            paragraphs: [
-              'Модель за устройство удобна, если состав зала часто меняется и вендор даёт прозрачный прайс на консоль. Пакет на клуб удобнее, когда число станций стабильно и важна фиксированная статья расходов в месяц.',
-              'Heselo не продаёт TV-пульты и не является онлайн-кассой по 54-ФЗ: в расчёт софта не входят железо и фискализация. Для сценария брони, сеанса и бара смотрите страницу игрового клуба; полный прайс — на странице тарифов.',
-            ],
-          },
-          {
-            id: 'sources-detail',
-            title: 'Источники и оговорки',
-            paragraphs: [
-              'Цифры GameClub и LANGAME Basic взяты как публичные ориентиры на октябрь 2026. Перед договором запросите актуальный расчёт у вендора. Сравнение программ для PS-клуба (функции, бронь, бар) — в отдельной статье; здесь только модель абонентской платы.',
-              'Если зал растёт с пяти до десяти станций, в модели «за устройство» счёт удваивается; в фиксированном плане Heselo вы остаётесь в том же тарифе, пока не выйдете за лимит станций плана «Старт / Стандарт / Про». Это удобно для прогноза EBITDA и для договоров с арендодателем, где нужна стабильная статья «софт».',
-              'Калькулятор не учитывает железо, интернет, аренду пультов и фискализацию: сравнивайте только подписку. После выбора модели откройте страницу тарифов Heselo и запросите демо с вашим числом станций — на демо видно, как бронь переходит в активный сеанс и как бар попадает в тот же счёт.',
-            ],
-          },
-        ] satisfies ToolSection[],
+        note: 'Цифры конкурентов — публичные ориентиры, не оферта. Проверьте на сайтах вендоров.',
+        sources: 'Источники: gmclb.ru, langame.ru/software',
+        sections: [] as ToolSection[],
         links: [
           { href: '/pricing', label: 'Открытые тарифы Heselo' },
           { href: '/solutions/gaming', label: 'Программа для игрового клуба' },
@@ -70,35 +43,45 @@ const copy =
     : locale === 'en'
       ? {
           title: 'Per-console vs per-club pricing | Heselo',
-          description: 'Compare device-based SaaS fees with a fixed venue fee.',
+          description:
+            'Compare per-device SaaS fees with a fixed club fee. Model 5 and 10 consoles — Oct 2026 public snapshots.',
           h1: 'Per console or per club?',
-          lead: 'Model 5 and 10 consoles. Competitor figures are public Oct 2026 snapshots — verify on vendor sites.',
+          lead: 'Enter your console count. See whether paying per console or a fixed club fee costs less.',
           consoles: 'Consoles',
           perDevice: 'Per-device fee example (GameClub / LANGAME Basic)',
           perClub: `Heselo — from ${prices.gaming} ${prices.currency}/mo per venue`,
           resultDevice: 'Per-device estimate / month',
           resultClub: 'Heselo (fixed per venue)',
           cta: 'See Heselo pricing',
-          note: 'Competitor numbers are illustrative public snapshots, not offers. Heselo is not a fiscal cash register and does not drive TV relays.',
-          sources: 'Sources: gmclb.ru, langame.ru/software — re-check current prices.',
+          note: 'Competitor figures are public snapshots, not offers. Verify on vendor sites.',
+          sources: 'Sources: gmclb.ru, langame.ru/software',
           sections: [] as ToolSection[],
-          links: [] as Array<{ href: string; label: string }>,
+          links: [
+            { href: '/pricing', label: 'Published Heselo pricing' },
+            { href: '/solutions/gaming', label: 'Gaming club software' },
+            { href: '/guides/ps-club-software-comparison', label: 'PS software comparison 2026' },
+          ],
         }
       : {
           title: 'Konsol başına vs klub başına qiymət | Heselo',
-          description: 'Cihaz əsaslı abunə ilə sabit klub haqqını müqayisə edin.',
+          description:
+            'Cihaz haqqı ilə sabit klub tarifini müqayisə edin. 5 və 10 konsol — 2026-10 açıq mənbə.',
           h1: 'Konsol başına, yoxsa klub?',
-          lead: '5 və 10 konsol üçün model. Rəqib rəqəmləri 2026-10 açıq mənbə — vendor saytında yoxlayın.',
+          lead: 'Konsol sayını yazın. Hər konsola ödəmək, yoxsa klub üçün sabit tarif — hansı ucuzdur, dərhal görün.',
           consoles: 'Konsol sayı',
           perDevice: 'Cihaz haqqı nümunəsi (GameClub / LANGAME Basic)',
           perClub: `Heselo — klub üçün ${prices.gaming} ${prices.currency}/aydan`,
           resultDevice: 'Cihaz modeli / ay',
           resultClub: 'Heselo (klub üzrə sabit)',
           cta: 'Heselo tariflərinə baxın',
-          note: 'Rəqib rəqəmləri illüstrativdir. Heselo ККТ deyil və TV rele idarə etmir.',
-          sources: 'Mənbə: gmclb.ru, langame.ru/software — aktual qiyməti yoxlayın.',
+          note: 'Rəqib rəqəmləri açıq mənbədir, təklif deyil. Vendor saytında yoxlayın.',
+          sources: 'Mənbə: gmclb.ru, langame.ru/software',
           sections: [] as ToolSection[],
-          links: [] as Array<{ href: string; label: string }>,
+          links: [
+            { href: '/pricing', label: 'Heselo açıq tarifləri' },
+            { href: '/solutions/gaming', label: 'Oyun klubu proqramı' },
+            { href: '/guides/ps-club-software-comparison', label: 'PS proqram müqayisəsi 2026' },
+          ],
         }
 ---
 

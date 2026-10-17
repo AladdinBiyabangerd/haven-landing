@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaqlı əyləncə klubları üçün Fazilat POS alternativi',
       seoTitle: 'Fazilat POS alternativi klublar üçün — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'Fazilat POS restoran/satış POS istiqamətindədir; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli. Müqayisə cədvəli, bazar icmalı və keçid siyahısı Azərbaycan, ingilis və rus dillərindədir.',
+        'Fazilat POS restoran/satış POS istiqamətindədir; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli və keçid siyahısı — AZ, EN, RU.',
       keywords: [
         'fazilat pos alternativ',
         'fazilat pos alternativi klublar',

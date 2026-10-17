@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaqlı əyləncə klubları üçün iiko alternativi',
       seoTitle: 'iiko alternativi klublar üçün — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'iiko restoran POS-udur; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli, Poster/Quick Resto bazar mənzərəsi və keçid yoxlama siyahısı — Azərbaycan, EN, RU.',
+        'iiko restoran POS-udur; Heselo otaq-vaxt klubları üçündür. Meyarlar, müqayisə cədvəli və keçid siyahısı.',
       keywords: [
         'iiko alternativ',
         'iiko alternativi klublar',

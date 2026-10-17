@@ -2,7 +2,7 @@
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import { formatPhone } from '@/lib/format'
-import { SITE, telUrl, whatsappUrl } from '@/lib/site'
+import { SITE, telUrl, whatsappUrl, publicContactEmail } from '@/lib/site'
 import { VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 import { CAMPAIGN_STORAGE_KEY } from '@/lib/campaign'
 
@@ -119,7 +119,7 @@ const phoneDisplay = formatPhone(SITE.contactPhone)
       <a href={telUrl()}>{phoneDisplay}</a>
     </li>
     <li>
-      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+      <a href={`mailto:${publicContactEmail()}`}>{publicContactEmail()}</a>
     </li>
   </ul>
 </form>

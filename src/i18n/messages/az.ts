@@ -37,6 +37,8 @@ export const az: Messages = {
     rights: 'Bütün hüquqlar qorunur.',
     tagline: 'Masa · Otaq · Canlı zal · Kassa',
     credit: 'Qurucusu',
+    toolTariffCalculator: 'Tarif kalkulyatoru',
+    toolPricingModel: 'Konsol vs klub qiyməti',
   },
   hero: {
     brandHint: 'Heselo',
@@ -45,6 +47,63 @@ export const az: Messages = {
       'Cədvəl, canlı sessiya və növbə bir ekranda — WhatsApp və Excel əvəzinə. Restoran POS və ya mətbəx sistemi deyil.',
     ctaPrimary: 'Demo istəyin',
     ctaSecondary: 'WhatsApp ilə yazın',
+  },
+  liveFloorMock: {
+    title: 'Canlı zal',
+    legendActive: 'Aktiv',
+    legendEmpty: 'Boş',
+    badgeActive: 'Aktiv',
+    badgeEmpty: 'Boş',
+    hint: 'Pauza · qəbz · ödəniş — eyni sessiya',
+    ariaLabel: 'Heselo canlı zal paneli — otaq və stansiya kartları',
+  },
+  cashMock: {
+    title: 'Kassa',
+    shiftOpen: 'Növbə açıq',
+    cashLabel: 'Nağd',
+    cardLabel: 'Kart',
+    totalLabel: 'Cəmi',
+    txTitle: 'Son əməliyyatlar',
+    txToday: 'Bugün',
+    payCash: 'Nağd ödəniş',
+    payCard: 'Kart ödənişi',
+    hint: 'Sayım · hesabat · bağlanış',
+    ariaLabel: 'Heselo kassa paneli — növbə xülasəsi və əməliyyatlar',
+  },
+  sessionsMock: {
+    title: 'Sessiya',
+    roomLabel: 'VIP 1',
+    statusActive: 'Aktiv',
+    elapsedLabel: 'Keçən vaxt',
+    dueLabel: 'Ödəniləcək',
+    extendChip: '+30 dəq',
+    pauseChip: 'Pauza',
+    stopChip: 'Bitir',
+    hint: 'Uzatma · pauza · ödəniş — eyni sessiya',
+    ariaLabel: 'Heselo sessiya paneli — vaxt, məbləğ və uzatma',
+  },
+  inventoryMock: {
+    title: 'Anbar',
+    subtitle: 'Məhsul qalığına nəzarət',
+    summaryLabel: 'Məhsul çeşidi',
+    summaryValue: '4 məhsul',
+    stockPill: 'Stok',
+    colProduct: 'Məhsul',
+    colQty: 'Qalıq',
+    colStatus: 'Status',
+    statusOk: 'OK',
+    statusLow: 'Az',
+    unit: 'əd',
+    typeDrink: 'İçki',
+    typeSnack: 'Qəlyanaltı',
+    products: {
+      cola: 'Coca-Cola 0.5',
+      chips: 'Çips',
+      water: 'Su 0.5',
+      energy: 'Enerji içkisi',
+    },
+    hint: 'Sessiya · satış · qalıq',
+    ariaLabel: 'Heselo anbar paneli — məhsul qalıqları və status',
   },
   trust: {
     items: [
@@ -297,7 +356,6 @@ export const az: Messages = {
   productShot: {
     alts: {
       'live-floor': 'Heselo canlı zal — aktiv otaq sessiyaları və ödəniş',
-      schedule: 'Heselo cədvəl ekranı — otaq və masa rezervasiyası cədvəli',
       sessions: 'Heselo sessiyalar siyahısı — günün aktiv və bağlanmış sessiyaları',
       cash: 'Heselo kassa ekranı — günün əməliyyatları və balans',
       inventory: 'Heselo anbar ekranı — məhsul qalıqları və sayım',
@@ -456,28 +514,29 @@ export const az: Messages = {
   },
   featuresPage: {
     eyebrow: 'Funksiyalar',
-    title: 'Rezervasiya, kassa və anbar — eyni paneldə',
-    intro: 'Hamısı hazırda paneldədir — gələcək plan deyil.',
+    title: 'Bron, kassa və anbar — bir paneldə',
+    intro:
+      'Bron çatda, vaxt cədvəldə, pul ayrı kassadadırsa axşam hesabı düz gəlmir. Heselo eyni yazıda saxlayır: qonaq gəldi → sessiya açıldı → içki hesabda → növbə bağlandı.',
     solutionLinkLabel: 'Ətraflı',
     modules: [
       {
-        title: 'Cədvəl, rezervasiya və canlı sessiya',
-        desc: 'Masa/otaq cədvəli, bron və zaldakı aktiv sessiya eyni məlumat üzərində.',
+        title: 'Cədvəl və canlı sessiya',
+        desc: 'Hansı otaq boşdur, kim uzadıb, hesab açıqdırmı — bir ekranda.',
         solutionSlug: 'reservations',
       },
       {
         title: 'Kassa və növbə',
-        desc: 'Növbəni açın və bağlayın; ödənişlər, hesabat və kassa sayımı.',
+        desc: 'Növbəni bağlayanda sayım artıq hazırdır — axşam Excel yığmaq lazım deyil.',
         solutionSlug: 'pos',
       },
       {
         title: 'Məhsullar və anbar',
-        desc: 'Kataloq, qalıq, sayım və bron olmadan sürətli satış.',
+        desc: 'İçki və qəlyanaltı sessiya hesabına düşür; qalıq öz-özünə azalır.',
         solutionSlug: 'inventory',
       },
       {
-        title: 'Müştəri, statistika və ayarlar',
-        desc: 'Müştəri kartları, hesabatlar, qiymət qaydaları, işçilər və qoruma kodu.',
+        title: 'Müştəri və ayarlar',
+        desc: 'Daimi qonağı tanıyın; endirimi kim verə bilər — hüquqlarla məhdudlaşdırın.',
       },
     ],
   },
@@ -1006,9 +1065,9 @@ export const az: Messages = {
         keywords: ['Heselo FAQ', 'Heselo suallar', 'Heselo qiymət', 'oyun klubu proqramı suallar', 'klub idarəetmə sistemi'],
       },
       home: {
-        title: 'Heselo — rezervasiya və kassa paneli | oyun klubu, karaoke, otaqlı məkan',
+        title: 'Heselo — klub rezervasiya və kassa paneli',
         description:
-          'Heselo oyun klubu, karaoke, bilyard, antikafe və otaqlı məkanlar üçün rezervasiya və kassa panelidir. Cədvəl, canlı sessiya və növbə bir yerdə — WhatsApp/Excel əvəzinə, restoran POS deyil. {low} {currency}/aydan; pulsuz demo.',
+          'Oyun klubu, karaoke, bilyard və otaqlı məkanlar: rezervasiya, canlı sessiya və kassa bir paneldə. WhatsApp/Excel əvəzinə — restoran POS deyil. {low} {currency}/aydan.',
         keywords: [
           'Heselo',
           'məkan idarəetmə sistemi',
@@ -1032,9 +1091,9 @@ export const az: Messages = {
         ],
       },
       pricing: {
-        title: 'Açıq tariflər — {low} {currency}-dən klub paneli | Heselo',
+        title: 'Açıq tariflər — {low} {currency}-dən | Heselo',
         description:
-            'Heselo qiymətləri açıqdır: PS {gaming}, bilyard {billiards}, karaoke/launj {karaoke}, antikafe {antikafe} {currency}/aydan. Məkan tipinə görə fərqli planlar; bir neçə filial üçün əlavə fərdi təklif. Tam cədvəl qiymətlər səhifəsində.',
+          'PS {gaming}, bilyard {billiards}, karaoke {karaoke}, antikafe {antikafe} {currency}/aydan. Tipə görə planlar; çoxfilial üçün fərdi təklif. Kart tələb olunmur.',
         keywords: [
           'Heselo qiymət',
           'Heselo tarif',
@@ -1088,9 +1147,9 @@ export const az: Messages = {
         ],
       },
       guides: {
-        title: 'Bələdçilər — klub paneli və POS alternativləri | Heselo',
+        title: 'Bələdçilər — klub paneli və POS alternativləri',
         description:
-            'Oyun klubu, karaoke və bilyard üçün bələdçilər; iiko, Clopos, Dine, MinuPOS və Excel alternativləri — dürüst müqayisə.',
+          'Oyun klubu, karaoke və bilyard bələdçiləri; iiko, Clopos, Dine, MinuPOS və Excel — dürüst müqayisə.',
         keywords: [
           'oyun klubu idarəetmə sistemi nədir',
           'iiko alternativ',

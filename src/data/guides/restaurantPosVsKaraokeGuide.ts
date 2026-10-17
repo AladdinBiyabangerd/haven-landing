@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Restoran POS vs karaoke otaq sistemi — hansını seçmək olar?',
       seoTitle: 'Restoran POS vs karaoke sistemi — otaq, sessiya | Heselo',
       seoDescription:
-        'Karaoke klubu restoran kassası ilə idarə olunurmu? Restoran POS və otaq-vaxt/karaoke sistemi müqayisəsi, cədvəl, bazar mənzərəsi Azərbaycan, ingilis və rus dillərindədir.',
+        'Karaoke klubu restoran kassası ilə idarə olunurmu? Restoran POS vs otaq-vaxt paneli — meyarlar və nümunələr.',
       keywords: [
         'restoran POS karaoke',
         'karaoke rezervasiya sistemi',

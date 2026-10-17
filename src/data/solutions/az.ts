@@ -2,8 +2,12 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 
 export const solutionsHubAz: SolutionsHubCopy = {
   eyebrow: 'Biznes həlləri',
-  h1: 'Məkanınız hansı tipə uyğundur?',
-  intro: 'Tipinizi seçin — hər səhifə o məkanın gündəlik işinə görə yazılıb.',
+  h1: 'Hansı tip məkanınız var?',
+  intro:
+    'PS klubu, karaoke, bilyard, antikafe və ya otaqlı launj — tipinizi seçin. Aşağıdakı səhifə məhz o zalın gündəlik işinə görə yazılıb.',
+  howTitle: 'Haradan başlamaq',
+  howBody:
+    'PlayStation / konsol satırsınızsa — oyun klubu. Karaoke otağı — karaoke. Qəlyanlı VIP otaq — launj. Bir neçə tip eyni hesabda ola bilər.',
   seoTitle: 'Məkan tiplərinə görə həllər — PS, karaoke, bilyard | Heselo',
   seoDescription:
     'Hər tipə ayrı səhifə: oyun/PS klubu, karaoke, bilyard, antikafe, otaqlı launj — rezervasiya, kassa və anbar. Pulsuz demo.',

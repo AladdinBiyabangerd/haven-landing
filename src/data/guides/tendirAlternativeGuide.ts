@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'HoReCa+gaming ekosistem vs otaq-vaxt paneli — Təndir',
       seoTitle: 'Təndir alternativi — restoran/gaming vs Heselo klub paneli | Heselo',
       seoDescription:
-        'Təndir restoran, kafe və oyun klubları üçün geniş idarəetmə ekosistemidir; Heselo otaq-vaxt, bron və kassaya fokuslanır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'Təndir restoran, kafe və oyun klubları üçün geniş idarəetmə ekosistemidir; Heselo otaq-vaxt, bron və kassaya fokuslanır Müqayisə cədvəli və FAQ — AZ, EN, RU.',
       keywords: [
         'təndir alternativ',
         'tendir alternativ',

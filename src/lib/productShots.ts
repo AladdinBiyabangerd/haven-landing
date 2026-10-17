@@ -3,7 +3,6 @@ import type { Messages } from '@/i18n/types'
 
 export type ProductShotId =
   | 'live-floor'
-  | 'schedule'
   | 'sessions'
   | 'cash'
   | 'inventory'
@@ -13,7 +12,6 @@ export type ProductShotId =
 
 export const PRODUCT_SHOT_PATHS: Record<ProductShotId, string> = {
   'live-floor': '/images/product/live-floor',
-  'schedule': '/images/product/schedule',
   sessions: '/images/product/sessions',
   cash: '/images/product/cash',
   inventory: '/images/product/inventory',
@@ -25,11 +23,11 @@ export const PRODUCT_SHOT_PATHS: Record<ProductShotId, string> = {
 /** Solution slug → primary product screenshot */
 export const SOLUTION_SHOT_MAP: Partial<Record<SolutionSlug, ProductShotId>> = {
   billiards: 'live-floor',
-  karaoke: 'schedule',
+  karaoke: 'sessions',
   gaming: 'live-floor',
   antikafe: 'live-floor',
-  lounge: 'schedule',
-  reservations: 'schedule',
+  lounge: 'sessions',
+  reservations: 'sessions',
   pos: 'cash',
   inventory: 'inventory',
 }
@@ -41,7 +39,7 @@ export const SOLUTION_EXTRA_SHOT_MAP: Partial<Record<SolutionSlug, ProductShotId
   gaming: 'sessions',
   antikafe: 'room-analytics',
   lounge: 'room-analytics',
-  reservations: 'sessions',
+  reservations: 'live-floor',
   pos: 'sessions',
   inventory: 'products',
 }
@@ -49,7 +47,6 @@ export const SOLUTION_EXTRA_SHOT_MAP: Partial<Record<SolutionSlug, ProductShotId
 /** All product shots in display order (features gallery). */
 export const FEATURE_GALLERY_SHOTS: ProductShotId[] = [
   'live-floor',
-  'schedule',
   'sessions',
   'cash',
   'inventory',

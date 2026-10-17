@@ -1,0 +1,342 @@
+---
+import type { Messages } from '@/i18n/types'
+import BrandMark from '@/components/BrandMark.astro'
+
+interface Props {
+  messages: Messages
+  class?: string
+}
+
+const { messages, class: className = '' } = Astro.props
+const m = messages.inventoryMock
+
+/** Initial letter in icon tile — no emoji (matches your HTML layout, landing-safe). */
+const rows = [
+  { name: m.products.cola, type: m.typeDrink, qty: 24, status: 'ok' as const, mark: 'C' },
+  { name: m.products.chips, type: m.typeSnack, qty: 8, status: 'low' as const, mark: 'Ç' },
+  { name: m.products.water, type: m.typeDrink, qty: 40, status: 'ok' as const, mark: 'S' },
+  { name: m.products.energy, type: m.typeDrink, qty: 12, status: 'ok' as const, mark: 'E' },
+]
+---
+
+<figure class:list={['im', className]} aria-label={m.ariaLabel}>
+  <div class="im__outer">
+    <div class="im__card">
+      <header class="im__head">
+        <div class="im__titles">
+          <p class="im__title">{m.title}</p>
+          <p class="im__subtitle">{m.subtitle}</p>
+        </div>
+        <div class="im__brand" aria-hidden="true">
+          <BrandMark size={30} />
+          <span class="im__brand-name">Heselo</span>
+        </div>
+      </header>
+
+      <div class="im__summary">
+        <div class="im__summary-copy">
+          <span class="im__summary-label">{m.summaryLabel}</span>
+          <strong class="im__summary-value">{m.summaryValue}</strong>
+        </div>
+        <span class="im__pill">
+          <i class="im__pill-dot" aria-hidden="true"></i>
+          {m.stockPill}
+        </span>
+      </div>
+
+      <div class="im__cols" aria-hidden="true">
+        <span>{m.colProduct}</span>
+        <span>{m.colQty}</span>
+        <span>{m.colStatus}</span>
+      </div>
+
+      <ul class="im__list">
+        {
+          rows.map((row) => (
+            <li class="im__row">
+              <div class="im__product">
+                <span class="im__icon" aria-hidden="true">
+                  {row.mark}
+                </span>
+                <div class="im__product-text">
+                  <span class="im__name">{row.name}</span>
+                  <span class="im__type">{row.type}</span>
+                </div>
+              </div>
+              <span class="im__qty">
+                {row.qty} {m.unit}
+              </span>
+              <span class:list={['im__status', row.status === 'ok' ? 'im__status--ok' : 'im__status--low']}>
+                {row.status === 'ok' ? m.statusOk : m.statusLow}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <footer class="im__footer">
+        <i class="im__footer-dot" aria-hidden="true"></i>
+        <span>{m.hint}</span>
+      </footer>
+    </div>
+  </div>
+</figure>
+
+<style>
+  .im {
+    container-type: inline-size;
+    container-name: im;
+    margin: 0;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: #eef3f6;
+  }
+  .im__outer {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .im__card {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 1.25rem 1.2rem 1.05rem;
+    background: #fff;
+    border: 1px solid rgba(38, 50, 56, 0.04);
+    border-radius: 1rem;
+    box-shadow: 0 8px 28px rgba(38, 50, 56, 0.04);
+  }
+  .im__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.15rem;
+  }
+  .im__titles {
+    min-width: 0;
+  }
+  .im__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    color: #263238;
+    line-height: 1.25;
+  }
+  .im__subtitle {
+    margin: 0.3rem 0 0;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: #7d8a91;
+  }
+  .im__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+  .im__brand-name {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    color: #263238;
+  }
+  .im__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.8rem 0.9rem;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    background: #f3f8f9;
+  }
+  .im__summary-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+  .im__summary-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #718087;
+    line-height: 1.2;
+  }
+  .im__summary-value {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    color: #263238;
+    line-height: 1.2;
+  }
+  .im__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    padding: 0.4rem 0.65rem;
+    border-radius: 0.55rem;
+    border: 1px solid rgba(15, 148, 136, 0.2);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 650;
+    color: #0f9488;
+    background: #ddf8f3;
+  }
+  .im__pill-dot {
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  .im__cols {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 0.85rem;
+    padding: 0 0.6rem 0.55rem;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #96a1a7;
+  }
+  .im__cols span:nth-child(2),
+  .im__cols span:nth-child(3) {
+    text-align: right;
+  }
+  .im__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .im__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 0.6rem;
+    border-bottom: 1px solid #e2e9ec;
+  }
+  .im__row:last-child {
+    border-bottom: 0;
+  }
+  .im__product {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 0;
+  }
+  .im__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 0.65rem;
+    background: #f0f5f6;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 750;
+    color: #0d9488;
+  }
+  .im__product-text {
+    min-width: 0;
+  }
+  .im__name {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 650;
+    line-height: 1.35;
+    color: #263238;
+    overflow-wrap: anywhere;
+  }
+  .im__type {
+    display: block;
+    margin-top: 0.15rem;
+    font-family: var(--font-body);
+    font-size: 0.625rem;
+    color: #9aa5aa;
+  }
+  .im__qty {
+    white-space: nowrap;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    color: #263238;
+  }
+  .im__status {
+    min-width: 2.5rem;
+    text-align: center;
+    padding: 0.3rem 0.45rem;
+    border-radius: 0.4rem;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 700;
+  }
+  .im__status--ok {
+    background: #e0f7f2;
+    color: #0f9488;
+  }
+  .im__status--low {
+    background: #f5f0e5;
+    color: #9a8050;
+  }
+  .im__footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.95rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid #e2e9ec;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    color: #8b999f;
+  }
+  .im__footer-dot {
+    width: 0.3rem;
+    height: 0.3rem;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  @container im (max-width: 26rem) {
+    .im__outer {
+      padding: 0.6rem;
+    }
+    .im__card {
+      padding: 0.9rem 0.75rem 0.8rem;
+    }
+    .im__title {
+      font-size: 1.2rem;
+    }
+    .im__brand-name {
+      display: none;
+    }
+    .im__row,
+    .im__cols {
+      gap: 0.45rem;
+    }
+    .im__product {
+      gap: 0.45rem;
+    }
+    .im__icon {
+      width: 1.9rem;
+      height: 1.9rem;
+      font-size: 0.7rem;
+    }
+    .im__name,
+    .im__qty {
+      font-size: 0.75rem;
+    }
+    .im__status {
+      min-width: 2.1rem;
+      padding: 0.3rem 0.35rem;
+    }
+  }
+</style>

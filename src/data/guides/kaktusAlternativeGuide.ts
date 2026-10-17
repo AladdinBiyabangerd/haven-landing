@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Salon randevusu vs otaq sessiyası — Kaktus alternativi',
       seoTitle: 'Kaktus alternativi — salon rezervasiya vs Heselo otaq-vaxt | Heselo',
       seoDescription:
-        'Kaktus salon/gözəllik randevusudur; Heselo otaq və launj sessiyasıdır. Heselo mütəxəssis cədvəlini əvəz etmir — müqayisə cədvəli, bazar mənzərəsi, FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'Kaktus salon randevusudur; Heselo otaq/launj sessiyasıdır. Mütəxəssis cədvəlini əvəz etmir — cədvəl, FAQ.',
       keywords: [
         'kaktus alternativ',
         'kaktus alternativi',
@@ -184,7 +184,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Salon appointments vs room sessions — Kaktus alternative',
       seoTitle: 'Kaktus Alternative — Salon Booking vs Heselo Room-Time | Heselo',
       seoDescription:
-        'Kaktus is salon/beauty appointments; Heselo is room and lounge sessions. Heselo does not replace specialist scheduling — comparison table, landscape, FAQ — AZ, EN, RU.',
+        'Kaktus is salon appointments; Heselo is room/lounge sessions. Does not replace specialist scheduling — table, FAQ.',
       keywords: [
         'Kaktus alternative',
         'Kaktus alternative booking',

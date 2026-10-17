@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Restoran+gaming platform vs otaq-vaxt — SmartApp alternativi',
       seoTitle: 'SmartApp.az alternativi — platform vs Heselo klub paneli | Heselo',
       seoDescription:
-        'SmartApp.az restoran POS, QR menyu və gaming hall tarifləridir; Heselo otaq-vaxt, bron və kassaya fokuslanır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'SmartApp.az restoran POS, QR menyu və gaming hall tarifləridir; Heselo otaq-vaxt, bron və kassaya fokuslanır Müqayisə cədvəli və FAQ — AZ, EN, RU.',
       keywords: [
         'smartapp alternativ',
         'smartapp.az alternativ',

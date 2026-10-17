@@ -59,6 +59,7 @@ interface Window {
   dataLayer?: unknown[]
   gtag?: (...args: unknown[]) => void
   clarity?: (...args: unknown[]) => void
+  ym?: (id: number, method: string, ...args: unknown[]) => void
   heseloTrack?: (name: string, params?: Record<string, string | undefined>) => void
 }
 

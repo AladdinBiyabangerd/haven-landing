@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'İnternet/PS kafe proqramı vs klub paneli — PanCafe Pro',
       seoTitle: 'PanCafe alternativi — PanCafe Pro vs Heselo klub paneli | Heselo',
       seoDescription:
-        'PanCafe Pro pulsuz internet və PlayStation kafe idarəetməsidir; Heselo bron, canlı sessiya və kassadır. Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'PanCafe Pro pulsuz internet və PlayStation kafe idarəetməsidir; Heselo bron, canlı sessiya və kassadır. Müqayisə cədvəli və FAQ — AZ, EN, RU.',
       keywords: [
         'pancafe alternativ',
         'pancafe alternativi',

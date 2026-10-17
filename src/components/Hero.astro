@@ -2,7 +2,7 @@
 import type { Messages } from '@/i18n/types'
 import type { Locale } from '@/i18n/config'
 import { localePath, whatsappUrl } from '@/lib/site'
-import ProductShot from '@/components/ProductShot.astro'
+import LiveFloorMock from '@/components/LiveFloorMock.astro'
 
 interface Props {
   locale: Locale
@@ -52,7 +52,7 @@ const secondaryIsWhatsApp = formFirst
       </ul>
     </div>
     <div class="hero__visual">
-      <ProductShot messages={messages} id="live-floor" priority />
+      <LiveFloorMock messages={messages} />
     </div>
   </div>
 </section>
@@ -145,7 +145,7 @@ const secondaryIsWhatsApp = formFirst
       max-width: 28rem;
     }
     .hero__visual {
-      max-width: 22rem;
+      max-width: 26rem;
       margin-inline: auto;
     }
   }

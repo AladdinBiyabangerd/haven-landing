@@ -1,0 +1,283 @@
+---
+import type { Messages } from '@/i18n/types'
+import BrandMark from '@/components/BrandMark.astro'
+
+interface Props {
+  messages: Messages
+  class?: string
+}
+
+const { messages, class: className = '' } = Astro.props
+const m = messages.cashMock
+
+const metrics = [
+  { key: 'cash' as const, value: '180.00 AZN' },
+  { key: 'card' as const, value: '420.50 AZN' },
+  { key: 'total' as const, value: '600.50 AZN' },
+]
+
+const transactions = [
+  { time: '10:42', method: 'cash' as const, amount: '+40.00 AZN' },
+  { time: '10:28', method: 'card' as const, amount: '+65.50 AZN' },
+  { time: '10:05', method: 'cash' as const, amount: '+25.00 AZN' },
+  { time: '09:46', method: 'card' as const, amount: '+80.00 AZN' },
+]
+
+function metricLabel(key: (typeof metrics)[number]['key']): string {
+  if (key === 'cash') return m.cashLabel
+  if (key === 'card') return m.cardLabel
+  return m.totalLabel
+}
+
+function payLabel(method: 'cash' | 'card'): string {
+  return method === 'cash' ? m.payCash : m.payCard
+}
+---
+
+<figure class:list={['cm', className]} aria-label={m.ariaLabel}>
+  <div class="cm__panel">
+    <header class="cm__head">
+      <div class="cm__title-row">
+        <p class="cm__title">{m.title}</p>
+        <span class="cm__badge">
+          <i class="cm__pulse" aria-hidden="true"></i>
+          {m.shiftOpen}
+        </span>
+      </div>
+      <BrandMark size={28} />
+    </header>
+
+    <ul class="cm__metrics">
+      {
+        metrics.map((metric) => (
+          <li class:list={['cm__metric', metric.key === 'total' && 'cm__metric--total']}>
+            <span class="cm__metric-label">{metricLabel(metric.key)}</span>
+            <span class="cm__metric-value">{metric.value}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <section class="cm__tx" aria-label={m.txTitle}>
+      <div class="cm__tx-head">
+        <p class="cm__tx-title">{m.txTitle}</p>
+        <span class="cm__tx-today">{m.txToday}</span>
+      </div>
+      <ul class="cm__tx-list">
+        {
+          transactions.map((tx) => (
+            <li class="cm__tx-row">
+              <span class="cm__tx-time">{tx.time}</span>
+              <span class="cm__tx-name">{payLabel(tx.method)}</span>
+              <span class="cm__tx-amount">{tx.amount}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <p class="cm__hint">{m.hint}</p>
+  </div>
+</figure>
+
+<style>
+  .cm {
+    container-type: inline-size;
+    container-name: cm;
+    margin: 0;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--bg-soft);
+  }
+  .cm__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.9rem 0.85rem 0.8rem;
+    background: linear-gradient(165deg, #eef3f6 0%, #e4ecf1 100%);
+    box-sizing: border-box;
+  }
+  .cm__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .cm__title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.65rem;
+    min-width: 0;
+  }
+  .cm__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .cm__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    background: rgba(20, 184, 166, 0.12);
+    border: 1px solid rgba(20, 184, 166, 0.28);
+  }
+  .cm__pulse {
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 999px;
+    background: var(--accent);
+    animation: cm-pulse 2s ease-in-out infinite;
+  }
+  .cm__metrics {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .cm__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.65rem 0.7rem;
+    background: #fff;
+    border: 1px solid rgba(21, 32, 51, 0.08);
+    border-radius: var(--radius);
+  }
+  .cm__metric--total {
+    border-color: rgba(20, 184, 166, 0.35);
+    background: linear-gradient(145deg, #fff 45%, #f0fcf9);
+  }
+  .cm__metric-label {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--ink-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .cm__metric-value {
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: 700;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+  .cm__metric--total .cm__metric-value {
+    color: var(--accent-deep);
+  }
+  .cm__tx {
+    padding: 0.7rem 0.75rem 0.45rem;
+    background: #fff;
+    border: 1px solid rgba(21, 32, 51, 0.08);
+    border-radius: var(--radius);
+  }
+  .cm__tx-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+  }
+  .cm__tx-title {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .cm__tx-today {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--ink-subtle);
+  }
+  .cm__tx-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cm__tx-row {
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0;
+    border-top: 1px solid rgba(21, 32, 51, 0.06);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+  .cm__tx-time {
+    color: var(--ink-subtle);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+  .cm__tx-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--ink-muted);
+    font-weight: 600;
+  }
+  .cm__tx-amount {
+    color: var(--ink);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .cm__hint {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--ink-subtle);
+    text-align: center;
+  }
+  @keyframes cm-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+  @container cm (min-width: 22rem) {
+    .cm__metrics {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.55rem;
+    }
+    .cm__metric-value {
+      font-size: var(--text-lg);
+    }
+    .cm__tx-row {
+      font-size: var(--text-xs);
+    }
+  }
+  @container cm (min-width: 28rem) {
+    .cm__panel {
+      padding: 1.1rem 1.15rem 1rem;
+      gap: 0.85rem;
+    }
+    .cm__title {
+      font-size: var(--text-xl);
+    }
+    .cm__hint {
+      text-align: left;
+    }
+  }
+</style>

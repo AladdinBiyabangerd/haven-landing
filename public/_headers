@@ -1,3 +1,5 @@
+# Netlify / Cloudflare Pages syntax — NOT applied on Vercel.
+# Production headers live in vercel.json (see SEO plan F1, 2026-10-17).
 /*
   /_astro/*
     Cache-Control: public, max-age=31536000, immutable

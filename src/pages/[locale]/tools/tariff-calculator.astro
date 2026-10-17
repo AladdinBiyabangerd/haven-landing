@@ -20,42 +20,15 @@ const copy =
         description:
           'Оцените месячную выручку PS-клуба: число кабинок, цена часа и загрузка. Примерный расчёт на устройстве — не оферта и не цена подписки Heselo.',
         h1: 'Калькулятор тарифов клуба',
-        lead:
-          'Введите число кабинок, цену часа и загрузку. Считаем на устройстве — данные никуда не отправляются. Это модель выручки зала, а не прайс подписки Heselo.',
+        lead: 'Сколько кабинок, какой час и какая загрузка — получите порядок месячной выручки. Считается в браузере, никуда не отправляется.',
         booths: 'Число кабинок / станций',
         hourly: 'Цена часа',
         hours: 'Часов загрузки на кабинку в день',
         days: 'Рабочих дней в месяц',
         revenue: 'Ориентировочная выручка в месяц',
         cta: 'Запросить демо Heselo',
-        note: 'Это модель выручки зала, не цена подписки Heselo. Контроллеры ТВ и онлайн-касса (ККТ) в расчёт не входят.',
-        sections: [
-          {
-            id: 'formula',
-            title: 'Что считает формула',
-            paragraphs: [
-              'Итог = число кабинок × цена часа × часов загрузки в день × рабочих дней в месяц. Так вы видите порядок выручки от продажи времени станций, без бара и без пакетов.',
-              'Если часть дня идёт по ночному тарифу или пакетам «2 часа», подставьте среднюю эффективную цену часа — калькулятор не заменяет полный прайс-лист, а помогает сравнить сценарии «6 кабин × 5 часов» и «10 кабин × 4 часа».',
-            ],
-          },
-          {
-            id: 'assumptions',
-            title: 'Какие допущения заложены',
-            paragraphs: [
-              'Загрузка на кабинку — среднее по залу, а не пик пятницы. Пустые утренние часы снижают среднее; вечерний пик его поднимает. Не закладывайте 100 % занятости без запаса на мойку, простои и отмены.',
-              'Бар, депозиты и предоплата в формулу не входят. Онлайн-касса (ККТ) и реле ТВ — тоже: Heselo ведёт бронь, сеансы и смену в браузере и не заменяет фискальное оборудование.',
-            ],
-          },
-          {
-            id: 'next',
-            title: 'Дальше: панель и тарифы Heselo',
-            paragraphs: [
-              'Когда ориентир по выручке ясен, имеет смысл проверить, как бронь переходит в активный сеанс и как бар попадает в тот же счёт — это страница решения для игрового клуба. Открытые цены подписки Heselo (фиксировано за клуб, не за консоль) — на странице тарифов; сравнение моделей «за устройство» и «за клуб» — в соседнем инструменте.',
-              'Практическая настройка часа, пакетов и ночного тарифа разобрана в статье про тарифы PS-клуба. Калькулятор здесь отвечает только на вопрос «какой порядок выручки при такой загрузке?»; подписка Heselo в эту формулу не входит.',
-              'После расчёта зафиксируйте допущения (часов на кабинку, цена часа, число дней) и сравните два сценария: текущий зал и планируемое расширение. На демо можно проверить те же цифры уже в расписании станций — без карты и без установки софта на консоли.',
-            ],
-          },
-        ] satisfies ToolSection[],
+        note: 'Модель выручки зала — не цена подписки Heselo.',
+        sections: [] as ToolSection[],
         links: [
           { href: '/solutions/gaming', label: 'Программа для игрового клуба' },
           { href: '/pricing', label: 'Тарифы Heselo' },
@@ -65,33 +38,43 @@ const copy =
     : locale === 'en'
       ? {
           title: 'Club tariff calculator | Heselo',
-          description: 'Estimate monthly revenue from booths, hourly rate and utilisation.',
+          description:
+            'Estimate monthly club revenue from booths, hourly rate and utilisation. On-device only.',
           h1: 'Club tariff calculator',
-          lead: 'Enter your numbers. Calculation stays in the browser.',
+          lead: 'How many booths, what hourly rate, how busy — get a rough monthly revenue figure. Calculated in the browser, nothing is sent.',
           booths: 'Booths / stations',
           hourly: 'Hourly rate',
           hours: 'Hours per booth per day',
           days: 'Working days per month',
           revenue: 'Estimated monthly revenue',
           cta: 'Request a Heselo demo',
-          note: 'Venue revenue model — not Heselo subscription pricing. TV controllers and fiscal cash registers are out of scope.',
+          note: 'Venue revenue model — not Heselo subscription pricing.',
           sections: [] as ToolSection[],
-          links: [] as Array<{ href: string; label: string }>,
+          links: [
+            { href: '/solutions/gaming', label: 'Gaming club software' },
+            { href: '/pricing', label: 'Heselo pricing' },
+            { href: '/tools/pricing-model', label: 'Fee model: console vs club' },
+          ],
         }
       : {
           title: 'Klub tarif kalkulyatoru | Heselo',
-          description: 'Kabinka sayı, saat qiyməti və yüklənməyə görə aylıq gəlir təxmini.',
+          description:
+            'Kabinka, saat qiyməti və yüklənməyə görə aylıq gəlir təxmini. Hesablama cihazdadır.',
           h1: 'Klub tarif kalkulyatoru',
-          lead: 'Öz rəqəmlərinizi daxil edin. Hesablama brauzerdə qalır.',
+          lead: 'Neçə kabinka, saat neçəyə, nə qədər dolu — aylıq gəlirin təxmini. Brauzerdə hesablanır, heç yerə göndərilmir.',
           booths: 'Kabinka / stansiya sayı',
           hourly: 'Saat qiyməti',
           hours: 'Kabinka başına gündəlik saat',
           days: 'Aylıq iş günü',
           revenue: 'Təxmini aylıq gəlir',
           cta: 'Heselo demo istəyin',
-          note: 'Zalın gəlir modeli — Heselo abunə qiyməti deyil. TV kontroller və fiskal kassa hesabda yoxdur.',
+          note: 'Zal gəliri modeli — Heselo abunə qiyməti deyil.',
           sections: [] as ToolSection[],
-          links: [] as Array<{ href: string; label: string }>,
+          links: [
+            { href: '/solutions/gaming', label: 'Oyun klubu proqramı' },
+            { href: '/pricing', label: 'Heselo tarifləri' },
+            { href: '/tools/pricing-model', label: 'Qiymət modeli: konsol vs klub' },
+          ],
         }
 ---
 

@@ -1,25 +1,30 @@
-# Current task — /ru SEO audit v3 (2026-10-16)
+# Current task — Hero HTML mock + SEO leftovers
 
-## Completed
+## Completed (this chat wave)
 
-1. Heselo `plan_marketing_seed.json`: RU «сессия» → «сеанс» / «Активный сеанс» (matches landing lexicon).
-2. Alembic `0070_sync_plan_marketing_seans`: force-overwrites DB `marketing_copy` from seed on migrate (empty-only ensure would not fix live).
-3. Pushed Heselo `main` @ `470bb52`.
+1. **html1** — Hero `live-floor` → `LiveFloorMock.astro`.
+2. **html2** — `cash` → `CashMock.astro` (POS primary).
+3. **html3** — `sessions` → `SessionsMock.astro`.
+4. **html4** — `inventory` → `InventoryMock.astro` (user HTML adapted; no emoji).
+5. Home preload of `live-floor-*.webp` removed.
 
 ## Current state
 
-After Heselo backend deploy + migrate, public catalog returns «Активный сеанс». Landing `/ru/pricing/` picks that up on next build/fetch — redeploy landing if catalog is build-time.
+- HTML mocks: live-floor (hero), cash, sessions, inventory.
+- Still AI: products, room-analytics, audit.
+- Prior SEO P0 edits still uncommitted.
 
-## Remaining (landing audit v3)
+## Decisions
 
-1. Domain email `info@heselo.online` — only when mailbox exists (still Gmail).
-2. Thin pages &lt;400 words (6 pages).
-3. playstation-cafe-software-alternative desc 166 → ≤160.
-4. IndexNow ping after landing deploy.
-5. PSI when quota available.
+- Mocks = sparse mist vignettes (option 2), not full admin UIs.
+- Amounts use `AZN` (not ₼) for font reliability.
+
+## Remaining
+
+1. Later: products / room-analytics / audit mocks or real screenshots.
+2. SEO leftovers: Metrica goals, deploy header verify, thin AZ guides.
 
 ## Relevant files
 
-- `Heselo/backend/app/services/plan_marketing_seed.json`
-- `Heselo/backend/alembic/versions/0070_sync_plan_marketing_seans.py`
-- `heselo-landing/docs/seo-ru-audit-2026-10-16-v3.md`
+- `src/components/{LiveFloorMock,CashMock,SessionsMock,InventoryMock,ProductShot,Hero}.astro`
+- View inventory: `/az/solutions/inventory/`

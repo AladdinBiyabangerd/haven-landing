@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Klub əməliyyatları üçün Baza Market alternativi',
       seoTitle: 'Baza Market alternativi — klub paneli Heselo (marketplace deyil)',
       seoDescription:
-        'Baza Market ticarət/kataloq yönümlüdür; Heselo daxili klub panelidir. Müqayisə cədvəli, bazar mənzərəsi, FAQ — karaoke, oyun klubları Azərbaycan, ingilis və rus dillərindədir.',
+        'Baza Market ticarət/kataloq yönümlüdür; Heselo daxili klub panelidir. Müqayisə cədvəli və FAQ — AZ, EN, RU.',
       keywords: [
         'baza market alternativ',
         'baza market müqayisə',

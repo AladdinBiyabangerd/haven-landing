@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'PC klub idarəetməsi vs otaq-vaxt — IZI alternativi',
       seoTitle: 'IZI alternativi — PC kilidləmə vs Heselo otaq-vaxt | Heselo',
       seoDescription:
-        'IZI PC stansiya kilidləmə və klub idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo PC kilidləməni əvəz etmir — cədvəl, bazar mənzərəsi, FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'IZI PC stansiya kilidləmə və klub idarəetməsidir; Heselo otaq-vaxt, bron və kassadır. Heselo PC kilidləməni əvəz etmir — cədvəl, bazar mənzərəsi, FAQ — AZ, EN, RU.',
       keywords: [
         'izi alternativ',
         'izi alternativi klub',

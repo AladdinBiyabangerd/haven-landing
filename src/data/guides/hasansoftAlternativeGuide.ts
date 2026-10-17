@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'PlayStation kafe proqramı vs klub paneli — Hasansoft',
       seoTitle: 'Hasansoft alternativi — PS kafe proqramı vs Heselo | Heselo',
       seoDescription:
-        'Hasansoft ClubPlaystation PS4/PS5 vaxt, kassa və hesabatdır; Heselo bron, canlı sessiya və klub növbəsidir Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'Hasansoft ClubPlaystation PS4/PS5 vaxt, kassa və hesabatdır; Heselo bron, canlı sessiya və klub növbəsidir Müqayisə cədvəli və FAQ — AZ, EN, RU.',
       keywords: [
         'hasansoft alternativ',
         'hasansoft alternativi',

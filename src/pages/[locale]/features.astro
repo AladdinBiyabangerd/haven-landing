@@ -25,15 +25,6 @@ const page = messages.featuresPage
         <h1 class="type-page-title">{page.title}</h1>
         <p class="lead">{page.intro}</p>
       </div>
-      {
-        page.body && page.body.length > 0 ? (
-          <div class="features-prose">
-            {page.body.map((para) => (
-              <p>{para}</p>
-            ))}
-          </div>
-        ) : null
-      }
       <ul class="card-grid">
         {
           page.modules.map((mod) => {
@@ -43,15 +34,14 @@ const page = messages.featuresPage
             const cta = mod.solutionSlug
               ? `${getSolution(locale, mod.solutionSlug)?.shortTitle ?? page.solutionLinkLabel}${messages.common.linkArrow}`
               : null
-            const desc = mod.detail ? `${mod.desc} ${mod.detail}` : mod.desc
             return (
               <li>
                 {href ? (
-                  <LinkCard href={href} title={mod.title} desc={desc} cta={cta} as="h2" />
+                  <LinkCard href={href} title={mod.title} desc={mod.desc} cta={cta} as="h2" />
                 ) : (
                   <article class="card">
                     <h2 class="type-card-title">{mod.title}</h2>
-                    <p>{desc}</p>
+                    <p>{mod.desc}</p>
                   </article>
                 )}
               </li>
@@ -76,18 +66,6 @@ const page = messages.featuresPage
 </BaseLayout>
 
 <style>
-  .features-prose {
-    max-width: 40rem;
-    margin: 0 0 1.75rem;
-    display: grid;
-    gap: 0.85rem;
-  }
-  .features-prose p {
-    margin: 0;
-    color: var(--ink-muted);
-    font-size: var(--text-md);
-    line-height: 1.65;
-  }
   article {
     display: flex;
     flex-direction: column;

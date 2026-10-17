@@ -13,7 +13,6 @@ export type JourneyDoorCopy = {
 
 export type ProductShotAltKey =
   | 'live-floor'
-  | 'schedule'
   | 'sessions'
   | 'cash'
   | 'inventory'
@@ -59,6 +58,9 @@ export type Messages = {
     tagline: string
     /** Prefixed to the founder name in the footer credit line. */
     credit: string
+    /** Link labels for orphan-prevention tool pages (SEO F3). */
+    toolTariffCalculator: string
+    toolPricingModel: string
   }
   hero: {
     brandHint: string
@@ -66,6 +68,68 @@ export type Messages = {
     subtitle: string
     ctaPrimary: string
     ctaSecondary: string
+  }
+  /** Sparse HTML vignette replacing the hero live-floor marketing image. */
+  liveFloorMock: {
+    title: string
+    legendActive: string
+    legendEmpty: string
+    badgeActive: string
+    badgeEmpty: string
+    hint: string
+    /** Accessible name for the mock panel. */
+    ariaLabel: string
+  }
+  /** Sparse HTML vignette replacing the cash product marketing image. */
+  cashMock: {
+    title: string
+    shiftOpen: string
+    cashLabel: string
+    cardLabel: string
+    totalLabel: string
+    txTitle: string
+    txToday: string
+    payCash: string
+    payCard: string
+    hint: string
+    ariaLabel: string
+  }
+  /** Sparse HTML vignette replacing the sessions product marketing image. */
+  sessionsMock: {
+    title: string
+    roomLabel: string
+    statusActive: string
+    elapsedLabel: string
+    dueLabel: string
+    extendChip: string
+    pauseChip: string
+    stopChip: string
+    hint: string
+    ariaLabel: string
+  }
+  /** Sparse HTML vignette replacing the inventory product marketing image. */
+  inventoryMock: {
+    title: string
+    subtitle: string
+    summaryLabel: string
+    summaryValue: string
+    stockPill: string
+    colProduct: string
+    colQty: string
+    colStatus: string
+    statusOk: string
+    statusLow: string
+    unit: string
+    typeDrink: string
+    typeSnack: string
+    products: {
+      cola: string
+      chips: string
+      water: string
+      energy: string
+    }
+    hint: string
+    ariaLabel: string
   }
   trust: {
     items: string[]

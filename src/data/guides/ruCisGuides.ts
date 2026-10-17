@@ -19,7 +19,7 @@ const catalog: CatalogEntry[] = [
       az: {
         shortTitle: "PS proqram müqayisəsi",
         h1: "PS klubu proqramları: 2026 müqayisəsi",
-        seoTitle: "PS klubu proqramı: 2026 müqayisəsi — GameClub, SmartTimer, SENET | Heselo",
+        seoTitle: "PS klubu proqramı: 2026 müqayisəsi | Heselo",
         seoDescription: "PS klubu proqramlarını müqayisə edirik: qiymət modeli, bron, bar, növbə, avadanlıq. Cədvəl — açıq mənbələr, oktyabr 2026.",
         keywords: [
           "ps klub proqramı müqayisə",
@@ -150,7 +150,7 @@ const catalog: CatalogEntry[] = [
       en: {
         shortTitle: "PS software comparison",
         h1: "PS club software: 2026 comparison",
-        seoTitle: "PS Club Software: 2026 Comparison — GameClub, SmartTimer, SENET | Heselo",
+        seoTitle: "PS Club Software: 2026 Comparison | Heselo",
         seoDescription: "Compare PS club software: pricing model, booking, bar on the session bill, shifts and hardware. Table from public sources, October 2026.",
         keywords: [
           "ps club software comparison",

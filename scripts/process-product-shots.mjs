@@ -20,12 +20,6 @@ const SHOTS = [
     blurs: [{ left: 120, top: 200, width: 260, height: 1180 }],
   },
   {
-    id: 'schedule',
-    source: 'Screenshot 2026-08-12 at 13.20.55.png',
-    cropBottom: 105,
-    blurs: [{ left: 520, top: 250, width: 220, height: 900 }],
-  },
-  {
     id: 'sessions',
     source: 'Screenshot 2026-08-12 at 13.21.02.png',
     cropBottom: 105,
@@ -62,6 +56,12 @@ const SHOTS = [
 
 const TARGET_WIDTH = 1200
 const TARGET_WIDTH_2X = 2400
+/** Extra responsive widths for mobile LCP (hero ~350px CSS → 480/768 candidates).
+ *  frameImage adds 2×PAD (56px), so tw 424/712 → final ~480/768. */
+const TARGET_WIDTHS_RESPONSIVE = [
+  { suffix: '-480w', tw: 424 },
+  { suffix: '-768w', tw: 712 },
+]
 const RADIUS = 22
 const PAD = 28
 const BG = { r: 238, g: 243, b: 246, alpha: 1 }
@@ -128,14 +128,19 @@ async function processShot(shot) {
 
   base = await applyBlurs(base, width, cropHeight, shot.blurs)
 
-  for (const [suffix, tw] of [
+  /** Full sizes for every shot; 480/768 only for LCP hero (dense UI stays readable). */
+  const responsive = shot.id === 'live-floor' ? TARGET_WIDTHS_RESPONSIVE : []
+  const targets = [
     ['', TARGET_WIDTH],
     ['@2x', TARGET_WIDTH_2X],
-  ]) {
+    ...responsive.map((r) => [r.suffix, r.tw]),
+  ]
+  for (const [suffix, tw] of targets) {
     const framed = await frameImage(base, tw)
     const webpPath = join(outDir, `${shot.id}${suffix}.webp`)
     const pngPath = join(outDir, `${shot.id}${suffix}.png`)
-    await sharp(framed).webp({ quality: 84 }).toFile(webpPath)
+    const webpQuality = suffix === '-480w' || suffix === '-768w' ? 92 : 84
+    await sharp(framed).webp({ quality: webpQuality }).toFile(webpPath)
     await sharp(framed).png({ compressionLevel: 9 }).toFile(pngPath)
     const outMeta = await sharp(framed).metadata()
     console.log(`✓ ${shot.id}${suffix} → ${outMeta.width}x${outMeta.height}`)

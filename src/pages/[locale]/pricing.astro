@@ -45,6 +45,15 @@ const faqMessages = {
         <p class="eyebrow">{page.eyebrow}</p>
         <h1 class="type-page-title">{page.title}</h1>
         <p class="lead">{page.intro}</p>
+        <p class="pricing-tools">
+          <a class="link-inline" href={localePath(locale, '/tools/tariff-calculator')}>
+            {messages.footer.toolTariffCalculator}{messages.common.linkArrow}
+          </a>
+          <span aria-hidden="true"> · </span>
+          <a class="link-inline" href={localePath(locale, '/tools/pricing-model')}>
+            {messages.footer.toolPricingModel}{messages.common.linkArrow}
+          </a>
+        </p>
       </div>
       <PricingSummary locale={locale} messages={messages} />
       <PricingOffers locale={locale} messages={messages} />
@@ -60,6 +69,14 @@ const faqMessages = {
 </BaseLayout>
 
 <style>
+  .pricing-tools {
+    margin: 0.75rem 0 0;
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .pricing-tools a {
+    font-weight: 600;
+  }
   @media (max-width: 759px) {
     .pricing-page .section-head :global(.type-page-title) {
       font-size: var(--text-2xl);

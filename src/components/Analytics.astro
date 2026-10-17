@@ -7,9 +7,10 @@
  * Loaded after idle / first interaction to protect mobile INP.
  *
  * Yandex Metrica: set PUBLIC_HESELO_YANDEX_METRICA_ID (empty = disable).
- * Also deferred like Clarity.
+ * Metrica boots on page load so bounce visits are counted; Clarity stays deferred.
  *
- * Lead CTAs emit `generate_lead` (mark as a key event in GA4 Admin → Events).
+ * Lead CTAs emit `generate_lead` (mark as a key event in GA4 Admin → Events;
+ * create matching JavaScript goals in Metrica: generate_lead / pricing_select).
  */
 const DEFAULT_GA4_ID = 'G-HKT0YR5W38'
 const DEFAULT_CLARITY_ID = 'yqenuclqam'
@@ -31,7 +32,8 @@ const clarityId =
 const metricaId = String(
   import.meta.env.PUBLIC_HESELO_YANDEX_METRICA_ID || import.meta.env.PUBLIC_YANDEX_METRICA_ID || '',
 ).trim()
-const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
+const enableGa4 = provider === 'ga4' && Boolean(ga4Id)
+const enableLeadTracking = enableGa4 || Boolean(metricaId)
 ---
 
 {
@@ -40,27 +42,41 @@ const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
   ) : null
 }
 {
-  provider === 'ga4' && ga4Id ? (
+  enableGa4 || metricaId ? (
+    <script is:inline define:vars={{ ga4Id: enableGa4 ? ga4Id : '', metricaId }}>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      window.gtag = gtag
+
+      window.heseloTrack = function heseloTrack(name, params) {
+        var payload = params || {}
+        if (ga4Id && typeof gtag === 'function') gtag('event', name, payload)
+        if (metricaId && typeof window.ym === 'function') {
+          try {
+            window.ym(Number(metricaId), 'reachGoal', name, payload)
+          } catch (_) {
+            /* Metrica may still be loading */
+          }
+        }
+      }
+    </script>
+  ) : null
+}
+{
+  enableGa4 ? (
     <>
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`} />
       <script is:inline define:vars={{ ga4Id }}>
-        window.dataLayer = window.dataLayer || []
-        function gtag() {
-          dataLayer.push(arguments)
-        }
-        window.gtag = gtag
         gtag('js', new Date())
         gtag('config', ga4Id)
-
-        window.heseloTrack = function heseloTrack(name, params) {
-          if (typeof gtag === 'function') gtag('event', name, params || {})
-        }
       </script>
     </>
   ) : null
 }
 {
-  enableGa4Funnels ? (
+  enableLeadTracking ? (
     <script>
       import { campaignTrackParams, captureCampaignFromLocation } from '@/lib/campaign'
 
@@ -147,12 +163,40 @@ const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
   ) : null
 }
 {
-  clarityId || metricaId ? (
-    <script is:inline define:vars={{ clarityId, metricaId }}>
+  metricaId ? (
+    <script is:inline define:vars={{ metricaId }}>
+      ;(function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            ;(m[i].a = m[i].a || []).push(arguments)
+          }
+        m[i].l = 1 * new Date()
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) return
+        }
+        k = e.createElement(t)
+        a = e.getElementsByTagName(t)[0]
+        k.async = 1
+        k.src = r
+        a.parentNode.insertBefore(k, a)
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym')
+      window.ym(Number(metricaId), 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      })
+    </script>
+  ) : null
+}
+{
+  clarityId ? (
+    <script is:inline define:vars={{ clarityId }}>
       ;(function () {
         var loaded = false
         function loadClarity() {
-          if (!clarityId || loaded) return
+          if (loaded) return
           loaded = true
           ;(function (c, l, a, r, i, t, y) {
             c[a] =
@@ -167,34 +211,8 @@ const enableGa4Funnels = provider === 'ga4' && Boolean(ga4Id)
             y.parentNode.insertBefore(t, y)
           })(window, document, 'clarity', 'script', clarityId)
         }
-        function loadMetrica() {
-          if (!metricaId) return
-          ;(function (m, e, t, r, i, k, a) {
-            m[i] =
-              m[i] ||
-              function () {
-                ;(m[i].a = m[i].a || []).push(arguments)
-              }
-            m[i].l = 1 * new Date()
-            for (var j = 0; j < document.scripts.length; j++) {
-              if (document.scripts[j].src === r) return
-            }
-            k = e.createElement(t)
-            a = e.getElementsByTagName(t)[0]
-            k.async = 1
-            k.src = r
-            a.parentNode.insertBefore(k, a)
-          })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym')
-          window.ym(Number(metricaId), 'init', {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true,
-          })
-        }
         function boot() {
           loadClarity()
-          loadMetrica()
           window.removeEventListener('pointerdown', boot)
           window.removeEventListener('keydown', boot)
           window.removeEventListener('scroll', boot)

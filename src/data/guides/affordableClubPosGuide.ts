@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Sərfəli klub POS alternativi necə seçilir?',
       seoTitle: 'Sərfəli klub POS alternativi — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'Oyun, karaoke, bilyard, antikafe və launj üçün sərfəli POS: qərar meyarları, müqayisə cədvəli və {low} {currency}/aydan Heselo Azərbaycan, ingilis və rus dillərindədir.',
+        'Oyun, karaoke, bilyard və launj üçün sərfəli POS: meyarlar, müqayisə və açıq qiymət. Restoran POS əvəzi deyil.',
       keywords: [
         'sərfəli klub POS',
         'ucuz klub POS',

@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaqlı əyləncə klubları üçün Clopos alternativi',
       seoTitle: 'Clopos alternativi klublar üçün — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'Clopos restoran POS-udur; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli, yerli restoran bazar mənzərəsi və keçid yoxlama siyahısı — Azərbaycan, EN, RU.',
+        'Clopos restoran POS-udur; Heselo otaq-vaxt klubları üçündür. Meyarlar, müqayisə cədvəli və keçid siyahısı.',
       keywords: [
         'clopos alternativ',
         'clopos alternativi klublar',

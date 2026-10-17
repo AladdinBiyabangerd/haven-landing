@@ -7,9 +7,9 @@ export const guidesHubEn: GuidesHubCopy = {
   eyebrow: 'Guides',
   h1: 'How club and room operations actually work',
   intro: 'Start with a core topic. Other comparisons and alternatives are listed below.',
-  seoTitle: 'Guides — club operations, choosing software, and POS alternatives | Heselo',
+  seoTitle: 'Guides — club panel and POS alternatives',
   seoDescription:
-    'Running gaming clubs, karaoke, billiards, lounges, and anti-cafés: bookings, live sessions, and cash — plus practical guides on iiko, Clopos, Dine, and Excel alternatives.',
+    'Gaming, karaoke and billiards guides; practical alternatives to iiko, Clopos, Dine and Excel.',
   keywords: [
     'what is a gaming club management system',
     'playstation club software',
@@ -832,7 +832,7 @@ export const guidesEn: GuideCopy[] = [
     h1: 'How much does Heselo cost? Published plans explained',
     seoTitle: 'Heselo pricing — published plans by venue type',
     seoDescription:
-      'Heselo plans: PS {gaming}, billiards {billiards}, anti-café {antikafe}, karaoke and lounge {karaoke} {currency}/month. Plans, annual billing, custom quotes, and a free trial/demo.',
+      'Heselo plans: PS {gaming}, billiards {billiards}, anti-café {antikafe}, karaoke {karaoke} {currency}/mo. Annual billing, custom quotes, free demo.',
     keywords: [
       'Heselo pricing',
       'Heselo plans',

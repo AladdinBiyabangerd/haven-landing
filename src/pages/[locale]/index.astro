@@ -36,19 +36,7 @@ const homeSeo = {
 }
 ---
 
-<BaseLayout
-  locale={locale}
-  messages={messages}
-  page="home"
-  seo={homeSeo}
-  preloadImages={[
-    {
-      href: '/images/product/live-floor.webp',
-      type: 'image/webp',
-      imagesrcset: '/images/product/live-floor.webp 1x, /images/product/live-floor@2x.webp 2x',
-    },
-  ]}
->
+<BaseLayout locale={locale} messages={messages} page="home" seo={homeSeo}>
   <div class="home">
     <Hero locale={locale} messages={messages} />
     <How messages={messages} />

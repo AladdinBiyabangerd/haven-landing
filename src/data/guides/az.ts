@@ -7,9 +7,9 @@ export const guidesHubAz: GuidesHubCopy = {
   eyebrow: 'Bələdçilər',
   h1: 'Klub və otaq işi necə qurulur?',
   intro: 'Əvvəl əsas mövzunu seçin. Digər müqayisə və alternativlər aşağıda siyahıdadır.',
-  seoTitle: 'Bələdçilər — klub idarəetməsi, proqram seçimi və POS alternativləri | Heselo',
+  seoTitle: 'Bələdçilər — klub paneli və POS alternativləri',
   seoDescription:
-    'Oyun klubu, karaoke, bilyard, launj və antikafe idarəetməsi; rezervasiya, canlı sessiya, kassa; iiko, Clopos, Dine və Excel alternativləri — praktik bələdçilər.',
+    'Oyun klubu, karaoke və bilyard bələdçiləri; iiko, Clopos, Dine və Excel alternativləri — praktik müqayisə.',
   keywords: [
     'oyun klubu idarəetmə sistemi nədir',
     'playstation klub proqramı',
@@ -832,7 +832,7 @@ export const guidesAz: GuideCopy[] = [
     h1: 'Heselo qiyməti nədir? Açıq tariflər izahı',
     seoTitle: 'Heselo qiyməti — məkan tipinə görə açıq tariflər',
     seoDescription:
-      'Heselo planları: PS {gaming}, bilyard {billiards}, antikafe {antikafe}, karaoke və launj {karaoke} {currency}/aydan. Planlar, illik ödəniş, fərdi təklif və pulsuz sınaq/demo.',
+      'Heselo planları: PS {gaming}, bilyard {billiards}, antikafe {antikafe}, karaoke {karaoke} {currency}/aydan. İllik ödəniş, fərdi təklif, pulsuz demo.',
     keywords: [
       'Heselo qiymət',
       'Heselo tarif',

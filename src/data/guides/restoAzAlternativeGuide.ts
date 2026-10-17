@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaqlı əyləncə klubları üçün resto.az alternativi',
       seoTitle: 'resto.az alternativi klublar üçün — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'resto.az restoran/satış POS istiqamətindədir; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli. Müqayisə cədvəli, bazar icmalı və keçid siyahısı Azərbaycan, ingilis və rus dillərindədir.',
+        'resto.az restoran/satış POS istiqamətindədir; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli və keçid siyahısı — AZ, EN, RU.',
       keywords: [
         'resto.az alternativ',
         'resto.az alternativi klublar',

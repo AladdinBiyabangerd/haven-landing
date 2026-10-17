@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Stansiya taymeri vs klub paneli — Club Timer alternativi',
       seoTitle: 'Club Timer alternativi — taymer vs Heselo klub paneli | Heselo',
       seoDescription:
-        'Club Timer internet və PlayStation klubları üçün stansiya vaxtı sayır; Heselo bron, sessiya və kassadır. Taymer kifayət edəndə saxlayın Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'Club Timer stansiya vaxtını sayır; Heselo bron, sessiya və kassadır. Taymer kifayət edəndə saxlayın — cədvəl, FAQ.',
       keywords: [
         'club timer alternativ',
         'club timer alternativi',

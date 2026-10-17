@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaq-vaxt klubları üçün Kassa.az brendi alternativi',
       seoTitle: 'Kassa.az alternativi — otaq-vaxt klubları | Heselo (Kassa.az deyil)',
       seoDescription:
-        'Kassa.az brendinin kassa həlli ilə Heselo müqayisəsi: ümumi satış proqramı yoxsa oyun klubları üçün rezervasiya və vaxt sessiyası. Cədvəl, bazar mənzərəsi, FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'Kassa.az ümumi satış kassasıdır; Heselo klub bronu və vaxt sessiyasıdır. Cədvəl, bazar, FAQ — AZ, EN, RU.',
       keywords: [
         'kassa.az alternativ',
         'kassa az alternativi',
@@ -184,7 +184,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'A Kassa.az brand alternative for room-time clubs',
       seoTitle: 'Kassa.az Alternative for Room-Time Clubs — Heselo (not Kassa.az)',
       seoDescription:
-        'Compare the Kassa.az brand’s till solution with Heselo: general sales software versus bookings and timed sessions for gaming clubs. Table, landscape, FAQ — AZ, EN, RU.',
+        'Kassa.az is a general till; Heselo is club booking and timed sessions. Comparison table, landscape, FAQ — AZ, EN, RU.',
       keywords: [
         'kassa.az alternative',
         'kassa az alternative',

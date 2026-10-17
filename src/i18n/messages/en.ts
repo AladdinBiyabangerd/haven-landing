@@ -37,6 +37,8 @@ export const en: Messages = {
     rights: 'All rights reserved.',
     tagline: 'Tables · Rooms · Live floor · Cash',
     credit: 'Founded by',
+    toolTariffCalculator: 'Tariff calculator',
+    toolPricingModel: 'Per-console vs per-club',
   },
   hero: {
     brandHint: 'Heselo',
@@ -45,6 +47,63 @@ export const en: Messages = {
       'Schedule, live sessions, and the shift on one screen — instead of WhatsApp and spreadsheets. Not restaurant POS or kitchen software.',
     ctaPrimary: 'Request a demo',
     ctaSecondary: 'Message on WhatsApp',
+  },
+  liveFloorMock: {
+    title: 'Live floor',
+    legendActive: 'Active',
+    legendEmpty: 'Free',
+    badgeActive: 'Active',
+    badgeEmpty: 'Free',
+    hint: 'Pause · receipt · payment — one session',
+    ariaLabel: 'Heselo live floor panel — room and station cards',
+  },
+  cashMock: {
+    title: 'Cash',
+    shiftOpen: 'Shift open',
+    cashLabel: 'Cash',
+    cardLabel: 'Card',
+    totalLabel: 'Total',
+    txTitle: 'Recent transactions',
+    txToday: 'Today',
+    payCash: 'Cash payment',
+    payCard: 'Card payment',
+    hint: 'Count · report · close',
+    ariaLabel: 'Heselo cash panel — shift summary and transactions',
+  },
+  sessionsMock: {
+    title: 'Session',
+    roomLabel: 'VIP 1',
+    statusActive: 'Active',
+    elapsedLabel: 'Elapsed',
+    dueLabel: 'Amount due',
+    extendChip: '+30 min',
+    pauseChip: 'Pause',
+    stopChip: 'End',
+    hint: 'Extend · pause · pay — one session',
+    ariaLabel: 'Heselo session panel — time, amount, and extend',
+  },
+  inventoryMock: {
+    title: 'Inventory',
+    subtitle: 'Track product stock',
+    summaryLabel: 'Product range',
+    summaryValue: '4 products',
+    stockPill: 'Stock',
+    colProduct: 'Product',
+    colQty: 'Qty',
+    colStatus: 'Status',
+    statusOk: 'OK',
+    statusLow: 'Low',
+    unit: 'pcs',
+    typeDrink: 'Drink',
+    typeSnack: 'Snack',
+    products: {
+      cola: 'Coca-Cola 0.5',
+      chips: 'Chips',
+      water: 'Water 0.5',
+      energy: 'Energy drink',
+    },
+    hint: 'Session · sale · stock',
+    ariaLabel: 'Heselo inventory panel — stock levels and status',
   },
   trust: {
     items: [
@@ -297,7 +356,6 @@ export const en: Messages = {
   productShot: {
     alts: {
       'live-floor': 'Heselo live floor — active room sessions and payment',
-      schedule: 'Heselo schedule — room and table booking calendar',
       sessions: 'Heselo sessions list — active and closed sessions',
       cash: 'Heselo cash desk — daily transactions and balance',
       inventory: 'Heselo inventory — stock levels and counts',
@@ -456,28 +514,29 @@ export const en: Messages = {
   },
   featuresPage: {
     eyebrow: 'Features',
-    title: 'Reservations, cash, and inventory — one panel',
-    intro: 'All of this is in the panel today — not a roadmap.',
+    title: 'Booking, cash, and stock — one panel',
+    intro:
+      'If bookings live in chat, time in a spreadsheet, and money in a separate till, the evening total never matches. Heselo keeps one record: guest arrives → session opens → drinks on the bill → shift closes.',
     solutionLinkLabel: 'Details',
     modules: [
       {
-        title: 'Schedule, booking, and live session',
-        desc: 'Table/room schedule, reservations, and active floor sessions on the same data.',
+        title: 'Schedule and live session',
+        desc: 'Which room is free, who extended, which bill is open — one screen.',
         solutionSlug: 'reservations',
       },
       {
         title: 'Cash and shift',
-        desc: 'Open and close the shift, payments, reports, and cash count.',
+        desc: 'When you close the shift, the cash count is already ready — no evening spreadsheet.',
         solutionSlug: 'pos',
       },
       {
         title: 'Products and inventory',
-        desc: 'Catalog, stock, counts, and quick sale without a booking.',
+        desc: 'Drinks and snacks go on the session bill; stock drops automatically.',
         solutionSlug: 'inventory',
       },
       {
-        title: 'Customers, stats, and settings',
-        desc: 'Customer cards, reports, pricing rules, staff, and protection code.',
+        title: 'Customers and settings',
+        desc: 'Recognise regulars; control who can give discounts with staff rights.',
       },
     ],
   },
@@ -1006,9 +1065,9 @@ export const en: Messages = {
         keywords: ['Heselo FAQ', 'Heselo questions', 'Heselo pricing', 'gaming club software FAQ', 'venue management system FAQ'],
       },
       home: {
-        title: 'Heselo — booking & cash panel for gaming clubs and room venues',
+        title: 'Heselo — booking & cash for gaming and room venues',
         description:
-          'Heselo is a booking and cash panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges. Schedule, live session, and shift in one place — instead of WhatsApp/spreadsheets, not restaurant POS. From {low} {currency}/month. Free demo.',
+          'Booking, live session and cash for gaming clubs, karaoke, billiards and room lounges — one panel instead of WhatsApp. Not restaurant POS. From {low} {currency}/mo.',
         keywords: [
           'Heselo',
           'venue management system',
@@ -1032,9 +1091,9 @@ export const en: Messages = {
         ],
       },
       pricing: {
-        title: 'Published pricing — from {low} {currency} club panel | Heselo',
+        title: 'Published pricing — from {low} {currency} | Heselo',
         description:
-          'Heselo prices are public: PS from {gaming}, billiards {billiards}, karaoke/lounge {karaoke}, anti-café {antikafe} {currency}/month. Different plans by venue type; custom quote only as an add-on for multi-branch. Full table on the pricing page.',
+          'PS from {gaming}, billiards {billiards}, karaoke {karaoke}, anti-café {antikafe} {currency}/mo. Plans by venue type; multi-branch custom quote. No card required.',
         keywords: [
           'Heselo pricing',
           'Heselo price',
@@ -1088,9 +1147,9 @@ export const en: Messages = {
         ],
       },
       guides: {
-        title: 'Guides — club panel and POS alternatives | Heselo',
+        title: 'Guides — club panel and POS alternatives',
         description:
-          'Gaming, karaoke and billiards flows; honest alternatives to iiko, Clopos, Dine, MinuPOS and Excel.',
+          'Gaming, karaoke and billiards guides; honest alternatives to iiko, Clopos, Dine, MinuPOS and Excel.',
         keywords: [
           'what is a gaming club management system',
           'iiko alternative',

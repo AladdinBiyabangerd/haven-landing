@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Kafe/PS server vs otaq-vaxt — Akinsoft alternativi',
       seoTitle: 'Akinsoft alternativi — CafePlus vs Heselo klub paneli | Heselo',
       seoDescription:
-        'Akinsoft CafePlus internet kafe və PlayStation salonu üçün masa/konsol izləmədir; Heselo otaq-vaxt, bron və kassadır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'Akinsoft CafePlus internet kafe və PlayStation salonu üçün masa/konsol izləmədir; Heselo otaq-vaxt, bron və kassadır Müqayisə cədvəli və FAQ — AZ, EN, RU.',
       keywords: [
         'akinsoft alternativ',
         'akinsoft cafeplus alternativ',

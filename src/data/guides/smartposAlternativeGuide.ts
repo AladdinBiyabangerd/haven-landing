@@ -17,7 +17,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Otaqlı əyləncə klubları üçün SmartPOS alternativi',
       seoTitle: 'SmartPOS alternativi klublar üçün — otaq, sessiya, kassa | Heselo',
       seoDescription:
-        'SmartPOS restoran/satış POS istiqamətindədir; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli. Müqayisə cədvəli, bazar icmalı və keçid siyahısı Azərbaycan, ingilis və rus dillərindədir.',
+        'SmartPOS restoran/satış POS istiqamətindədir; Heselo otaq və vaxt klubları üçündür. Qərar meyarları, müqayisə cədvəli və keçid siyahısı — AZ, EN, RU.',
       keywords: [
         'smartpos alternativ',
         'smartpos alternativi klublar',

@@ -18,7 +18,7 @@ const guides: Record<Locale, Omit<GuideCopy, 'slug' | 'datePublished' | 'dateMod
       h1: 'Sadə taymer vs klub paneli — PlayStation kafe proqramı',
       seoTitle: 'PlayStation kafe proqramı alternativi — taymer vs Heselo | Heselo',
       seoDescription:
-        'Hasansoft tipli stansiya taymeri vs Heselo klub paneli. Sadə taymer nə vaxt kifayətdir, nə vaxt bron və kassa lazımdır Müqayisə cədvəli və FAQ Azərbaycan, ingilis və rus dillərindədir.',
+        'Hasansoft tipli stansiya taymeri vs Heselo klub paneli. Sadə taymer nə vaxt kifayətdir, nə vaxt bron və kassa lazımdır Müqayisə cədvəli və FAQ — AZ, EN, RU.',
       keywords: [
         'playstation kafe proqramı',
         'playstation klub proqramı',

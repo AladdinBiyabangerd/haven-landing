@@ -2,8 +2,12 @@ import type { SolutionCopy, SolutionsHubCopy } from './types'
 
 export const solutionsHubEn: SolutionsHubCopy = {
   eyebrow: 'Business solutions',
-  h1: 'Which venue type matches your floor?',
-  intro: 'Pick your type — each page is written for that venue’s day-to-day work.',
+  h1: 'What kind of venue do you run?',
+  intro:
+    'Gaming club, karaoke, billiards, anti-café, or room lounge — pick your type. The page below is written for that floor’s day-to-day work.',
+  howTitle: 'Where to start',
+  howBody:
+    'Sell PlayStation / console time — open Gaming club. Karaoke rooms — Karaoke. Hookah VIP rooms — Lounge. Several types can share one account.',
   seoTitle: 'Solutions by venue — gaming club, karaoke, billiards | Heselo',
   seoDescription:
     'One page per venue: gaming club software (PlayStation / console), karaoke, billiards booking, anti-cafés, and room lounges. Free demo.',

@@ -48,22 +48,10 @@ const cardCta = `${hub.cardCta}${messages.common.linkArrow}`
         <p class="lead">{hub.intro}</p>
       </header>
       {
-        hub.body && hub.body.length > 0 ? (
-          <div class="hub-prose">
-            {hub.body.map((para) => (
-              <p>{para}</p>
-            ))}
-          </div>
-        ) : null
-      }
-      {
         hub.howTitle && hub.howBody ? (
-          <section class="hub-how" aria-labelledby="hub-how-title">
-            <h2 id="hub-how-title" class="group-title">
-              {hub.howTitle}
-            </h2>
-            <p class="hub-how-body">{hub.howBody}</p>
-          </section>
+          <p class="hub-how">
+            <strong>{hub.howTitle}:</strong> {hub.howBody}
+          </p>
         ) : null
       }
       <h2 class="group-title">{hub.primaryTitle}</h2>
@@ -109,27 +97,16 @@ const cardCta = `${hub.cardCta}${messages.common.linkArrow}`
 </BaseLayout>
 
 <style>
-  .hub-prose {
-    max-width: 42rem;
-    margin: 0 0 0.5rem;
-    display: grid;
-    gap: 0.85rem;
-  }
-  .hub-prose p {
-    margin: 0;
-    color: var(--ink-muted);
-    font-size: var(--text-md);
-    line-height: 1.65;
-  }
   .hub-how {
-    max-width: 42rem;
-    margin: 0 0 0.5rem;
-  }
-  .hub-how-body {
-    margin: 0;
+    margin: 0 0 1.25rem;
+    max-width: 40rem;
+    font-size: var(--text-sm);
+    line-height: 1.55;
     color: var(--ink-muted);
-    font-size: var(--text-md);
-    line-height: 1.65;
+  }
+  .hub-how strong {
+    color: var(--ink);
+    font-weight: 700;
   }
   .group-title {
     margin: 1.75rem 0 0.85rem;
