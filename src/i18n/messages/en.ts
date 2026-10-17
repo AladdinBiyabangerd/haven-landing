@@ -234,14 +234,17 @@ export const en: Messages = {
       {
         title: 'Live tracking',
         desc: 'Active sessions, pause, receipts, and payment — the real floor state.',
+        href: '/solutions/reservations',
       },
       {
         title: 'Schedule & reservations',
         desc: 'Tables and rooms on one schedule — transfer, cancel, history.',
+        href: '/solutions/reservations',
       },
       {
         title: 'Cash',
         desc: 'Open and close the shift; daily and shift reports in the same panel.',
+        href: '/solutions/pos',
       },
     ],
   },
@@ -261,14 +264,17 @@ export const en: Messages = {
       {
         title: 'Set up the venue',
         desc: 'Tables, rooms, products, team, and protection code.',
+        href: '/features',
       },
       {
         title: 'Run the shift',
         desc: 'Bookings, live sessions, and cash — one panel.',
+        href: '/solutions/reservations',
       },
       {
         title: 'Close the day',
         desc: 'Cash count and report — revenue is clear.',
+        href: '/solutions/pos',
       },
     ],
   },

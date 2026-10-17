@@ -234,14 +234,17 @@ export const az: Messages = {
       {
         title: 'Canlı zal',
         desc: 'Aktiv sessiyalar, pauza, qəbz və ödəniş — zalın real vəziyyəti.',
+        href: '/solutions/reservations',
       },
       {
         title: 'Cədvəl və rezervasiyalar',
         desc: 'Masa və otaqlar eyni cədvəldə — köçürmə, ləğv, tarixçə.',
+        href: '/solutions/reservations',
       },
       {
         title: 'Kassa',
         desc: 'Növbəni açın və bağlayın; günlük və növbəlik hesabat eyni paneldə.',
+        href: '/solutions/pos',
       },
     ],
   },
@@ -261,14 +264,17 @@ export const az: Messages = {
       {
         title: 'Məkanı qurun',
         desc: 'Masalar, otaqlar, məhsullar, komanda və qoruma kodu.',
+        href: '/features',
       },
       {
         title: 'Növbəni idarə edin',
         desc: 'Rezervasiya, canlı sessiya və kassa — eyni paneldə.',
+        href: '/solutions/reservations',
       },
       {
         title: 'Günü bağlayın',
         desc: 'Kassa sayımı və hesabat — gəlir aydın görünür.',
+        href: '/solutions/pos',
       },
     ],
   },

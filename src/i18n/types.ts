@@ -239,6 +239,8 @@ export type Messages = {
     items: Array<{
       title: string
       desc: string
+      /** Locale-relative path, e.g. `/solutions/pos` */
+      href: string
     }>
   }
   homePricing: {
@@ -254,7 +256,12 @@ export type Messages = {
     eyebrow: string
     title: string
     titleAccent: string
-    steps: Array<{ title: string; desc: string }>
+    steps: Array<{
+      title: string
+      desc: string
+      /** Locale-relative path, e.g. `/features` */
+      href: string
+    }>
   }
   faq: {
     eyebrow: string

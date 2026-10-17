@@ -1,9 +1,13 @@
 ---
+import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
+import { localePath } from '@/lib/site'
+
 interface Props {
+  locale: Locale
   messages: Messages
 }
-const { messages } = Astro.props
+const { locale, messages } = Astro.props
 const h = messages.how
 const last = h.steps.length - 1
 ---
@@ -22,10 +26,10 @@ const last = h.steps.length - 1
               <span class="dot" />
               {i < last ? <span class="arrow" /> : null}
             </div>
-            <div class="step-body">
+            <a class="step-body" href={localePath(locale, step.href)}>
               <h3 class="type-card-title">{step.title}</h3>
               <p>{step.desc}</p>
-            </div>
+            </a>
           </li>
         ))
       }
@@ -97,6 +101,13 @@ const last = h.steps.length - 1
     gap: 0.2rem;
     min-width: 0;
     padding-bottom: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .how .step-body:hover .type-card-title,
+  .how .step-body:focus-visible .type-card-title {
+    color: var(--accent-deep);
   }
 
   .how .steps > li:last-child .step-body {
@@ -105,6 +116,7 @@ const last = h.steps.length - 1
 
   .how .step-body .type-card-title {
     font-size: var(--text-md);
+    transition: color 0.2s var(--ease);
   }
 
   .how .step-body p {
