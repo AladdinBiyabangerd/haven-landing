@@ -120,6 +120,18 @@ export const en: Messages = {
     hint: 'Catalog · price · quick sale',
     ariaLabel: 'Heselo product catalog — sale prices',
   },
+  roomAnalyticsMock: {
+    title: 'Analytics',
+    subtitle: 'How your venue is performing',
+    weekPill: 'This week',
+    revenueLabel: 'Revenue',
+    occupancyLabel: 'Occupancy',
+    roomsTitle: 'Revenue by space',
+    barLabel: 'Bar',
+    shareLabel: '{pct}% of total revenue',
+    hint: 'Revenue · occupancy · peak hours',
+    ariaLabel: 'Heselo analytics panel — revenue, occupancy, and rooms',
+  },
   trust: {
     items: [
       '15-min demo, no card',

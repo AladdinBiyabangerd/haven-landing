@@ -147,6 +147,19 @@ export type Messages = {
     hint: string
     ariaLabel: string
   }
+  /** Sparse HTML vignette replacing the room-analytics marketing image. */
+  roomAnalyticsMock: {
+    title: string
+    subtitle: string
+    weekPill: string
+    revenueLabel: string
+    occupancyLabel: string
+    roomsTitle: string
+    barLabel: string
+    shareLabel: string
+    hint: string
+    ariaLabel: string
+  }
   trust: {
     items: string[]
   }

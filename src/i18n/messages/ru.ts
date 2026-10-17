@@ -120,6 +120,18 @@ export const ru: Messages = {
     hint: 'Каталог · цена · быстрая продажа',
     ariaLabel: 'Каталог товаров Heselo — цены продажи',
   },
+  roomAnalyticsMock: {
+    title: 'Аналитика',
+    subtitle: 'Показатели вашего заведения',
+    weekPill: 'Эта неделя',
+    revenueLabel: 'Выручка',
+    occupancyLabel: 'Загрузка',
+    roomsTitle: 'Выручка по зонам',
+    barLabel: 'Бар',
+    shareLabel: '{pct}% от общей выручки',
+    hint: 'Выручка · загрузка · часы пик',
+    ariaLabel: 'Панель аналитики Heselo — выручка, загрузка и комнаты',
+  },
   trust: {
     items: [
       'Демо 15 мин — без карты',

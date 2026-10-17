@@ -120,6 +120,18 @@ export const az: Messages = {
     hint: 'Kataloq · qiymət · sürətli satış',
     ariaLabel: 'Heselo məhsul kataloqu — satış qiymətləri',
   },
+  roomAnalyticsMock: {
+    title: 'Analitika',
+    subtitle: 'Məkanınızın göstəriciləri',
+    weekPill: 'Bu həftə',
+    revenueLabel: 'Gəlir',
+    occupancyLabel: 'Doluluq',
+    roomsTitle: 'Məkanlar üzrə gəlir',
+    barLabel: 'Bar',
+    shareLabel: 'Ümumi gəlirin {pct} faizi',
+    hint: 'Gəlir · doluluq · pik saat',
+    ariaLabel: 'Heselo analitika paneli — gəlir, doluluq və otaqlar',
+  },
   trust: {
     items: [
       '15 dəq demo — kart lazım deyil',
