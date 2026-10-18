@@ -93,7 +93,6 @@ export const solutionsEn: SolutionCopy[] = [
         ['Booking and schedule', 'Yes — tables and rooms on one calendar'],
         ['Bar / café sales on the session', 'Yes — with the cash shift'],
         ['Platform', 'Web / cloud (tablet or computer)'],
-        ['QR membership check-in', 'No'],
         ['Light relay / auto table lamps', 'No — separate hardware'],
         ['Price', '{billiards}–59 AZN/month (published plans)'],
         ['Languages', 'AZ, EN, RU'],

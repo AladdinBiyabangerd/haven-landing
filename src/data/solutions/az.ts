@@ -93,7 +93,6 @@ export const solutionsAz: SolutionCopy[] = [
         ['Rezervasiya və cədvəl', 'Bəli — masa və otaq bir cədvəldə'],
         ['Bar / kafe satış (sessiya hesabına)', 'Bəli — növbə ilə birlikdə'],
         ['Platforma', 'Web / bulud (planşet və ya kompüter)'],
-        ['QR ilə üzvlük check-in', 'Xeyr'],
         ['İşıq relye / avtomatik lampa', 'Xeyr — ayrıca avadanlıq sahəsidir'],
         ['Qiymət', '{billiards}–59 AZN/ay (açıq planlar)'],
         ['Dillər', 'AZ, EN, RU'],
