@@ -20,6 +20,7 @@ const retiredPaths = {
   '/guides/manage-restaurant-reservations/': '/solutions/reservations/',
   '/guides/restaurant-pos-system/': '/solutions/pos/',
   '/guides/restaurant-inventory-basics/': '/solutions/inventory/',
+  '/guides/billiards-software-comparison-2026/': '/guides/billiards-software-comparison/',
 }
 const redirects = {
   // Prefer config redirects (HTTP 301 via adapter) over Astro.redirect() pages,

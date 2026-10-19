@@ -2,7 +2,7 @@ import type { Locale } from '@/i18n/config'
 import type { GuideCopy } from './types'
 
 const PUBLISHED = '2026-10-17'
-const MODIFIED = '2026-10-17'
+const MODIFIED = '2026-10-19'
 const relatedSolutions: GuideCopy['relatedSolutions'] = ['billiards', 'pos', 'inventory']
 
 const guides: Record<
@@ -14,7 +14,7 @@ const guides: Record<
     h1: 'BilliardPOS alternativi — bilyard və bar paneli',
     seoTitle: 'BilliardPOS alternativi — bilyard klubu proqramı | Heselo',
     seoDescription:
-      'BilliardPOS masa vaxtı, anbar və termal printer inteqrasiyası ilə tanınır. Heselo AZ qiymətli bulud paneldır: bron, sessiya, kassa.',
+      'BilliardPOS masa vaxtı, ESP32 işıq relyesi və TV taymer ilə tanınır. Heselo AZ/EN/RU bulud paneldır: bron, sessiya, kassa.',
     keywords: [
       'BilliardPOS alternativ',
       'BilliardPOS alternativi',
@@ -23,40 +23,40 @@ const guides: Record<
       'bilyard anbar',
     ],
     intro:
-      'BilliardPOS bilyard salonları üçün masa vaxtını izləyən, anbar və mətbəx/bar sifarişlərini idarə edən, termal printerlərlə işləyən sistem kimi təqdim olunur. Qiymət tez-tez masa sayına görə aylıq modeldə danışılır. Azərbaycanda isə klub sahibi açıq AZN tarif, AZ dil və sadə bulud giriş istəyə bilər. Bu yazı BilliardPOS kateqoriyasını Heselo ilə müqayisə edir.',
+      'BilliardPOS bilyard salonları üçün bulud sistemidir: masa taymeri, ESP32 IP işıq relyesi, TV taymer ekranları, REST API və webhook açıq materiallarda göstərilir (billiardpos.net, yoxlama 18.10.2026). Qiymət masa qrupuna görə açıqdır: $39 (≤8 masa), $69 (≤16), $99 (≤24)/ay; illik ödənişdə −17%. Heselo isə AZ/EN/RU interfeys və otaq+masa+bar+kassa bir paneldə — relye yoxdur. Bu yazı dürüst müqayisədir.',
     sections: [
       {
         id: 'when-heselo',
         title: 'Heselo nə vaxt kifayət edir?',
         paragraphs: [
-          'Masa bronu, canlı sessiya, bar satışı və növbə kassası əsas ehtiyacdırsa, Heselo kifayət edə bilər. Anbar katalogu paneldə var; ağır mətbəx KDS və onlarla tədarükçü ssenarisi üçün restoran POS paralel qala bilər.',
+          'Masa bronu, canlı sessiya, bar satışı və növbə kassası əsas ehtiyacdırsa və işıq relye mütləq deyilsə, Heselo kifayət edə bilər. Anbar katalogu paneldə var; ağır mətbəx KDS üçün restoran POS paralel qala bilər.',
         ],
         bullets: [
           'Masa taymeri, pauza, uzatma',
           'Rezervasiya cədvəli',
           'Bar satış sessiya hesabına',
-          'Açıq qiymət: {billiards} {currency}/aydan',
+          'Qiymət: {billiards} {currency}/aydan (katalog)',
         ],
       },
       {
         id: 'when-billiardpos',
         title: 'BilliardPOS nə vaxt qala bilər?',
         paragraphs: [
-          'Termal printer axını, dərin anbar və mətbəx sifarişləri sizin üçün mərkəzdirsə, BilliardPOS və ya restoran POS-u ayrıca yoxlayın. Heselo klub otaq-vaxt paneli kimi qurulub — tam restoran mətbəxi deyil.',
+          'ESP32 işıq relyesi, TV taymer və ya API/webhook sizin üçün mərkəzdirsə, BilliardPOS-u onların saytında qiymətləndirin. Heselo klub otaq-vaxt paneli kimi qurulub — relye inteqrasiyası yoxdur, tam restoran mətbəxi deyil.',
         ],
       },
       {
         id: 'comparison',
         title: 'BilliardPOS və Heselo',
-        paragraphs: ['BilliardPOS qiymət diapazonunu onların saytından təsdiqləyin; burada yalnız açıq mənbəli ümumi təsvir var.'],
+        paragraphs: ['Qiymət və funksiya: billiardpos.net (18.10.2026). Heselo qiyməti bu saytın katalog API-sindən gəlir.'],
         table: {
           headers: ['Aspekt', 'BilliardPOS', 'Heselo'],
           rows: [
-            ['Fokus', 'Masa vaxtı + anbar/printer', 'Bron + sessiya + klub kassası'],
+            ['Fokus', 'Masa vaxtı + ESP32 işıq + TV', 'Bron + sessiya + klub kassası'],
             ['Platforma', 'Web / bulud', 'Web / bulud'],
-            ['Anbar', 'Güclü iddia', 'Klub kataloqu'],
-            ['Printer', 'Termal inteqrasiya iddiası', 'Demo ilə yoxlayın'],
-            ['Qiymət', 'Tez-tez masa sayına görə', '{billiards} {currency}/aydan, açıq'],
+            ['İşıq relye', 'Bəli (ESP32 IP)', 'Xeyr'],
+            ['TV / API', 'TV taymer, REST + webhook', 'Demo ilə yoxlayın'],
+            ['Qiymət', '$39 / $69 / $99 (masa qrupu)', '{billiards} {currency}/aydan'],
             ['Dillər', 'Vendor-dan asılı', 'AZ, EN, RU'],
           ],
         },
@@ -66,16 +66,16 @@ const guides: Record<
         title: 'Qərar sualları',
         paragraphs: ['Eyni masa sayı fərqli proqram tələb edə bilər.'],
         bullets: [
-          'Printer və mətbəx sifarişi mütləqdirmi?',
+          'İşıq relye və TV taymer mütləqdirmi?',
           'Bron və canlı zal eyni dərəcədə vacibdirmi?',
-          'Qiymət masa sayına görə, yoxsa məkan üzrə sabitdir?',
+          'Qiymət masa qrupuna görə, yoxsa məkan tipi üzrədir?',
         ],
       },
     ],
     faq: [
       {
         q: 'Heselo BilliardPOS-u əvəz edir?',
-        a: 'Bron, sessiya və kassa üçün çox vaxt bəli. Ağır anbar və printer stack-i mütləqdirsə, BilliardPOS və ya restoran POS-u saxlaya bilərsiniz.',
+        a: 'Bron, sessiya və kassa üçün çox vaxt bəli. ESP32 işıq relyesi mütləqdirsə, BilliardPOS-u saxlayın — Heselo relye təklif etmir.',
       },
       {
         q: 'Heselo qiyməti masa sayına görədir?',
@@ -94,7 +94,7 @@ const guides: Record<
     h1: 'BilliardPOS alternative — billiards and bar panel',
     seoTitle: 'BilliardPOS Alternative — Billiards Club Software | Heselo',
     seoDescription:
-      'BilliardPOS tracks table time with stock and thermal printers. Heselo is a cloud panel with public AZ pricing: booking, sessions, cash.',
+      'BilliardPOS tracks table time with ESP32 light relays and TV timers. Heselo is an AZ/EN/RU cloud panel: booking, sessions, cash.',
     keywords: [
       'BilliardPOS alternative',
       'billiards POS',
@@ -102,40 +102,40 @@ const guides: Record<
       'billiards inventory',
     ],
     intro:
-      'BilliardPOS is presented as software that tracks table time, manages stock and kitchen/bar tickets, and talks to thermal printers. Pricing is often discussed per table per month. In Azerbaijan, owners may want a public AZN rate, local languages, and a simple cloud login. This guide compares the BilliardPOS category with Heselo.',
+      'BilliardPOS is a cloud system for billiards halls: table timers, ESP32 IP light relays, TV timer screens, REST API and webhooks appear on billiardpos.net (checked 18 Oct 2026). Published tiers: $39 (≤8 tables), $69 (≤16), $99 (≤24) per month, −17% annual. Heselo offers AZ/EN/RU UI and room+table+bar+cash in one panel — no light relay. This guide is an honest comparison.',
     sections: [
       {
         id: 'when-heselo',
         title: 'When is Heselo enough?',
         paragraphs: [
-          'If table booking, a live session, bar sales, and a shift cash drawer are the core need, Heselo can be enough. The panel has a stock catalog; for a heavy kitchen KDS and dozens of suppliers, keep a restaurant POS in parallel.',
+          'If table booking, a live session, bar sales, and a shift cash drawer are the core need — and a light relay is not mandatory — Heselo can be enough. The panel has a stock catalog; keep a restaurant POS for a heavy kitchen KDS.',
         ],
         bullets: [
           'Table timer, pause, extend',
           'Booking schedule',
           'Bar sales on the session bill',
-          'Public price from {billiards} {currency}/month',
+          'Price from {billiards} {currency}/month (catalog)',
         ],
       },
       {
         id: 'when-billiardpos',
         title: 'When should BilliardPOS stay?',
         paragraphs: [
-          'If thermal printer flows, deep stock, and kitchen tickets are central, evaluate BilliardPOS or a restaurant POS on their own. Heselo is built as a club room-time panel — not a full kitchen stack.',
+          'If an ESP32 light relay, TV timers, or API/webhooks are central, evaluate BilliardPOS on their site. Heselo is a club room-time panel — no relay integration, not a full kitchen stack.',
         ],
       },
       {
         id: 'comparison',
         title: 'BilliardPOS vs Heselo',
-        paragraphs: ['Confirm BilliardPOS pricing on their site; here we only use public high-level claims.'],
+        paragraphs: ['Pricing and features: billiardpos.net (18 Oct 2026). Heselo prices come from this site’s catalog API.'],
         table: {
           headers: ['Aspect', 'BilliardPOS', 'Heselo'],
           rows: [
-            ['Focus', 'Table time + stock/printers', 'Booking + session + club cash'],
+            ['Focus', 'Table time + ESP32 lights + TV', 'Booking + session + club cash'],
             ['Platform', 'Web / cloud', 'Web / cloud'],
-            ['Stock', 'Strong claim', 'Club catalog'],
-            ['Printers', 'Thermal integration claim', 'Validate on demo'],
-            ['Price', 'Often per table', 'From {billiards} {currency}/month, public'],
+            ['Light relay', 'Yes (ESP32 IP)', 'No'],
+            ['TV / API', 'TV timers, REST + webhooks', 'Validate on demo'],
+            ['Price', '$39 / $69 / $99 (table bands)', 'From {billiards} {currency}/month'],
             ['Languages', 'Vendor-dependent', 'AZ, EN, RU'],
           ],
         },
@@ -145,16 +145,16 @@ const guides: Record<
         title: 'Decision questions',
         paragraphs: ['The same table count can need different software.'],
         bullets: [
-          'Are printers and kitchen tickets mandatory?',
+          'Are a light relay and TV timers mandatory?',
           'Are booking and live floor equally important?',
-          'Is price per table or fixed per venue?',
+          'Is price by table band or by venue type?',
         ],
       },
     ],
     faq: [
       {
         q: 'Does Heselo replace BilliardPOS?',
-        a: 'For booking, sessions, and cash — often yes. If deep stock and a printer stack are mandatory, keep BilliardPOS or a restaurant POS.',
+        a: 'For booking, sessions, and cash — often yes. If an ESP32 light relay is mandatory, keep BilliardPOS — Heselo does not offer relays.',
       },
       {
         q: 'Is Heselo priced per table?',
@@ -173,7 +173,7 @@ const guides: Record<
     h1: 'Альтернатива BilliardPOS — панель бильярда и бара',
     seoTitle: 'Альтернатива BilliardPOS — программа для бильярда | Heselo',
     seoDescription:
-      'BilliardPOS следит за временем стола, складом и термопринтерами. Heselo — облачная панель с открытой ценой: бронь, сеансы, касса.',
+      'BilliardPOS следит за временем стола, ESP32-реле света и TV-таймерами. Heselo — облачная панель AZ/EN/RU: бронь, сеансы, касса.',
     keywords: [
       'альтернатива BilliardPOS',
       'бильярд POS',
@@ -181,40 +181,40 @@ const guides: Record<
       'склад бильярд',
     ],
     intro:
-      'BilliardPOS представляют как систему учёта времени стола, склада и кухонных/барных заказов с термопринтерами. Цену часто обсуждают помесячно от числа столов. В Азербайджане владельцу может быть важнее открытый тариф в манатах, локальные языки и простой облачный вход. Ниже — сравнение категории BilliardPOS с Heselo.',
+      'BilliardPOS — облачная система для бильярдных залов: таймер стола, ESP32 IP-реле света, TV-таймеры, REST API и webhooks указаны на billiardpos.net (проверка 18.10.2026). Тарифы открыты: $39 (≤8 столов), $69 (≤16), $99 (≤24)/мес, −17% за год. Heselo даёт AZ/EN/RU и комнату+стол+бар+кассу в одной панели — без реле. Ниже честное сравнение.',
     sections: [
       {
         id: 'when-heselo',
         title: 'Когда хватает Heselo?',
         paragraphs: [
-          'Если ядро — бронь стола, живой сеанс, бар в счёт и кассовая смена, Heselo может хватить. В панели есть каталог склада; для тяжёлого кухонного KDS и десятков поставщиков ресторанную POS можно оставить рядом.',
+          'Если ядро — бронь, живой сеанс, бар в счёт и кассовая смена, а реле света не обязательно — Heselo может хватить. Для тяжёлого кухонного KDS ресторанную POS можно оставить рядом.',
         ],
         bullets: [
           'Таймер стола, пауза, продление',
           'Расписание брони',
           'Бар в счёт сеанса',
-          'Открытая цена от {billiards} {currency}/мес',
+          'Цена от {billiards} {currency}/мес (каталог)',
         ],
       },
       {
         id: 'when-billiardpos',
         title: 'Когда BilliardPOS может остаться?',
         paragraphs: [
-          'Если термопринтеры, глубокий склад и кухонные тикеты — центр работы, смотрите BilliardPOS или ресторанную POS отдельно. Heselo собран как клубная панель времени, а не полный кухонный стек.',
+          'Если ESP32-реле света, TV-таймеры или API/webhooks — центр работы, смотрите BilliardPOS на их сайте. Heselo — клубная панель времени без интеграции реле, не полный кухонный стек.',
         ],
       },
       {
         id: 'comparison',
         title: 'BilliardPOS и Heselo',
-        paragraphs: ['Цены BilliardPOS подтверждайте на их сайте; здесь только общие публичные формулировки.'],
+        paragraphs: ['Цены и функции: billiardpos.net (18.10.2026). Цены Heselo — из каталожного API этого сайта.'],
         table: {
           headers: ['Аспект', 'BilliardPOS', 'Heselo'],
           rows: [
-            ['Фокус', 'Время стола + склад/принтеры', 'Бронь + сеанс + клубная касса'],
+            ['Фокус', 'Время стола + ESP32-свет + TV', 'Бронь + сеанс + клубная касса'],
             ['Платформа', 'Web / облако', 'Web / облако'],
-            ['Склад', 'Сильная заявка', 'Клубный каталог'],
-            ['Принтеры', 'Заявка на термоинтеграцию', 'Проверьте на демо'],
-            ['Цена', 'Часто от числа столов', 'от {billiards} {currency}/мес, открыто'],
+            ['Реле света', 'Да (ESP32 IP)', 'Нет'],
+            ['TV / API', 'TV-таймеры, REST + webhooks', 'Проверьте на демо'],
+            ['Цена', '$39 / $69 / $99 (по числу столов)', 'от {billiards} {currency}/мес'],
             ['Языки', 'Зависит от вендора', 'AZ, EN, RU'],
           ],
         },
@@ -224,16 +224,16 @@ const guides: Record<
         title: 'Вопросы для решения',
         paragraphs: ['Одинаковое число столов может требовать разного ПО.'],
         bullets: [
-          'Обязательны ли принтеры и кухонные тикеты?',
+          'Обязательны ли реле света и TV-таймеры?',
           'Бронь и живой зал одинаково важны?',
-          'Цена за стол или фиксирована за заведение?',
+          'Цена по числу столов или по типу заведения?',
         ],
       },
     ],
     faq: [
       {
         q: 'Heselo заменяет BilliardPOS?',
-        a: 'Для брони, сеанса и кассы — часто да. Если обязателен глубокий склад и стек принтеров, оставьте BilliardPOS или ресторанную POS.',
+        a: 'Для брони, сеанса и кассы — часто да. Если обязательно ESP32-реле света, оставьте BilliardPOS — у Heselo реле нет.',
       },
       {
         q: 'Heselo считается за стол?',

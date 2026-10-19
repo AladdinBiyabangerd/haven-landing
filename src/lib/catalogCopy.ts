@@ -2,8 +2,13 @@
  * Interpolate published subscription fees from the public catalog API
  * (via venueOffers) into marketing copy that uses placeholders.
  *
- * Placeholders: {low} {high} {gaming} {billiards} {karaoke} {lounge} {antikafe} {currency}
+ * Placeholders:
+ *   {low} {high} {currency}
+ *   {gaming} {billiards} {karaoke} {lounge} {antikafe} — Small/starter monthly
+ *   {gamingHigh} {billiardsHigh} {karaokeHigh} {loungeHigh} {antikafeHigh} — Large/pro monthly
+ *
  * Fees follow the landing locale (az→AZN, ru→RUB, en→USD; RUB/USD fall back to AZN when 0).
+ * Never hardcode "AZN" / "59" in copy — always use these placeholders.
  */
 import { fillTemplate } from '@/lib/format'
 import type { Locale } from '@/i18n/config'
@@ -24,14 +29,20 @@ export type CatalogPriceVars = {
   karaoke: number
   lounge: number
   antikafe: number
+  gamingHigh: number
+  billiardsHigh: number
+  karaokeHigh: number
+  loungeHigh: number
+  antikafeHigh: number
   currency: string
 }
 
-function starterFee(
+function planFee(
   slug: PrimarySolutionSlug,
   catalog: readonly VenueOffer[],
+  index: 0 | 2,
 ): number {
-  return getVenueOffer(slug, catalog)?.plans[0]?.monthlyFee ?? 0
+  return getVenueOffer(slug, catalog)?.plans[index]?.monthlyFee ?? 0
 }
 
 export function catalogPriceVars(
@@ -42,11 +53,16 @@ export function catalogPriceVars(
   return {
     low,
     high,
-    gaming: starterFee('gaming', catalog),
-    billiards: starterFee('billiards', catalog),
-    karaoke: starterFee('karaoke', catalog),
-    lounge: starterFee('lounge', catalog),
-    antikafe: starterFee('antikafe', catalog),
+    gaming: planFee('gaming', catalog, 0),
+    billiards: planFee('billiards', catalog, 0),
+    karaoke: planFee('karaoke', catalog, 0),
+    lounge: planFee('lounge', catalog, 0),
+    antikafe: planFee('antikafe', catalog, 0),
+    gamingHigh: planFee('gaming', catalog, 2),
+    billiardsHigh: planFee('billiards', catalog, 2),
+    karaokeHigh: planFee('karaoke', catalog, 2),
+    loungeHigh: planFee('lounge', catalog, 2),
+    antikafeHigh: planFee('antikafe', catalog, 2),
     currency: catalogDisplayCurrency(locale, catalog),
   }
 }

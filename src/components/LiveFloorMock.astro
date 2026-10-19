@@ -1,14 +1,16 @@
 ---
 import type { Messages } from '@/i18n/types'
+import type { Locale } from '@/i18n/config'
 import BrandMark from '@/components/BrandMark.astro'
-import { fillTemplate } from '@/lib/format'
+import { fillTemplate, formatMoney } from '@/lib/format'
 
 interface Props {
   messages: Messages
+  locale: Locale
   class?: string
 }
 
-const { messages, class: className = '' } = Astro.props
+const { messages, locale, class: className = '' } = Astro.props
 const m = messages.liveFloorMock
 
 type Status = 'active' | 'empty' | 'overdue'
@@ -22,12 +24,12 @@ const stations: Array<{
   seconds: number
   amount: string
 }> = [
-  { name: 'VIP 1', status: 'active', timer: 'elapsed', seconds: 1 * 3600 + 24 * 60, amount: '24.00 AZN' },
-  { name: 'PS-3', status: 'active', timer: 'remaining', seconds: 1 * 60 + 45, amount: '12.00 AZN' },
-  { name: 'Karaoke 2', status: 'active', timer: 'elapsed', seconds: 2 * 3600 + 10 * 60, amount: '45.00 AZN' },
-  { name: 'Bilyard 1', status: 'empty', timer: 'elapsed', seconds: 12 * 60, amount: '10.00 AZN' },
-  { name: 'VIP 2', status: 'empty', timer: 'elapsed', seconds: 35 * 60, amount: '24.00 AZN' },
-  { name: 'PS-5', status: 'overdue', timer: 'elapsed', seconds: 8 * 60, amount: '18.00 AZN' },
+  { name: m.stations.vip1, status: 'active', timer: 'elapsed', seconds: 1 * 3600 + 24 * 60, amount: formatMoney(24, locale) },
+  { name: m.stations.ps3, status: 'active', timer: 'remaining', seconds: 1 * 60 + 45, amount: formatMoney(12, locale) },
+  { name: m.stations.karaoke2, status: 'active', timer: 'elapsed', seconds: 2 * 3600 + 10 * 60, amount: formatMoney(45, locale) },
+  { name: m.stations.billiards1, status: 'empty', timer: 'elapsed', seconds: 12 * 60, amount: formatMoney(10, locale) },
+  { name: m.stations.vip2, status: 'empty', timer: 'elapsed', seconds: 35 * 60, amount: formatMoney(24, locale) },
+  { name: m.stations.ps5, status: 'overdue', timer: 'elapsed', seconds: 8 * 60, amount: formatMoney(18, locale) },
 ]
 
 /** Compact MM:SS under 1h for countdowns; else HH:MM:SS. */

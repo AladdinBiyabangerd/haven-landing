@@ -60,6 +60,14 @@ export const az: Messages = {
     hint: 'Qalan vaxt · vaxt bitdi — karta toxun',
     ariaLabel: 'Heselo canlı zal paneli — otaq və stansiya kartları',
     toggleStation: '{name} — statusu dəyiş',
+    stations: {
+      vip1: 'VIP 1',
+      ps3: 'PS-3',
+      karaoke2: 'Karaoke 2',
+      billiards1: 'Bilyard 1',
+      vip2: 'VIP 2',
+      ps5: 'PS-5',
+    },
   },
   cashMock: {
     title: 'Kassa',
@@ -138,6 +146,11 @@ export const az: Messages = {
     shareLabel: 'Ümumi gəlirin {pct} faizi',
     hint: 'Sətirə toxun — seç',
     ariaLabel: 'Heselo analitika paneli — gəlir, doluluq və otaqlar',
+    rooms: {
+      vip1: 'VIP 1',
+      karaoke2: 'Karaoke 2',
+      billiards1: 'Bilyard 1',
+    },
   },
   auditMock: {
     title: 'Audit',
@@ -434,6 +447,9 @@ export const az: Messages = {
     altSeekingTitle: 'iiko, Clopos və ya Excel axtarırsınız?',
     altSeekingBody:
         'Restoran POS-u və ya vərəq əvəzinə otaq-vaxt paneli lazımdırsa — dürüst müqayisə bələdçilərinə baxın. Mətbəx/KDS əsasdırsa, restoran həlli daha uyğun seçimdir.',
+    altSeekingBilliardsTitle: 'Bilyard proqramı müqayisə edirsiniz?',
+    altSeekingBilliardsBody:
+      'CueDesk, BilliardPOS, Club Timer və digərləri ilə dürüst müqayisə — güclü tərəflər və boşluqlar açıq. İşıq relye lazımdırsa, Heselo-nun nə etmədiyini də yazırıq.',
   },
   productShot: {
     alts: {

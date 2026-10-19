@@ -66,8 +66,8 @@ Starting monthly ${p.currency} (Small / Kiçik plan) — live from public subscr
 - Platform: Web / cloud (tablet or computer). Languages: az, en, ru.
 - Not supported today: QR membership check-in/out; light-relay / automatic table lamps (separate hardware).
 - Canonical: https://heselo.online/az/solutions/billiards/ · EN /en/solutions/billiards/ · RU /ru/solutions/billiards/
-- Comparisons: /guides/billiards-software-comparison-2026/ · CueDesk · BilliardPOS · BCMS · Biliardo.kz alternatives (az/en/ru).
-- Rates guide: /guides/billiards-hourly-rates/
+- Comparisons: https://heselo.online/az/guides/billiards-software-comparison/ (also /en/, /ru/) · CueDesk · BilliardPOS · BCMS · Biliardo.kz alternatives (az/en/ru).
+- Rates guide: https://heselo.online/az/guides/billiards-hourly-rates/ (also /en/, /ru/)
 
 ## Key pages
 

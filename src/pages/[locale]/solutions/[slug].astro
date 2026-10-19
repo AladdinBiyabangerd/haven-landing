@@ -102,7 +102,7 @@ const faqMessages = {
         {
           productShotId ? (
             <div class="sol-hero__visual">
-              <ProductShot messages={messages} id={productShotId} />
+              <ProductShot messages={messages} locale={locale} id={productShotId} />
             </div>
           ) : null
         }
@@ -162,7 +162,7 @@ const faqMessages = {
               </section>
             </div>
             <div class="sol-mid__visual">
-              <ProductShot messages={messages} id={extraShotId} />
+              <ProductShot messages={messages} locale={locale} id={extraShotId} />
             </div>
           </div>
         ) : (
@@ -228,9 +228,15 @@ const faqMessages = {
           altGuides.length > 0 ? (
             <section class="alt-block" aria-labelledby="alt-title">
               <h2 id="alt-title" class="sub">
-                {messages.guidesPage.altSeekingTitle}
+                {solution.slug === 'billiards'
+                  ? messages.guidesPage.altSeekingBilliardsTitle
+                  : messages.guidesPage.altSeekingTitle}
               </h2>
-              <p class="body">{messages.guidesPage.altSeekingBody}</p>
+              <p class="body">
+                {solution.slug === 'billiards'
+                  ? messages.guidesPage.altSeekingBilliardsBody
+                  : messages.guidesPage.altSeekingBody}
+              </p>
               <ul class="alt-links">
                 {altGuides.map((item) => (
                   <li>

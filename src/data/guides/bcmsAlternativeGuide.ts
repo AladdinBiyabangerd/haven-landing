@@ -2,7 +2,7 @@ import type { Locale } from '@/i18n/config'
 import type { GuideCopy } from './types'
 
 const PUBLISHED = '2026-10-17'
-const MODIFIED = '2026-10-17'
+const MODIFIED = '2026-10-19'
 const relatedSolutions: GuideCopy['relatedSolutions'] = ['billiards', 'pos', 'reservations']
 
 const guides: Record<
@@ -36,7 +36,7 @@ const guides: Record<
         id: 'when-bcms',
         title: 'BCMS nə vaxt qala bilər?',
         paragraphs: [
-          'Tək Windows kompüter, oflayn iş və Store-dan pulsuz/sadə quraşdırma sizin üçün kifayətdirsə, BCMS kateqoriyasını saxlamaq məntiqli ola bilər. Default login və təhlükəsizlik təcrübələrini vendor sənədlərindən yoxlayın.',
+          'Tək Windows kompüter, oflayn iş və Store quraşdırması kifayətdirsə, BCMS kateqoriyasını saxlamaq məntiqli ola bilər. v1.3.0.0-dan sonra abunə tələb olunur (Microsoft Store) — yalnız «pulsuz yükləmə» demək deyil.',
         ],
       },
       {
@@ -50,9 +50,9 @@ const guides: Record<
           rows: [
             ['Platforma', 'Windows 10/11', 'Web / bulud'],
             ['Quraşdırma', 'Desktop / Store', 'Brauzer hesabı'],
-            ['Rezervasiya + canlı zal', 'Funksiya dəstindən asılı', 'Bəli'],
+            ['Rezervasiya + canlı zal', 'Açıq siyahıda yox*', 'Bəli'],
             ['Dillər', 'Vendor-dan asılı', 'AZ, EN, RU'],
-            ['Qiymət', 'Store / lisenziya', '{billiards} {currency}/aydan'],
+            ['Qiymət', 'Pulsuz yükləmə + abunə*', '{billiards} {currency}/aydan'],
           ],
         },
       },
@@ -100,7 +100,7 @@ const guides: Record<
         id: 'when-bcms',
         title: 'When should BCMS stay?',
         paragraphs: [
-          'If one Windows PC, offline work, and a simple Store install are enough, keeping a BCMS-class tool can make sense. Check default logins and security practices in the vendor docs.',
+          'If one Windows PC, offline work, and a Store install are enough, keeping a BCMS-class tool can make sense. Since v1.3.0.0 a subscription is required (Microsoft Store) — free download alone is not the full cost.',
         ],
       },
       {
@@ -114,9 +114,9 @@ const guides: Record<
           rows: [
             ['Platform', 'Windows 10/11', 'Web / cloud'],
             ['Install', 'Desktop / Store', 'Browser account'],
-            ['Booking + live floor', 'Depends on feature set', 'Yes'],
+            ['Booking + live floor', 'Not listed*', 'Yes'],
             ['Languages', 'Vendor-dependent', 'AZ, EN, RU'],
-            ['Price', 'Store / license', 'From {billiards} {currency}/month'],
+            ['Price', 'Free download + subscription*', 'From {billiards} {currency}/month'],
           ],
         },
       },
@@ -164,7 +164,7 @@ const guides: Record<
         id: 'when-bcms',
         title: 'Когда BCMS может остаться?',
         paragraphs: [
-          'Если хватает одного Windows-ПК, офлайн-работы и простой установки из Store, класс BCMS может быть уместен. Дефолтные логины и практику безопасности смотрите в документации вендора.',
+          'Если хватает одного Windows-ПК, офлайна и установки из Store, класс BCMS может быть уместен. С v1.3.0.0 нужна подписка (Microsoft Store) — «бесплатная загрузка» не равна полной стоимости.',
         ],
       },
       {
@@ -178,9 +178,9 @@ const guides: Record<
           rows: [
             ['Платформа', 'Windows 10/11', 'Web / облако'],
             ['Установка', 'Desktop / Store', 'Аккаунт в браузере'],
-            ['Бронь + живой зал', 'Зависит от набора', 'Да'],
+            ['Бронь + живой зал', 'Не указано*', 'Да'],
             ['Языки', 'Зависит от вендора', 'AZ, EN, RU'],
-            ['Цена', 'Store / лицензия', 'от {billiards} {currency}/мес'],
+            ['Цена', 'Бесплатная загрузка + подписка*', 'от {billiards} {currency}/мес'],
           ],
         },
       },

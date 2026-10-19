@@ -1,5 +1,6 @@
 ---
 import type { Messages } from '@/i18n/types'
+import type { Locale } from '@/i18n/config'
 import { PRODUCT_SHOT_PATHS, productShotAlt, type ProductShotId } from '@/lib/productShots'
 import CashMock from '@/components/CashMock.astro'
 import SessionsMock from '@/components/SessionsMock.astro'
@@ -11,11 +12,12 @@ import AuditMock from '@/components/AuditMock.astro'
 
 interface Props {
   messages: Messages
+  locale: Locale
   id: ProductShotId
   priority?: boolean
   class?: string
 }
-const { messages, id, priority = false, class: className = '' } = Astro.props
+const { messages, locale, id, priority = false, class: className = '' } = Astro.props
 
 const useCashMock = id === 'cash'
 const useSessionsMock = id === 'sessions'
@@ -48,17 +50,17 @@ const srcsetPng = base
 
 {
   useCashMock ? (
-    <CashMock messages={messages} class={className} />
+    <CashMock messages={messages} locale={locale} class={className} />
   ) : useSessionsMock ? (
-    <SessionsMock messages={messages} class={className} />
+    <SessionsMock messages={messages} locale={locale} class={className} />
   ) : useScheduleMock ? (
     <ScheduleMock messages={messages} class={className} />
   ) : useInventoryMock ? (
     <InventoryMock messages={messages} class={className} />
   ) : useProductsMock ? (
-    <ProductsMock messages={messages} class={className} />
+    <ProductsMock messages={messages} locale={locale} class={className} />
   ) : useRoomAnalyticsMock ? (
-    <RoomAnalyticsMock messages={messages} class={className} />
+    <RoomAnalyticsMock messages={messages} locale={locale} class={className} />
   ) : useAuditMock ? (
     <AuditMock messages={messages} class={className} />
   ) : base ? (

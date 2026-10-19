@@ -28,7 +28,7 @@ export const GUIDE_SLUGS = [
   'billiardpos-alternative',
   'bcms-alternative',
   'biliardo-kz-alternative',
-  'billiards-software-comparison-2026',
+  'billiards-software-comparison',
   // Phase C comparison / alternative intent
   'iiko-alternative-clubs',
   'clopos-alternative',

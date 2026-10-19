@@ -6,6 +6,16 @@
       "permanent": true
     },
     {
+      "source": "/:locale/guides/billiards-software-comparison-2026/",
+      "destination": "/:locale/guides/billiards-software-comparison/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/guides/billiards-software-comparison-2026",
+      "destination": "/:locale/guides/billiards-software-comparison/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.heselo.online" }],
       "destination": "https://heselo.online/:path*",

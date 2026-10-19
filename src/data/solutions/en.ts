@@ -30,7 +30,7 @@ export const solutionsEn: SolutionCopy[] = [
     h1: 'Billiards club management system',
     seoTitle: 'Billiards Club Management Software — Tables, Rates, Cash | Heselo',
     seoDescription:
-      'Billiards club software with table timers, booking, pause, day/night rates and cash in one panel. From {billiards} AZN/month — free demo.',
+      'Billiards club software with table timers, booking, pause, day/night rates and cash in one panel. From {billiards} {currency}/month — free demo.',
     keywords: [
       'billiards club software',
       'billiards club management software',
@@ -44,7 +44,7 @@ export const solutionsEn: SolutionCopy[] = [
     body: [
       'Whether you run two tables or a full hall, the flow stays the same. Guests book ahead or take an open table; play starts a session; bar and snacks land on that bill; payment shows in the shift report.',
       'Night and weekend rates, pause, VIP rooms, and regular tables share one schedule. We do not support light-relay table lamps or QR membership check-in today — those belong to separate hardware or other products. Heselo is a cloud panel you run on a tablet or computer.',
-      'Pricing is public: the Small billiards plan starts at {billiards} AZN per month; Medium, Large, annual billing, and limits are on the pricing page. For honest comparisons with CueDesk, BilliardPOS, BCMS, and Biliardo.kz, see our guides.',
+      'The Small billiards plan starts at {billiards} {currency} per month (catalog API); Medium, Large, annual billing, and the 6-table Small limit are on the pricing page. Differentiator vs many rivals: AZ/EN/RU in one cloud panel for mixed billiards + PS + karaoke — not “open price alone” (CueDesk, BilliardPOS and Biliardo.kz also publish rates). Comparisons: CueDesk, BilliardPOS, BCMS, Biliardo.kz, Club Timer.',
     ],
     whoTitle: 'Who is it for?',
     whoBody:
@@ -94,7 +94,7 @@ export const solutionsEn: SolutionCopy[] = [
         ['Bar / café sales on the session', 'Yes — with the cash shift'],
         ['Platform', 'Web / cloud (tablet or computer)'],
         ['Light relay / auto table lamps', 'No — separate hardware'],
-        ['Price', '{billiards}–59 AZN/month (published plans)'],
+        ['Price', '{billiards}–{billiardsHigh} {currency}/month (published plans)'],
         ['Languages', 'AZ, EN, RU'],
       ],
     },
@@ -121,7 +121,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How is Heselo different from CueDesk or BilliardPOS?',
-        a: 'CueDesk often focuses on QR membership and mobile control; BilliardPOS is known for stock and printer integrations. Heselo is a cloud panel with public Azerbaijani pricing: table booking, live session, bar sales, and cash in one place, in AZ, EN, and RU. Full comparisons are in our guides.',
+        a: 'CueDesk often focuses on QR membership and mobile control; BilliardPOS leads with ESP32 table-light relays, TV timers, and an API. Heselo is a cloud panel in AZ, EN, and RU: table booking, live session, bar sales, and cash in one place — including mixed billiards + PS + karaoke venues. Full comparisons are in our guides.',
       },
       {
         q: 'Which billiards clubs is Heselo not a fit for?',
@@ -133,7 +133,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost for a billiards club?',
-        a: 'The Small plan for billiards starts at {billiards} AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. For several branches or volume beyond a standard plan, we prepare a separate custom quote.',
+        a: 'The Small plan for billiards starts at {billiards} {currency} a month. Medium and Large plans, annual billing, and limits are published on the pricing page. For several branches or volume beyond a standard plan, we prepare a separate custom quote.',
       },
       {
         q: 'How do we get a demo — is a card required?',
@@ -214,7 +214,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'Where is karaoke pricing listed?',
-        a: 'The Small plan for karaoke starts at {karaoke} AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. You can request a free demo through the contact form — no card details needed, just tell us how many rooms you run.',
+        a: 'The Small plan for karaoke starts at {karaoke} {currency} a month. Medium and Large plans, annual billing, and limits are published on the pricing page. You can request a free demo through the contact form — no card details needed, just tell us how many rooms you run.',
       },
       {
         q: 'Can karaoke, billiards, and a lounge share one panel?',
@@ -302,7 +302,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost for a PS club?',
-        a: 'The Small plan for PlayStation and gaming clubs starts at {gaming} AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your station count through the contact form — no card details needed; we show the schedule and a live session.',
+        a: 'The Small plan for PlayStation and gaming clubs starts at {gaming} {currency} a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your station count through the contact form — no card details needed; we show the schedule and a live session.',
       },
     ],
     related: ['billiards', 'karaoke', 'reservations', 'pos'],
@@ -387,7 +387,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost for an anti-café?',
-        a: 'The Small plan for anti-cafés starts at {antikafe} AZN a month. Medium and Large plans, annual billing, and limits are published on the pricing page. If several halls or branches do not fit a standard plan, we prepare a separate custom quote. The demo is free and needs no card.',
+        a: 'The Small plan for anti-cafés starts at {antikafe} {currency} a month. Medium and Large plans, annual billing, and limits are published on the pricing page. If several halls or branches do not fit a standard plan, we prepare a separate custom quote. The demo is free and needs no card.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
@@ -400,7 +400,7 @@ export const solutionsEn: SolutionCopy[] = [
     h1: 'Room lounge management system',
     seoTitle: 'Lounge bar management software & VIP room booking | Heselo',
     seoDescription:
-      'Lounge bar management software: VIP room booking, live sessions, bar sales, cash, and inventory in one panel. For room lounges — from {lounge} AZN/month, free demo.',
+      'Lounge bar management software: VIP room booking, live sessions, bar sales, cash, and inventory in one panel. For room lounges — from {lounge} {currency}/month, free demo.',
     keywords: [
       'lounge bar management software',
       'lounge bar software',
@@ -473,7 +473,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does lounge bar software cost?',
-        a: 'The Small plan for room lounges starts at {lounge} AZN a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your room count through the contact form — no card details needed; we show the schedule and a live session on your scenario.',
+        a: 'The Small plan for room lounges starts at {lounge} {currency} a month. Medium and Large plans, annual billing, and limits are on the pricing page. For a free demo, send your room count through the contact form — no card details needed; we show the schedule and a live session on your scenario.',
       },
     ],
     related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
@@ -553,7 +553,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'Where is pricing listed?',
-        a: 'Reservations and the schedule are the core of the panel; the price depends on your venue-type plan. The Small plan starts at {gaming} AZN a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. The full table is on the pricing page, and the demo is free.',
+        a: 'Reservations and the schedule are the core of the panel; the price depends on your venue-type plan. The Small plan starts at {gaming} {currency} a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. The full table is on the pricing page, and the demo is free.',
       },
     ],
     related: ['karaoke', 'lounge', 'gaming', 'pos'],
@@ -635,7 +635,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'Plans are priced by venue type: the Small plan starts at {gaming} AZN a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. Medium and Large plans, annual billing, and limits are on the pricing page. Request a free demo through the contact form — no card needed.',
+        a: 'Plans are priced by venue type: the Small plan starts at {gaming} {currency} a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. Medium and Large plans, annual billing, and limits are on the pricing page. Request a free demo through the contact form — no card needed.',
       },
     ],
     related: ['gaming', 'inventory', 'reservations'],
@@ -715,7 +715,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'Where is pricing listed?',
-        a: 'Plans are priced by venue type: from {gaming} AZN a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. Plan limits and annual billing are on the pricing page. The demo is free — share your product count in the contact form and we walk through stock and counts.',
+        a: 'Plans are priced by venue type: from {gaming} {currency} a month for PS/gaming, {billiards} for billiards, {antikafe} for anti-cafés, and {karaoke} for karaoke and lounges. Plan limits and annual billing are on the pricing page. The demo is free — share your product count in the contact form and we walk through stock and counts.',
       },
     ],
     related: ['pos', 'gaming', 'antikafe'],

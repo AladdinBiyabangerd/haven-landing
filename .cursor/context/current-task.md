@@ -1,21 +1,21 @@
-# Current task — Billiards SEO / GEO plan
+# Current task: Billiards SEO accuracy fixes (19 Oct 2026)
 
 ## Completed
-- Baseline docs: `docs/seo-billiards-baseline-2026-10-17.md`, GEO prompts B1–B7, KPI filters link
-- Solution `/solutions/billiards/` az/en/ru: meta, body, compare table, honesty FAQ (relye/QR)
-- Guides: CueDesk, BilliardPOS, BCMS, Biliardo.kz, comparison-2026, hourly-rates
-- Expanded `billiards-club-management` + `billiards-table-booking` (az/en/ru)
-- `llms.txt` billiards entity card; off-site URLs; YouTube script; case/KPI doc
-- Wiring: GUIDE_SLUGS, comparisonGuides, SOLUTION_ALT_GUIDES, seoContentPlan
+- EN/AZ solution prices: hardcoded `AZN` / `59` → `{currency}` / `{billiardsHigh}` from catalog API (`catalogCopy.ts` + `solutions/{az,en}.ts`)
+- Comparison guide: light relay for BilliardPOS (ESP32) & Biliardo.kz (USB); price `{billiards}–{billiardsHigh} {currency}`; sources; AZ/RU market section; no “open price only” differentiator; slug renamed to `billiards-software-comparison` + 301
+- Competitor guides: BilliardPOS / Biliardo / CueDesk / BCMS factual corrections
+- `llms.txt` locale-prefixed URLs; QR legend cleanup in comparison hub
+- EN/RU mocks: localized room names + `formatMoney` currency
+- Billiards alt-seeking heading; AZ alt guides include Club Timer
 
-## Remaining (ops, not code)
-- Fill GSC baseline numbers manually
-- Record YouTube from `docs/youtube-billiards-demo-script.md`
-- Real billiards case when client consents
-- Deploy + IndexNow + GSC URL Inspection
-- GEO remeasure 30/60/90 days
+## Remaining (optional / later)
+- Full SoftBilling / Smartbit / Paloma365 dedicated guides (only framed in hub for now)
+- Article schema `image`; deeper first-hand screenshots in guides
+- CashMock-style leftovers already fixed via locale; InventoryMock if any AZN left
 
 ## Relevant files
-- `src/data/solutions/{az,en,ru}.ts`, `src/pages/[locale]/solutions/[slug].astro`
-- `src/data/guides/*billiard*`, `cuedeskAlternativeGuide.ts`, `bcmsAlternativeGuide.ts`, …
-- `docs/seo-billiards-*.md`, `docs/youtube-billiards-demo-script.md`
+- `src/lib/catalogCopy.ts`
+- `src/data/solutions/{az,en,ru}.ts`
+- `src/data/guides/billiardsSoftwareComparisonGuide.ts` (+ alternative guides)
+- `src/pages/llms.txt.ts`, `astro.config.mjs`, `vercel.json`
+- `src/components/{LiveFloor,RoomAnalytics,Cash,Sessions,Products}Mock.astro`

@@ -86,6 +86,14 @@ export type Messages = {
     ariaLabel: string
     /** Accessible name template for a station card button; `{name}` = station. */
     toggleStation: string
+    stations: {
+      vip1: string
+      ps3: string
+      karaoke2: string
+      billiards1: string
+      vip2: string
+      ps5: string
+    }
   }
   /** Sparse HTML vignette replacing the cash product marketing image. */
   cashMock: {
@@ -169,6 +177,11 @@ export type Messages = {
     shareLabel: string
     hint: string
     ariaLabel: string
+    rooms: {
+      vip1: string
+      karaoke2: string
+      billiards1: string
+    }
   }
   /** Sparse HTML vignette replacing the audit log marketing image. */
   auditMock: {
@@ -327,6 +340,9 @@ export type Messages = {
     relatedComparisonsTitle: string
     altSeekingTitle: string
     altSeekingBody: string
+    /** Solution-page heading when alt guides are billiards comparisons. */
+    altSeekingBilliardsTitle: string
+    altSeekingBilliardsBody: string
   }
   eeat: {
     eyebrow: string

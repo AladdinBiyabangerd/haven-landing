@@ -60,6 +60,14 @@ export const en: Messages = {
     hint: 'Time left · time up — tap a card',
     ariaLabel: 'Heselo live floor panel — room and station cards',
     toggleStation: '{name} — toggle status',
+    stations: {
+      vip1: 'VIP 1',
+      ps3: 'PS-3',
+      karaoke2: 'Karaoke 2',
+      billiards1: 'Billiards 1',
+      vip2: 'VIP 2',
+      ps5: 'PS-5',
+    },
   },
   cashMock: {
     title: 'Cash',
@@ -138,6 +146,11 @@ export const en: Messages = {
     shareLabel: '{pct}% of total revenue',
     hint: 'Tap a row to select',
     ariaLabel: 'Heselo analytics panel — revenue, occupancy, and rooms',
+    rooms: {
+      vip1: 'VIP 1',
+      karaoke2: 'Karaoke 2',
+      billiards1: 'Billiards 1',
+    },
   },
   auditMock: {
     title: 'Audit',
@@ -434,6 +447,9 @@ export const en: Messages = {
     altSeekingTitle: 'Looking at iiko, Clopos or Excel?',
     altSeekingBody:
       'If you need a room-time panel instead of a restaurant POS or spreadsheets, read the honest comparison guides. Keep a restaurant stack when kitchen/KDS is the core.',
+    altSeekingBilliardsTitle: 'Comparing billiards software?',
+    altSeekingBilliardsBody:
+      'Honest comparisons with CueDesk, BilliardPOS, Club Timer and more — strengths and gaps included. Need a light relay? We say clearly what Heselo does not do.',
   },
   productShot: {
     alts: {

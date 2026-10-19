@@ -1,18 +1,21 @@
 ---
 import type { Messages } from '@/i18n/types'
+import type { Locale } from '@/i18n/config'
 import BrandMark from '@/components/BrandMark.astro'
+import { formatMoney } from '@/lib/format'
 
 interface Props {
   messages: Messages
+  locale: Locale
   class?: string
 }
 
-const { messages, class: className = '' } = Astro.props
+const { messages, locale, class: className = '' } = Astro.props
 const m = messages.sessionsMock
 
 /** Demo start — resets on every page load; client tick advances only while open. */
 const START_SECONDS = 45 * 60
-const DUE_AMOUNT = '24.00 AZN'
+const DUE_AMOUNT = formatMoney(24, locale)
 
 function formatHms(totalSeconds: number): string {
   const h = Math.floor(totalSeconds / 3600)

@@ -30,7 +30,7 @@ export const solutionsAz: SolutionCopy[] = [
     h1: 'Bilyard klubu idarəetmə sistemi',
     seoTitle: 'Bilyard klubu idarəetmə proqramı — masa, tarif, kassa | Heselo',
     seoDescription:
-      'Bilyard klubu proqramı: masa taymeri, rezerv, pauza, gecə-gündüz tarif və kassa bir paneldə. {billiards} AZN/aydan — pulsuz demo.',
+      'Bilyard klubu proqramı: masa taymeri, rezerv, pauza, gecə-gündüz tarif və kassa bir paneldə. {billiards} {currency}/aydan — pulsuz demo.',
     keywords: [
       'bilyard klubu proqramı',
       'bilyard klub idarəetmə proqramı',
@@ -44,7 +44,7 @@ export const solutionsAz: SolutionCopy[] = [
     body: [
       'Kiçik zalda iki masa, böyük salonda onlarla masa — axın eynidir. Qonaq bron edir və ya gəlib boş masa seçir; oyun başlayanda sessiya açılır; bar və qəlyanaltı eyni hesaba yazılır; ödəniş növbə hesabatında görünür.',
       'Gecə və həftəsonu tarifləri, pauza, VIP otaq və adi masa eyni cədvəldə idarə olunur. İşıq relye bloku və QR üzvlük check-in hazırda dəstəklənmir — bunlar ayrıca avadanlıq və ya digər proqramların sahəsidir. Heselo planşet və ya kompüterdə işləyən bulud paneldən ibarətdir.',
-      'Qiymət açıqdır: bilyard üçün Kiçik plan ayda {billiards} AZN-dən başlayır; Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində yazılıb. CueDesk, BilliardPOS, BCMS və Biliardo.kz ilə dürüst müqayisə üçün bələdçilərimizi oxuyun.',
+      'Bilyard üçün Kiçik plan ayda {billiards} {currency}-dən başlayır (katalog API); Orta, Böyük, illik ödəniş və 6 masa həddi qiymətlər səhifəsindədir. Rəqiblərin çoxu da qiymətini açıq yazır — fərqimiz AZ/EN/RU bulud panel və qarışıq məkan (bilyard+PS+karaoke). AZ-da tez müqayisə: Club Timer, Clopos, Excel; beynəlxalq: CueDesk, BilliardPOS, BCMS, Biliardo.kz.',
     ],
     whoTitle: 'Kimlər üçündür?',
     whoBody:
@@ -94,7 +94,7 @@ export const solutionsAz: SolutionCopy[] = [
         ['Bar / kafe satış (sessiya hesabına)', 'Bəli — növbə ilə birlikdə'],
         ['Platforma', 'Web / bulud (planşet və ya kompüter)'],
         ['İşıq relye / avtomatik lampa', 'Xeyr — ayrıca avadanlıq sahəsidir'],
-        ['Qiymət', '{billiards}–59 AZN/ay (açıq planlar)'],
+        ['Qiymət', '{billiards}–{billiardsHigh} {currency}/ay (açıq planlar)'],
         ['Dillər', 'AZ, EN, RU'],
       ],
     },
@@ -121,7 +121,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'CueDesk və ya BilliardPOS-dan nə fərqi var?',
-        a: 'CueDesk çoxvaxt QR üzvlük və mobil idarəetməyə fokuslanır; BilliardPOS anbar və printer inteqrasiyası ilə tanınır. Heselo Azərbaycanda açıq qiymətli bulud paneldır: masa bronu, canlı sessiya, bar satışı və kassa bir yerdə, AZ/EN/RU dillərində. Ətraflı müqayisə bələdçilərdədir.',
+        a: 'CueDesk çoxvaxt QR üzvlük və mobil idarəetməyə fokuslanır; BilliardPOS ESP32 işıq relyesi, TV taymer və API ilə seçilir. Heselo AZ/EN/RU bulud paneldır: masa bronu, canlı sessiya, bar satışı və kassa bir yerdə — qarışıq bilyard+PS+karaoke məkanlar da daxil. Ətraflı müqayisə bələdçilərdədir.',
       },
       {
         q: 'Heselo hansı bilyard klubları üçün uyğun deyil?',
@@ -133,7 +133,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Bilyard klubu üçün qiymət nə qədərdir?',
-        a: 'Bilyard üçün Kiçik plan ayda {billiards} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Bir neçə filial və ya standart plana sığmayan həcm üçün ayrıca fərdi təklif hazırlayırıq.',
+        a: 'Bilyard üçün Kiçik plan ayda {billiards} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Bir neçə filial və ya standart plana sığmayan həcm üçün ayrıca fərdi təklif hazırlayırıq.',
       },
       {
         q: 'Demo necə alınır, kart lazımdır?',
@@ -214,7 +214,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Karaoke üçün qiymət harada göstərilib?',
-        a: 'Karaoke üçün Kiçik plan ayda {karaoke} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Demonu əlaqə formasından pulsuz istəyə bilərsiniz — kart məlumatı tələb olunmur, otaq sayınızı yazmaq kifayətdir.',
+        a: 'Karaoke üçün Kiçik plan ayda {karaoke} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Demonu əlaqə formasından pulsuz istəyə bilərsiniz — kart məlumatı tələb olunmur, otaq sayınızı yazmaq kifayətdir.',
       },
       {
         q: 'Karaoke, bilyard və launj eyni paneldə ola bilər?',
@@ -300,7 +300,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'PS klubu üçün qiymət nə qədərdir?',
-        a: 'PS və oyun klubu üçün Kiçik plan ayda {gaming} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına stansiya sayını yazın — kart məlumatı tələb olunmur, cədvəli və canlı sessiyanı göstəririk.',
+        a: 'PS və oyun klubu üçün Kiçik plan ayda {gaming} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına stansiya sayını yazın — kart məlumatı tələb olunmur, cədvəli və canlı sessiyanı göstəririk.',
       },
     ],
     related: ['billiards', 'karaoke', 'reservations', 'pos'],
@@ -385,7 +385,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Antikafe üçün qiymət nə qədərdir?',
-        a: 'Antikafe üçün Kiçik plan ayda {antikafe} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq göstərilib. Bir neçə zal və ya filial standart plana sığmırsa, ayrıca fərdi təklif hazırlayırıq. Demo pulsuzdur, kart tələb olunmur.',
+        a: 'Antikafe üçün Kiçik plan ayda {antikafe} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq göstərilib. Bir neçə zal və ya filial standart plana sığmırsa, ayrıca fərdi təklif hazırlayırıq. Demo pulsuzdur, kart tələb olunmur.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
@@ -398,7 +398,7 @@ export const solutionsAz: SolutionCopy[] = [
     h1: 'Otaqlı launj idarəetmə sistemi',
     seoTitle: 'Launj bar idarəetmə proqramı — VIP otaq rezervasiyası | Heselo',
     seoDescription:
-      'Launj bar proqramı: VIP otaq rezervasiyası, canlı sessiya, bar satışı, kassa və anbar bir paneldə. Otaqlı launj üçün — ayda {lounge} AZN-dən, pulsuz demo.',
+      'Launj bar proqramı: VIP otaq rezervasiyası, canlı sessiya, bar satışı, kassa və anbar bir paneldə. Otaqlı launj üçün — ayda {lounge} {currency}-dən, pulsuz demo.',
     keywords: [
       'launj bar idarəetmə proqramı',
       'launj bar proqramı',
@@ -471,7 +471,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Launj bar proqramının qiyməti nə qədərdir?',
-        a: 'Otaqlı launj üçün Kiçik plan ayda {lounge} AZN-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına otaq sayını yazın — kart məlumatı istənmir, cədvəli və canlı sessiyanı sizin ssenari ilə göstəririk.',
+        a: 'Otaqlı launj üçün Kiçik plan ayda {lounge} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demo üçün əlaqə formasına otaq sayını yazın — kart məlumatı istənmir, cədvəli və canlı sessiyanı sizin ssenari ilə göstəririk.',
       },
     ],
     related: ['karaoke', 'antikafe', 'billiards', 'reservations'],
@@ -551,7 +551,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Qiymət harada göstərilib?',
-        a: 'Rezervasiya və cədvəl panelin əsas hissəsidir; qiymət məkan tipinə görə plandan asılıdır. Kiçik plan PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} AZN/aydan başlayır. Tam cədvəl qiymətlər səhifəsindədir, demo isə pulsuzdur.',
+        a: 'Rezervasiya və cədvəl panelin əsas hissəsidir; qiymət məkan tipinə görə plandan asılıdır. Kiçik plan PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} {currency}/aydan başlayır. Tam cədvəl qiymətlər səhifəsindədir, demo isə pulsuzdur.',
       },
     ],
     related: ['karaoke', 'lounge', 'gaming', 'pos'],
@@ -633,7 +633,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Qiymət nə qədərdir?',
-        a: 'Tariflər məkan tipinə görədir: Kiçik plan PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} AZN/aydan. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demonu əlaqə formasından istəyin — kart lazım deyil.',
+        a: 'Tariflər məkan tipinə görədir: Kiçik plan PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} {currency}/aydan. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Pulsuz demonu əlaqə formasından istəyin — kart lazım deyil.',
       },
     ],
     related: ['gaming', 'inventory', 'reservations'],
@@ -713,7 +713,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Qiymət harada göstərilib?',
-        a: 'Tariflər məkan tipinə görədir: PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} AZN/aydan. Planlar üzrə limitlər və illik ödəniş qiymətlər səhifəsindədir. Demo pulsuzdur — əlaqə formasına məhsul sayınızı yazın, anbar və sayım prosesini göstəririk.',
+        a: 'Tariflər məkan tipinə görədir: PS/oyun üçün {gaming}, bilyard üçün {billiards}, antikafe üçün {antikafe}, karaoke və launj üçün {karaoke} {currency}/aydan. Planlar üzrə limitlər və illik ödəniş qiymətlər səhifəsindədir. Demo pulsuzdur — əlaqə formasına məhsul sayınızı yazın, anbar və sayım prosesini göstəririk.',
       },
     ],
     related: ['pos', 'gaming', 'antikafe'],

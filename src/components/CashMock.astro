@@ -1,26 +1,29 @@
 ---
 import type { Messages } from '@/i18n/types'
+import type { Locale } from '@/i18n/config'
 import BrandMark from '@/components/BrandMark.astro'
+import { formatMoney } from '@/lib/format'
 
 interface Props {
   messages: Messages
+  locale: Locale
   class?: string
 }
 
-const { messages, class: className = '' } = Astro.props
+const { messages, locale, class: className = '' } = Astro.props
 const m = messages.cashMock
 
 const metrics = [
-  { key: 'cash' as const, value: '180.00 AZN' },
-  { key: 'card' as const, value: '420.50 AZN' },
-  { key: 'total' as const, value: '600.50 AZN' },
+  { key: 'cash' as const, value: formatMoney(180, locale) },
+  { key: 'card' as const, value: formatMoney(420.5, locale) },
+  { key: 'total' as const, value: formatMoney(600.5, locale) },
 ]
 
 const transactions = [
-  { time: '10:42', method: 'cash' as const, amount: '+40.00 AZN' },
-  { time: '10:28', method: 'card' as const, amount: '+65.50 AZN' },
-  { time: '10:05', method: 'cash' as const, amount: '+25.00 AZN' },
-  { time: '09:46', method: 'card' as const, amount: '+80.00 AZN' },
+  { time: '10:42', method: 'cash' as const, amount: `+${formatMoney(40, locale)}` },
+  { time: '10:28', method: 'card' as const, amount: `+${formatMoney(65.5, locale)}` },
+  { time: '10:05', method: 'cash' as const, amount: `+${formatMoney(25, locale)}` },
+  { time: '09:46', method: 'card' as const, amount: `+${formatMoney(80, locale)}` },
 ]
 
 function metricLabel(key: (typeof metrics)[number]['key']): string {

@@ -1,21 +1,24 @@
 ---
 import type { Messages } from '@/i18n/types'
+import type { Locale } from '@/i18n/config'
 import BrandMark from '@/components/BrandMark.astro'
+import { formatMoney } from '@/lib/format'
 
 interface Props {
   messages: Messages
+  locale: Locale
   class?: string
 }
 
-const { messages, class: className = '' } = Astro.props
+const { messages, locale, class: className = '' } = Astro.props
 const m = messages.productsMock
 
-/** Demo catalog — names localized; prices illustrate sale amounts (AZN). */
+/** Demo catalog — names localized; prices follow landing locale currency. */
 const items = [
-  { name: m.products.cola, type: m.typeDrink, price: '1.50 AZN', mark: 'C' },
-  { name: m.products.chips, type: m.typeSnack, price: '2.00 AZN', mark: 'Ç' },
-  { name: m.products.water, type: m.typeDrink, price: '1.00 AZN', mark: 'S' },
-  { name: m.products.energy, type: m.typeDrink, price: '2.50 AZN', mark: 'E' },
+  { name: m.products.cola, type: m.typeDrink, price: formatMoney(1.5, locale), mark: 'C' },
+  { name: m.products.chips, type: m.typeSnack, price: formatMoney(2, locale), mark: 'Ç' },
+  { name: m.products.water, type: m.typeDrink, price: formatMoney(1, locale), mark: 'S' },
+  { name: m.products.energy, type: m.typeDrink, price: formatMoney(2.5, locale), mark: 'E' },
 ]
 ---
 

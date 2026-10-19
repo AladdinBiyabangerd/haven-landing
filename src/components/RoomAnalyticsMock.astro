@@ -1,24 +1,26 @@
 ---
 import type { Messages } from '@/i18n/types'
+import type { Locale } from '@/i18n/config'
 import BrandMark from '@/components/BrandMark.astro'
-import { fillTemplate } from '@/lib/format'
+import { fillTemplate, formatMoney } from '@/lib/format'
 
 interface Props {
   messages: Messages
+  locale: Locale
   class?: string
 }
 
-const { messages, class: className = '' } = Astro.props
+const { messages, locale, class: className = '' } = Astro.props
 const m = messages.roomAnalyticsMock
 
 /** Demo week — room names match LiveFloorMock stations; amounts illustrate share bars. */
-const REVENUE = '1 240 AZN'
+const REVENUE = formatMoney(1240, locale)
 const OCCUPANCY = '68%'
 const rooms = [
-  { name: 'VIP 1', amount: '420 AZN', pct: 34 },
-  { name: 'Karaoke 2', amount: '380 AZN', pct: 31 },
-  { name: 'Bilyard 1', amount: '290 AZN', pct: 23 },
-  { name: m.barLabel, amount: '150 AZN', pct: 12 },
+  { name: m.rooms.vip1, amount: formatMoney(420, locale), pct: 34 },
+  { name: m.rooms.karaoke2, amount: formatMoney(380, locale), pct: 31 },
+  { name: m.rooms.billiards1, amount: formatMoney(290, locale), pct: 23 },
+  { name: m.barLabel, amount: formatMoney(150, locale), pct: 12 },
 ]
 ---
 

@@ -135,8 +135,8 @@ export const SEO_CONTENT_PLAN = {
   ],
   comparison: [
     {
-      id: 'billiards-software-comparison-2026',
-      path: '/guides/billiards-software-comparison-2026/',
+      id: 'billiards-software-comparison',
+      path: '/guides/billiards-software-comparison/',
       status: 'live',
       note: 'Billiards SEO 2026-10 hub',
     },

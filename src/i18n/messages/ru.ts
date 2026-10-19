@@ -60,6 +60,14 @@ export const ru: Messages = {
     hint: 'Остаток · время вышло — нажмите карточку',
     ariaLabel: 'Панель живого зала Heselo — карточки комнат и станций',
     toggleStation: '{name} — сменить статус',
+    stations: {
+      vip1: 'VIP 1',
+      ps3: 'PS-3',
+      karaoke2: 'Караоке 2',
+      billiards1: 'Бильярд 1',
+      vip2: 'VIP 2',
+      ps5: 'PS-5',
+    },
   },
   cashMock: {
     title: 'Касса',
@@ -138,6 +146,11 @@ export const ru: Messages = {
     shareLabel: '{pct}% от общей выручки',
     hint: 'Нажмите строку — выбрать',
     ariaLabel: 'Панель аналитики Heselo — выручка, загрузка и комнаты',
+    rooms: {
+      vip1: 'VIP 1',
+      karaoke2: 'Караоке 2',
+      billiards1: 'Бильярд 1',
+    },
   },
   auditMock: {
     title: 'Аудит',
@@ -434,6 +447,9 @@ export const ru: Messages = {
     altSeekingTitle: 'Смотрите iiko, Clopos или Excel?',
     altSeekingBody:
       'Если нужна панель для комнат и почасовой оплаты вместо ресторанной POS или таблиц — читайте честные сравнения. Если ядро — кухня/KDS, оставьте ресторанное решение.',
+    altSeekingBilliardsTitle: 'Сравниваете программы для бильярда?',
+    altSeekingBilliardsBody:
+      'Честные сравнения с CueDesk, BilliardPOS, Biliardo.kz и другими — с сильными сторонами и пробелами. Нужно реле света? Мы прямо пишем, чего Heselo не делает.',
   },
   productShot: {
     alts: {

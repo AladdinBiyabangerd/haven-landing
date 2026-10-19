@@ -2,7 +2,7 @@ import type { Locale } from '@/i18n/config'
 import type { GuideCopy } from './types'
 
 const PUBLISHED = '2026-10-17'
-const MODIFIED = '2026-10-17'
+const MODIFIED = '2026-10-19'
 const relatedSolutions: GuideCopy['relatedSolutions'] = ['billiards', 'reservations', 'pos']
 
 const guides: Record<
@@ -49,19 +49,19 @@ const guides: Record<
         id: 'comparison',
         title: 'CueDesk və Heselo — müqayisə',
         paragraphs: [
-          'CueDesk qiyməti və paket hədləri onların saytından yoxlanılmalıdır; burada uydurma rəqəm yoxdur. Heselo qiyməti ictimai katalogdadır.',
+          'CueDesk açıq tək plan və 7 gün trial göstərir (cuedesk.app/pricing, 18.10.2026); məbləği onların saytında yoxlayın. Heselo qiyməti katalog API-dən gəlir.',
         ],
         table: {
           headers: ['Aspekt', 'CueDesk', 'Heselo'],
           rows: [
             ['Əsas fokus', 'Snuker/bilyard, mobil, QR üzvlük', 'Otaq/masa vaxtı + klub kassası'],
-            ['Platforma', 'iOS və Android panel', 'Web / bulud'],
+            ['Platforma', 'Web + iOS/Android', 'Web / bulud'],
             ['QR üzvlük', 'Tez-tez bəli', 'Xeyr'],
             ['Rezervasiya + canlı sessiya', 'Kateqoriyada var', 'Bəli'],
-            ['Bar / sessiya hesabı', 'Modelə görə', 'Bəli'],
-            ['Qiymət', 'Vendor saytından', '{billiards} {currency}/aydan, açıq'],
-            ['Dillər', 'EN əsasən', 'AZ, EN, RU'],
-            ['Ən yaxşı uyğunluq', 'Çoxfilial + QR üzvlük', 'AZ/CIS klub, açıq qiymət'],
+            ['Bar / sessiya hesabı', 'Bəli (tək plan)*', 'Bəli'],
+            ['Qiymət', 'Açıq tək plan, 7 gün trial*', '{billiards} {currency}/aydan'],
+            ['Dillər', 'Açıq deyil*', 'AZ, EN, RU'],
+            ['Ən yaxşı uyğunluq', 'Çoxfilial + QR üzvlük', 'AZ/CIS klub, AZ/EN/RU + qarışıq məkan'],
           ],
         },
       },
@@ -84,7 +84,7 @@ const guides: Record<
       },
       {
         q: 'CueDesk qiymətini necə müqayisə edim?',
-        a: 'Birbaşa CueDesk-dən təklif alın. Heselo tərəfində bilyard planları saytda açıqdır.',
+        a: 'CueDesk pricing səhifəsinə baxın (tək plan, 7 gün trial). Heselo bilyard planları katalog API / qiymətlər səhifəsindədir.',
       },
       {
         q: 'Heselo qiyməti?',
@@ -137,19 +137,19 @@ const guides: Record<
         id: 'comparison',
         title: 'CueDesk vs Heselo',
         paragraphs: [
-          'CueDesk pricing and package limits should be checked on their site; we do not invent numbers here. Heselo prices are in the public catalog.',
+          'CueDesk publishes a single plan with a 7-day trial (cuedesk.app/pricing, 18 Oct 2026); confirm the amount on their site. Heselo prices come from the catalog API.',
         ],
         table: {
           headers: ['Aspect', 'CueDesk', 'Heselo'],
           rows: [
             ['Main focus', 'Snooker/billiards, mobile, QR membership', 'Room/table time + club cash'],
-            ['Platform', 'iOS and Android panel', 'Web / cloud'],
+            ['Platform', 'Web + iOS/Android', 'Web / cloud'],
             ['QR membership', 'Often yes', 'No'],
             ['Booking + live session', 'In category', 'Yes'],
-            ['Bar on session bill', 'Depends on package', 'Yes'],
-            ['Price', 'From vendor', 'From {billiards} {currency}/month, public'],
-            ['Languages', 'Mostly EN', 'AZ, EN, RU'],
-            ['Best fit', 'Multi-site + QR membership', 'AZ/CIS club, public pricing'],
+            ['Bar on session bill', 'Yes (single plan)*', 'Yes'],
+            ['Price', 'Public single plan, 7-day trial*', 'From {billiards} {currency}/month'],
+            ['Languages', 'Not stated*', 'AZ, EN, RU'],
+            ['Best fit', 'Multi-site + QR membership', 'AZ/CIS club, AZ/EN/RU + mixed venues'],
           ],
         },
       },
@@ -172,7 +172,7 @@ const guides: Record<
       },
       {
         q: 'How do I compare CueDesk pricing?',
-        a: 'Ask CueDesk for a quote. Heselo billiards plans are published on our pricing page.',
+        a: 'Check CueDesk’s pricing page (single plan, 7-day trial). Heselo billiards plans are on our pricing page / catalog API.',
       },
       {
         q: 'What does Heselo cost?',
@@ -225,19 +225,19 @@ const guides: Record<
         id: 'comparison',
         title: 'CueDesk и Heselo — сравнение',
         paragraphs: [
-          'Цены CueDesk и лимиты пакетов нужно смотреть на их сайте; здесь нет выдуманных цифр. Цены Heselo — в открытом каталоге.',
+          'CueDesk публикует один план и trial 7 дней (cuedesk.app/pricing, 18.10.2026); сумму смотрите у них. Цены Heselo — из каталожного API.',
         ],
         table: {
           headers: ['Аспект', 'CueDesk', 'Heselo'],
           rows: [
             ['Фокус', 'Снукер/бильярд, мобильное, QR', 'Время стола/комнаты + касса'],
-            ['Платформа', 'iOS и Android', 'Web / облако'],
+            ['Платформа', 'Web + iOS/Android', 'Web / облако'],
             ['QR-членство', 'Часто да', 'Нет'],
             ['Бронь + живой сеанс', 'В категории', 'Да'],
-            ['Бар в счёт сеанса', 'Зависит от пакета', 'Да'],
-            ['Цена', 'У вендора', 'от {billiards} {currency}/мес, открыто'],
-            ['Языки', 'В основном EN', 'AZ, EN, RU'],
-            ['Лучше всего', 'Мультифилиал + QR', 'Клуб AZ/СНГ, открытая цена'],
+            ['Бар в счёт сеанса', 'Да (один план)*', 'Да'],
+            ['Цена', 'Открытый один план, trial 7 дней*', 'от {billiards} {currency}/мес'],
+            ['Языки', 'Не указано*', 'AZ, EN, RU'],
+            ['Лучше всего', 'Мультифилиал + QR', 'Клуб AZ/СНГ, AZ/EN/RU + смешанное заведение'],
           ],
         },
       },
@@ -260,7 +260,7 @@ const guides: Record<
       },
       {
         q: 'Как сравнить цену CueDesk?',
-        a: 'Запросите предложение у CueDesk. Планы Heselo для бильярда опубликованы на странице цен.',
+        a: 'Смотрите страницу цен CueDesk (один план, trial 7 дней). Планы Heselo — на странице цен / каталожный API.',
       },
       {
         q: 'Сколько стоит Heselo?',
