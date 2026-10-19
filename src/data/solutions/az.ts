@@ -310,87 +310,183 @@ export const solutionsAz: SolutionCopy[] = [
   {
     slug: 'antikafe',
     shortTitle: 'Antikafe',
-    h1: 'Antikafe idarəetmə sistemi',
-    seoTitle: 'Antikafe idarəetmə sistemi və antikafe proqramı | Heselo',
+    h1: 'Antikafe proqramı və idarəetmə sistemi',
+    seoTitle: 'Antikafe proqramı — vaxt uçotu, dəqiqəlik tarif və kassa | Heselo',
     seoDescription:
-      'Antikafe proqramı: masa və otaq rezervasiyası, saatla ödəniş, canlı sessiya, kassa və anbar. Saatla ödənişli məkanlar üçün — pulsuz demo.',
+      'Antikafe üçün bulud proqram: qonaq vaxtının uçotu, dəqiqəlik və saatlıq tarif, paket və stop-çek, çay/qəlyanaltı eyni hesabda, kassa növbəsi. Ayda {antikafe} {currency}-dən, pulsuz demo.',
     keywords: [
-      'antikafe idarəetmə sistemi',
       'antikafe proqramı',
-      'antikafe rezervasiya',
-      'saatla ödəniş sistemi',
-      'antikafe kassa proqramı',
+      'antikafe idarəetmə sistemi',
+      'antikafe idarə etmə proqramı',
+      'vaxta görə ödəniş',
+      'dəqiqəlik tarif',
+      'antikafe kassa',
     ],
     intro:
-      'Antikafelərdə qonaq saatla ödəyir: masa, otaq və ya stansiya bronu, çay/qəlyanaltı satışı və ödəniş eyni prosesdə olmalıdır. Antikafe idarəetmə sistemi cədvəli canlı sessiya və kassa ilə birləşdirir — lövhə və kağız qeydləri əvəz edir.',
+      'Antikafe proqramı qonağın məkanda keçirdiyi vaxtı sayır, dəqiqəlik və ya saatlıq tarifə görə məbləği avtomatik hesablayır və çay, qəlyanaltı satışını eyni hesaba yazır. Heselo bunu brauzerdə işləyən bulud paneldə edir: kompüterə quraşdırma və ayrıca server lazım deyil.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'Saatla ödənişli masa və otaq, PC/stol oyunu zonası, çay və qəlyanaltı satışı olan antikafe, saatla ödənişli kafe və oxşar launj məkanları üçün. Bir neçə zal və ya otaq eyni paneldə idarə olunur.',
+      'Vaxta görə ödənişli masa və otaq, PC və ya stolüstü oyun zonası, çay və qəlyanaltı satışı olan antikafe, taym-kafe və oxşar launj məkanları üçün. Bir neçə zal və otaq eyni paneldə idarə olunur.',
     problemsTitle: 'Antikafelərdə tipik problemlər',
     problems: [
-      'Hansı masa/otaq boşdur — resepsiya gecikir',
-      'Saat bitəndə uzatma və ödəniş ayrı qeyd olunur',
-      'Bronsuz gələn qonaq ilə bron olunmuş yer eyni masada və ya otaqda toqquşur',
+      'Hansı masa və ya otaq boşdur — resepsiya gecikir',
+      'Dəqiqəlik, paket və stop-çek əllə hesablanır, səhv çıxır',
+      'Çay və qəlyanaltı vaxt hesabına düşmür',
       'Günün sonunda kassa ilə satış uyğun gəlmir',
     ],
     howTitle: 'Heselo antikafe üçün nə verir?',
     howBody:
-      'Heselo masa, otaq və stansiyaları ayrıca qurur. Bron cədvəldədir; qonaq gələndə canlı sessiya açılır. Çay və qəlyanaltı eyni sessiyaya yazılır — kassa növbəni bağlayır, anbar qalıqları izlənir.',
+      'Axın dörd addımdır: qonaq gəlir və ya bron edilir → canlı sessiya açılır → məhsul eyni hesaba yazılır → ödəniş növbəyə düşür. Masa, otaq və stansiyalar ayrı resurs kimi qurulur; tarif qaydaları paneldə saxlanılır.',
+    sections: [
+      {
+        id: 'what',
+        title: 'Antikafe proqramı nədir və nə edir?',
+        paragraphs: [
+          'Antikafe proqramı — qonağın oturduğu vaxtı uçota alan, tarifə görə məbləği hesablayan və eyni anda çay/qəlyanaltı satışını idarə edən idarəetmə paneli. Sadə taymer yalnız dəqiqə sayır; antikafe proqramı isə bron cədvəlini, canlı sessiyanı, kassa növbəsini və anbar qalığını bir yerdə saxlayır.',
+          'Tipik gün belə gedir: resepsiya boş yeri görür, walk-in və ya bronlu qonağı yerləşdirir, sessiya açır. Qonaq çay və ya qəlyanaltı alırsa, sətir eyni hesaba yazılır. Çıxışda sistem vaxt və məhsul məbləğini birləşdirir; növbənin sonunda hesabat hazır olur.',
+        ],
+      },
+      {
+        id: 'billing',
+        title: 'Vaxta görə ödəniş: dəqiqəlik, saatlıq, paket və stop-çek',
+        paragraphs: [
+          'Antikafedə üç əsas model var: dəqiqəlik haqq (qısa vizitlər üçün ədalətli), saatlıq haqq (sadə hesablama) və stop-çek — müəyyən hədddən sonra vaxt məbləği artmır. Paketlər isə məsələn “3 saat” və ya “günlük” kimi əvvəlcədən satılan bloklardır. Heselo-da bu qaydaları paneldə qurursunuz; canlı sessiyada məbləğ avtomatik yenilənir.',
+          'Nümunə (öz tarifinizlə dəyişin): ilk saat 5 {currency}, sonrası dəqiqəlik 0,08 {currency}, günlük stop-çek 15 {currency}. Qonaq 2 saat 20 dəqiqə qalıbsa, sistem saat + dəqiqə hissəsini hesablayır; stop-çek həddinə çatıbsa, vaxt məbləği o hədddən yuxarı getmir. Çay və qəlyanaltı ayrıca sətir kimi eyni hesaba düşür.',
+          'Tarif və zərərsizlik hesablamasını addım-addım “Antikafe icarə və saat haqqı hesablama” bələdçisində açırıq — orada kirayə, maaş və qonaq-saat düsturu var.',
+        ],
+      },
+      {
+        id: 'zones',
+        title: 'Masa, zona və otaqlar',
+        paragraphs: [
+          'Ümumi zal, VIP otaq, PlayStation zonası və ya kino otağı — hər biri ayrı resurs ola bilər və ayrı tarif daşıya bilər. Bir paneldə boş/məşğul statusu görünür; bron köçürmə və ləğv tarixçədə qalır.',
+          'Beləcə VIP otağın saatı ümumi zalın dəqiqəlik haqqından fərqli qurulur. PS stansiyası və masa eyni növbədə satılır, amma hesabatda yer tipinə görə ayrılır.',
+        ],
+      },
+      {
+        id: 'minibar',
+        title: 'Pulsuz çay/kofe və mini-bar',
+        paragraphs: [
+          'Bir çox antikafedə çay və kofe “daxil” sayılır, amma peçenye və mini-bar ödənişlidir. Pulsuz istehlakın xərcini anbar uçotu ilə izləmək olar: qalıq azalır, gəlir isə vaxt tarifindən gəlir. Ödənişli qəlyanaltı isə sessiya hesabına satış kimi yazılır.',
+          'Rezervasiyasız yalnız çay alan qonaq üçün sürətli satış da eyni məhsul siyahısından işləyir — ayrıca kassa proqramı lazım deyil.',
+        ],
+      },
+      {
+        id: 'resources',
+        title: 'Stolüstü oyunlar və konsollar',
+        paragraphs: [
+          'Heselo stolüstü oyun və konsolu resurs kimi cədvəldə saxlaya bilir: məsələn PS stansiyası ayrıca yer tipidir, bron və sessiya onun üzərində açılır. Oyunun fiziki inventarını (neçə Monopoly qutusu qalıb) ayrıca anbar məhsulu kimi izləmək mümkündür.',
+          'Avtomatik konsol söndürmə və ya smart-plug ilə işıq/TV idarəetməsi hazırda yoxdur — bu ayrı avadanlıq sahəsidir. Vaxt uçotu və kassa paneldədir; elektrik kəsintisi isə roadmap mövzusu kimi qalır.',
+        ],
+      },
+      {
+        id: 'cloud',
+        title: 'Bulud sistemi: telefondan nəzarət',
+        paragraphs: [
+          'Heselo brauzerdə işləyən bulud paneldır: resepsiyada planşet və ya kompüter kifayətdir, öz serverinizi saxlamaq lazım deyil. İnternet olan yerdən cədvəl və aktiv sessiyalara baxmaq olar.',
+          'İnternet kəsiləndə panellə iş dayanır — oflayn kassa rejimi yoxdur. Buna görə stabil bağlantı və ehtiyat mobil internet praktikada vacibdir. Lokal quraşdırma tələb edən masaüstü antikafe proqramlarından fərq budur: yeniləmə və backup buludda gedir.',
+        ],
+      },
+      {
+        id: 'cash',
+        title: 'Kassa növbəsi və hesabat',
+        paragraphs: [
+          'Növbə açılır, sessiyalar və satışlar yazılır, günün sonunda növbə bağlanır. Nağd, kart və digər ödəniş üsulları növbə hesabatında görünür — Excel-də axşam “tutuşdurma” əvəzinə panel cəmini verir.',
+          'Anbar sayımı qəlyanaltı qalığını yeniləyir. Kim nəyi dəyişib deyə audit izi saxlanılır — bir neçə admin eyni anda işləyəndə bu xüsusilə lazımdır.',
+        ],
+      },
+      {
+        id: 'limits',
+        title: 'Heselo nəyi etmir',
+        paragraphs: [
+          'Heselo E-Kassa (fiskal kassa) deyil və bank POS terminalını əvəz etmir. Azərbaycanda fiskal və bank avadanlığını özünüz qoşursunuz; Heselo vaxt, sessiya, növbə və anbarı aparır.',
+          'Mətbəx/KDS olan restoran POS-u da deyil. Əsas gəlir sifarişdirsə, iiko və ya oxşar restoran həlli daha uyğundur. Klub kartı/bonus abunəliyi hazırda ayrıca loyalty modul kimi yoxdur — müştəri qeydi və sessiya tarixçəsi var.',
+        ],
+      },
+      {
+        id: 'price',
+        title: 'Qiymət',
+        paragraphs: [
+          'Antikafe üçün Kiçik plan ayda {antikafe} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıqdır. Demo pulsuzdur, kart tələb olunmur.',
+          'Birdəfəlik lisenziya modeli deyil — aylıq (və ya illik) bulud abunəliyidir. Bir neçə filial standart plana sığmırsa, fərdi təklif hazırlayırıq.',
+        ],
+      },
+    ],
     featuresTitle: 'Antikafe üçün funksiyalar',
     features: [
       {
-        title: 'Saatla rezervasiya',
-        desc: 'Masa və otaq cədvəli, köçürmə, ləğv və tarixçə.',
+        title: 'Vaxt uçotu və tariflər',
+        desc: 'Dəqiqəlik, saatlıq, paket və stop-çek — canlı sessiyada avtomatik məbləğ.',
       },
       {
-        title: 'Canlı sessiya',
-        desc: 'Aktiv yerlər, status, məhsul əlavəsi və ödəniş.',
+        title: 'Zona və otaq bronu',
+        desc: 'Masa, VIP, PS zonası — ayrı cədvəl, köçürmə və tarixçə.',
       },
       {
-        title: 'Sürətli satış',
-        desc: 'Rezervasiya olmadan çay və qəlyanaltı satışı da eyni məhsul siyahısından aparılır.',
+        title: 'Çay və mini-bar eyni hesabda',
+        desc: 'Sessiya satışları və sürətli satış eyni məhsul siyahısından.',
       },
       {
         title: 'Kassa və anbar',
-        desc: 'Növbə, hesabat, sayım və qalıq izləmə.',
+        desc: 'Növbə bağlanışı, hesabat, qalıq və sayım.',
       },
     ],
     differTitle: 'Sadə taymer və ya Excel-dən fərqi',
     differBody:
-      'Yalnız saat sayan proqram rezervasiya tarixçəsi, müştəri kartı, anbar və kassa sayımını vermir. Heselo antikafenin gündəlik rezervasiya, satış və kassa işlərini bir paneldə idarə etməyə kömək edir — oyun klubu və bilyard ilə eyni qaydada. “Antikafe idarəetmə sistemi nədir?” sualına bələdçimizdə cavab var.',
+      'Yalnız saat sayan proqram rezervasiya tarixçəsi, anbar və kassa sayımını vermir. Heselo antikafenin gündəlik bron, vaxt uçotu, satış və kassa işlərini bir bulud paneldə aparır — oyun klubu və bilyard ilə eyni qaydada. Daha dərin oxu: “Antikafe idarəetmə sistemi nədir?” və “Antikafe necə açılır” bələdçiləri.',
     faq: [
       {
-        q: 'Antikafe ilə oyun klubu eyni sistemdə idarə oluna bilər?',
-        a: 'Bəli. Fərqli yer tipləri (masa, otaq, PC stansiyası) eyni cədvəl, sessiya və kassa qaydaları ilə qurula bilər.',
+        q: 'Antikafe proqramı neçəyə başa gəlir? Aylıq yoxsa birdəfəlik?',
+        a: 'Antikafe üçün Kiçik plan ayda {antikafe} {currency}-dən başlayır — bulud abunəliyidir, birdəfəlik lisenziya deyil. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsindədir. Demo pulsuzdur, kart tələb olunmur.',
       },
       {
-        q: 'Saatla ödəniş necə aparılır?',
-        a: 'Canlı sessiyada vaxt və məhsul əlavələri toplanır; ödəniləcək məbləği sistem avtomatik hesablayır və növbəyə yazır.',
+        q: 'Dəqiqəlik tarif və stop-çek necə qurulur?',
+        a: 'Paneldə yer tipinə tarif qaydası təyin edirsiniz: dəqiqəlik və ya saatlıq haqq, paket və günlük stop-çek (vaxt məbləğinin tavanı). Canlı sessiyada sistem məbləği bu qaydalara görə yeniləyir; çay və qəlyanaltı ayrıca sətir kimi əlavə olunur.',
       },
       {
-        q: 'Demo necə əldə edilir?',
-        a: 'Əlaqə formasını doldurun — masa/otaq sayını və iş gününüzü qeyd edin.',
+        q: 'İlk saat sabit, sonrası dəqiqəlik hesablamaq olar?',
+        a: 'Tarif qaydalarını öz modelinizə uyğun qurursunuz — sabit saat bloku və dəqiqəlik davam demo zamanı sizin nümunənizlə yoxlanılır. Dəqiqəlik, saatlıq, paket və stop-çek eyni paneldə dəstəklənir.',
+      },
+      {
+        q: 'Proqram Azərbaycan dilindədir?',
+        a: 'Bəli. Panel AZ, EN və RU dillərində işləyir. Heselo Bakıda yaradılıb; demo və onboarding onlayn aparılır.',
+      },
+      {
+        q: 'Bulud sistemi internet kəsiləndə necə işləyir?',
+        a: 'Panel internet tələb edir — oflayn kassa rejimi yoxdur. Kəsintidə ehtiyat mobil internet tövsiyə olunur. Davamlı iş üçün stabil bağlantı vacibdir.',
+      },
+      {
+        q: 'E-Kassa və bank POS terminalı ilə inteqrasiya var?',
+        a: 'Xeyr. Heselo fiskal E-Kassa və bank terminalını əvəz etmir. Ödəniş üsulunu növbədə qeyd edirsiniz; fiskal və bank avadanlığını ayrıca qoşursunuz.',
+      },
+      {
+        q: 'Klub kartı, abunəlik və bonus sistemi var?',
+        a: 'Müştəri qeydi və sessiya tarixçəsi var. Ayrı loyalty / klub kartı / bonus abunəliyi modulu hazırda yoxdur — belə ehtiyac varsa, demo zamanı dürüst danışırıq.',
+      },
+      {
+        q: 'PlayStation zonası və stolüstü oyunlar eyni sistemdə idarə olunur?',
+        a: 'Bəli. PS stansiyası və masa/otaq ayrı yer tipi kimi qurulur; hər birinin öz tarifi və cədvəli ola bilər. Oyun qutularını anbar məhsulu kimi də izləmək olar. Avtomatik konsol söndürmə isə yoxdur.',
+      },
+      {
+        q: 'Neçə admin eyni anda işləyə bilər? İşçi icazələri?',
+        a: 'Bir neçə istifadəçi eyni paneldə işləyə bilər; kim nəyi dəyişib deyə audit izi qalır. Plan limitləri və rol detalları qiymətlər səhifəsində və demoda açılır.',
+      },
+      {
+        q: 'Pulsuz çay və kofe xərcini necə izləyim?',
+        a: 'Pulsuz istehlakı anbar uçotu ilə izləyin: qalıq azalır, gəlir isə vaxt tarifindən gəlir. Ödənişli mini-bar sətirləri sessiya hesabına yazılır. Zərərsizlik üçün qonaq-saat düsturuna bələdçimizdə baxın.',
       },
       {
         q: 'Hansı antikafelər üçün uyğun deyil?',
-        a: 'Qonaqdan vaxta görə yox, yalnız sifarişə görə pul alırsınızsa və mətbəx əsas işdirsə, adi kafe və ya restoran POS-u daha uyğundur. Heselo masa, otaq və ya stansiya vaxtını satan məkanlar üçündür: saatla ödəniş, çay və qəlyanaltı satışı və kassa növbəsi bir yerdədir.',
+        a: 'Əsas gəlir mətbəx sifarişidirsə və vaxt satmırsınızsa, restoran POS-u daha uyğundur. Heselo masa, otaq və ya stansiya vaxtını satan antikafe və taym-kafe üçündür.',
       },
       {
-        q: 'Bronsuz gələn qonaq necə qeyd olunur?',
-        a: 'Boş masa və ya otaqda dərhal canlı sessiya açırsınız — əvvəlcədən bron lazım deyil. Cədvəl həmin yerin məşğul olduğunu göstərir, resepsiya növbəti bronu buna görə planlayır. Qonaq yalnız çay və ya qəlyanaltı alırsa, sürətli satış ilə sessiyasız da satmaq olar.',
-      },
-      {
-        q: 'Excel və ya WhatsApp-dan keçmək nə verir?',
-        a: 'Excel-də saatlar və məbləğ əllə yazılır, WhatsApp-da bronlar mesajlar arasında itir. Heselo-da bron cədvəldədir, qonaq gələndə sessiya açılır, vaxt, çay və qəlyanaltı eyni hesaba yazılır. Növbənin sonunda kassa məbləği hazır olur, qalıqlar da anbarda yenilənir.',
-      },
-      {
-        q: 'Antikafe üçün qiymət nə qədərdir?',
-        a: 'Antikafe üçün Kiçik plan ayda {antikafe} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq göstərilib. Bir neçə zal və ya filial standart plana sığmırsa, ayrıca fərdi təklif hazırlayırıq. Demo pulsuzdur, kart tələb olunmur.',
+        q: 'Demo necə əldə edilir?',
+        a: 'Əlaqə formasını doldurun — masa/otaq sayını və tarif modelinizi (dəqiqəlik, saatlıq, stop-çek) yazın. 15 dəqiqəlik demo, kart lazım deyil.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
     ctaTitle: 'Antikafe üçün demo istəyin',
-    ctaBody: 'Masa və otaq sayınızı bizə yazın — rezervasiyadan kassa bağlanışına qədər göstəririk.',
+    ctaBody: 'Masa və otaq sayınızı yazın — vaxt uçotundan kassa bağlanışına qədər göstəririk.',
   },
   {
     slug: 'lounge',

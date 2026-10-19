@@ -450,6 +450,9 @@ export const ru: Messages = {
     altSeekingBilliardsTitle: 'Сравниваете программы для бильярда?',
     altSeekingBilliardsBody:
       'Честные сравнения с CueDesk, BilliardPOS, Biliardo.kz и другими — с сильными сторонами и пробелами. Нужно реле света? Мы прямо пишем, чего Heselo не делает.',
+    altSeekingAntikafeTitle: 'Статьи про антикафе',
+    altSeekingAntikafeBody:
+      'Учёт времени, выбор тарифов, открытие и расчёт аренды/часа — практические ответы отдельно от страницы продукта.',
   },
   productShot: {
     alts: {

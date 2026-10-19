@@ -39,6 +39,8 @@ export type SolutionCopy = {
   intro: string
   /** Optional SEO depth paragraphs after intro / how */
   body?: string[]
+  /** Optional H2 sections for long-form SEO (e.g. antikafe) */
+  sections?: Array<{ id?: string; title: string; paragraphs: string[] }>
   whoTitle: string
   whoBody: string
   problemsTitle: string

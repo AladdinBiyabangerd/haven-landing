@@ -7,8 +7,10 @@ import { applyCatalogPricesDeep, withCatalogPrices } from '@/lib/catalogCopy'
 import {
   allVenuePlans,
   catalogDisplayCurrency,
+  getVenueOffer,
   monthlyFeeRange,
   offersForLocale,
+  venuePriceRange,
 } from '@/lib/venueOffers'
 import {
   absoluteUrl,
@@ -178,7 +180,7 @@ export function buildJsonLdGraph(
   }
 
   if (includeOffers) {
-    software.offers = {
+    const aggregateOffer = {
       '@type': 'AggregateOffer',
       priceCurrency: currency,
       lowPrice: String(low),
@@ -187,6 +189,29 @@ export function buildJsonLdGraph(
       availability: 'https://schema.org/InStock',
       url: localeUrl(locale, '/pricing'),
       description: fillTemplate(messages.seo.aggregateOfferDescription, { low, currency }),
+    }
+
+    const venueSlug = input.slug.match(/^\/solutions\/([^/]+)\/?$/)?.[1]
+    const venue = venueSlug ? getVenueOffer(venueSlug, catalog) : undefined
+    const venueRange = venueSlug ? venuePriceRange(venueSlug, catalog) : undefined
+
+    if (venue && venueRange) {
+      software.offers = [
+        {
+          '@type': 'Offer',
+          price: String(venueRange.low),
+          priceCurrency: currency,
+          availability: 'https://schema.org/InStock',
+          url: localeUrl(locale, `/pricing#${venue.slug}`),
+          description: fillTemplate(messages.seo.aggregateOfferDescription, {
+            low: venueRange.low,
+            currency,
+          }),
+        },
+        aggregateOffer,
+      ]
+    } else {
+      software.offers = aggregateOffer
     }
   }
 

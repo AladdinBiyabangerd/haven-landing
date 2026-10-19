@@ -343,6 +343,9 @@ export type Messages = {
     /** Solution-page heading when alt guides are billiards comparisons. */
     altSeekingBilliardsTitle: string
     altSeekingBilliardsBody: string
+    /** Solution-page heading when alt links are anticafe guides. */
+    altSeekingAntikafeTitle: string
+    altSeekingAntikafeBody: string
   }
   eeat: {
     eyebrow: string

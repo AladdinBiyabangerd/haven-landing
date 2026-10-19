@@ -1613,14 +1613,14 @@ const catalog: CatalogEntry[] = [
     copy: {
       az: {
         shortTitle: 'Antikafe icarə hesablama',
-        h1: 'Antikafe menzil / icarə haqqını necə hesab etmək olar?',
+        h1: 'Antikafe icarə / kirayə haqqını necə hesab etmək olar?',
         seoTitle: 'Antikafe icarə və saat haqqı hesablama — sadə düstur | Heselo',
         seoDescription:
           'Antikafe xərclərini necə toplamaq, saatlıq qiyməti necə qurmaq və zərərsizlik nöqtəsini sadə düsturla necə hesablamaq olar. Maliyyə və ya hüquqi məsləhət deyil.',
         keywords: [
-          'antikafe menzil haqqı hesablama',
+          'antikafe icarə haqqı hesablama',
           'antikafe icarə',
-          'antikafe icarə haqqı',
+          'antikafe kirayə',
           'antikafe saat qiyməti',
           'antikafe xərcləri',
           'antikafe zərərsizlik nöqtəsi',

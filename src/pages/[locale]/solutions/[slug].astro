@@ -122,6 +122,23 @@ const faqMessages = {
             </section>
           ) : null
         }
+        {
+          solution.sections?.length
+            ? solution.sections.map((sec, i) => (
+                <section
+                  class="sol-section"
+                  aria-labelledby={sec.id ? `sol-sec-${sec.id}` : `sol-sec-${i}`}
+                >
+                  <h2 id={sec.id ? `sol-sec-${sec.id}` : `sol-sec-${i}`} class="sub">
+                    {sec.title}
+                  </h2>
+                  {sec.paragraphs.map((paragraph) => (
+                    <p class="body">{paragraph}</p>
+                  ))}
+                </section>
+              ))
+            : null
+        }
       </div>
 
       <section class="features-block" aria-labelledby="features-title">
@@ -230,12 +247,16 @@ const faqMessages = {
               <h2 id="alt-title" class="sub">
                 {solution.slug === 'billiards'
                   ? messages.guidesPage.altSeekingBilliardsTitle
-                  : messages.guidesPage.altSeekingTitle}
+                  : solution.slug === 'antikafe'
+                    ? messages.guidesPage.altSeekingAntikafeTitle
+                    : messages.guidesPage.altSeekingTitle}
               </h2>
               <p class="body">
                 {solution.slug === 'billiards'
                   ? messages.guidesPage.altSeekingBilliardsBody
-                  : messages.guidesPage.altSeekingBody}
+                  : solution.slug === 'antikafe'
+                    ? messages.guidesPage.altSeekingAntikafeBody
+                    : messages.guidesPage.altSeekingBody}
               </p>
               <ul class="alt-links">
                 {altGuides.map((item) => (

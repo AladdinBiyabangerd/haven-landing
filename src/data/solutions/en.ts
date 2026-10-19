@@ -312,87 +312,183 @@ export const solutionsEn: SolutionCopy[] = [
   {
     slug: 'antikafe',
     shortTitle: 'Anti-café',
-    h1: 'Anti-café management system',
-    seoTitle: 'Anti-café management system & hourly venue software | Heselo',
+    h1: 'Anticafe & time-café software',
+    seoTitle: 'Anticafe software — time tracking, per-minute billing & cash | Heselo',
     seoDescription:
-      'Anti-café software: table/room booking, hourly sessions, live floor, cash, and inventory. Built for time-based lounges — free demo.',
+      'Cloud anticafe software: guest time tracking, per-minute and hourly rates, packages and stop-check, snacks on one bill, cash shift. From {antikafe} {currency}/mo, free demo.',
     keywords: [
-      'anti-cafe management system',
-      'anti-cafe software',
-      'hourly venue booking',
-      'time-based cafe POS',
+      'anticafe software',
+      'anti-café management system',
+      'time cafe software',
+      'per-minute billing',
       'anti-cafe reservation',
+      'time-based cafe POS',
     ],
     intro:
-      'In an anti-café, guests pay by the hour: table or room booking, snacks and drinks, and payment should run as one process. An anti-café management system connects the schedule to live sessions and cash — replacing whiteboards and paper notes.',
+      'Anticafe software tracks how long a guest stays, bills per-minute or hourly rates automatically, and puts tea and snacks on the same bill. Heselo does this in a browser cloud panel — no install, no on-site server.',
     whoTitle: 'Who is it for?',
     whoBody:
-      'Hourly table and room venues, PC or board-game zones, tea and snack sales — anti-cafés, time cafés, and similar lounges. Multiple halls or rooms in one panel.',
+      'Time-based tables and rooms, PC or board-game zones, tea and snack sales — anti-cafés, time cafés, and similar lounges. Multiple halls and rooms in one panel.',
     problemsTitle: 'Typical anti-café friction',
     problems: [
       'Which table or room is free — front desk loses time',
-      'Extensions and payment logged separately when time ends',
-      'Walk-ins clash with reservations on the same table or room',
-      'Cash count does not match snack sales at day close',
+      'Per-minute rates, packages, and stop-check done by hand',
+      'Snacks never land on the time bill',
+      'Cash count does not match sales at day close',
     ],
-    howTitle: 'What does Heselo give an anti-café?',
+    howTitle: 'What does Heselo give an anticafe?',
     howBody:
-      'Heselo sets up tables, rooms, and stations individually. Bookings live on the schedule; when guests arrive, a live session opens. Tea and snacks go on the same session — cash closes the shift, and inventory tracks stock.',
-    featuresTitle: 'Features for anti-cafés',
+      'Four steps: guest arrives or books → live session opens → products go on the same bill → payment posts to the shift. Tables, rooms, and stations are separate resources; rate rules live in the panel.',
+    sections: [
+      {
+        id: 'what',
+        title: 'What is anticafe software?',
+        paragraphs: [
+          'Anticafe software (also called anti-café or time-café software) records guest time, applies your tariff, and runs snack sales alongside it. A plain timer only counts minutes; a real panel keeps the schedule, live sessions, cash shift, and stock in one place.',
+          'A typical day: front desk sees free seats, seats a walk-in or booking, opens a session. Tea or snacks become lines on that bill. At checkout, time and products total together; shift close produces the report.',
+        ],
+      },
+      {
+        id: 'billing',
+        title: 'Time billing: per-minute, hourly, packages, stop-check',
+        paragraphs: [
+          'Three common models: per-minute (fair for short visits), hourly (simple), and stop-check — a daily cap after which time charges stop growing. Packages are prepaid blocks such as “3 hours” or “day pass”. In Heselo you configure these rules; the live session updates the amount.',
+          'Example (replace with your rates): first hour 5 {currency}, then 0.08 {currency} per minute, daily stop-check 15 {currency}. For 2 h 20 m the system combines the hour and minute parts; once the stop-check ceiling is hit, time charges do not climb further. Tea and snacks stay separate lines on the same bill.',
+          'For rent math and break-even guest-hours, see the anticafe rent and hourly fee guide.',
+        ],
+      },
+      {
+        id: 'zones',
+        title: 'Tables, zones, and rooms',
+        paragraphs: [
+          'Open floor, VIP room, PlayStation zone, or cinema room can each be a resource with its own rate. Free/busy status is visible; moves and cancels stay in history.',
+          'VIP hourly rates can differ from open-floor per-minute pricing. PS stations and tables sell in the same shift but split cleanly in reports.',
+        ],
+      },
+      {
+        id: 'minibar',
+        title: 'Free tea/coffee and mini-bar',
+        paragraphs: [
+          'Many anticafes include tea and coffee, while snacks are paid. Track “free” consumables via inventory (stock falls, revenue comes from time). Paid snacks post as session sales.',
+          'Walk-in tea-only guests can use quick sale from the same product list — no second POS.',
+        ],
+      },
+      {
+        id: 'resources',
+        title: 'Board games and consoles',
+        paragraphs: [
+          'Heselo can treat consoles and stations as schedule resources: a PS seat is its own place type with booking and sessions. Board-game boxes can be inventory items.',
+          'We do not auto-shut consoles or drive smart plugs for lights/TVs today — that is separate hardware. Time tracking and cash stay in the panel; power control is a roadmap topic.',
+        ],
+      },
+      {
+        id: 'cloud',
+        title: 'Cloud panel — check from your phone',
+        paragraphs: [
+          'Heselo is a browser cloud panel: a tablet or PC at the desk is enough; you do not host a server. With internet you can review the schedule and live sessions remotely.',
+          'If the connection drops, the panel stops — there is no offline cash mode. Stable internet (and mobile backup) matters. Unlike desktop one-time-license anticafe tools, updates and backups run in the cloud.',
+        ],
+      },
+      {
+        id: 'cash',
+        title: 'Cash shift and reports',
+        paragraphs: [
+          'Open the shift, run sessions and sales, close the day. Cash, card, and other methods show in the shift report — no evening spreadsheet reconciliation.',
+          'Stock counts refresh snack levels. Audit trails show who changed what when several admins work at once.',
+        ],
+      },
+      {
+        id: 'limits',
+        title: 'What Heselo does not do',
+        paragraphs: [
+          'Heselo is not a fiscal register and does not replace a bank card terminal. You connect fiscal and bank hardware separately; Heselo runs time, sessions, shift, and stock.',
+          'It is not a kitchen/KDS restaurant POS. If orders are the main revenue, keep a restaurant stack. There is no separate loyalty / club-card / bonus module today — customer records and session history exist.',
+        ],
+      },
+      {
+        id: 'price',
+        title: 'Pricing',
+        paragraphs: [
+          'The Small anticafe plan starts at {antikafe} {currency} a month. Medium, Large, annual billing, and limits are on the pricing page. Demo is free; no card required.',
+          'It is a monthly (or annual) cloud subscription — not a one-time license. Multi-branch venues that outgrow standard plans get a custom quote.',
+        ],
+      },
+    ],
+    featuresTitle: 'Features for anticafes',
     features: [
       {
-        title: 'Hourly booking',
-        desc: 'Table and room schedule, move, cancel, and history.',
+        title: 'Time tracking & rates',
+        desc: 'Per-minute, hourly, packages, and stop-check — amount updates live.',
       },
       {
-        title: 'Live session',
-        desc: 'Active seats, status, product add-ons, and payment.',
+        title: 'Zone and room booking',
+        desc: 'Tables, VIP, PS zones — schedule, move, and history.',
       },
       {
-        title: 'Quick sale',
-        desc: 'Tea and snack sales without a booking also use the same product list.',
+        title: 'Tea and mini-bar on one bill',
+        desc: 'Session lines and quick sale share the same product list.',
       },
       {
         title: 'Cash & inventory',
-        desc: 'Shift, report, count, and stock tracking.',
+        desc: 'Shift close, reports, stock, and counts.',
       },
     ],
     differTitle: 'Beyond a simple timer or spreadsheet',
     differBody:
-      'A timer alone does not give booking history, customer records, inventory, or cash count. Heselo helps run the anti-café’s daily bookings, sales, and cash work in one panel — the same way as gaming clubs and billiards. See our guide for “what is an anti-café management system?”',
+      'A timer alone does not give booking history, inventory, or cash count. Heselo runs daily booking, time billing, sales, and cash in one cloud panel — same pattern as gaming clubs and billiards. Deeper reading: “What is an anti-café management system?” and “How to open an anticafe”.',
     faq: [
       {
-        q: 'Can anti-café and gaming club run in one system?',
-        a: 'Yes. Different place types (table, room, PC station) can follow the same schedule, session, and cash rules.',
+        q: 'How much does anticafe software cost — monthly or one-time?',
+        a: 'The Small anticafe plan starts at {antikafe} {currency} a month — a cloud subscription, not a one-time license. Medium, Large, annual billing, and limits are on the pricing page. Demo is free; no card needed.',
       },
       {
-        q: 'How does hourly payment work?',
-        a: 'Live sessions collect time and product lines; the amount due is calculated automatically and posted to the shift.',
+        q: 'How do per-minute rates and stop-check work?',
+        a: 'You set rate rules per place type: per-minute or hourly, packages, and a daily stop-check ceiling. The live session updates the amount; tea and snacks are separate lines on the same bill.',
+      },
+      {
+        q: 'Can the first hour be fixed, then per-minute?',
+        a: 'You configure tariff rules to match your model — fixed-hour blocks plus per-minute continuation are checked on your sample in the demo. Per-minute, hourly, packages, and stop-check are supported in the same panel.',
+      },
+      {
+        q: 'Is the panel available in English?',
+        a: 'Yes. The panel runs in AZ, EN, and RU. Heselo was built in Baku; demo and onboarding are online.',
+      },
+      {
+        q: 'What happens if the internet drops?',
+        a: 'The panel needs internet — there is no offline cash mode. Keep a mobile backup link. Stable connectivity is part of day-to-day ops.',
+      },
+      {
+        q: 'Do you integrate with fiscal cash registers or bank POS?',
+        a: 'No. Heselo does not replace fiscal hardware or a bank terminal. You record payment methods on the shift; fiscal and bank devices stay separate.',
+      },
+      {
+        q: 'Is there a club card, subscription, or bonus system?',
+        a: 'Customer records and session history exist. A separate loyalty / club-card / bonus module is not available today — we say so honestly in the demo if that is a must-have.',
+      },
+      {
+        q: 'Can PlayStation zones and board games run in the same system?',
+        a: 'Yes. PS stations and tables/rooms are separate place types with their own rates and schedules. Game boxes can be inventory items. Auto console shutdown is not included.',
+      },
+      {
+        q: 'How many admins can work at once? Staff permissions?',
+        a: 'Several users can work in the same panel; audit trails show who changed what. Plan limits and role details open on the pricing page and in the demo.',
+      },
+      {
+        q: 'How do I track the cost of free tea and coffee?',
+        a: 'Track free consumables in inventory: stock falls while revenue comes from time tariffs. Paid mini-bar lines post to the session. See the rent guide for guest-hour break-even math.',
+      },
+      {
+        q: 'Which anticafes is it not a fit for?',
+        a: 'If kitchen orders are the main revenue and you do not sell time, a restaurant POS fits better. Heselo is for anticafes and time cafés that sell table, room, or station time.',
       },
       {
         q: 'How do we get a demo?',
-        a: 'Use the contact form — share table/room count and your typical working day.',
-      },
-      {
-        q: 'Which anti-cafés is it not a fit for?',
-        a: 'If you charge only for orders rather than time, and the kitchen is the main business, a regular café or restaurant POS fits better. Heselo is for venues that sell table, room, or station time: hourly payment, tea and snack sales, and the cash shift in one place.',
-      },
-      {
-        q: 'How are walk-in guests handled?',
-        a: 'Open a live session on a free table or room right away — no booking needed first. The schedule shows the place as occupied, so the front desk plans the next booking around it. If a guest only buys tea or snacks, you can sell through quick sale without a session.',
-      },
-      {
-        q: 'What do we gain by moving off Excel or WhatsApp?',
-        a: 'In Excel, hours and totals are typed by hand; in WhatsApp, bookings get lost between messages. In Heselo the booking is on the schedule, a session opens when guests arrive, and time, tea, and snacks go on the same bill. At shift end the cash total is ready and stock levels are updated.',
-      },
-      {
-        q: 'How much does it cost for an anti-café?',
-        a: 'The Small plan for anti-cafés starts at {antikafe} {currency} a month. Medium and Large plans, annual billing, and limits are published on the pricing page. If several halls or branches do not fit a standard plan, we prepare a separate custom quote. The demo is free and needs no card.',
+        a: 'Use the contact form — share table/room count and your tariff model (per-minute, hourly, stop-check). Fifteen-minute demo, no card.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],
-    ctaTitle: 'Anti-café demo',
-    ctaBody: 'Tell us your table and room count — we walk through booking to cash close.',
+    ctaTitle: 'Anticafe demo',
+    ctaBody: 'Tell us your table and room count — we walk through time tracking to cash close.',
   },
   {
     slug: 'lounge',

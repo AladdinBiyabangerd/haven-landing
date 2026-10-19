@@ -450,6 +450,9 @@ export const az: Messages = {
     altSeekingBilliardsTitle: 'Bilyard proqramı müqayisə edirsiniz?',
     altSeekingBilliardsBody:
       'CueDesk, BilliardPOS, Club Timer və digərləri ilə dürüst müqayisə — güclü tərəflər və boşluqlar açıq. İşıq relye lazımdırsa, Heselo-nun nə etmədiyini də yazırıq.',
+    altSeekingAntikafeTitle: 'Antikafe haqqında bələdçilər',
+    altSeekingAntikafeBody:
+      'Vaxt uçotu, tarif seçimi, açılış addımları və icarə/saat hesablaması — məhsul səhifəsindən ayrı, praktiki cavablar.',
   },
   productShot: {
     alts: {

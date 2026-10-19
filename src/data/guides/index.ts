@@ -40,7 +40,11 @@ export const SOLUTION_ALT_GUIDES: Partial<Record<SolutionSlug, GuideSlug[]>> = {
     'club-timer-alternative',
   ],
   lounge: ['kaktus-alternative', 'affordable-club-pos', 'azerbaijan-pos-systems-comparison'],
-  antikafe: ['affordable-club-pos', 'dine-alternative', 'baza-market-alternative'],
+  antikafe: [
+    'antikafe-management-system',
+    'how-to-open-anticafe',
+    'anticafe-rent-cost-calculation',
+  ],
   pos: [
     'club-pos-vs-excel',
     'affordable-club-pos',
@@ -66,7 +70,11 @@ export const SOLUTION_ALT_GUIDES_RU: Partial<Record<SolutionSlug, GuideSlug[]>> 
     'billiardpos-alternative',
   ],
   lounge: ['restaurant-pos-vs-karaoke-system', 'iiko-alternative-clubs', 'club-pos-vs-excel'],
-  antikafe: ['club-pos-vs-excel', 'affordable-club-pos', 'anticafe-rent-cost-calculation'],
+  antikafe: [
+    'antikafe-management-system',
+    'how-to-open-anticafe',
+    'anticafe-rent-cost-calculation',
+  ],
   pos: ['club-pos-vs-excel', 'affordable-club-pos', 'iiko-alternative-clubs'],
   reservations: ['club-pos-vs-excel', 'karaoke-booking-system', 'billiards-table-booking'],
   inventory: ['club-pos-vs-excel', 'affordable-club-pos'],

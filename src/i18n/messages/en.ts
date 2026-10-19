@@ -450,6 +450,9 @@ export const en: Messages = {
     altSeekingBilliardsTitle: 'Comparing billiards software?',
     altSeekingBilliardsBody:
       'Honest comparisons with CueDesk, BilliardPOS, Club Timer and more — strengths and gaps included. Need a light relay? We say clearly what Heselo does not do.',
+    altSeekingAntikafeTitle: 'Anticafe guides',
+    altSeekingAntikafeBody:
+      'Time tracking, tariff choices, opening steps, and rent/hourly math — practical answers separate from the product page.',
   },
   productShot: {
     alts: {
