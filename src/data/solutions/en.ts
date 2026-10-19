@@ -27,25 +27,20 @@ export const solutionsEn: SolutionCopy[] = [
   {
     slug: 'billiards',
     shortTitle: 'Billiards',
-    h1: 'Billiards club management system',
-    seoTitle: 'Billiards Club Management Software — Tables, Rates, Cash | Heselo',
+    h1: 'Billiards club software',
+    seoTitle: 'Billiards club software — tables, rates, cash | Heselo',
     seoDescription:
       'Billiards club software with table timers, booking, pause, day/night rates and cash in one panel. From {billiards} {currency}/month — free demo.',
     keywords: [
       'billiards club software',
       'billiards club management software',
+      'pool hall software',
       'billiards booking system',
-      'pool table booking system',
       'billiards table timer',
       'billiards reservation software',
     ],
     intro:
-      'In a billiards club, tables run by the hour or the minute: booking, schedule, live play, pause, and payment belong on one record. Heselo sets up each table on its own, turns a reservation into a live session, and closes the shift in cash — this is not a restaurant kitchen POS.',
-    body: [
-      'Whether you run two tables or a full hall, the flow stays the same. Guests book ahead or take an open table; play starts a session; bar and snacks land on that bill; payment shows in the shift report.',
-      'Night and weekend rates, pause, VIP rooms, and regular tables share one schedule. We do not support light-relay table lamps or QR membership check-in today — those belong to separate hardware or other products. Heselo is a cloud panel you run on a tablet or computer.',
-      'The Small billiards plan starts at {billiards} {currency} per month (catalog API); Medium, Large, annual billing, and the 6-table Small limit are on the pricing page. Differentiator vs many rivals: AZ/EN/RU in one cloud panel for mixed billiards + PS + karaoke — not “open price alone” (CueDesk, BilliardPOS and Biliardo.kz also publish rates). Comparisons: CueDesk, BilliardPOS, BCMS, Biliardo.kz, Club Timer.',
-    ],
+      'Billiards club software keeps table time, booking, live play, pause, and payment on one record. Heselo sets up each table on its own, turns a reservation into a live session, and closes the shift in cash — this is not a restaurant kitchen POS.',
     whoTitle: 'Who is it for?',
     whoBody:
       'Billiards halls, lounge + billiards venues, and clubs that book tables or rooms with time-based payment. Built for teams that want a cloud panel with Azerbaijani, English, and Russian.',
@@ -59,7 +54,82 @@ export const solutionsEn: SolutionCopy[] = [
     ],
     howTitle: 'What does Heselo give billiards?',
     howBody:
-      'Heselo books tables and rooms on one schedule. When play starts, a live session opens; products and payment stay there. Pricing follows table type, duration, and the night or weekend rules you set. Cash closes the shift.',
+      'Four steps: guest books or takes an open table → play opens a live session → bar and snacks land on that bill → payment posts to the shift. Pricing follows table type, duration, and the night or weekend rules you set.',
+    sections: [
+      {
+        id: 'what',
+        title: 'What is billiards club software?',
+        paragraphs: [
+          'Billiards club software (also searched as pool hall software) tracks table time, applies your tariff, and puts bar sales on the same session bill. A plain timer only counts minutes; a real panel keeps the schedule, live play, pause, cash shift, and stock in one place.',
+          'A typical day: front desk sees free tables, seats a walk-in or booking, opens a session. Drinks or snacks become lines on that bill. When play ends, time and products total together; shift close produces the report.',
+        ],
+      },
+      {
+        id: 'billing',
+        title: 'Day, night, and weekend rates; pause and extend',
+        paragraphs: [
+          'Halls often run day vs night rates, weekend add-ons, and hourly or per-minute billing. Pause stops the clock during a break; extend continues on the same session. In Heselo you configure these rules; the live session updates the amount.',
+          'Example (replace with your rates): day $8/hour, night $12/hour. If a guest starts at 21:00, plays until 23:30, and pauses for 20 minutes, the system bills only play minutes at the night rate. VIP rooms and snooker tables can carry their own hourly fees.',
+          'For hourly math and break-even, see the billiards hourly rates guide.',
+        ],
+      },
+      {
+        id: 'tables',
+        title: 'Tables, VIP rooms, and table types',
+        paragraphs: [
+          'Pool, Russian, and snooker tables, VIP rooms, and the open floor can each be a resource with its own rate. Free/busy status is visible; moves and cancels stay in history.',
+          'VIP hourly rates can differ from open-floor pricing. Several tables sell in the same shift but split cleanly by type in reports.',
+        ],
+      },
+      {
+        id: 'bar',
+        title: 'Bar and snacks on the same bill',
+        paragraphs: [
+          'Drinks and snacks post to the same session as table time. At shift close, time revenue and product revenue show in one report — less evening spreadsheet reconciliation.',
+          'Walk-in drink-only guests can use quick sale from the same product list — no second POS.',
+        ],
+      },
+      {
+        id: 'mixed',
+        title: 'Mixed venues: billiards + PS + karaoke',
+        paragraphs: [
+          'Many clubs run billiard tables, PlayStation stations, and karaoke rooms in one building. Heselo keeps them on one cloud panel: each place type has its own schedule and rates, with a shared cash shift.',
+          'Open price alone is not the differentiator — CueDesk, BilliardPOS, and Biliardo.kz also publish rates. What matters for mixed venues is AZ/EN/RU in one panel. Full comparisons are in our CueDesk, BilliardPOS, BCMS, and Biliardo.kz guides.',
+        ],
+      },
+      {
+        id: 'cloud',
+        title: 'Cloud panel — check from phone or tablet',
+        paragraphs: [
+          'Heselo is a browser cloud panel: a tablet or PC at the desk is enough; you do not host a server. With internet you can review the schedule and live play sessions remotely.',
+          'If the connection drops, the panel stops — there is no offline cash mode. Stable internet (and mobile backup) matters. Unlike desktop Windows billiards tools, updates and backups run in the cloud.',
+        ],
+      },
+      {
+        id: 'cash',
+        title: 'Cash shift, roles, and reports',
+        paragraphs: [
+          'Open the shift, run sessions and sales, close the day. Cash, card, and other methods show in the shift report.',
+          'Operators can open tables and add sales; owners see shift and revenue reports under separate rights. Audit trails show who changed what.',
+        ],
+      },
+      {
+        id: 'limits',
+        title: 'What Heselo does not do',
+        paragraphs: [
+          'No light-relay / automatic table-lamp control — that is separate hardware (for example BilliardPOS ESP32 relays). QR membership check-in is not supported today either.',
+          'Heselo is not a fiscal register and does not replace a bank card terminal. It is not a kitchen/KDS restaurant POS: if waiter orders are the main revenue, keep a restaurant stack. There is no separate loyalty / club-card module — customer records and session history exist.',
+        ],
+      },
+      {
+        id: 'price',
+        title: 'Pricing',
+        paragraphs: [
+          'The Small billiards plan starts at {billiards} {currency} a month — the current rate on the pricing page. Medium, Large, annual billing, and the Small plan’s 6-table limit are listed there. Demo is free; no card required.',
+          'It is a monthly (or annual) cloud subscription — not a one-time license. Multi-branch venues that outgrow standard plans get a custom quote.',
+        ],
+      },
+    ],
     featuresTitle: 'Fit for billiards',
     features: [
       {
@@ -81,7 +151,7 @@ export const solutionsEn: SolutionCopy[] = [
     ],
     differTitle: 'More than a timer',
     differBody:
-      'Timers alone do not solve booking history, inventory, or cash count. Heselo combines billiards sales with the venue’s other sales in the same shift. If kitchen and waiter orders are your core business, choose a restaurant POS; if you sell table time, you need a club panel.',
+      'Timers alone do not solve booking history, inventory, or cash count. Heselo combines billiards sales with the venue’s other sales in the same shift. If kitchen and waiter orders are your core business, choose a restaurant POS; if you sell table time, you need billiards club software. Deeper reading: our comparison and hourly-rates guides.',
     compare: {
       title: 'What to check when you pick billiards software',
       intro:
@@ -99,6 +169,10 @@ export const solutionsEn: SolutionCopy[] = [
       ],
     },
     faq: [
+      {
+        q: 'What is billiards club software?',
+        a: 'Billiards club software (pool hall software) runs table time, booking, live sessions, bar sales, and the cash shift in one panel. A plain timer only counts minutes; Heselo connects the schedule through to payment.',
+      },
       {
         q: 'Are billiard tables set up individually?',
         a: 'Yes. Each table or room is configured on its own; schedule and live floor share the same data. You can set different rates for pool, Russian, or snooker tables.',
@@ -120,6 +194,10 @@ export const solutionsEn: SolutionCopy[] = [
         a: 'No. Heselo is a tablet or computer panel for timers, booking, and cash. Automatic table lamps with a relay block are separate hardware; we do not offer that integration today.',
       },
       {
+        q: 'Is there fiscal register or QR membership check-in?',
+        a: 'No. Heselo does not replace a fiscal register or bank terminal, and QR membership check-in is not supported today. You record the payment method on the shift; fiscal and bank hardware connect separately.',
+      },
+      {
         q: 'How is Heselo different from CueDesk or BilliardPOS?',
         a: 'CueDesk often focuses on QR membership and mobile control; BilliardPOS leads with ESP32 table-light relays, TV timers, and an API. Heselo is a cloud panel in AZ, EN, and RU: table booking, live session, bar sales, and cash in one place — including mixed billiards + PS + karaoke venues. Full comparisons are in our guides.',
       },
@@ -132,8 +210,8 @@ export const solutionsEn: SolutionCopy[] = [
         a: 'A board and chat threads show who booked, but start time, extras, and payment end up somewhere else. In Heselo a booking moves from the schedule into a live session, the price follows play time, and payment lands in the shift. You stop re-adding totals in Excel at closing time.',
       },
       {
-        q: 'How much does it cost for a billiards club?',
-        a: 'The Small plan for billiards starts at {billiards} {currency} a month. Medium and Large plans, annual billing, and limits are published on the pricing page. For several branches or volume beyond a standard plan, we prepare a separate custom quote.',
+        q: 'How much does billiards club software cost?',
+        a: 'The Small plan for billiards starts at {billiards} {currency} a month — the current rate on the pricing page. Medium and Large plans, annual billing, and limits are published there. For several branches or volume beyond a standard plan, we prepare a separate custom quote.',
       },
       {
         q: 'How do we get a demo — is a card required?',

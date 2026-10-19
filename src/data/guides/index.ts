@@ -36,8 +36,8 @@ export const SOLUTION_ALT_GUIDES: Partial<Record<SolutionSlug, GuideSlug[]>> = {
   karaoke: ['restaurant-pos-vs-karaoke-system', 'dine-alternative', 'fazilat-pos-alternative'],
   billiards: [
     'billiards-software-comparison',
-    'cuedesk-alternative',
-    'club-timer-alternative',
+    'billiards-hourly-rates',
+    'bcms-alternative',
   ],
   lounge: ['kaktus-alternative', 'affordable-club-pos', 'azerbaijan-pos-systems-comparison'],
   antikafe: [

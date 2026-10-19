@@ -27,8 +27,8 @@ export const solutionsAz: SolutionCopy[] = [
   {
     slug: 'billiards',
     shortTitle: 'Bilyard',
-    h1: 'Bilyard klubu idarəetmə sistemi',
-    seoTitle: 'Bilyard klubu idarəetmə proqramı — masa, tarif, kassa | Heselo',
+    h1: 'Bilyard klubu proqramı və idarəetmə sistemi',
+    seoTitle: 'Bilyard klubu proqramı — masa, tarif, kassa | Heselo',
     seoDescription:
       'Bilyard klubu proqramı: masa taymeri, rezerv, pauza, gecə-gündüz tarif və kassa bir paneldə. {billiards} {currency}/aydan — pulsuz demo.',
     keywords: [
@@ -40,15 +40,10 @@ export const solutionsAz: SolutionCopy[] = [
       'bilyard cədvəl sistemi',
     ],
     intro:
-      'Bilyard klubunda masa saatla və dəqiqə ilə işləyir: bron, cədvəl, canlı oyun, fasilə və ödəniş bir-birinə bağlı olmalıdır. Heselo hər masanı ayrıca qurur, eyni paneldə rezervasiyanı canlı sessiyaya çevirir və növbəni kassada bağlayır — bu, mətbəx restoran POS-u deyil.',
-    body: [
-      'Kiçik zalda iki masa, böyük salonda onlarla masa — axın eynidir. Qonaq bron edir və ya gəlib boş masa seçir; oyun başlayanda sessiya açılır; bar və qəlyanaltı eyni hesaba yazılır; ödəniş növbə hesabatında görünür.',
-      'Gecə və həftəsonu tarifləri, pauza, VIP otaq və adi masa eyni cədvəldə idarə olunur. İşıq relye bloku və QR üzvlük check-in hazırda dəstəklənmir — bunlar ayrıca avadanlıq və ya digər proqramların sahəsidir. Heselo planşet və ya kompüterdə işləyən bulud paneldən ibarətdir.',
-      'Bilyard üçün Kiçik plan ayda {billiards} {currency}-dən başlayır (katalog API); Orta, Böyük, illik ödəniş və 6 masa həddi qiymətlər səhifəsindədir. Rəqiblərin çoxu da qiymətini açıq yazır — fərqimiz AZ/EN/RU bulud panel və qarışıq məkan (bilyard+PS+karaoke). AZ-da tez müqayisə: Club Timer, Clopos, Excel; beynəlxalq: CueDesk, BilliardPOS, BCMS, Biliardo.kz.',
-    ],
+      'Bilyard klubu proqramı masanın saat və ya dəqiqə ilə satışını, bronu, canlı oyunu, pauzanı və ödənişi bir qeydə yığır. Heselo hər masanı ayrıca qurur, rezervasiyanı canlı sessiyaya çevirir və növbəni kassada bağlayır — bu, mətbəx restoran POS-u deyil.',
     whoTitle: 'Kimlər üçündür?',
     whoBody:
-      'Bilyard salonları, qarışıq launj + bilyard məkanları və masa və ya otaq rezervasiyası ilə vaxt üzrə ödəniş aparan klublar üçün. Bakıda və regionda bulud panellə işləmək istəyənlər üçün uyğundur.',
+      'Bilyard salonları, qarışıq launj + bilyard məkanları və masa və ya otaq rezervasiyası ilə vaxt üzrə ödəniş aparan klublar üçün. Bakıda və regionda AZ/EN/RU bulud panellə işləmək istəyənlər üçün uyğundur.',
     problemsTitle: 'Bilyard klublarında tez rast gəlinən problemlər',
     problems: [
       'Hansı masa boşdur — lövhə və telefon uyğun gəlmir',
@@ -59,7 +54,82 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     howTitle: 'Heselo bilyard üçün nə verir?',
     howBody:
-      'Heselo masaları və otaqları eyni cədvəldə bron edir. Oyun başlayanda canlı zalda sessiya açılır; məhsul və ödəniş eyni yerdə qalır. Qiymət masa növü, müddət və təyin etdiyiniz gecə və ya həftəsonu tarifinə görə hesablanır; kassa növbəni bağlayır.',
+      'Axın dörd addımdır: qonaq bron edir və ya boş masa seçir → oyun başlayanda canlı sessiya açılır → bar və qəlyanaltı eyni hesaba yazılır → ödəniş növbəyə düşür. Qiymət masa növü, müddət və sizin gecə/həftəsonu qaydalarınıza görə hesablanır.',
+    sections: [
+      {
+        id: 'what',
+        title: 'Bilyard klubu proqramı nədir və nə edir?',
+        paragraphs: [
+          'Bilyard klubu proqramı — masanın vaxtını uçota alan, tarifə görə məbləği hesablayan və bar satışını eyni sessiya hesabına yazan idarəetmə paneli. Sadə taymer yalnız dəqiqə sayır; bilyard klubu proqramı isə bron cədvəlini, canlı oyunu, pauzanı, kassa növbəsini və anbar qalığını bir yerdə saxlayır.',
+          'Tipik gün belə gedir: resepsiya boş masanı görür, walk-in və ya bronlu qonağı yerləşdirir, sessiya açır. Qonaq içki və ya qəlyanaltı alırsa, sətir eyni hesaba yazılır. Oyun bitəndə sistem vaxt və məhsul məbləğini birləşdirir; növbənin sonunda hesabat hazır olur.',
+        ],
+      },
+      {
+        id: 'billing',
+        title: 'Gündüz, gecə və həftəsonu tarif; pauza və uzatma',
+        paragraphs: [
+          'Bilyard salonlarında tez-tez gündüz və gecə tarifi, həftəsonu əlavəsi və saatlıq və ya dəqiqəlik sayım olur. Pauza oyun fasiləsində vaxt sayımını dayandırır; uzatma isə eyni sessiya üzərində davam etdirir. Heselo-da bu qaydaları paneldə qurursunuz — canlı sessiyada məbləğ avtomatik yenilənir.',
+          'Nümunə (öz tarifinizlə dəyişin): gündüz 12 AZN/saat, gecə 18 AZN/saat; qonaq 21:00-da başlayıb 23:30-a qədər oynayıbsa və 20 dəqiqə pauza edibsə, sistem yalnız oyun dəqiqələrini gecə tarifinə görə sayır. VIP otaq və snuker masası üçün ayrı saatlıq haqq qoymaq olar.',
+          'Saat başına və zərərsizlik hesablamasını “Bilyard masası tarifləri — saat, gecə, həftəsonu” bələdçisində addım-addım açırıq.',
+        ],
+      },
+      {
+        id: 'tables',
+        title: 'Masa, VIP otaq və masa növləri',
+        paragraphs: [
+          'Rus, pul və snuker masaları, VIP otaq və adi salon — hər biri ayrı resurs ola bilər və ayrı tarif daşıya bilər. Bir paneldə boş/məşğul statusu görünür; bron köçürmə və ləğv tarixçədə qalır.',
+          'Beləcə VIP otağın saatı ümumi salonun dəqiqəlik haqqından fərqli qurulur. Bir neçə masa eyni növbədə satılır, amma hesabatda masa tipinə görə ayrılır.',
+        ],
+      },
+      {
+        id: 'bar',
+        title: 'Bar və qəlyanaltı eyni hesabda',
+        paragraphs: [
+          'Çay, qəhvə, qəlyanaltı və bar satışı oyun vaxtı ilə eyni sessiya hesabına yazılır. Növbə bağlanışında vaxt gəliri və məhsul gəliri bir hesabatda görünür — axşam Excel-də tutuşdurma ehtiyacı azalır.',
+          'Rezervasiyasız yalnız içki alan qonaq üçün sürətli satış da eyni məhsul siyahısından işləyir — ayrıca kassa proqramı lazım deyil.',
+        ],
+      },
+      {
+        id: 'mixed',
+        title: 'Qarışıq məkan: bilyard + PS + karaoke',
+        paragraphs: [
+          'Bir çox klubda bilyard masası, PlayStation stansiyası və karaoke otağı eyni binadadır. Heselo bunları bir bulud paneldə saxlayır: hər yer tipi öz cədvəli və tarifi ilə, amma kassa növbəsi ortaqdır.',
+          'AZ-da tez müqayisə olunan Club Timer, Clopos və Excel axını bu qarışıq ssenaridə tez dağılır. Beynəlxalq müqayisə üçün CueDesk, BilliardPOS, BCMS və Biliardo.kz bələdçilərinə baxın — qiymət açıqlığı tək fərq deyil; dil və qarışıq məkan dəstəyi də önəmlidir.',
+        ],
+      },
+      {
+        id: 'cloud',
+        title: 'Bulud paneli: planşet və telefondan nəzarət',
+        paragraphs: [
+          'Heselo brauzerdə işləyən bulud paneldır: resepsiyada planşet və ya kompüter kifayətdir, öz serverinizi saxlamaq lazım deyil. İnternet olan yerdən cədvəl və aktiv oyun sessiyalarına baxmaq olar.',
+          'İnternet kəsiləndə panellə iş dayanır — oflayn kassa rejimi yoxdur. Buna görə stabil bağlantı və ehtiyat mobil internet praktikada vacibdir. Lokal Windows quraşdırması tələb edən bilyard proqramlarından fərq budur: yeniləmə və backup buludda gedir.',
+        ],
+      },
+      {
+        id: 'cash',
+        title: 'Kassa növbəsi, səlahiyyət və hesabat',
+        paragraphs: [
+          'Növbə açılır, sessiyalar və satışlar yazılır, günün sonunda növbə bağlanır. Nağd, kart və digər ödəniş üsulları növbə hesabatında görünür.',
+          'Operator masa aça, satış yaza bilər; sahibkar növbə və gəlir hesabatını ayrı hüquqla görür. Kim nəyi dəyişib deyə audit izi saxlanılır.',
+        ],
+      },
+      {
+        id: 'limits',
+        title: 'Heselo nəyi etmir',
+        paragraphs: [
+          'İşıq relye / masa lampasının avtomatik idarəetməsi yoxdur — bu ayrıca avadanlıq sahəsidir (məsələn BilliardPOS ESP32 relyesi). QR üzvlük check-in də hazırda dəstəklənmir.',
+          'Heselo E-Kassa (fiskal kassa) deyil və bank POS terminalını əvəz etmir. Mətbəx/KDS restoran POS-u da deyil: əsas gəlir ofisiant sifarişidirsə, iiko və ya oxşar həll daha uyğundur. Loyalty / klub kartı modulu ayrıca yoxdur — müştəri qeydi və sessiya tarixçəsi var.',
+        ],
+      },
+      {
+        id: 'price',
+        title: 'Qiymət',
+        paragraphs: [
+          'Bilyard üçün Kiçik plan ayda {billiards} {currency}-dən başlayır — qiymətlər səhifəsindəki cari tarifdir. Orta və Böyük planlar, illik ödəniş və Kiçik planda 6 masa həddi orada açıq yazılıb. Demo pulsuzdur, kart tələb olunmur.',
+          'Birdəfəlik lisenziya modeli deyil — aylıq (və ya illik) bulud abunəliyidir. Rəqiblərin çoxu da qiymətini açıq yazır; fərqimiz AZ/EN/RU panel və qarışıq bilyard+PS+karaoke məkan üçün bir hesabdır.',
+        ],
+      },
+    ],
     featuresTitle: 'Bilyard üçün uyğun funksiyalar',
     features: [
       {
@@ -81,7 +151,7 @@ export const solutionsAz: SolutionCopy[] = [
     ],
     differTitle: 'Sadəcə “saat sayğacı” deyil',
     differBody:
-      'Yalnız vaxt sayan alətlər rezervasiya tarixçəsini, anbarı və kassa sayımını həll etmir. Heselo bilyard satışlarını və hesablaşmalarını məkanın digər satışları ilə eyni növbə üzrə birləşdirir. Mətbəx və ofisiant sifarişi əsas işinizdirsə, restoran POS seçin; masa vaxtı satırsınızsa, klub paneli lazımdır.',
+      'Yalnız vaxt sayan alətlər rezervasiya tarixçəsini, anbarı və kassa sayımını həll etmir. Heselo bilyard satışlarını məkanın digər satışları ilə eyni növbə üzrə birləşdirir. Mətbəx və ofisiant sifarişi əsas işinizdirsə, restoran POS seçin; masa vaxtı satırsınızsa, bilyard klubu proqramı lazımdır. Daha dərin oxu: müqayisə və saat haqqı bələdçiləri.',
     compare: {
       title: 'Bilyard proqramı seçərkən nəyə baxmaq lazımdır?',
       intro:
@@ -99,6 +169,10 @@ export const solutionsAz: SolutionCopy[] = [
       ],
     },
     faq: [
+      {
+        q: 'Bilyard klubu proqramı nədir?',
+        a: 'Bilyard klubu proqramı masa vaxtını, bronu, canlı sessiyanı, bar satışını və kassa növbəsini bir paneldə aparan idarəetmə sistemidir. Sadə taymer yalnız dəqiqə sayır; Heselo isə cədvəldən ödənişə qədər axını birləşdirir.',
+      },
       {
         q: 'Bilyard masaları ayrıca qurulur?',
         a: 'Bəli. Hər masa və ya otaq ayrıca təyin olunur; cədvəl və canlı zal eyni məlumatı paylaşır. Rus, pul və snuker masaları üçün fərqli tarif qoya bilərsiniz.',
@@ -120,6 +194,10 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'Xeyr. Heselo planşet və ya kompüterdə taymer, rezervasiya və kassa paneli kimi işləyir. Masa üstü lampanı avtomatik yandıran relye bloku ayrıca avadanlıqdır; belə inteqrasiyanı hazırda təklif etmirik.',
       },
       {
+        q: 'E-Kassa və QR üzvlük check-in varmı?',
+        a: 'Xeyr. Heselo fiskal E-Kassa və bank terminalını əvəz etmir; QR üzvlük check-in də hazırda yoxdur. Ödəniş üsulunu növbədə qeyd edirsiniz; fiskal və bank avadanlığını ayrıca qoşursunuz.',
+      },
+      {
         q: 'CueDesk və ya BilliardPOS-dan nə fərqi var?',
         a: 'CueDesk çoxvaxt QR üzvlük və mobil idarəetməyə fokuslanır; BilliardPOS ESP32 işıq relyesi, TV taymer və API ilə seçilir. Heselo AZ/EN/RU bulud paneldır: masa bronu, canlı sessiya, bar satışı və kassa bir yerdə — qarışıq bilyard+PS+karaoke məkanlar da daxil. Ətraflı müqayisə bələdçilərdədir.',
       },
@@ -132,8 +210,8 @@ export const solutionsAz: SolutionCopy[] = [
         a: 'Lövhədə və mesajlarda kimin bron etdiyi görünür, amma oyunun nə vaxt başladığı, əlavə satış və ödəniş başqa yerdə qalır. Heselo-da bron cədvəldən canlı sessiyaya keçir, qiymət müddətə görə hesablanır, ödəniş növbəyə yazılır. Gün sonunda Excel-də məbləğləri yenidən toplamağa ehtiyac qalmır.',
       },
       {
-        q: 'Bilyard klubu üçün qiymət nə qədərdir?',
-        a: 'Bilyard üçün Kiçik plan ayda {billiards} {currency}-dən başlayır. Orta və Böyük planlar, illik ödəniş və limitlər qiymətlər səhifəsində açıq yazılıb. Bir neçə filial və ya standart plana sığmayan həcm üçün ayrıca fərdi təklif hazırlayırıq.',
+        q: 'Bilyard klubu proqramı neçəyə başa gəlir?',
+        a: 'Bilyard üçün Kiçik plan ayda {billiards} {currency}-dən başlayır — qiymətlər səhifəsindəki cari tarif. Orta və Böyük planlar, illik ödəniş və limitlər orada açıq yazılıb. Bir neçə filial və ya standart plana sığmayan həcm üçün ayrıca fərdi təklif hazırlayırıq.',
       },
       {
         q: 'Demo necə alınır, kart lazımdır?',
