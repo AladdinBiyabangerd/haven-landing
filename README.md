@@ -24,8 +24,7 @@ StayBoard landing ilə eyni məqsəd (lokalizə, prerender, meta/JSON-LD/sitemap
 - `/llms.txt` — product entity + key URLs for AI crawlers
 - Unique titles & descriptions per page, solution pages, and guides
 - Commercial solutions ↔ informational guides cross-linking
-- AI citation measurement: `docs/geo-ai-prompts-az.md`
-- Off-site checklist: `docs/off-site-seo-az.md`
+- Site SEO audit / plan: `docs/heselo-seo-deep-audit-2026-10-17.md`, `docs/heselo-seo-growth-plan-2026-10-17.md`
 
 ## Dev
 
@@ -93,4 +92,4 @@ Legacy unprefixed names (`PUBLIC_SITE_URL`, `SMTP_*`, …) still work.
 3. Verify OG image and canonical URLs on a live page
 4. Optional: `PUBLIC_ANALYTICS`, `PUBLIC_SOCIAL_*` — see `.env.example`
 5. IndexNow: set `HESELO_INDEXNOW_KEY` on Vercel; confirm `https://heselo.online/{key}.txt`; then `npm run indexnow`
-6. Off-site backlinks: [docs/off-site-seo-az.md](docs/off-site-seo-az.md)
+6. Optional: review latest page audit in `docs/heselo-antikafe-bilyard-audit-2026-10-19.md`

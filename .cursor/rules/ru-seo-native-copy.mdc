@@ -1,6 +1,6 @@
 ---
 description: Native Russian SEO/UI copy for /ru — no AZ/EN calque; SERP lexicon
-globs: src/i18n/messages/ru.ts,src/data/solutions/ru.ts,src/data/guides/**/*ru*,src/data/guides/**/*Guide*.ts,docs/seo-ru*.md
+globs: src/i18n/messages/ru.ts,src/data/solutions/ru.ts,src/data/guides/**/*ru*,src/data/guides/**/*Guide*.ts
 alwaysApply: false
 ---
 
@@ -9,7 +9,7 @@ alwaysApply: false
 ## Hard rules
 
 1. **Rewrite, do not translate.** Source of truth = SERP + native RU. AZ/EN only supply intent; sentence structure is written in Russian from scratch.
-2. **One winner URL per intent** — see `docs/seo-ru-keyword-map.md` and `docs/seo-ru-research-2026-10.md`.
+2. **One winner URL per intent** — see `KEYWORD_MAP_RU` in `src/data/solutions/index.ts`.
 3. **Do not edit az/en titles** for RU keyword work. Diff must stay on `ru` copy + locale-aware helpers.
 4. **Market:** AZ-origin SaaS; dual audience (AZ russian-speakers + RU/CIS remote). Pattern: *создан в Баку · работает удалённо · панель на русском*. No fake RF NAP, ККТ, 54-ФЗ, or PC-shell claims.
 5. **Pricing on `/ru`:** RUB display aligned with JSON-LD `priceCurrency`. If billing is AZN, say so honestly («ориентировочно»).

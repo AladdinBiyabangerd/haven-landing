@@ -73,7 +73,7 @@ export const KEYWORD_MAP_AZ = {
   },
 } as const
 
-/** Keyword → page mapping for /ru (CIS + AZ russian-speakers). See docs/seo-ru-keyword-map.md. */
+/** Keyword → page mapping for /ru (CIS + AZ russian-speakers). */
 export const KEYWORD_MAP_RU = {
   home: ['программа для игрового клуба', 'программа для антикафе', 'учёт сеансов'],
   features: ['тарификация', 'карта залов', 'онлайн-бронирование'],

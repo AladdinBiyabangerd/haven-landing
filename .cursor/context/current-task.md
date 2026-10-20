@@ -20,4 +20,4 @@
 - `src/lib/seo.ts`
 - `src/data/guides/{index,ru,ruCisGuides,gapEducationalGuides}.ts`
 - `src/i18n/messages/{az,en,ru}.ts`, `types.ts`
-- Plan: `docs/heselo-anticafe-seo-plan-2026-10-19.md`
+- Audit: `docs/heselo-antikafe-bilyard-audit-2026-10-19.md`

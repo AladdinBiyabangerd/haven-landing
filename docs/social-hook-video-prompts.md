@@ -327,6 +327,6 @@ No English. Photoreal. No voiceover.
 1. Promptu AI video tool-a yapışdır (+ shared negative).
 2. Caption = hook + guide URL (+ UTM).
 3. Alt text nümunə: `Qısa klub videosu: xaosdan tablete keçid. Başlıq: [hook].`
-4. Jurnal: [social-posts-log.md](social-posts-log.md).
+4. Eyni hooku təkrar paylaşma.
 
 **Yeni hook üçün:** Master şablonda `[HOOK LINE]` və `[CHAOS VISUAL]` dəyiş — 6s saxla.

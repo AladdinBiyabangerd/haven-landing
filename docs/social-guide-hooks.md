@@ -14,7 +14,7 @@ Hook məhsul reklamı deyil — sual / təzad / natamam fikir. Cavab linkdədir.
 2. “Heselo”, “demo”, “həllimiz” hookda **yox**.
 3. 1 sətir. Oxuyan boşluq hiss etməlidir.
 4. Link = guide. UTM istəyə görə.
-5. Paylaşılandan sonra [social-posts-log.md](social-posts-log.md).
+5. Eyni hooku təkrar paylaşma.
 
 ---
 
