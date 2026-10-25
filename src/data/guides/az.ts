@@ -947,7 +947,7 @@ export const guidesAz: GuideCopy[] = [
       },
       {
         q: 'Klub proqramı üçün pulsuz sınaq / demo varmı?',
-        a: 'Bəli — pulsuz demo. Məkan tipinizi və masa/otaq/stansiya sayını əlaqə formasında və ya WhatsApp-da yazın; təxminən 15 dəqiqəlik ssenari ilə paneli göstəririk. Kart lazım deyil, demo sonrası abunə öhdəliyi yoxdur.',
+        a: 'Bəli — pulsuz demo. app.heselo.online/register ünvanında 2 günlük demo hesabını özünüz açırsınız: 1 məkan, 3 resurs, 3 işçi. Paneli bizimlə birlikdə görmək istəsəniz, formada və ya WhatsApp-da yazın — qısa tanışlıq zəngi təşkil edək. Kart lazım deyil, demo sonrası abunə öhdəliyi yoxdur.',
       },
     ],
     relatedSolutions: ['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'],

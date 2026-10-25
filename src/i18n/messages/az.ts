@@ -200,7 +200,7 @@ export const az: Messages = {
   },
   trust: {
     items: [
-      '15 dəq demo — kart lazım deyil',
+      '2 günlük pulsuz demo — kart lazım deyil',
       'Ayda {low} {currency}-dən',
       'Panel AZ / EN / RU',
       'Açıq tariflər',
@@ -208,7 +208,7 @@ export const az: Messages = {
   },
   demoPromise: {
     eyebrow: 'Demo',
-    title: '15 dəqiqədə',
+    title: 'Tanışlıq zəngində',
     titleAccent: 'nə göstəririk.',
     items: [
       {
@@ -272,7 +272,7 @@ export const az: Messages = {
     eyebrow: 'Qiymət',
     title: 'Ayda {low} {currency}-dən',
     titleAccent: 'başlayır.',
-    lead: '15 dəqiqəlik demo, kart tələb olunmur. Tariflər məkan tipinə görə açıqdır.',
+    lead: '2 günlük demo hesabını özünüz açın, kart tələb olunmur. Tariflər məkan tipinə görə açıqdır.',
     ctaPricing: 'Tariflərə baxın',
     ctaDemo: 'Demo istəyin',
   },
@@ -387,7 +387,7 @@ export const az: Messages = {
       },
       {
         q: 'Demo necə alınır?',
-        a: 'WhatsApp-dan yazın və ya formu doldurun — telefon və ya e-poçt kifayətdir. 15 dəqiqəlik canlı demo göstəririk; iş saatlarında adətən 2 saat ərzində cavab veririk. Kart tələb olunmur.',
+        a: 'app.heselo.online/register ünvanında 2 günlük demo hesabını özünüz açın — kart lazım deyil. Demoda 1 məkan, 3 resurs (otaq, masa və ya stansiya) və 3 işçi ilə bütün funksiyaları yoxlaya bilərsiniz. Paneli bizimlə birlikdə görmək istəsəniz, WhatsApp-dan yazın və ya formu doldurun — qısa tanışlıq zəngi təşkil edək.',
         href: '/contact',
         linkLabel: 'Forma ilə yazın',
       },
@@ -446,7 +446,7 @@ export const az: Messages = {
   guidesPage: {
     updatedLabel: 'Son yeniləmə:',
     pricingCta: 'Klub tarifləri — {low} {currency}/aydan',
-    demoCta: '15 dəqiqəlik demo istəyin',
+    demoCta: '2 günlük demo hesabı açın',
     relatedComparisonsTitle: 'Digər müqayisələr',
     altSeekingTitle: 'iiko, Clopos və ya Excel axtarırsınız?',
     altSeekingBody:
@@ -545,7 +545,7 @@ export const az: Messages = {
   },
   cta: {
     title: 'Növbəti növbəyə Heselo ilə başlayın.',
-    subtitle: '15 dəqiqəlik demo — iş saatlarında adətən 2 saat ərzində cavab.',
+    subtitle: '2 günlük demo hesabını özünüz açın. Sualınız varsa, yazın — iş saatlarında adətən 2 saat ərzində cavab veririk.',
     button: 'Forma ilə yazın',
     whatsapp: 'WhatsApp ilə yazın',
     pickTypeTitle: 'Əvvəl məkan tipini seçin.',
@@ -612,7 +612,7 @@ export const az: Messages = {
       },
       {
         q: 'Heselonu demoda necə görmək olar?',
-        a: 'Əlaqə forması və ya WhatsApp ilə yazın. 15 dəqiqəlik canlı demo göstəririk; iş saatlarında adətən 2 saat ərzində cavab veririk. Açıq qiymətlər Qiymətlər səhifəsindədir.',
+        a: 'Ən sadəsi app.heselo.online/register ünvanında 2 günlük demo hesabı açmaqdır — kartsız, dərhal. Paneli bizimlə birlikdə görmək istəyirsinizsə, forma və ya WhatsApp ilə yazın, qısa tanışlıq zəngi təşkil edək. Açıq qiymətlər Qiymətlər səhifəsindədir.',
         href: '/contact',
         linkLabel: 'Əlaqə formasını açın',
       },
@@ -743,7 +743,7 @@ export const az: Messages = {
       },
       {
         q: 'Pulsuz sınaq var?',
-        a: 'Pulsuz demo üçün WhatsApp-dan yazın və ya formu doldurun — 15 dəqiqəlik demo, kart tələb olunmur. İş saatlarında adətən 2 saat ərzində cavab veririk.',
+        a: 'Bəli — 2 günlük pulsuz demo hesabı. app.heselo.online/register ünvanında özünüz açırsınız, kart tələb olunmur. Demo limitləri: 1 məkan, 3 resurs və 3 işçi.',
         href: '/contact',
         linkLabel: 'Formadan demo istəyin',
       },
@@ -1027,7 +1027,7 @@ export const az: Messages = {
     eyebrow: 'Əlaqə',
     title: 'Demo və ya sual üçün bizə yazın',
     intro:
-      'Heselo Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün paneldir — rezervasiya, canlı zal və kassa bir yerdə. 15 dəqiqəlik demo istəyin; iş saatlarında adətən 2 saat ərzində cavab veririk.',
+      'Heselo Azərbaycanda oyun klubu, karaoke, bilyard, antikafe və otaqlı launj üçün paneldir — rezervasiya, canlı zal və kassa bir yerdə. 2 günlük demo hesabını özünüz aça və ya bizə yazıb qısa tanışlıq zəngi istəyə bilərsiniz; iş saatlarında adətən 2 saat ərzində cavab veririk.',
     reachTitle: 'Heselo ilə necə əlaqə saxlamaq olar?',
     reachBody: [
       'Qısa demo üçün ən tez yol WhatsApp-dır — kart tələb olunmur. E-poçt üstün tutursunuzsa, aşağıdakı ünvandan yazın və ya formaya məkan tipini və təxmini otaq/stansiya sayını qeyd edin.',
@@ -1044,7 +1044,7 @@ export const az: Messages = {
     phone: 'Telefon',
     email: 'E-poçt',
     phoneOrEmailHint: 'Telefon və ya e-poçtdan ən azı birini yazın.',
-    waLead: 'Daha tez: WhatsApp-dan yazın — 15 dəqiqəlik demo, kart tələb olunmur.',
+    waLead: 'Daha tez: WhatsApp-dan yazın — suallarınızı cavablayaq və ya qısa tanışlıq zəngi təşkil edək.',
     venue: 'Məkanın adı',
     venueType: 'Məkan tipi',
     venueTypePlaceholder: 'Tipi seçin',
@@ -1100,7 +1100,7 @@ export const az: Messages = {
       },
       {
         q: 'Demo üçün nə hazırlamaq lazımdır?',
-        a: 'Məkan tipini, təxmini otaq və ya PlayStation sayını və ən çox nəyə baxmaq istədiyinizi yazın: bron, canlı zal, yoxsa kassa. Canlı nümayiş üçün 15 dəqiqə kifayətdir.',
+        a: 'Məkan tipini, təxmini otaq və ya PlayStation sayını və ən çox nəyə baxmaq istədiyinizi yazın: bron, canlı zal, yoxsa kassa. Zəngi buna uyğun qururuq. Özünüz yoxlamaq istəsəniz, 2 günlük demo hesabı açın.',
       },
       {
         q: 'Demo üçün kart lazımdır?',
@@ -1108,7 +1108,7 @@ export const az: Messages = {
       },
       {
         q: 'Demo, yoxsa fərdi təklif?',
-        a: 'Əksər məkanlar açıq Kiçik, Orta və ya Böyük planlarla 15 dəqiqəlik demoya başlayır. Bir neçə filial və ya bu limitlərdən kənar həcm olanda fərdi təklif soruşun.',
+        a: 'Əksər məkanlar 2 günlük demo hesabı ilə başlayır, sonra açıq Kiçik, Orta və ya Böyük planı seçir. Bir neçə filial və ya bu limitlərdən kənar həcm olanda fərdi təklif soruşun.',
         href: '/pricing',
         linkLabel: 'Açıq qiymətlərə baxın',
       },
@@ -1213,7 +1213,7 @@ export const az: Messages = {
       contact: {
         title: 'Pulsuz demo və əlaqə — Heselo',
         description:
-            '15 dəqiqəlik demo üçün yazın. WhatsApp və ya forma — iş saatlarında adətən 2 saat ərzində cavab. Məkan tipi və otaq/masa sayı kifayətdir.',
+            '2 günlük pulsuz demo hesabını özünüz açın və ya qısa tanışlıq zəngi üçün yazın. WhatsApp və ya forma — iş saatlarında adətən 2 saat ərzində cavab.',
         keywords: ['Heselo demo', 'məkan proqramı əlaqə', 'rezervasiya demo'],
       },
       about: {

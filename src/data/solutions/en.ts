@@ -561,7 +561,7 @@ export const solutionsEn: SolutionCopy[] = [
       },
       {
         q: 'How do we get a demo?',
-        a: 'Use the contact form — share table/room count and your tariff model (per-minute, hourly, stop-check). Fifteen-minute demo, no card.',
+        a: 'Use the contact form — share table/room count and your tariff model (per-minute, hourly, stop-check). Or open a 2-day demo account yourself — no card needed.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],

@@ -948,7 +948,7 @@ export const guidesEn: GuideCopy[] = [
       },
       {
         q: 'Is there a free trial or demo of the club software?',
-        a: 'Yes — a free demo. Send your venue type and table, room, or station count through the contact form or WhatsApp, and we’ll walk you through the panel on a scenario in about 15 minutes. No card is needed, and there’s no obligation to subscribe after the demo.',
+        a: 'Yes — a free 2-day demo account you open yourself at app.heselo.online/register: 1 location, 3 resources, 3 staff. If you’d like to see the panel with us, message us via the contact form or WhatsApp and we’ll set up a short intro call. No card is needed, and there’s no obligation to subscribe after the demo.',
       },
     ],
     relatedSolutions: ['gaming', 'karaoke', 'billiards', 'antikafe', 'lounge'],

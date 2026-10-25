@@ -559,7 +559,7 @@ export const solutionsAz: SolutionCopy[] = [
       },
       {
         q: 'Demo necə əldə edilir?',
-        a: 'Əlaqə formasını doldurun — masa/otaq sayını və tarif modelinizi (dəqiqəlik, saatlıq, stop-çek) yazın. 15 dəqiqəlik demo, kart lazım deyil.',
+        a: 'Əlaqə formasını doldurun — masa/otaq sayını və tarif modelinizi (dəqiqəlik, saatlıq, stop-çek) yazın. Ya da 2 günlük demo hesabını özünüz açın — kart lazım deyil.',
       },
     ],
     related: ['gaming', 'billiards', 'reservations', 'pos'],

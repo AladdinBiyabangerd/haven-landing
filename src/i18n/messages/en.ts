@@ -200,7 +200,7 @@ export const en: Messages = {
   },
   trust: {
     items: [
-      '15-min demo, no card',
+      'Free 2-day demo, no card',
       'From {low} {currency}/mo',
       'Panel AZ / EN / RU',
       'Open pricing',
@@ -209,7 +209,7 @@ export const en: Messages = {
   demoPromise: {
     eyebrow: 'Demo',
     title: 'What we show',
-    titleAccent: 'in 15 minutes.',
+    titleAccent: 'on an intro call.',
     items: [
       {
         title: 'Your tables and rooms',
@@ -272,7 +272,7 @@ export const en: Messages = {
     eyebrow: 'Pricing',
     title: 'From {low} {currency}',
     titleAccent: 'a month.',
-    lead: '15-minute demo, no card required. Published rates by venue type.',
+    lead: 'Open a 2-day demo account yourself, no card required. Published rates by venue type.',
     ctaPricing: 'See plans',
     ctaDemo: 'Request a demo',
   },
@@ -387,7 +387,7 @@ export const en: Messages = {
       },
       {
         q: 'How do I get a demo?',
-        a: 'Message us on WhatsApp or fill in the form — phone or email is enough. We run a 15-minute live demo and usually reply within two hours during working hours. No card required.',
+        a: 'Open a 2-day demo account yourself at app.heselo.online/register — no card needed. The demo gives you every feature with 1 location, 3 resources (rooms, tables, or stations), and 3 staff. If you’d rather see the panel with us, message us on WhatsApp or fill in the form and we’ll set up a short intro call.',
         href: '/contact',
         linkLabel: 'Write via the form',
       },
@@ -446,7 +446,7 @@ export const en: Messages = {
   guidesPage: {
     updatedLabel: 'Last updated:',
     pricingCta: 'Club plans — from {low} {currency}/month',
-    demoCta: 'Request a 15-minute demo',
+    demoCta: 'Open a 2-day demo account',
     relatedComparisonsTitle: 'More comparisons',
     altSeekingTitle: 'Looking at iiko, Clopos or Excel?',
     altSeekingBody:
@@ -545,7 +545,7 @@ export const en: Messages = {
   },
   cta: {
     title: 'Start the next shift with Heselo.',
-    subtitle: 'A 15-minute demo — we usually reply within two hours during working hours.',
+    subtitle: 'Open a 2-day demo account yourself. Questions? Write to us — we usually reply within two hours during working hours.',
     button: 'Write via the form',
     whatsapp: 'Message on WhatsApp',
     pickTypeTitle: 'Pick your venue type first.',
@@ -612,7 +612,7 @@ export const en: Messages = {
       },
       {
         q: 'How do I see Heselo in a demo?',
-        a: 'Write via the contact form or WhatsApp. We run a 15-minute live demo and usually reply within two hours during working hours. Published pricing is on the pricing page.',
+        a: 'The quickest way is a 2-day demo account at app.heselo.online/register — no card, instant access. If you’d like to see the panel with us, write via the form or WhatsApp and we’ll set up a short intro call. Published pricing is on the pricing page.',
         href: '/contact',
         linkLabel: 'Open the contact form',
       },
@@ -743,7 +743,7 @@ export const en: Messages = {
       },
       {
         q: 'Is there a free trial?',
-        a: 'Message us on WhatsApp or use the form for a free demo — 15 minutes, no card. We usually reply within two hours during working hours.',
+        a: 'Yes — a free 2-day demo account. Open it yourself at app.heselo.online/register, no card required. Demo limits: 1 location, 3 resources, and 3 staff.',
         href: '/contact',
         linkLabel: 'Request a demo via the form',
       },
@@ -1027,7 +1027,7 @@ export const en: Messages = {
     eyebrow: 'Contact',
     title: 'Ask for a demo or send a question',
     intro:
-      'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges — booking, live floor, and cash in one place. Ask for a 15-minute demo; we usually reply within two hours during working hours.',
+      'Heselo is the Azerbaijan panel for gaming clubs, karaoke, billiards, anti-cafés, and room lounges — booking, live floor, and cash in one place. Open a 2-day demo account yourself or ask us for a short intro call; we usually reply within two hours during working hours.',
     reachTitle: 'How can I reach Heselo?',
     reachBody: [
       'WhatsApp is the fastest path for a short demo — no card required. Prefer email? Use the address below or fill in the form with your venue type and roughly how many rooms or stations you run.',
@@ -1044,7 +1044,7 @@ export const en: Messages = {
     phone: 'Phone',
     email: 'Email',
     phoneOrEmailHint: 'Enter a phone number or an email — at least one is required.',
-    waLead: 'Faster: message us on WhatsApp — 15-minute demo, no card.',
+    waLead: 'Faster: message us on WhatsApp — we’ll answer questions or set up a short intro call.',
     venue: 'Venue name',
     venueType: 'Venue type',
     venueTypePlaceholder: 'Select a type',
@@ -1100,7 +1100,7 @@ export const en: Messages = {
       },
       {
         q: 'What should I prepare for a demo?',
-        a: 'Tell us your venue type, roughly how many rooms or PlayStation stations you run, and what you care about most: booking, live floor, or cash. Fifteen minutes is enough for a live walkthrough.',
+        a: 'Tell us your venue type, roughly how many rooms or PlayStation stations you run, and what you care about most: booking, live floor, or cash. We’ll shape the call around that. Prefer to explore on your own? Open a 2-day demo account.',
       },
       {
         q: 'Do I need a card for the demo?',
@@ -1108,7 +1108,7 @@ export const en: Messages = {
       },
       {
         q: 'Do I need a demo or a custom quote?',
-        a: 'Most venues start with a 15-minute demo on the published Small, Medium, or Large plans. Ask for a custom quote when you have several branches or volume outside those limits.',
+        a: 'Most venues start with a 2-day demo account, then pick a published Small, Medium, or Large plan. Ask for a custom quote when you have several branches or volume outside those limits.',
         href: '/pricing',
         linkLabel: 'See published pricing',
       },
@@ -1213,7 +1213,7 @@ export const en: Messages = {
       contact: {
         title: 'Free demo & contact — Heselo',
         description:
-          'Book a 15-minute demo. WhatsApp or the form — we usually reply within two hours during working hours. Venue type and table/room count is enough.',
+          'Open a free 2-day demo account yourself or write to us for a short intro call. WhatsApp or the form — we usually reply within two hours during working hours.',
         keywords: ['Heselo demo', 'venue software contact', 'reservation demo'],
       },
       about: {
