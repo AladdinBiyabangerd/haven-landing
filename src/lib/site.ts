@@ -28,6 +28,22 @@ export function telegramUrl(username: string = SITE.telegram): string | undefine
   return `https://t.me/${handle}`
 }
 
+/** Self-serve sign-up in the Heselo app (2-day demo account). */
+export const APP_SIGNUP_URL = 'https://app.heselo.online/register'
+
+/**
+ * "Start a 2-day demo" link: app sign-up with landing UTM tags.
+ * ``placement`` = where on the landing (hero, header, footer, cta, ...).
+ */
+export function trialSignupUrl(placement: string): string {
+  const url = new URL(APP_SIGNUP_URL)
+  url.searchParams.set('utm_source', 'landing')
+  url.searchParams.set('utm_medium', 'cta')
+  url.searchParams.set('utm_campaign', 'demo_signup')
+  url.searchParams.set('utm_content', placement)
+  return url.toString()
+}
+
 /** Sole founder / creator of Heselo — used in footer, About page, and JSON-LD Person. */
 export const FOUNDER = {
   name: 'Aladdin Biyabangerd',

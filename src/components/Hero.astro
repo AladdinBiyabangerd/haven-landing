@@ -1,7 +1,7 @@
 ---
 import type { Messages } from '@/i18n/types'
 import type { Locale } from '@/i18n/config'
-import { localePath, whatsappUrl } from '@/lib/site'
+import { localePath, trialSignupUrl, whatsappUrl } from '@/lib/site'
 import LiveFloorMock from '@/components/LiveFloorMock.astro'
 
 interface Props {
@@ -36,6 +36,9 @@ const secondaryIsWhatsApp = formFirst
           data-track-placement="hero"
         >
           {h.ctaPrimary}
+        </a>
+        <a class="btn btn-ghost hero__cta-trial" href={trialSignupUrl('hero')} data-track-placement="trial">
+          {messages.trial.cta}
         </a>
         <a
           class="hero__cta-secondary"

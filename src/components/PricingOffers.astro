@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { localePath } from '@/lib/site'
+import { localePath, trialSignupUrl } from '@/lib/site'
 import { fillTemplate, formatMoney } from '@/lib/format'
 import {
   crossoverPoints,
@@ -169,6 +169,9 @@ const PLAN_FEATURE_PREVIEW = 5
                       data-contact-base={`${localePath(locale, '/contact')}?type=${offer.slug}&plan=${plan.id}`}
                     >
                       {page.cta}
+                    </a>
+                    <a class="plan-trial" href={trialSignupUrl('pricing-plan')} data-track-placement="trial">
+                      {messages.trial.cta}
                     </a>
                   </article>
                 )
@@ -1076,5 +1079,21 @@ const PLAN_FEATURE_PREVIEW = 5
       grid-template-columns: minmax(9rem, 0.75fr) minmax(12rem, 1fr);
       align-items: end;
     }
+  }
+  /* Self-serve 2-day demo under each plan's "request a demo". */
+  .plan-trial {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    margin-top: 0.35rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+  .plan-trial:hover {
+    color: var(--ink);
   }
 </style>

@@ -16,6 +16,9 @@ interface Props {
   bodyAttrs?: Record<string, string | undefined>
   primaryAttrs?: Record<string, string | undefined>
   secondaryAttrs?: Record<string, string | undefined>
+  /** Self-serve 2-day demo (app sign-up), shown beside the demo request. */
+  trialHref?: string
+  trialLabel?: string
 }
 
 const {
@@ -31,6 +34,8 @@ const {
   bodyAttrs = {},
   primaryAttrs = {},
   secondaryAttrs = {},
+  trialHref,
+  trialLabel,
 } = Astro.props
 ---
 
@@ -59,6 +64,13 @@ const {
           {...secondaryAttrs}
         >
           {secondaryLabel}
+        </a>
+      ) : null
+    }
+    {
+      trialHref && trialLabel ? (
+        <a class="btn btn-ghost" href={trialHref} data-track-placement="trial">
+          {trialLabel}
         </a>
       ) : null
     }

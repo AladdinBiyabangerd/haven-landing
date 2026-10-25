@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import { resolveLocale } from '@/i18n/config'
 import { loadPricedMessages } from '@/i18n'
-import { localePath } from '@/lib/site'
+import { localePath, trialSignupUrl } from '@/lib/site'
 
 export function getStaticPaths() {
   return [{ params: { locale: 'az' } }, { params: { locale: 'en' } }, { params: { locale: 'ru' } }]
@@ -120,9 +120,14 @@ const copy =
       </form>
 
       <p class="tool__note">{copy.note}</p>
-      <a class="btn btn-primary" href={localePath(locale, '/contact')} data-track-placement="tool">
-        {copy.cta}
-      </a>
+      <div class="tool__cta">
+        <a class="btn btn-primary" href={localePath(locale, '/contact')} data-track-placement="tool">
+          {copy.cta}
+        </a>
+        <a class="btn btn-ghost" href={trialSignupUrl('tool')} data-track-placement="trial">
+          {messages.trial.cta}
+        </a>
+      </div>
 
       {
         copy.sections.length > 0 ? (
@@ -246,5 +251,18 @@ const copy =
     list-style: none;
     display: grid;
     gap: 0.5rem;
+  }
+  .tool__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+  @media (min-width: 560px) {
+    .tool__cta {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
   }
 </style>

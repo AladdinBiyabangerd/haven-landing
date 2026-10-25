@@ -14,7 +14,7 @@ import {
 import { getSolution } from '@/data/solutions'
 import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import { formatDate } from '@/lib/format'
-import { localePath } from '@/lib/site'
+import { localePath, trialSignupUrl } from '@/lib/site'
 import { contactPath, pricingPath } from '@/lib/journey'
 import { isVenueOfferSlug, loadVenueOffers, VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
@@ -163,6 +163,11 @@ const faqMessages = {
               {messages.guidesPage.demoCta}
             </a>
           </li>
+          <li>
+            <a class="link-inline" href={trialSignupUrl('guide-nav')} data-track-placement="trial">
+              {messages.trial.cta}
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -217,6 +222,8 @@ const faqMessages = {
         body={guide.ctaBody}
         href={contactPath(locale, persistVenueType || undefined)}
         label={messages.cta.button}
+        trialHref={trialSignupUrl('guide')}
+        trialLabel={messages.trial.cta}
       />
     </div>
   </section>

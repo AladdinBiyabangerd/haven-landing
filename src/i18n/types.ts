@@ -30,6 +30,11 @@ export type Messages = {
     tagline: string
     description: string
   }
+  /** Self-serve 2-day demo account in the app (next to every "request a demo"). */
+  trial: {
+    cta: string
+    ctaShort: string
+  }
   nav: {
     home: string
     features: string

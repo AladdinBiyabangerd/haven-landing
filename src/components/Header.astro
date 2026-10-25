@@ -2,7 +2,7 @@
 import type { Locale } from '@/i18n/config'
 import { LOCALES, LOCALE_LABELS, HTML_LANG } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
-import { localePath } from '@/lib/site'
+import { localePath, trialSignupUrl } from '@/lib/site'
 import BrandMark from '@/components/BrandMark.astro'
 
 interface Props {
@@ -86,6 +86,7 @@ const links = [
           ))
         }
       </div>
+      <a class="btn btn-ghost header__trial" href={trialSignupUrl('header')} data-track-placement="trial">{messages.trial.ctaShort}</a>
       <a class="btn btn-primary header__cta" href={localePath(locale, '/contact')} data-journey-link="contact" data-track-placement="header">{m.demo}</a>
       <button
         class="menu-btn"
@@ -111,6 +112,7 @@ const links = [
       </a>
       {links.map((link) => <a href={link.href} class="mobile__link">{link.label}</a>)}
       <a class="btn btn-primary btn-block" href={localePath(locale, '/contact')} data-journey-link="contact" data-track-placement="header">{m.demo}</a>
+      <a class="btn btn-ghost btn-block" href={trialSignupUrl('header-menu')} data-track-placement="trial">{messages.trial.cta}</a>
       <div class="locales locales--menu" role="navigation" aria-label={m.languageNav}>
         {
           localeItems.map((item) => (
@@ -219,6 +221,18 @@ const links = [
   .locale.is-active {
     background: var(--accent-soft);
     color: var(--accent);
+  }
+  .header__trial {
+    display: none;
+    min-height: 2.4rem;
+    padding: 0.45rem 0.95rem;
+    font-size: var(--text-sm);
+  }
+  /* Wide screens only: the nav needs the room below this width. */
+  @media (min-width: 1180px) {
+    .header__trial {
+      display: inline-flex;
+    }
   }
   .header__cta {
     display: none;

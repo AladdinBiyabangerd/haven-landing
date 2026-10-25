@@ -10,6 +10,10 @@ export const en: Messages = {
     description:
       'Heselo brings room, station, and table bookings, the live floor, cash, inventory, and customers into one admin panel for gaming clubs (PlayStation), karaoke rooms, billiards, anti-cafés, and room lounges.',
   },
+  trial: {
+    cta: 'Start a 2-day free demo',
+    ctaShort: '2-day demo',
+  },
   nav: {
     home: 'Home',
     features: 'Features',

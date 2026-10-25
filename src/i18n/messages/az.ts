@@ -10,6 +10,10 @@ export const az: Messages = {
     description:
         'Heselo oyun klubu (PS), karaoke otaqları, bilyard, antikafe və otaqlı launj üçün otaq, masa və PS stansiyası rezervasiyasını, canlı zalı, kassanı, anbarı və müştəriləri bir paneldə birləşdirir.',
   },
+  trial: {
+    cta: '2 günlük demo hesabı aktivləşdir',
+    ctaShort: '2 günlük demo',
+  },
   nav: {
     home: 'Ana səhifə',
     features: 'Funksiyalar',

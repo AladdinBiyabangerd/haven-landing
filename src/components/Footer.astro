@@ -8,6 +8,7 @@ import {
   SITE,
   telUrl,
   telegramUrl,
+  trialSignupUrl,
   whatsappUrl,
   publicContactEmail,
 } from '@/lib/site'
@@ -67,6 +68,7 @@ const displayEmail = publicContactEmail()
         <a href={localePath(locale, '/faq')}>{messages.faqPage.navLabel}</a>
         <a href={localePath(locale, '/about')}>{messages.footer.about}</a>
         <a href={localePath(locale, '/contact')} data-track-placement="footer">{messages.nav.demo}</a>
+        <a href={trialSignupUrl('footer')} data-track-placement="trial">{messages.trial.cta}</a>
       </div>
     </div>
     <div class="footer__solutions">

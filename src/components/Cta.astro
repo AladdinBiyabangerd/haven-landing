@@ -2,7 +2,7 @@
 import type { Locale } from '@/i18n/config'
 import type { Messages } from '@/i18n/types'
 import CtaBanner from '@/components/CtaBanner.astro'
-import { localePath } from '@/lib/site'
+import { localePath, trialSignupUrl } from '@/lib/site'
 import { contactPath, pricingPath, whatsappHrefFor } from '@/lib/journey'
 import { VENUE_STORAGE_KEY } from '@/lib/venueOffers'
 
@@ -84,6 +84,9 @@ const secondaryExternal =
               rel={secondaryExternal ? 'noopener noreferrer' : undefined}
             >{secondaryLabel}</a>.
           </p>
+          <p>
+            <a class="link-inline" href={trialSignupUrl('cta')} data-track-placement="trial">{messages.trial.cta}</a>.
+          </p>
         </div>
       ) : (
         <CtaBanner
@@ -99,6 +102,8 @@ const secondaryExternal =
           bodyAttrs={{ 'data-cta-sub': '' }}
           primaryAttrs={{ 'data-cta-primary': '' }}
           secondaryAttrs={{ 'data-cta-secondary': '' }}
+          trialHref={trialSignupUrl('cta')}
+          trialLabel={messages.trial.cta}
         />
       )
     }

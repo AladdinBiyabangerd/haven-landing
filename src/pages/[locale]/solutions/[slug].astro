@@ -9,7 +9,7 @@ import { SOLUTION_SHOT_MAP, SOLUTION_EXTRA_SHOT_MAP } from '@/lib/productShots'
 import ProductShot from '@/components/ProductShot.astro'
 import CtaBanner from '@/components/CtaBanner.astro'
 import NextThought from '@/components/NextThought.astro'
-import { localePath } from '@/lib/site'
+import { localePath, trialSignupUrl } from '@/lib/site'
 import { contactPath, pricingPath } from '@/lib/journey'
 import { applyCatalogPricesDeep } from '@/lib/catalogCopy'
 import {
@@ -331,6 +331,8 @@ const faqMessages = {
         body={solution.ctaBody}
         href={contactPath(locale, persistVenueType || undefined)}
         label={messages.cta.button}
+        trialHref={trialSignupUrl('solution')}
+        trialLabel={messages.trial.cta}
       />
     </div>
   </section>
